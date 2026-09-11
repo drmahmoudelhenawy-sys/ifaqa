@@ -1,0 +1,71 @@
+.quran-audio-stage {
+  isolation: isolate;
+  position: relative;
+  min-height: 100vh;
+}
+
+.quran-audio-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.quran-audio-orb {
+  position: absolute;
+  bottom: -8rem;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 999px;
+  opacity: .18;
+  filter: blur(54px);
+  transform: translate3d(0, 0, 0);
+}
+
+.quran-audio-orb-one { right: -9rem; background: #22d3ee; }
+.quran-audio-orb-two { left: -9rem; background: #8b5cf6; }
+
+.is-playing .quran-audio-orb-one { animation: quran-audio-orb-one 7s ease-in-out infinite alternate; }
+.is-playing .quran-audio-orb-two { animation: quran-audio-orb-two 9s ease-in-out infinite alternate; }
+
+.quran-audio-waves {
+  position: absolute;
+  inset-inline: -8%;
+  bottom: 3%;
+  height: 11rem;
+  opacity: 0;
+  transition: opacity .7s ease;
+}
+
+.is-playing .quran-audio-waves { opacity: .2; }
+
+.quran-audio-wave {
+  position: absolute;
+  inset-inline: 0;
+  bottom: calc(var(--wave-index) * 1.6rem);
+  height: 5rem;
+  border: 2px solid rgba(255, 255, 255, .72);
+  border-color: rgba(255, 255, 255, .65) transparent transparent transparent;
+  border-radius: 50%;
+  animation: quran-audio-wave 4.2s ease-in-out infinite;
+  animation-delay: calc(var(--wave-index) * -.55s);
+}
+
+@keyframes quran-audio-orb-one {
+  to { transform: translate3d(-38%, -28%, 0) scale(1.25); opacity: .32; }
+}
+
+@keyframes quran-audio-orb-two {
+  to { transform: translate3d(34%, -42%, 0) scale(.92); opacity: .28; }
+}
+
+@keyframes quran-audio-wave {
+  0%, 100% { transform: translateY(0) scaleX(.92); }
+  50% { transform: translateY(-1rem) scaleX(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-playing .quran-audio-orb,
+  .is-playing .quran-audio-wave { animation: none !important; }
+}

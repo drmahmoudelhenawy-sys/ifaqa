@@ -1,0 +1,3010 @@
+/* =========================================================
+   CLAN EXPERIENCE - DYNAMIC THEMING (LIGHT & DARK MODES)
+   ========================================================= */
+
+/* Light Theme (Default or when html does not have .dark) */
+html:not(.dark) .clan-app,
+.clan-app.clan-theme-light {
+  color-scheme: light;
+  --clan-bg: #f6f9f7;
+  --clan-panel: #ffffff;
+  --clan-line: #d8e5dd;
+  --clan-line-strong: #bed8cb;
+  --clan-text: #142a20;
+  --clan-text-secondary: #2c4a3c;
+  --clan-muted: #537565;
+  --clan-brand-bg: #e1f4e8;
+  --clan-brand-color: #17663b;
+  --clan-btn-icon-bg: #ffffff;
+  --clan-hero-bg: radial-gradient(ellipse at top left, #dcf0e4 0%, transparent 70%), linear-gradient(135deg, #eaf6ef, #f4faf6);
+  --clan-hero-border: #b8e2cc;
+  --clan-hero-text: #0e3020;
+  --clan-eyebrow: #78480d;
+  --clan-pill-bg: #e2f4ea;
+  --clan-pill-border: #abdec2;
+  --clan-pill-color: #175735;
+  --clan-primary-bg: #1f7747;
+  --clan-primary-hover: #269156;
+  --clan-primary-text: #ffffff;
+  --clan-primary-border: #18633b;
+  --clan-secondary-bg: #edf6f1;
+  --clan-secondary-hover: #dff0e5;
+  --clan-secondary-text: #14492d;
+  --clan-secondary-border: #bfe0ce;
+  --clan-stats-bg: #eef6f1;
+  --clan-stats-strong: #113624;
+  --clan-next-bg: linear-gradient(120deg, #e9f7ee, #f4faf6);
+  --clan-next-border: #a4dcbc;
+  --clan-invite-bg: #edf5f0;
+  --clan-avatar-bg: #d7efe0;
+  --clan-avatar-color: #165633;
+  --clan-segment-bg: #e8f2ec;
+  --clan-segment-btn-active: #ffffff;
+  --clan-segment-btn-text: #113f27;
+  --clan-progress-bg: #daebdf;
+  --clan-progress-fill: linear-gradient(90deg, #1f7747, #5cb884);
+  --clan-auto-track-bg: #edf8f1;
+  --clan-auto-track-border: #b8e2cc;
+  --clan-auto-track-text: #135532;
+  --clan-auto-shortcut-bg: #dcf2e4;
+  --clan-auto-shortcut-border: #9dd8b7;
+  --clan-auto-shortcut-text: #104e2c;
+  --clan-time-gated-bg: #fdf8eb;
+  --clan-time-gated-border: #eedaa2;
+  --clan-time-gated-text: #815b13;
+  --clan-landmark-unlocked-bg: #edf8f2;
+  --clan-landmark-unlocked-border: #9edcb9;
+  --clan-landmark-icon-bg: #eef7f2;
+  --clan-nav-bg: #ffffff;
+  --clan-nav-text: #537565;
+  --clan-nav-active-bg: #e1f4e8;
+  --clan-nav-active-text: #114c2b;
+  --clan-nav-indicator: #1f7747;
+  --clan-modal-bg: #ffffff;
+  --clan-modal-border: #c4ded0;
+  --clan-modal-shadow: 0 25px 80px rgba(15, 45, 30, 0.18);
+  --clan-overlay-bg: rgba(14, 38, 27, 0.45);
+  --clan-input-bg: #f4f9f6;
+  --clan-input-border: #bed8cb;
+  --clan-input-text: #122c20;
+  --clan-input-placeholder: #779b8a;
+  --clan-counter-bg: radial-gradient(ellipse, #e9f7ee, #d8f1e2);
+  --clan-counter-border: #a2dbbb;
+  --clan-counter-text: #104829;
+  --clan-construction-bg: linear-gradient(135deg, #eef7f2, #fbfdfc);
+  --clan-construction-border: #a4dcbc;
+  --clan-timer-pill-bg: #fdf5e2;
+  --clan-timer-pill-border: #dfbf6c;
+  --clan-timer-pill-color: #876214;
+  --clan-speedup-btn-bg: #e3f4e9;
+  --clan-speedup-btn-border: #a6dbbc;
+  --clan-speedup-btn-text: #114a2c;
+  --clan-map-pin-inner-bg: #ffffffea;
+  --clan-map-pin-label-bg: #ffffffee;
+  --clan-map-pin-label-text: #123122;
+  --clan-map-pin-label-border: #beddcb;
+  --clan-badge-btn-bg: #edf5f0;
+  --clan-badge-btn-border: #c3ddd0;
+  --clan-badge-btn-active: #d5eee0;
+  --clan-badge-btn-active-border: #1f7747;
+  --clan-card-shadow: 0 6px 20px rgba(18, 45, 32, 0.05);
+  --clan-weekly-highlight: #92400e;
+  --clan-badge-weekly-bg: rgba(245, 158, 11, 0.12);
+  --clan-badge-weekly-border: rgba(217, 119, 6, 0.4);
+  --clan-badge-weekly-text: #b45309;
+}
+
+/* Dark Theme (Default when html has .dark or .clan-theme-dark) */
+html.dark .clan-app,
+.clan-app.clan-theme-dark {
+  color-scheme: dark;
+  --clan-bg: #0b1716;
+  --clan-panel: #132421;
+  --clan-line: #2b403a;
+  --clan-line-strong: #456249;
+  --clan-text: #f4f3e9;
+  --clan-text-secondary: #cedbd0;
+  --clan-muted: #acbbb2;
+  --clan-brand-bg: #263f31;
+  --clan-brand-color: #caddb0;
+  --clan-btn-icon-bg: transparent;
+  --clan-hero-bg: radial-gradient(ellipse at top left, #3a5b43 0, transparent 65%), linear-gradient(130deg, #203f34, #142922);
+  --clan-hero-border: #456249;
+  --clan-hero-text: #cedbd0;
+  --clan-eyebrow: #cbbd90;
+  --clan-pill-bg: transparent;
+  --clan-pill-border: #78947655;
+  --clan-pill-color: #d4e5c8;
+  --clan-primary-bg: #c2d9ad;
+  --clan-primary-hover: #d5e6c5;
+  --clan-primary-text: #173021;
+  --clan-primary-border: #bbd8aa;
+  --clan-secondary-bg: #233b30;
+  --clan-secondary-hover: #314c3d;
+  --clan-secondary-text: #e1ead9;
+  --clan-secondary-border: #526351;
+  --clan-stats-bg: #12251e;
+  --clan-stats-strong: #e4dbb5;
+  --clan-next-bg: linear-gradient(120deg, #223b2c, #15291f);
+  --clan-next-border: #657453;
+  --clan-invite-bg: #0d1d18;
+  --clan-avatar-bg: #304835;
+  --clan-avatar-color: #d6dfbd;
+  --clan-segment-bg: #15251f;
+  --clan-segment-btn-active: #35503a;
+  --clan-segment-btn-text: #eff5e7;
+  --clan-progress-bg: #314338;
+  --clan-progress-fill: linear-gradient(90deg, #96bc93, #d9d2a4);
+  --clan-auto-track-bg: #162e24;
+  --clan-auto-track-border: #4a6b55;
+  --clan-auto-track-text: #a8d1b3;
+  --clan-auto-shortcut-bg: #1f4030;
+  --clan-auto-shortcut-border: #5a7a60;
+  --clan-auto-shortcut-text: #c8e8d0;
+  --clan-time-gated-bg: #2b2615;
+  --clan-time-gated-border: #6e5f32;
+  --clan-time-gated-text: #e8d59c;
+  --clan-landmark-unlocked-bg: #1a3125;
+  --clan-landmark-unlocked-border: #6e8b62;
+  --clan-landmark-icon-bg: #213629;
+  --clan-nav-bg: #101f1a;
+  --clan-nav-text: #91a397;
+  --clan-nav-active-bg: #2a4131;
+  --clan-nav-active-text: #e1ddbb;
+  --clan-nav-indicator: #cccea2;
+  --clan-modal-bg: #152820;
+  --clan-modal-border: #5e7056;
+  --clan-modal-shadow: 0 25px 100px #0008;
+  --clan-overlay-bg: #020c09c9;
+  --clan-input-bg: #0e2118;
+  --clan-input-border: #4a5e48;
+  --clan-input-text: #f1f4e9;
+  --clan-input-placeholder: #829a87;
+  --clan-counter-bg: radial-gradient(ellipse, #355239, #182f20);
+  --clan-counter-border: #5e7952;
+  --clan-counter-text: #e6e4bf;
+  --clan-construction-bg: linear-gradient(135deg, #1f3b2e, #11231a);
+  --clan-construction-border: #628872;
+  --clan-timer-pill-bg: #352912;
+  --clan-timer-pill-border: #8c6e28;
+  --clan-timer-pill-color: #fce49c;
+  --clan-speedup-btn-bg: #234636;
+  --clan-speedup-btn-border: #5a856e;
+  --clan-speedup-btn-text: #d7eedf;
+  --clan-map-pin-inner-bg: #142a22fa;
+  --clan-map-pin-label-bg: #0d1d17ed;
+  --clan-map-pin-label-text: #e6ede7;
+  --clan-map-pin-label-border: #334e40;
+  --clan-badge-btn-bg: #1e3425;
+  --clan-badge-btn-border: #3c523b;
+  --clan-badge-btn-active: #42573c;
+  --clan-badge-btn-active-border: #d6dcae;
+  --clan-card-shadow: none;
+  --clan-weekly-highlight: #fde68a;
+  --clan-badge-weekly-bg: rgba(245, 158, 11, 0.2);
+  --clan-badge-weekly-border: rgba(245, 158, 11, 0.45);
+  --clan-badge-weekly-text: #fde047;
+}
+
+.clan-app {
+  background: var(--clan-bg);
+  color: var(--clan-text);
+  height: 100%;
+  font-family: Cairo, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  isolation: isolate;
+  transition: background-color .25s ease, color .25s ease;
+}
+.clan-app * { box-sizing: border-box; }
+.clan-app button, .clan-app input, .clan-app textarea, .clan-app select { font: inherit; }
+.clan-app button { cursor: pointer; transition: background .16s, transform .16s; touch-action: manipulation; }
+.clan-app button:disabled { opacity: .45; cursor: not-allowed; }
+.clan-app button:active:not(:disabled) { transform: translateY(1px); }
+.clan-app :focus-visible { outline: 3px solid #e0c995; outline-offset: 3px; }
+.clan-shell { height: 100%; display: flex; flex-direction: column; max-width: 1080px; margin: auto; }
+.clan-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px; padding-top: max(14px, env(safe-area-inset-top)); border-bottom: 1px solid var(--clan-line); background: var(--clan-panel); flex: none; }
+.clan-top-title { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.clan-top small { display: block; color: var(--clan-muted); font-size: 11px; }
+.clan-top strong { font-size: 18px; color: var(--clan-text); }
+.clan-brand { background: var(--clan-brand-bg); color: var(--clan-brand-color); border-radius: 14px; padding: 9px; display: flex; }
+.clan-icon-button { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--clan-line); border-radius: 13px; background: var(--clan-btn-icon-bg); color: var(--clan-text); }
+.clan-main { overflow: auto; flex: 1; min-height: 0; padding: 24px; overscroll-behavior: contain; scrollbar-width: thin; }
+.clan-main > * { margin-bottom: 18px; }
+.clan-hero { padding: 30px; border-radius: 28px; background: var(--clan-hero-bg); border: 1px solid var(--clan-hero-border); position: relative; overflow: hidden; color: var(--clan-hero-text); }
+.clan-hero:after { content: ''; position: absolute; width: 220px; height: 220px; border: 1px solid #d8cb9b20; border-radius: 50%; left: -50px; bottom: -130px; box-shadow: 0 0 0 28px #d8cb9b06, 0 0 0 60px #d8cb9b04; pointer-events: none; }
+.clan-eyebrow { color: var(--clan-eyebrow); font-size: 11px; letter-spacing: .3px; font-weight: 700; }
+.clan-hero-badge { font-size: 40px; margin-top: 14px; line-height: 1.3; }
+.clan-hero-badge img { width: 60px; height: 60px; object-fit: contain; }
+.clan-app h1 { font-size: 30px; font-weight: 800; line-height: 1.5; margin: 8px 0 10px; color: var(--clan-text); }
+.clan-app h2 { font-size: 17px; font-weight: 700; margin: 0 0 8px; line-height: 1.7; overflow-wrap: anywhere; color: var(--clan-text); }
+.clan-app p { color: var(--clan-muted); font-size: 13px; line-height: 1.95; margin: 8px 0 14px; }
+.clan-hero p { max-width: 590px; color: var(--clan-text-secondary); }
+
+/* Dynamic Contrast & Clarity for Clan Hero Banner */
+.clan-hero.is-dark-banner {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.45);
+}
+.clan-hero.is-dark-banner h1,
+.clan-app .clan-hero.is-dark-banner h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+}
+.clan-hero.is-dark-banner p,
+.clan-app .clan-hero.is-dark-banner p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+.clan-hero.is-dark-banner .clan-eyebrow {
+  color: #fde68a !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+.clan-hero.is-dark-banner .clan-pill {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(8px);
+}
+.clan-hero.is-dark-banner .clan-icon-button {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.clan-hero.is-light-banner {
+  color: #0e3020 !important;
+  border-color: #b8e2cc !important;
+}
+.clan-hero.is-light-banner h1,
+.clan-app .clan-hero.is-light-banner h1 {
+  color: #0f291e !important;
+  text-shadow: none;
+}
+.clan-hero.is-light-banner p,
+.clan-app .clan-hero.is-light-banner p {
+  color: #244234 !important;
+  text-shadow: none;
+}
+.clan-hero.is-light-banner .clan-eyebrow {
+  color: #854d0e !important;
+  text-shadow: none;
+}
+.clan-hero.is-light-banner .clan-pill {
+  background: rgba(0, 0, 0, 0.06) !important;
+  color: #0f291e !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+.clan-hero.is-light-banner .clan-icon-button {
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: #0f291e !important;
+}
+.clan-pill { display: inline-block; border: 1px solid var(--clan-pill-border); background: var(--clan-pill-bg); border-radius: 30px; padding: 5px 13px; color: var(--clan-pill-color); font-size: 11px; font-weight: 600; }
+.clan-actions { display: flex; gap: 12px; }
+.clan-primary, .clan-secondary, .clan-danger { min-height: 46px; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 11px 18px; border-radius: 14px; font-weight: 700 !important; font-size: 13px !important; width: 100%; }
+.clan-primary { border: 1px solid var(--clan-primary-border); background: var(--clan-primary-bg); color: var(--clan-primary-text); }
+.clan-primary:hover:not(:disabled) { background: var(--clan-primary-hover); }
+.clan-secondary { border: 1px solid var(--clan-secondary-border); background: var(--clan-secondary-bg); color: var(--clan-secondary-text); }
+.clan-secondary:hover:not(:disabled) { background: var(--clan-secondary-hover); }
+.clan-card { background: var(--clan-panel); border: 1px solid var(--clan-line); padding: 22px; border-radius: 22px; box-shadow: var(--clan-card-shadow); }
+.clan-card p:last-child { margin-bottom: 0; }
+.clan-steps { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 20px; }
+.clan-steps li { display: flex; gap: 14px; }
+.clan-steps b { width: 32px; height: 32px; background: var(--clan-brand-bg); color: var(--clan-brand-color); border-radius: 50%; text-align: center; line-height: 32px; flex-shrink: 0; }
+.clan-steps strong { font-size: 14px; color: var(--clan-text); }
+.clan-steps p { margin: 3px 0 0; }
+.clan-footnote { display: flex; align-items: flex-start; gap: 8px; font-size: 11px !important; color: var(--clan-muted) !important; }
+.clan-footnote svg { flex-shrink: 0; margin-top: 4px; }
+.clan-stats { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--clan-line); border-radius: 20px; background: var(--clan-stats-bg); padding: 18px 4px; text-align: center; }
+.clan-stats > div + div { border-right: 1px solid var(--clan-line); }
+.clan-stats strong { display: block; color: var(--clan-stats-strong); font-size: 23px; }
+.clan-stats small { font-size: 12px; color: var(--clan-muted); }
+.clan-stats span { font-size: 11px; color: var(--clan-muted); }
+.clan-next { border-color: var(--clan-next-border); background: var(--clan-next-bg); }
+.clan-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clan-heading h2 { margin: 0; }
+.clan-muted, .clan-heading small { font-size: 11px; color: var(--clan-muted); }
+.clan-invite { margin: 12px 0; display: flex; align-items: center; gap: 8px; background: var(--clan-invite-bg); border-radius: 13px; padding: 8px; }
+.clan-invite code { font-size: 11px; direction: ltr; overflow-wrap: anywhere; flex: 1; user-select: text; color: var(--clan-text); }
+.clan-member { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-top: 1px solid var(--clan-line); }
+.clan-avatar { width: 35px; height: 35px; text-align: center; line-height: 35px; border-radius: 13px; background: var(--clan-avatar-bg); color: var(--clan-avatar-color); font-weight: 700; }
+.clan-member strong { font-size: 13px; color: var(--clan-text); }
+.clan-member small { display: block; font-size: 10px; color: var(--clan-muted); }
+.clan-member-points { margin-right: auto; font-size: 11px; color: var(--clan-brand-color); font-weight: 700; }
+.clan-text-button { background: transparent; border: 0; color: var(--clan-brand-color); padding: 12px 0; font-size: 12px !important; font-weight: 700; }
+.clan-section-title { padding: 7px 0 4px; }
+.clan-section-title h1 { font-size: 28px; }
+.clan-segment { display: flex; gap: 5px; padding: 5px; background: var(--clan-segment-bg); border: 1px solid var(--clan-line); border-radius: 14px; }
+.clan-segment button { flex: 1; border: 0; background: transparent; color: var(--clan-muted); padding: 9px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+.clan-segment button[aria-pressed=true] { background: var(--clan-segment-btn-active); color: var(--clan-segment-btn-text); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.clan-quest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.clan-quest { display: flex; flex-direction: column; gap: 12px; }
+.clan-quest > p { flex: 1; margin: 0; }
+.clan-quest h2 { margin: 0; }
+.clan-quest-icon { font-size: 25px; }
+.clan-reward { font-size: 10px; color: var(--clan-eyebrow); font-weight: 700; }
+.clan-count { font-size: 12px; }
+.clan-count span { font-weight: 400; color: var(--clan-muted); font-size: 11px; }
+.clan-progress { height: 7px; background: var(--clan-progress-bg); border-radius: 8px; overflow: hidden; margin: 7px 0; }
+.clan-progress i { display: block; height: 100%; border-radius: 8px; background: var(--clan-progress-fill); transition: width .3s; }
+.clan-completed { color: var(--clan-brand-color); display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; }
+.clan-empty { padding: 45px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.clan-empty > svg { color: var(--clan-brand-color); }
+.clan-empty .clan-primary, .clan-empty .clan-secondary { max-width: 300px; }
+.clan-timeline { display: grid; gap: 14px; }
+.clan-landmark { display: flex; gap: 17px; align-items: flex-start; position: relative; }
+.clan-landmark > div { flex: 1; }
+.clan-landmark > svg { flex-shrink: 0; color: var(--clan-muted); margin-top: 8px; }
+.clan-landmark-icon { font-size: 29px; background: var(--clan-landmark-icon-bg); padding: 8px; border-radius: 17px; }
+.clan-landmark.is-unlocked { border-color: var(--clan-landmark-unlocked-border); background: var(--clan-landmark-unlocked-bg); }
+.clan-search { display: flex !important; align-items: center; gap: 12px; border: 1px solid var(--clan-line); border-radius: 15px; padding: 4px 14px; background: var(--clan-panel); }
+.clan-search input { border: 0 !important; background: transparent !important; min-width: 0; color: var(--clan-text); }
+.clan-list-badge { font-size: 28px; display: flex; width: 46px; height: 46px; align-items: center; justify-content: center; }
+.clan-list-badge img { width: 100%; height: 100%; object-fit: contain; }
+.clan-nav { display: flex; flex: none; border-top: 1px solid var(--clan-line); background: var(--clan-nav-bg); padding: 8px 12px; padding-bottom: max(10px, env(safe-area-inset-bottom)); gap: 5px; }
+.clan-nav button { position: relative; flex: 1; display: flex; flex-direction: column; gap: 3px; align-items: center; border: 0; border-radius: 14px; color: var(--clan-nav-text); background: transparent; padding: 8px 2px; font-size: 10px; font-weight: 600; }
+.clan-nav button[aria-current=page] { background: var(--clan-nav-active-bg); color: var(--clan-nav-active-text); }
+.clan-nav i { height: 3px; width: 14px; background: var(--clan-nav-indicator); border-radius: 3px; }
+.clan-message { background: var(--clan-auto-track-bg); border: 1px solid var(--clan-auto-track-border); color: var(--clan-auto-track-text); padding: 12px 16px; border-radius: 14px; font-size: 12px; display: flex; gap: 9px; align-items: center; }
+.clan-error, .clan-inline-error { color: #d9381e !important; background: #fdf0ed !important; border-color: #f7c1b5 !important; }
+html.dark .clan-error, html.dark .clan-inline-error, .clan-theme-dark .clan-error, .clan-theme-dark .clan-inline-error { color: #ffd3c1 !important; background: #452b23 !important; border-color: #865f4f !important; }
+.clan-message button { margin-right: auto; color: inherit; background: transparent; border: 0; text-decoration: underline; flex-shrink: 0; }
+.clan-overlay { position: absolute; inset: 0; z-index: 50; background: var(--clan-overlay-bg); backdrop-filter: blur(7px); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.clan-modal { background: var(--clan-modal-bg); border: 1px solid var(--clan-modal-border); border-radius: 26px; padding: 25px; width: 100%; max-width: 460px; max-height: 90%; overflow: auto; box-shadow: var(--clan-modal-shadow); color: var(--clan-text); }
+.clan-modal form { display: grid; gap: 16px; margin-top: 16px; }
+.clan-app label { display: grid; gap: 7px; font-size: 12px; color: var(--clan-text-secondary); font-weight: 600; }
+.clan-app input:not([type=checkbox]), .clan-app textarea, .clan-app select { width: 100%; border: 1px solid var(--clan-input-border); border-radius: 12px; padding: 12px; color: var(--clan-input-text); background: var(--clan-input-bg); min-height: 44px; }
+.clan-app textarea { min-height: 84px; resize: vertical; }
+.clan-app input::placeholder, .clan-app textarea::placeholder { color: var(--clan-input-placeholder); }
+.clan-app fieldset { border: 0; padding: 0; margin: 0; }
+.clan-app legend { font-size: 12px; margin-bottom: 9px; color: var(--clan-text); font-weight: 600; }
+.clan-badges { display: flex; gap: 7px; }
+.clan-badges button { flex: 1; font-size: 24px; padding: 7px 0; border: 1px solid var(--clan-badge-btn-border); border-radius: 12px; background: var(--clan-badge-btn-bg); color: var(--clan-text); }
+.clan-badges button[aria-pressed=true] { border-color: var(--clan-badge-btn-active-border); background: var(--clan-badge-btn-active); }
+.clan-danger { background: #feebe7; border: 1px solid #f8b4a5; color: #b72b14; margin-top: 15px; }
+html.dark .clan-danger, .clan-theme-dark .clan-danger { background: #462d25; border: 1px solid #91674f; color: #f0c7b8; }
+.clan-counter { border: 1px solid var(--clan-counter-border); background: var(--clan-counter-bg); color: var(--clan-counter-text); border-radius: 28px; padding: 20px; width: 100%; margin-top: 16px; display: flex; flex-direction: column; align-items: center; }
+.clan-counter strong { font-size: 48px; line-height: 1.5; color: var(--clan-counter-text); }
+.clan-counter small { color: var(--clan-muted); font-size: 10px; }
+.clan-check { display: flex !important; align-items: center; gap: 10px !important; }
+.clan-check input { width: 20px; height: 20px; accent-color: var(--clan-primary-bg); flex-shrink: 0; }
+.clan-arrow { transform: rotate(180deg); }
+.clan-spin { animation: clan-spin 1s linear infinite; }
+@keyframes clan-spin { to { transform: rotate(360deg); } }
+.clan-auto-track { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; background: var(--clan-auto-track-bg); border: 1px solid var(--clan-auto-track-border); border-radius: 13px; padding: 10px 13px; color: var(--clan-auto-track-text); font-size: 11px; }
+.clan-auto-track svg { flex-shrink: 0; color: var(--clan-brand-color); }
+.clan-auto-shortcut { background: var(--clan-auto-shortcut-bg); border: 1px solid var(--clan-auto-shortcut-border); border-radius: 10px; color: var(--clan-auto-shortcut-text); font-size: 11px !important; padding: 6px 11px; display: inline-flex; align-items: center; gap: 5px; width: auto !important; min-height: auto !important; margin-top: 2px; font-weight: 700; }
+.clan-auto-shortcut:hover:not(:disabled) { opacity: 0.9; }
+.clan-time-gated { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; background: var(--clan-time-gated-bg); border: 1px solid var(--clan-time-gated-border); border-radius: 13px; padding: 10px 13px; color: var(--clan-time-gated-text); font-size: 11px; }
+.clan-time-gated svg { flex-shrink: 0; color: var(--clan-eyebrow); }
+
+/* Modal Helper Strip Classes */
+.clan-heat-row { background: var(--clan-stats-bg); padding: 10px 14px; border-radius: 14px; border: 1px solid var(--clan-line); display: flex; align-items: center; justify-content: space-between; }
+.clan-dominant-highlight { background: var(--clan-next-bg); border: 1.5px solid var(--clan-next-border); border-radius: 16px; padding: 14px; }
+.clan-my-status-box { background: var(--clan-stats-bg); border: 1px solid var(--clan-line); border-radius: 16px; padding: 14px; }
+
+/* Responsive Adjustments */
+@media(min-width:760px){.clan-main{padding:32px 60px}.clan-hero{padding:40px}.clan-hero h1{font-size:38px}.clan-nav{padding-inline:100px}.clan-steps{grid-template-columns:repeat(3,1fr)}.clan-steps li{flex-direction:column}.clan-top{padding-inline:40px}}
+@media(max-width:540px){.clan-main{padding:18px 15px}.clan-quest-grid{grid-template-columns:1fr}.clan-card{padding:18px;border-radius:19px}.clan-hero{padding:24px}.clan-heading{gap:8px}.clan-landmark{gap:10px}.clan-landmark-icon{font-size:24px;padding:5px}.clan-overlay{padding:12px}.clan-modal{padding:20px}.clan-stats strong{font-size:20px}.clan-top{padding-inline:15px}.clan-heading .clan-reward{max-width:125px}.clan-actions{gap:8px}.clan-primary,.clan-secondary{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){.clan-app *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Interactive Fantasy Map & Clan Dominance Styling */
+.clan-main-map {
+  padding: 8px 10px 16px !important;
+  display: flex;
+  flex-direction: column;
+}
+/* Full-Page Borderless Map Viewport */
+.clan-shell.clan-shell-fullscreen-map {
+  padding: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.clan-shell.clan-shell-fullscreen-map .clan-top {
+  display: none !important;
+}
+
+.clan-shell.clan-shell-fullscreen-map .clan-main-map {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 1 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  position: relative !important;
+}
+
+.clan-map-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  background: #11271e !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+
+.clan-map-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  filter: brightness(0.98) contrast(1.05) !important;
+}
+
+.clan-map-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 65%, rgba(6, 18, 14, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Floating HUD on top of map */
+.clan-map-floating-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.clan-map-floating-segment {
+  display: flex;
+  background: rgba(14, 29, 23, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 30px;
+  padding: 4px;
+  gap: 4px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4);
+}
+
+.clan-map-floating-segment button {
+  flex: 1;
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c9ded3;
+  background: transparent;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.clan-map-floating-segment button[aria-pressed="true"] {
+  background: var(--clan-primary-bg);
+  color: var(--clan-primary-text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.clan-map-construction-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(22, 40, 32, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(252, 228, 156, 0.5);
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: #f7ecd2;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.clan-map-construction-pill:hover {
+  background: rgba(30, 55, 44, 0.95);
+  transform: translateY(-1px);
+}
+
+.clan-map-construction-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fce49c;
+  box-shadow: 0 0 10px #fce49c;
+  animation: clan-dot-pulse 1.6s infinite alternate;
+}
+
+@keyframes clan-dot-pulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Floating Bottom Hint */
+.clan-map-floating-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(14, 29, 23, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 30px;
+  padding: 8px 16px;
+  color: #e2f0e8;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  text-align: center;
+}
+
+.clan-map-pin { position: absolute; transform: translate(-50%, -50%); cursor: pointer; border: 0; background: transparent; padding: 0; display: flex; flex-direction: column; align-items: center; transition: transform .2s ease, filter .2s ease; z-index: 10; outline: none; }
+.clan-map-pin:hover, .clan-map-pin:focus-visible { transform: translate(-50%, -50%) scale(1.15); z-index: 25; }
+.clan-map-pin-inner { position: relative; width: 44px; height: 44px; border-radius: 50%; background: var(--clan-map-pin-inner-bg); border: 2px solid var(--clan-line-strong); box-shadow: 0 6px 18px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 20px; transition: border-color .2s, box-shadow .2s; }
+.clan-map-pin.is-dominant .clan-map-pin-inner { border-width: 2.5px; }
+.clan-map-pin-aura { position: absolute; inset: -8px; border-radius: 50%; opacity: 0.6; animation: clan-aura-pulse 2.5s infinite alternate ease-in-out; pointer-events: none; }
+@keyframes clan-aura-pulse { 0% { transform: scale(0.95); opacity: 0.4; } 100% { transform: scale(1.3); opacity: 0.75; } }
+.clan-map-pin-badge { position: absolute; top: -6px; right: -6px; width: 22px; height: 22px; border-radius: 50%; background: var(--clan-panel); border: 1.5px solid var(--clan-eyebrow); display: flex; align-items: center; justify-content: center; font-size: 11px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+.clan-map-pin-badge img { width: 100%; height: 100%; object-fit: cover; }
+.clan-map-pin-heat { position: absolute; bottom: -4px; left: -4px; background: #ff4d26; color: #fff; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 10px; box-shadow: 0 0 8px #ff4d2688; }
+.clan-map-pin-label { margin-top: 6px; background: var(--clan-map-pin-label-bg); color: var(--clan-map-pin-label-text); border: 1px solid var(--clan-map-pin-label-border); border-radius: 10px; padding: 3px 9px; font-size: 11px; font-weight: 700; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 5px; pointer-events: none; }
+.clan-map-pin-label small { color: var(--clan-eyebrow); font-size: 10px; }
+
+/* Construction & Speed-Up Card */
+.clan-construction-card { background: var(--clan-construction-bg); border: 1.5px solid var(--clan-construction-border); border-radius: 22px; padding: 22px; position: relative; overflow: hidden; box-shadow: var(--clan-card-shadow); }
+.clan-construction-card::after { content: ''; position: absolute; top: 0; right: 0; width: 120px; height: 120px; background: radial-gradient(circle, #237a4b15, transparent 70%); pointer-events: none; }
+.clan-timer-pill { display: inline-flex; align-items: center; gap: 7px; background: var(--clan-timer-pill-bg); border: 1px solid var(--clan-timer-pill-border); color: var(--clan-timer-pill-color); border-radius: 30px; padding: 6px 14px; font-size: 12px; font-weight: 700; }
+.clan-speedup-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.clan-speedup-btn { background: var(--clan-speedup-btn-bg); border: 1px solid var(--clan-speedup-btn-border); border-radius: 12px; color: var(--clan-speedup-btn-text); padding: 8px 14px; font-size: 12px !important; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: background .15s; }
+.clan-speedup-btn:hover:not(:disabled) { opacity: 0.9; }
+.clan-speedup-feed { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; border-top: 1px solid var(--clan-line); padding-top: 12px; }
+.clan-speedup-item { display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--clan-muted); }
+
+/* Dominance & Competition Breakdown */
+.clan-dominance-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--clan-line); }
+.clan-dominance-row:last-child { border-bottom: 0; }
+.clan-dominance-bar-container { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.clan-dominance-bar-bg { height: 8px; background: var(--clan-progress-bg); border-radius: 6px; overflow: hidden; }
+.clan-dominance-bar-fill { height: 100%; border-radius: 6px; transition: width .4s ease; }
+.clan-heat-badge { display: inline-flex; align-items: center; gap: 5px; border-radius: 20px; padding: 4px 10px; font-size: 11px; font-weight: 700; }
+.clan-heat-badge.heat-calm { background: var(--clan-auto-track-bg); border: 1px solid var(--clan-auto-track-border); color: var(--clan-auto-track-text); }
+.clan-heat-badge.heat-contested { background: var(--clan-time-gated-bg); border: 1px solid var(--clan-time-gated-border); color: var(--clan-time-gated-text); }
+.clan-heat-badge.heat-fire { background: #feebe7; border: 1px solid #f8b4a5; color: #c42913; animation: clan-heat-pulse 1.8s infinite alternate; }
+html.dark .clan-heat-badge.heat-fire, .clan-theme-dark .clan-heat-badge.heat-fire { background: #421711; border: 1px solid #993729; color: #ff9685; }
+@keyframes clan-heat-pulse { 0% { box-shadow: 0 0 0 0 #ff4d2633; } 100% { box-shadow: 0 0 12px 2px #ff4d2666; } }
+
+/* Member List & Profile Modal */
+.clan-member {
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease;
+  border-radius: 14px;
+  padding: 8px 10px;
+}
+.clan-member:hover {
+  background: var(--clan-stats-bg);
+  transform: translateX(-2px);
+}
+
+.clan-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--clan-line);
+}
+.clan-profile-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--clan-brand-bg);
+  color: var(--clan-brand-color);
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--clan-line-strong);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.clan-profile-level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--clan-pill-bg, #e2f4ea);
+  border: 1.5px solid var(--clan-pill-border, #abdec2);
+  color: var(--clan-pill-color, #166534);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+html.dark .clan-profile-level-badge {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.35);
+  color: #34d399;
+}
+.clan-streak-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(22, 101, 52, 0.05));
+  border: 1.5px solid rgba(217, 119, 6, 0.25);
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+html.dark .clan-streak-banner {
+  background: linear-gradient(135deg, rgba(188, 165, 116, 0.15), rgba(30, 60, 48, 0.35));
+  border-color: rgba(188, 165, 116, 0.35);
+}
+.clan-streak-title {
+  font-weight: 800;
+  font-size: 13.5px;
+  color: #92400e;
+}
+html.dark .clan-streak-title {
+  color: #fde68a;
+}
+.clan-streak-sub {
+  color: var(--clan-muted, #4b6b5b);
+  font-size: 11px;
+}
+html.dark .clan-streak-sub {
+  color: #acbbb2;
+}
+.clan-streak-pill {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1.5px solid rgba(217, 119, 6, 0.4);
+  color: #b45309;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+html.dark .clan-streak-pill {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #fde68a;
+}
+.clan-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+.clan-profile-stat {
+  background: var(--clan-stats-bg);
+  border: 1px solid var(--clan-line);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+.clan-profile-stat strong {
+  display: block;
+  font-size: 18px;
+  color: var(--clan-stats-strong);
+}
+.clan-profile-stat span {
+  font-size: 11px;
+  color: var(--clan-muted);
+}
+
+/* Clan Settings & Advanced Customization */
+.clan-logo-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 8px;
+  background: var(--clan-input-bg);
+  border: 1px solid var(--clan-input-border);
+  border-radius: 14px;
+}
+.clan-logo-btn {
+  aspect-ratio: 1;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: var(--clan-panel);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.clan-logo-btn:hover {
+  transform: scale(1.08);
+}
+.clan-logo-btn.is-active {
+  border-color: #e0c995;
+  background: var(--clan-badge-btn-active);
+  box-shadow: 0 0 10px rgba(224, 201, 149, 0.4);
+}
+.clan-logo-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clan-color-picker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.clan-color-swatch {
+  height: 42px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.clan-color-swatch:hover {
+  transform: translateY(-2px);
+}
+.clan-color-swatch.is-active {
+  border-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Blessed Times & Impact Mechanics */
+.clan-blessed-banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(19, 78, 58, 0.92), rgba(10, 40, 30, 0.95));
+  border: 1px solid rgba(224, 201, 149, 0.4);
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 15px rgba(224, 201, 149, 0.15);
+  animation: pulseBlessedGlow 3s infinite alternate;
+}
+
+@keyframes pulseBlessedGlow {
+  0% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 10px rgba(224, 201, 149, 0.1); }
+  100% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 20px rgba(224, 201, 149, 0.3); }
+}
+
+.clan-blessed-glow {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(224, 201, 149, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.clan-weekly-countdown-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--clan-stats-bg);
+  border: 1px solid var(--clan-line);
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  color: var(--clan-text);
+}
+
+.clan-weekly-clock-icon {
+  color: var(--clan-weekly-highlight);
+  flex-shrink: 0;
+}
+
+.clan-weekly-countdown-pill strong {
+  color: var(--clan-weekly-highlight);
+  font-weight: 800;
+}
+
+.clan-badge-weekly {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--clan-badge-weekly-bg);
+  color: var(--clan-badge-weekly-text);
+  border: 1px solid var(--clan-badge-weekly-border);
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.clan-badge-friday {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(16, 185, 129, 0.14);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+html.dark .clan-badge-friday,
+.clan-app.clan-theme-dark .clan-badge-friday {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.22);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+/* 30-Juz Distributed Khatma */
+.clan-khatma-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.clan-juz-card {
+  background: var(--clan-panel);
+  border: 1px solid var(--clan-line);
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.clan-juz-card:hover {
+  transform: translateY(-2px);
+}
+
+.clan-juz-card.is-completed {
+  background: linear-gradient(135deg, rgba(19, 78, 58, 0.45), rgba(15, 60, 45, 0.35));
+  border-color: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.2);
+}
+
+.clan-juz-card.is-claimed {
+  background: linear-gradient(135deg, rgba(188, 165, 116, 0.15), rgba(40, 50, 45, 0.3));
+  border-color: #e0c995;
+}
+
+.clan-juz-num {
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clan-juz-title {
+  font-size: 11px;
+  color: var(--clan-text);
+  font-weight: 600;
+  margin: 4px 0;
+  line-height: 1.3;
+}
+
+.clan-juz-pages {
+  font-size: 10px;
+  color: var(--clan-muted);
+}
+
+/* وبالأسحار هم يستغفرون - Celestial Night Window */
+.clan-sahar-card {
+  background: radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.22), transparent 45%),
+              linear-gradient(145deg, #090e1a 0%, #0d1b2e 50%, #091f1a 100%);
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 16px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.clan-sahar-card::before {
+  content: ''; display: none;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: 24px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Companion Check-In (أثر الغائب والتفقد) */
+.clan-companion-welcome-banner {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.95), rgba(15, 23, 42, 0.95));
+  border: 1.5px solid #22c55e;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.clan-checkin-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: inherit;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.clan-checkin-quick-btn:hover:not(:disabled) {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.clan-checkin-quick-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--clan-muted);
+}
+
+.clan-checkin-box {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(188, 165, 116, 0.05));
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+/* Clan Twinning & Joint Mega Projects (المؤاخاة بين قبيلتين والصرح المشترك) */
+.clan-twin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(245, 158, 11, 0.18));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fce49c;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clan-twin-badge:hover {
+  transform: translateY(-1px);
+  border-color: #fce49c;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+}
+
+.clan-twinning-invite-card {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(88, 28, 135, 0.95));
+  border: 1.5px solid #a855f7;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(168, 85, 247, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.clan-map-twin-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 12;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.clan-map-twin-pin:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  z-index: 20;
+}
+
+.clan-map-twin-pin-inner {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #064e3b, #0f172a);
+  border: 2.5px solid #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5), inset 0 0 10px rgba(245, 158, 11, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 24px;
+}
+
+.clan-map-twin-badges {
+  position: absolute;
+  bottom: -6px;
+  display: flex;
+  align-items: center;
+  gap: -6px;
+}
+
+.clan-map-twin-badges span,
+.clan-map-twin-badges img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: #1e293b;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.clan-map-twin-label {
+  margin-top: 8px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fce49c;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.clan-dual-progress {
+  height: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  margin: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.clan-dual-progress-bar-1 {
+  background: linear-gradient(90deg, #10b981, #059669);
+  transition: width 0.4s ease;
+}
+
+.clan-dual-progress-bar-2 {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  transition: width 0.4s ease;
+}
+
+.clan-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Live Activity Feed Button in Header (قاعة المساهمين اللحظية) */
+.clan-top-live-btn {
+  background: rgba(14, 29, 23, 0.88);
+  border: 1.5px solid rgba(224, 201, 149, 0.45);
+  border-radius: 24px;
+  padding: 6px 13px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+}
+
+.clan-top-live-btn:hover,
+.clan-top-live-btn:focus-visible {
+  transform: translateY(-1px) scale(1.04);
+  border-color: #34d399;
+  background: rgba(20, 44, 34, 0.98);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 12px rgba(52, 211, 153, 0.3);
+}
+
+.clan-top-live-btn:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.clan-live-pill-label {
+  color: #86efac;
+  font-weight: 800;
+  font-size: 11.5px;
+  letter-spacing: 0.2px;
+}
+
+.clan-live-pill-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.clan-live-pulse-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid #22c55e;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #86efac;
+  flex-shrink: 0;
+}
+
+.clan-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: clanPulse 1.8s infinite;
+}
+
+@keyframes clanPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 12px #4ade80; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.clan-live-ticker-content {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #f1f5f9;
+}
+
+.clan-live-ticker-content strong {
+  color: #fce49c;
+}
+
+.clan-live-ticker-btn {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fce49c;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Activity Feed Modal Items */
+.clan-activity-list {
+  display: grid;
+  gap: 10px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.clan-activity-card {
+  background: var(--clan-stats-bg);
+  border: 1px solid var(--clan-line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.clan-activity-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: translateX(-2px);
+}
+
+.clan-activity-icon-bubble {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.clan-activity-msg {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--clan-text);
+  margin-bottom: 4px;
+}
+
+.clan-activity-time {
+  font-size: 11px;
+  color: var(--clan-muted);
+}
+
+/* Dynamic Construction Stages (مراحل البناء الحي) */
+.clan-construction-stage-card {
+  border-radius: 18px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--clan-line-strong);
+  transition: all 0.3s ease;
+}
+
+.clan-construction-stage-card.stage-foundation {
+  background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #44403c 100%);
+  border-color: #a8a29e;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.clan-construction-stage-card.stage-rising {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e3a2f 100%);
+  border-color: #f59e0b;
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.25);
+  animation: pulseRisingGlow 3s infinite alternate;
+}
+
+@keyframes pulseRisingGlow {
+  0% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.2); }
+  100% { box-shadow: 0 0 32px rgba(245, 158, 11, 0.45); }
+}
+
+.clan-construction-stage-card.stage-completed {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #022c22 100%);
+  border-color: #34d399;
+  box-shadow: 0 0 30px rgba(52, 211, 153, 0.3);
+}
+
+/* Three Milestones Progress Steps */
+.clan-stage-steps-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0 10px;
+  position: relative;
+}
+
+.clan-stage-steps-line {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.clan-stage-steps-line-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #34d399);
+  transition: width 0.4s ease;
+}
+
+.clan-stage-step-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.clan-stage-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1e293b;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.clan-stage-step-item.is-active .clan-stage-step-circle {
+  border-color: #f59e0b;
+  background: #f59e0b;
+  color: #000;
+  box-shadow: 0 0 12px #f59e0b;
+  transform: scale(1.15);
+}
+
+.clan-stage-step-item.is-done .clan-stage-step-circle {
+  border-color: #34d399;
+  background: #065f46;
+  color: #34d399;
+}
+
+.clan-stage-step-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--clan-muted);
+  white-space: nowrap;
+}
+
+.clan-stage-step-item.is-active .clan-stage-step-label {
+  color: #fce49c;
+}
+
+/* Quranic Ayah Box for Completed / Unlocked Landmark */
+.clan-quran-ayah-box {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.4), rgba(20, 30, 25, 0.7));
+  border: 1.5px solid rgba(224, 201, 149, 0.5);
+  border-radius: 16px;
+  padding: 16px 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(224, 201, 149, 0.1);
+  margin-top: 10px;
+}
+
+.clan-quran-ayah-bismillah {
+  font-size: 12px;
+  color: #e0c995;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.clan-quran-ayah-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.8;
+  margin: 6px 0;
+  font-family: inherit;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.clan-quran-ayah-ref {
+  font-size: 11px;
+  color: #94a3b8;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 6px;
+}
+
+/* Map Pin Stage Ring Overlays */
+.clan-map-pin.is-stage-1 .clan-map-pin-inner {
+  border-style: dashed !important;
+  border-color: #a8a29e !important;
+}
+
+.clan-map-pin.is-stage-2 .clan-map-pin-inner {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.6) !important;
+  animation: pulseRisingGlow 2s infinite alternate;
+}
+
+.clan-map-pin.is-stage-3 .clan-map-pin-inner {
+  border-color: #34d399 !important;
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.7) !important;
+}
+
+.clan-map-pin-stage-icon {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  font-size: 12px;
+  background: #0f172a;
+  border: 1px solid #f59e0b;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================================
+   EXCLUSIVE TERRITORY PERKS & SPIRITUAL UNLOCKED CONTENT
+   ===================================================== */
+.clan-exclusive-perk-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
+  border: 1px solid rgba(224, 201, 149, 0.35);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  margin-top: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.clan-exclusive-perk-card.is-unlocked {
+  background: linear-gradient(145deg, rgba(6, 78, 59, 0.45), rgba(15, 23, 42, 0.95));
+  border-color: #34d399;
+  box-shadow: 0 0 24px rgba(52, 211, 153, 0.2);
+}
+
+.clan-exclusive-perk-card.is-locked {
+  opacity: 0.85;
+  border-color: rgba(148, 163, 184, 0.25);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
+}
+
+.clan-perk-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.clan-perk-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(224, 201, 149, 0.15);
+  border: 1px solid rgba(224, 201, 149, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.clan-exclusive-perk-card.is-unlocked .clan-perk-icon-wrap {
+  background: rgba(52, 211, 153, 0.18);
+  border-color: #34d399;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.35);
+}
+
+.clan-perk-title-wrap {
+  flex: 1;
+}
+
+.clan-perk-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.clan-perk-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e0c995;
+  background: rgba(224, 201, 149, 0.12);
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(224, 201, 149, 0.3);
+}
+
+.clan-perk-status-tag {
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.clan-perk-status-tag.unlocked {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.clan-perk-status-tag.locked {
+  background: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.clan-perk-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.clan-perk-tagline {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.clan-perk-desc {
+  font-size: 12.5px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 8px 0;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-right: 3px solid #e0c995;
+}
+
+.clan-exclusive-perk-card.is-unlocked .clan-perk-desc {
+  border-right-color: #34d399;
+}
+
+.clan-perk-meta-grid {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.clan-perk-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #e2e8f0;
+}
+
+.clan-perk-meta-item strong {
+  color: #fce49c;
+  flex-shrink: 0;
+}
+
+.clan-perk-action-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.clan-perk-action-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Active Perks Shelf on Clan Home */
+.clan-perks-shelf-widget {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.35), rgba(15, 23, 42, 0.7));
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.clan-perks-shelf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.clan-perks-shelf-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clan-perks-shelf-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 8px;
+}
+
+.clan-perk-shelf-chip {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.clan-perk-shelf-chip:hover {
+  border-color: #34d399;
+  transform: translateY(-2px);
+  background: rgba(6, 78, 59, 0.4);
+}
+
+.clan-perk-shelf-chip .chip-icon {
+  font-size: 24px;
+}
+
+.clan-perk-shelf-chip .chip-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.clan-perk-shelf-chip .chip-sub {
+  font-size: 10px;
+  color: #34d399;
+}
+
+/* Modals specific to Perks */
+.clan-duaa-list {
+  display: grid;
+  gap: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.clan-duaa-item {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(224, 201, 149, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.clan-duaa-item:hover, .clan-duaa-item.selected {
+  border-color: #e0c995;
+  background: rgba(224, 201, 149, 0.1);
+}
+
+.clan-tadabbur-box {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.95));
+  border: 1px solid #e0c995;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.clan-tadabbur-ayah {
+  font-size: 16px;
+  font-weight: 700;
+  color: #34d399;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.clan-tadabbur-reflection {
+  font-size: 13.5px;
+  color: #e2e8f0;
+  line-height: 1.7;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* =========================================================================
+   SYNTHESIZED MAP EVOLUTION (POLISHED LOOK + LIVING WORLD + 3D ISOMETRIC)
+   ========================================================================= */
+
+/* =========================================================================
+   SYNTHESIZED MAP EVOLUTION (IMAGE 2 RECONSTRUCTION: FULLSCREEN BORDERLESS)
+   ========================================================================= */
+
+/* 1. Perspective Viewport & 3D Stage */
+.clan-map-viewport {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  perspective: 1200px !important;
+  background: #06100c !important;
+  flex: 1 !important;
+}
+
+.clan-map-perspective-stage {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform-style: preserve-3d !important;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.clan-map-perspective-stage.is-isometric-3d {
+  transform: perspective(1200px) rotateX(20deg) scale(1.04) !important;
+}
+
+.clan-map-perspective-stage.is-isometric-3d .clan-map-pin {
+  transform: translate(-50%, -50%) rotateX(-20deg) translateZ(12px) !important;
+}
+
+.clan-map-perspective-stage.is-isometric-3d .clan-map-twin-pin {
+  transform: translate(-50%, -50%) rotateX(-20deg) translateZ(14px) !important;
+}
+
+/* 2. Top HUD Mode Switcher Floating Above Map */
+.clan-map-floating-top {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  right: 12px !important;
+  z-index: 35 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  pointer-events: auto !important;
+}
+
+.clan-map-floating-segment {
+  display: flex !important;
+  background: rgba(14, 29, 23, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(224, 201, 149, 0.3) !important;
+  border-radius: 30px !important;
+  padding: 3px !important;
+  gap: 3px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.clan-map-floating-segment button {
+  border: 0 !important;
+  border-radius: 20px !important;
+  padding: 6px 12px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #c9ded3 !important;
+  background: transparent !important;
+  transition: all .2s ease !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.clan-map-floating-segment button[aria-pressed="true"] {
+  background: var(--clan-primary-bg) !important;
+  color: var(--clan-primary-text) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.clan-map-mode-toggle {
+  display: flex !important;
+  background: rgba(10, 25, 20, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(224, 201, 149, 0.4) !important;
+  border-radius: 30px !important;
+  padding: 3px !important;
+  gap: 4px !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55) !important;
+}
+
+.clan-map-mode-toggle button {
+  border: none !important;
+  background: transparent !important;
+  color: #cbd5e1 !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  padding: 5px 14px !important;
+  border-radius: 24px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.clan-map-mode-toggle button.is-active {
+  background: #059669 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.5) !important;
+}
+
+/* 3. Illustrated SVG Pathway */
+.clan-map-trail-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.clan-path-shadow {
+  stroke: rgba(0, 0, 0, 0.7);
+  stroke-width: 4;
+  stroke-linecap: round;
+  filter: blur(2px);
+  fill: none;
+}
+
+.clan-path-stones {
+  stroke: rgba(224, 201, 149, 0.45);
+  stroke-width: 2.2;
+  stroke-dasharray: 2 3.5;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.clan-path-energy {
+  stroke: url(#trailGoldGradient);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 6 14;
+  fill: none;
+  animation: clan-trail-pulse 3s linear infinite;
+}
+
+@keyframes clan-trail-pulse {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+/* 4. PINS & MEDALLIONS MATCHING IMAGE 2 EXACTLY */
+.clan-map-pin {
+  position: absolute !important;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  outline: none;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.clan-map-pin:hover,
+.clan-map-pin:focus-visible {
+  transform: translate(-50%, -50%) scale(1.12);
+  z-index: 40;
+}
+
+.clan-map-perspective-stage.is-isometric-3d .clan-map-pin:hover {
+  transform: translate(-50%, -50%) rotateX(-20deg) scale(1.12) !important;
+}
+
+/* 3D Jeweled Medallions Matching Image 2 */
+.clan-map-medallion-pin {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3.5px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.5), 0 8px 18px rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Individual Gemstone Themes per Territory */
+.clan-map-medallion-pin.medallion-oasis_tranquility {
+  background: radial-gradient(circle at 35% 35%, #34d399 0%, #059669 60%, #064e3b 100%);
+}
+
+.clan-map-medallion-pin.medallion-dhikr_valley {
+  background: radial-gradient(circle at 35% 35%, #f472b6 0%, #db2777 60%, #831843 100%);
+}
+
+.clan-map-medallion-pin.medallion-city_of_light {
+  background: radial-gradient(circle at 35% 35%, #fbbf24 0%, #d97706 60%, #78350f 100%);
+}
+
+.clan-map-medallion-pin.medallion-barakah_river {
+  background: radial-gradient(circle at 35% 35%, #38bdf8 0%, #0284c7 60%, #0c4a6e 100%);
+}
+
+.clan-map-medallion-pin.medallion-furqan_fortress {
+  background: radial-gradient(circle at 35% 35%, #c084fc 0%, #9333ea 60%, #581c87 100%);
+}
+
+.clan-map-medallion-pin.medallion-sabr_desert {
+  background: radial-gradient(circle at 35% 35%, #fb923c 0%, #ea580c 60%, #7c2d12 100%);
+}
+
+.clan-map-medallion-pin.medallion-tilawah_peak {
+  background: radial-gradient(circle at 35% 35%, #4ade80 0%, #16a34a 60%, #14532d 100%);
+}
+
+.clan-map-medallion-pin.medallion-firdaws_citadel {
+  background: radial-gradient(circle at 35% 35%, #fef08a 0%, #eab308 60%, #a16207 100%);
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.95), 0 0 45px rgba(245, 158, 11, 0.7), inset 0 2px 5px rgba(255, 255, 255, 0.7), 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+.clan-map-medallion-icon {
+  font-size: 23px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5. SEAMLESS ENGRAVED WOODEN PLAQUE MATCHING IMAGE 2 */
+.clan-map-engraved-plaque {
+  margin-top: 3px;
+  background: linear-gradient(180deg, rgba(48, 26, 14, 0.96) 0%, rgba(20, 10, 5, 0.98) 100%);
+  border: 1.5px solid #d4af37;
+  border-radius: 12px;
+  padding: 3px 12px;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 230, 150, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.clan-map-engraved-plaque .plaque-title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 11.5px;
+}
+
+.clan-map-engraved-plaque .plaque-status {
+  color: #fce49c;
+  font-size: 10.5px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+/* 6. PARCHMENT SCROLL TAG (+5) MATCHING IMAGE 2 */
+.clan-map-parchment-tag {
+  position: absolute;
+  right: -24px;
+  top: 5px;
+  background: linear-gradient(135deg, #fff9ed 0%, #ecd3a8 100%);
+  border: 1.5px solid #b8914b;
+  border-radius: 4px;
+  color: #3b2005;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 2px 6px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.clan-map-fog-shroud {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+  animation: clan-fog-swirl 8s linear infinite;
+}
+
+@keyframes clan-fog-swirl {
+  0% { transform: rotate(0deg) scale(0.95); opacity: 0.3; }
+  50% { transform: rotate(180deg) scale(1.08); opacity: 0.55; }
+  100% { transform: rotate(360deg) scale(0.95); opacity: 0.3; }
+}
+
+/* 8. Living Micro-Animations & Environmental Lighting */
+.clan-map-celestial-rays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(251, 191, 36, 0.22) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 80%);
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.clan-water-shimmer {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.35;
+  background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
+  animation: clan-water-pulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes clan-water-pulse {
+  0% { transform: scale(0.9); opacity: 0.2; }
+  100% { transform: scale(1.3); opacity: 0.5; }
+}
+
+.clan-torch-fire {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b, 0 0 20px #ef4444;
+  animation: clan-flame-flicker 1.4s infinite alternate;
+}
+
+@keyframes clan-flame-flicker {
+  0% { transform: scale(0.85); opacity: 0.7; }
+}
+
+/* ==========================================================================
+   5 SEQUENTIAL REALMS / MAPS SYSTEM STYLES
+   ========================================================================== */
+
+.clan-realm-switcher-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.clan-realm-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.clan-realm-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.clan-realm-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(14, 29, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 6px 13px;
+  color: #c0d8cb;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+
+.clan-realm-btn:hover {
+  background: rgba(22, 45, 36, 0.95);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.clan-realm-btn.is-active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(6, 78, 59, 0.55));
+  border-color: #34d399;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(52, 211, 153, 0.35), 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.clan-realm-btn.is-locked {
+  opacity: 0.72;
+  background: rgba(16, 20, 24, 0.78);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #8fa099;
+}
+
+.clan-realm-btn.is-locked.is-active {
+  opacity: 0.95;
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(120, 53, 15, 0.4));
+  color: #fef3c7;
+}
+
+.clan-realm-btn-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.clan-realm-btn-badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+.clan-realm-btn.is-active .clan-realm-btn-badge {
+  background: rgba(52, 211, 153, 0.28);
+  color: #6ee7b7;
+}
+
+.clan-realm-btn.is-locked .clan-realm-btn-badge {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.clan-realm-btn.is-completed .clan-realm-btn-badge {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fde047;
+}
+
+/* Realm Info Pill Bar */
+.clan-map-realm-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(10, 24, 18, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(252, 228, 156, 0.3);
+  border-radius: 20px;
+  padding: 7px 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.clan-map-realm-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.clan-map-realm-banner-icon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.clan-map-realm-banner-titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.clan-map-realm-banner-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fdf6e2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clan-map-realm-banner-sub {
+  font-size: 10px;
+  color: #9cb5a8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clan-map-realm-banner-progress {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fce49c;
+  background: rgba(252, 228, 156, 0.12);
+  border: 1px solid rgba(252, 228, 156, 0.28);
+  padding: 3px 9px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Environmental Thematic Overlays per Realm */
+.realm-theme-emerald {
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(6, 78, 59, 0.45) 100%) !important;
+}
+
+.realm-theme-sapphire {
+  background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.08) 0%, transparent 60%, rgba(8, 47, 73, 0.6) 100%) !important;
+}
+
+.realm-theme-amethyst {
+  background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.08) 0%, transparent 60%, rgba(59, 7, 100, 0.65) 100%) !important;
+}
+
+.realm-theme-amber {
+  background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.1) 0%, transparent 60%, rgba(69, 26, 3, 0.65) 100%) !important;
+}
+
+.realm-theme-firdaws {
+  background: radial-gradient(ellipse at center, rgba(250, 204, 21, 0.15) 0%, transparent 65%, rgba(113, 63, 18, 0.6) 100%) !important;
+}
+
+/* Locked Realm Veil Overlay */
+.clan-map-locked-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(8, 14, 12, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: center;
+  animation: clan-fade-in 0.3s ease;
+}
+
+.clan-locked-veil-card {
+  max-width: 380px;
+  width: 100%;
+  background: linear-gradient(145deg, rgba(24, 38, 32, 0.95), rgba(12, 20, 16, 0.98));
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-radius: 24px;
+  padding: 24px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 30px rgba(245, 158, 11, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.clan-locked-veil-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.05) 70%);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fbbf24;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+.clan-locked-veil-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #fef3c7;
+  margin: 0;
+}
+
+.clan-locked-veil-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.clan-locked-veil-progress-box {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.clan-locked-veil-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.clan-locked-veil-btn {
+  margin-top: 4px;
+  background: linear-gradient(135deg, #10b981, #047857);
+  color: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+  transition: transform 0.15s ease, filter 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clan-locked-veil-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+/* Realm Filter in Landmarks List */
+.clan-realm-list-filter {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  scrollbar-width: none;
+}
+
+.clan-realm-list-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.clan-realm-list-btn {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.clan-realm-list-btn.is-active {
+  background: var(--clan-primary-bg);
+  color: var(--clan-primary-text);
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================================
+   COMPACT TOP HUD & REALM PICKER MODAL
+   ========================================================================= */
+
+.clan-map-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.clan-map-realm-select-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(12, 26, 20, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(224, 201, 149, 0.45);
+  border-radius: 28px;
+  padding: 6px 14px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+  max-width: calc(100% - 150px);
+}
+
+.clan-map-realm-select-pill:hover,
+.clan-map-realm-select-pill:focus-visible {
+  border-color: #34d399;
+  background: rgba(18, 38, 29, 0.96);
+  transform: translateY(-1px);
+}
+
+.clan-map-realm-icon {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.clan-map-realm-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fce49c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clan-map-realm-badge {
+  font-size: 10px;
+  font-weight: 800;
+  background: rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #a7f3d0;
+  padding: 2px 7px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.clan-map-realm-chevron {
+  color: #cbd5e1;
+  flex-shrink: 0;
+}
+
+.clan-map-segment-compact {
+  display: inline-flex;
+  background: rgba(10, 22, 17, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 201, 149, 0.3);
+  border-radius: 24px;
+  padding: 2.5px;
+  gap: 3px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.clan-map-segment-compact button {
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.clan-map-segment-compact button.is-active,
+.clan-map-segment-compact button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+}
+
+/* =========================================================================
+   FLOATING MAP ZOOM & PAN CONTROLS
+   ========================================================================= */
+
+.clan-map-zoom-controls {
+  position: absolute;
+  top: 66px;
+  left: 14px;
+  z-index: 36;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(10, 24, 18, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(224, 201, 149, 0.35);
+  border-radius: 22px;
+  padding: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.clan-map-zoom-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.clan-map-zoom-btn:hover,
+.clan-map-zoom-btn:focus-visible {
+  background: rgba(52, 211, 153, 0.25);
+  color: #34d399;
+  transform: scale(1.12);
+}
+
+.clan-map-zoom-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================================================================
+   REALM PICKER MODAL CONTENT
+   ========================================================================= */
+
+.clan-realm-picker-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clan-realm-picker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.clan-realm-picker-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(16, 28, 22, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 14px;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+  width: 100%;
+}
+
+.clan-realm-picker-card:hover {
+  background: rgba(22, 40, 31, 0.9);
+  border-color: rgba(224, 201, 149, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.clan-realm-picker-card.is-selected {
+  border-color: #10b981;
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.18), rgba(6, 78, 59, 0.35));
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.clan-realm-picker-card.is-locked {
+  opacity: 0.7;
+}
+
+.clan-realm-picker-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.clan-realm-picker-card-icon {
+  font-size: 26px;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.clan-realm-picker-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.clan-realm-picker-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.clan-realm-picker-card-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.15);
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.clan-realm-picker-card-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clan-realm-picker-card-sub {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.clan-realm-picker-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.clan-realm-picker-card-prog-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clan-realm-picker-card-prog-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+.clan-realm-picker-card-prog-labels b {
+  color: #fce49c;
+}
+
+.clan-realm-picker-badge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.clan-realm-picker-badge.is-active {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.clan-realm-picker-badge.is-locked {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+}
+
+.clan-realm-picker-badge.is-completed {
+  background: rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fde047;
+}
+
+.clan-realm-picker-badge.is-open {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+/* =========================================================================
+   MAP VIEWPORT, PERSPECTIVE STAGE, OASIS KEYS PILL & BUTTONS
+   ========================================================================= */
+
+.clan-map-viewport {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  flex: 1 !important;
+  background: #11271e !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: none !important;
+}
+
+.clan-map-perspective-stage {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Strictly hide any animated trail or SVG paths on the map */
+.clan-map-trail-svg,
+.clan-path-shadow,
+.clan-path-stones,
+.clan-path-energy {
+  display: none !important;
+}
+
+/* Oasis Keys HUD Pill in Map Header */
+.clan-map-keys-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(245, 158, 11, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(245, 158, 11, 0.5);
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: #fce49c;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.clan-map-keys-pill strong {
+  color: #fef08a;
+  font-size: 13px;
+}
+
+/* Landmark Modal Key Rush Button */
+.clan-key-rush-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #1c1305;
+  font-weight: 800;
+  font-size: 13px;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.clan-key-rush-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
+}
+
+.clan-key-rush-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* ========================================================
+   Clan Join Policies & Leader Request Management
+   ======================================================== */
+
+.clan-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.clan-policy-card {
+  border: 1px solid var(--clan-line);
+  background: var(--clan-panel);
+  border-radius: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-family: inherit;
+}
+
+.clan-policy-card:hover {
+  border-color: #bca574;
+  background: var(--clan-stats-bg);
+}
+
+.clan-policy-card.is-active {
+  border-color: #e0c995;
+  background: rgba(224, 201, 149, 0.12);
+  box-shadow: 0 0 0 1px #e0c995 inset;
+}
+
+.clan-policy-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.clan-policy-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--clan-text);
+}
+
+.clan-policy-desc {
+  font-size: 10.5px;
+  color: var(--clan-muted);
+  line-height: 1.35;
+}
+
+/* Leader Pending Requests Pill & Modal */
+.clan-leader-requests-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(245, 158, 11, 0.25));
+  border: 1px solid rgba(234, 179, 8, 0.5);
+  color: #92400e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.15);
+}
+
+.dark .clan-leader-requests-pill {
+  color: #fef08a;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(245, 158, 11, 0.3));
+}
+
+.clan-leader-requests-pill:hover {
+  transform: translateY(-1px);
+}
+
+.clan-req-card {
+  background: var(--clan-stats-bg);
+  border: 1px solid var(--clan-line);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.clan-req-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.clan-req-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clan-req-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--clan-brand-bg);
+  color: var(--clan-brand-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.clan-req-message {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--clan-text);
+  line-height: 1.5;
+  border: 1px solid var(--clan-line);
+}
+
+.clan-req-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.clan-req-btn-accept {
+  flex: 1;
+  min-height: 38px;
+  background: #166534;
+  color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.clan-req-btn-accept:hover {
+  background: #15803d;
+}
+
+.clan-req-btn-reject {
+  flex: 1;
+  min-height: 38px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.clan-req-btn-reject:hover {
+  background: rgba(239, 68, 68, 0.22);
+}
+
+
+
+
+
+
+
+
+
+

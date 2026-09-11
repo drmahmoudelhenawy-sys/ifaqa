@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prayer_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/widget_bg"
+    android:clipToOutline="true"
+    android:layoutDirection="rtl">
+
+    <!-- Top Section (Horizontal) -->
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Right Side: Prayer Name -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/next_prayer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الفجر"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/next_prayer_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:tint="#00FFCC" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/prayer_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حان الآن موعد صلاة الفجر"
+                android:textColor="#B3FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Left Side: Countdown Circle -->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/countdown_circle_bg">
+            <TextView
+                android:id="@+id/countdown_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00:04"
+                android:textColor="#00FFCC"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/countdown_timer"
+                android:layout_centerHorizontal="true"
+                android:text="بقي على الأذان"
+                android:textColor="#B3FFFFFF"
+                android:textSize="8sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Bottom Section: 2 Columns Grid (Manual unique IDs) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:background="@drawable/prayer_item_bg"
+        android:padding="8dp">
+
+        <!-- Column 1 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="الفجر" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_fajr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="04:34" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="الشروق" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_shurooq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="06:08" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="الظهر" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_dhuhr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:51" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#1AFFFFFF" android:layout_marginHorizontal="8dp" />
+
+        <!-- Column 2 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="العصر" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_asr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="04:20" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="المغرب" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_maghrib" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="07:32" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="العشاء" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/time_isha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:55" android:textColor="#B3FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Footer Date -->
+    <TextView
+        android:id="@+id/widget_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="الجمعة 12 ذو القعدة 1445 هـ"
+        android:textColor="#80FFFFFF"
+        android:textSize="10sp" />
+
+</RelativeLayout>

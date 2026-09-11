@@ -1,0 +1,151 @@
+/* Prayer Tracker Widget - 2:1 Landscape */
+.tracker-widget-main {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 2 / 1;
+  border-radius: 32px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Inter', 'Amiri', sans-serif;
+  direction: rtl;
+}
+
+.tracker-widget-main.theme-emerald {
+  background-image: url('/tracker_bg.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.tracker-widget-main.theme-white {
+  background-image: url('/tracker_white_bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #064e3b;
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tracker-header h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.tracker-prayers-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.prayer-track-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sunnah-indicator {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 5;
+  transition: all 0.3s;
+}
+
+.theme-white .sunnah-indicator {
+  background: white;
+  color: #ccc;
+}
+
+.sunnah-indicator.done {
+  background: #fbbf24;
+  border-color: #f59e0b;
+  color: white;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
+.prayer-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+.theme-white .prayer-circle {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.05);
+  color: #064e3b;
+}
+
+.prayer-circle:active {
+  transform: scale(0.9);
+}
+
+.prayer-name {
+  font-size: 10px;
+  font-weight: 900;
+  opacity: 0.8;
+}
+
+.tracker-extra-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.extra-track-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.theme-white .extra-track-item {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.extra-track-item.completed {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.extra-label {
+  font-size: 13px;
+  font-weight: 800;
+}

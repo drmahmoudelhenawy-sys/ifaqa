@@ -1,0 +1,563 @@
+:root {
+  --ifaqa-bg: #f8fafc;
+  --ifaqa-surface: rgba(255, 255, 255, 0.88);
+  --ifaqa-surface-strong: #ffffff;
+  --ifaqa-border: rgba(139, 92, 246, 0.12);
+  --ifaqa-border-subtle: rgba(226, 232, 240, 0.8);
+  --ifaqa-ink: #0f172a;
+  --ifaqa-muted: #64748b;
+  --ifaqa-accent: rgb(var(--color-violet-600));
+  --ifaqa-accent-soft: rgb(var(--color-violet-100));
+  --ifaqa-gold: #f59e0b;
+  --ifaqa-gold-glow: rgba(245, 158, 11, 0.35);
+  --ifaqa-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.08), 0 10px 20px -5px rgba(15, 23, 42, 0.04);
+  --ifaqa-shadow-soft: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+  --ifaqa-shadow-glow: 0 0 25px rgba(139, 92, 246, 0.22);
+  --ifaqa-radius-card: 2rem;
+  --ifaqa-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ifaqa-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dark {
+  --ifaqa-bg: #070b14;
+  --ifaqa-surface: rgba(15, 23, 42, 0.82);
+  --ifaqa-surface-strong: #0f172a;
+  --ifaqa-border: rgba(167, 139, 250, 0.16);
+  --ifaqa-border-subtle: rgba(51, 65, 85, 0.6);
+  --ifaqa-ink: #f8fafc;
+  --ifaqa-muted: #94a3b8;
+  --ifaqa-accent-soft: rgba(139, 92, 246, 0.22);
+  --ifaqa-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+  --ifaqa-shadow-soft: 0 14px 35px -8px rgba(0, 0, 0, 0.45);
+  --ifaqa-shadow-glow: 0 0 35px rgba(139, 92, 246, 0.32);
+}
+
+html {
+  background: var(--ifaqa-bg);
+  color: var(--ifaqa-ink);
+  scroll-behavior: smooth;
+}
+
+/* Keep app copy and Quran text from being accidentally highlighted or dragged. */
+body,
+body * {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none;
+}
+
+/* Text entry still needs a caret, selection, and the native editing menu. */
+body input:not([type='button']):not([type='submit']):not([type='reset']),
+body textarea,
+body [contenteditable='true'],
+body [contenteditable='plaintext-only'],
+body .allow-text-selection {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(var(--color-violet-400) / 0.15), transparent),
+    radial-gradient(circle at 90% 20%, rgb(var(--color-violet-200) / 0.25), transparent 28rem),
+    radial-gradient(circle at 10% 85%, rgb(var(--color-violet-100) / 0.3), transparent 25rem),
+    var(--ifaqa-bg);
+  color: var(--ifaqa-ink);
+  min-height: 100vh;
+}
+
+.dark body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(var(--color-violet-600) / 0.2), transparent),
+    radial-gradient(circle at 90% 15%, rgb(var(--color-violet-900) / 0.3), transparent 32rem),
+    radial-gradient(circle at 10% 90%, rgb(var(--color-violet-950) / 0.4), transparent 28rem),
+    var(--ifaqa-bg);
+}
+
+.ifaqa-app-shell {
+  isolation: isolate;
+  background: transparent;
+}
+
+/* Atmospheric Top Header */
+.ifaqa-app-header {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, transparent 50%),
+    linear-gradient(155deg, #241447 0%, rgb(var(--color-violet-900)) 50%, #0d1527 100%);
+  box-shadow:
+    0 24px 60px -12px rgba(25, 12, 54, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.ifaqa-app-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.ifaqa-header-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(50px);
+  pointer-events: none;
+  animation: ifaqa-orb-drift 9s ease-in-out infinite alternate;
+}
+
+.ifaqa-header-orb-one {
+  width: 13rem;
+  height: 13rem;
+  top: -7rem;
+  right: -3rem;
+  background: rgba(196, 181, 253, 0.45);
+}
+
+.ifaqa-header-orb-two {
+  width: 11rem;
+  height: 11rem;
+  bottom: -6rem;
+  left: 1rem;
+  background: rgba(251, 191, 36, 0.26);
+  animation-delay: -4s;
+}
+
+.ifaqa-app-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: radial-gradient(circle, rgb(var(--color-violet-500) / 0.1) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+
+.ifaqa-page-transition {
+  min-height: 100%;
+  animation: ifaqa-page-enter 380ms var(--ifaqa-ease) both;
+}
+
+/* Full-screen readers contain `position: fixed` roots. Keeping this wrapper
+   free from transforms prevents those screens from collapsing into it. */
+.ifaqa-immersive-frame {
+  min-height: 100%;
+  animation: ifaqa-immersive-fade 240ms ease-out both;
+}
+
+.ifaqa-screen-frame {
+  color: var(--ifaqa-ink);
+}
+
+.ifaqa-page-transition.ifaqa-screen-frame > * {
+  animation: ifaqa-content-rise 500ms var(--ifaqa-ease) both;
+}
+
+.ifaqa-screen-frame :where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+.ifaqa-screen-frame :where(input, select, textarea) {
+  border: 1px solid var(--ifaqa-border);
+  background-color: color-mix(in srgb, var(--ifaqa-surface-strong) 92%, transparent);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.ifaqa-screen-frame :where(input, select, textarea):focus {
+  border-color: rgb(var(--color-violet-500) / 0.85);
+  box-shadow: 0 0 0 4px rgb(var(--color-violet-400) / 0.18);
+  outline: none;
+}
+
+/* Tactile Surface System across all pages */
+.ifaqa-screen-frame:is(
+  [data-page='home'],
+  [data-page='prayer_times'],
+  [data-page='tools'],
+  [data-page='challenges'],
+  [data-page='leaderboard'],
+  [data-page='profile']
+) :where(div.bg-white, section.bg-white):not([role="dialog"]):not(.ifaqa-modal-solid):not(.fixed):not([data-modal="true"]) {
+  border-color: var(--ifaqa-border) !important;
+  background: var(--ifaqa-surface) !important;
+  box-shadow: var(--ifaqa-shadow-soft) !important;
+  backdrop-filter: blur(20px) saturate(1.25);
+  -webkit-backdrop-filter: blur(20px) saturate(1.25);
+}
+
+.dark .ifaqa-screen-frame:is(
+  [data-page='home'],
+  [data-page='prayer_times'],
+  [data-page='tools'],
+  [data-page='challenges'],
+  [data-page='leaderboard'],
+  [data-page='profile']
+) :where(div.dark\:bg-slate-800, div.dark\:bg-slate-900, section.dark\:bg-slate-800):not([role="dialog"]):not(.ifaqa-modal-solid):not(.fixed):not([data-modal="true"]) {
+  border-color: var(--ifaqa-border) !important;
+  background: var(--ifaqa-surface) !important;
+  box-shadow: var(--ifaqa-shadow-soft) !important;
+}
+
+/* Modals and Welcome dialogs must ALWAYS be solid opaque white */
+[role="dialog"].bg-white,
+[role="dialog"].ifaqa-modal-solid,
+.ifaqa-modal-solid,
+div[data-modal="true"] {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+.ifaqa-glass {
+  border: 1px solid var(--ifaqa-border);
+  background: var(--ifaqa-surface);
+  box-shadow: var(--ifaqa-shadow-soft);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+}
+
+/* Floating Bottom Navigation Dock - Crisp High-Contrast Luxury */
+.ifaqa-bottom-nav {
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 20px 45px -8px rgba(15, 23, 42, 0.22),
+    0 4px 16px -2px rgba(15, 23, 42, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(32px) saturate(1.6);
+  -webkit-backdrop-filter: blur(32px) saturate(1.6);
+}
+
+.dark .ifaqa-bottom-nav {
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
+  background: rgba(11, 17, 32, 0.96);
+  box-shadow:
+    0 24px 50px -10px rgba(0, 0, 0, 0.85),
+    0 4px 20px -2px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+}
+
+.ifaqa-bottom-nav::before {
+  content: '';
+  position: absolute;
+  inset: 1px 15% auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(var(--color-violet-400) / 0.65), transparent);
+}
+
+/* Shimmer and Glow Classes */
+.ifaqa-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.ifaqa-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  animation: ifaqa-shimmer-run 2.8s infinite;
+}
+
+.ifaqa-gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.ifaqa-gold-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(251, 191, 36, 0.4) 50%,
+    transparent 100%
+  );
+  animation: ifaqa-shimmer-run 2.4s infinite;
+}
+
+/* Tasbeeh Shockwave */
+.ifaqa-shockwave {
+  animation: ifaqa-shockwave-expand 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Animations */
+@keyframes ifaqa-page-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.99);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes ifaqa-content-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ifaqa-immersive-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ifaqa-orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(24px, 14px, 0) scale(1.15);
+  }
+}
+
+@keyframes ifaqa-shimmer-run {
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes ifaqa-shockwave-expand {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes ifaqa-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.65);
+  }
+}
+
+.ifaqa-pulse-glow {
+  animation: ifaqa-pulse-glow 2.5s infinite ease-in-out;
+}
+
+button,
+[role='button'],
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']) {
+  transform: translateZ(0);
+}
+
+button:not(:disabled):active,
+[role='button']:not([aria-disabled='true']):active {
+  transform: scale(0.965);
+  transition-duration: 90ms !important;
+}
+
+button:focus-visible,
+[role='button']:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(var(--color-violet-400) / 0.4);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .ifaqa-screen-frame:is(
+    [data-page='home'],
+    [data-page='prayer_times'],
+    [data-page='tools'],
+    [data-page='challenges'],
+    [data-page='leaderboard'],
+    [data-page='profile']
+  ) {
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* ===================================================================
+   Luxe Glass Toast Notification System
+   =================================================================== */
+
+@keyframes toastSpringIn {
+  0% {
+    transform: translateY(-24px) scale(0.88);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(4px) scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.ifaqa-luxury-toast {
+  font-family: inherit !important;
+  letter-spacing: 0 !important;
+  animation: toastSpringIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  width: fit-content !important;
+}
+
+.ifaqa-luxury-toast > div {
+  font-weight: 700 !important;
+  text-align: right !important;
+  margin: 0 !important;
+}
+
+/* ===================================================================
+    وبالأسحار هم يستغفرون - سماء ليلية بنفسجية ساحرة بنجوم وقمر متلألئ
+   =================================================================== */
+.ifaqa-sahar-night-theme,
+.dark .ifaqa-sahar-night-theme,
+html.ifaqa-sahar-night-theme,
+body.ifaqa-sahar-night-theme {
+  --ifaqa-bg: #130528;
+  --ifaqa-surface: rgba(43, 16, 82, 0.76);
+  --ifaqa-surface-strong: #270d4d;
+  --ifaqa-border: rgba(192, 132, 252, 0.28);
+  --ifaqa-border-subtle: rgba(168, 85, 247, 0.35);
+  --ifaqa-ink: #faf5ff;
+  --ifaqa-muted: #d8b4fe;
+  --ifaqa-accent: #c084fc;
+  --ifaqa-accent-soft: rgba(168, 85, 247, 0.3);
+  --ifaqa-shadow-glow: 0 0 45px rgba(168, 85, 247, 0.45);
+  background: 
+    radial-gradient(ellipse 100% 75% at 50% -10%, #4a157d 0%, #300c5c 32%, #1c0638 65%, #0e021f 100%) !important;
+  color: #faf5ff !important;
+}
+
+.ifaqa-sahar-night-theme .ifaqa-glass {
+  background: rgba(42, 15, 82, 0.72) !important;
+  border-color: rgba(192, 132, 252, 0.25) !important;
+  box-shadow: 0 20px 45px -10px rgba(19, 5, 40, 0.7) !important;
+  backdrop-filter: blur(24px) saturate(1.4);
+}
+
+.ifaqa-sahar-night-theme .ifaqa-bottom-nav {
+  background: rgba(36, 12, 71, 0.92) !important;
+  border-color: rgba(192, 132, 252, 0.35) !important;
+  box-shadow: 0 24px 50px -10px rgba(10, 2, 22, 0.9), 0 0 25px rgba(168, 85, 247, 0.2) !important;
+}
+
+.ifaqa-sahar-night-theme .ifaqa-bottom-nav::before {
+  background: linear-gradient(90deg, transparent, rgba(216, 180, 254, 0.8), transparent) !important;
+}
+
+/* Twinkling Stars Sky Layer */
+.ifaqa-sahar-stars-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ifaqa-sahar-stars-layer {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 25px 35px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 60px 80px, #fef08a, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 110px 45px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 170px 130px, #e9d5ff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 235px 60px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2.5px 2.5px at 295px 110px, #fef08a, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 345px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 390px 160px, #e9d5ff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 135px 235px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 285px 270px, #fef08a, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 85px 350px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 215px 395px, #e9d5ff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 330px 340px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 420px 440px;
+  animation: ifaqa-stars-pulse 5s ease-in-out infinite alternate;
+  opacity: 0.82;
+}
+
+.ifaqa-sahar-stars-layer-sparse {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(2px 2px at 80px 120px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 200px 70px, rgba(254, 240, 138, 0.95), rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 320px 190px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2.5px 2.5px at 160px 310px, #e9d5ff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 260px 410px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 520px 540px;
+  animation: ifaqa-stars-shimmer 7s ease-in-out infinite alternate;
+  opacity: 0.65;
+}
+
+@keyframes ifaqa-stars-pulse {
+  0% { opacity: 0.6; transform: translateY(0px) scale(0.995); }
+  50% { opacity: 0.95; }
+  100% { opacity: 0.75; transform: translateY(-3px) scale(1.005); }
+}
+
+@keyframes ifaqa-stars-shimmer {
+  0% { opacity: 0.45; }
+  50% { opacity: 0.85; filter: drop-shadow(0 0 4px rgba(254, 240, 138, 0.6)); }
+  100% { opacity: 0.55; }
+}
+
+.ifaqa-sahar-pill {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.85), rgba(46, 16, 101, 0.9));
+  border: 1px solid rgba(216, 180, 254, 0.45);
+  color: #faf5ff;
+  box-shadow: 0 4px 20px -4px rgba(74, 21, 125, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "980477385772",
+    "project_id": "elhenawy-lap",
+    "storage_bucket": "elhenawy-lap.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980477385772:android:com.ifaqa.app",
+        "android_client_info": {
+          "package_name": "com.ifaqa.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5GgR5bnxt0-rWYy1_vLagj9lwE1NOR7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

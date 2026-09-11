@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Ifaqa - إفاقة</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo-colored.png">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri+Quran&display=swap');
+      @font-face { font-family: 'Cairo'; src: url('./assets/fonts/cairo-300.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Cairo'; src: url('./assets/fonts/cairo-400.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Cairo'; src: url('./assets/fonts/cairo-500.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Cairo'; src: url('./assets/fonts/cairo-700.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Cairo'; src: url('./assets/fonts/cairo-900.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Amiri'; src: url('./assets/fonts/amiri-400.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Amiri'; src: url('./assets/fonts/amiri-700.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Amiri'; src: url('./assets/fonts/amiri-italic-400.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+      @font-face { font-family: 'Amiri'; src: url('./assets/fonts/amiri-italic-700.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+    </style>
+
+    <script src="./tailwindcss.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Cairo', 'system-ui', 'sans-serif'],
+              quran: ['var(--quran-font)', 'Amiri Quran', 'KFGQPC HAFS Regular', 'Amiri', 'serif'],
+              hafs: ['KFGQPC HAFS Regular', 'serif'],
+              indopak: ['IndoPak', 'serif'],
+              amiri: ['Amiri', 'serif'],
+            },
+            colors: {
+              // Map 'violet' to CSS variables for dynamic theming
+              violet: {
+                50: 'rgb(var(--color-violet-50) / <alpha-value>)',
+                100: 'rgb(var(--color-violet-100) / <alpha-value>)',
+                200: 'rgb(var(--color-violet-200) / <alpha-value>)',
+                300: 'rgb(var(--color-violet-300) / <alpha-value>)',
+                400: 'rgb(var(--color-violet-400) / <alpha-value>)',
+                500: 'rgb(var(--color-violet-500) / <alpha-value>)',
+                600: 'rgb(var(--color-violet-600) / <alpha-value>)',
+                700: 'rgb(var(--color-violet-700) / <alpha-value>)',
+                800: 'rgb(var(--color-violet-800) / <alpha-value>)',
+                900: 'rgb(var(--color-violet-900) / <alpha-value>)',
+                950: 'rgb(var(--color-violet-950) / <alpha-value>)',
+                850: '#3b0764', // Keep legacy if needed
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'rotate-slow': 'rotate 12s linear infinite',
+              'slide-left': 'slideLeft 0.3s ease-out forwards',
+              'slide-right': 'slideRight 0.3s ease-out forwards',
+              'scale-pulse': 'scalePulse 0.3s ease-out',
+              'visualizer': 'visualizer 1s ease-in-out infinite',
+              'visualizer-sm': 'visualizer-sm 0.8s ease-in-out infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' }
+              },
+              rotate: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' }
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(20%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' }
+              },
+              slideRight: {
+                '0%': { transform: 'translateX(-20%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' }
+              },
+              scalePulse: {
+                '0%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(0.95)' },
+                '100%': { transform: 'scale(1)' }
+              },
+              visualizer: {
+                '0%, 100%': { height: '10%' },
+                '50%': { height: '100%' }
+              },
+              'visualizer-sm': {
+                '0%, 100%': { height: '30%' },
+                '50%': { height: '100%' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Default Variables (Violet) */
+      :root {
+        --color-violet-50: 245 243 255;
+        --color-violet-100: 237 233 254;
+        --color-violet-200: 221 214 254;
+        --color-violet-300: 196 181 253;
+        --color-violet-400: 167 139 250;
+        --color-violet-500: 139 92 246;
+        --color-violet-600: 124 58 237;
+        --color-violet-700: 109 40 217;
+        --color-violet-800: 91 33 182;
+        --color-violet-900: 76 29 149;
+        --color-violet-950: 46 16 101;
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+      /* Safe area spacing for mobile / notch / status bar */
+      :root {
+          --safe-area-top: env(safe-area-inset-top, 0px);
+          --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .safe-top, .pt-safe {
+          padding-top: max(env(safe-area-inset-top, 0px), 10px);
+      }
+      .top-safe {
+          top: env(safe-area-inset-top, 0px);
+      }
+      .mt-safe {
+          margin-top: env(safe-area-inset-top, 0px);
+      }
+      .pb-safe {
+          padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+      }
+      .mb-safe {
+          margin-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      body {
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+        font-family: 'Cairo', sans-serif;
+      }
+      
+      /* Quran Text Justification */
+      .quran-text {
+          text-align: justify;
+          text-align-last: center; /* Center the last line (often Basmalah or end of Surah) */
+          -moz-text-align-last: center;
+          line-height: 2.2; /* Adjusted for Hafs font */
+      }
+      /* Ensure Basmalah is centered */
+      .basmalah {
+          text-align: center;
+          text-align-last: center;
+      }
+      
+      /* Custom Scrollbar for inner elements */
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: rgba(0,0,0,0.1);
+          border-radius: 10px;
+      }
+    </style>
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

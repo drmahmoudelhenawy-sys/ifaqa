@@ -1,0 +1,62 @@
+.clan-main.clan-main-chat { display:flex; flex-direction:column; padding:12px; overflow:hidden; }
+.clan-main-chat > .clan-chat { margin:0; flex:1; min-height:0; }
+.clan-chat { display:flex; min-height:440px; height:100%; border:1px solid var(--clan-line); border-radius:22px; background:var(--clan-panel); overflow:hidden; }
+.chat-sidebar { flex:0 0 260px; border-inline-end:1px solid var(--clan-line); padding:16px 10px; overflow:auto; }
+.chat-sidebar-heading,.chat-heading { display:flex; align-items:center; gap:12px; }
+.chat-sidebar-heading { justify-content:space-between; padding:0 8px 18px; }
+.clan-chat h2 { font-size:17px; margin:0; color:var(--clan-text); }
+.chat-room { border:0; background:transparent; color:var(--clan-text); width:100%; display:flex; align-items:center; text-align:start; padding:12px 8px; gap:10px; border-radius:14px; }
+.chat-room.is-active { background:var(--clan-brand-bg); }
+.chat-avatar { display:grid; place-items:center; width:42px; height:42px; border-radius:15px; background:var(--clan-stats-bg); color:var(--clan-brand-color); flex-shrink:0; font-size:17px; }
+.chat-room > span:nth-child(2) { min-width:0; flex:1; }
+.chat-room strong { display:block; font-size:12px; }
+.chat-room small { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:150px; color:var(--clan-muted); margin-top:5px; font-size:11px; }
+.chat-room time { font-size:9px; color:var(--clan-muted); }
+.chat-list-label { font-size:10px; color:var(--clan-muted); padding:14px 8px 0; }
+.chat-sidebar-empty { color:var(--clan-muted); text-align:center; padding:28px 10px; font-size:12px; }
+.chat-sidebar-empty > svg { margin:auto; }
+.chat-conversation { position:relative; display:flex; flex-direction:column; flex:1; min-width:0; min-height:0; }
+.chat-heading { padding:14px 18px; border-bottom:1px solid var(--clan-line); flex:none; }
+.chat-heading p { display:flex; align-items:center; gap:5px; margin:4px 0 0; font-size:11px; color:var(--clan-muted); }
+.chat-messages { flex:1; overflow:auto; min-height:0; padding:18px; overscroll-behavior:contain; }
+.chat-empty { min-height:220px; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--clan-muted); gap:10px; }
+.chat-empty h3 { margin:4px 0 0; color:var(--clan-text); font-size:17px; }
+.chat-empty p { font-size:12px; max-width:280px; line-height:1.8; margin:0; }
+.chat-message { max-width:82%; width:fit-content; margin:7px auto 7px 0; padding:10px 14px 7px; border-radius:16px 16px 16px 4px; border:1px solid var(--clan-line); background:var(--clan-stats-bg); color:var(--clan-text); }
+.chat-message.is-mine { margin:7px 0 7px auto; border-radius:16px 16px 4px 16px; background:var(--clan-brand-bg); }
+.chat-message > strong { color:var(--clan-brand-color); font-size:10px; }
+.chat-message p { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.8; font-size:13px; margin:3px 0; }
+.chat-message footer { display:flex; gap:5px; justify-content:flex-end; align-items:center; font-size:9px; color:var(--clan-muted); }
+.chat-date { text-align:center; font-size:10px; color:var(--clan-muted); padding:14px; }
+.chat-composer { padding:12px 16px; border-top:1px solid var(--clan-line); background:var(--clan-panel); }
+.chat-composer > div { display:flex; align-items:flex-end; gap:10px; }
+.chat-composer textarea { flex:1; min-width:0; max-height:150px; resize:vertical; background:var(--clan-stats-bg); color:var(--clan-text); border:1px solid var(--clan-line); padding:10px 12px; border-radius:14px; font:inherit; font-size:13px; }
+.chat-composer button { display:grid; place-items:center; width:44px; height:44px; border:0; border-radius:14px; background:var(--clan-primary-bg); color:var(--clan-primary-text); }
+.chat-composer button:disabled { opacity:.45; }
+.chat-composer small,.chat-composer > p { display:block; margin:5px 0 0; font-size:10px; color:var(--clan-muted); }
+.chat-error { padding:10px 14px; background:var(--clan-stats-bg); color:var(--clan-text); font-size:12px; }
+.chat-error button,.chat-load-more { color:var(--clan-brand-color); background:none; border:0; text-decoration:underline; padding:5px; }
+.chat-load-more { display:block; margin:auto; font-size:11px; }
+.chat-new { position:absolute; bottom:125px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:5px; border:1px solid var(--clan-line); background:var(--clan-panel); color:var(--clan-brand-color); border-radius:20px; padding:8px 14px; }
+.chat-search { display:flex; align-items:center; gap:6px; padding:8px; }
+.chat-search input { min-width:0; width:100%; background:var(--clan-panel); color:var(--clan-text); border:1px solid var(--clan-line); border-radius:8px; padding:8px; font-size:12px; }
+.chat-picker > button { display:flex; align-items:center; gap:8px; width:100%; padding:8px; border:0; background:transparent; color:var(--clan-text); font-size:12px; }
+.chat-back { display:none; }
+.clan-member-actions { display:flex; align-items:center; justify-content:flex-end; gap:8px; flex-wrap:wrap; }
+.clan-member .clan-member-name { min-width:0; overflow-wrap:anywhere; }
+.clan-member .clan-member-points { white-space:nowrap; }
+@media(max-width:650px) {
+  .clan-main.clan-main-chat { padding:0; }
+  .clan-chat { border:0; border-radius:0; min-height:0; }
+  .chat-sidebar { display:none; flex:1; border:0; }
+  .chat-show-list .chat-sidebar { display:block; }
+  .chat-show-list .chat-conversation { display:none; }
+  .chat-back { display:flex; }
+  .chat-messages { padding:12px; }
+  .chat-heading { padding:10px 12px; }
+  .chat-room small { max-width:230px; }
+  .clan-member { display:grid; grid-template-columns:42px minmax(0,1fr); }
+  .clan-member-actions { grid-column:2; justify-content:flex-start; }
+  .clan-nav { padding-inline:4px; gap:0; }
+  .clan-nav button { font-size:9px; min-width:0; }
+}

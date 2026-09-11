@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@drawable/glass_background"
+    android:orientation="vertical"
+    android:id="@+id/quran_widget_container"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="أوراد الحفظ والمراجعة"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Hifz Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="#11FFFFFF"
+        android:layout_marginBottom="4dp">
+        <TextView
+            android:id="@+id/hifz_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="سورة البقرة - ص 12"
+            android:textColor="#CCFFFFFF"
+            android:textSize="11sp"
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الحفظ: "
+            android:textColor="#A78BFA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+    <!-- Near Revision -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="#11FFFFFF"
+        android:layout_marginBottom="4dp">
+        <TextView
+            android:id="@+id/near_rev_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="الجزء الأول"
+            android:textColor="#CCFFFFFF"
+            android:textSize="11sp"
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="قريب: "
+            android:textColor="#A78BFA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+    <!-- Far Revision -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="#11FFFFFF">
+        <TextView
+            android:id="@+id/far_rev_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="سورة آل عمران"
+            android:textColor="#CCFFFFFF"
+            android:textSize="11sp"
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="بعيد: "
+            android:textColor="#A78BFA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

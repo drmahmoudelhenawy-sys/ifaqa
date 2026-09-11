@@ -1,0 +1,9 @@
+
+{
+  "name": "IFAQA BEFORE",
+  "description": "رفيقك اليومي للصلوات، الأذكار، والتحديات الإيمانية. أيقظ قلبك .. تَصِل لربك.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}

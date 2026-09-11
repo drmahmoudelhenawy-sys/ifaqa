@@ -1,0 +1,112 @@
+/* Salat ala Nabi Widget - 1:1 */
+.salat-widget-main {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 36px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cairo', 'Inter', sans-serif;
+  direction: rtl;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.salat-widget-main.theme-emerald {
+  background: url('/salat_bg.png') no-repeat center center;
+  background-size: 100% 100%;
+  color: white;
+}
+
+.salat-widget-main.theme-white {
+  background: url('/salat_white_bg.png') no-repeat center center;
+  background-size: 100% 100%;
+  color: #064e3b;
+}
+
+
+.salat-content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.salat-heart-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.salat-heart-icon {
+  opacity: 0.8;
+  animation: heartBeat 2s infinite;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  5% { transform: scale(1.1); }
+  10% { transform: scale(1); }
+  15% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.salat-text-center {
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: -5px;
+}
+
+.salat-counter-display {
+  text-align: center;
+}
+
+.salat-count {
+  font-size: 38px;
+  font-weight: 950;
+  display: block;
+  line-height: 1;
+}
+
+.salat-subtext {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.6;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.theme-white .salat-heart-container {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-white .salat-heart-icon {
+  color: #10b981;
+}
+
+.salat-widget-main:active .salat-heart-container {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+

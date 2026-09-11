@@ -1,0 +1,125 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.email in ['ifaqaa@gmail.com', 'ifaqaadmin@gmail.com', 'dr.mahmoud.elhenawy@gmail.com'] ||
+        request.auth.uid in ['3jCyf2k6a3T7R3G8w81gqcgYgAR2']
+      );
+    }
+
+    function isClanMember(clanId) {
+      return isAuthenticated() && exists(/databases/$(database)/documents/artifacts/ifaqa-app-production-release/public/data/clans/$(clanId)/members/$(request.auth.uid));
+    }
+
+    // -------------------------------------------------------------
+    // 1. User Private Data & Stats
+    // -------------------------------------------------------------
+    match /artifacts/{appId}/users/{userId}/{allPaths=**} {
+      allow read, write: if isOwner(userId) || isAdmin();
+    }
+
+    // -------------------------------------------------------------
+    // 2. Public Data: Leaderboard, Quests, App Config
+    // -------------------------------------------------------------
+    match /artifacts/{appId}/public/data/leaderboard/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    match /artifacts/{appId}/public/data/prophet_v2/{period}/users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    match /artifacts/{appId}/public/data/fcm_tokens/{tokenId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    match /artifacts/{appId}/public/data/app_config/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    match /artifacts/{appId}/public/data/global_clan_quests/{questId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    match /artifacts/{appId}/public/data/clan_twins/{twinId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // -------------------------------------------------------------
+    // 3. Clans and all subcollections (members, quests, features/khatma, joinRequests, activityLog)
+    // -------------------------------------------------------------
+    match /artifacts/{appId}/public/data/clans/{clanId} {
+      allow read, create: if isAuthenticated();
+      allow update: if isClanMember(clanId) || isAdmin();
+      allow delete: if isAdmin();
+
+      // All subcollections under clans (members, quests, features like khatma/sahar, joinRequests, activityLog)
+      match /{allSubcollections=**} {
+        allow read: if isAuthenticated();
+        allow write: if isAuthenticated();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 4. Fajr Wake Teams (Phone numbers strictly protected to clan members only!)
+    // -------------------------------------------------------------
+    match /ifaqa_fajr_teams/{clanId} {
+      allow read: if isClanMember(clanId) || isAdmin();
+
+      match /members/{memberId} {
+        // Only members of this clan can see phone numbers
+        allow read: if isClanMember(clanId) || isAdmin();
+        allow write: if isOwner(memberId) || isAdmin();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 5. Clan Chat (Team rooms & Direct Messages)
+    // -------------------------------------------------------------
+    match /ifaqa_clan_chats/{clanId}/rooms/{roomId} {
+      allow read, create, update: if isClanMember(clanId) && (
+        roomId == 'team' ||
+        (resource == null || resource.data.participants == null || request.auth.uid in resource.data.participants) ||
+        (request.resource != null && request.resource.data.participants != null && request.auth.uid in request.resource.data.participants)
+      );
+
+      match /messages/{messageId} {
+        allow read: if isClanMember(clanId) && (
+          roomId == 'team' ||
+          (get(/databases/$(database)/documents/ifaqa_clan_chats/$(clanId)/rooms/$(roomId)).data.participants != null &&
+           request.auth.uid in get(/databases/$(database)/documents/ifaqa_clan_chats/$(clanId)/rooms/$(roomId)).data.participants)
+        );
+
+        allow create: if isClanMember(clanId) &&
+          request.auth.uid == request.resource.data.senderId && (
+            roomId == 'team' ||
+            (get(/databases/$(database)/documents/ifaqa_clan_chats/$(clanId)/rooms/$(roomId)).data.participants != null &&
+             request.auth.uid in get(/databases/$(database)/documents/ifaqa_clan_chats/$(clanId)/rooms/$(roomId)).data.participants)
+          );
+
+        allow update, delete: if isAdmin() || (
+          isClanMember(clanId) && resource.data.senderId == request.auth.uid
+        );
+      }
+    }
+
+    // Default
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

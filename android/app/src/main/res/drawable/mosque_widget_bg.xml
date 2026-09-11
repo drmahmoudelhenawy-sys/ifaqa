@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="600dp"
+    android:height="300dp"
+    android:viewportWidth="1000"
+    android:viewportHeight="300">
+    
+    <!-- Deep Emerald Gradient Background -->
+    <path
+        android:pathData="M0,0 L1000,0 L1000,300 L0,300 Z">
+        <aapt:attr name="android:fillColor" xmlns:aapt="http://schemas.android.com/aapt">
+            <gradient
+                android:startY="0"
+                android:endY="300"
+                android:startX="500"
+                android:endX="500"
+                android:type="linear">
+                <item android:color="#0f3f42" android:offset="0" />
+                <item android:color="#062b2d" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle Moon -->
+    <path
+        android:pathData="M850,80 A40,40 0 1,1 810,40 A50,50 0 0,0 850,80 Z"
+        android:fillColor="#0AFFFFFF" />
+
+    <!-- Detailed Mosque Silhouette -->
+    <path
+        android:pathData="M0,300 L1000,300 L1000,200 L980,200 L980,160 C980,140 970,130 960,130 C950,130 940,140 940,160 L940,200 L900,200 L900,160 C900,100 850,40 800,40 C750,40 700,100 700,160 L700,200 L660,200 L660,140 L655,140 L655,100 L650,80 L645,100 L645,140 L640,140 L640,200 L600,200 L600,150 C600,100 550,50 500,50 C450,50 400,100 400,150 L400,200 L360,200 L360,140 L355,140 L355,100 L350,80 L345,100 L345,140 L340,140 L340,200 L300,200 L300,160 C300,100 250,40 200,40 C150,40 100,100 100,160 L100,200 L60,200 L60,160 C60,140 50,130 40,130 C30,130 20,140 20,160 L20,200 L0,200 Z"
+        android:fillColor="#15dfebce" />
+</vector>

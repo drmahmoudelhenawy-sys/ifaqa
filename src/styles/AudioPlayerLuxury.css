@@ -1,0 +1,313 @@
+/* ===================================================================
+   Luxe Islamic Quran Audio Player - Animations & Visual System
+   =================================================================== */
+
+@keyframes vinylSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes eqBounce {
+  0%, 100% {
+    height: 6px;
+    opacity: 0.4;
+  }
+  50% {
+    height: 38px;
+    opacity: 1;
+  }
+}
+
+@keyframes eqMiniBounce {
+  0%, 100% {
+    height: 3px;
+    opacity: 0.5;
+  }
+  50% {
+    height: 14px;
+    opacity: 1;
+  }
+}
+
+/* ===================================================================
+   VIBRANT LIVE AURORA OCEAN GRADIENT & WAVE ANIMATIONS
+   =================================================================== */
+
+@keyframes waveOrbit1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -25px) scale(1.18);
+  }
+  100% {
+    transform: translate(-30px, 15px) scale(0.95);
+  }
+}
+
+@keyframes waveOrbit2 {
+  0% {
+    transform: translate(0px, 0px) scale(1.1);
+  }
+  50% {
+    transform: translate(-45px, 20px) scale(0.92);
+  }
+  100% {
+    transform: translate(35px, -30px) scale(1.22);
+  }
+}
+
+@keyframes waveOrbit3 {
+  0% {
+    transform: translate(0px, 0px) scale(0.9);
+  }
+  50% {
+    transform: translate(25px, 20px) scale(1.25);
+  }
+  100% {
+    transform: translate(-20px, -20px) scale(1);
+  }
+}
+
+@keyframes liveWaveMotion1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes liveWaveMotion2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes oceanGlowBreathe {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+    transform: scaleY(1);
+  }
+  50% {
+    filter: brightness(1.25) saturate(1.2);
+    transform: scaleY(1.08) translateY(-12px);
+  }
+}
+
+/* The Live Ocean Aurora Background Canvas */
+.player-live-aurora-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: #020612;
+  z-index: 0;
+}
+
+/* Deep Top Celestial Ambient Glow */
+.player-top-night-ambient {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 45%;
+  background: radial-gradient(circle, rgba(14, 116, 144, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
+}
+
+/* Main Radiant Glowing Ocean rising from the bottom */
+.player-live-aurora-ocean {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 18, 0) 0%,
+    rgba(3, 30, 95, 0.42) 20%,
+    rgba(2, 78, 195, 0.75) 45%,
+    rgba(0, 140, 255, 0.92) 75%,
+    #0096ff 100%
+  );
+  transition: all 0.6s ease;
+}
+
+.player-live-aurora-ocean.is-playing {
+  animation: oceanGlowBreathe 5s ease-in-out infinite alternate;
+}
+
+/* Vibrant Floating Glowing Orbs */
+.ocean-glowing-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(45px);
+  will-change: transform;
+}
+
+.ocean-blob-1 {
+  bottom: 2%;
+  right: -8%;
+  width: 22rem;
+  height: 22rem;
+  background: radial-gradient(circle, #00d2ff 0%, #0066ff 65%, transparent 100%);
+  opacity: 0.85;
+  animation: waveOrbit1 9s ease-in-out infinite alternate;
+}
+
+.ocean-blob-2 {
+  bottom: 6%;
+  left: -8%;
+  width: 24rem;
+  height: 24rem;
+  background: radial-gradient(circle, #38bdf8 0%, #1d4ed8 65%, transparent 100%);
+  opacity: 0.8;
+  animation: waveOrbit2 11s ease-in-out infinite alternate;
+}
+
+.ocean-blob-3 {
+  bottom: -4%;
+  left: 20%;
+  width: 20rem;
+  height: 20rem;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.95) 0%, rgba(3, 105, 161, 0.6) 65%, transparent 100%);
+  opacity: 0.9;
+  animation: waveOrbit3 7s ease-in-out infinite alternate;
+}
+
+.player-live-aurora-bg.is-playing .ocean-blob-1 {
+  animation-duration: 5.5s;
+}
+
+.player-live-aurora-bg.is-playing .ocean-blob-2 {
+  animation-duration: 6.5s;
+}
+
+.player-live-aurora-bg.is-playing .ocean-blob-3 {
+  animation-duration: 4.5s;
+}
+
+/* Moving SVG Fluid Waves */
+.live-wave-svg-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.live-wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.live-wave-svg-1 {
+  fill: rgba(0, 180, 255, 0.35);
+  animation: liveWaveMotion1 14s linear infinite;
+}
+
+.live-wave-svg-2 {
+  fill: rgba(56, 189, 248, 0.22);
+  animation: liveWaveMotion2 9s linear infinite;
+}
+
+.player-live-aurora-bg.is-playing .live-wave-svg-1 {
+  animation-duration: 7s;
+}
+
+.player-live-aurora-bg.is-playing .live-wave-svg-2 {
+  animation-duration: 4.5s;
+}
+
+/* Audio EQ Visualizer Bars */
+.audio-spectrum-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.audio-spectrum-bar {
+  width: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to top, #38bdf8, #ffffff);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  transition: height 0.2s ease;
+}
+
+.audio-spectrum-bar.playing {
+  animation: eqBounce 1.1s ease-in-out infinite alternate;
+}
+
+/* Mini Player EQ Bars */
+.mini-eq-bar {
+  width: 2.5px;
+  border-radius: 4px;
+  background: #38bdf8;
+  transition: height 0.15s ease;
+}
+
+.mini-eq-bar.playing {
+  animation: eqMiniBounce 0.8s ease-in-out infinite alternate;
+}
+
+/* Timeline Custom Scrubber */
+.luxury-scrubber {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  direction: rtl;
+  transition: height 0.2s ease;
+}
+
+.luxury-scrubber:hover {
+  height: 8px;
+}
+
+.luxury-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 1), 0 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.luxury-scrubber:hover::-webkit-slider-thumb {
+  transform: scale(1.25);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 1), 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.luxury-scrubber::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 1);
+  cursor: pointer;
+}

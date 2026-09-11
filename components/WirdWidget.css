@@ -1,0 +1,139 @@
+/* Premium Wird Widget Design - Built on Plain Background */
+.wird-widget-main {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1.5 / 1;
+  border-radius: 28px;
+  padding: 16px 20px;
+  font-family: 'Inter', 'Amiri', sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom User Background Theme - Dark Mode */
+.wird-widget-main.theme-emerald {
+  background: url('/wird_bg.png') no-repeat center center;
+  background-size: 100% 100%;
+  color: white;
+}
+
+/* Custom User Background Theme - Light Mode */
+.wird-widget-main.theme-white {
+  background: url('/wird-white_bg.png') no-repeat center center;
+  background-size: 100% 100%;
+  color: #064e3b;
+}
+
+.wird-widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.wird-widget-header h3 {
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.theme-white .wird-widget-header h3 {
+  text-shadow: none;
+}
+
+.wird-widget-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Glassmorphism Cards */
+.wird-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.theme-white .wird-card {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.wird-card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wird-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+}
+
+.theme-white .wird-icon-box {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.wird-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.wird-type-label {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+.wird-current-surah {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.wird-progress-details {
+  text-align: left;
+}
+
+.wird-page-tag {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: 'Inter', monospace;
+}
+
+.theme-white .wird-page-tag {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.wird-juz-tag {
+  display: block;
+  font-size: 9px;
+  opacity: 0.6;
+  margin-top: 4px;
+  font-weight: bold;
+}

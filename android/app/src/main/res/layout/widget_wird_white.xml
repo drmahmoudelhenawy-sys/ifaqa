@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wird_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/white_widget_bg"
+    android:layoutDirection="rtl">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أورادي"
+            android:textColor="#0F172A"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_launcher_background"
+            android:tint="#059669" />
+    </LinearLayout>
+
+    <!-- Hifz Section (Colored Title) -->
+    <LinearLayout
+        android:id="@+id/section_hifz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/white_active_bg"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ورد الحفظ"
+            android:textColor="#059669"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <TextView android:id="@+id/hifz_surah" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="سورة الملك" android:textColor="#059669" android:textSize="11sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/hifz_juz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="جزء 29" android:textColor="#64748B" android:textSize="11sp" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/hifz_page" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="صفحة 562" android:textColor="#64748B" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Revision Near (Blue Title) -->
+    <LinearLayout
+        android:id="@+id/section_rev_near"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/white_item_bg"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ورد المراجعة القريبة"
+            android:textColor="#2563EB"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <TextView android:id="@+id/rev_near_surah" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="سورة النبأ" android:textColor="#2563EB" android:textSize="11sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/rev_near_juz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="جزء 30" android:textColor="#64748B" android:textSize="11sp" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/rev_near_page" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="صفحة 582" android:textColor="#64748B" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Revision Far (Purple Title) -->
+    <LinearLayout
+        android:id="@+id/section_rev_far"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/white_item_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ورد المراجعة البعيدة"
+            android:textColor="#7C3AED"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <TextView android:id="@+id/rev_far_surah" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="سورة يس" android:textColor="#7C3AED" android:textSize="11sp" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/rev_far_juz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="جزء 23" android:textColor="#64748B" android:textSize="11sp" android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/rev_far_page" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="صفحة 440" android:textColor="#64748B" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

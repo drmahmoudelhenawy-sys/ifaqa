@@ -1,0 +1,376 @@
+/* إزالة الصندوق الأبيض حول الصفحة وجعل الخلفية شفافة */
+.quran-card,
+.page-card,
+.sheet,
+.mushaf-page,
+.page-wrapper,
+.page-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* اجعل الصورة تندمج مع الخلفية الأساسية (لو الحبر أسود والخلفية الأصلية بيضاء) */
+.page-image,
+.page-img,
+.mushaf-page img {
+  background: transparent !important;
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply; /* يسمح بظهور الحبر على خلفية الموقع */
+}
+.dark .page-image,
+.dark .page-img,
+.dark .mushaf-page img {
+  mix-blend-mode: screen;
+}
+
+/* لو تحتاج إزالة أي إطار داخلي */
+.page-card > * {
+  background: transparent !important;
+}
+
+/* إزالة الصندوق الأبيض حول الصفحة وجعل الخلفية شفافة */
+.mushaf-page,
+.page-image,
+.page-img,
+.page-wrapper {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: relative;
+}
+
+.mushaf-page img,
+.page-image img,
+.page-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent !important;
+  mix-blend-mode: multiply; /* يجعل الأبيض شفافاً ويُظهر خلفية التطبيق */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dark .mushaf-page img,
+.dark .page-image img,
+.dark .page-img img {
+  mix-blend-mode: screen;
+}
+
+/* ازالة الصندوق الأبيض حول صفحة المصحف */
+.max-w-2xl.bg-white,
+.max-w-2xl.w-full.aspect-\[1\/1\.5\].bg-white,
+.relative.max-w-2xl.bg-white {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* اجعل الـSVG/صورة الصفحة تندمج مع خلفية التطبيق */
+.max-w-2xl svg,
+.max-w-2xl img,
+.mushaf-page img,
+.page-image img {
+  mix-blend-mode: multiply;
+  background: transparent !important;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 
+  إزالة الصندوق الأبيض والظل حول صفحة المصحف
+*/
+.bg-white.shadow-2xl,
+.relative.max-w-2xl.w-full.bg-white {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 
+  دمج صورة الصفحة مع خلفية التطبيق لإخفاء أي بياض في الصورة نفسها
+*/
+.mushaf-page img,
+.page-image img,
+.relative.max-w-2xl > div > img, /* يستهدف الصورة داخل الحاوية */
+.relative.max-w-2xl > svg {
+  mix-blend-mode: multiply;
+}
+
+.dark .mushaf-page img,
+.dark .page-image img,
+.dark .relative.max-w-2xl > div > img,
+.dark .relative.max-w-2xl > svg {
+  mix-blend-mode: screen;
+}
+
+/* Scrollbar Utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* ================================================================
+   Quran reader experience — chrome only; page artwork is untouched.
+   ================================================================ */
+.quran-reader-shell {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% -12%, rgba(var(--quran-accent-rgb), 0.12), transparent 32rem),
+    var(--quran-base);
+  transition: background-color 320ms ease, color 320ms ease;
+}
+
+.quran-reader-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(30deg, transparent 48%, rgba(var(--quran-accent-rgb), 0.055) 49%, transparent 50%),
+    linear-gradient(150deg, transparent 48%, rgba(var(--quran-accent-rgb), 0.04) 49%, transparent 50%);
+  background-size: 42px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 38%, transparent 72%, black);
+}
+
+.quran-reader-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0 0 70px rgba(var(--quran-accent-rgb), 0.055);
+}
+
+.quran-top-dock,
+.quran-page-dock,
+.quran-audio-card {
+  border: 1px solid rgba(var(--quran-accent-rgb), 0.15);
+  background: var(--quran-panel);
+  box-shadow:
+    0 16px 42px rgba(21, 18, 10, 0.14),
+    inset 0 1px rgba(255, 255, 255, 0.44);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+}
+
+.quran-theme-dark .quran-top-dock,
+.quran-theme-dark .quran-page-dock,
+.quran-theme-dark .quran-audio-card {
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.44),
+    inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.quran-top-dock {
+  position: relative;
+  overflow: hidden;
+}
+
+.quran-top-dock::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 50%;
+  width: 42%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(var(--quran-accent-rgb), 0.09), transparent 68%);
+}
+
+.quran-surah-identity {
+  position: relative;
+}
+
+
+.quran-icon-button {
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.quran-icon-button:hover {
+  border-color: rgba(var(--quran-accent-rgb), 0.13);
+  background: rgba(var(--quran-accent-rgb), 0.08) !important;
+  box-shadow: 0 7px 18px rgba(var(--quran-accent-rgb), 0.1);
+}
+
+.quran-reading-target {
+  border: 1px solid rgba(var(--quran-accent-rgb), 0.1);
+  background: rgba(var(--quran-accent-rgb), 0.065);
+}
+
+.quran-global-progress {
+  background: rgba(var(--quran-accent-rgb), 0.12);
+}
+
+.quran-global-progress > div {
+  box-shadow: 0 0 10px rgba(var(--quran-accent-rgb), 0.35);
+}
+
+.quran-page-step {
+  border: 1px solid rgba(var(--quran-accent-rgb), 0.12);
+  background: rgba(var(--quran-accent-rgb), 0.07);
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.quran-page-step:not(:disabled):hover {
+  background: rgba(var(--quran-accent-rgb), 0.14);
+  box-shadow: 0 6px 16px rgba(var(--quran-accent-rgb), 0.12);
+}
+
+.quran-page-range {
+  appearance: none;
+  border: 0 !important;
+  padding: 0 !important;
+  background: rgba(var(--quran-accent-rgb), 0.14) !important;
+  box-shadow: none !important;
+  border-radius: 999px;
+}
+
+.quran-page-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.05rem;
+  height: 1.05rem;
+  border: 3px solid var(--quran-panel-strong);
+  border-radius: 999px;
+  background: var(--quran-accent);
+  box-shadow: 0 3px 12px rgba(var(--quran-accent-rgb), 0.38);
+}
+
+.quran-page-range::-moz-range-thumb {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 3px solid var(--quran-panel-strong);
+  border-radius: 999px;
+  background: var(--quran-accent);
+  box-shadow: 0 3px 12px rgba(var(--quran-accent-rgb), 0.38);
+}
+
+.quran-sheet-backdrop {
+  background: rgba(5, 8, 7, 0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.quran-settings-sheet,
+.quran-index-sheet,
+.quran-tool-sheet,
+.quran-ayah-toolbar {
+  border: 1px solid rgba(var(--quran-accent-rgb), 0.15);
+  background:
+    radial-gradient(circle at 50% 0, rgba(var(--quran-accent-rgb), 0.085), transparent 20rem),
+    var(--quran-panel-strong);
+  box-shadow: 0 -24px 65px rgba(6, 9, 8, 0.25), inset 0 1px rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(28px) saturate(1.25);
+  -webkit-backdrop-filter: blur(28px) saturate(1.25);
+}
+
+.quran-index-sheet {
+  border: 0;
+  background:
+    radial-gradient(circle at 80% -8%, rgba(var(--quran-accent-rgb), 0.13), transparent 26rem),
+    var(--quran-panel-strong);
+}
+
+.quran-settings-sheet > div:first-child,
+.quran-index-sheet > div > div:first-child {
+  background: rgba(var(--quran-accent-rgb), 0.18) !important;
+}
+
+.quran-settings-sheet :where(button, input, select),
+.quran-index-sheet :where(button, input, select),
+.quran-tool-sheet :where(button, input, select) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quran-ayah-toolbar {
+  overflow: visible;
+}
+
+.quran-ayah-toolbar-head {
+  border-bottom: 1px solid rgba(var(--quran-accent-rgb), 0.1);
+  background: rgba(var(--quran-accent-rgb), 0.035);
+}
+
+.quran-reader-shell :where(button, [role='button']):focus-visible {
+  outline: 3px solid rgba(var(--quran-accent-rgb), 0.3);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .quran-reader-header {
+    padding-inline: 0.55rem;
+  }
+
+  .quran-top-dock {
+    border-radius: 1.35rem;
+  }
+
+  .quran-page-dock {
+    border-radius: 1.35rem;
+  }
+
+  .quran-icon-button {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quran-reader-shell *,
+  .quran-reader-shell *::before,
+  .quran-reader-shell *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* Keep navigation anchored while the page scales into the available area. */
+.quran-reading-layout {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  gap: 0;
+}
+.quran-compact-header,
+.quran-compact-footer {
+  padding: 0 4px;
+  margin: 0;
+}
+.quran-page-viewport {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  padding: 0 2px;
+  margin: 0;
+}
+.quran-page-viewport .quran-svg-page-frame {
+  flex-shrink: 0;
+  margin: 0;
+}
