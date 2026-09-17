@@ -219,7 +219,6 @@ class _QuranPageScreenState extends State<QuranPageScreen> {
                   ),
                   child: Row(
                     children: [
-                      // Page slider & quick selector
                       Text(
                         ArabicNumbers.convert(1),
                         style: const TextStyle(fontFamily: 'Cairo', fontSize: 11, fontWeight: FontWeight.bold),
