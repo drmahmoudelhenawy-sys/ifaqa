@@ -1,0 +1,1 @@
+enum AppMode { full, lite }

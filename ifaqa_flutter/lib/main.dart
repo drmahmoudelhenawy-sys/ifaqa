@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'core/theme/app_theme.dart';
-import 'features/home/presentation/main_navigation_screen.dart';
+import 'models/nav_page.dart';
+import 'screens/app_shell_screen.dart';
+import 'screens/splash_screen.dart';
+import 'services/app_state.dart';
+import 'theme/app_theme.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-    ),
-  );
+  await AppState.init();
   runApp(const IfaqaApp());
+}
+
+/// Returning users who turned the intro off skip straight to the app.
+Widget _firstScreen() {
+  final state = AppState.instance;
+  if (state.onboarded && !state.flag('show_intro', fallback: true)) {
+    return AppShellScreen(initialPage: state.flag('start_with_quran') ? NavPage.quran : NavPage.home);
+  }
+  return const SplashScreen();
 }
 
 class IfaqaApp extends StatelessWidget {
@@ -23,27 +28,15 @@ class IfaqaApp extends StatelessWidget {
     return MaterialApp(
       title: 'إفاقة',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      // Force Right-to-Left (RTL) regardless of device language (English or Arabic)
+      theme: AppTheme.light(),
       locale: const Locale('ar'),
-      supportedLocales: const [
-        Locale('ar'),
-        Locale('en'),
-      ],
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
       builder: (context, child) {
         return Directionality(
           textDirection: TextDirection.rtl,
           child: child!,
         );
       },
-      home: const MainNavigationScreen(),
+      home: _firstScreen(),
     );
   }
 }

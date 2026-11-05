@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.ifaqa" "\0"
-            VALUE "FileDescription", "ifaqa" "\0"
+            VALUE "FileDescription", "ifaqa_flutter" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ifaqa" "\0"
+            VALUE "InternalName", "ifaqa_flutter" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.ifaqa. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ifaqa.exe" "\0"
-            VALUE "ProductName", "ifaqa" "\0"
+            VALUE "OriginalFilename", "ifaqa_flutter.exe" "\0"
+            VALUE "ProductName", "ifaqa_flutter" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
