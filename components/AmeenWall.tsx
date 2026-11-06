@@ -59,7 +59,6 @@ const AmeenWall: React.FC<AmeenWallProps> = ({ user, updateStats }) => {
       await addDoc(collection(db, 'artifacts', APP_ID, 'public', 'data', 'ameen_wall'), {
         userId: user.uid,
         userName: isAnonymous ? 'فاعل خير' : (user.displayName || 'مستخدم'),
-        realName: user.displayName || 'Unknown', // Stored for admin view
         text: newDua.trim(),
         ameenCount: 0,
         timestamp: serverTimestamp(),
@@ -184,7 +183,7 @@ const AmeenWall: React.FC<AmeenWallProps> = ({ user, updateStats }) => {
                                         {isMe && <span className="text-[10px] bg-violet-100 text-violet-600 px-2 py-0.5 rounded-full">أنت</span>}
                                         {/* Admin specific view */}
                                         {isAdmin && !isMe && (
-                                            <span className="text-[9px] text-red-400 ml-2">({(dua as any).realName || 'Unknown'})</span>
+                                            <span className="text-[9px] text-red-400 ml-2">({(dua as any).realName || dua.userId})</span>
                                         )}
                                     </h4>
                                     <div className="flex items-center gap-2 text-[10px] text-slate-400 mt-0.5">
