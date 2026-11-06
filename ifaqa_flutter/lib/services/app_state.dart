@@ -22,6 +22,10 @@ class AppState extends ChangeNotifier {
   static late final AppState instance;
   final SharedPreferences _prefs;
 
+  /// Set by CloudService while signed in; local state stays the source of truth.
+  void Function(int amount, int newTotal)? onXpAdded;
+  void Function()? onProfileEdited;
+
   static Future<void> init() async {
     instance = AppState._(await SharedPreferences.getInstance());
   }
@@ -36,6 +40,7 @@ class AppState extends ChangeNotifier {
   set appMode(AppMode mode) {
     _prefs.setString('app_mode', mode.name);
     notifyListeners();
+    onProfileEdited?.call();
   }
 
   void completeOnboarding(AppMode mode) {
@@ -47,25 +52,40 @@ class AppState extends ChangeNotifier {
   set displayName(String value) {
     _prefs.setString('display_name', value);
     notifyListeners();
+    onProfileEdited?.call();
   }
 
   String get userTitle => _prefs.getString('user_title') ?? '';
   set userTitle(String value) {
     _prefs.setString('user_title', value);
     notifyListeners();
+    onProfileEdited?.call();
   }
 
   int get xp => _prefs.getInt('xp') ?? 0;
 
   void addXp(int amount) {
     if (amount == 0) return;
-    final next = xp + amount;
-    _prefs.setInt('xp', next < 0 ? 0 : next);
+    final previous = xp;
+    final next = previous + amount < 0 ? 0 : previous + amount;
+    _prefs.setInt('xp', next);
     notifyListeners();
+    onXpAdded?.call(next - previous, next);
   }
 
   void resetXp() {
+    final previous = xp;
     _prefs.setInt('xp', 0);
+    notifyListeners();
+    onXpAdded?.call(-previous, 0);
+  }
+
+  /// Applies the account's profile after sign-in without echoing it back.
+  void applyCloudProfile({String? name, String? title, required int xp, required AppMode appMode}) {
+    if (name != null && name.isNotEmpty) _prefs.setString('display_name', name);
+    if (title != null) _prefs.setString('user_title', title);
+    _prefs.setInt('xp', xp);
+    _prefs.setString('app_mode', appMode.name);
     notifyListeners();
   }
 

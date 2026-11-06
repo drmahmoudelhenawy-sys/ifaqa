@@ -1,13 +1,17 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'models/nav_page.dart';
 import 'screens/app_shell_screen.dart';
 import 'screens/splash_screen.dart';
 import 'services/app_state.dart';
+import 'services/cloud_service.dart';
 import 'theme/app_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppState.init();
+  // Not awaited: the app must open even when Firebase is slow or offline.
+  unawaited(CloudService.instance.init());
   runApp(const IfaqaApp());
 }
 

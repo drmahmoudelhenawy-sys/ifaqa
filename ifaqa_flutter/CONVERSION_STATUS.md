@@ -10,7 +10,7 @@
 | `AppShell.tsx` (الهيدر + شريط الـXP + شريط التبويبات السفلي) | ✅ | `app_shell_screen.dart` |
 | `OnboardingFlow.tsx` | ✅ | `onboarding_screen.dart` |
 | `SplashScreen.tsx` | ✅ | `screens/splash_screen.dart` — أول شاشة تفتح، تختفي تلقائيًا أو بالنقر |
-| `AuthScreen.tsx` (تسجيل الدخول) | ⬜ | يحتاج ربط Firebase Auth فعلي |
+| `AuthScreen.tsx` (تسجيل الدخول) | ✅ | `screens/auth_screen.dart` + `services/cloud_service.dart` — دخول وإنشاء حساب واستعادة كلمة المرور بالإيميل على نفس مشروع Firebase (`elhenawy-lap`)، اختياري (التطبيق شغال كضيف). عند الدخول: الملف الشخصي والنقاط بتتزامن على نفس مسارات React، والنقاط بتاخد الأكبر بين الجهاز والحساب. أندرويد والويب بس (iOS محتاج GoogleService-Info.plist) |
 
 ## يومي (Home)
 | الشاشة/المكون الأصلي | الحالة | ملاحظات |
@@ -53,7 +53,7 @@
 |---|---|---|
 | `ChallengesPage.tsx` | 🟡 | `screens/challenges_tab.dart` — التحديات اليومية بتتحفظ لكل يوم وبتضيف XP؛ الفعاليات والغرف لسه placeholder (محتاجين Firebase) |
 | `ProphetChallengeModal.tsx` | ⬜ | |
-| `LeaderboardPage.tsx` | ✅ | `screens/leaderboard_tab.dart` — 3 تبويبات: المتصدرين (بوديوم + قائمة، بيانات وهمية)، الأوسمة (شبكة أوسمة مقفولة/مفتوحة)، الدروع والرتب (كل الرتب الـ6 مع وصفها وتمييز رتبتك الحالية) |
+| `LeaderboardPage.tsx` | ✅ | `screens/leaderboard_tab.dart` — المتصدرين حقيقيين من Firestore (أعلى 50، من غير المحظورين)، الأوسمة والرتب زي ما هي |
 | `ClansView.tsx` + `src/components/ClanChat.tsx` | ⬜ | |
 | `EventsShell.tsx` / `EventsIntro.tsx` / `EventCompetitionView.tsx` / `EventDetailView.tsx` / `EventLeaderboardPage.tsx` / `EventProfilePage.tsx` / `EventChallengesPage.tsx` / `MawanEventsPage.tsx` | ⬜ | مناسبات/فعاليات مؤقتة |
 
@@ -61,7 +61,7 @@
 | الشاشة/المكون الأصلي | الحالة | ملاحظات |
 |---|---|---|
 | `ProfilePage.tsx` | 🟡 | `screens/profile_tab.dart` — الاسم واللقب والنمط وكل التفضيلات بتتحفظ؛ "عرض شاشة الترحيب" و"فتح المصحف تلقائيًا" شغالين فعلًا؛ تصفير النقاط شغال. الإشعارات بتتحفظ بس لسه مش بتتبعت (محتاجة `flutter_local_notifications`) |
-| `SupportModal.tsx` | ✅ | `screens/support_sheet.dart` — شات دعم محلي مع رد تلقائي، إرسال باسمك/مجهول. مربوطة بزرار في البروفايل |
+| `SupportModal.tsx` | ✅ | `screens/support_sheet.dart` — رسايل الدعم وردود الإدارة من Firestore مباشرة |
 | `OfflineSetup.tsx` / `src/components/DownloadsManager.tsx` | 🟡 | `screens/downloads_screen.dart` — تنزيل المصحف كامل للقراءة أوفلاين (موبايل)، مع إيقاف ومتابعة. ناقص: التفاسير والتلاوات وكتب الحديث |
 | `AdminPanel.tsx` + `AdminEventModal.tsx` | ⬜ | (للأدمن فقط، أولوية أقل) |
 | `AIAnalyst.tsx` / `AIRafiq.tsx` | ❌ | ملغية بقرار صاحب التطبيق (ميزات الذكاء الاصطناعي مش هتتحول) |
@@ -75,7 +75,7 @@
 | `src/components/IslamicCalendarPage.tsx` | ✅ | `screens/islamic_calendar_screen.dart` — تحويل هجري/ميلادي حقيقي (خوارزمية تقويمية)، شبكة شهر تفاعلية، تمييز الجمعة والأيام البيض، قائمة المناسبات القادمة بالعد التنازلي، وضبط الإزاحة. مربوطة بـ"التقويم والمناسبات" في الأدوات |
 | `OccasionsPage.tsx` | ✅ | مغطاة ضمن `islamic_calendar_screen.dart` (قائمة "المناسبات القادمة" بحساب حقيقي بدل تواريخ ثابتة) |
 | `WidgetSelectionPage.tsx` + `*WidgetPreview.tsx` (Azkar/Counter/Prayer/Radio/Salat/Tracker) | ⬜ | ويدجتس الشاشة الرئيسية للموبايل |
-| `AmeenWall.tsx` | ✅ | `screens/ameen_wall_tab.dart` — نشر دعاء (باسمك/مجهول)، تأمين، عداد المؤمّنين. مربوطة بتبويب "حائط آمين" داخل التحديات |
+| `AmeenWall.tsx` | ✅ | `screens/ameen_wall_tab.dart` — حائط مشترك من Firestore: نشر (+10 XP) وتأمين مرة واحدة (+1 XP)، من غير `realName`. اتصلح كمان إنه كان بيظهر فاضي (ListView جوه ListView) |
 
 ---
 **آخر تحديث:** المصحف بقى شغال (مصحف المدينة SVG)، والبيانات بتتحفظ على الجهاز (`services/app_state.dart`)، والمواقيت والقبلة بقت حقيقية بالموقع. اتصلحت إعدادات أندرويد: إذن الإنترنت (كان ناقص فكل الشبكة كانت هتفشل في نسخة release)، إذن الموقع، اسم التطبيق، و`applicationId` رجع `com.ifaqa.app` زي نسخة Capacitor، والتوقيع بيقرا من `android/key.properties`. زر الوضع الليلي اتشال لحد ما يتعمل ثيم ليلي حقيقي. المتبقي: الإشعارات ومنبّه الفجر، حساس البوصلة، وكل اللي محتاج Firebase (تسجيل الدخول، المتصدرين الحقيقيين، حائط آمين المشترك، العشائر والفعاليات، لوحة الإدارة).

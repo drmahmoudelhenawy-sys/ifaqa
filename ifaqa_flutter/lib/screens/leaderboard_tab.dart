@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../data/leaderboard_data.dart';
+
+import '../services/cloud_service.dart';
+import 'auth_screen.dart';
 import '../models/tier.dart';
 import '../theme/app_colors.dart';
 
@@ -15,6 +17,22 @@ class LeaderboardTab extends StatefulWidget {
 
 class _LeaderboardTabState extends State<LeaderboardTab> {
   _LbTab activeTab = _LbTab.leaderboard;
+
+  void _onCloudChanged() {
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    CloudService.instance.addListener(_onCloudChanged);
+  }
+
+  @override
+  void dispose() {
+    CloudService.instance.removeListener(_onCloudChanged);
+    super.dispose();
+  }
 
   static const Map<String, String> tierDescriptions = {
     'bronze': 'بداية الانطلاقة في رحلة الالتزام والإقبال على الطاعات.',
@@ -59,7 +77,10 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
     ];
     return Container(
       padding: const EdgeInsets.all(5),
-      decoration: BoxDecoration(color: AppColors.slate100, borderRadius: BorderRadius.circular(24)),
+      decoration: BoxDecoration(
+        color: AppColors.slate100,
+        borderRadius: BorderRadius.circular(24),
+      ),
       child: Row(
         children: items.map((item) {
           final active = activeTab == item.$1;
@@ -69,13 +90,27 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
               borderRadius: BorderRadius.circular(20),
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(color: active ? item.$4 : Colors.transparent, borderRadius: BorderRadius.circular(20)),
+                decoration: BoxDecoration(
+                  color: active ? item.$4 : Colors.transparent,
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(item.$3, size: 15, color: active ? Colors.white : AppColors.slate500),
+                    Icon(
+                      item.$3,
+                      size: 15,
+                      color: active ? Colors.white : AppColors.slate500,
+                    ),
                     const SizedBox(height: 2),
-                    Text(item.$2, style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: active ? Colors.white : AppColors.slate500)),
+                    Text(
+                      item.$2,
+                      style: TextStyle(
+                        fontSize: 9,
+                        fontWeight: FontWeight.w900,
+                        color: active ? Colors.white : AppColors.slate500,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -98,7 +133,42 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
   }
 
   Widget _buildLeaderboard() {
-    final list = [...mockLeaderboard]..sort((a, b) => b.xp.compareTo(a.xp));
+    final cloud = CloudService.instance;
+    if (!cloud.signedIn) {
+      return SignInPrompt(
+        message: 'سجّل الدخول لتظهر في لوحة المتصدرين وتنافس إخوانك.',
+      );
+    }
+    return StreamBuilder<List<LeaderboardRow>>(
+      stream: cloud.leaderboard(),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return const Padding(
+            padding: EdgeInsets.all(24),
+            child: Text(
+              'تعذر تحميل المتصدرين.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: AppColors.rose500,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          );
+        }
+        if (!snapshot.hasData) {
+          return const Padding(
+            padding: EdgeInsets.all(32),
+            child: Center(
+              child: CircularProgressIndicator(color: AppColors.amber500),
+            ),
+          );
+        }
+        return _buildBoard(snapshot.data!, cloud.user!.uid);
+      },
+    );
+  }
+
+  Widget _buildBoard(List<LeaderboardRow> list, String myId) {
     final top3 = list.take(3).toList();
     final rest = list.skip(3).toList();
 
@@ -106,9 +176,23 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
       children: [
         const Column(
           children: [
-            Text('لوحة المتصدرين', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: AppColors.slate800)),
+            Text(
+              'لوحة المتصدرين',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w900,
+                color: AppColors.slate800,
+              ),
+            ),
             SizedBox(height: 4),
-            Text('وفي ذلك فليتنافس المتنافسون', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.slate400)),
+            Text(
+              'وفي ذلك فليتنافس المتنافسون',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: AppColors.slate400,
+              ),
+            ),
           ],
         ),
         const SizedBox(height: 20),
@@ -118,9 +202,27 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              if (top3.length > 1) Expanded(child: _podiumTile(top3[1], 2, 130, [AppColors.slate300, AppColors.slate400])),
-              if (top3.isNotEmpty) Expanded(child: _podiumTile(top3[0], 1, 165, [AppColors.amber400, AppColors.amber600], crown: true)),
-              if (top3.length > 2) Expanded(child: _podiumTile(top3[2], 3, 110, [Color(0xFFB45309), Color(0xFF78350F)])),
+              if (top3.length > 1)
+                Expanded(
+                  child: _podiumTile(top3[1], 2, 130, [
+                    AppColors.slate300,
+                    AppColors.slate400,
+                  ]),
+                ),
+              if (top3.isNotEmpty)
+                Expanded(
+                  child: _podiumTile(top3[0], 1, 165, [
+                    AppColors.amber400,
+                    AppColors.amber600,
+                  ], crown: true),
+                ),
+              if (top3.length > 2)
+                Expanded(
+                  child: _podiumTile(top3[2], 3, 110, [
+                    Color(0xFFB45309),
+                    Color(0xFF78350F),
+                  ]),
+                ),
             ],
           ),
         ),
@@ -128,25 +230,66 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
         ...rest.asMap().entries.map((entry) {
           final rank = entry.key + 4;
           final u = entry.value;
-          final isMe = u.id == 'me';
+          final isMe = u.id == myId;
           return Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                gradient: isMe ? const LinearGradient(colors: [AppColors.violet600, AppColors.indigo600]) : null,
+                gradient: isMe
+                    ? const LinearGradient(
+                        colors: [AppColors.violet600, AppColors.indigo600],
+                      )
+                    : null,
                 color: isMe ? null : Colors.white,
                 borderRadius: BorderRadius.circular(28),
-                border: Border.all(color: isMe ? Colors.transparent : AppColors.slate100, width: isMe ? 2 : 1),
+                border: Border.all(
+                  color: isMe ? Colors.transparent : AppColors.slate100,
+                  width: isMe ? 2 : 1,
+                ),
               ),
               child: Row(
                 children: [
-                  SizedBox(width: 30, child: Text('#$rank', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15, color: isMe ? Colors.white : AppColors.slate400))),
+                  SizedBox(
+                    width: 30,
+                    child: Text(
+                      '#$rank',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 15,
+                        color: isMe ? Colors.white : AppColors.slate400,
+                      ),
+                    ),
+                  ),
                   const SizedBox(width: 10),
-                  CircleAvatar(radius: 20, backgroundColor: isMe ? Colors.white24 : AppColors.slate100, child: Icon(Icons.person, color: isMe ? Colors.white : AppColors.slate400)),
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: isMe ? Colors.white24 : AppColors.slate100,
+                    child: Icon(
+                      Icons.person,
+                      color: isMe ? Colors.white : AppColors.slate400,
+                    ),
+                  ),
                   const SizedBox(width: 12),
-                  Expanded(child: Text(u.name, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: isMe ? Colors.white : AppColors.slate800))),
-                  Text(u.xp.toString(), style: TextStyle(fontWeight: FontWeight.w900, fontFamily: 'monospace', color: isMe ? Colors.white : AppColors.slate500)),
+                  Expanded(
+                    child: Text(
+                      u.name,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 13,
+                        color: isMe ? Colors.white : AppColors.slate800,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    u.xp.toString(),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontFamily: 'monospace',
+                      color: isMe ? Colors.white : AppColors.slate500,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -156,12 +299,31 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
     );
   }
 
-  Widget _podiumTile(LeaderboardEntry u, int rank, double height, List<Color> gradient, {bool crown = false}) {
+  Widget _podiumTile(
+    LeaderboardRow u,
+    int rank,
+    double height,
+    List<Color> gradient, {
+    bool crown = false,
+  }) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        if (crown) const Icon(Icons.emoji_events, color: AppColors.amber400, size: 28),
-        CircleAvatar(radius: rank == 1 ? 34 : 28, backgroundColor: Colors.white, child: CircleAvatar(radius: rank == 1 ? 31 : 25, backgroundColor: AppColors.slate100, child: Icon(Icons.person, color: AppColors.slate400, size: rank == 1 ? 30 : 24))),
+        if (crown)
+          const Icon(Icons.emoji_events, color: AppColors.amber400, size: 28),
+        CircleAvatar(
+          radius: rank == 1 ? 34 : 28,
+          backgroundColor: Colors.white,
+          child: CircleAvatar(
+            radius: rank == 1 ? 31 : 25,
+            backgroundColor: AppColors.slate100,
+            child: Icon(
+              Icons.person,
+              color: AppColors.slate400,
+              size: rank == 1 ? 30 : 24,
+            ),
+          ),
+        ),
         Transform.translate(
           offset: const Offset(0, -14),
           child: Container(
@@ -169,17 +331,44 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
             height: height,
             padding: const EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: gradient, begin: Alignment.topCenter, end: Alignment.bottomCenter),
+              gradient: LinearGradient(
+                colors: gradient,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
               borderRadius: BorderRadius.circular(24),
             ),
             child: Column(
               children: [
-                Text(u.name, textAlign: TextAlign.center, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)),
+                Text(
+                  u.name,
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 12,
+                  ),
+                ),
                 const SizedBox(height: 4),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                  decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.25), borderRadius: BorderRadius.circular(999)),
-                  child: Text(u.xp.toString(), style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w900)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 2,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.25),
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    u.xp.toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -204,7 +393,9 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
           decoration: BoxDecoration(
             color: unlocked ? const Color(0xFFF5F3FF) : AppColors.slate50,
             borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: unlocked ? AppColors.violet300 : AppColors.slate100),
+            border: Border.all(
+              color: unlocked ? AppColors.violet300 : AppColors.slate100,
+            ),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -217,10 +408,22 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
                   color: unlocked ? AppColors.violet600 : AppColors.slate200,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(unlocked ? b.$2 : Icons.lock, color: Colors.white, size: 24),
+                child: Icon(
+                  unlocked ? b.$2 : Icons.lock,
+                  color: Colors.white,
+                  size: 24,
+                ),
               ),
               const SizedBox(height: 10),
-              Text(b.$1, textAlign: TextAlign.center, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: unlocked ? AppColors.violet700 : AppColors.slate400)),
+              Text(
+                b.$1,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w900,
+                  color: unlocked ? AppColors.violet700 : AppColors.slate400,
+                ),
+              ),
             ],
           ),
         );
@@ -241,7 +444,10 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
             decoration: BoxDecoration(
               color: isCurrent ? const Color(0xFFECFDF5) : Colors.white,
               borderRadius: BorderRadius.circular(28),
-              border: Border.all(color: isCurrent ? AppColors.emerald400 : AppColors.slate100, width: isCurrent ? 2 : 1),
+              border: Border.all(
+                color: isCurrent ? AppColors.emerald400 : AppColors.slate100,
+                width: isCurrent ? 2 : 1,
+              ),
             ),
             child: Row(
               children: [
@@ -256,21 +462,56 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
                     children: [
                       Row(
                         children: [
-                          Text(t.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 14, color: AppColors.slate800)),
+                          Text(
+                            t.name,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 14,
+                              color: AppColors.slate800,
+                            ),
+                          ),
                           if (isCurrent) ...[
                             const SizedBox(width: 6),
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                              decoration: BoxDecoration(color: AppColors.emerald500, borderRadius: BorderRadius.circular(999)),
-                              child: const Text('رتبتك', style: TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w900)),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 2,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.emerald500,
+                                borderRadius: BorderRadius.circular(999),
+                              ),
+                              child: const Text(
+                                'رتبتك',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              ),
                             ),
                           ],
                         ],
                       ),
                       const SizedBox(height: 4),
-                      Text(tierDescriptions[t.id] ?? '', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400)),
+                      Text(
+                        tierDescriptions[t.id] ?? '',
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.slate400,
+                        ),
+                      ),
                       const SizedBox(height: 4),
-                      Text('من ${t.min} نقطة', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: AppColors.slate500, fontFamily: 'monospace')),
+                      Text(
+                        'من ${t.min} نقطة',
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.slate500,
+                          fontFamily: 'monospace',
+                        ),
+                      ),
                     ],
                   ),
                 ),

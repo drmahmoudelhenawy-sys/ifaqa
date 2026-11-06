@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/app_mode.dart';
 import '../models/tier.dart';
 import '../services/app_state.dart';
+import '../services/cloud_service.dart';
+import 'auth_screen.dart';
 import '../theme/app_colors.dart';
 import '../widgets/toggle_item.dart';
 import 'support_sheet.dart';
@@ -60,7 +62,22 @@ class _ProfileTabState extends State<ProfileTab> {
   set wirdTime(TimeOfDay t) => _state.setNumber('wird_minutes', t.hour * 60 + t.minute);
 
   @override
+  void initState() {
+    super.initState();
+    CloudService.instance.addListener(_onCloudChanged);
+  }
+
+  void _onCloudChanged() {
+    if (!mounted) return;
+    // Pick up the name and title restored from the account.
+    nameController.text = displayName;
+    titleController.text = userTitle;
+    setState(() {});
+  }
+
+  @override
   void dispose() {
+    CloudService.instance.removeListener(_onCloudChanged);
     nameController.dispose();
     titleController.dispose();
     super.dispose();
@@ -128,6 +145,8 @@ class _ProfileTabState extends State<ProfileTab> {
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
       children: [
         _buildIdentityCard(tier),
+        const SizedBox(height: 14),
+        _buildAccountCard(),
         const SizedBox(height: 14),
         _buildAppModeCard(),
         const SizedBox(height: 14),
@@ -301,6 +320,45 @@ class _ProfileTabState extends State<ProfileTab> {
               child: Text('${tier.name}  •  $userXp XP', style: const TextStyle(color: AppColors.amber300, fontSize: 12, fontWeight: FontWeight.w900)),
             ),
           ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAccountCard() {
+    final cloud = CloudService.instance;
+    final user = cloud.user;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(28), border: Border.all(color: AppColors.slate100)),
+      child: Row(
+        children: [
+          Icon(user == null ? Icons.cloud_off : Icons.cloud_done, color: user == null ? AppColors.slate400 : AppColors.emerald600),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(user == null ? 'لم تسجّل الدخول' : 'حسابك متصل', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: AppColors.slate900)),
+                const SizedBox(height: 2),
+                Text(
+                  user == null ? 'تقدمك محفوظ على هذا الجهاز فقط.' : (user.email ?? ''),
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.slate400),
+                ),
+              ],
+            ),
+          ),
+          if (cloud.available)
+            user == null
+                ? FilledButton(
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AuthScreen())),
+                    style: FilledButton.styleFrom(backgroundColor: AppColors.violet600),
+                    child: const Text('دخول', style: TextStyle(fontWeight: FontWeight.w900)),
+                  )
+                : TextButton(
+                    onPressed: cloud.signOut,
+                    child: const Text('خروج', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.rose500)),
+                  ),
         ],
       ),
     );

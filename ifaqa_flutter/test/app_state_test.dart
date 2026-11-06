@@ -43,6 +43,19 @@ void main() {
     expect(state.prayerStatus(day.add(const Duration(days: 1)), 'asr'), PrayerStatus.none);
   });
 
+  test('cloud hook receives the applied XP delta, clamped at zero', () {
+    final state = AppState.instance;
+    final calls = <(int, int)>[];
+    state.onXpAdded = (amount, total) => calls.add((amount, total));
+    addTearDown(() => state.onXpAdded = null);
+
+    state.addXp(50);
+    state.addXp(-80); // only 50 can be taken away
+    state.applyCloudProfile(xp: 900, appMode: state.appMode); // restoring does not echo back
+    expect(calls, [(50, 50), (-50, 0)]);
+    expect(state.xp, 900);
+  });
+
   test('prayer times come out in order for Cairo', () {
     final times = buildPrayerTimes(AppLocation.cairo).map((p) => p.time.hour * 60 + p.time.minute).toList();
     expect(times.length, 5);
