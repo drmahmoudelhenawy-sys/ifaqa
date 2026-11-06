@@ -2,7 +2,9 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Helper functions
+    // ---------------------------------------------------------------
+    // Helpers
+    // ---------------------------------------------------------------
     function isAuthenticated() {
       return request.auth != null;
     }
@@ -11,27 +13,73 @@ service cloud.firestore {
       return isAuthenticated() && request.auth.uid == userId;
     }
 
+    // An email only counts once it is verified; otherwise anyone could sign
+    // up with an admin address that has not been registered yet.
     function isAdmin() {
       return isAuthenticated() && (
-        request.auth.token.email in ['ifaqaa@gmail.com', 'ifaqaadmin@gmail.com', 'dr.mahmoud.elhenawy@gmail.com'] ||
+        (request.auth.token.get('email_verified', false) == true &&
+          request.auth.token.get('email', '') in ['ifaqaa@gmail.com', 'ifaqaadmin@gmail.com', 'dr.mahmoud.elhenawy@gmail.com']) ||
         request.auth.uid in ['3jCyf2k6a3T7R3G8w81gqcgYgAR2']
       );
     }
 
-    function isClanMember(clanId) {
-      return isAuthenticated() && exists(/databases/$(database)/documents/artifacts/ifaqa-app-production-release/public/data/clans/$(clanId)/members/$(request.auth.uid));
+    function changedOnly(keys) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
     }
 
-    // -------------------------------------------------------------
-    // 1. User Private Data & Stats
-    // -------------------------------------------------------------
+    function clanPath(appId, clanId) {
+      return /databases/$(database)/documents/artifacts/$(appId)/public/data/clans/$(clanId);
+    }
+
+    function memberPath(appId, clanId, uid) {
+      return /databases/$(database)/documents/artifacts/$(appId)/public/data/clans/$(clanId)/members/$(uid);
+    }
+
+    function isClanLeader(appId, clanId) {
+      return isAuthenticated() && exists(clanPath(appId, clanId)) &&
+        get(clanPath(appId, clanId)).data.leaderId == request.auth.uid;
+    }
+
+    function isClanMemberOf(appId, clanId) {
+      return isAuthenticated() && exists(memberPath(appId, clanId, request.auth.uid));
+    }
+
+    // Used by the Fajr teams and clan chat, which live outside /artifacts.
+    function isClanMember(clanId) {
+      return isClanMemberOf('ifaqa-app-production-release', clanId);
+    }
+
+    // ---------------------------------------------------------------
+    // 1. Private user data
+    // ---------------------------------------------------------------
     match /artifacts/{appId}/users/{userId}/{allPaths=**} {
       allow read, write: if isOwner(userId) || isAdmin();
     }
 
-    // -------------------------------------------------------------
-    // 2. Public Data: Leaderboard, Quests, App Config
-    // -------------------------------------------------------------
+    // The few writes other people legitimately make to someone's profile.
+    match /artifacts/{appId}/users/{userId}/stats/profile {
+      allow update: if isAuthenticated() && (
+        // A clan leader removing a member (kick, disband).
+        (changedOnly(['clanId', 'clanName', 'clanBadge']) &&
+          request.resource.data.clanId == null &&
+          resource.data.get('clanId', null) != null &&
+          isClanLeader(appId, resource.data.clanId)) ||
+        // A clan leader accepting a join request in the same transaction.
+        (changedOnly(['clanId', 'clanName', 'clanBadge']) &&
+          resource.data.get('clanId', null) == null &&
+          request.resource.data.clanId != null &&
+          isClanLeader(appId, request.resource.data.clanId) &&
+          exists(/databases/$(database)/documents/artifacts/$(appId)/public/data/clans/$(request.resource.data.clanId)/joinRequests/$(userId))) ||
+        // A clan mate sending or clearing a check-in.
+        (changedOnly(['pendingClanCheckIn']) &&
+          resource.data.get('clanId', null) != null &&
+          isClanMemberOf(appId, resource.data.clanId))
+      );
+    }
+
+    // ---------------------------------------------------------------
+    // 2. Public data
+    // ---------------------------------------------------------------
     match /artifacts/{appId}/public/data/leaderboard/{userId} {
       allow read: if isAuthenticated();
       allow write: if isOwner(userId) || isAdmin();
@@ -42,8 +90,11 @@ service cloud.firestore {
       allow write: if isOwner(userId) || isAdmin();
     }
 
+    // Tokens are only read by Cloud Functions (Admin SDK bypasses rules).
     match /artifacts/{appId}/public/data/fcm_tokens/{tokenId} {
-      allow read, write: if isAuthenticated();
+      allow create, update: if isAuthenticated() &&
+        request.resource.data.userId in [request.auth.uid, 'anonymous'];
+      allow read, delete: if isAdmin();
     }
 
     match /artifacts/{appId}/public/data/app_config/{document=**} {
@@ -52,44 +103,121 @@ service cloud.firestore {
     }
 
     match /artifacts/{appId}/public/data/global_clan_quests/{questId} {
-      allow read, write: if isAuthenticated();
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
     }
 
     match /artifacts/{appId}/public/data/clan_twins/{twinId} {
       allow read, write: if isAuthenticated();
     }
 
-    // -------------------------------------------------------------
-    // 3. Clans and all subcollections (members, quests, features/khatma, joinRequests, activityLog)
-    // -------------------------------------------------------------
-    match /artifacts/{appId}/public/data/clans/{clanId} {
-      allow read, create: if isAuthenticated();
-      allow update: if isClanMember(clanId) || isAdmin();
-      allow delete: if isAdmin();
+    // Ameen wall. `realName` is refused because every signed-in user can read
+    // these documents, which would reveal who posted an anonymous dua.
+    match /artifacts/{appId}/public/data/ameen_wall/{duaId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() &&
+        request.resource.data.userId == request.auth.uid &&
+        !('realName' in request.resource.data) &&
+        request.resource.data.text is string &&
+        request.resource.data.text.size() > 0 &&
+        request.resource.data.text.size() <= 500 &&
+        request.resource.data.ameenCount == 0 &&
+        request.resource.data.ameenedBy.size() == 0;
+      // Saying ameen: add yourself once and bump the counter by exactly one.
+      allow update: if isAuthenticated() &&
+        changedOnly(['ameenCount', 'ameenedBy']) &&
+        !(request.auth.uid in resource.data.ameenedBy) &&
+        request.resource.data.ameenedBy.hasAll(resource.data.ameenedBy) &&
+        request.resource.data.ameenedBy.hasAll([request.auth.uid]) &&
+        request.resource.data.ameenedBy.size() == resource.data.ameenedBy.size() + 1 &&
+        request.resource.data.ameenCount == resource.data.ameenCount + 1;
+      allow delete: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+    }
 
-      // All subcollections under clans (members, quests, features like khatma/sahar, joinRequests, activityLog)
-      match /{allSubcollections=**} {
+    match /artifacts/{appId}/public/data/mawan_events/{eventId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+
+      match /participants/{participantId} {
         allow read: if isAuthenticated();
-        allow write: if isAuthenticated();
+        allow create, update: if isOwner(participantId);
+        allow delete: if isAdmin();
       }
     }
 
-    // -------------------------------------------------------------
-    // 4. Fajr Wake Teams (Phone numbers strictly protected to clan members only!)
-    // -------------------------------------------------------------
+    // Support: a user sees and writes only their own thread; admins reply.
+    match /artifacts/{appId}/support_messages/{messageId} {
+      allow read: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+      allow create: if isAdmin() || (isAuthenticated() && request.resource.data.userId == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    // ---------------------------------------------------------------
+    // 3. Clans
+    // ---------------------------------------------------------------
+    match /artifacts/{appId}/public/data/clans/{clanId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && request.resource.data.leaderId == request.auth.uid;
+      // Members update shared totals; existsAfter lets a joiner update the
+      // clan in the same transaction that creates their member document.
+      allow update: if isAdmin() || isClanLeader(appId, clanId) || isClanMemberOf(appId, clanId) ||
+        (isAuthenticated() && existsAfter(memberPath(appId, clanId, request.auth.uid)));
+      allow delete: if isAdmin() || isClanLeader(appId, clanId);
+
+      // Membership is what unlocks Fajr phone numbers and chats, so a user can
+      // only add themselves to clans that do not require the leader's approval.
+      match /members/{memberId} {
+        allow read: if isAuthenticated();
+        allow create: if isAdmin() || isClanLeader(appId, clanId) ||
+          // Joining an open or passcode clan (the passcode is still only
+          // checked by the client; see the note at the bottom).
+          (isOwner(memberId) &&
+            request.resource.data.role == 'member' &&
+            exists(clanPath(appId, clanId)) &&
+            get(clanPath(appId, clanId)).data.get('joinPolicy',
+              get(clanPath(appId, clanId)).data.get('isPrivate', false) ? 'passcode' : 'open') != 'approval' &&
+            getAfter(clanPath(appId, clanId)).data.memberCount <=
+              get(clanPath(appId, clanId)).data.get('maxCapacity', 10)) ||
+          // The founder, in the transaction that creates the clan.
+          (isOwner(memberId) &&
+            request.resource.data.role == 'leader' &&
+            !exists(clanPath(appId, clanId)) &&
+            getAfter(clanPath(appId, clanId)).data.leaderId == request.auth.uid);
+        allow update: if isAdmin() || isClanLeader(appId, clanId) ||
+          (isOwner(memberId) && request.resource.data.get('role', null) == resource.data.get('role', null)) ||
+          (isClanMemberOf(appId, clanId) && changedOnly(['lastCheckedInAt', 'checkInMessages']));
+        allow delete: if isAdmin() || isClanLeader(appId, clanId) || isOwner(memberId);
+      }
+
+      match /joinRequests/{requesterId} {
+        allow read: if isOwner(requesterId) || isClanLeader(appId, clanId) || isAdmin();
+        allow create, update: if isOwner(requesterId);
+        allow delete: if isOwner(requesterId) || isClanLeader(appId, clanId) || isAdmin();
+      }
+
+      // Quests, features (khatma, sahar), activity log, ...
+      match /{subcollection}/{rest=**} {
+        allow read: if isAuthenticated() && subcollection != 'members' && subcollection != 'joinRequests';
+        allow write: if subcollection != 'members' && subcollection != 'joinRequests' &&
+          (isAdmin() || isClanLeader(appId, clanId) || isClanMemberOf(appId, clanId));
+      }
+    }
+
+    // ---------------------------------------------------------------
+    // 4. Fajr wake teams (phone numbers: clan members only)
+    // ---------------------------------------------------------------
     match /ifaqa_fajr_teams/{clanId} {
       allow read: if isClanMember(clanId) || isAdmin();
 
       match /members/{memberId} {
-        // Only members of this clan can see phone numbers
         allow read: if isClanMember(clanId) || isAdmin();
         allow write: if isOwner(memberId) || isAdmin();
       }
     }
 
-    // -------------------------------------------------------------
-    // 5. Clan Chat (Team rooms & Direct Messages)
-    // -------------------------------------------------------------
+    // ---------------------------------------------------------------
+    // 5. Clan chat (team rooms and direct messages)
+    // ---------------------------------------------------------------
     match /ifaqa_clan_chats/{clanId}/rooms/{roomId} {
       allow read, create, update: if isClanMember(clanId) && (
         roomId == 'team' ||
@@ -117,9 +245,17 @@ service cloud.firestore {
       }
     }
 
-    // Default
+    // Default: admins only. This still covers fajr_wake_groups on purpose:
+    // its group documents carry creatorPhone and pinCode, so opening it needs
+    // those fields moved out first.
     match /{document=**} {
       allow read, write: if isAdmin();
     }
+
+    // Known gaps that rules alone cannot close:
+    // - Clan passcodes are stored in the clan document that every signed-in
+    //   user can read, so passcode clans are effectively open.
+    // - Users write their own XP to the leaderboard; validating it needs a
+    //   Cloud Function.
   }
 }
