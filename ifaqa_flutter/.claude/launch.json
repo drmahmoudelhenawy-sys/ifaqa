@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ifaqa-flutter",
+      "runtimeExecutable": "flutter",
+      "runtimeArgs": [
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "5050"
+      ],
+      "port": 5050
+    },
+    {
+      "name": "ifaqa-flutter-emulator",
+      "runtimeExecutable": "flutter",
+      "runtimeArgs": [
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "5050",
+        "--dart-define=USE_FIREBASE_EMULATOR=true"
+      ],
+      "port": 5050
+    }
+  ]
+}

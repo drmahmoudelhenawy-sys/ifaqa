@@ -1,0 +1,32 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ifaqa-original",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "ifaqa-flutter",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "cd /d E:\\MyApps\\ifaqa\\ifaqa_flutter && flutter run -d web-server --web-port 5050"
+      ],
+      "port": 5050
+    },
+    {
+      "name": "ifaqa-flutter-emulator",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "cd /d E:\\MyApps\\ifaqa\\ifaqa_flutter &&flutter run -d web-server --web-port 5050 --dart-define=USE_FIREBASE_EMULATOR=true"
+      ],
+      "port": 5050
+    }
+  ]
+}
