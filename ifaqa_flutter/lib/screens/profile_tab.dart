@@ -3,6 +3,7 @@ import '../models/app_mode.dart';
 import '../models/tier.dart';
 import '../services/app_state.dart';
 import '../services/cloud_service.dart';
+import '../services/reminder_service.dart';
 import 'auth_screen.dart';
 import '../theme/app_colors.dart';
 import '../widgets/toggle_item.dart';
@@ -44,15 +45,20 @@ class _ProfileTabState extends State<ProfileTab> {
   set showOnLeaderboard(bool v) => _state.setFlag('show_on_leaderboard', v);
 
   bool get notifFastingMonThu => _state.flag('notif_fasting_mon_thu');
-  set notifFastingMonThu(bool v) => _state.setFlag('notif_fasting_mon_thu', v);
+  set notifFastingMonThu(bool v) => _setReminder('notif_fasting_mon_thu', v);
   bool get notifFastingLunar => _state.flag('notif_fasting_lunar');
-  set notifFastingLunar(bool v) => _state.setFlag('notif_fasting_lunar', v);
+  set notifFastingLunar(bool v) => _setReminder('notif_fasting_lunar', v);
   bool get notifKahfFriday => _state.flag('notif_kahf_friday');
-  set notifKahfFriday(bool v) => _state.setFlag('notif_kahf_friday', v);
+  set notifKahfFriday(bool v) => _setReminder('notif_kahf_friday', v);
   bool get notifMorningAthkar => _state.flag('notif_morning_athkar');
-  set notifMorningAthkar(bool v) => _state.setFlag('notif_morning_athkar', v);
+  set notifMorningAthkar(bool v) => _setReminder('notif_morning_athkar', v);
   bool get notifEveningAthkar => _state.flag('notif_evening_athkar');
-  set notifEveningAthkar(bool v) => _state.setFlag('notif_evening_athkar', v);
+  set notifEveningAthkar(bool v) => _setReminder('notif_evening_athkar', v);
+
+  void _setReminder(String key, bool on) {
+    _state.setFlag(key, on);
+    if (on && ReminderService.supported) ReminderService.instance.requestPermissions();
+  }
 
   TimeOfDay get wirdTime {
     final minutes = _state.number('wird_minutes', fallback: 8 * 60);

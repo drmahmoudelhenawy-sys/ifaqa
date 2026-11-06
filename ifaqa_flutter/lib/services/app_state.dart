@@ -97,13 +97,22 @@ class AppState extends ChangeNotifier {
   }
 
   int number(String key, {int fallback = 0}) => _prefs.getInt('num_$key') ?? fallback;
-  void setNumber(String key, int value) => _prefs.setInt('num_$key', value);
+  void setNumber(String key, int value) {
+    _prefs.setInt('num_$key', value);
+    notifyListeners();
+  }
 
   List<String> strings(String key) => _prefs.getStringList('list_$key') ?? const [];
-  void setStrings(String key, List<String> value) => _prefs.setStringList('list_$key', value);
+  void setStrings(String key, List<String> value) {
+    _prefs.setStringList('list_$key', value);
+    notifyListeners();
+  }
 
   String? text(String key) => _prefs.getString('text_$key');
-  void setText(String key, String value) => _prefs.setString('text_$key', value);
+  void setText(String key, String value) {
+    _prefs.setString('text_$key', value);
+    notifyListeners();
+  }
 
   // ---- Daily log ----
   Map<String, dynamic> _day(DateTime date) {

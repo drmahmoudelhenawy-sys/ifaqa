@@ -1,4 +1,6 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter_compass/flutter_compass.dart';
 import '../services/app_state.dart';
 import '../services/qibla_service.dart';
 import '../theme/app_colors.dart';
@@ -60,30 +62,57 @@ class _QiblaCompassTabState extends State<QiblaCompassTab> {
             ),
           ),
           const SizedBox(height: 24),
-          SizedBox(
-            width: 240,
-            height: 240,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                CustomPaint(size: const Size(240, 240), painter: CompassRosePainter(ringColor: AppColors.slate200, tickColor: AppColors.slate400)),
-                Transform.rotate(
-                  angle: result.bearing * 3.1415926535 / 180,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(color: AppColors.emerald600, shape: BoxShape.circle),
-                        child: const Icon(Icons.mosque, color: Colors.white, size: 18),
+          StreamBuilder<CompassEvent>(
+            stream: FlutterCompass.events,
+            builder: (context, snapshot) {
+              final heading = snapshot.data?.heading;
+              // Turn the whole dial so its north follows the real north.
+              final dialAngle = heading == null ? 0.0 : -heading * math.pi / 180;
+              final diff = heading == null ? null : ((result.bearing - heading + 540) % 360) - 180;
+              final aligned = diff != null && diff.abs() < 5;
+              return Column(
+                children: [
+                  SizedBox(
+                    width: 240,
+                    height: 240,
+                    child: Transform.rotate(
+                      angle: dialAngle,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          CustomPaint(size: const Size(240, 240), painter: CompassRosePainter(ringColor: aligned ? AppColors.emerald400 : AppColors.slate200, tickColor: AppColors.slate400)),
+                          Transform.rotate(
+                            angle: result.bearing * math.pi / 180,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(10),
+                                  decoration: const BoxDecoration(color: AppColors.emerald600, shape: BoxShape.circle),
+                                  child: const Icon(Icons.mosque, color: Colors.white, size: 18),
+                                ),
+                                Container(width: 3, height: 75, color: AppColors.emerald600),
+                                // Mirrors the top half so the needle pivots on the dial's centre.
+                                const SizedBox(height: 113),
+                              ],
+                            ),
+                          ),
+                          Container(width: 14, height: 14, decoration: BoxDecoration(color: AppColors.slate800, shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 2))),
+                        ],
                       ),
-                      Container(width: 3, height: 75, color: AppColors.emerald600),
-                    ],
+                    ),
                   ),
-                ),
-                Container(width: 14, height: 14, decoration: BoxDecoration(color: AppColors.slate800, shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 2))),
-              ],
-            ),
+                  const SizedBox(height: 12),
+                  Text(
+                    heading == null
+                        ? 'البوصلة غير متاحة على هذا الجهاز؛ استخدم الزاوية من الشمال.'
+                        : (aligned ? 'أنت متجه إلى القبلة ✓' : 'لف الهاتف حتى يشير السهم الأخضر للأعلى'),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: aligned ? AppColors.emerald600 : AppColors.slate500),
+                  ),
+                ],
+              );
+            },
           ),
           const SizedBox(height: 24),
           Row(

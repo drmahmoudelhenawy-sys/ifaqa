@@ -37,15 +37,15 @@
 | `src/components/AzkarCategories.tsx` / `AzkarReader.tsx` | ✅ | مغطاة ضمن `athkar_screen.dart` (شبكة الفئات + قارئ الفئة) |
 | `MasbahaPage.tsx` (المسبحة) | ✅ | `screens/masbaha_screen.dart` — العداد والثيم والأذكار المخصصة بتتحفظ |
 | `WirdPage.tsx` + `src/components/WirdEvaluationModal.tsx` | ✅ | `screens/wird_screen.dart` — الورد ونقاط الضعف بيتحفظوا، والإنجاز بيتصفر كل يوم جديد، وكل ورد مكتمل +150 XP |
-| `src/components/AthkarReminderModal.tsx` | ⬜ | |
+| `src/components/AthkarReminderModal.tsx` | 🟡 | `services/reminder_service.dart` + `reminder_plan.dart` — تذكير أذكار الصباح (الفجر+20د) والمساء (العصر+15د) زي React، والورد، والكهف، وصيام الاثنين/الخميس والأيام البيض؛ بتتجدول لأسبوع قدام وبتتحدث مع كل تغيير. ناقص: نافذة التأجيل (snooze) |
 
 ## الصلاة
 | الشاشة/المكون الأصلي | الحالة | ملاحظات |
 |---|---|---|
-| `PrayerTimesPage.tsx` | 🟡 | `screens/prayer_times_tab.dart` — مواقيت حقيقية بمكتبة `adhan` (طريقة الهيئة المصرية) حسب موقع GPS أو القاهرة افتراضيًا، عداد للصلاة القادمة (مع الانتقال لفجر اليوم التالي)، التسجيل مشترك مع الرئيسية. ناقص: منبّه الفجر/التخصيص/أيقظني |
+| `PrayerTimesPage.tsx` | 🟡 | `screens/prayer_times_tab.dart` — مواقيت حقيقية بمكتبة `adhan` حسب الموقع، عداد للصلاة القادمة، منبّه الفجر وتخصيصه شغالين (`widgets/fajr_alarm_panel.dart`). ناقص: "أيقظني" (مجموعات الفجر، مقفولة في القواعد لحد ما التليفون والرقم السري يتنقلوا من ملف المجموعة) |
 | `src/components/IqamahBanner.tsx` | ⬜ | |
-| `src/components/QiblaCompassPage.tsx` | 🟡 | `screens/qibla_compass_tab.dart` — اتجاه القبلة والمسافة من موقع GPS الحقيقي. ناقص: دوران البوصلة مع حساس الاتجاه في الموبايل |
-| `src/components/FajrAlarmHubView.tsx` وملحقاتها (Customize/Preview/Settings/WakeGroups/WakeSync) | ⬜ | placeholder داخل تبويبات الصلاة |
+| `src/components/QiblaCompassPage.tsx` | ✅ | `screens/qibla_compass_tab.dart` — اتجاه القبلة من GPS، والبوصلة بتلف مع حساس الاتجاه (`flutter_compass`) وبتنبّهك لما تتجه للقبلة. على الويب بتعرض الزاوية بس |
+| `src/components/FajrAlarmHubView.tsx` وملحقاتها (Customize/Preview/Settings/WakeGroups/WakeSync) | 🟡 | منبّه الفجر: تشغيل/إيقاف، قبل الأذان بـ 0-60 دقيقة، 3 أصوات + نغمة الجهاز مع معاينة، صوت مستمر لحد ما تفتحه. ملفات الأذان في React كانت 3 مقاطع متكررة بست أسماء، فاتعرضوا هنا 3 بس. ناقص: الوقت الثابت، والثيمات، ومجموعات الاستيقاظ |
 | `FajrCallPage.tsx` | ⬜ | |
 
 ## التحديات والمنافسة

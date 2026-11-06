@@ -30,7 +30,8 @@ class _WirdScreenState extends State<WirdScreen> {
         task.done = false;
         task.quality = null;
       }
-      _state.setText('wird_date', today);
+      // Deferred: this runs while building, and setText notifies listeners.
+      Future.microtask(() => _state.setText('wird_date', today));
     }
     return loaded;
   }

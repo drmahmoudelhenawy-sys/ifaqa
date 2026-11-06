@@ -4,6 +4,7 @@ import '../models/prayer_time_info.dart';
 import '../models/prayer.dart';
 import '../services/app_state.dart';
 import '../theme/app_colors.dart';
+import '../widgets/fajr_alarm_panel.dart';
 import '../widgets/coming_soon_tab.dart';
 import 'qibla_compass_tab.dart';
 
@@ -195,9 +196,9 @@ class _PrayerTimesTabState extends State<PrayerTimesTab> {
       case _PtTab.qibla:
         return _buildQiblaTab();
       case _PtTab.alarm:
-        return const ComingSoonTab(icon: Icons.alarm, title: 'منبّه الفجر');
+        return const FajrAlarmPanel(section: FajrAlarmSection.alarm);
       case _PtTab.customize:
-        return const ComingSoonTab(icon: Icons.tune, title: 'تخصيص المنبّه');
+        return const FajrAlarmPanel(section: FajrAlarmSection.sound);
       case _PtTab.wake:
         return const ComingSoonTab(icon: Icons.groups, title: 'أيقظني (المجموعات)');
     }

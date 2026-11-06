@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../services/app_state.dart';
 import '../services/islamic_calendar_service.dart';
 import '../theme/app_colors.dart';
 
@@ -13,7 +14,8 @@ class _IslamicCalendarScreenState extends State<IslamicCalendarScreen> {
   late DateTime now;
   late int viewYear;
   late int viewMonth; // 1-12
-  int hijriOffset = 0;
+  int get hijriOffset => AppState.instance.number('hijri_offset');
+  set hijriOffset(int v) => AppState.instance.setNumber('hijri_offset', v);
 
   @override
   void initState() {

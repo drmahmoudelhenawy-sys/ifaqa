@@ -22,12 +22,15 @@ class PrayerTimeInfo {
   });
 }
 
-/// Today's times for [location], using the Egyptian General Authority method.
+/// Prayer times for [location] on [date] (default today), Egyptian General Authority method.
+PrayerTimes prayerTimesOn(AppLocation location, [DateTime? date]) => PrayerTimes(
+      Coordinates(location.latitude, location.longitude),
+      DateComponents.from(date ?? DateTime.now()),
+      CalculationMethod.egyptian.getParameters(),
+    );
+
 List<PrayerTimeInfo> buildPrayerTimes(AppLocation location) {
-  final t = PrayerTimes.today(
-    Coordinates(location.latitude, location.longitude),
-    CalculationMethod.egyptian.getParameters(),
-  );
+  final t = prayerTimesOn(location);
   return [
     PrayerTimeInfo(key: 'Fajr', label: 'الفجر', icon: Icons.wb_twilight, tone: [Color(0xFF0EA5E9), Color(0xFF22D3EE)], iqamaMins: 20, sunnahText: 'ركعتان قبل الفجر', time: TimeOfDay.fromDateTime(t.fajr)),
     PrayerTimeInfo(key: 'Dhuhr', label: 'الظهر', icon: Icons.wb_sunny, tone: [Color(0xFFF59E0B), Color(0xFFFB923C)], iqamaMins: 10, sunnahText: '٤ قبلها و ٢ بعدها', time: TimeOfDay.fromDateTime(t.dhuhr)),
