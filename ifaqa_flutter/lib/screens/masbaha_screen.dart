@@ -1,6 +1,9 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../models/masbaha_theme.dart';
 import '../services/app_state.dart';
+import '../services/clan_service.dart';
 import '../theme/app_colors.dart';
 
 const List<String> _defaultZekrList = [
@@ -46,13 +49,29 @@ class _MasbahaScreenState extends State<MasbahaScreen> {
     _state.setText('masbaha_zekr', selectedZekr);
   }
 
+  int _pendingClanTaps = 0;
+  Timer? _clanFlush;
+
+  void _flushClan() {
+    _clanFlush?.cancel();
+    if (_pendingClanTaps > 0) {
+      ClanService.instance.autoContribute(QuestType.tasbeeh, _pendingClanTaps);
+      _pendingClanTaps = 0;
+    }
+  }
+
   @override
   void dispose() {
+    _flushClan();
     newZekrController.dispose();
     super.dispose();
   }
 
   void _handleTap() {
+    if (_state.flag('haptics', fallback: true)) HapticFeedback.selectionClick();
+    _pendingClanTaps++;
+    _clanFlush?.cancel();
+    _clanFlush = Timer(const Duration(seconds: 3), _flushClan);
     setState(() {
       count++;
       animate = true;

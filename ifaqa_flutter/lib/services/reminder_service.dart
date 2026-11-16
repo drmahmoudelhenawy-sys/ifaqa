@@ -61,6 +61,8 @@ class ReminderService {
       s.number('fajr_alarm_offset'),
       s.text('fajr_alarm_sound'),
       s.number('hijri_offset'),
+      s.text('khatma_goal'),
+      s.flag('notif_khatma', fallback: true),
       loc.latitude.toStringAsFixed(2),
       loc.longitude.toStringAsFixed(2),
     ].join('|');

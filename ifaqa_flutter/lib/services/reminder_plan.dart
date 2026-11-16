@@ -1,8 +1,9 @@
+import 'dart:convert';
 import '../models/prayer_time_info.dart';
 import 'app_state.dart';
 import 'islamic_calendar_service.dart';
 
-enum ReminderKind { fajrAlarm, morningAthkar, eveningAthkar, wird, kahf, fastMonThu, fastWhiteDays }
+enum ReminderKind { fajrAlarm, morningAthkar, eveningAthkar, wird, kahf, fastMonThu, fastWhiteDays, khatma }
 
 class PlannedReminder {
   final int id;
@@ -79,6 +80,20 @@ List<PlannedReminder> planReminders(AppState state, DateTime now) {
         time: DateTime(day.year, day.month, day.day, minutes ~/ 60, minutes % 60),
         title: 'وردك اليومي',
         body: 'حان موعد وردك من القرآن.',
+      ));
+    }
+    // Active khatma plan (React khatmaService daily reminder), an hour after the wird time.
+    final khatmaRaw = state.text('khatma_goal');
+    if (khatmaRaw != null && khatmaRaw.isNotEmpty && state.strings('khatma_pages').length < 604 && state.flag('notif_khatma', fallback: true)) {
+      final minutes = state.number('wird_minutes', fallback: 8 * 60) + 60;
+      final goal = jsonDecode(khatmaRaw) as Map<String, dynamic>;
+      final perDay = (604 / ((goal['days'] as num?)?.toInt() ?? 30)).ceil();
+      plans.add(PlannedReminder(
+        id: 800 + d,
+        kind: ReminderKind.khatma,
+        time: DateTime(day.year, day.month, day.day, (minutes ~/ 60) % 24, minutes % 60),
+        title: (goal['title'] as String?) ?? 'الختمة',
+        body: 'حان موعد وردك اليومي من الختمة: $perDay صفحة اليوم.',
       ));
     }
     if (state.flag('notif_kahf_friday') && day.weekday == DateTime.friday) {

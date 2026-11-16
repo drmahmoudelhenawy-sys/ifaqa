@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'offline_store/offline_store.dart';
 
 class HadithCollection {
   final String id;
@@ -24,13 +25,23 @@ class HadithItem {
   const HadithItem({required this.hadithNumber, required this.text, this.bookName});
 }
 
+String hadithUrl(String edition) => 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/$edition.min.json';
+String hadithOfflinePath(String edition) => 'hadith/$edition.json';
+
+/// Reads the downloaded copy first, so downloaded books work offline.
 Future<List<HadithItem>> fetchHadithEdition(String edition) async {
-  final url = 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/$edition.min.json';
-  final response = await http.get(Uri.parse(url));
-  if (response.statusCode != 200) {
-    throw Exception('تعذر تحميل الأحاديث');
+  final local = await OfflineStore.instance.read(hadithOfflinePath(edition));
+  final String body;
+  if (local != null) {
+    body = utf8.decode(local);
+  } else {
+    final response = await http.get(Uri.parse(hadithUrl(edition)));
+    if (response.statusCode != 200) {
+      throw Exception('تعذر تحميل الأحاديث');
+    }
+    body = utf8.decode(response.bodyBytes);
   }
-  final data = jsonDecode(response.body) as Map<String, dynamic>;
+  final data = jsonDecode(body) as Map<String, dynamic>;
   final hadiths = (data['hadiths'] as List?) ?? [];
   return hadiths.map((h) {
     return HadithItem(

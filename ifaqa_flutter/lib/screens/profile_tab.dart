@@ -7,6 +7,7 @@ import '../services/reminder_service.dart';
 import 'auth_screen.dart';
 import '../theme/app_colors.dart';
 import '../widgets/toggle_item.dart';
+import 'admin_panel_screen.dart';
 import 'support_sheet.dart';
 
 class ProfileTab extends StatefulWidget {
@@ -54,6 +55,8 @@ class _ProfileTabState extends State<ProfileTab> {
   set notifMorningAthkar(bool v) => _setReminder('notif_morning_athkar', v);
   bool get notifEveningAthkar => _state.flag('notif_evening_athkar');
   set notifEveningAthkar(bool v) => _setReminder('notif_evening_athkar', v);
+  bool get notifKhatma => _state.flag('notif_khatma', fallback: true);
+  set notifKhatma(bool v) => _setReminder('notif_khatma', v);
 
   void _setReminder(String key, bool on) {
     _state.setFlag(key, on);
@@ -160,6 +163,18 @@ class _ProfileTabState extends State<ProfileTab> {
         const SizedBox(height: 14),
         _buildNotificationsCard(),
         const SizedBox(height: 14),
+        if (CloudService.instance.isAdmin) ...[
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AdminPanelScreen())),
+              style: FilledButton.styleFrom(backgroundColor: AppColors.slate900, padding: const EdgeInsets.symmetric(vertical: 14), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18))),
+              icon: const Icon(Icons.admin_panel_settings, size: 18),
+              label: const Text('لوحة الإدارة', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 12)),
+            ),
+          ),
+          const SizedBox(height: 10),
+        ],
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
@@ -499,6 +514,8 @@ class _ProfileTabState extends State<ProfileTab> {
           ToggleItem(label: 'أذكار الصباح', isOn: notifMorningAthkar, icon: Icons.wb_sunny, onTap: () => setState(() => notifMorningAthkar = !notifMorningAthkar)),
           const SizedBox(height: 8),
           ToggleItem(label: 'أذكار المساء', isOn: notifEveningAthkar, icon: Icons.dark_mode, onTap: () => setState(() => notifEveningAthkar = !notifEveningAthkar)),
+          const SizedBox(height: 8),
+          ToggleItem(label: 'ورد الختمة اليومي (بعد موعد الورد بساعة)', isOn: notifKhatma, icon: Icons.flag, onTap: () => setState(() => notifKhatma = !notifKhatma)),
           const SizedBox(height: 12),
           Container(
             padding: const EdgeInsets.all(14),

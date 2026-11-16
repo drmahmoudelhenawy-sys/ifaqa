@@ -1600,13 +1600,10 @@ class ClanService {
       if (clan.leaderId !== leaderId) throw new Error('فقط قائد الرَّكْب يملك صلاحية قبول الطلبات.');
       if (clan.memberCount >= (clan.maxCapacity || 10)) throw new Error('السعة مكتملة، لا يمكن إضافة أعضاء جدد.');
 
-      const pDoc = await tx.get(profileRef(request.userId));
-      if (pDoc.exists() && pDoc.data()?.clanId && pDoc.data()?.clanId !== clanId) {
-        tx.delete(joinRequestRef(clanId, request.userId));
-        tx.delete(userJoinRequestRef(request.userId));
-        throw new Error('هذا الرفيق انضم إلى رَكْب آخر بالفعل.');
-      }
-
+      // The applicant's profile and their own clanJoinRequest doc are private to
+      // them, so the leader can neither read nor delete them here (doing so made
+      // every acceptance fail). If the applicant already joined another clan, the
+      // rules reject the profile update below and the whole transaction rolls back.
       tx.set(memberRef(clanId, request.userId), {
         name: request.userName || 'رفيق الخير',
         role: 'member',
@@ -1619,7 +1616,6 @@ class ClanService {
       tx.set(profileRef(request.userId), { clanId, clanName: clan.name, clanBadge: clan.badgeIcon }, { merge: true });
 
       tx.delete(joinRequestRef(clanId, request.userId));
-      tx.delete(userJoinRequestRef(request.userId));
     });
 
     this.pushClanActivity(clanId, {

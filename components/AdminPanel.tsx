@@ -523,11 +523,13 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ user, onClose }) => {
                 active: true,
                 isScheduled,
                 scheduledAt: scheduledAtIso,
-                status: isScheduled ? 'pending' : 'sent',
+                // 'pending' either way: the onCreate function skips docs already marked 'sent',
+                // so marking instant announcements 'sent' here meant no push ever went out.
+                status: 'pending',
                 targetTopic,
                 targetPage,
                 timestamp: new Date(),
-                sentAt: isScheduled ? null : new Date().toISOString(),
+                sentAt: null,
                 createdBy: user.email || user.displayName || user.uid
             });
 

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import '../data/challenges_data.dart';
 import '../services/app_state.dart';
 import '../theme/app_colors.dart';
-import '../widgets/coming_soon_tab.dart';
 import 'ameen_wall_tab.dart';
+import 'clans_tab.dart';
+import 'mawan_events_tab.dart';
+import 'prophet_challenge_screen.dart';
 
 enum _ChTab { daily, events, ameen, rooms }
 
@@ -29,6 +31,8 @@ class _ChallengesTabState extends State<ChallengesTab> {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
         children: [
+          _buildProphetBanner(),
+          const SizedBox(height: 14),
           _buildSegmentedTabs(),
           const SizedBox(height: 16),
           _buildTabContent(),
@@ -36,6 +40,40 @@ class _ChallengesTabState extends State<ChallengesTab> {
       ),
     );
   }
+
+  Widget _buildProphetBanner() => InkWell(
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ProphetChallengeScreen())).then((_) {
+          if (mounted) setState(() {});
+        }),
+        borderRadius: BorderRadius.circular(24),
+        child: Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(colors: [AppColors.emerald600, AppColors.teal600]),
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
+                child: const Icon(Icons.workspace_premium, color: AppColors.amber300),
+              ),
+              const SizedBox(width: 12),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('تحدي الصلاة على النبي ﷺ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14)),
+                    Text('سجّل أرقامك وشارك في الهدف الجماعي', style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold, fontSize: 11)),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_left, color: Colors.white),
+            ],
+          ),
+        ),
+      );
 
   Widget _buildSegmentedTabs() {
     final items = [
@@ -81,11 +119,11 @@ class _ChallengesTabState extends State<ChallengesTab> {
       case _ChTab.daily:
         return _buildDailyTab();
       case _ChTab.events:
-        return const ComingSoonTab(icon: Icons.celebration, title: 'فعاليات موعان');
+        return const MawanEventsTab();
       case _ChTab.ameen:
         return const AmeenWallTab();
       case _ChTab.rooms:
-        return const ComingSoonTab(icon: Icons.groups, title: 'غرف الأقران');
+        return const ClansTab();
     }
   }
 

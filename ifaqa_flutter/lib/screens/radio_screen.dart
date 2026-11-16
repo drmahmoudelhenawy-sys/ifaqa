@@ -1,6 +1,7 @@
+import 'package:just_audio/just_audio.dart' show ProcessingState;
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 import '../models/radio_station.dart';
+import '../services/audio_service.dart';
 import '../services/radio_service.dart';
 import '../theme/app_colors.dart';
 
@@ -12,23 +13,20 @@ class RadioScreen extends StatefulWidget {
 }
 
 class _RadioScreenState extends State<RadioScreen> {
-  final AudioPlayer _player = AudioPlayer();
+  final AudioService _audio = AudioService.instance;
   RadioCategory activeCategory = RadioCategory.reciters;
   List<RadioStation> reciterStations = [];
   bool loading = true;
   String query = '';
   RadioStation? currentStation;
-  bool isBuffering = false;
+  bool get isBuffering => _audio.buffering;
   String? error;
 
   @override
   void initState() {
     super.initState();
     _load();
-    _player.playerStateStream.listen((state) {
-      if (!mounted) return;
-      setState(() => isBuffering = state.processingState == ProcessingState.loading || state.processingState == ProcessingState.buffering);
-    });
+    _audio.addListener(_onAudio);
   }
 
   Future<void> _load() async {
@@ -42,8 +40,15 @@ class _RadioScreenState extends State<RadioScreen> {
 
   @override
   void dispose() {
-    _player.dispose();
+    _audio.removeListener(_onAudio);
     super.dispose();
+  }
+
+  void _onAudio() {
+    if (!mounted) return;
+    // Another source took over the shared player.
+    if (currentStation != null && (_audio.now?.title != currentStation!.name)) currentStation = null;
+    setState(() {});
   }
 
   List<RadioStation> get _visibleStations => activeCategory == RadioCategory.live ? liveStations : reciterStations;
@@ -58,27 +63,18 @@ class _RadioScreenState extends State<RadioScreen> {
       currentStation = station;
       error = null;
     });
-    try {
-      await _player.setUrl(station.url);
-      await _player.play();
-    } catch (_) {
-      if (mounted) setState(() => error = 'تعذر تشغيل هذه الإذاعة الآن');
-    }
+    await _audio.playLive(station.name, 'إذاعة القرآن الكريم', station.url);
+    if (mounted && _audio.player.processingState == ProcessingState.idle) setState(() => error = 'تعذر تشغيل هذه الإذاعة الآن');
   }
 
   Future<void> _togglePlay() async {
     if (currentStation == null) return;
-    if (_player.playing) {
-      await _player.pause();
-    } else {
-      await _player.play();
-    }
-    setState(() {});
+    await _audio.toggle();
   }
 
   @override
   Widget build(BuildContext context) {
-    final isPlaying = _player.playing;
+    final isPlaying = _audio.playing;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
