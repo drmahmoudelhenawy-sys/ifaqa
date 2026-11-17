@@ -11,6 +11,7 @@ class OfflineStore {
   Future<Uint8List?> read(String path) async => null;
   Future<void> download(String url, String path, {void Function(double)? onProgress}) async =>
       throw UnsupportedError('التنزيل للاستخدام بدون إنترنت متاح في تطبيق الموبايل فقط.');
+  Future<void> write(String path, Uint8List bytes) async {}
   Future<void> delete(String path) async {}
   Future<List<String>> list(String dir) async => const [];
   Future<int> sizeOf(String dir) async => 0;

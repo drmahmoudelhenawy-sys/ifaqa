@@ -5,13 +5,16 @@ import 'package:flutter/material.dart';
 import '../data/clan_territories.dart';
 import 'app_state.dart';
 import 'cloud_service.dart';
+import 'clan_features.dart';
 
 /// Clans ("الرَّكْب"), on the same Firestore paths and rules as React's
 /// `clanService`. Ported: browsing, create/edit, join (open/passcode/approval/
 /// hybrid), join requests, members, leave/kick/transfer/disband, points with
 /// streak and blessed-time multipliers, territory unlocks, quests, activity
-/// feed and chat. Not ported: twin pacts, joint mega projects, distributed
-/// khatma and Sahar lanterns.
+/// feed and chat, distributed khatma (`features/khatma`), Sahar lanterns
+/// (`features/sahar_<date>`), twin pacts and joint mega projects
+/// (`public/data/clan_twins`). Pure logic for the last three lives in
+/// clan_features.dart.
 enum JoinPolicy { open, passcode, approval, hybrid }
 
 JoinPolicy _policy(Map<String, dynamic> m) {
@@ -74,6 +77,12 @@ class Clan {
   final String passcode;
   final String tag;
   final List<ClanActivity> activities;
+  final String twinStatus; // none | pending_sent | pending_received | active
+  final String? twinPactId;
+  final String? twinClanId;
+  final String? twinClanName;
+  final String? twinClanBadge;
+  final String? twinPendingClanId;
 
   const Clan({
     required this.id,
@@ -93,6 +102,12 @@ class Clan {
     required this.passcode,
     required this.tag,
     required this.activities,
+    this.twinStatus = 'none',
+    this.twinPactId,
+    this.twinClanId,
+    this.twinClanName,
+    this.twinClanBadge,
+    this.twinPendingClanId,
   });
 
   bool get isFull => memberCount >= maxCapacity;
@@ -121,8 +136,16 @@ class Clan {
           .whereType<Map>()
           .map((a) => ClanActivity.fromMap(Map<String, dynamic>.from(a)))
           .toList(),
+      twinStatus: (m['twinStatus'] as String?) ?? 'none',
+      twinPactId: m['twinPactId'] as String?,
+      twinClanId: m['twinClanId'] as String?,
+      twinClanName: m['twinClanName'] as String?,
+      twinClanBadge: m['twinClanBadge'] as String?,
+      twinPendingClanId: m['twinPendingClanId'] as String?,
     );
   }
+
+  Map<String, dynamic> get twinFields => {'twinStatus': twinStatus, 'twinPactId': twinPactId, 'twinClanId': twinClanId, 'twinClanName': twinClanName, 'twinClanBadge': twinClanBadge, 'twinPendingClanId': twinPendingClanId};
 }
 
 class ClanActivity {
@@ -672,6 +695,7 @@ class ClanService {
       if (id == null) return;
       var credited = 0;
       String name = _name;
+      String? twinPact;
       await _db.runTransaction((tx) async {
         final c = await tx.get(clanRef(id));
         final m = await tx.get(_member(id, u.uid));
@@ -679,6 +703,7 @@ class ClanService {
         final clan = Clan.fromDoc(c);
         final member = ClanMember.fromDoc(m);
         name = member.name;
+        twinPact = clan.twinStatus == 'active' ? clan.twinPactId : null;
         final streak = nextStreak(member.streakDays, member.lastActiveDate);
         credited = (points * streakMultiplier(streak) * (activeBlessedTime()?.multiplier ?? 1)).round();
         tx.update(_member(id, u.uid), {
@@ -690,6 +715,10 @@ class ClanService {
         tx.update(clanRef(id), {...pointsUpdate(clan, clan.totalPoints + credited), 'individualPoints': FieldValue.increment(credited)});
       });
       if (credited >= 100) _pushActivity(id, 'ساهم $name بـ $credited نقطة طاعة في مسيرة الرَّكْب');
+      final jointPts = (credited * jointContributionRate).round();
+      if (twinPact != null && jointPts >= 1) {
+        unawaited(contributeToJointProject(twinPact!, id, jointPts, 'طاعات الركب المبارك', name));
+      }
     } catch (e) {
       debugPrint('clan points sync failed: $e');
     }
@@ -760,6 +789,11 @@ class ClanService {
           debugPrint('auto contribute ${q.id}: $e');
         }
       }
+      // وبالأسحار هم يستغفرون: any worship during the Sahar window lights a lantern.
+      if (isSaharActive()) {
+        final action = switch (type) { QuestType.quranPages => 'quran', QuestType.salawat => 'salawat', QuestType.tasbeeh => 'tasbeeh', _ => 'istighfar' };
+        unawaited(_recordSaharPresence(id, u.uid, action));
+      }
       if (type == QuestType.salawat && amount >= 10) {
         _pushActivity(id, 'صلّى $_name على النبي ﷺ $amount مرة في ميزان الرَّكْب');
       } else if (type == QuestType.tasbeeh && amount >= 33) {
@@ -772,7 +806,7 @@ class ClanService {
     }
   }
 
-  Future<void> _pushActivity(String clanId, String message) async {
+  Future<void> _pushActivity(String clanId, String message, {String actionType = 'check_in', String icon = 'icon:sparkles'}) async {
     final u = CloudService.instance.user;
     if (u == null) return;
     try {
@@ -784,14 +818,302 @@ class ClanService {
         'clanId': clanId,
         'userId': u.uid,
         'userName': _name,
-        'actionType': 'check_in',
+        'actionType': actionType,
         'message': message,
-        'icon': 'icon:sparkles',
+        'icon': icon,
         'timestamp': DateTime.now().millisecondsSinceEpoch,
       };
       await clanRef(clanId).update({'recentActivities': [item, ...current].take(30).toList()});
     } catch (e) {
       debugPrint('clan activity failed: $e');
+    }
+  }
+
+  // ---- Distributed khatma (clans/{id}/features/khatma) ----
+
+  DocumentReference<Map<String, dynamic>> _khatmaRef(String clanId) => clanRef(clanId).collection('features').doc('khatma');
+
+  /// Shows a fresh khatma until the first claim creates the document (React
+  /// created it on subscribe, which let two members race to overwrite it).
+  Stream<ClanKhatma> khatma(String clanId) =>
+      _khatmaRef(clanId).snapshots().map((s) => s.exists ? ClanKhatma.fromMap(s.data()!) : ClanKhatma.initial());
+
+  Future<void> claimJuz(String clanId, int juz) async {
+    final uid = _uid;
+    final name = _name;
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(_khatmaRef(clanId));
+      final k = snap.exists ? ClanKhatma.fromMap(snap.data()!) : ClanKhatma.initial();
+      final err = claimKhatmaSlot(k, uid, name, juz);
+      if (err != null) throw ClanException(err);
+      tx.set(_khatmaRef(clanId), k.toMap(), SetOptions(merge: true));
+    });
+  }
+
+  Future<void> releaseJuz(String clanId, int juz) async {
+    final uid = _uid;
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(_khatmaRef(clanId));
+      if (!snap.exists) return;
+      final k = ClanKhatma.fromMap(snap.data()!);
+      final err = releaseKhatmaSlot(k, uid, juz);
+      if (err != null) throw ClanException(err);
+      tx.set(_khatmaRef(clanId), k.toMap(), SetOptions(merge: true));
+    });
+  }
+
+  /// Anyone can open the next khatma once the current one is complete.
+  Future<void> startNextKhatma(String clanId) async {
+    if (_uid.isEmpty) return;
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(_khatmaRef(clanId));
+      final k = snap.exists ? ClanKhatma.fromMap(snap.data()!) : ClanKhatma.initial();
+      if (!k.isCompleted) throw ClanException('الختمة الحالية لم تكتمل بعد.');
+      tx.set(_khatmaRef(clanId), ClanKhatma.initial(k.khatmaNumber + 1).toMap());
+    });
+  }
+
+  String? _khatmaClanId;
+  DateTime _khatmaClanAt = DateTime.fromMillisecondsSinceEpoch(0);
+
+  /// Called when a Mushaf page is counted as read. Counts it toward the juz
+  /// this user claimed in the clan's shared khatma; silent when there is none.
+  Future<void> onKhatmaPageRead(int page) async {
+    final u = CloudService.instance.user;
+    if (u == null) return;
+    try {
+      if (_khatmaClanId == null || DateTime.now().difference(_khatmaClanAt) > const Duration(minutes: 2)) {
+        _khatmaClanId = await _currentClanId(u.uid);
+        _khatmaClanAt = DateTime.now();
+      }
+      final id = _khatmaClanId;
+      if (id == null) return;
+      KhatmaPageResult? result;
+      String claimer = _name;
+      await _db.runTransaction((tx) async {
+        final snap = await tx.get(_khatmaRef(id));
+        if (!snap.exists) return;
+        final k = ClanKhatma.fromMap(snap.data()!);
+        final r = recordKhatmaPage(k, u.uid, page);
+        if (!r.changed) return;
+        final c = await tx.get(clanRef(id));
+        final m = await tx.get(_member(id, u.uid));
+        tx.set(_khatmaRef(id), k.toMap(), SetOptions(merge: true));
+        result = r;
+        claimer = k.slots[r.juzNumber]?.claimedByName ?? claimer;
+        if ((r.juzCompleted || r.khatmaCompleted) && c.exists) {
+          final clan = Clan.fromDoc(c);
+          final gain = (r.juzCompleted ? khatmaJuzClanPoints : 0) + (r.khatmaCompleted ? khatmaCompleteClanBonus : 0);
+          if (r.juzCompleted && m.exists) tx.update(_member(id, u.uid), {'contributedPoints': FieldValue.increment(khatmaJuzMemberPoints)});
+          tx.update(clanRef(id), {
+            ...pointsUpdate(clan, clan.totalPoints + gain),
+            if (r.juzCompleted) 'individualPoints': FieldValue.increment(khatmaJuzMemberPoints),
+            if (r.khatmaCompleted) 'questBonusPoints': FieldValue.increment(khatmaCompleteClanBonus),
+          });
+        }
+      });
+      final r = result;
+      if (r != null && r.juzCompleted) {
+        final meta = quranJuzs[r.juzNumber - 1];
+        _pushActivity(id, 'أتم $claimer قراءة الجزء ${r.juzNumber} (${meta.name}) كاملاً من الختمة التشاركية المباركة', actionType: 'khatma_juz', icon: 'icon:book');
+      }
+    } catch (e) {
+      debugPrint('khatma page record failed: $e');
+    }
+  }
+
+  // ---- Sahar lanterns (clans/{id}/features/sahar_<yyyy-mm-dd>) ----
+
+  DocumentReference<Map<String, dynamic>> _saharRef(String clanId, String dateKey) => clanRef(clanId).collection('features').doc('sahar_$dateKey');
+
+  Stream<List<SaharLantern>> saharLanterns(String clanId, [String? dateKey]) =>
+      _saharRef(clanId, dateKey ?? saharDateKey()).snapshots().map((s) => ((s.data()?['lanterns'] as List?) ?? const [])
+          .whereType<Map>()
+          .map((e) => SaharLantern.fromMap(Map<String, dynamic>.from(e)))
+          .toList());
+
+  /// Manual lantern (istighfar) from the UI; throws outside the window.
+  Future<void> lightSaharLantern(String clanId, {String action = 'istighfar'}) async {
+    final uid = _uid;
+    if (!isSaharActive()) throw ClanException('محراب الأسحار يفتح في الثلث الأخير من الليل، من 3:30 إلى 5:00 فجراً.');
+    await _writeLantern(clanId, uid, action, throttle: false);
+  }
+
+  Future<void> _recordSaharPresence(String clanId, String uid, String action) async {
+    try {
+      await _writeLantern(clanId, uid, action, throttle: true);
+    } catch (e) {
+      debugPrint('sahar presence failed: $e');
+    }
+  }
+
+  Future<void> _writeLantern(String clanId, String uid, String action, {required bool throttle}) async {
+    final name = _name;
+    final ref = _saharRef(clanId, saharDateKey());
+    final now = DateTime.now().millisecondsSinceEpoch;
+    var isNew = false;
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(ref);
+      final data = snap.data() ?? <String, dynamic>{};
+      final lanterns = ((data['lanterns'] as List?) ?? const []).whereType<Map>().map((e) => SaharLantern.fromMap(Map<String, dynamic>.from(e))).toList();
+      final existing = lanterns.where((l) => l.userId == uid).toList();
+      // Counting pages or dhikr fires often; refresh a lantern at most every 5 minutes.
+      if (throttle && existing.isNotEmpty && now - existing.first.litAt < 300000) return;
+      isNew = upsertLantern(lanterns, SaharLantern(uid, name, action, now));
+      tx.set(ref, {'date': saharDateKey(), 'lanterns': lanterns.map((l) => l.toMap()).toList(), 'speedUpGranted': data['speedUpGranted'] == true}, SetOptions(merge: true));
+    });
+    if (isNew) {
+      _pushActivity(clanId, 'شهد $name نفحة السحر ${saharActionLabel(action)} (مضاعفة أجور الأسحار نشطة)', actionType: 'sahar_lantern', icon: 'icon:moon');
+    }
+  }
+
+  // ---- Twin pacts (public/data/clan_twins) ----
+  //
+  // React's flow wrote the OTHER clan's document (twinStatus, twinPactId, ...)
+  // from the acting leader. firestore.rules only lets a clan's own members,
+  // its leader or an admin update a clan, so those writes were denied for a
+  // leader of the other clan and the flow failed midway. Here each leader
+  // writes only the pact document (open to any signed-in user) and their own
+  // clan; the other clan's fields are reconciled by its own members through
+  // [syncTwinFields].
+
+  CollectionReference<Map<String, dynamic>> get _twins => _db.collection('$_base/public/data/clan_twins');
+
+  /// Every pact that involves [clanId] (as clan1 or clan2). Emits only after
+  /// both underlying queries have answered, so a half-loaded list is never
+  /// mistaken for "no pact".
+  Stream<List<TwinPact>> twinPacts(String clanId) {
+    late StreamController<List<TwinPact>> ctl;
+    final subs = <StreamSubscription>[];
+    List<TwinPact>? a, b;
+    void emit() {
+      if (a == null || b == null || ctl.isClosed) return;
+      ctl.add({for (final p in [...a!, ...b!]) p.id: p}.values.toList());
+    }
+
+    List<TwinPact> parse(QuerySnapshot<Map<String, dynamic>> s) => s.docs.map((d) => TwinPact.fromMap(d.id, d.data())).toList();
+    ctl = StreamController<List<TwinPact>>(
+      onListen: () {
+        subs.add(_twins.where('clan1Id', isEqualTo: clanId).snapshots().listen((s) {
+          a = parse(s);
+          emit();
+        }, onError: ctl.addError));
+        subs.add(_twins.where('clan2Id', isEqualTo: clanId).snapshots().listen((s) {
+          b = parse(s);
+          emit();
+        }, onError: ctl.addError));
+      },
+      onCancel: () async {
+        for (final s in subs) {
+          await s.cancel();
+        }
+      },
+    );
+    return ctl.stream;
+  }
+
+  Future<List<TwinPact>> _pactsOnce(String clanId) async {
+    final r = await Future.wait([_twins.where('clan1Id', isEqualTo: clanId).get(), _twins.where('clan2Id', isEqualTo: clanId).get()]);
+    return {for (final s in r) for (final d in s.docs) d.id: TwinPact.fromMap(d.id, d.data())}.values.toList();
+  }
+
+  Future<Clan> _leaderClan(String clanId) async {
+    final uid = _uid;
+    final snap = await clanRef(clanId).get();
+    if (!snap.exists) throw ClanException('الرَّكْب غير موجود.');
+    final clan = Clan.fromDoc(snap);
+    if (clan.leaderId != uid) throw ClanException('المؤاخاة من صلاحيات قائد الرَّكْب فقط.');
+    return clan;
+  }
+
+  /// Writes this clan's own `twin*` fields from the pacts (members only).
+  Future<void> syncTwinFields(Clan clan, List<TwinPact> pacts) async {
+    final want = desiredTwinFields(clan.id, pacts);
+    if (!twinFieldsDiffer(clan.twinFields, want)) return;
+    try {
+      await clanRef(clan.id).update({...want, 'updatedAt': FieldValue.serverTimestamp()});
+    } catch (e) {
+      debugPrint('twin sync failed: $e');
+    }
+  }
+
+  Future<void> _syncOwn(String clanId) async {
+    final snap = await clanRef(clanId).get();
+    if (!snap.exists) return;
+    await syncTwinFields(Clan.fromDoc(snap), await _pactsOnce(clanId));
+  }
+
+  /// Leader of [myClanId] proposes a twin pact and joint project to [target].
+  Future<String> sendTwinRequest(String myClanId, Clan target, String projectId) async {
+    final me = await _leaderClan(myClanId);
+    if (target.id == me.id) throw ClanException('لا يمكن مؤاخاة الرَّكْب مع نفسه!');
+    final mine = await _pactsOnce(me.id);
+    if (mine.any((p) => p.isActive)) throw ClanException('رَكْبكم مرتبط بالفعل بميثاق مؤاخاة نشط.');
+    if (mine.any((p) => p.isPending && p.sentBy(me.id))) throw ClanException('لديكم طلب مؤاخاة معلّق؛ ألغوه أولاً لإرسال طلب آخر.');
+    final theirs = await _pactsOnce(target.id);
+    if (theirs.any((p) => p.isActive)) throw ClanException('الرَّكْب المطلوب مرتبط بالفعل بميثاق مؤاخاة مع قافلة أخرى.');
+    final pactId = pactIdFor(me.id, target.id);
+    if ((await _twins.doc(pactId).get()).exists) throw ClanException('يوجد بالفعل طلب أو ميثاق بين الرَّكْبَيْن.');
+    final template = jointMegaProjects.firstWhere((p) => p.id == projectId, orElse: () => jointMegaProjects.first);
+    await _twins.doc(pactId).set(newPactMap(
+          pactId: pactId,
+          myId: me.id,
+          myName: me.name,
+          myBadge: me.badgeIcon,
+          otherId: target.id,
+          otherName: target.name,
+          otherBadge: target.badgeIcon,
+          template: template,
+          nowMs: DateTime.now().millisecondsSinceEpoch,
+        ));
+    await _syncOwn(me.id);
+    return 'تم إرسال طلب المؤاخاة وبناء «${template.name}» إلى «${target.name}» بنجاح';
+  }
+
+  /// Leader of the receiving clan accepts or declines a pending pact.
+  Future<String> respondToTwinRequest(TwinPact pact, String myClanId, bool accept) async {
+    final me = await _leaderClan(myClanId);
+    final fresh = await _twins.doc(pact.id).get();
+    if (!fresh.exists) throw ClanException('طلب المؤاخاة غير موجود أو تم إلغاؤه.');
+    final p = TwinPact.fromMap(fresh.id, fresh.data()!);
+    if (!p.isPending || !p.involves(me.id) || p.sentBy(me.id)) throw ClanException('لا يمكن البتّ في هذا الطلب.');
+    if (!accept) {
+      await _twins.doc(p.id).delete();
+      await _syncOwn(me.id);
+      return 'تم الاعتذار عن طلب المؤاخاة بلطف.';
+    }
+    if ((await _pactsOnce(me.id)).any((x) => x.isActive)) throw ClanException('رَكْبكم مرتبط بالفعل بميثاق مؤاخاة نشط.');
+    if ((await _pactsOnce(p.otherId(me.id))).any((x) => x.isActive)) throw ClanException('الرَّكْب الآخر ارتبط بميثاق مؤاخاة مع قافلة أخرى.');
+    await _twins.doc(p.id).update({'status': 'active', 'acceptedAt': DateTime.now().millisecondsSinceEpoch});
+    await _syncOwn(me.id);
+    return 'تم عقد ميثاق المؤاخاة المبارك وتدشين «${p.project.name}» على الخريطة!';
+  }
+
+  /// Leader withdraws a pending request or ends an active pact.
+  Future<String> cancelTwinPact(TwinPact pact, String myClanId) async {
+    final me = await _leaderClan(myClanId);
+    if (!pact.involves(me.id)) throw ClanException('هذا الميثاق لا يخص رَكْبكم.');
+    await _twins.doc(pact.id).delete();
+    await _syncOwn(me.id);
+    return pact.isActive ? 'تم فك ميثاق المؤاخاة بسلام.' : 'تم إلغاء الطلب.';
+  }
+
+  /// Adds [points] to the joint project for [clanId] (no-op if the pact is
+  /// gone, not active, or the clan is not part of it).
+  Future<void> contributeToJointProject(String pactId, String clanId, int points, String worshipType, String userName) async {
+    final uid = CloudService.instance.user?.uid;
+    if (uid == null) return;
+    try {
+      await _db.runTransaction((tx) async {
+        final ref = _twins.doc(pactId);
+        final snap = await tx.get(ref);
+        if (!snap.exists) return;
+        final upd = applyJointContribution(snap.data()!,
+            clanId: clanId, userId: uid, userName: userName, points: points, worshipType: worshipType, nowMs: DateTime.now().millisecondsSinceEpoch);
+        if (upd != null) tx.update(ref, upd);
+      });
+    } catch (e) {
+      debugPrint('joint project contribution failed: $e');
     }
   }
 

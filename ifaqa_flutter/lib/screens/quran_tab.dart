@@ -114,7 +114,7 @@ class _QuranTabState extends State<QuranTab> {
           ]),
           const SizedBox(height: 14),
           SizedBox(
-            height: 70,
+            height: 84,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: days.map((d) {

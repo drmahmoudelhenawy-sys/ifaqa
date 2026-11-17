@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../data/surahs_data.dart';
 import '../models/surah_info.dart';
 import '../services/app_state.dart';
+import '../services/ayah_tools_service.dart';
 import '../services/mushaf_service.dart';
 import '../services/quran_progress_service.dart';
 import '../services/quran_search_service.dart';
@@ -95,25 +96,28 @@ class _PageTafsirSheetState extends State<_PageTafsirSheet> {
                             subtitle: Text('${quranSurahs[a.surah - 1].name} · آية ${a.ayah}', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400)),
                             childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
                             children: [
-                              FutureBuilder<String>(
-                                future: _tafsirFor(a),
-                                builder: (context, t) {
-                                  if (t.hasError) return const Text('تعذر تحميل التفسير.', style: TextStyle(color: AppColors.rose500));
-                                  if (!t.hasData) return const LinearProgressIndicator(color: AppColors.emerald500);
-                                  return Column(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
-                                      SelectableText(t.data!, style: const TextStyle(fontSize: 14, height: 1.9, fontWeight: FontWeight.w600, color: AppColors.slate700)),
-                                      Align(
-                                        alignment: AlignmentDirectional.centerEnd,
-                                        child: IconButton(
-                                          icon: const Icon(Icons.copy, size: 18, color: AppColors.slate400),
-                                          onPressed: () => Clipboard.setData(ClipboardData(text: '${a.text}\n\n${tafsirEditions[edition]}: ${t.data!}')),
+                              _AyahTools(
+                                ayah: a,
+                                tafsir: FutureBuilder<String>(
+                                  future: _tafsirFor(a),
+                                  builder: (context, t) {
+                                    if (t.hasError) return const Text('تعذر تحميل التفسير.', style: TextStyle(color: AppColors.rose500));
+                                    if (!t.hasData) return const LinearProgressIndicator(color: AppColors.emerald500);
+                                    return Column(
+                                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                                      children: [
+                                        SelectableText(t.data!, style: const TextStyle(fontSize: 14, height: 1.9, fontWeight: FontWeight.w600, color: AppColors.slate700)),
+                                        Align(
+                                          alignment: AlignmentDirectional.centerEnd,
+                                          child: IconButton(
+                                            icon: const Icon(Icons.copy, size: 18, color: AppColors.slate400),
+                                            onPressed: () => Clipboard.setData(ClipboardData(text: '${a.text}\n\n${tafsirEditions[edition]}: ${t.data!}')),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  );
-                                },
+                                      ],
+                                    );
+                                  },
+                                ),
                               ),
                             ],
                           ),
@@ -430,3 +434,86 @@ class _MushafPageState extends State<_MushafPage> {
 }
 
 String _arabicDigits(int n) => n.toString().split('').map((d) => '٠١٢٣٤٥٦٧٨٩'[int.parse(d)]).join();
+
+enum _AyahTool { tafsir, irab, meanings, similar }
+
+/// Tafsir, i'rab, word meanings and mutashabihat for one ayah.
+class _AyahTools extends StatefulWidget {
+  final PageAyah ayah;
+  final Widget tafsir;
+  const _AyahTools({required this.ayah, required this.tafsir});
+
+  @override
+  State<_AyahTools> createState() => _AyahToolsState();
+}
+
+class _AyahToolsState extends State<_AyahTools> {
+  _AyahTool tool = _AyahTool.tafsir;
+  final _svc = AyahToolsService.instance;
+  late final Future<List<AyahWord>> _irab = _svc.irab(widget.ayah.surah, widget.ayah.ayah);
+  late final Future<List<AyahWord>> _meanings = _svc.meanings(widget.ayah.surah, widget.ayah.ayah);
+  late final Future<List<SimilarAyah>> _similar = _svc.mutashabihat(widget.ayah.surah, widget.ayah.ayah);
+
+  static const _labels = {_AyahTool.tafsir: 'التفسير', _AyahTool.irab: 'الإعراب', _AyahTool.meanings: 'المعاني', _AyahTool.similar: 'المتشابهات'};
+
+  Widget _future<T>(Future<List<T>> f, String empty, Widget Function(T) row) => FutureBuilder<List<T>>(
+        future: f,
+        builder: (context, s) {
+          if (s.hasError) return const Text('تعذر التحميل، تحقق من الاتصال.', style: TextStyle(color: AppColors.rose500));
+          if (!s.hasData) return const LinearProgressIndicator(color: AppColors.emerald500);
+          if (s.data!.isEmpty) return Text(empty, style: const TextStyle(color: AppColors.slate400, fontWeight: FontWeight.bold));
+          return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: s.data!.map(row).toList());
+        },
+      );
+
+  Widget _wordRow(String word, String body, {String? note}) => Container(
+        margin: const EdgeInsets.only(bottom: 6),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              Text(word, style: const TextStyle(fontFamily: 'Amiri', fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.emerald700)),
+              if (note != null && note.isNotEmpty) ...[
+                const SizedBox(width: 8),
+                Text('الجذر: $note', style: const TextStyle(fontSize: 10, color: AppColors.slate400, fontWeight: FontWeight.bold)),
+              ],
+            ]),
+            Text(body, style: const TextStyle(fontSize: 13, height: 1.7, fontWeight: FontWeight.w600, color: AppColors.slate700)),
+          ],
+        ),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Wrap(
+          spacing: 6,
+          children: _AyahTool.values
+              .map((t) => ChoiceChip(
+                    label: Text(_labels[t]!, style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: tool == t ? Colors.white : AppColors.slate600)),
+                    selected: tool == t,
+                    showCheckmark: false,
+                    selectedColor: AppColors.emerald600,
+                    onSelected: (_) => setState(() => tool = t),
+                  ))
+              .toList(),
+        ),
+        const SizedBox(height: 8),
+        switch (tool) {
+          _AyahTool.tafsir => widget.tafsir,
+          _AyahTool.irab => _future<AyahWord>(_irab, 'لا يتوفر إعراب لهذه الآية.', (w) => _wordRow(w.text, w.irab.isEmpty ? '—' : w.irab, note: w.root)),
+          _AyahTool.meanings => _future<AyahWord>(_meanings, 'لا توجد كلمات غريبة في هذه الآية.', (w) => _wordRow(w.text.isEmpty ? '•' : w.text, w.meaning)),
+          _AyahTool.similar => _future<SimilarAyah>(
+              _similar,
+              'لا توجد آيات متشابهة مع هذه الآية.',
+              (s) => _wordRow('${s.surahName} ${_arabicDigits(s.ayah)}', s.text, note: null),
+            ),
+        },
+      ],
+    );
+  }
+}

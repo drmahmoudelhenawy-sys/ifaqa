@@ -3,8 +3,12 @@ import '../data/surahs_data.dart';
 import '../models/reciter.dart';
 import '../services/audio_service.dart';
 import '../services/offline_store/offline_store.dart';
+import '../services/playlists_service.dart';
 import '../services/reciter_service.dart';
 import '../theme/app_colors.dart';
+import '../widgets/playlists_view.dart';
+import '../widgets/reciter_photo.dart';
+import '../services/reciter_photo_service.dart';
 
 class QuranAudioHubTab extends StatefulWidget {
   const QuranAudioHubTab({super.key});
@@ -20,6 +24,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
   String? error;
   String query = '';
   Reciter? selectedReciter;
+  bool showPlaylists = false;
   int? get currentSurah => _audio.now?.reciter?.id == selectedReciter?.id ? _audio.now?.surah : null;
   bool get isBuffering => _audio.buffering;
 
@@ -47,6 +52,8 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
     });
     try {
       final result = await fetchReciters();
+      ReciterPhotoService.instance.start();
+      ReciterPhotoService.instance.registerReciters(result);
       if (!mounted) return;
       setState(() {
         reciters = result;
@@ -73,7 +80,11 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: selectedReciter == null ? _buildRecitersList() : _buildSurahsList(),
+      child: showPlaylists
+          ? PlaylistsView(onBack: () => setState(() => showPlaylists = false))
+          : selectedReciter == null
+              ? _buildRecitersList()
+              : _buildSurahsList(),
     );
   }
 
@@ -116,6 +127,27 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
     );
   }
 
+  Widget _buildPlaylistsEntry() {
+    final n = PlaylistsService.instance.playlists.length;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+      child: InkWell(
+        onTap: () => setState(() => showPlaylists = true),
+        borderRadius: BorderRadius.circular(18),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
+          decoration: BoxDecoration(color: const Color(0xFFF5F3FF), borderRadius: BorderRadius.circular(18), border: Border.all(color: const Color(0xFFDDD6FE))),
+          child: Row(children: [
+            const Icon(Icons.queue_music, color: AppColors.violet600, size: 20),
+            const SizedBox(width: 10),
+            Expanded(child: Text('قوائمي ($n)', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: AppColors.violet700))),
+            const Icon(Icons.chevron_left, color: AppColors.slate300),
+          ]),
+        ),
+      ),
+    );
+  }
+
   Widget _buildRecitersList() {
     final filtered = (reciters ?? []).where((r) => query.trim().isEmpty || r.name.contains(query)).toList();
     return Column(
@@ -144,6 +176,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
           ),
         ),
         _buildListenSummary(),
+        _buildPlaylistsEntry(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
@@ -194,13 +227,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
                               decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20), border: Border.all(color: AppColors.slate100)),
                               child: Row(
                                 children: [
-                                  Container(
-                                    width: 42,
-                                    height: 42,
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(color: const Color(0xFFEEF2FF), borderRadius: BorderRadius.circular(14)),
-                                    child: const Icon(Icons.person, color: AppColors.indigo600, size: 20),
-                                  ),
+                                  ReciterPhoto(reciterId: r.id),
                                   const SizedBox(width: 12),
                                   Expanded(
                                     child: Column(
@@ -288,6 +315,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: InkWell(
                   onTap: () => _playSurah(s.number),
+                  onLongPress: () => showAddToPlaylistSheet(context, reciter, s.number),
                   borderRadius: BorderRadius.circular(16),
                   child: Container(
                     padding: const EdgeInsets.all(12),
@@ -307,6 +335,11 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
                         ),
                         const SizedBox(width: 10),
                         Expanded(child: Text('سورة ${s.name}', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: isCurrent ? AppColors.violet700 : AppColors.slate700))),
+                        InkWell(
+                          onTap: () => showAddToPlaylistSheet(context, reciter, s.number),
+                          customBorder: const CircleBorder(),
+                          child: const Padding(padding: EdgeInsets.all(8), child: Icon(Icons.playlist_add, color: AppColors.slate400, size: 20)),
+                        ),
                         if (OfflineStore.supported) _DownloadButton(reciter: reciter, surah: s.number),
                         Icon(isCurrent && isPlaying ? Icons.pause_circle : Icons.play_circle, color: isCurrent ? AppColors.violet600 : AppColors.slate300, size: 22),
                       ],

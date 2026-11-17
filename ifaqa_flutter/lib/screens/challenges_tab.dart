@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../data/challenges_data.dart';
 import '../services/app_state.dart';
+import '../services/challenges_service.dart';
 import '../theme/app_colors.dart';
 import 'ameen_wall_tab.dart';
 import 'clans_tab.dart';
@@ -19,9 +21,26 @@ class ChallengesTab extends StatefulWidget {
 class _ChallengesTabState extends State<ChallengesTab> {
   _ChTab activeTab = _ChTab.daily;
   final AppState _state = AppState.instance;
+  List<ChallengeItem> _challenges = ChallengesService.instance.latest;
+  StreamSubscription<List<ChallengeItem>>? _sub;
 
-  int get completedCount => allChallenges.where((c) => _state.dayHas(DateTime.now(), 'challenges', c.id)).length;
-  int get totalChallenges => allChallenges.length;
+  @override
+  void initState() {
+    super.initState();
+    _sub = ChallengesService.instance.stream().listen((l) {
+      if (mounted) setState(() => _challenges = l);
+    });
+  }
+
+  @override
+  void dispose() {
+    _sub?.cancel();
+    super.dispose();
+  }
+
+
+  int get completedCount => _challenges.where((c) => _state.dayHas(DateTime.now(), 'challenges', c.id)).length;
+  int get totalChallenges => _challenges.length;
   int get progress => totalChallenges == 0 ? 0 : (completedCount / totalChallenges * 100).round();
 
   @override
@@ -176,7 +195,7 @@ class _ChallengesTabState extends State<ChallengesTab> {
           ),
         ),
         const SizedBox(height: 14),
-        ...allChallenges.map((c) {
+        ..._challenges.map((c) {
           final isDone = _state.dayHas(DateTime.now(), 'challenges', c.id);
           return Padding(
             padding: const EdgeInsets.only(bottom: 10),

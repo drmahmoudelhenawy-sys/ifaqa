@@ -38,6 +38,29 @@ void main() {
     expect(plans.map((p) => p.id).toSet().length, planDays);
   });
 
+  test('fixed mode schedules at the fixed time every day', () {
+    state.setFlag('fajr_alarm', true);
+    state.setText(fajrModeKey, 'fixed');
+    state.setNumber(fajrFixedKey, 4 * 60 + 15);
+    final plans = planReminders(state, now);
+    expect(plans.length, planDays);
+    expect(plans.every((p) => p.time.hour == 4 && p.time.minute == 15), isTrue);
+    expect(plans.map((p) => p.time.day).toSet().length, planDays);
+    state.setText(fajrModeKey, 'relative');
+  });
+
+  test('theme changes the Fajr alarm wording; relative mode unchanged', () {
+    state.setFlag('fajr_alarm', true);
+    state.setText(fajrModeKey, 'relative');
+    state.setNumber('fajr_alarm_offset', 10);
+    state.setText(fajrThemeKey, 'midnight');
+    final p = planReminders(state, now).first;
+    expect(p.title, fajrThemeById('midnight').title);
+    expect(p.body, 'بقي 10 دقيقة على أذان الفجر');
+    expect(p.time, prayerTimesOn(state.location, now).fajr.subtract(const Duration(minutes: 10)));
+    state.setText(fajrThemeKey, 'emerald');
+  });
+
   test('past times are dropped', () {
     state.setFlag('fajr_alarm', true);
     final afterFajr = DateTime(2026, 11, 5, 12);

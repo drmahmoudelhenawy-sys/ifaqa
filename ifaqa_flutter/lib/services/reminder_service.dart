@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:ui' show Color;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
@@ -25,6 +27,8 @@ class ReminderService {
       tz.setLocalLocation(tz.getLocation(zone.identifier));
       await _plugin.initialize(
         settings: const InitializationSettings(android: AndroidInitializationSettings('@mipmap/ic_launcher')),
+        onDidReceiveNotificationResponse: handleReminderResponse,
+        onDidReceiveBackgroundNotificationResponse: reminderBackgroundHandler,
       );
       _ready = true;
       _lastSignature = _signature();
@@ -60,6 +64,9 @@ class ReminderService {
       s.number('wird_minutes', fallback: 8 * 60),
       s.number('fajr_alarm_offset'),
       s.text('fajr_alarm_sound'),
+      s.text(fajrModeKey),
+      s.number(fajrFixedKey, fallback: fajrFixedDefault),
+      s.text(fajrThemeKey),
       s.number('hijri_offset'),
       s.text('khatma_goal'),
       s.flag('notif_khatma', fallback: true),
@@ -78,7 +85,10 @@ class ReminderService {
   Future<void> reschedule() async {
     if (!_ready) return;
     try {
-      await _plugin.cancelAll();
+      // Pending snoozes (ids 900+) are left alone; only the planned range is rebuilt.
+      for (final pending in await _plugin.pendingNotificationRequests()) {
+        if (pending.id < snoozeIdBase) await _plugin.cancel(id: pending.id);
+      }
       final android = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
       final exact = await android?.canScheduleExactNotifications() ?? false;
       for (final plan in planReminders(AppState.instance, DateTime.now())) {
@@ -88,6 +98,7 @@ class ReminderService {
           body: plan.body,
           scheduledDate: tz.TZDateTime.from(plan.time, tz.local),
           notificationDetails: NotificationDetails(android: _details(plan.kind)),
+          payload: _payload(plan),
           androidScheduleMode: exact ? AndroidScheduleMode.exactAllowWhileIdle : AndroidScheduleMode.inexactAllowWhileIdle,
         );
       }
@@ -97,29 +108,104 @@ class ReminderService {
   }
 
   AndroidNotificationDetails _details(ReminderKind kind) {
-    if (kind != ReminderKind.fajrAlarm) {
-      return const AndroidNotificationDetails(
-        'ifaqa_reminders',
-        'التذكيرات',
-        channelDescription: 'الأذكار والورد والصيام وسورة الكهف',
-        importance: Importance.high,
-        priority: Priority.high,
-      );
-    }
-    // A channel's sound is fixed once created, so each sound gets its own channel.
-    final soundId = AppState.instance.text('fajr_alarm_sound') ?? 'cairo';
-    final custom = soundId != 'system';
-    return AndroidNotificationDetails(
-      'fajr_alarm_$soundId',
-      'منبّه الفجر',
-      channelDescription: 'يوقظك لصلاة الفجر',
-      importance: Importance.max,
-      priority: Priority.max,
-      category: AndroidNotificationCategory.alarm,
-      audioAttributesUsage: AudioAttributesUsage.alarm,
-      sound: custom ? RawResourceAndroidNotificationSound('adhan_$soundId') : null,
-      // FLAG_INSISTENT: keep sounding until the user opens or dismisses it.
-      additionalFlags: Int32List.fromList([4]),
+    final fajr = kind == ReminderKind.fajrAlarm;
+    return buildReminderDetails(
+      fajr: fajr,
+      soundId: AppState.instance.text('fajr_alarm_sound') ?? 'cairo',
+      accent: fajr ? fajrThemeById(AppState.instance.text(fajrThemeKey)).accent : null,
     );
   }
+
+  /// What a snooze needs to recreate the notification; read back by the action handler.
+  String _payload(PlannedReminder plan) {
+    final fajr = plan.kind == ReminderKind.fajrAlarm;
+    return jsonEncode({
+      'id': plan.id,
+      'title': plan.title,
+      'body': plan.body,
+      'fajr': fajr,
+      'sound': AppState.instance.text('fajr_alarm_sound') ?? 'cairo',
+      'accent': fajr ? fajrThemeById(AppState.instance.text(fajrThemeKey)).accent : null,
+    });
+  }
 }
+
+const String snoozeActionId = 'snooze';
+const int snoozeIdBase = 900;
+const int snoozeMinutes = 10;
+const int fajrSnoozeMinutes = 5;
+
+/// Notification details shared by scheduled reminders and snoozed copies.
+/// Self-contained (no AppState) so the background isolate can use it.
+AndroidNotificationDetails buildReminderDetails({required bool fajr, required String soundId, int? accent}) {
+  final minutes = fajr ? fajrSnoozeMinutes : snoozeMinutes;
+  final actions = <AndroidNotificationAction>[
+    AndroidNotificationAction(snoozeActionId, 'أجّلني ${_arabicDigits(minutes)} دقائق', cancelNotification: true),
+  ];
+  if (!fajr) {
+    return AndroidNotificationDetails(
+      'ifaqa_reminders',
+      'التذكيرات',
+      channelDescription: 'الأذكار والورد والصيام وسورة الكهف',
+      importance: Importance.high,
+      priority: Priority.high,
+      actions: actions,
+    );
+  }
+  // A channel's sound is fixed once created, so each sound gets its own channel.
+  final custom = soundId != 'system';
+  return AndroidNotificationDetails(
+    'fajr_alarm_$soundId',
+    'منبّه الفجر',
+    channelDescription: 'يوقظك لصلاة الفجر',
+    importance: Importance.max,
+    priority: Priority.max,
+    category: AndroidNotificationCategory.alarm,
+    audioAttributesUsage: AudioAttributesUsage.alarm,
+    sound: custom ? RawResourceAndroidNotificationSound('adhan_$soundId') : null,
+    color: accent == null ? null : Color(accent),
+    actions: actions,
+    // FLAG_INSISTENT: keep sounding until the user opens or dismisses it.
+    additionalFlags: Int32List.fromList([4]),
+  );
+}
+
+String _arabicDigits(int n) => n.toString().split('').map((c) => String.fromCharCode(0x0660 + int.parse(c))).join();
+
+/// Handles the snooze action (foreground and background). Reschedules a one-off
+/// copy of the notification after the delay, using only the plugin.
+Future<void> handleReminderResponse(NotificationResponse response) async {
+  if (response.actionId != snoozeActionId || response.payload == null) return;
+  try {
+    final data = jsonDecode(response.payload!) as Map<String, dynamic>;
+    final fajr = data['fajr'] == true;
+    final id = (data['id'] as num?)?.toInt() ?? 0;
+    final plugin = FlutterLocalNotificationsPlugin();
+    // Snooze ids live in 900-908, derived from the original reminder's range.
+    final snoozeId = id >= snoozeIdBase ? id : snoozeIdBase + id ~/ 100;
+    final when = tz.TZDateTime.now(tz.UTC).add(Duration(minutes: fajr ? fajrSnoozeMinutes : snoozeMinutes));
+    final details = NotificationDetails(
+      android: buildReminderDetails(fajr: fajr, soundId: data['sound'] as String? ?? 'cairo', accent: (data['accent'] as num?)?.toInt()),
+    );
+    final payload = jsonEncode({...data, 'id': snoozeId});
+    Future<void> schedule(AndroidScheduleMode mode) => plugin.zonedSchedule(
+          id: snoozeId,
+          title: data['title'] as String?,
+          body: data['body'] as String?,
+          scheduledDate: when,
+          notificationDetails: details,
+          androidScheduleMode: mode,
+          payload: payload,
+        );
+    try {
+      await schedule(AndroidScheduleMode.exactAllowWhileIdle);
+    } catch (_) {
+      await schedule(AndroidScheduleMode.inexactAllowWhileIdle);
+    }
+  } catch (e) {
+    debugPrint('snooze failed: $e');
+  }
+}
+
+@pragma('vm:entry-point')
+Future<void> reminderBackgroundHandler(NotificationResponse response) => handleReminderResponse(response);

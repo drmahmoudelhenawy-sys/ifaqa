@@ -50,6 +50,15 @@ class OfflineStore {
     }
   }
 
+  /// Writes [bytes] to [path] atomically (temp file then rename).
+  Future<void> write(String path, Uint8List bytes) async {
+    final f = await _file(path);
+    await f.parent.create(recursive: true);
+    final temp = File('${f.path}.part');
+    await temp.writeAsBytes(bytes, flush: true);
+    await temp.rename(f.path);
+  }
+
   Future<void> delete(String path) async {
     final f = await _file(path);
     if (await f.exists()) await f.delete();

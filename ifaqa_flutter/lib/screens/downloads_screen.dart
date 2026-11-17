@@ -5,6 +5,8 @@ import '../services/app_state.dart';
 import '../services/hadith_service.dart';
 import '../services/mushaf_service.dart';
 import '../services/offline_store/offline_store.dart';
+import '../services/quran_search_service.dart' show tafsirEditions;
+import '../services/tafsir_offline_service.dart';
 import '../theme/app_colors.dart';
 
 class DownloadsScreen extends StatefulWidget {
@@ -75,6 +77,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
             if (OfflineStore.supported) ...[
               const SizedBox(height: 14),
               const _HadithDownloads(),
+              const SizedBox(height: 14),
+              const _TafsirDownloads(),
               const SizedBox(height: 14),
               const _AudioDownloads(),
             ],
@@ -226,6 +230,77 @@ class _HadithDownloadsState extends State<_HadithDownloads> {
                         },
                       )
                     : IconButton(icon: const Icon(Icons.download, color: AppColors.emerald600), onPressed: () => _download(c)),
+          );
+        }),
+      ]);
+}
+
+/// Tafsir editions saved for reading offline.
+class _TafsirDownloads extends StatefulWidget {
+  const _TafsirDownloads();
+
+  @override
+  State<_TafsirDownloads> createState() => _TafsirDownloadsState();
+}
+
+class _TafsirDownloadsState extends State<_TafsirDownloads> {
+  final Map<int, int> saved = {};
+  final Map<int, double> progress = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _refresh();
+  }
+
+  Future<void> _refresh() async {
+    for (final e in tafsirEditions.keys) {
+      saved[e] = await tafsirDownloaded(e);
+    }
+    if (mounted) setState(() {});
+  }
+
+  Future<void> _download(int e) async {
+    setState(() => progress[e] = 0);
+    try {
+      await downloadTafsir(e, onProgress: (v) {
+        if (mounted) setState(() => progress[e] = v);
+      });
+    } catch (_) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('تعذر تنزيل تفسير ${tafsirEditions[e]}، يمكنك الاستئناف لاحقاً.')));
+    }
+    progress.remove(e);
+    await _refresh();
+  }
+
+  @override
+  Widget build(BuildContext context) => _card(Icons.menu_book, AppColors.violet600, 'التفاسير', [
+        const Text('نزّل التفسير لقراءته بدون إنترنت. إذا انقطع التنزيل يكمل من حيث توقف.', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.slate500)),
+        const SizedBox(height: 6),
+        ...tafsirEditions.entries.map((en) {
+          final p = progress[en.key];
+          final n = saved[en.key] ?? 0;
+          return ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(en.value, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13)),
+            subtitle: p != null
+                ? LinearProgressIndicator(value: p > 0 ? p : null)
+                : (n >= 114
+                    ? const Text('محفوظ على الجهاز ✓', style: TextStyle(color: AppColors.emerald600, fontSize: 11))
+                    : (n > 0 ? Text('محفوظ $n من 114 سورة', style: const TextStyle(color: AppColors.amber600, fontSize: 11)) : null)),
+            trailing: p != null
+                ? null
+                : Row(mainAxisSize: MainAxisSize.min, children: [
+                    if (n > 0)
+                      IconButton(
+                        icon: const Icon(Icons.delete_outline, color: AppColors.rose500),
+                        onPressed: () async {
+                          await deleteTafsir(en.key);
+                          await _refresh();
+                        },
+                      ),
+                    if (n < 114) IconButton(icon: const Icon(Icons.download, color: AppColors.emerald600), onPressed: () => _download(en.key)),
+                  ]),
           );
         }),
       ]);

@@ -2,11 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import '../data/surahs_data.dart';
 import '../models/reciter.dart';
 import 'app_state.dart';
 import 'clan_service.dart';
 import 'offline_store/offline_store.dart';
+import 'playlists_service.dart';
 
 /// What is loaded in the shared player.
 class NowPlaying {
@@ -24,9 +26,18 @@ class NowPlaying {
 class AudioService extends ChangeNotifier {
   AudioService._() {
     player.playerStateStream.listen((s) {
-      if (s.processingState == ProcessingState.completed && autoNext) {
+      if (s.processingState == ProcessingState.completed && autoNext && !inPlaylist) {
         next();
       }
+      notifyListeners();
+    });
+    // Keeps the mini player in step when a playlist moves to its next track
+    // (also from the lock screen / notification buttons).
+    player.currentIndexStream.listen((i) {
+      if (!inPlaylist || i == null || i >= _queue.length) return;
+      final it = _queue[i];
+      now = _nowFor(it.reciter, it.surah);
+      _remember(it.reciter, it.surah);
       notifyListeners();
     });
     player.positionStream.listen((_) => _throttledNotify());
@@ -38,6 +49,9 @@ class AudioService extends ChangeNotifier {
   final AudioPlayer player = AudioPlayer();
   NowPlaying? now;
   bool autoNext = true;
+  String? playlistId;
+  List<PlaylistItem> _queue = const [];
+  bool get inPlaylist => playlistId != null;
   DateTime _lastNotify = DateTime.fromMillisecondsSinceEpoch(0);
   int _unsentClanSeconds = 0;
 
@@ -52,13 +66,44 @@ class AudioService extends ChangeNotifier {
     }
   }
 
-  Future<void> playSurah(Reciter reciter, int surah) async {
+  NowPlaying _nowFor(Reciter reciter, int surah) {
     final name = quranSurahs.firstWhere((s) => s.number == surah).name;
-    now = NowPlaying(title: 'سورة $name', subtitle: reciter.name, reciter: reciter, surah: surah);
+    return NowPlaying(title: 'سورة $name', subtitle: reciter.name, reciter: reciter, surah: surah);
+  }
+
+  Future<AudioSource> _sourceFor(Reciter reciter, int surah) async {
+    final name = quranSurahs.firstWhere((s) => s.number == surah).name;
+    final tag = MediaItem(id: '${reciter.id}_$surah', title: 'سورة $name', artist: reciter.name, album: 'تلاوات إفاقة');
+    final local = await OfflineStore.instance.localPath(audioOfflinePath(reciter, surah));
+    return AudioSource.uri(local != null ? Uri.file(local) : Uri.parse(reciter.surahUrl(surah)), tag: tag);
+  }
+
+  Future<void> playSurah(Reciter reciter, int surah) async {
+    playlistId = null;
+    _queue = const [];
+    now = _nowFor(reciter, surah);
     notifyListeners();
     _remember(reciter, surah);
-    final local = await OfflineStore.instance.localPath(audioOfflinePath(reciter, surah));
-    await _load(reciter.surahUrl(surah), localPath: local);
+    await _load(await _sourceFor(reciter, surah));
+  }
+
+  /// Plays a user playlist from [startIndex]; next/previous and autoplay follow it.
+  Future<void> playPlaylist(UserPlaylist pl, {int startIndex = 0}) async {
+    if (pl.items.isEmpty) return;
+    final items = [...pl.items];
+    final idx = startIndex.clamp(0, items.length - 1);
+    playlistId = pl.id;
+    _queue = items;
+    now = _nowFor(items[idx].reciter, items[idx].surah);
+    notifyListeners();
+    try {
+      final sources = [for (final it in items) await _sourceFor(it.reciter, it.surah)];
+      await player.setAudioSource(ConcatenatingAudioSource(children: sources), initialIndex: idx);
+      unawaited(player.play());
+    } catch (e) {
+      debugPrint('playlist load failed: $e');
+      notifyListeners();
+    }
   }
 
   static String audioOfflinePath(Reciter r, int surah) => 'audio/${r.id}/${surah.toString().padLeft(3, '0')}.mp3';
@@ -73,18 +118,16 @@ class AudioService extends ChangeNotifier {
   }
 
   Future<void> playLive(String title, String subtitle, String url) async {
+    playlistId = null;
+    _queue = const [];
     now = NowPlaying(title: title, subtitle: subtitle, isLive: true);
     notifyListeners();
-    await _load(url);
+    await _load(AudioSource.uri(Uri.parse(url), tag: MediaItem(id: url, title: title, artist: subtitle)));
   }
 
-  Future<void> _load(String url, {String? localPath}) async {
+  Future<void> _load(AudioSource source) async {
     try {
-      if (localPath != null) {
-        await player.setFilePath(localPath);
-      } else {
-        await player.setUrl(url);
-      }
+      await player.setAudioSource(source);
       unawaited(player.play());
     } catch (e) {
       debugPrint('audio load failed: $e');
@@ -98,6 +141,14 @@ class AudioService extends ChangeNotifier {
   Future<void> previous() async => _step(-1);
 
   Future<void> _step(int delta) async {
+    if (inPlaylist) {
+      if (delta > 0) {
+        await player.seekToNext();
+      } else {
+        await player.seekToPrevious();
+      }
+      return;
+    }
     final n = now;
     if (n == null || n.reciter == null || n.surah == null) return;
     final list = [...n.reciter!.surahList]..sort();
@@ -109,6 +160,8 @@ class AudioService extends ChangeNotifier {
 
   Future<void> stop() async {
     await player.stop();
+    playlistId = null;
+    _queue = const [];
     now = null;
     notifyListeners();
   }

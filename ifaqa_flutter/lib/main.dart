@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'models/nav_page.dart';
 import 'screens/app_shell_screen.dart';
 import 'screens/splash_screen.dart';
@@ -13,6 +15,14 @@ import 'theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppState.init();
+  // Lock-screen / notification controls and background playback.
+  if (!kIsWeb) {
+    await JustAudioBackground.init(
+      androidNotificationChannelId: 'com.ifaqa.app.audio',
+      androidNotificationChannelName: 'تلاوات إفاقة',
+      androidNotificationOngoing: true,
+    );
+  }
   // Not awaited: the app must open even when Firebase is slow or offline.
   unawaited(CloudService.instance.init());
   unawaited(ReminderService.instance.init());
