@@ -6,6 +6,7 @@ import '../services/cloud_service.dart';
 import '../theme/app_colors.dart';
 import 'auth_screen.dart';
 import 'clan_chat_screen.dart';
+import 'clan_features_panels.dart';
 import 'clan_form_screen.dart';
 
 String _fmt(int n) {
@@ -306,7 +307,16 @@ class _ClanBrowserState extends State<_ClanBrowser> {
 
 // ------------------------------------------------------------------ home
 
-enum _Section { members, quests, landmarks, activity }
+enum _Section { members, quests, khatma, twins, landmarks, activity }
+
+const _sectionLabels = {
+  _Section.members: 'الرفقاء',
+  _Section.quests: 'التحديات',
+  _Section.khatma: 'الختمة',
+  _Section.twins: 'التآخي',
+  _Section.landmarks: 'المعالم',
+  _Section.activity: 'النشاط',
+};
 
 class _ClanHome extends StatefulWidget {
   final String clanId;
@@ -373,6 +383,8 @@ class _ClanHomeState extends State<_ClanHome> {
             ]),
           ),
         ],
+        const SizedBox(height: 10),
+        SaharLanternsCard(clanId: c.id),
         if (isLeader && requests.isNotEmpty) ...[
           const SizedBox(height: 10),
           _requests(c),
@@ -393,21 +405,28 @@ class _ClanHomeState extends State<_ClanHome> {
           ],
         ),
         const SizedBox(height: 12),
-        SegmentedButton<_Section>(
-          showSelectedIcon: false,
-          segments: const [
-            ButtonSegment(value: _Section.members, label: Text('الرفقاء', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900))),
-            ButtonSegment(value: _Section.quests, label: Text('التحديات', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900))),
-            ButtonSegment(value: _Section.landmarks, label: Text('المعالم', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900))),
-            ButtonSegment(value: _Section.activity, label: Text('النشاط', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900))),
-          ],
-          selected: {section},
-          onSelectionChanged: (s) => setState(() => section = s.first),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              for (final s in _Section.values)
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(end: 6),
+                  child: ChoiceChip(
+                    label: Text(_sectionLabels[s]!, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
+                    selected: section == s,
+                    onSelected: (_) => setState(() => section = s),
+                  ),
+                ),
+            ],
+          ),
         ),
         const SizedBox(height: 12),
         switch (section) {
           _Section.members => _members(c),
           _Section.quests => _quests(c),
+          _Section.khatma => ClanKhatmaPanel(clanId: c.id),
+          _Section.twins => ClanTwinPanel(clan: c, isLeader: isLeader),
           _Section.landmarks => _landmarks(c),
           _Section.activity => _activity(c),
         },

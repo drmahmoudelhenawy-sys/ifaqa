@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'app_state.dart';
 import 'clan_service.dart';
@@ -46,6 +47,7 @@ class QuranProgressService {
     if (readToday(page)) return false;
     _state.toggleDayItem(now, 'quran_pages', '$page', xpValue: pageXp);
     ClanService.instance.autoContribute(QuestType.quranPages, 1);
+    unawaited(ClanService.instance.onKhatmaPageRead(page)); // distributed clan khatma
 
     final goal = khatma;
     if (goal != null) {

@@ -29,6 +29,39 @@ const List<AlarmSound> alarmSounds = [
   AlarmSound('tarateel', 'ترتيل'),
 ];
 
+/// Notification look for the Fajr alarm (React FAJR_ALARM_THEMES).
+class FajrAlarmTheme {
+  final String id;
+  final String name;
+  final String subtitle;
+  final int background; // ARGB
+  final int accent; // ARGB
+  final int text; // ARGB
+  final String title;
+  final String target; // what the alarm announces, used in the body
+  const FajrAlarmTheme(this.id, this.name, this.subtitle, this.background, this.accent, this.text, this.title, this.target);
+}
+
+const List<FajrAlarmTheme> fajrThemes = [
+  FajrAlarmTheme('emerald', 'فجر السكينة (زمردي)', 'ظلال هادئة ونفحات الفجر الأولى', 0xFF0F261E, 0xFF10B981, 0xFFC3E1D0, 'حيّ على الصلاة، حيّ على الفلاح', 'أذان الفجر'),
+  FajrAlarmTheme('midnight', 'قبس الفجر (كحلي نيلي)', 'هدوء جوف الليل ونور المآذن', 0xFF0C1226, 0xFF6366F1, 0xFFC7D2FE, 'قبس من نور الفجر', 'أذان الفجر'),
+  FajrAlarmTheme('royal_purple', 'نور السحر (بنفسجي ملكي)', 'إشراقة إيمانية متألقة بروحانية', 0xFF1A0C26, 0xFFA855F7, 0xFFE9D5FF, 'نور السحر يناديك', 'أذان الفجر'),
+  FajrAlarmTheme('warm_amber', 'عنبر الصباح (أسود ملكي وذهبي)', 'دفء تباشير الصبح وضياء الأفق', 0xFF23190A, 0xFFF59E0B, 0xFFFDE68A, 'أشرقت تباشير الصبح', 'أذان الفجر'),
+];
+
+FajrAlarmTheme fajrThemeById(String? id) => fajrThemes.firstWhere((t) => t.id == id, orElse: () => fajrThemes.first);
+
+/// AppState keys: mode is 'relative' or 'fixed'; the fixed time is minutes after midnight.
+const String fajrModeKey = 'fajr_alarm_mode';
+const String fajrFixedKey = 'fajr_alarm_fixed_minutes';
+const String fajrThemeKey = 'fajr_alarm_theme';
+const int fajrFixedDefault = 4 * 60 + 30;
+
+String fajrBody(FajrAlarmTheme theme, {required bool fixed, required int offset}) {
+  if (fixed) return 'حان موعد منبّه الفجر';
+  return offset == 0 ? 'حان الآن موعد ${theme.target}' : 'بقي $offset دقيقة على ${theme.target}';
+}
+
 const List<int> fajrOffsets = [0, 10, 15, 20, 30, 45, 60];
 
 /// How far ahead one-off reminders are planned; the app re-plans on every launch.
@@ -46,12 +79,17 @@ List<PlannedReminder> planReminders(AppState state, DateTime now) {
 
     if (state.flag('fajr_alarm')) {
       final offset = state.number('fajr_alarm_offset');
+      final fixed = state.text(fajrModeKey) == 'fixed';
+      final fixedMinutes = state.number(fajrFixedKey, fallback: fajrFixedDefault);
+      final theme = fajrThemeById(state.text(fajrThemeKey));
       plans.add(PlannedReminder(
         id: 100 + d,
         kind: ReminderKind.fajrAlarm,
-        time: times.fajr.subtract(Duration(minutes: offset)),
-        title: 'حيّ على الصلاة، حيّ على الفلاح',
-        body: offset == 0 ? 'حان الآن موعد أذان الفجر' : 'بقي $offset دقيقة على أذان الفجر',
+        time: fixed
+            ? DateTime(day.year, day.month, day.day, (fixedMinutes ~/ 60) % 24, fixedMinutes % 60)
+            : times.fajr.subtract(Duration(minutes: offset)),
+        title: theme.title,
+        body: fajrBody(theme, fixed: fixed, offset: offset),
       ));
     }
     if (state.flag('notif_morning_athkar')) {

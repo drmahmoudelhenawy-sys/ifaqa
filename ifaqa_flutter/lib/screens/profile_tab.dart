@@ -8,6 +8,7 @@ import 'auth_screen.dart';
 import '../theme/app_colors.dart';
 import '../widgets/toggle_item.dart';
 import 'admin_panel_screen.dart';
+import '../siraj/siraj_settings_screen.dart';
 import 'support_sheet.dart';
 
 class ProfileTab extends StatefulWidget {
@@ -162,6 +163,8 @@ class _ProfileTabState extends State<ProfileTab> {
         _buildPreferencesCard(),
         const SizedBox(height: 14),
         _buildNotificationsCard(),
+        const SizedBox(height: 14),
+        _buildSirajTile(),
         const SizedBox(height: 14),
         if (CloudService.instance.isAdmin) ...[
           SizedBox(
@@ -486,6 +489,37 @@ class _ProfileTabState extends State<ProfileTab> {
             ToggleItem(label: 'إظهار اسمي ونقاطي في المتصدرين', isOn: showOnLeaderboard, icon: showOnLeaderboard ? Icons.visibility : Icons.visibility_off, onTap: () => setState(() => showOnLeaderboard = !showOnLeaderboard)),
           ],
         ],
+      ),
+    );
+  }
+
+  Widget _buildSirajTile() {
+    return InkWell(
+      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SirajSettingsScreen())),
+      borderRadius: BorderRadius.circular(28),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(colors: [Color(0xFF0B0F14), Color(0xFF063B2E)]),
+          borderRadius: BorderRadius.circular(28),
+          border: Border.all(color: AppColors.amber400.withValues(alpha: 0.35)),
+        ),
+        child: const Row(
+          children: [
+            Icon(Icons.nightlight_round, color: AppColors.amber400, size: 24),
+            SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('سِراج', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: Colors.white)),
+                  Text('كبسولة الصلاة والأذكار الحيّة', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white60)),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_left, color: Colors.white54),
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'offline_store/offline_store.dart';
+import 'tafsir_offline_service.dart';
 
 class AyahMatch {
   final int surahNumber;
@@ -66,6 +68,13 @@ Future<List<PageAyah>> fetchPageAyat(int page) async {
 
 /// Tafsir for one ayah as plain text (api.quran.com); Al-Muyassar by default.
 Future<String> fetchTafsir(int surah, int ayah, {int edition = 16}) async {
+  try {
+    final saved = await OfflineStore.instance.read(tafsirOfflinePath(edition, surah));
+    if (saved != null) {
+      final text = tafsirFromSaved(saved, ayah);
+      if (text != null) return text;
+    }
+  } catch (_) {/* fall back to the network */}
   final url = 'https://api.quran.com/api/v4/tafsirs/$edition/by_ayah/$surah:$ayah';
   final response = await http.get(Uri.parse(url)).timeout(_timeout);
   if (response.statusCode != 200) throw http.ClientException('HTTP ${response.statusCode}', Uri.parse(url));

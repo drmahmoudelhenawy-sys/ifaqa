@@ -62,11 +62,68 @@ class _FajrAlarmPanelState extends State<FajrAlarmPanel> {
     }
   }
 
+  bool get fixed => _state.text(fajrModeKey) == 'fixed';
+  int get fixedMinutes => _state.number(fajrFixedKey, fallback: fajrFixedDefault);
+  FajrAlarmTheme get theme => fajrThemeById(_state.text(fajrThemeKey));
+
+  DateTime _alarmOn(DateTime day) {
+    if (fixed) return DateTime(day.year, day.month, day.day, fixedMinutes ~/ 60, fixedMinutes % 60);
+    return prayerTimesOn(_state.location, day).fajr.subtract(Duration(minutes: offset));
+  }
+
   DateTime _nextAlarm() {
     final now = DateTime.now();
-    final today = prayerTimesOn(_state.location, now).fajr.subtract(Duration(minutes: offset));
+    final today = _alarmOn(now);
     if (today.isAfter(now)) return today;
-    return prayerTimesOn(_state.location, now.add(const Duration(days: 1))).fajr.subtract(Duration(minutes: offset));
+    return _alarmOn(now.add(const Duration(days: 1)));
+  }
+
+  Future<void> _pickFixedTime() async {
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: fixedMinutes ~/ 60, minute: fixedMinutes % 60),
+    );
+    if (picked != null && mounted) setState(() => _state.setNumber(fajrFixedKey, picked.hour * 60 + picked.minute));
+  }
+
+  Widget _modeChip(String label, bool value) {
+    final selected = fixed == value;
+    return ChoiceChip(
+      label: Text(label),
+      selected: selected,
+      onSelected: (_) => setState(() => _state.setText(fajrModeKey, value ? 'fixed' : 'relative')),
+      selectedColor: AppColors.emerald100,
+      labelStyle: TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: selected ? AppColors.emerald700 : AppColors.slate600),
+    );
+  }
+
+  Widget _themePreview(FajrAlarmTheme t) {
+    final body = fajrBody(t, fixed: fixed, offset: offset);
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(color: Color(t.background), borderRadius: BorderRadius.circular(18)),
+      child: Row(
+        children: [
+          Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(color: Color(t.accent), shape: BoxShape.circle),
+            child: const Icon(Icons.alarm, color: Colors.white, size: 20),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(t.title, style: TextStyle(color: Color(t.accent), fontWeight: FontWeight.w900, fontSize: 13)),
+                const SizedBox(height: 2),
+                Text(body, style: TextStyle(color: Color(t.text), fontSize: 12, fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   String _clock(DateTime t) {
@@ -124,6 +181,29 @@ class _FajrAlarmPanelState extends State<FajrAlarmPanel> {
       const SizedBox(height: 16),
       const Text('موعد التنبيه', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: AppColors.slate700)),
       const SizedBox(height: 8),
+      Wrap(spacing: 8, children: [_modeChip('قبل الأذان', false), _modeChip('وقت ثابت', true)]),
+      const SizedBox(height: 8),
+      if (fixed)
+        InkWell(
+          onTap: _pickFixedTime,
+          borderRadius: BorderRadius.circular(18),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(18), border: Border.all(color: AppColors.emerald500)),
+            child: Row(
+              children: [
+                const Icon(Icons.access_time, color: AppColors.emerald600),
+                const SizedBox(width: 10),
+                const Expanded(child: Text('وقت المنبّه كل يوم', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: AppColors.slate800))),
+                Text(
+                  _clock(DateTime(2000, 1, 1, fixedMinutes ~/ 60, fixedMinutes % 60)),
+                  style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15, color: AppColors.emerald700),
+                ),
+              ],
+            ),
+          ),
+        )
+      else
       Wrap(
         spacing: 8,
         runSpacing: 8,
@@ -148,6 +228,49 @@ class _FajrAlarmPanelState extends State<FajrAlarmPanel> {
 
   List<Widget> _soundSection() {
     return [
+      const Text('شكل الإشعار', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: AppColors.slate700)),
+      const SizedBox(height: 8),
+      ...fajrThemes.map((t) {
+        final selected = theme.id == t.id;
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: InkWell(
+            onTap: () => setState(() => _state.setText(fajrThemeKey, t.id)),
+            borderRadius: BorderRadius.circular(20),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: selected ? Color(t.accent) : AppColors.slate100, width: selected ? 2 : 1),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _themePreview(t),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(6, 8, 6, 2),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(t.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: AppColors.slate800)),
+                              Text(t.subtitle, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.slate400)),
+                            ],
+                          ),
+                        ),
+                        if (selected) Icon(Icons.check_circle, color: Color(t.accent)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
+      const SizedBox(height: 8),
       const Text('صوت المنبّه', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: AppColors.slate700)),
       const SizedBox(height: 8),
       ...alarmSounds.map((s) {

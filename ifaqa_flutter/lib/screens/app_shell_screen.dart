@@ -6,6 +6,8 @@ import '../services/app_state.dart';
 import '../services/content_service.dart';
 import '../services/cloud_service.dart';
 import '../theme/app_colors.dart';
+import '../siraj/siraj_capsule.dart';
+import '../siraj/siraj_settings.dart';
 import '../widgets/iqamah_banner.dart';
 import '../widgets/mini_player.dart';
 import 'challenges_tab.dart';
@@ -83,6 +85,8 @@ class _AppShellScreenState extends State<AppShellScreen> {
 
   bool get isLite => appMode == AppMode.lite;
 
+  bool get sirajActive => SirajSettings.visibleInApp;
+
   String get _greeting {
     final hour = DateTime.now().hour;
     if (hour >= 3 && hour < 11) return 'صباح النور والبركة';
@@ -124,26 +128,35 @@ class _AppShellScreenState extends State<AppShellScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: AppColors.slate50,
-        body: SafeArea(
-          bottom: false,
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                child: Column(
-                  children: [
-                    _buildTopBar(),
-                    if (currentPage == NavPage.home && !isLite) ...[
-                      const SizedBox(height: 14),
-                      _buildXpRibbon(tier, nextTier, progressPercent),
-                    ],
-                  ],
-                ),
+        body: Stack(
+          children: [
+            SafeArea(
+              bottom: false,
+              child: Column(
+                children: [
+                  // Rest slot of the collapsed capsule (6 gap + 38 pill + 4), so it never covers the top bar.
+                  if (sirajActive) SizedBox(height: SirajSettings.config().autoHide ? 14 : 46),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                    child: Column(
+                      children: [
+                        _buildTopBar(),
+                        if (currentPage == NavPage.home && !isLite) ...[
+                          const SizedBox(height: 14),
+                          _buildXpRibbon(tier, nextTier, progressPercent),
+                        ],
+                      ],
+                    ),
+                  ),
+                  // Siraj supersedes the iqamah banner while it is on.
+                  if (!sirajActive) const IqamahBanner(),
+                  Expanded(child: _buildBody()),
+                ],
               ),
-              const IqamahBanner(),
-              Expanded(child: _buildBody()),
-            ],
-          ),
+            ),
+            // Floats over the content (never pushes it down), under the status bar.
+            if (sirajActive) const Positioned.fill(child: SirajCapsule()),
+          ],
         ),
         bottomNavigationBar: SafeArea(
           top: false,

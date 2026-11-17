@@ -1,135 +1,15 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../data/surahs_data.dart';
 import '../models/surah_info.dart';
 import '../services/app_state.dart';
 import '../services/mushaf_service.dart';
 import '../services/quran_progress_service.dart';
-import '../services/quran_search_service.dart';
 import '../theme/app_colors.dart';
-
-/// Ayat of one page with their tafsir, expandable one at a time.
-class _PageTafsirSheet extends StatefulWidget {
-  final int page;
-  const _PageTafsirSheet({required this.page});
-
-  @override
-  State<_PageTafsirSheet> createState() => _PageTafsirSheetState();
-}
-
-class _PageTafsirSheetState extends State<_PageTafsirSheet> {
-  late Future<List<PageAyah>> _ayat = fetchPageAyat(widget.page);
-  late int edition = AppState.instance.number('tafsir_edition', fallback: 16);
-  final Map<String, Future<String>> _tafsir = {};
-
-  Future<String> _tafsirFor(PageAyah a) => _tafsir.putIfAbsent('$edition:${a.surah}:${a.ayah}', () => fetchTafsir(a.surah, a.ayah, edition: edition));
-
-  @override
-  Widget build(BuildContext context) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: DraggableScrollableSheet(
-        initialChildSize: 0.75,
-        maxChildSize: 0.95,
-        minChildSize: 0.4,
-        builder: (context, scroll) => Container(
-          decoration: const BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
-          child: Column(
-            children: [
-              const SizedBox(height: 10),
-              Container(width: 40, height: 4, decoration: BoxDecoration(color: AppColors.slate200, borderRadius: BorderRadius.circular(9))),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 12, 16, 6),
-                child: Row(
-                  children: [
-                    Text('تفسير الصفحة ${widget.page}', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
-                    const Spacer(),
-                    DropdownButton<int>(
-                      value: edition,
-                      underline: const SizedBox(),
-                      items: tafsirEditions.entries.map((e) => DropdownMenuItem(value: e.key, child: Text(e.value, style: const TextStyle(fontWeight: FontWeight.bold)))).toList(),
-                      onChanged: (v) {
-                        if (v == null) return;
-                        AppState.instance.setNumber('tafsir_edition', v);
-                        setState(() => edition = v);
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: FutureBuilder<List<PageAyah>>(
-                  future: _ayat,
-                  builder: (context, snap) {
-                    if (snap.hasError) {
-                      return Center(
-                        child: TextButton.icon(
-                          onPressed: () => setState(() => _ayat = fetchPageAyat(widget.page)),
-                          icon: const Icon(Icons.refresh),
-                          label: const Text('تعذر التحميل، أعد المحاولة'),
-                        ),
-                      );
-                    }
-                    if (!snap.hasData) return const Center(child: CircularProgressIndicator(color: AppColors.emerald600));
-                    final ayat = snap.data!;
-                    return ListView.builder(
-                      controller: scroll,
-                      padding: const EdgeInsets.fromLTRB(12, 0, 12, 24),
-                      itemCount: ayat.length,
-                      itemBuilder: (_, i) {
-                        final a = ayat[i];
-                        return Card(
-                          elevation: 0,
-                          color: const Color(0xFFFBF8F1),
-                          margin: const EdgeInsets.only(bottom: 8),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                          child: ExpansionTile(
-                            key: ValueKey('$edition-${a.surah}-${a.ayah}'),
-                            shape: const Border(),
-                            title: Text(
-                              '${a.text} ﴿${_arabicDigits(a.ayah)}﴾',
-                              style: const TextStyle(fontFamily: 'Amiri', fontSize: 19, height: 1.9, color: AppColors.slate900),
-                            ),
-                            subtitle: Text('${quranSurahs[a.surah - 1].name} · آية ${a.ayah}', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400)),
-                            childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
-                            children: [
-                              FutureBuilder<String>(
-                                future: _tafsirFor(a),
-                                builder: (context, t) {
-                                  if (t.hasError) return const Text('تعذر تحميل التفسير.', style: TextStyle(color: AppColors.rose500));
-                                  if (!t.hasData) return const LinearProgressIndicator(color: AppColors.emerald500);
-                                  return Column(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
-                                      SelectableText(t.data!, style: const TextStyle(fontSize: 14, height: 1.9, fontWeight: FontWeight.w600, color: AppColors.slate700)),
-                                      Align(
-                                        alignment: AlignmentDirectional.centerEnd,
-                                        child: IconButton(
-                                          icon: const Icon(Icons.copy, size: 18, color: AppColors.slate400),
-                                          onPressed: () => Clipboard.setData(ClipboardData(text: '${a.text}\n\n${tafsirEditions[edition]}: ${t.data!}')),
-                                        ),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+import '../widgets/ayah_tools.dart';
+import '../widgets/mushaf_page_view.dart';
+import 'mushaf_marks_screen.dart';
 
 class QuranReaderScreen extends StatefulWidget {
   final int initialPage;
@@ -143,43 +23,56 @@ class QuranReaderScreen extends StatefulWidget {
 }
 
 class _QuranReaderScreenState extends State<QuranReaderScreen> {
-  static const Color _paper = Color(0xFFFBF8F1);
+  static const String _nightKey = 'mushaf_night';
 
   late final PageController _pageController;
   late int currentPage;
   final _progress = QuranProgressService.instance;
+  final ValueNotifier<int> _secondsOnPage = ValueNotifier(0);
   Timer? _readTimer;
-  int _secondsOnPage = 0;
+  bool _overlay = true; // shown briefly on open so readers learn it exists
+  Timer? _introTimer;
+  late bool _night = AppState.instance.flag(_nightKey);
 
   @override
   void initState() {
     super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     currentPage = widget.initialPage;
     _pageController = PageController(initialPage: currentPage - 1);
     _onPageShown(currentPage);
+    _introTimer = Timer(const Duration(milliseconds: 2500), () {
+      if (mounted) setState(() => _overlay = false);
+    });
   }
 
   @override
   void dispose() {
+    _introTimer?.cancel();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     _readTimer?.cancel();
+    _secondsOnPage.dispose();
     _pageController.dispose();
     super.dispose();
   }
 
   void _onPageShown(int page) {
-    MushafService.instance.saveLastReadPage(page);
-    MushafService.instance.preload(page + 1);
-    MushafService.instance.preload(page - 1);
+    final mushaf = MushafService.instance;
+    mushaf.saveLastReadPage(page);
+    for (final p in [page + 1, page - 1, page + 2]) {
+      mushaf.preload(p);
+    }
     _readTimer?.cancel();
-    _secondsOnPage = 0;
+    _secondsOnPage.value = 0;
     if (_progress.readToday(page)) return;
     // A page counts once the reader has stayed on it for 20 seconds.
     _readTimer = Timer.periodic(const Duration(seconds: 1), (t) {
       if (!mounted || currentPage != page) return t.cancel();
-      setState(() => _secondsOnPage++);
-      if (_secondsOnPage >= QuranProgressService.secondsToCount) {
+      _secondsOnPage.value++;
+      if (_secondsOnPage.value >= QuranProgressService.secondsToCount) {
         t.cancel();
         if (_progress.markRead(page) && mounted) {
+          setState(() {});
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             duration: const Duration(seconds: 2),
             backgroundColor: AppColors.emerald600,
@@ -194,7 +87,7 @@ class _QuranReaderScreenState extends State<QuranReaderScreen> {
         context: context,
         isScrollControlled: true,
         backgroundColor: Colors.transparent,
-        builder: (_) => _PageTafsirSheet(page: currentPage),
+        builder: (_) => PageTafsirSheet(page: currentPage),
       );
 
   SurahInfo get _surahOfPage => quranSurahs.lastWhere((s) => s.startPage <= currentPage);
@@ -207,27 +100,145 @@ class _QuranReaderScreenState extends State<QuranReaderScreen> {
     if (page != null && _pageController.hasClients) _pageController.jumpToPage(page - 1);
   }
 
+  Future<void> _openMarks() async {
+    final page = await Navigator.of(context).push<int>(MaterialPageRoute(builder: (_) => const MushafMarksScreen()));
+    if (page != null && page >= 1 && page <= MushafService.pageCount && _pageController.hasClients) {
+      _pageController.jumpToPage(page - 1);
+    }
+  }
+
+  void _toggleOverlay() {
+    _introTimer?.cancel();
+    setState(() => _overlay = !_overlay);
+  }
+
+  void _toggleNight() {
+    setState(() => _night = !_night);
+    AppState.instance.setFlag(_nightKey, _night);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: _paper,
-        body: SafeArea(
-          child: Column(
-            children: [
-              _buildHeader(),
-              Expanded(
-                child: PageView.builder(
-                  controller: _pageController,
-                  itemCount: MushafService.pageCount,
-                  onPageChanged: (index) {
-                    setState(() => currentPage = index + 1);
-                    _onPageShown(index + 1);
-                  },
-                  itemBuilder: (context, index) => _MushafPage(key: ValueKey(index + 1), page: index + 1),
+        backgroundColor: _night ? const Color(0xFF15130F) : const Color(0xFFFBF8F1),
+        body: Stack(
+          children: [
+            Positioned.fill(
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: MushafService.pageCount,
+                onPageChanged: (index) {
+                  setState(() => currentPage = index + 1);
+                  _onPageShown(index + 1);
+                },
+                itemBuilder: (context, index) => MushafPageView(
+                  key: ValueKey(index + 1),
+                  page: index + 1,
+                  night: _night,
+                  onTapBackground: _toggleOverlay,
                 ),
               ),
+            ),
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: IgnorePointer(
+                ignoring: !_overlay,
+                child: AnimatedSlide(
+                  offset: _overlay ? Offset.zero : const Offset(0, -1),
+                  duration: const Duration(milliseconds: 180),
+                  child: AnimatedOpacity(
+                    opacity: _overlay ? 1 : 0,
+                    duration: const Duration(milliseconds: 180),
+                    child: _buildHeader(),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: MediaQuery.paddingOf(context).top + 8,
+              left: 8,
+              child: IgnorePointer(
+                ignoring: _overlay,
+                child: AnimatedOpacity(
+                  opacity: _overlay ? 0 : 0.45,
+                  duration: const Duration(milliseconds: 180),
+                  child: Material(
+                    color: _night ? const Color(0xFF3A3528) : const Color(0xFFE8E1CF),
+                    shape: const CircleBorder(),
+                    child: InkWell(
+                      customBorder: const CircleBorder(),
+                      onTap: _toggleOverlay,
+                      child: SizedBox(
+                        width: 36,
+                        height: 36,
+                        child: Icon(Icons.more_horiz, size: 20, color: _night ? const Color(0xFFE9E1CF) : AppColors.slate700),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    final fg = _night ? const Color(0xFFE9E1CF) : AppColors.slate800;
+    return Material(
+      color: (_night ? const Color(0xFF211E17) : Colors.white).withValues(alpha: 0.96),
+      elevation: 4,
+      child: SafeArea(
+        bottom: false,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+          child: Row(
+            children: [
+              _action(Icons.chevron_right, 'رجوع', () => Navigator.of(context).pop(), fg),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('سورة ${_surahOfPage.name}', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 14, color: fg)),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'صفحة $currentPage · الجزء ${MushafService.juzOfPage(currentPage)}',
+                          style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400),
+                        ),
+                        const SizedBox(width: 6),
+                        if (_progress.readToday(currentPage))
+                          const Icon(Icons.check_circle, size: 13, color: AppColors.emerald500)
+                        else
+                          ValueListenableBuilder<int>(
+                            valueListenable: _secondsOnPage,
+                            builder: (_, seconds, _) => SizedBox(
+                              width: 12,
+                              height: 12,
+                              child: CircularProgressIndicator(
+                                value: seconds / QuranProgressService.secondsToCount,
+                                strokeWidth: 2,
+                                backgroundColor: AppColors.slate200,
+                                color: AppColors.emerald500,
+                              ),
+                            ),
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              _action(Icons.bookmarks_outlined, 'علاماتي', _openMarks, fg),
+              _action(_night ? Icons.light_mode_outlined : Icons.dark_mode_outlined, 'الوضع الليلي', _toggleNight, fg),
+              _action(Icons.menu_book_outlined, 'تفسير الصفحة', _openTafsir, AppColors.emerald600),
+              _action(Icons.numbers, 'انتقال لصفحة', _askForPage, fg),
+              _action(Icons.keyboard_arrow_up, 'إخفاء', _toggleOverlay, fg),
             ],
           ),
         ),
@@ -235,74 +246,12 @@ class _QuranReaderScreenState extends State<QuranReaderScreen> {
     );
   }
 
-  Widget _buildHeader() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: const BoxDecoration(color: Colors.white, border: Border(bottom: BorderSide(color: AppColors.slate200))),
-      child: Row(
-        children: [
-          InkWell(
-            onTap: () => Navigator.of(context).pop(),
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: AppColors.slate100, borderRadius: BorderRadius.circular(16)),
-              child: const Icon(Icons.chevron_right, size: 20),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Text('سورة ${_surahOfPage.name}', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 14, color: AppColors.slate800)),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      'صفحة $currentPage · الجزء ${MushafService.juzOfPage(currentPage)}',
-                      style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400),
-                    ),
-                    const SizedBox(width: 6),
-                    if (_progress.readToday(currentPage))
-                      const Icon(Icons.check_circle, size: 13, color: AppColors.emerald500)
-                    else
-                      SizedBox(
-                        width: 12,
-                        height: 12,
-                        child: CircularProgressIndicator(
-                          value: _secondsOnPage / QuranProgressService.secondsToCount,
-                          strokeWidth: 2,
-                          backgroundColor: AppColors.slate200,
-                          color: AppColors.emerald500,
-                        ),
-                      ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          InkWell(
-            onTap: _openTafsir,
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: AppColors.emerald50, borderRadius: BorderRadius.circular(16)),
-              child: const Icon(Icons.menu_book_outlined, size: 20, color: AppColors.emerald700),
-            ),
-          ),
-          const SizedBox(width: 6),
-          InkWell(
-            onTap: _askForPage,
-            borderRadius: BorderRadius.circular(16),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: AppColors.slate100, borderRadius: BorderRadius.circular(16)),
-              child: const Icon(Icons.numbers, size: 20),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  Widget _action(IconData icon, String tip, VoidCallback onTap, Color color) => IconButton(
+        tooltip: tip,
+        visualDensity: VisualDensity.compact,
+        icon: Icon(icon, size: 22, color: color),
+        onPressed: onTap,
+      );
 }
 
 class _GoToPageDialog extends StatefulWidget {
@@ -355,78 +304,3 @@ class _GoToPageDialogState extends State<_GoToPageDialog> {
     );
   }
 }
-
-class _MushafPage extends StatefulWidget {
-  final int page;
-  const _MushafPage({super.key, required this.page});
-
-  @override
-  State<_MushafPage> createState() => _MushafPageState();
-}
-
-class _MushafPageState extends State<_MushafPage> {
-  late Future<Uint8List> _bytes;
-
-  @override
-  void initState() {
-    super.initState();
-    _bytes = MushafService.instance.loadPage(widget.page);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<Uint8List>(
-      future: _bytes,
-      builder: (context, snapshot) {
-        if (snapshot.hasError) return _buildError();
-        if (!snapshot.hasData) {
-          return const Center(child: CircularProgressIndicator(color: AppColors.emerald600));
-        }
-        return InteractiveViewer(
-          maxScale: 4,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-            child: Semantics(
-              label: 'صفحة ${widget.page} من المصحف',
-              image: true,
-              child: SvgPicture.memory(
-                snapshot.data!,
-                width: double.infinity,
-                height: double.infinity,
-                fit: BoxFit.contain,
-              ),
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildError() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(Icons.error_outline, color: AppColors.rose500, size: 32),
-            const SizedBox(height: 12),
-            const Text(
-              'تعذر تحميل الصفحة. تأكد من اتصال الإنترنت.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: AppColors.slate500, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 16),
-            FilledButton(
-              onPressed: () => setState(() => _bytes = MushafService.instance.loadPage(widget.page)),
-              style: FilledButton.styleFrom(backgroundColor: AppColors.emerald600),
-              child: const Text('إعادة المحاولة'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-String _arabicDigits(int n) => n.toString().split('').map((d) => '٠١٢٣٤٥٦٧٨٩'[int.parse(d)]).join();

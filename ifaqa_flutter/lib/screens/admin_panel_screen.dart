@@ -2,15 +2,21 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import '../services/cloud_service.dart';
+import '../data/challenges_data.dart';
+import '../models/reciter.dart';
+import '../services/challenges_service.dart';
 import '../services/content_service.dart';
 import '../services/events_service.dart';
+import '../services/reciter_photo_service.dart';
+import '../services/reciter_service.dart';
+import '../widgets/reciter_avatar.dart';
 import '../theme/app_colors.dart';
 import 'event_editor_screen.dart';
 
 /// Admin tools (React `AdminPanel`): users, support inbox, events, home
 /// content and announcements. Every write here is checked by `isAdmin()` in
 /// firestore.rules, so the screen is only a convenience, never the guard.
-/// Not ported: reciter photo management and challenge editing.
+/// Also: reciter photos (by URL) and daily challenge editing.
 class AdminPanelScreen extends StatelessWidget {
   const AdminPanelScreen({super.key});
 
@@ -19,7 +25,7 @@ class AdminPanelScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: DefaultTabController(
-        length: 5,
+        length: 7,
         child: Scaffold(
           backgroundColor: AppColors.slate50,
           appBar: AppBar(
@@ -32,10 +38,10 @@ class AdminPanelScreen extends StatelessWidget {
               unselectedLabelColor: Colors.white60,
               indicatorColor: AppColors.violet400,
               labelStyle: TextStyle(fontWeight: FontWeight.w900),
-              tabs: [Tab(text: 'المستخدمون'), Tab(text: 'الدعم الفني'), Tab(text: 'الفعاليات'), Tab(text: 'المحتوى'), Tab(text: 'التنبيهات')],
+              tabs: [Tab(text: 'المستخدمون'), Tab(text: 'الدعم الفني'), Tab(text: 'الفعاليات'), Tab(text: 'المحتوى'), Tab(text: 'التنبيهات'), Tab(text: 'صور القراء'), Tab(text: 'التحديات')],
             ),
           ),
-          body: const TabBarView(children: [_UsersTab(), _SupportTab(), _EventsTab(), _ContentTab(), _AnnouncementsTab()]),
+          body: const TabBarView(children: [_UsersTab(), _SupportTab(), _EventsTab(), _ContentTab(), _AnnouncementsTab(), _ReciterPhotosTab(), _ChallengesAdminTab()]),
         ),
       ),
     );
@@ -440,6 +446,208 @@ class _AnnouncementsTabState extends State<_AnnouncementsTab> {
               )),
         ],
       ),
+    );
+  }
+}
+
+// ------------------------------------------------------- reciter photos
+class _ReciterPhotosTab extends StatefulWidget {
+  const _ReciterPhotosTab();
+
+  @override
+  State<_ReciterPhotosTab> createState() => _ReciterPhotosTabState();
+}
+
+class _ReciterPhotosTabState extends State<_ReciterPhotosTab> {
+  final svc = ReciterPhotoService.instance;
+  List<Reciter> all = [];
+  bool loading = true;
+  String q = '';
+
+  @override
+  void initState() {
+    super.initState();
+    svc.start();
+    fetchReciters().then((l) {
+      svc.registerReciters(l);
+      if (mounted) setState(() => all = l);
+    }).catchError((_) {}).whenComplete(() {
+      if (mounted) setState(() => loading = false);
+    });
+  }
+
+  Future<void> _edit(Reciter r) async {
+    final ctrl = TextEditingController(text: svc.storedUrlFor(r.name) ?? '');
+    final hasPhoto = svc.storedUrlFor(r.name) != null;
+    final action = await showDialog<String>(
+      context: context,
+      builder: (ctx) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: StatefulBuilder(
+          builder: (ctx, setD) => AlertDialog(
+            title: Text(r.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ReciterAvatar(photoUrl: ctrl.text.trim(), size: 96),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: ctrl,
+                  keyboardType: TextInputType.url,
+                  textDirection: TextDirection.ltr,
+                  onChanged: (_) => setD(() {}),
+                  decoration: const InputDecoration(labelText: 'رابط الصورة (https://...)'),
+                ),
+              ],
+            ),
+            actions: [
+              if (hasPhoto) TextButton(onPressed: () => Navigator.pop(ctx, 'clear'), child: const Text('إزالة', style: TextStyle(color: AppColors.rose500))),
+              TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('إلغاء')),
+              FilledButton(onPressed: () => Navigator.pop(ctx, 'save'), child: const Text('حفظ')),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (action == null || !mounted) return;
+    try {
+      if (action == 'save') {
+        await svc.setPhoto(r.name, ctrl.text);
+        if (mounted) _toast(context, 'تم حفظ الصورة');
+      } else {
+        await svc.clearPhoto(r.name);
+        if (mounted) _toast(context, 'تمت إزالة الصورة');
+      }
+    } catch (e) {
+      if (mounted) _toast(context, e is ArgumentError ? '${e.message}' : 'تعذر الحفظ');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final nq = normalizeReciterKey(q);
+    final list = (nq.isEmpty ? all : all.where((r) => normalizeReciterKey(r.name).contains(nq))).take(80).toList();
+    return ListenableBuilder(
+      listenable: svc,
+      builder: (_, _) => ListView(
+        padding: const EdgeInsets.all(12),
+        children: [
+          TextField(
+            onChanged: (v) => setState(() => q = v),
+            decoration: const InputDecoration(labelText: 'ابحث عن قارئ', prefixIcon: Icon(Icons.search)),
+          ),
+          const SizedBox(height: 8),
+          if (loading) const Padding(padding: EdgeInsets.all(24), child: Center(child: CircularProgressIndicator())),
+          if (!loading && all.isEmpty) const Text('تعذر تحميل قائمة القراء'),
+          ...list.map((r) {
+            final url = svc.storedUrlFor(r.name);
+            return Card(
+              child: ListTile(
+                leading: ReciterAvatar(photoUrl: url, size: 44),
+                title: Text(r.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13)),
+                subtitle: Text(url == null ? 'بدون صورة مخصصة' : 'صورة مخصصة', style: const TextStyle(fontSize: 11)),
+                trailing: const Icon(Icons.edit_outlined),
+                onTap: () => _edit(r),
+              ),
+            );
+          }),
+        ],
+      ),
+    );
+  }
+}
+
+// ------------------------------------------------------------ challenges
+class _ChallengesAdminTab extends StatefulWidget {
+  const _ChallengesAdminTab();
+
+  @override
+  State<_ChallengesAdminTab> createState() => _ChallengesAdminTabState();
+}
+
+class _ChallengesAdminTabState extends State<_ChallengesAdminTab> {
+  Future<void> _save(List<ChallengeItem> l) async {
+    try {
+      await ChallengesService.instance.save(l);
+    } catch (_) {
+      if (mounted) _toast(context, 'تعذر الحفظ');
+    }
+  }
+
+  Future<void> _edit(List<ChallengeItem> list, ChallengeItem? existing) async {
+    final title = TextEditingController(text: existing?.title ?? '');
+    final xp = TextEditingController(text: '${existing?.xp ?? 100}');
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: AlertDialog(
+          title: Text(existing == null ? 'تحدٍّ جديد' : 'تعديل التحدي'),
+          content: Column(mainAxisSize: MainAxisSize.min, children: [
+            TextField(controller: title, decoration: const InputDecoration(labelText: 'عنوان التحدي')),
+            TextField(controller: xp, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'النقاط (XP)')),
+          ]),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('إلغاء')),
+            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('حفظ')),
+          ],
+        ),
+      ),
+    );
+    if (ok != true || title.text.trim().isEmpty) return;
+    final item = ChallengeItem(id: existing?.id ?? ChallengesService.newId(), title: title.text.trim(), xp: normalizeXp(xp.text));
+    final updated = existing == null ? [item, ...list] : [for (final c in list) c.id == existing.id ? item : c];
+    await _save(updated);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<List<ChallengeItem>>(
+      stream: ChallengesService.instance.stream(),
+      initialData: ChallengesService.instance.latest,
+      builder: (context, snap) {
+        final list = snap.data ?? const <ChallengeItem>[];
+        return ListView(
+          padding: const EdgeInsets.all(12),
+          children: [
+            Row(children: [
+              Expanded(child: FilledButton.icon(onPressed: () => _edit(list, null), icon: const Icon(Icons.add), label: const Text('إضافة تحدٍّ'))),
+              const SizedBox(width: 8),
+              OutlinedButton(
+                onPressed: () async {
+                  if (await _confirm(context, 'استعادة قائمة التحديات الافتراضية؟')) _save(List.of(allChallenges));
+                },
+                child: const Text('افتراضي'),
+              ),
+            ]),
+            const SizedBox(height: 8),
+            for (var i = 0; i < list.length; i++)
+              Card(
+                child: ListTile(
+                  title: Text(list[i].title, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13)),
+                  subtitle: Text('+${list[i].xp} XP', style: const TextStyle(fontSize: 11)),
+                  onTap: () => _edit(list, list[i]),
+                  trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_upward, size: 18),
+                      onPressed: i == 0 ? null : () => _save([...list]..insert(i - 1, list[i])..removeAt(i + 1)),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.arrow_downward, size: 18),
+                      onPressed: i == list.length - 1 ? null : () => _save([...list]..insert(i + 2, list[i])..removeAt(i)),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.delete_outline, color: AppColors.rose500, size: 20),
+                      onPressed: () async {
+                        if (await _confirm(context, 'حذف التحدي؟')) _save([...list]..removeAt(i));
+                      },
+                    ),
+                  ]),
+                ),
+              ),
+          ],
+        );
+      },
     );
   }
 }
