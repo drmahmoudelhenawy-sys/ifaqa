@@ -113,7 +113,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
             )
           else ...[
             const Text(
-              'نزّل الصفحات الـ604 لتقرأ بدون إنترنت. يحتاج التنزيل مساحة بمئات الميجابايت، ويفضل استخدام Wi-Fi.',
+              'نزّل خطوط صفحات المصحف الـ604 لتقرأ بدون إنترنت (التخطيط مضمّن في التطبيق). يحتاج التنزيل مساحة بمئات الميجابايت، ويفضل استخدام Wi-Fi.',
               style: TextStyle(fontSize: 12, height: 1.7, fontWeight: FontWeight.bold, color: AppColors.slate500),
             ),
             const SizedBox(height: 14),
