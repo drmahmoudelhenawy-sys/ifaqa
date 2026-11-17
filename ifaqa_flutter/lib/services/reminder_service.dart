@@ -17,6 +17,10 @@ class ReminderService {
   final FlutterLocalNotificationsPlugin _plugin = FlutterLocalNotificationsPlugin();
   bool _ready = false;
 
+  /// The shared plugin instance (Siraj posts its own notifications through it).
+  FlutterLocalNotificationsPlugin get plugin => _plugin;
+  bool get ready => _ready;
+
   static bool get supported => !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
 
   Future<void> init() async {

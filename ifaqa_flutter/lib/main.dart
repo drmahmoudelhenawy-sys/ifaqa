@@ -10,6 +10,7 @@ import 'services/app_state.dart';
 import 'services/home_widget_sync.dart';
 import 'services/cloud_service.dart';
 import 'services/reminder_service.dart';
+import 'siraj/siraj_live_service.dart';
 import 'theme/app_theme.dart';
 
 Future<void> main() async {
@@ -25,7 +26,7 @@ Future<void> main() async {
   }
   // Not awaited: the app must open even when Firebase is slow or offline.
   unawaited(CloudService.instance.init());
-  unawaited(ReminderService.instance.init());
+  unawaited(ReminderService.instance.init().then((_) => SirajLiveService.instance.init()));
   unawaited(HomeWidgetSync.instance.init());
   runApp(const IfaqaApp());
 }
