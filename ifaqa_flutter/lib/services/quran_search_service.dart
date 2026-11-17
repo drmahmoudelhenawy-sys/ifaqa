@@ -42,9 +42,31 @@ Future<int> fetchAyahPage(int surah, int ayah) async {
   return (jsonDecode(response.body) as Map<String, dynamic>)['data']['page'] as int;
 }
 
-/// Al-Muyassar tafsir for one ayah, as plain text (api.quran.com).
-Future<String> fetchTafsir(int surah, int ayah) async {
-  final url = 'https://api.quran.com/api/v4/tafsirs/16/by_ayah/$surah:$ayah';
+/// Arabic tafsir editions on api.quran.com.
+const tafsirEditions = <int, String>{16: 'الميسر', 91: 'السعدي', 14: 'ابن كثير', 15: 'الطبري', 90: 'القرطبي', 94: 'البغوي'};
+
+class PageAyah {
+  final int surah;
+  final int ayah;
+  final String text;
+  const PageAyah(this.surah, this.ayah, this.text);
+}
+
+/// Every ayah printed on a Mushaf page, in order.
+Future<List<PageAyah>> fetchPageAyat(int page) async {
+  final url = 'https://api.quran.com/api/v4/verses/by_page/$page?fields=text_uthmani&per_page=50';
+  final response = await http.get(Uri.parse(url)).timeout(_timeout);
+  if (response.statusCode != 200) throw http.ClientException('HTTP ${response.statusCode}', Uri.parse(url));
+  final verses = ((jsonDecode(response.body) as Map<String, dynamic>)['verses'] as List?) ?? const [];
+  return verses.map((v) {
+    final key = (v['verse_key'] as String).split(':');
+    return PageAyah(int.parse(key[0]), int.parse(key[1]), (v['text_uthmani'] as String?) ?? '');
+  }).toList();
+}
+
+/// Tafsir for one ayah as plain text (api.quran.com); Al-Muyassar by default.
+Future<String> fetchTafsir(int surah, int ayah, {int edition = 16}) async {
+  final url = 'https://api.quran.com/api/v4/tafsirs/$edition/by_ayah/$surah:$ayah';
   final response = await http.get(Uri.parse(url)).timeout(_timeout);
   if (response.statusCode != 200) throw http.ClientException('HTTP ${response.statusCode}', Uri.parse(url));
   final text = (jsonDecode(response.body) as Map<String, dynamic>)['tafsir']['text'] as String;

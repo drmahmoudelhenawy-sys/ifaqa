@@ -1,6 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import '../services/app_state.dart';
+import '../services/hadith_service.dart';
 import '../services/mushaf_service.dart';
+import '../services/offline_store/offline_store.dart';
 import '../theme/app_colors.dart';
 
 class DownloadsScreen extends StatefulWidget {
@@ -66,7 +70,15 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         ),
         body: ListView(
           padding: const EdgeInsets.all(16),
-          children: [_buildMushafCard()],
+          children: [
+            _buildMushafCard(),
+            if (OfflineStore.supported) ...[
+              const SizedBox(height: 14),
+              const _HadithDownloads(),
+              const SizedBox(height: 14),
+              const _AudioDownloads(),
+            ],
+          ],
         ),
       ),
     );
@@ -130,5 +142,144 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         ],
       ),
     );
+  }
+}
+
+String _mb(int bytes) => '${(bytes / (1024 * 1024)).toStringAsFixed(1)} م.ب';
+
+Widget _card(IconData icon, Color color, String title, List<Widget> children) => Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), border: Border.all(color: AppColors.slate100)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(children: [
+            Icon(icon, color: color),
+            const SizedBox(width: 10),
+            Expanded(child: Text(title, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15, color: AppColors.slate900))),
+          ]),
+          const SizedBox(height: 8),
+          ...children,
+        ],
+      ),
+    );
+
+/// Hadith books saved for reading offline (React `HadithDownloadModal`).
+class _HadithDownloads extends StatefulWidget {
+  const _HadithDownloads();
+
+  @override
+  State<_HadithDownloads> createState() => _HadithDownloadsState();
+}
+
+class _HadithDownloadsState extends State<_HadithDownloads> {
+  final Map<String, bool> saved = {};
+  final Map<String, double> progress = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _refresh();
+  }
+
+  Future<void> _refresh() async {
+    for (final c in hadithCollections) {
+      saved[c.edition] = await OfflineStore.instance.has(hadithOfflinePath(c.edition));
+    }
+    if (mounted) setState(() {});
+  }
+
+  Future<void> _download(HadithCollection c) async {
+    setState(() => progress[c.edition] = 0);
+    try {
+      await OfflineStore.instance.download(hadithUrl(c.edition), hadithOfflinePath(c.edition), onProgress: (v) {
+        if (mounted) setState(() => progress[c.edition] = v);
+      });
+    } catch (_) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('تعذر تنزيل ${c.name}، تحقق من الاتصال.')));
+    }
+    progress.remove(c.edition);
+    await _refresh();
+  }
+
+  @override
+  Widget build(BuildContext context) => _card(Icons.auto_stories, AppColors.amber600, 'كتب الحديث', [
+        const Text('نزّل الكتاب لتتصفحه وتبحث فيه بدون إنترنت.', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.slate500)),
+        const SizedBox(height: 6),
+        ...hadithCollections.map((c) {
+          final p = progress[c.edition];
+          final has = saved[c.edition] == true;
+          return ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(c.name, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13)),
+            subtitle: p != null
+                ? LinearProgressIndicator(value: p > 0 ? p : null)
+                : (has ? const Text('محفوظ على الجهاز ✓', style: TextStyle(color: AppColors.emerald600, fontSize: 11)) : null),
+            trailing: p != null
+                ? null
+                : has
+                    ? IconButton(
+                        icon: const Icon(Icons.delete_outline, color: AppColors.rose500),
+                        onPressed: () async {
+                          await OfflineStore.instance.delete(hadithOfflinePath(c.edition));
+                          await _refresh();
+                        },
+                      )
+                    : IconButton(icon: const Icon(Icons.download, color: AppColors.emerald600), onPressed: () => _download(c)),
+          );
+        }),
+      ]);
+}
+
+/// Recitations saved from the listening tab.
+class _AudioDownloads extends StatefulWidget {
+  const _AudioDownloads();
+
+  @override
+  State<_AudioDownloads> createState() => _AudioDownloadsState();
+}
+
+class _AudioDownloadsState extends State<_AudioDownloads> {
+  List<String> files = const [];
+  int bytes = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _refresh();
+  }
+
+  Future<void> _refresh() async {
+    files = await OfflineStore.instance.list('audio');
+    bytes = await OfflineStore.instance.sizeOf('audio');
+    if (mounted) setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final names = Map<String, dynamic>.from(jsonDecode(AppState.instance.text('offline_reciters') ?? '{}') as Map);
+    final byReciter = <String, int>{};
+    for (final f in files) {
+      final parts = f.split('/');
+      if (parts.length >= 3) byReciter[parts[1]] = (byReciter[parts[1]] ?? 0) + 1;
+    }
+    return _card(Icons.headphones, AppColors.indigo600, 'التلاوات المحفوظة', [
+      Text(files.isEmpty ? 'نزّل أي سورة من تبويب «استماع» بزر التنزيل بجانبها.' : '${files.length} سورة · ${_mb(bytes)}',
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.slate500)),
+      ...byReciter.entries.map((e) => ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(((names[e.key] as Map?)?['name'] as String?) ?? 'قارئ', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13)),
+            subtitle: Text('${e.value} سورة'),
+            trailing: IconButton(
+              icon: const Icon(Icons.delete_outline, color: AppColors.rose500),
+              onPressed: () async {
+                for (final f in files.where((f) => f.startsWith('audio/${e.key}/'))) {
+                  await OfflineStore.instance.delete(f);
+                }
+                await _refresh();
+              },
+            ),
+          )),
+    ]);
   }
 }

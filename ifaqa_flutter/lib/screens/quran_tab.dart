@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/surahs_data.dart';
 import '../models/surah_info.dart';
 import '../services/mushaf_service.dart';
+import '../services/quran_progress_service.dart';
 import '../theme/app_colors.dart';
 import 'quran_reader_screen.dart';
 import 'quran_search_screen.dart';
@@ -48,6 +49,7 @@ class _QuranTabState extends State<QuranTab> {
   Future<void> _openReader(Widget reader) async {
     await Navigator.of(context).push(MaterialPageRoute(builder: (_) => reader));
     await _loadLastPage();
+    if (mounted) setState(() {});
   }
 
   Widget _buildResumeCard(int page) {
@@ -83,6 +85,167 @@ class _QuranTabState extends State<QuranTab> {
   }
 
   String _ayahLabel(int count) => count == 1 ? 'آية' : 'آيات';
+
+  final _progress = QuranProgressService.instance;
+
+  Widget _buildStats() {
+    final days = _progress.lastDays(7);
+    final week = days.fold<int>(0, (s, d) => s + d.pages);
+    final peak = days.map((d) => d.pages).fold<int>(1, (a, b) => b > a ? b : a);
+    const names = ['ح', 'ن', 'ث', 'ر', 'خ', 'ج', 'س']; // Sunday first: weekday % 7
+    Widget metric(String v, String l, IconData i, Color c) => Expanded(
+          child: Column(children: [
+            Icon(i, size: 18, color: c),
+            const SizedBox(height: 4),
+            Text(v, style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: AppColors.slate900)),
+            Text(l, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400)),
+          ]),
+        );
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), border: Border.all(color: AppColors.slate100)),
+      child: Column(
+        children: [
+          Row(children: [
+            metric('${days.last.pages}', 'صفحات اليوم', Icons.today, AppColors.emerald600),
+            metric('$week', 'هذا الأسبوع', Icons.date_range, AppColors.indigo600),
+            metric('${_progress.streak}', 'أيام متتالية', Icons.local_fire_department, AppColors.orange500),
+            metric('${_progress.khatmasCompleted}', 'ختمات', Icons.workspace_premium, AppColors.amber500),
+          ]),
+          const SizedBox(height: 14),
+          SizedBox(
+            height: 70,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: days.map((d) {
+                final today = d.day.day == DateTime.now().day;
+                return Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      if (d.pages > 0) Text('${d.pages}', style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: AppColors.slate500)),
+                      Container(
+                        height: 4 + 40 * d.pages / peak,
+                        margin: const EdgeInsets.symmetric(horizontal: 6),
+                        decoration: BoxDecoration(color: today ? AppColors.emerald500 : AppColors.emerald200, borderRadius: BorderRadius.circular(6)),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(names[d.day.weekday % 7], style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: today ? AppColors.emerald700 : AppColors.slate400)),
+                    ],
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const SizedBox(height: 6),
+          const Text('تُحسب الصفحة بعد 20 ثانية من القراءة · +10 XP لكل صفحة', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400)),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildKhatma() {
+    final goal = _progress.khatma;
+    if (goal == null) {
+      return InkWell(
+        onTap: _planKhatma,
+        borderRadius: BorderRadius.circular(24),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: AppColors.emerald50, borderRadius: BorderRadius.circular(24), border: Border.all(color: AppColors.emerald200)),
+          child: const Row(children: [
+            Icon(Icons.flag, color: AppColors.emerald600),
+            SizedBox(width: 12),
+            Expanded(child: Text('ابدأ ختمة بخطة يومية', style: TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald700))),
+            Icon(Icons.add_circle, color: AppColors.emerald600),
+          ]),
+        ),
+      );
+    }
+    final read = _progress.khatmaPagesRead;
+    final pct = read / 604;
+    final behind = goal.expectedPages - read;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(colors: [Color(0xFF064E3B), Color(0xFF0F766E)]),
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(children: [
+            const Icon(Icons.flag, color: AppColors.amber300, size: 20),
+            const SizedBox(width: 8),
+            Expanded(child: Text(goal.title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 15))),
+            IconButton(onPressed: _planKhatma, icon: const Icon(Icons.tune, color: Colors.white70, size: 20)),
+          ]),
+          Text('اليوم ${goal.dayNumber.clamp(1, goal.days)} من ${goal.days} · ${goal.pagesPerDay} صفحة يوميًا',
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 11)),
+          const SizedBox(height: 12),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(9),
+            child: LinearProgressIndicator(value: pct, minHeight: 10, backgroundColor: Colors.white24, valueColor: const AlwaysStoppedAnimation(AppColors.amber400)),
+          ),
+          const SizedBox(height: 8),
+          Row(children: [
+            Text('$read / 604 صفحة · ${(pct * 100).round()}%', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)),
+            const Spacer(),
+            Text(read >= 604 ? 'ختمت، تقبل الله! 🎉' : behind > 0 ? 'متأخر $behind صفحة' : 'على الموعد ✓',
+                style: TextStyle(color: read >= 604 || behind <= 0 ? AppColors.emerald200 : AppColors.amber300, fontWeight: FontWeight.w900, fontSize: 11)),
+          ]),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _planKhatma() async {
+    final existing = _progress.khatma;
+    final title = TextEditingController(text: existing?.title ?? 'ختمة جديدة');
+    var days = existing?.days ?? 30;
+    final action = await showModalBottomSheet<String>(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: StatefulBuilder(
+          builder: (ctx, setSheet) => Padding(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 20 + MediaQuery.of(ctx).viewInsets.bottom),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Text('خطة الختمة', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17)),
+                const SizedBox(height: 14),
+                TextField(controller: title, decoration: InputDecoration(labelText: 'اسم الختمة', border: OutlineInputBorder(borderRadius: BorderRadius.circular(14)))),
+                const SizedBox(height: 14),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [7, 10, 15, 20, 30, 60, 90]
+                      .map((d) => ChoiceChip(label: Text('$d يوم'), selected: days == d, onSelected: (_) => setSheet(() => days = d)))
+                      .toList(),
+                ),
+                const SizedBox(height: 10),
+                Text('${(604 / days).ceil()} صفحة يوميًا (≈ ${((604 / days) / 20).toStringAsFixed(1)} جزء)', style: const TextStyle(fontWeight: FontWeight.w900, color: AppColors.emerald700)),
+                const SizedBox(height: 16),
+                FilledButton(
+                  onPressed: () => Navigator.pop(ctx, 'start'),
+                  style: FilledButton.styleFrom(backgroundColor: AppColors.emerald600, padding: const EdgeInsets.symmetric(vertical: 14)),
+                  child: Text(existing == null ? 'ابدأ الختمة' : 'ابدأ ختمة جديدة', style: const TextStyle(fontWeight: FontWeight.w900)),
+                ),
+                if (existing != null)
+                  TextButton(onPressed: () => Navigator.pop(ctx, 'clear'), child: const Text('إلغاء الختمة الحالية', style: TextStyle(color: AppColors.rose600))),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    if (action == 'start') _progress.startKhatma(title.text, days);
+    if (action == 'clear') _progress.clearKhatma();
+    if (mounted) setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -134,6 +297,10 @@ class _QuranTabState extends State<QuranTab> {
             ),
           ),
           if (lastPage != null) _buildResumeCard(lastPage!),
+          const SizedBox(height: 12),
+          _buildStats(),
+          const SizedBox(height: 12),
+          _buildKhatma(),
           const SizedBox(height: 16),
           Container(
             decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), border: Border.all(color: AppColors.slate100)),

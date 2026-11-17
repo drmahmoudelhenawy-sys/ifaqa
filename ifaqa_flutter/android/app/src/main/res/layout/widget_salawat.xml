@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_emerald"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="اللهم صلِّ على محمد ﷺ"
+        android:textColor="#E6FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/salawat_tap"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:background="@drawable/widget_circle">
+
+        <TextView
+            android:id="@+id/salawat_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="اضغط للصلاة"
+        android:textColor="#99FFFFFF"
+        android:textSize="9sp" />
+</LinearLayout>

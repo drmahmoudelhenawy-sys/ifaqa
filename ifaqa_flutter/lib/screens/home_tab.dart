@@ -1,17 +1,23 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/prayer.dart';
 import '../models/app_mode.dart';
+import '../models/nav_page.dart';
 import '../models/zekr.dart';
 import '../services/app_state.dart';
+import '../services/prophet_challenge_service.dart';
 import '../theme/app_colors.dart';
+import '../widgets/dynamic_content_card.dart';
 import '../widgets/prayer_card.dart';
 import '../widgets/prayer_detail_sheet.dart';
 import 'athkar_screen.dart';
 import 'masbaha_screen.dart';
+import 'prophet_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
   final AppMode appMode;
-  const HomeTab({super.key, required this.appMode});
+  final ValueChanged<NavPage>? onNavigate;
+  const HomeTab({super.key, required this.appMode, this.onNavigate});
 
   @override
   State<HomeTab> createState() => _HomeTabState();
@@ -33,11 +39,29 @@ class _HomeTabState extends State<HomeTab> {
   int get completedCount => prayers.where((p) => p.isDone).length;
   double get progressPercent => completedCount / 5 * 100;
 
+  ProphetSchedule _prophet = ProphetSchedule.at(DateTime.now());
+  Timer? _prophetTicker;
+
+  void _openProphet() => Navigator.of(context)
+      .push(MaterialPageRoute(builder: (_) => const ProphetChallengeScreen()))
+      .then((_) {
+    if (mounted) setState(() {});
+  });
+
   @override
   void initState() {
     super.initState();
     currentDate = DateTime.now();
     _loadDay();
+    _prophetTicker = Timer.periodic(const Duration(seconds: 30), (_) {
+      if (mounted) setState(() => _prophet = ProphetSchedule.at(DateTime.now()));
+    });
+  }
+
+  @override
+  void dispose() {
+    _prophetTicker?.cancel();
+    super.dispose();
   }
 
   void _loadDay() {
@@ -95,6 +119,7 @@ class _HomeTabState extends State<HomeTab> {
       children: [
         _buildAdhkarRow(),
         const SizedBox(height: 16),
+        const DynamicContentCard(),
         _buildProphetChallengeBanner(),
         const SizedBox(height: 16),
         _buildDateNav(),
@@ -180,13 +205,19 @@ class _HomeTabState extends State<HomeTab> {
   }
 
   Widget _buildProphetChallengeBanner() {
+    final s = _prophet;
+    final count = ProphetChallengeService.instance.localCount(s.periodKey);
     return InkWell(
-      onTap: () {},
+      onTap: _openProphet,
       borderRadius: BorderRadius.circular(28),
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          gradient: const LinearGradient(colors: [AppColors.emerald600, AppColors.teal600, Color(0xFF047857)]),
+          gradient: LinearGradient(
+            colors: s.isFriday
+                ? const [AppColors.amber600, AppColors.orange600, Color(0xFF92400E)]
+                : const [AppColors.emerald600, AppColors.teal600, Color(0xFF047857)],
+          ),
           borderRadius: BorderRadius.circular(28),
         ),
         child: Row(
@@ -200,16 +231,22 @@ class _HomeTabState extends State<HomeTab> {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('الصلاة على النبي ﷺ', style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white, fontSize: 14)),
-                  Text('العداد اليومي', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold)),
+                children: [
+                  Text(s.title, style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white, fontSize: 14)),
+                  Text(count > 0 ? '${s.subtitle} • صليت $count' : s.subtitle,
+                      style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold)),
                 ],
               ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
               decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.25), borderRadius: BorderRadius.circular(10)),
-              child: const Text('تحدي الجمعة', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w900)),
+              child: Column(
+                children: [
+                  Text(s.countdown, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w900)),
+                  Text(s.isFriday ? 'متبقي' : 'لتحدي الجمعة', style: const TextStyle(color: Colors.white70, fontSize: 9, fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
           ],
         ),
@@ -406,8 +443,8 @@ class _HomeTabState extends State<HomeTab> {
       children: [
         _extraTile('المسبحة', 'وردك اليومي', Icons.blur_circular, AppColors.violet600, const Color(0xFFF5F3FF),
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MasbahaScreen()))),
-        if (!isLite) _extraTile('المتصدرون', 'لوحة الأبطال', Icons.emoji_events, AppColors.amber600, AppColors.amber100, onTap: () {}),
-        _extraTile('الصلاة على النبي', 'العداد اليومي', Icons.favorite, AppColors.emerald600, AppColors.emerald50, onTap: () {}),
+        if (!isLite) _extraTile('المتصدرون', 'لوحة الأبطال', Icons.emoji_events, AppColors.amber600, AppColors.amber100, onTap: () => widget.onNavigate?.call(NavPage.leaderboard)),
+        _extraTile('الصلاة على النبي', 'العداد اليومي', Icons.favorite, AppColors.emerald600, AppColors.emerald50, onTap: _openProphet),
         _qiyamTile(),
       ],
     );

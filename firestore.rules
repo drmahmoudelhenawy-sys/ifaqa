@@ -102,6 +102,18 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // Home-screen wisdom cards and launch announcements: written by admins,
+    // shown to every signed-in user (both apps read them).
+    match /artifacts/{appId}/public/data/dynamic_content/{itemId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    match /artifacts/{appId}/public/data/announcements/{announcementId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
     match /artifacts/{appId}/public/data/global_clan_quests/{questId} {
       allow read: if isAuthenticated();
       allow write: if isAdmin();
@@ -187,6 +199,15 @@ service cloud.firestore {
           (isOwner(memberId) && request.resource.data.get('role', null) == resource.data.get('role', null)) ||
           (isClanMemberOf(appId, clanId) && changedOnly(['lastCheckedInAt', 'checkInMessages']));
         allow delete: if isAdmin() || isClanLeader(appId, clanId) || isOwner(memberId);
+
+        // A member's own quest tallies and contribution receipts, written in
+        // the same transaction as a quest contribution. Without this rule the
+        // catch-all below excluded them and every contribution was denied.
+        match /{sub}/{docId} {
+          allow read: if isOwner(memberId) || isClanLeader(appId, clanId) || isAdmin();
+          allow write: if isOwner(memberId) && isClanMemberOf(appId, clanId) &&
+            sub in ['questTotals', 'contributions'];
+        }
       }
 
       match /joinRequests/{requesterId} {

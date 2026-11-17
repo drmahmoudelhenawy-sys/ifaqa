@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 import '../data/surahs_data.dart';
 import '../models/reciter.dart';
+import '../services/audio_service.dart';
+import '../services/offline_store/offline_store.dart';
 import '../services/reciter_service.dart';
 import '../theme/app_colors.dart';
 
@@ -13,29 +14,30 @@ class QuranAudioHubTab extends StatefulWidget {
 }
 
 class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
-  final AudioPlayer _player = AudioPlayer();
+  final AudioService _audio = AudioService.instance;
   List<Reciter>? reciters;
   bool loading = true;
   String? error;
   String query = '';
   Reciter? selectedReciter;
-  int? currentSurah;
-  bool isBuffering = false;
+  int? get currentSurah => _audio.now?.reciter?.id == selectedReciter?.id ? _audio.now?.surah : null;
+  bool get isBuffering => _audio.buffering;
 
   @override
   void initState() {
     super.initState();
     _load();
-    _player.playerStateStream.listen((state) {
-      if (!mounted) return;
-      setState(() => isBuffering = state.processingState == ProcessingState.loading || state.processingState == ProcessingState.buffering);
-    });
+    _audio.addListener(_onAudio);
   }
 
   @override
   void dispose() {
-    _player.dispose();
+    _audio.removeListener(_onAudio);
     super.dispose();
+  }
+
+  void _onAudio() {
+    if (mounted) setState(() {});
   }
 
   Future<void> _load() async {
@@ -61,28 +63,56 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
 
   Future<void> _playSurah(int surahNumber) async {
     if (selectedReciter == null) return;
-    setState(() => currentSurah = surahNumber);
-    try {
-      await _player.setUrl(selectedReciter!.surahUrl(surahNumber));
-      await _player.play();
-    } catch (_) {}
+    if (currentSurah == surahNumber) return _audio.toggle();
+    await _audio.playSurah(selectedReciter!, surahNumber);
   }
 
-  Future<void> _togglePlay() async {
-    if (currentSurah == null) return;
-    if (_player.playing) {
-      await _player.pause();
-    } else {
-      await _player.play();
-    }
-    setState(() {});
-  }
+  Future<void> _togglePlay() => _audio.toggle();
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: selectedReciter == null ? _buildRecitersList() : _buildSurahsList(),
+    );
+  }
+
+  Widget _buildListenSummary() {
+    final last = _audio.lastListen;
+    final lastReciter = last == null ? null : reciters?.where((r) => r.id == last['id']).firstOrNull;
+    final today = _audio.minutesOn(DateTime.now());
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(18), border: Border.all(color: AppColors.slate100)),
+              child: Row(children: [
+                const Icon(Icons.timer_outlined, color: AppColors.indigo600, size: 18),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text('اليوم $today د · الإجمالي ${_audio.totalMinutes} د',
+                      style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 11, color: AppColors.slate700)),
+                ),
+              ]),
+            ),
+          ),
+          if (lastReciter != null && last!['surah'] is int) ...[
+            const SizedBox(width: 8),
+            FilledButton.icon(
+              onPressed: () {
+                setState(() => selectedReciter = lastReciter);
+                _audio.playSurah(lastReciter, last['surah'] as int);
+              },
+              icon: const Icon(Icons.play_arrow, size: 18),
+              label: const Text('تابع الاستماع', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 11)),
+              style: FilledButton.styleFrom(backgroundColor: AppColors.indigo600, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
+            ),
+          ],
+        ],
+      ),
     );
   }
 
@@ -113,6 +143,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
             ),
           ),
         ),
+        _buildListenSummary(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
@@ -196,7 +227,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
   Widget _buildSurahsList() {
     final reciter = selectedReciter!;
     final surahs = quranSurahs.where((s) => reciter.surahList.contains(s.number)).toList();
-    final isPlaying = _player.playing;
+    final isPlaying = _audio.playing;
     return Column(
       children: [
         Padding(
@@ -276,6 +307,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
                         ),
                         const SizedBox(width: 10),
                         Expanded(child: Text('سورة ${s.name}', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: isCurrent ? AppColors.violet700 : AppColors.slate700))),
+                        if (OfflineStore.supported) _DownloadButton(reciter: reciter, surah: s.number),
                         Icon(isCurrent && isPlaying ? Icons.pause_circle : Icons.play_circle, color: isCurrent ? AppColors.violet600 : AppColors.slate300, size: 22),
                       ],
                     ),
@@ -287,5 +319,52 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
         ),
       ],
     );
+  }
+}
+
+class _DownloadButton extends StatefulWidget {
+  final Reciter reciter;
+  final int surah;
+  const _DownloadButton({required this.reciter, required this.surah});
+
+  @override
+  State<_DownloadButton> createState() => _DownloadButtonState();
+}
+
+class _DownloadButtonState extends State<_DownloadButton> {
+  bool? saved;
+  double? progress;
+
+  String get _path => AudioService.audioOfflinePath(widget.reciter, widget.surah);
+
+  @override
+  void initState() {
+    super.initState();
+    OfflineStore.instance.has(_path).then((v) {
+      if (mounted) setState(() => saved = v);
+    });
+  }
+
+  Future<void> _download() async {
+    setState(() => progress = 0);
+    try {
+      await AudioService.instance.download(widget.reciter, widget.surah, onProgress: (v) {
+        if (mounted) setState(() => progress = v);
+      });
+      if (mounted) setState(() => saved = true);
+    } catch (_) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('تعذر التنزيل، تحقق من الاتصال.')));
+    }
+    if (mounted) setState(() => progress = null);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = progress;
+    if (p != null) {
+      return Padding(padding: const EdgeInsets.all(10), child: SizedBox(width: 18, height: 18, child: CircularProgressIndicator(value: p > 0 ? p : null, strokeWidth: 2)));
+    }
+    if (saved == true) return const Padding(padding: EdgeInsets.all(10), child: Icon(Icons.offline_pin, color: AppColors.emerald500, size: 20));
+    return IconButton(onPressed: saved == null ? null : _download, icon: const Icon(Icons.download, color: AppColors.slate400, size: 20), tooltip: 'تنزيل');
   }
 }

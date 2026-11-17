@@ -158,6 +158,8 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  int dayCount(DateTime date, String listKey) => ((_day(date)[listKey] as List?) ?? const []).length;
+
   bool dayHas(DateTime date, String listKey, String item) =>
       ((_day(date)[listKey] as List?) ?? const []).contains(item);
 

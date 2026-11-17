@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'models/nav_page.dart';
 import 'screens/app_shell_screen.dart';
 import 'screens/splash_screen.dart';
 import 'services/app_state.dart';
+import 'services/home_widget_sync.dart';
 import 'services/cloud_service.dart';
 import 'services/reminder_service.dart';
 import 'theme/app_theme.dart';
@@ -14,6 +16,7 @@ Future<void> main() async {
   // Not awaited: the app must open even when Firebase is slow or offline.
   unawaited(CloudService.instance.init());
   unawaited(ReminderService.instance.init());
+  unawaited(HomeWidgetSync.instance.init());
   runApp(const IfaqaApp());
 }
 
@@ -35,6 +38,8 @@ class IfaqaApp extends StatelessWidget {
       title: 'إفاقة',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
+      // Lets mouse and trackpad users drag horizontal lists (tab rows, logo pickers) on web and desktop.
+      scrollBehavior: const MaterialScrollBehavior().copyWith(dragDevices: PointerDeviceKind.values.toSet()),
       locale: const Locale('ar'),
       builder: (context, child) {
         return Directionality(

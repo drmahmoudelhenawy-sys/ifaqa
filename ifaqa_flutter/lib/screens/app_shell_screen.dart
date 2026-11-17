@@ -3,7 +3,11 @@ import '../models/app_mode.dart';
 import '../models/nav_page.dart';
 import '../models/tier.dart';
 import '../services/app_state.dart';
+import '../services/content_service.dart';
+import '../services/cloud_service.dart';
 import '../theme/app_colors.dart';
+import '../widgets/iqamah_banner.dart';
+import '../widgets/mini_player.dart';
 import 'challenges_tab.dart';
 import 'home_tab.dart';
 import 'leaderboard_tab.dart';
@@ -33,12 +37,44 @@ class _AppShellScreenState extends State<AppShellScreen> {
   void initState() {
     super.initState();
     _state.addListener(_onStateChanged);
+    CloudService.instance.addListener(_maybeShowAnnouncement);
+    _maybeShowAnnouncement();
   }
 
   @override
   void dispose() {
     _state.removeListener(_onStateChanged);
+    CloudService.instance.removeListener(_maybeShowAnnouncement);
     super.dispose();
+  }
+
+  bool _announcementChecked = false;
+
+  /// The latest active announcement, once per distinct text (React App.tsx).
+  Future<void> _maybeShowAnnouncement() async {
+    if (_announcementChecked || !CloudService.instance.signedIn) return;
+    _announcementChecked = true;
+    try {
+      final a = await ContentService.instance.latestAnnouncement();
+      if (a == null || !mounted) return;
+      final key = '${a.title}_${a.body}';
+      if (_state.text('announcement_seen') == key) return;
+      _state.setText('announcement_seen', key);
+      await showDialog(
+        context: context,
+        builder: (_) => Directionality(
+          textDirection: TextDirection.rtl,
+          child: AlertDialog(
+            icon: const Icon(Icons.campaign, color: AppColors.violet600, size: 36),
+            title: Text(a.title, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w900)),
+            content: Text(a.body, textAlign: TextAlign.center, style: const TextStyle(height: 1.7, fontWeight: FontWeight.w600)),
+            actions: [FilledButton(onPressed: () => Navigator.pop(context), child: const Text('حسنًا'))],
+          ),
+        ),
+      );
+    } catch (_) {
+      // Rules not deployed yet, or offline: skip quietly.
+    }
   }
 
   void _onStateChanged() {
@@ -58,7 +94,7 @@ class _AppShellScreenState extends State<AppShellScreen> {
   Widget _buildBody() {
     switch (currentPage) {
       case NavPage.home:
-        return HomeTab(appMode: appMode);
+        return HomeTab(appMode: appMode, onNavigate: (page) => setState(() => currentPage = page));
       case NavPage.quran:
         return const QuranTab();
       case NavPage.audio:
@@ -104,6 +140,7 @@ class _AppShellScreenState extends State<AppShellScreen> {
                   ],
                 ),
               ),
+              const IqamahBanner(),
               Expanded(child: _buildBody()),
             ],
           ),
@@ -111,7 +148,13 @@ class _AppShellScreenState extends State<AppShellScreen> {
         bottomNavigationBar: SafeArea(
           top: false,
           minimum: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-          child: _buildBottomNav(),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const MiniPlayer(),
+              _buildBottomNav(),
+            ],
+          ),
         ),
       ),
     );

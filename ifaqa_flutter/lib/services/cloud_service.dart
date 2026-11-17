@@ -7,6 +7,7 @@ import '../firebase_options.dart';
 import '../models/app_mode.dart';
 import '../models/tier.dart';
 import 'app_state.dart';
+import 'clan_service.dart';
 
 /// Account and shared data on the same Firebase project and document paths as
 /// the React app, so one account works in both.
@@ -26,6 +27,18 @@ class CloudService extends ChangeNotifier {
 
   bool get signedIn => user != null;
   FirebaseFirestore get _db => FirebaseFirestore.instance;
+
+  static const _adminEmails = ['ifaqaa@gmail.com', 'ifaqaadmin@gmail.com', 'dr.mahmoud.elhenawy@gmail.com'];
+  static const _adminUids = ['3jCyf2k6a3T7R3G8w81gqcgYgAR2'];
+
+  /// Same test as `isAdmin()` in firestore.rules, so admin screens only show
+  /// for accounts whose writes the rules will accept.
+  bool get isAdmin {
+    final u = user;
+    if (u == null) return false;
+    if (_adminUids.contains(u.uid)) return true;
+    return u.emailVerified && _adminEmails.contains(u.email?.toLowerCase());
+  }
 
   DocumentReference<Map<String, dynamic>> _profileRef(String uid) =>
       _db.doc('artifacts/$appId/users/$uid/stats/profile');
@@ -166,6 +179,7 @@ class CloudService extends ChangeNotifier {
     final u = user;
     if (u == null || amount == 0) return;
     final tier = getTierForXp(newTotal).name;
+    if (amount > 0) ClanService.instance.recordActivity(amount);
     _profileRef(u.uid)
         .update({'xp': FieldValue.increment(amount), 'tier': tier, 'lastActive': FieldValue.serverTimestamp()})
         .catchError((Object e) => debugPrint('xp sync failed: $e'));
