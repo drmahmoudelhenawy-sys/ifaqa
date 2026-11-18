@@ -69,6 +69,27 @@ class HomeWidgetSync with WidgetsBindingObserver {
     return '$h:${t.minute.toString().padLeft(2, '0')} ${t.period == DayPeriod.am ? 'ص' : 'م'}';
   }
 
+  static String _arabicDigits(int n) => n
+      .toString()
+      .split('')
+      .map((c) {
+        final code = c.codeUnitAt(0);
+        return code >= 48 && code <= 57
+            ? String.fromCharCode(0x0660 + code - 48)
+            : c;
+      })
+      .join();
+
+  /// "بعد ١ س ٢٣ د" / "بعد ٤٥ د" — time remaining to the next prayer, for the
+  /// home screen widget. Widgets only refresh every few minutes, so this is
+  /// minutes, not a live per-second countdown.
+  static String _countdownText(DateTime now, DateTime target) {
+    final mins = target.difference(now).inMinutes;
+    if (mins <= 0) return 'حان الآن';
+    if (mins < 60) return 'بعد ${_arabicDigits(mins)} د';
+    return 'بعد ${_arabicDigits(mins ~/ 60)} س ${_arabicDigits(mins % 60)} د';
+  }
+
   Future<void> push() async {
     if (!supported) return;
     try {
@@ -82,10 +103,24 @@ class HomeWidgetSync with WidgetsBindingObserver {
       final goal = q.khatma;
       final read = q.khatmaPagesRead;
       final period = ProphetSchedule.at(now).periodKey;
+      final nextToday = DateTime(
+        now.year,
+        now.month,
+        now.day,
+        next.time.hour,
+        next.time.minute,
+      );
+      final nextDateTime = nextToday.isAfter(now)
+          ? nextToday
+          : nextToday.add(const Duration(days: 1));
 
       await Future.wait([
         HomeWidget.saveWidgetData<String>('next_prayer_name', next.label),
         HomeWidget.saveWidgetData<String>('next_prayer_time', _fmt(next.time)),
+        HomeWidget.saveWidgetData<String>(
+          'next_prayer_countdown',
+          _countdownText(now, nextDateTime),
+        ),
         HomeWidget.saveWidgetData<String>('prayer_times_line', prayers.map((p) => '${p.label} ${_fmt(p.time)}').join('  ·  ')),
         HomeWidget.saveWidgetData<int>('salawat_count', ProphetChallengeService.instance.localCount(period)),
         HomeWidget.saveWidgetData<String>('quran_today', '${q.pagesOn(now)} صفحة اليوم'),

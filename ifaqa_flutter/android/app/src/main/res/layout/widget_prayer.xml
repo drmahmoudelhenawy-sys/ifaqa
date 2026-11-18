@@ -43,6 +43,16 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/next_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="بعد ١ س ٢٣ د"
+        android:textColor="#FCD34D"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/all_times"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -106,6 +106,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
   Timer? _collapseTimer;
   List<SirajDay> _days = const [];
   String _daysSignature = '';
+  SirajPrayer? _nextPrayer;
   late SirajState _state = _idleFallback();
   SirajConfig _config = const SirajConfig();
 
@@ -166,6 +167,18 @@ class _SirajCapsuleState extends State<SirajCapsule>
     if (sig != _daysSignature) {
       _daysSignature = sig;
       _days = buildSirajDays(app.location, now);
+    }
+    // The next prayer, for the prayer chip: the capsule always shows the
+    // prayer time, even while it is showing media, a quote or Athkar.
+    _nextPrayer = null;
+    for (final d in _days) {
+      for (final p in d.prayers) {
+        if (p.adhan.isAfter(now)) {
+          _nextPrayer = p;
+          break;
+        }
+      }
+      if (_nextPrayer != null) break;
     }
     final next = widget.preview
         ? _demoState(now)
@@ -357,12 +370,15 @@ class _SirajCapsuleState extends State<SirajCapsule>
           case SirajKind.adhanNow:
             w = 236;
           case SirajKind.athkarDue:
-            w = 220;
+            // Room for the prayer chip + the Athkar title.
+            w = 340;
           case SirajKind.quote:
-            w = 312;
+            // Room for the prayer chip + the quote.
+            w = 360;
             if (_state.title.length > 34) h = 58;
           case SirajKind.media:
-            w = 296;
+            // Room for the prayer chip + the track title + play button.
+            w = 360;
         }
       case _Mode.panel:
         w = 360;
@@ -529,6 +545,32 @@ class _SirajCapsuleState extends State<SirajCapsule>
     fontFeatures: const [FontFeature.tabularFigures()],
   );
 
+  /// "العصر ٠١:٢٣" — the next prayer and its countdown. Shown in every pill
+  /// that is not itself about a prayer, so the prayer time is always visible.
+  Widget _prayerChip(SirajTheme theme) {
+    final p = _nextPrayer;
+    if (p == null) return const SizedBox.shrink();
+    final left = p.adhan.difference(DateTime.now());
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(Icons.mosque_rounded, size: 15, color: theme.accent),
+        const SizedBox(width: 5),
+        Text(
+          '${p.label} ${sirajCountdown(left)}',
+          style: _t(12, color: theme.accent, weight: FontWeight.w900),
+        ),
+      ],
+    );
+  }
+
+  Widget _pillDivider() => Container(
+    width: 1,
+    height: 18,
+    margin: const EdgeInsets.symmetric(horizontal: 8),
+    color: Colors.white24,
+  );
+
   Widget _pill(SirajTheme theme, SirajState s) {
     final accent = theme.accent;
     Widget icon(IconData i, [Color? c]) =>
@@ -592,6 +634,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
         line = Row(
           mainAxisSize: MainAxisSize.min,
           children: [
+            _prayerChip(theme),
+            _pillDivider(),
             icon(
               s.athkar == SirajAthkar.morning
                   ? Icons.wb_sunny_rounded
@@ -612,6 +656,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
         line = Row(
           mainAxisSize: MainAxisSize.min,
           children: [
+            _prayerChip(theme),
+            _pillDivider(),
             icon(Icons.auto_awesome),
             const SizedBox(width: 8),
             Flexible(
@@ -629,7 +675,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
         final playing = AudioService.instance.playing || widget.preview;
         line = Row(
           children: [
-            const SizedBox(width: 6),
+            _prayerChip(theme),
+            _pillDivider(),
             icon(Icons.graphic_eq_rounded),
             const SizedBox(width: 8),
             Expanded(

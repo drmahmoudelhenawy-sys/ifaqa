@@ -17,7 +17,10 @@ const int sirajLiveLastId = 1099;
 const String sirajChannelId = 'siraj_live';
 
 /// The Android "live capsule": one ongoing, silent notification with a native
-/// count-down chronometer to the next prayer / iqamah.
+/// count-down chronometer to the next prayer / iqamah, visible on the status
+/// bar and the lock screen. Athkar windows add a reminder entry (still
+/// counting down to the next prayer) that hands back to the prayer countdown
+/// after 30 minutes.
 ///
 /// How it keeps going while the app is closed: the entry for "now" is shown
 /// immediately with id 1000. Every later adhan / iqamah end of the next two

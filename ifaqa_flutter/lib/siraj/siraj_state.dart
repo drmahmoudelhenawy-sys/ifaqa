@@ -425,9 +425,15 @@ class SirajLiveEntry {
   final String body;
 
   /// Where the native chronometer counts down to.
+  /// For Athkar entries this is still the next prayer: prayer time stays
+  /// the most important thing, even while an Athkar reminder is showing.
   final DateTime countdownTarget;
   final bool iqamahPhase;
   final String? prayerId;
+
+  /// True for an Athkar reminder entry.
+  final bool isAthkar;
+  final SirajAthkar? athkar;
 
   const SirajLiveEntry({
     required this.time,
@@ -436,6 +442,8 @@ class SirajLiveEntry {
     required this.countdownTarget,
     required this.iqamahPhase,
     this.prayerId,
+    this.isAthkar = false,
+    this.athkar,
   });
 
   @override
@@ -460,9 +468,54 @@ SirajLiveEntry _iqamahEntry(DateTime at, SirajPrayer p) => SirajLiveEntry(
   prayerId: p.id,
 );
 
+/// One Athkar reminder window: morning is Fajr+20min until Sunrise+3h,
+/// evening is Asr+15min until Maghrib (same windows as the in-app capsule).
+List<({DateTime start, DateTime end, SirajAthkar type})> _athkarWindows(
+  List<SirajDay> days,
+) {
+  final out = <({DateTime start, DateTime end, SirajAthkar type})>[];
+  for (final d in days) {
+    out.add((
+      start: d.prayer('fajr').adhan.add(athkarMorningAfterFajr),
+      end: d.sunrise.add(athkarMorningAfterSunrise),
+      type: SirajAthkar.morning,
+    ));
+    out.add((
+      start: d.prayer('asr').adhan.add(athkarEveningAfterAsr),
+      end: d.prayer('maghrib').adhan,
+      type: SirajAthkar.evening,
+    ));
+  }
+  out.sort((a, b) => a.start.compareTo(b.start));
+  return out;
+}
+
+SirajLiveEntry _athkarEntry(
+  DateTime at,
+  SirajAthkar type,
+  SirajPrayer next,
+) {
+  final label = type == SirajAthkar.morning ? 'أذكار الصباح' : 'أذكار المساء';
+  return SirajLiveEntry(
+    time: at,
+    title: 'سِراج · $label',
+    body: 'حان وقت $label · متبقٍ على أذان ${next.label} (${sirajClock(next.adhan)})',
+    // The chronometer keeps counting down to the next prayer.
+    countdownTarget: next.adhan,
+    iqamahPhase: false,
+    prayerId: next.id,
+    isAthkar: true,
+    athkar: type,
+  );
+}
+
 /// The chain of notifications for the next [horizon]: the first entry is "now"
 /// (post immediately), then one at every adhan (iqamah countdown) and every
-/// iqamah end (next-prayer countdown).
+/// iqamah end (next-prayer countdown). Athkar windows add one reminder entry
+/// at the window start (counting down to the next prayer, never hiding it)
+/// plus a prayer entry 30 minutes later so the capsule goes back to the
+/// prayer countdown. If "now" is already inside an Athkar window, the first
+/// (prayer) entry mentions the Athkar in its body instead of being replaced.
 List<SirajLiveEntry> planSirajLive({
   required DateTime now,
   required List<SirajDay> days,
@@ -508,6 +561,65 @@ List<SirajLiveEntry> planSirajLive({
       entries.add(_nextEntry(p.iqamah, prayers[i + 1]));
     }
   }
+
+  // Athkar reminders on the lock screen too (see doc comment above).
+  const athkarShow = Duration(minutes: 30);
+  final windows = _athkarWindows(days);
+  for (final w in windows) {
+    if (w.start.isAfter(end) || !w.end.isAfter(now)) continue;
+    // Next prayer after the window starts (the chronometer target).
+    SirajPrayer? nextAfterStart;
+    for (final p in prayers) {
+      if (p.adhan.isAfter(w.start)) {
+        nextAfterStart = p;
+        break;
+      }
+    }
+    if (nextAfterStart == null) continue;
+    if (w.start.isAfter(now)) {
+      entries.add(_athkarEntry(w.start, w.type, nextAfterStart));
+      final resumeAt = w.start.add(athkarShow);
+      if (resumeAt.isBefore(end) &&
+          resumeAt.isBefore(nextAfterStart.adhan)) {
+        entries.add(_nextEntry(resumeAt, nextAfterStart));
+      }
+    }
+  }
+
   entries.sort((a, b) => a.time.compareTo(b.time));
-  return entries;
+  // Dedupe by time: an Athkar entry wins a slot shared with a prayer entry
+  // (e.g. a morning window starting exactly at an iqamah end).
+  final deduped = <SirajLiveEntry>[];
+  for (final e in entries) {
+    if (deduped.isNotEmpty && deduped.last.time == e.time) {
+      if (e.isAthkar) deduped[deduped.length - 1] = e;
+      continue;
+    }
+    deduped.add(e);
+  }
+
+  // "Now" inside an Athkar window: mention it in the first entry's body,
+  // keeping its prayer title and countdown.
+  if (deduped.isNotEmpty) {
+    for (final w in windows) {
+      if (!now.isBefore(w.start) && now.isBefore(w.end)) {
+        final first = deduped.first;
+        if (!first.isAthkar) {
+          final label = w.type == SirajAthkar.morning
+              ? 'أذكار الصباح'
+              : 'أذكار المساء';
+          deduped[0] = SirajLiveEntry(
+            time: first.time,
+            title: first.title,
+            body: '$label الآن · ${first.body}',
+            countdownTarget: first.countdownTarget,
+            iqamahPhase: first.iqamahPhase,
+            prayerId: first.prayerId,
+          );
+        }
+        break;
+      }
+    }
+  }
+  return deduped;
 }

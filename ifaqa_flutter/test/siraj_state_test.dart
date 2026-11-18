@@ -187,8 +187,33 @@ void main() {
       }
       // Nothing is planned past the two-day horizon.
       expect(plan.last.time.isAfter(now.add(const Duration(days: 2))), isFalse);
-      // 2 days x 5 prayers x 2 transitions, roughly (minus today's already passed ones).
-      expect(plan.length, inInclusiveRange(18, 22));
+      // 2 days x 5 prayers x 2 transitions, roughly, plus Athkar reminders
+      // (one entry per window + one 30-minute resume entry; a morning window
+      // starting exactly at an iqamah end replaces that prayer entry).
+      expect(plan.length, inInclusiveRange(25, 29));
+    });
+
+    test('athkar windows appear on the lock screen without hiding prayer time', () {
+      final now = t(9, 0);
+      final plan = planSirajLive(now: now, days: days);
+      // "Now" is inside the morning Athkar window: the first (prayer) entry
+      // keeps its prayer title and countdown but mentions the Athkar.
+      expect(plan.first.title, contains('الظهر'));
+      expect(plan.first.countdownTarget, t(11, 50));
+      expect(plan.first.body, contains('أذكار الصباح'));
+      // Evening Athkar: its own entry at 14:55, still counting down to Maghrib.
+      final evening = plan.firstWhere((e) => e.isAthkar && e.athkar == SirajAthkar.evening);
+      expect(evening.time, t(14, 55));
+      expect(evening.title, contains('أذكار المساء'));
+      expect(evening.countdownTarget, t(17, 5));
+      // 30 minutes later the capsule goes back to the prayer countdown.
+      final resume = plan.firstWhere((e) => e.time == t(15, 25));
+      expect(resume.isAthkar, isFalse);
+      expect(resume.countdownTarget, t(17, 5));
+      // A morning window starting exactly at an iqamah end replaces that entry.
+      final morning = plan.firstWhere((e) => e.isAthkar && e.athkar == SirajAthkar.morning);
+      expect(morning.time, DateTime(2026, 11, 18, 5, 10));
+      expect(morning.countdownTarget, DateTime(2026, 11, 18, 11, 50));
     });
 
     test('starting inside the iqamah window counts down to the iqamah', () {

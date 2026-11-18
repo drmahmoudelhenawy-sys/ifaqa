@@ -30,7 +30,7 @@ class SirajSettings {
   static SirajConfig config() => SirajConfig(
     enabled: _s.flag(enabledKey, fallback: true),
     showInApp: _s.flag(inAppKey, fallback: true),
-    liveNotification: _s.flag(liveKey),
+    liveNotification: _s.flag(liveKey, fallback: true),
     theme: _s.text(themeKey) ?? 'night',
     autoHide: _s.flag(autoHideKey),
     dnd: _s.flag(dndKey),

@@ -21,6 +21,7 @@ class PrayerTimesWidget : HomeWidgetProvider() {
             val views = RemoteViews(context.packageName, R.layout.widget_prayer).apply {
                 setTextViewText(R.id.next_name, widgetData.getString("next_prayer_name", "الصلاة"))
                 setTextViewText(R.id.next_time, widgetData.getString("next_prayer_time", "--:--"))
+                setTextViewText(R.id.next_countdown, widgetData.getString("next_prayer_countdown", ""))
                 setTextViewText(R.id.all_times, widgetData.getString("prayer_times_line", "افتح التطبيق لتحديث المواقيت"))
                 setOnClickPendingIntent(R.id.widget_root, HomeWidgetLaunchIntent.getActivity(context, MainActivity::class.java))
             }

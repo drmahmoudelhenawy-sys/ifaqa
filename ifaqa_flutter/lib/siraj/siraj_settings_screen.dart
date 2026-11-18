@@ -183,7 +183,6 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen> {
                   'إشعار سِراج الحيّ (شريط الحالة وشاشة القفل)',
                   Icons.notifications_active,
                   SirajSettings.liveKey,
-                  fallback: false,
                   onChanged: (on) {
                     if (on) SirajLiveService.instance.ensurePermission();
                   },
