@@ -1,0 +1,89 @@
+﻿Resolving dependencies...
+Downloading packages...
+  _flutterfire_internals 1.3.79 (1.4.0 available)
+  audio_session 0.1.25 (0.2.4 available)
+  cloud_firestore 7.1.0 (7.2.0 available)
+  cloud_firestore_platform_interface 8.1.0 (8.2.0 available)
+  cloud_firestore_web 5.8.0 (5.9.0 available)
+  code_assets 1.2.1 (2.2.0 available)
+  crypto 3.0.7 (3.0.8 available)
+  dbus 0.7.15 (0.8.0 available)
+  firebase_auth 7.0.1 (7.1.0 available)
+  firebase_auth_platform_interface 9.1.2 (9.2.0 available)
+  firebase_auth_web 6.3.2 (6.4.0 available)
+  firebase_core 5.1.0 (5.2.0 available)
+  firebase_core_platform_interface 8.1.1 (8.2.0 available)
+  firebase_core_web 4.1.0 (4.2.0 available)
+  flutter_local_notifications 22.3.3 (23.0.2 available)
+  flutter_local_notifications_linux 8.0.2 (9.0.0 available)
+  flutter_local_notifications_platform_interface 12.2.0 (13.0.0 available)
+  flutter_local_notifications_web 1.0.0 (2.0.0 available)
+  flutter_local_notifications_windows 3.1.1 (4.0.1 available)
+  gsettings 0.2.8 (0.2.9 available)
+  hooks 2.0.2 (2.2.0 available)
+  jni 1.0.3 (1.1.2 available)
+  jni_flutter 1.0.3 (1.0.4+1 available)
+  just_audio 0.9.46 (0.10.6 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  objective_c 9.5.0 (9.6.4 available)
+  petitparser 7.0.2 (7.1.0 available)
+  record_use 0.6.0 (1.1.1 available)
+  shared_preferences_android 2.4.28 (2.5.5 available)
+  shared_preferences_foundation 2.5.7 (2.6.2 available)
+  synchronized 3.4.2 (3.6.1+1 available)
+  test_api 0.7.12 (0.7.15 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+35 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleRelease'...                        
+flutter : WARNING: A restricted method in java.lang.System has been called
+At line:1 char:1
++ flutter build apk --release 2>&1 | Out-File -Encoding utf8 build-log. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: A rest...has been called:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module 
+(file:/C:/Users/drmah/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: Your app uses the following plugins that apply Kotlin Gradle Plugin (KGP): firebase_auth, firebase_core, home_widget, on_audio_query_plus_android
+Future versions of Flutter will fail to build if your app uses plugins that apply KGP.
+
+Please check the changelogs of these plugins and upgrade to a version that supports Built-in Kotlin.
+If no such version exists, report the issue to the plugin. If necessary, here is a guide on filing
+an issue against a plugin: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers#report-incompatible-kotlin-gradl
+e-plugin-usage-to-plugin-authors
+
+If you are a plugin author, please migrate your plugin to Built-in Kotlin using this guide: 
+https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you 
+use versions of Android Studio and the command-line tools that were released at different times.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 22080 bytes (98.7% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+e: file:///E:/MyApps/ifaqa/ifaqa_flutter/android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajNotificationListener.kt:6:37 Unresolved reference 
+'RankingMap'.
+e: file:///E:/MyApps/ifaqa/ifaqa_flutter/android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajOverlayService.kt:24:36 Unresolved reference 
+'FlutterInjector'.
+e: file:///E:/MyApps/ifaqa/ifaqa_flutter/android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajOverlayService.kt:271:22 Unresolved reference 
+'FlutterInjector'.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 4m 47s
+Running Gradle task 'assembleRelease'...                          288.2s
+Gradle task assembleRelease failed with exit code 1
