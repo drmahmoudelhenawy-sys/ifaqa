@@ -9,7 +9,7 @@ import '../theme/app_colors.dart';
 import 'device_music.dart';
 import 'siraj_settings.dart';
 
-/// Device music is integrated: the `on_audio_query` package is a real
+/// Device music is integrated: the `on_audio_query_pluse` package is a real
 /// dependency and [DeviceMusicService] queries the device's audio files
 /// (playable ones only) and plays them through [AudioService]'s single
 /// shared player. Availability at runtime is "permission granted" —

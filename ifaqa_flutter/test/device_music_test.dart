@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ifaqa_flutter/siraj/device_music.dart';
-import 'package:on_audio_query/on_audio_query.dart';
+import 'package:on_audio_query_pluse/on_audio_query.dart';
 
 void main() {
   group('isUsableDeviceSong', () {

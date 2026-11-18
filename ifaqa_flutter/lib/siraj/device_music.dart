@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:on_audio_query/on_audio_query.dart';
+import 'package:on_audio_query_pluse/on_audio_query.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 /// One playable audio file found on the device.
@@ -69,7 +69,7 @@ enum DeviceMusicPermissionState {
 
 /// Queries on-device audio and owns the runtime permission for it.
 ///
-/// Availability is two parts: the `on_audio_query` package is present
+/// Availability is two parts: the `on_audio_query_pluse` package is present
 /// (enforced at compile time by this import) AND the OS permission is
 /// granted (checked here at runtime). Never query without the permission.
 class DeviceMusicService {
