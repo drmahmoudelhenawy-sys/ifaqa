@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../models/app_mode.dart';
 import '../models/nav_page.dart';
@@ -28,7 +30,8 @@ class AppShellScreen extends StatefulWidget {
   State<AppShellScreen> createState() => _AppShellScreenState();
 }
 
-class _AppShellScreenState extends State<AppShellScreen> {
+class _AppShellScreenState extends State<AppShellScreen>
+    with WidgetsBindingObserver {
   final AppState _state = AppState.instance;
   late NavPage currentPage = widget.initialPage;
 
@@ -39,16 +42,42 @@ class _AppShellScreenState extends State<AppShellScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _state.addListener(_onStateChanged);
     CloudService.instance.addListener(_maybeShowAnnouncement);
     _maybeShowAnnouncement();
+    unawaited(_applyPendingTab());
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _state.removeListener(_onStateChanged);
     CloudService.instance.removeListener(_maybeShowAnnouncement);
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // The overlay capsule can ask the app to open on a tab (tap /
+    // long-press mapped to prayer times / Siraj tab): it leaves a
+    // `siraj_pending_tab` flag in SharedPreferences and opens the app.
+    // The flag is written by the overlay isolate, so reload prefs first.
+    if (state == AppLifecycleState.resumed) {
+      unawaited(_applyPendingTab());
+    }
+  }
+
+  /// Opens the tab the overlay capsule asked for, if any, and clears the
+  /// flag. No-op when nothing was requested.
+  Future<void> _applyPendingTab() async {
+    await _state.reloadPrefs();
+    final tab = _state.text('siraj_pending_tab');
+    if (tab == null || tab.isEmpty || !mounted) return;
+    _state.setText('siraj_pending_tab', '');
+    setState(() {
+      currentPage = tab == 'siraj' ? NavPage.siraj : NavPage.prayerTimes;
+    });
   }
 
   bool _announcementChecked = false;

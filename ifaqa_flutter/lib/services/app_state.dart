@@ -12,6 +12,12 @@ class AppLocation {
   const AppLocation({required this.latitude, required this.longitude, required this.isDefault});
 
   static const AppLocation cairo = AppLocation(latitude: 30.0444, longitude: 31.2357, isDefault: true);
+
+  /// Sohag (26.5569, 31.6948) — the user's home city and the default
+  /// location everywhere (prayer times, overlay, widget, live
+  /// notification) until the user saves another one via GPS
+  /// ([AppState.refreshLocation]) or the location settings.
+  static const AppLocation sohag = AppLocation(latitude: 26.5569, longitude: 31.6948, isDefault: true);
 }
 
 /// Everything the user does on this device. Backed by shared_preferences, so it
@@ -114,6 +120,15 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Re-reads SharedPreferences from disk. Another isolate — the Siraj
+  /// overlay — may have written while this isolate was paused (e.g. the
+  /// `siraj_pending_tab` flag the overlay sets when the user taps the
+  /// capsule to open a tab), so the in-memory cache can be stale.
+  Future<void> reloadPrefs() async {
+    await _prefs.reload();
+    notifyListeners();
+  }
+
   // ---- Daily log ----
   Map<String, dynamic> _day(DateTime date) {
     final raw = _prefs.getString('day_${dateKey(date)}');
@@ -178,7 +193,7 @@ class AppState extends ChangeNotifier {
   AppLocation get location {
     final lat = _prefs.getDouble('loc_lat');
     final lon = _prefs.getDouble('loc_lon');
-    if (lat == null || lon == null) return AppLocation.cairo;
+    if (lat == null || lon == null) return AppLocation.sohag;
     return AppLocation(latitude: lat, longitude: lon, isDefault: false);
   }
 

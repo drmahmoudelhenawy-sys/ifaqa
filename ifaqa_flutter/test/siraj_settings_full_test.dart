@@ -30,6 +30,20 @@ void main() {
       expect(c.showPrayer, isTrue);
       expect(c.capsuleWidthFrac, 0.92);
       expect(c.capsuleHeight, 44.0);
+      // Small capsule, pill shape, fade animation, and the current
+      // gesture behaviour (tap: prayer times, long-press: Siraj tab).
+      expect(c.capsuleSize, 'small');
+      expect(c.capsuleShape, 'pill');
+      expect(c.capsuleAnimation, 'fade');
+      expect(c.gestureTap, 'prayer_times');
+      expect(c.gestureDoubleTap, 'none');
+      expect(c.gestureLongPress, 'siraj_tab');
+      expect(c.gestureSwipeUp, 'prayer_times');
+      expect(c.gestureSwipeDown, 'none');
+      expect(c.gestureSwipeLeft, 'none');
+      expect(c.gestureSwipeRight, 'none');
+      // "اقرأ لاحقًا" from a notification re-reminds after 15 minutes.
+      expect(c.athkarSnoozeMinutes, 15);
       expect(c.showAthkar, isTrue);
       expect(c.showQuotes, isTrue);
       expect(c.showMedia, isTrue);

@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 
-import '../data/athkar_data.dart';
 import '../models/prayer.dart';
 import '../models/zekr.dart';
-import '../screens/athkar_screen.dart';
 import '../screens/masbaha_screen.dart';
 import '../screens/quran_reader_screen.dart';
 import '../services/app_state.dart';
 import '../services/audio_service.dart';
 import '../services/islamic_calendar_service.dart';
 import '../services/mushaf_service.dart';
+import '../services/reminder_service.dart';
 import '../theme/app_colors.dart';
+import 'siraj_island_views.dart';
 import 'siraj_reminders.dart';
 import 'siraj_settings.dart';
 import 'siraj_state.dart';
@@ -71,7 +71,7 @@ const List<SirajTheme> sirajThemes = [
 SirajTheme sirajThemeById(String? id) =>
     sirajThemes.firstWhere((t) => t.id == id, orElse: () => sirajThemes.first);
 
-enum _Mode { none, panel, card }
+enum _Mode { none, panel, card, tasbih }
 
 /// Dynamic-Island-style capsule. Mount it inside a Stack (it fills it, but only
 /// the capsule and, while expanded, a tap-outside scrim take touches).
@@ -104,6 +104,13 @@ class _SirajCapsuleState extends State<SirajCapsule>
     vsync: this,
     value: 38,
   );
+  // Entrance animation (fade + scale/slide, once on mount). The capsule
+  // rebuilds every second, but the controller is created once, so the
+  // entrance plays only when the capsule first appears.
+  late final AnimationController _entrance = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 320),
+  );
   Size? _lastTarget;
 
   Timer? _tick;
@@ -122,10 +129,6 @@ class _SirajCapsuleState extends State<SirajCapsule>
   bool _pinned = false;
   bool _ready = false;
   int _demo = 0;
-  int _zekrCount = 0;
-  String? _zekrKey;
-
-  /// In-progress drag offsets (applied visually until drag end persists them).
   double _dragDx = 0;
   double _dragDy = 0;
 
@@ -143,6 +146,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
     AudioService.instance.addListener(_recompute);
     _recompute();
     _tick = Timer.periodic(const Duration(seconds: 1), (_) => _recompute());
+    _entrance.forward();
   }
 
   @override
@@ -160,6 +164,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
     AudioService.instance.removeListener(_recompute);
     _w.dispose();
     _h.dispose();
+    _entrance.dispose();
     super.dispose();
   }
 
@@ -419,13 +424,45 @@ class _SirajCapsuleState extends State<SirajCapsule>
     _syncSize();
   }
 
-  void _openCard(SirajState s) {
+  void _openCard(SirajState s, {int collapseSecs = 25}) {
     _touch();
     setState(() {
       _mode = _Mode.card;
       _card = s;
     });
-    _armCollapse(25);
+    _armCollapse(collapseSecs);
+    _syncSize();
+  }
+
+  /// Opens the Athkar reader card for [type] (from the panel button):
+  /// the full Athkar text readable inside the island, no need to open
+  /// the app's Athkar screen. A long collapse window — reading 24 zekr
+  /// takes longer than a reminder glance; every interaction re-arms it.
+  void _openAthkarReader(SirajAthkar type) {
+    _openCard(
+      SirajState(
+        kind: SirajKind.athkarDue,
+        title: type == SirajAthkar.morning
+            ? 'أذكار الصباح'
+            : 'أذكار المساء',
+        subtitle: 'اقرأها من هنا',
+        priority: 70,
+        key: 'panel-athkar-${type.name}',
+        athkar: type,
+      ),
+      collapseSecs: 120,
+    );
+  }
+
+  /// Opens the Tasbih counter card (from the panel button): the same
+  /// counter as the Masbaha screen, inside the island.
+  void _openTasbih() {
+    _touch();
+    setState(() {
+      _mode = _Mode.tasbih;
+      _card = null;
+    });
+    _armCollapse(120);
     _syncSize();
   }
 
@@ -451,57 +488,142 @@ class _SirajCapsuleState extends State<SirajCapsule>
     }
   }
 
+  // ---- Configurable gestures ----
+
+  /// Runs a mapped gesture action (see [sirajGestureActions]). In preview
+  /// mode every gesture just cycles the demo state. 'prayer_times' is
+  /// today's prayer times ([_onTap]: panel or card by state);
+  /// 'siraj_tab' opens the Siraj tab; 'play_pause' toggles music;
+  /// 'dismiss' hides the current reminder; 'none' does nothing.
+  void _runGesture(String action) {
+    if (widget.preview) {
+      _onTap();
+      return;
+    }
+    _touch();
+    switch (action) {
+      case 'siraj_tab':
+        widget.onOpenSirajTab?.call();
+      case 'play_pause':
+        unawaited(AudioService.instance.toggle());
+      case 'dismiss':
+        _dismissCurrent();
+      case 'none':
+        break;
+      case 'prayer_times':
+      default:
+        _onTap();
+    }
+  }
+
+  /// Hides the current reminder: the current state will not auto-open its
+  /// card again, and an open panel/card collapses.
+  void _dismissCurrent() {
+    _dismissed.add(_state.key);
+    if (_card != null) _dismissed.add(_card!.key);
+    if (_mode != _Mode.none) _collapse();
+  }
+
+  /// A fast fling at the end of a drag is a swipe, not a drag: run the
+  /// mapped swipe action instead of persisting the drag position. Returns
+  /// true when the gesture was consumed as a swipe. Only while collapsed;
+  /// while expanded, swiping up still collapses (see onVerticalDragEnd).
+  bool _handleSwipeEnd(DragEndDetails d) {
+    if (_mode != _Mode.none || widget.preview) return false;
+    final v = d.velocity.pixelsPerSecond;
+    if (v.distance < 700) return false;
+    final action = _dragDx.abs() > _dragDy.abs()
+        ? (_dragDx > 0
+              ? _config.gestureSwipeRight
+              : _config.gestureSwipeLeft)
+        : (_dragDy > 0
+              ? _config.gestureSwipeDown
+              : _config.gestureSwipeUp);
+    if (action == 'none') return false;
+    setState(() {
+      _dragDx = 0;
+      _dragDy = 0;
+    });
+    _runGesture(action);
+    return true;
+  }
+
   // ---- Size / spring ----
 
-  Size _targetSize(double screenW) {
+  Size _targetSize() {
+    final mq = MediaQuery.of(context);
+    final screenW = mq.size.width;
     final maxW = screenW - 24;
     if (_hidden) return const Size(56, 7);
     double w;
     double h;
     switch (_mode) {
       case _Mode.none:
-        // Configured capsule height (36–64), default 44.
-        h = _config.capsuleHeight.clamp(36.0, 64.0);
-        switch (_state.kind) {
-          case SirajKind.idle:
-            w = 200;
-          case SirajKind.iqamah:
-            w = 236;
-          case SirajKind.adhanNow:
-            w = 236;
-          case SirajKind.athkarDue:
-            // Room for the prayer chip + the Athkar title.
-            w = 340;
-          case SirajKind.quote:
-            // Room for the prayer chip + the quote.
-            w = 360;
-            if (_state.title.length > 34) h = 58;
-          case SirajKind.media:
-            // Room for the prayer chip + the track title + play button.
-            w = 360;
+        if (_config.capsuleShape == 'circle') {
+          // Round badge (next prayer + countdown); the ring shows the
+          // progress to the next adhan.
+          final d = sirajCapsuleCircleDiameter(_config);
+          w = d;
+          h = d;
+        } else {
+          // Collapsed pill: shared sizing with the overlay
+          // ([sirajCapsulePillSize]) — the size preset scales it (default
+          // small, compact), the width fraction caps it as before. The
+          // expanded panel/card below are not the capsule and do not scale.
+          final pill = sirajCapsulePillSize(
+            kind: _state.kind,
+            config: _config,
+            titleLength: _state.title.length,
+            maxWidth: math.min(
+              screenW * _config.capsuleWidthFrac.clamp(0.5, 1.0),
+              screenW - 24,
+            ),
+          );
+          w = pill.width;
+          h = pill.height;
         }
-        // Width fraction caps the pill width (default 0.92 ≈ full width).
-        w = math.min(w, screenW * _config.capsuleWidthFrac.clamp(0.5, 1.0));
       case _Mode.panel:
         w = 360;
-        h = 340;
+        // Fit the screen: the panel must end above the screen bottom
+        // (safe area + margin), so on short screens / large fonts the
+        // bottom action buttons are reachable, not clipped.
+        h = sirajExpandedHeight(
+          preferred: 340,
+          screenHeight: mq.size.height,
+          top: mq.padding.top + 6 + _config.capsuleTopOffset,
+          bottomPadding: mq.padding.bottom,
+        );
       case _Mode.card:
         w = 360;
-        switch (_card?.kind) {
-          case SirajKind.adhanNow:
-            h = 168;
-          case SirajKind.athkarDue:
-            h = 290;
-          default:
-            h = 138;
-        }
+        final preferred = switch (_card?.kind) {
+          SirajKind.adhanNow => 168.0,
+          // The reader shows the full Athkar list (24/23 zekr) and
+          // scrolls inside the capped height — 460 dp gives room to
+          // read several zekr at once without scrolling every line.
+          SirajKind.athkarDue => 460.0,
+          _ => 138.0,
+        };
+        h = sirajExpandedHeight(
+          preferred: preferred,
+          screenHeight: mq.size.height,
+          top: mq.padding.top + 6 + _config.capsuleTopOffset,
+          bottomPadding: mq.padding.bottom,
+        );
+      case _Mode.tasbih:
+        w = 360;
+        h = sirajExpandedHeight(
+          preferred: 430,
+          screenHeight: mq.size.height,
+          top: mq.padding.top + 6 + _config.capsuleTopOffset,
+          bottomPadding: mq.padding.bottom,
+        );
     }
     return Size(math.min(w, maxW), h);
   }
 
   void _syncSize() {
     if (!mounted) return;
-    final target = _targetSize(MediaQuery.sizeOf(context).width);
+    final target = _targetSize();
     if (_lastTarget == target) return;
     _lastTarget = target;
     _w.animateWith(
@@ -556,22 +678,77 @@ class _SirajCapsuleState extends State<SirajCapsule>
     );
   }
 
+  /// Transition for the collapsed ↔ expanded switch, by the animation
+  /// style setting: fade + scale, slide down + fade, or none (instant).
+  Widget _expandTransition(Widget child, Animation<double> animation) {
+    return switch (_config.capsuleAnimation) {
+      'slide' => SlideTransition(
+        position:
+            Tween(
+              begin: const Offset(0, -0.08),
+              end: Offset.zero,
+            ).animate(animation),
+        child: FadeTransition(opacity: animation, child: child),
+      ),
+      'off' => child,
+      _ => ScaleTransition(
+        scale: Tween(begin: 0.96, end: 1.0).animate(animation),
+        child: FadeTransition(opacity: animation, child: child),
+      ),
+    };
+  }
+
+  /// Entrance wrapper: fade + scale (or slide down) once on mount, by the
+  /// animation style setting. The child is built once and reused, so the
+  /// per-second rebuilds do not restart the entrance.
+  Widget _entranceWrap(Widget child) {
+    if (_config.capsuleAnimation == 'off') return child;
+    final slide = _config.capsuleAnimation == 'slide';
+    return AnimatedBuilder(
+      animation: _entrance,
+      builder: (context, child) {
+        final t = _entrance.value;
+        return Opacity(
+          opacity: t,
+          child: Transform.translate(
+            offset: Offset(0, slide ? (1 - t) * -10 : 0),
+            child: Transform.scale(
+              scale: slide ? 1.0 : 0.94 + 0.06 * t,
+              child: child,
+            ),
+          ),
+        );
+      },
+      child: child,
+    );
+  }
+
   Widget _capsule(SirajTheme theme) {
     final target = _lastTarget ?? const Size(196, 38);
     // Dragging is only active while the capsule is collapsed: while
     // expanded, the swipe-up-to-collapse gesture keeps working.
     final canDrag =
         !widget.preview && _config.capsuleDraggable && _mode == _Mode.none;
-    return GestureDetector(
-      onTap: _onTap,
-      onLongPress: widget.preview ? null : widget.onOpenSirajTab,
+    final gestures = GestureDetector(
+      // Configurable gestures (see _runGesture): tap opens today's prayer
+      // times and long-press opens the Siraj tab by default. Adding
+      // onDoubleTap makes a single tap wait briefly for a second tap —
+      // the price of a configurable double-tap.
+      onTap: () => _runGesture(_config.gestureTap),
+      onDoubleTap: () => _runGesture(_config.gestureDoubleTap),
+      onLongPress: () => _runGesture(_config.gestureLongPress),
       onPanUpdate: canDrag
           ? (d) => setState(() {
               _dragDx += d.delta.dx;
               _dragDy += d.delta.dy;
             })
           : null,
-      onPanEnd: canDrag ? (_) => _finishDrag() : null,
+      onPanEnd: canDrag
+          ? (d) {
+              if (_handleSwipeEnd(d)) return;
+              _finishDrag();
+            }
+          : null,
       onVerticalDragEnd: (d) {
         if ((d.primaryVelocity ?? 0) < -150 && _mode != _Mode.none) _collapse();
       },
@@ -580,7 +757,10 @@ class _SirajCapsuleState extends State<SirajCapsule>
         builder: (context, _) {
           final w = math.max(24.0, _w.value);
           final h = math.max(6.0, _h.value);
-          final radius = math.min(h / 2, 30.0);
+          // A circle stays a circle (full radius); a pill caps at 30.
+          final radius = _config.capsuleShape == 'circle'
+              ? h / 2
+              : math.min(h / 2, 30.0);
           return Opacity(
             opacity: _config.capsuleOpacity.clamp(0.5, 1.0),
             child: Container(
@@ -623,7 +803,10 @@ class _SirajCapsuleState extends State<SirajCapsule>
                   child: _hidden
                       ? const SizedBox.shrink()
                       : AnimatedSwitcher(
-                          duration: const Duration(milliseconds: 220),
+                          duration: _config.capsuleAnimation == 'off'
+                              ? Duration.zero
+                              : const Duration(milliseconds: 220),
+                          transitionBuilder: _expandTransition,
                           child: KeyedSubtree(
                             key: ValueKey(
                               '${_mode.name}-${_card?.key ?? _state.key}',
@@ -639,14 +822,20 @@ class _SirajCapsuleState extends State<SirajCapsule>
         },
       ),
     );
+    return _entranceWrap(gestures);
   }
 
   Widget _content(SirajTheme theme) {
     switch (_mode) {
       case _Mode.none:
+        if (_config.capsuleShape == 'circle') {
+          return _circleBadge(theme, _effectivePillState(_state));
+        }
         return _pill(theme, _effectivePillState(_state));
       case _Mode.panel:
         return _panel(theme);
+      case _Mode.tasbih:
+        return _tasbihCard(theme);
       case _Mode.card:
         final c = _card ?? _state;
         switch (c.kind) {
@@ -660,6 +849,44 @@ class _SirajCapsuleState extends State<SirajCapsule>
             return _panel(theme);
         }
     }
+  }
+
+  /// Round badge: next prayer + countdown, with a progress ring showing
+  /// how much of the interval to the next adhan has elapsed. Prayer time
+  /// is always visible, even in this minimal form — the badge is the
+  /// circle the user can park around the camera punch-hole.
+  Widget _circleBadge(SirajTheme theme, SirajState s) {
+    final d = sirajCapsuleCircleDiameter(_config);
+    final p = _nextPrayer;
+    final left = p?.adhan.difference(DateTime.now());
+    final progress = sirajPrayerProgress(now: DateTime.now(), days: _days);
+    return SizedBox(
+      width: d,
+      height: d,
+      child: CustomPaint(
+        painter: _RingPainter(progress: progress, color: theme.accent),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                p?.label ?? 'سِراج',
+                style: _t(
+                  9.5,
+                  color: theme.accent,
+                  weight: FontWeight.w900,
+                ),
+              ),
+              if (left != null)
+                Text(
+                  sirajFormatCountdown(left, _config.countdownFormat),
+                  style: _t(11.5, weight: FontWeight.w900),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   // ---- Pill ----
@@ -893,189 +1120,203 @@ class _SirajCapsuleState extends State<SirajCapsule>
   );
 
   Widget _adhanCard(SirajTheme theme, SirajState s) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 16, 18, 14),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 44,
-                height: 44,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: theme.accent.withValues(alpha: 0.14),
-                  border: Border.all(
-                    color: theme.accent.withValues(alpha: 0.4),
-                  ),
-                ),
-                child: Icon(
-                  Icons.mosque_rounded,
-                  color: theme.accent,
-                  size: 22,
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    // Scrollable like the panel (see _panel): large fonts must not clip
+    // the bottom buttons.
+    final bottomSafe = MediaQuery.paddingOf(context).bottom;
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(18, 16, 18, 14 + bottomSafe),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
                   children: [
-                    Text(s.title, style: _t(15, weight: FontWeight.w900)),
-                    const SizedBox(height: 2),
-                    Text(
-                      s.subtitle,
-                      style: _t(
-                        12,
-                        color: Colors.white60,
-                        weight: FontWeight.w700,
+                    Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: theme.accent.withValues(alpha: 0.14),
+                        border: Border.all(
+                          color: theme.accent.withValues(alpha: 0.4),
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.mosque_rounded,
+                        color: theme.accent,
+                        size: 22,
                       ),
                     ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            s.title,
+                            style: _t(15, weight: FontWeight.w900),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            s.subtitle,
+                            style: _t(
+                              12,
+                              color: Colors.white60,
+                              weight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    _pinButton(theme),
                   ],
                 ),
-              ),
-              _pinButton(theme),
-            ],
-          ),
-          const Spacer(),
-          Row(
-            children: [
-              _btn('صليت ✓', () {
-                final id = s.prayerId;
-                final date = s.prayerDate;
-                if (id != null && date != null && !widget.preview) {
-                  AppState.instance.setPrayerStatus(
-                    date,
-                    id,
-                    PrayerStatus.ontime,
-                  );
-                  }
-                _collapse();
-              }, bg: AppColors.emerald600),
-              const SizedBox(width: 10),
-              _btn(
-                'لاحقًا',
-                _collapse,
-                bg: Colors.white10,
-                outline: true,
-                fg: Colors.white70,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Zekr _counterZekr(SirajAthkar type) {
-    final id = type == SirajAthkar.morning ? 'm15' : 'e15';
-    final list = type == SirajAthkar.morning ? morningAdhkar : eveningAdhkar;
-    return list.firstWhere((z) => z.id == id, orElse: () => list.first);
-  }
-
-  Widget _athkarCard(SirajTheme theme, SirajState s) {
-    final type = s.athkar ?? SirajAthkar.morning;
-    final zekr = _counterZekr(type);
-    if (_zekrKey != s.key) {
-      _zekrKey = s.key;
-      _zekrCount = 0;
-    }
-    final done = _zekrCount >= zekr.count;
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Row(
-            children: [
-              Icon(
-                type == SirajAthkar.morning
-                    ? Icons.wb_sunny_rounded
-                    : Icons.nights_stay_rounded,
-                color: theme.accent,
-                size: 20,
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(s.title, style: _t(15, weight: FontWeight.w900)),
-              ),
-              _pinButton(theme),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Expanded(
-            child: Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    if (done) return;
-                    HapticFeedback.selectionClick();
-                    setState(() => _zekrCount++);
-                    _touch();
-                    _armCollapse(30);
-                  },
-                  child: SizedBox(
-                    width: 78,
-                    height: 78,
-                    child: CustomPaint(
-                      painter: _RingPainter(
-                        progress: _zekrCount / zekr.count,
-                        color: done ? AppColors.emerald400 : theme.accent,
-                      ),
-                      child: Center(
-                        child: done
-                            ? const Icon(
-                                Icons.check_rounded,
-                                color: AppColors.emerald400,
-                                size: 34,
-                              )
-                            : Text(
-                                sirajArabicDigits(zekr.count - _zekrCount),
-                                style: _t(
-                                  24,
-                                  color: Colors.white,
-                                  weight: FontWeight.w900,
-                                ),
-                              ),
-                      ),
+                const Spacer(),
+                Row(
+                  children: [
+                    _btn('صليت ✓', () {
+                      final id = s.prayerId;
+                      final date = s.prayerDate;
+                      if (id != null && date != null && !widget.preview) {
+                        AppState.instance.setPrayerStatus(
+                          date,
+                          id,
+                          PrayerStatus.ontime,
+                        );
+                      }
+                      _collapse();
+                    }, bg: AppColors.emerald600),
+                    const SizedBox(width: 10),
+                    _btn(
+                      'لاحقًا',
+                      _collapse,
+                      bg: Colors.white10,
+                      outline: true,
+                      fg: Colors.white70,
                     ),
-                  ),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Text(
-                    zekr.text,
-                    style: _t(
-                      16,
-                      font: 'Amiri',
-                      weight: FontWeight.w700,
-                      color: Colors.white,
-                    ).copyWith(height: 1.7),
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                  ],
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              _btn(
-                'افتح الأذكار كاملة',
-                () => _openAthkar(type),
-                bg: Colors.white10,
-                outline: true,
-                fg: Colors.white70,
-              ),
-              const SizedBox(width: 10),
-              _btn('تم', () {
-                if (!widget.preview) SirajSettings.markAthkarDone(type);
-                _collapse();
-              }, bg: AppColors.emerald600),
-            ],
+        ),
+      ),
+    );
+  }
+
+  /// Today's Asr time (for the Athkar type default); 15:00 when the
+  /// days are not loaded yet — same fallback as the panel.
+  DateTime _todayAsr() {
+    final now = DateTime.now();
+    for (final d in _days) {
+      if (sirajSameDay(d.date, now)) return d.prayer('asr').adhan;
+    }
+    return DateTime(now.year, now.month, now.day, 15);
+  }
+
+  /// The Athkar card is now the full reader (see SirajAthkarReaderView):
+  /// the whole morning/evening list, readable inside the island, with a
+  /// morning/evening chooser — no need to open the app's Athkar screen.
+  /// "اقرأ لاحقًا" schedules a re-reminder (10/15/30/60) and "تم" marks
+  /// the day's Athkar done. Scrollable like the panel (see _panel): the
+  /// list is long, so it scrolls inside the capped card height.
+  Widget _athkarCard(SirajTheme theme, SirajState s) {
+    final type = s.athkar ?? sirajAthkarTypeForTime(DateTime.now(), _todayAsr());
+    final bottomSafe = MediaQuery.paddingOf(context).bottom;
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(18, 14, 18, 14 + bottomSafe),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      type == SirajAthkar.morning
+                          ? Icons.wb_sunny_rounded
+                          : Icons.nights_stay_rounded,
+                      color: theme.accent,
+                      size: 20,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        s.title,
+                        style: _t(15, weight: FontWeight.w900),
+                      ),
+                    ),
+                    _pinButton(theme),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                SirajAthkarReaderView(
+                  initialType: type,
+                  accent: theme.accent,
+                  onDone: (t) {
+                    if (!widget.preview) {
+                      SirajSettings.markAthkarDone(t);
+                    }
+                    _collapse();
+                  },
+                  onSnooze: (t, minutes) async {
+                    if (!widget.preview) {
+                      await ReminderService.snoozeAthkar(t.name, minutes);
+                      ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'سأذكّرك بأذكار ${t == SirajAthkar.morning ? 'الصباح' : 'المساء'} بعد ${sirajArabicDigits(minutes)} دقيقة',
+                          ),
+                        ),
+                      );
+                    }
+                    _collapse();
+                  },
+                  onInteract: () {
+                    _touch();
+                    _armCollapse(120);
+                  },
+                ),
+              ],
+            ),
           ),
-        ],
+        ),
+      ),
+    );
+  }
+
+  /// The Tasbih counter card: the same counter as the Masbaha screen,
+  /// inside the island. "فتح المسبحة كاملة" opens the full screen.
+  Widget _tasbihCard(SirajTheme theme) {
+    final bottomSafe = MediaQuery.paddingOf(context).bottom;
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(18, 14, 18, 14 + bottomSafe),
+            child: SirajTasbihView(
+              accent: theme.accent,
+              onOpenFull: () {
+                _collapse();
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const MasbahaScreen(),
+                  ),
+                );
+              },
+              onInteract: () {
+                _touch();
+                _armCollapse(120);
+              },
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -1263,79 +1504,88 @@ class _SirajCapsuleState extends State<SirajCapsule>
       ),
     );
 
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(14, 14, 14, 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6),
-            child: Row(
+    // Scrollable + fit-to-screen: the box height is capped by
+    // _targetSize, but large fonts / short screens can still make the
+    // content taller than the box — the bottom action buttons used to get
+    // clipped. The ConstrainedBox keeps the actions pinned to the bottom
+    // when the content is short (as before) and the scroll view takes
+    // over when it is tall. Bottom padding includes the safe area.
+    final bottomSafe = MediaQuery.paddingOf(context).bottom;
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(14, 14, 14, 12 + bottomSafe),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Icon(Icons.nightlight_round, color: theme.accent, size: 18),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: Row(
                     children: [
-                      Text(
-                        sirajArabicDigits(hijri.label),
-                        style: _t(13.5, weight: FontWeight.w900),
+                      Icon(
+                        Icons.nightlight_round,
+                        color: theme.accent,
+                        size: 18,
                       ),
-                      Text(
-                        greg,
-                        style: _t(
-                          11,
-                          color: Colors.white54,
-                          weight: FontWeight.w700,
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              sirajArabicDigits(hijri.label),
+                              style: _t(13.5, weight: FontWeight.w900),
+                            ),
+                            Text(
+                              greg,
+                              style: _t(
+                                11,
+                                color: Colors.white54,
+                                weight: FontWeight.w700,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
+                      _pinButton(theme),
                     ],
                   ),
                 ),
-                _pinButton(theme),
+                const SizedBox(height: 8),
+                if (today != null) ...today.prayers.map(row),
+                const Spacer(),
+                Row(
+                  children: [
+                    action(
+                      morning
+                          ? Icons.wb_sunny_rounded
+                          : Icons.nights_stay_rounded,
+                      morning ? 'أذكار الصباح' : 'أذكار المساء',
+                      () => _openAthkarReader(
+                        type == AthkarType.morning
+                            ? SirajAthkar.morning
+                            : SirajAthkar.evening,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    action(
+                      Icons.menu_book_rounded,
+                      'تابع المصحف',
+                      _openMushaf,
+                    ),
+                    const SizedBox(width: 8),
+                    action(
+                      Icons.touch_app_rounded,
+                      'المسبحة',
+                      _openTasbih,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
-          const SizedBox(height: 8),
-          if (today != null) ...today.prayers.map(row),
-          const Spacer(),
-          Row(
-            children: [
-              action(
-                morning ? Icons.wb_sunny_rounded : Icons.nights_stay_rounded,
-                morning ? 'أذكار الصباح' : 'أذكار المساء',
-                () => _openAthkar(
-                  type == AthkarType.morning
-                      ? SirajAthkar.morning
-                      : SirajAthkar.evening,
-                ),
-              ),
-              const SizedBox(width: 8),
-              action(Icons.menu_book_rounded, 'تابع المصحف', _openMushaf),
-              const SizedBox(width: 8),
-              action(Icons.touch_app_rounded, 'المسبحة', () {
-                _collapse();
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => const MasbahaScreen()),
-                );
-              }),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _openAthkar(SirajAthkar type) {
-    final nav = Navigator.of(context);
-    _collapse();
-    nav.push(
-      MaterialPageRoute(
-        builder: (_) => AthkarScreen(
-          type: type == SirajAthkar.morning
-              ? AthkarType.morning
-              : AthkarType.evening,
         ),
       ),
     );

@@ -4,17 +4,8 @@ import 'package:flutter/services.dart';
 import '../models/masbaha_theme.dart';
 import '../services/app_state.dart';
 import '../services/clan_service.dart';
+import '../siraj/siraj_island_views.dart';
 import '../theme/app_colors.dart';
-
-const List<String> _defaultZekrList = [
-  'سبحان الله',
-  'الحمد لله',
-  'الله أكبر',
-  'لا إله إلا الله',
-  'أستغفر الله',
-  'اللهم صل على محمد',
-  'لا حول ولا قوة إلا بالله',
-];
 
 class MasbahaScreen extends StatefulWidget {
   const MasbahaScreen({super.key});
@@ -26,17 +17,18 @@ class MasbahaScreen extends StatefulWidget {
 class _MasbahaScreenState extends State<MasbahaScreen> {
   final AppState _state = AppState.instance;
   late int count = _state.number('masbaha_count');
+  late int goal = _state.number('masbaha_goal', fallback: sirajTasbihGoalDefault);
   late MasbahaTheme theme = masbahaThemes[_state.number('masbaha_theme').clamp(0, masbahaThemes.length - 1)];
   late List<String> customList = List<String>.of(_state.strings('masbaha_custom'));
   late String selectedZekr = _initialZekr();
   bool animate = false;
   final TextEditingController newZekrController = TextEditingController();
 
-  List<String> get activeList => [..._defaultZekrList, ...customList];
+  List<String> get activeList => [...sirajTasbihDefaultPhrases, ...customList];
 
   String _initialZekr() {
     final saved = _state.text('masbaha_zekr');
-    return saved != null && activeList.contains(saved) ? saved : _defaultZekrList.first;
+    return saved != null && activeList.contains(saved) ? saved : sirajTasbihDefaultPhrases.first;
   }
 
   /// Saves after every change so nothing is lost if the app is killed mid-tasbih.
@@ -44,6 +36,7 @@ class _MasbahaScreenState extends State<MasbahaScreen> {
   void setState(VoidCallback fn) {
     super.setState(fn);
     _state.setNumber('masbaha_count', count);
+    _state.setNumber('masbaha_goal', goal);
     _state.setNumber('masbaha_theme', masbahaThemes.indexOf(theme));
     _state.setStrings('masbaha_custom', customList);
     _state.setText('masbaha_zekr', selectedZekr);
@@ -181,6 +174,32 @@ class _MasbahaScreenState extends State<MasbahaScreen> {
                     }).toList(),
                   ),
                   const SizedBox(height: 20),
+                  const Text('الهدف اليومي', style: TextStyle(color: AppColors.slate400, fontWeight: FontWeight.w900, fontSize: 11)),
+                  const SizedBox(height: 10),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: sirajTasbihGoalOptions.map((g) {
+                      final selected = goal == g;
+                      return InkWell(
+                        onTap: () {
+                          setState(() => goal = g);
+                          setSheetState(() {});
+                        },
+                        borderRadius: BorderRadius.circular(999),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: selected ? AppColors.violet600.withValues(alpha: 0.2) : const Color(0xFF0F172A),
+                            border: Border.all(color: selected ? AppColors.violet500 : AppColors.slate800),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text('$g', style: TextStyle(color: selected ? Colors.white : Colors.white70, fontWeight: FontWeight.w900, fontSize: 13)),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                  const SizedBox(height: 20),
                   const Text('قائمة الأذكار', style: TextStyle(color: AppColors.slate400, fontWeight: FontWeight.w900, fontSize: 11)),
                   const SizedBox(height: 10),
                   Expanded(
@@ -214,7 +233,7 @@ class _MasbahaScreenState extends State<MasbahaScreen> {
                                         onTap: () {
                                           setState(() {
                                             customList.remove(z);
-                                            if (selectedZekr == z) selectedZekr = _defaultZekrList.first;
+                                            if (selectedZekr == z) selectedZekr = sirajTasbihDefaultPhrases.first;
                                           });
                                           setSheetState(() {});
                                         },
@@ -332,6 +351,23 @@ class _MasbahaScreenState extends State<MasbahaScreen> {
                                   count.toString(),
                                   style: TextStyle(color: theme.accent, fontSize: 56, fontWeight: FontWeight.w900, fontFeatures: const [FontFeature.tabularFigures()]),
                                 ),
+                              ),
+                              const SizedBox(height: 10),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(999),
+                                child: LinearProgressIndicator(
+                                  value: sirajTasbihProgress(count, goal),
+                                  minHeight: 6,
+                                  backgroundColor: Colors.white12,
+                                  valueColor: AlwaysStoppedAnimation<Color>(theme.accent),
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                goal > 0 && count >= goal
+                                    ? 'وصلت للهدف ($goal) ✓'
+                                    : 'الهدف: $goal • بقي ${goal - count}',
+                                style: const TextStyle(color: Colors.white60, fontSize: 11, fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),

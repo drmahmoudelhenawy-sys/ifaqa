@@ -10,6 +10,37 @@ Status: **implemented** (2026-11-18). The native side landed:
 on a real device yet** — see "Still to verify on a real device" below.
 `flutter analyze` is clean and the Siraj tests pass (see §6).
 
+Later additions (2026-11-18, same wave as this doc update):
+- **Free drag + persisted position + small default:** the overlay window
+  is freely draggable by touch (no left/center/right preset), the
+  position persists across restarts, the default position is
+  top-anchored and centred, and the default size is small (see §3a).
+  The in-app capsule shares the same pill sizing
+  (`sirajCapsulePillSize`) and the same small default.
+- **Sohag location:** prayer times are computed for the saved location,
+  defaulting to Sohag (26.5569, 31.6948) — not Cairo. The Africa/Cairo
+  *timezone* pin stays (Sohag shares it); only the coordinates changed.
+  Verified against the user's old app (Fajr 4:47, Dhuhr 11:39 — the old
+  app says 11:38, the Dart package rounds to the nearest minute).
+- **Heads-up dodge:** a `NotificationListenerService`
+  (`SirajNotificationListener.kt`, §3d) reports notification banners;
+  while one shows, the island shifts down below it and moves back when
+  it is gone. The countdown is never hidden. SystemUI draws banners
+  above every app window — no window type can draw over them — so the
+  fix is to move, not to fight the z-order.
+- **Circle shape + gestures + animations:** the capsule can be a small
+  round badge (pill stays the default), tap/double-tap/long-press/swipes
+  map to actions (tap: prayer times, long-press: Siraj tab, by default),
+  and the capsule/expanded view animate (fade + scale by default, or
+  slide, or off). The expanded panel/cards are scrollable and capped to
+  the screen, so the bottom buttons cannot be clipped. See §3e.
+- **Athkar reader + Tasbih in the island (2026-11-18):** tapping an
+  Athkar pill expands the overlay to a tall panel with the full Athkar
+  text (morning/evening chooser, per-zekr counting) and a Tasbih tab
+  sharing the app's counter — no need to open the app. Scheduled Athkar
+  reminders offer "اقرأ الآن" (read now, in the island) and
+  "اقرأ لاحقًا" (re-remind after 10/15/30/60 min). See §3f.
+
 ## What was implemented vs what still needs a real device
 
 Implemented (code-complete, statically verified only):
@@ -24,12 +55,23 @@ Implemented (code-complete, statically verified only):
   unknown methods.
 - Second FlutterEngine cached as `siraj_overlay_engine`, running the
   `sirajOverlayMain` entrypoint; the overlay UI always shows the next
-  prayer + live countdown (Africa/Cairo, never device timezone),
-  recomputed from SharedPreferences via `AppState` + the pure functions
-  in `siraj_state.dart`, ticking with its own `Timer`.
+  prayer + live countdown (Africa/Cairo timezone, saved location —
+  Sohag by default), recomputed from SharedPreferences via `AppState` +
+  the pure functions in `siraj_state.dart`, ticking with its own
+  `Timer`.
 - Tap the capsule opens the app (MethodChannel `openApp` → MainActivity
   with `FLAG_ACTIVITY_NEW_TASK`); the service notification has a
   "إيقاف" stop action and opens the app on tap.
+- Free drag of the overlay window with persisted position (own
+  SharedPreferences file `siraj_overlay`, keys `x_px`/`y_px`), default
+  top-anchored centred position, small size by default.
+- Heads-up dodge via `SirajNotificationListener` (§3d): the island
+  shifts below a notification banner while it shows and returns after.
+  Notification access is enabled from the Siraj settings screen.
+- Circle badge shape, configurable gestures, show/hide animations,
+  scrollable expanded panel/cards capped to the screen (§3e).
+- Expanded island: Athkar reader + Tasbih in the overlay, "اقرأ الآن" /
+  "اقرأ لاحقًا" reminder actions, snooze mailbox (§3f).
 
 Deliberate deviations from the spec below (each found while implementing,
 verified against the Flutter embedding / AOSP sources — see the notes in
@@ -42,6 +84,13 @@ verified against the Flutter embedding / AOSP sources — see the notes in
 - Gravity is `TOP | CENTER_HORIZONTAL` (not `TOP | START`): the window is
   fixed-width, so centring it centres the capsule; the Dart side still
   honours `capsuleAlign` inside the window.
+  **Superseded 2026-11-18 (drag wave):** gravity is now `TOP | START`
+  and the window is freely draggable — the Dart side tracks the position
+  and moves it with `moveOverlayTo` (absolute, dp); the service persists
+  it in its own `siraj_overlay` prefs and restores it on start. The
+  default is top-anchored, centred, 8 dp below the status bar.
+  `capsuleAlign` no longer moves the overlay (the window position is
+  free); it still aligns the in-app capsule.
 - `startOverlay` replies **asynchronously**: the service adds the window
   in `onStartCommand`, so `MainActivity` holds the channel `result` until
   the service reports back (3s timeout backstop), instead of the spec's
@@ -71,6 +120,14 @@ Still to verify on a real device (not done — no device in this wave):
 - `specialUse` foreground-service behaviour on API < 34 (the manifest
   bit is unknown to those versions; expected to be ignored, unproven).
 - The second engine's memory cost (~one extra Flutter engine).
+- Drag: the capsule follows the finger, stays where dropped after the
+  app restarts, and never leaves the screen (clamp).
+- Sohag times: the overlay and the app show Sohag prayer times
+  (Fajr 4:47 today), not Cairo.
+- Heads-up dodge: a WhatsApp banner shifts the island below it and it
+  returns when the banner is gone; the countdown never disappears.
+- Circle badge, gesture mappings, entrance animation, expanded
+  panel/cards scrolling to the bottom buttons on a small screen.
 
 Known gaps / follow-ups (not implemented in this wave):
 - **The settings toggle is wired (done 2026-11-18, coordinator wave).**
@@ -83,13 +140,20 @@ Known gaps / follow-ups (not implemented in this wave):
   and `overlayShowWhenAppClosed` are both on and the permission is
   granted.
 - No boot auto-restart (§4), Play-policy caveat for `specialUse` /
-  `SYSTEM_ALERT_WINDOW` (§3c), OEM battery restrictions (§4), no
-  drag-to-move / persisted position (§3a — the window is fixed at
-  y=200 dp for now).
+  `SYSTEM_ALERT_WINDOW` (§3c), OEM battery restrictions (§4).
+- The overlay has no exit animation: the service removes the window
+  outright when the overlay stops, so the fade-out cannot play there
+  (the entrance fade-in does play).
 - The main app's in-app capsule and live notification still compute
   prayer times in the device timezone; only the overlay is Cairo-pinned
   (`buildSirajDays(cairo: true)`). The user is in Egypt, so they agree
-  in practice.
+  in practice. The *location* is Sohag everywhere now (default
+  `AppLocation.sohag`).
+- Reading Athkar in the island does not award XP (the full Athkar
+  screen does), and the per-zekr remaining counts reset when the reader
+  closes — only the day's "done" flag persists. Clan-quest taps are not
+  counted from the island Tasbih (the full Masbaha screen owns those);
+  the counter number itself is shared.
 
 ## 0. Verified facts about this app (checked 2026-11-18)
 
@@ -213,6 +277,12 @@ Method contract — names must match the Dart side exactly:
 | `startOverlay` | `false` | Return `false` if `!canDrawOverlays()`; else start the foreground service (§3) which adds the window; return `true` only after the window is added |
 | `stopOverlay` | no-op | Remove the window, stop the foreground service |
 | `isShowing` | `false` | Whether the window is currently attached to `WindowManager` |
+| `moveOverlayTo` | no-op | (Overlay engine only.) Move the window to an absolute position `{x, y}` in dp; clamped to the screen. Sent by the Dart side on drags and the heads-up dodge. |
+| `setOverlaySize` | no-op | (Overlay engine only.) Resize the window to `{width, height}` in dp. The expanded island grows to a tall panel (380x~480) and shrinks back to 380x76 on collapse; height is clamped to the screen and y is moved up when the taller window would run off the bottom. |
+| `getOverlayPosition` | error | (Overlay engine only.) Returns `{x, y, screenW, screenH}` in dp — the window position the Dart side tracks, and the screen size it clamps against. |
+| `saveOverlayPosition` | no-op | (Overlay engine only.) Persist the window position (px) so the capsule reopens where it was dragged. |
+| `hasNotificationAccess` | `false` | Whether the user enabled notification access (the heads-up dodge needs it). |
+| `openNotificationAccessSettings` | `false` | If access is already granted return `true`; else open `Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS` and return `false` (Dart re-checks on resume). |
 
 Notes:
 
@@ -250,7 +320,8 @@ val params = WindowManager.LayoutParams(
 ).apply {
     gravity = Gravity.TOP or Gravity.START
     x = 0
-    y = 200 // below the status bar; make draggable later, persist in SirajSettings
+    y = 200 // below the status bar; the drag wave (2026-11-18) made this
+    // freely draggable and persisted (see SirajOverlayService.kt)
 }
 windowManager.addView(overlayView, params)
 ```
@@ -264,8 +335,7 @@ draggable). Remove the view in `onDestroy()` and in `stopOverlay()` with
 unattached view throws `IllegalArgumentException`).
 
 **Deviation (2026-11-18): the window is an explicit 380x76 dp, not
-`WRAP_CONTENT`, and gravity is `TOP | CENTER_HORIZONTAL`, not
-`TOP | START`.** Verified against the Flutter embedding sources
+`WRAP_CONTENT`.** Verified against the Flutter embedding sources
 (`FlutterView.java`, `FlutterSurfaceView.java`) and AOSP
 (`SurfaceView.java`): a `FlutterView` is a `FrameLayout` whose render
 surface is added with `MATCH_PARENT` params, and a `SurfaceView` under
@@ -274,8 +344,11 @@ an `AT_MOST` measure spec reports the full spec size — so a
 then swallow every touch on the device (there is no "outside" for
 `FLAG_NOT_TOUCH_MODAL` to pass through), defeating the flags above. A
 capsule-sized window keeps the touchable area to the capsule; the Dart
-UI centres the capsule in the 380x76 box and honours `capsuleAlign`
-inside it. This needs confirming on a real device (§6).
+UI centres the capsule in the 380x76 box. This needs confirming on a
+real device (§6). **Gravity is `TOP | START` since the drag wave
+(2026-11-18):** the window is freely positioned by x/y (dragged,
+persisted, or shifted below a heads-up banner); the Dart side no
+longer uses `capsuleAlign` for the overlay.
 
 ### 3b. What renders inside the window — cached FlutterEngine (recommended)
 
@@ -390,6 +463,122 @@ explicitly (`FOREGROUND_SERVICE_TYPE_SPECIAL_USE`) on API 34+ and the
 two-argument `startForeground` is used below that; behaviour of the
 `specialUse` manifest bit on API < 34 is unproven on a real device.
 
+### 3d. Heads-up dodge — `SirajNotificationListener`
+
+**Platform limit (honest, by design):** a heads-up notification banner
+is drawn by SystemUI *above* every app window, including a
+`TYPE_APPLICATION_OVERLAY` window. No window type available to a
+third-party app can draw over it — so when a WhatsApp banner appears,
+the island underneath it is covered for a few seconds and the prayer
+countdown disappears from view. The fix is to move, not to fight the
+z-order.
+
+Flow (all implemented 2026-11-18):
+1. `SirajNotificationListener.kt` (a `NotificationListenerService`,
+   manifest-declared with `BIND_NOTIFICATION_LISTENER_SERVICE`) watches
+   posted/removed notifications. Only heads-up *candidates* are
+   forwarded: high-importance (or full-screen-intent) notifications
+   from other apps, not ongoing ones, while the screen is on. The app's
+   own notifications never shift the island, and low-importance ones
+   (shade-only) never move it.
+2. The listener calls `SirajOverlayService.instance?.onHeadsUpPosted()`
+   / `onHeadsUpRemoved()` (same process; no-op when the overlay is not
+   showing). The service forwards `headsUpShown` / `headsUpHidden` on
+   the overlay engine's channel.
+3. The Dart side (`siraj_overlay_entry.dart`) owns the decision
+   (`SirajOverlayShift` in `siraj_state.dart`, pure + tested): if the
+   island's top is above 160 dp, it moves to 160 dp (below a typical
+   banner); if it is already lower, it stays. The island is never
+   hidden. On dismiss it moves back immediately; otherwise a timer
+   moves it back after 8 s (banners auto-dismiss after ~5 s).
+4. Notification access is enabled from the Siraj settings screen
+   ("فتح إعدادات الوصول للإشعارات" → system notification-access
+   settings; `hasNotificationAccess` / `openNotificationAccessSettings`
+   on the `siraj_overlay` channel, `MainActivity.kt`). Without it the
+   dodge is off and banners cover the island as before — the settings
+   note says so plainly.
+
+### 3e. Circle shape, gestures, animations, scrollable expanded view
+
+- **Shape** (`SirajConfig.capsuleShape`, settings "الشكل"): `pill`
+  (default) or `circle`. Circle is a small round badge — next prayer
+  label + countdown, with a progress ring to the next adhan in-app —
+  for parking at the top, e.g. around the camera punch-hole. The badge
+  always shows the prayer countdown; the other kinds are reachable by
+  tapping to expand. The overlay renders the same badge (without the
+  ring) in its 380x76 window.
+- **Gestures** (`SirajConfig.gesture*`, settings "إيماءات الكبسولة"):
+  tap, double-tap, long-press, swipe up/down/left/right, each mapped to
+  `prayer_times` (open today's prayer times), `siraj_tab`, `play_pause`,
+  `dismiss` (hide the current reminder), or `none`. Defaults keep the
+  current behaviour (tap: prayer times, long-press: Siraj tab). Swipes
+  are detected as fast flings at drag end (>700 px/s); a slow drag
+  still moves the capsule. While expanded, swipe-up collapses as
+  before. Over the overlay only tap/long-press work (they open the app,
+  and the mapped action picks the tab via the `siraj_pending_tab` flag
+  the app shell picks up on resume); the pan there is the drag, and
+  music/dismiss cannot run from the overlay isolate.
+- **Animations** (`SirajConfig.capsuleAnimation`, settings "الحركة"):
+  `fade` (fade + scale, default), `slide` (slide down + fade), `off`.
+  The in-app capsule plays an entrance animation once on mount and the
+  collapsed ↔ expanded switch animates by style; the overlay plays the
+  entrance on mount. There is no exit animation for the overlay: the
+  service removes the window outright when it stops.
+- **Expanded view clipping:** the panel and the adhan/athkar cards are
+  now scrollable (`SingleChildScrollView` with a `ConstrainedBox` that
+  keeps the buttons bottom-pinned when the content is short) and their
+  height is capped to the screen (`sirajExpandedHeight`: preferred
+  height, but ending 16 dp above the screen bottom after the safe
+  area). The bottom action buttons can no longer be clipped by short
+  screens or large fonts. The media card is short enough to need no
+  scroll.
+
+### 3f. Athkar reader + Tasbih in the island, reminder actions
+
+- **Reading in the island:** tapping an Athkar pill expands the overlay
+  to a tall panel (window resized via `setOverlaySize` to 380x~480 dp)
+  with the full Athkar text — a morning/evening chooser, every zekr with
+  its remaining count (tap counts one down, long-press completes the
+  zekr), and "تم" to mark the day's Athkar done. The in-app capsule
+  shows the same reader (`SirajAthkarReaderView` in
+  `lib/siraj/siraj_island_views.dart`, shared by both surfaces); its
+  panel buttons open the reader / Tasbih card instead of navigating
+  away. The header keeps the prayer chip, so the countdown stays
+  visible while reading. The panel header is draggable; closing
+  collapses back to the 76 dp pill at its previous position. While
+  expanded, the heads-up dodge is off (the tall panel stays put).
+- **Reminder actions:** scheduled Athkar reminders (and their snoozed
+  copies) carry two actions instead of the generic snooze: "اقرأ الآن"
+  and "اقرأ لاحقًا" (`buildReminderDetails(sirajAthkar: true)`).
+  "اقرأ الآن" leaves a pending view (`text_siraj_overlay_pending_view`
+  = `athkar:morning|evening`) the overlay tick picks up within a
+  second — starting the overlay first when it is enabled — and falls
+  back to opening AthkarScreen when the island cannot start (e.g. the
+  background isolate, no overlay permission). The live capsule's
+  "أذكار" action and body taps on Athkar reminders route the same way.
+- **"اقرأ لاحقًا":** a notification action cannot show a chooser, so it
+  re-reminds after the default from settings
+  (`SirajConfig.athkarSnoozeMinutes`, default 15, set in the Siraj
+  settings Athkar card). Inside the island, the button opens the
+  chooser (10/15/30/60) every time. Snoozed copies use dedicated ids
+  (morning 909, evening 910) so the two never overwrite each other.
+- **Snooze mailbox:** the overlay isolate cannot schedule notifications
+  (only SharedPreferences is registered on its engine), so an island
+  snooze writes a request (`text_siraj_athkar_snooze_request`,
+  `{type, minutes, fireAt}`). The overlay's 1s tick fires it when due
+  (re-expanding to the reader), and the main isolate's
+  `ReminderService.reschedule` turns it into a real notification if it
+  sees it first. A tiny race remains if both run in the same second
+  (island expansion + the notification) — harmless, the actions are
+  the same.
+- **Tasbih:** the island's Tasbih tab and the app's Masbaha screen
+  share one counter (`masbaha_count` / `masbaha_zekr` / `masbaha_goal`
+  in AppState, goal default 100, choices 33/100/500/1000). The count is
+  read on open and written on every tap; reopen to see the other
+  surface's latest number (last write wins while both are open).
+  Clan-quest taps are NOT counted from the island — the full screen
+  owns those.
+
 ## 4. What happens when the app is swiped from recents
 
 - **With the foreground service running (this spec):** swiping the app
@@ -464,6 +653,36 @@ available in this wave). Item 7 is done.
    `test/siraj_overlay_test.dart` for the Cairo-pinned times). The Kotlin
    side could not be compiled on this machine (no Android SDK here);
    the coordinator's APK attempt is the first Kotlin compile check.
+8. Drag the capsule anywhere on the screen → it follows the finger;
+   close and reopen the app → it reopens where it was left; it never
+   leaves the screen.
+9. The overlay and the app show Sohag prayer times (Fajr 4:47 today),
+   and the expanded panel uses the same saved location.
+10. Send yourself a WhatsApp message while the island is at the top →
+    the island shifts below the banner, the countdown stays visible,
+    and it returns when the banner is dismissed (needs notification
+    access enabled in Siraj settings).
+11. Shape "دائرة" → small round badge with the prayer countdown and a
+    progress ring; tap expands to the full panel.
+12. Gestures: remap tap to "تشغيل/إيقاف" → tapping toggles music;
+    long-press → Siraj tab. On the overlay, tap/long-press open the app
+    on the mapped tab.
+13. Expanded panel on a small screen / large fonts → scrolls to the
+    bottom buttons (أذكار الصباح / تابع المصحف / المسبحة); nothing is
+    clipped. Entrance animation plays (fade + scale) when the capsule
+    appears.
+14. Athkar in the island: tap an Athkar pill (or the reminder's
+    "اقرأ الآن") → the island expands to the full Athkar text with a
+    morning/evening chooser; tap a zekr to count it down, "تم" marks it
+    done. "اقرأ لاحقًا" from the notification re-reminds after the
+    default minutes; from the island it asks 10/15/30/60 and re-reminds
+    at that time.
+15. Tasbih in the island: the Tasbih tab counts, switches phrase, sets
+    a goal and resets; the number matches the Masbaha screen (count in
+    one, see it in the other after reopening).
+16. Expanded panel: drag by the header, close returns the pill to its
+    previous position; a WhatsApp banner while expanded leaves the
+    panel in place.
 
 The settings toggle is wired (see "Known gaps" at the top): the toggle
 starts/stops the overlay and the resume handler covers the permission

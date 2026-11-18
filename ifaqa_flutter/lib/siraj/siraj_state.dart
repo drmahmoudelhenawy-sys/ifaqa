@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'siraj_quotes.dart';
 
 /// Pure Siraj logic: no Flutter, no AppState. Everything is a function of
@@ -82,6 +84,36 @@ class SirajConfig {
   final int quoteShowSecs;
 
   // ---- Capsule appearance / layout ----
+  /// Capsule size preset: 'small' | 'normal' | 'large'. The default is
+  /// 'small': the user's old prayer-island app was a small capsule, and
+  /// the pill renders compact at this size (see [sirajCapsuleSizeScale]).
+  /// The width/height values below keep working as fine-tuning on top of
+  /// the preset.
+  final String capsuleSize;
+
+  /// Capsule shape: 'pill' (the default) | 'circle'. Circle is a small
+  /// round badge — next prayer + countdown — for placing at the top, e.g.
+  /// around the phone's front-camera punch-hole. In circle mode the badge
+  /// always shows the prayer countdown (the most important thing); the
+  /// other kinds are still reachable by tapping to expand.
+  final String capsuleShape;
+
+  /// Capsule show/hide + expand animation style: 'fade' (fade + scale,
+  /// the default) | 'slide' (slide down + fade) | 'off' (no animation).
+  final String capsuleAnimation;
+
+  /// Gesture → action mappings (see [sirajGestureActions]). Defaults keep
+  /// the current behaviour: tap opens today's prayer times, long-press
+  /// opens the Siraj tab. Swipe gestures only apply while the capsule is
+  /// collapsed; while expanded, swiping up still collapses it.
+  final String gestureTap;
+  final String gestureDoubleTap;
+  final String gestureLongPress;
+  final String gestureSwipeUp;
+  final String gestureSwipeDown;
+  final String gestureSwipeLeft;
+  final String gestureSwipeRight;
+
   /// Fraction of the screen width the capsule occupies.
   final double capsuleWidthFrac;
   /// Capsule height in dp.
@@ -135,6 +167,12 @@ class SirajConfig {
   /// null = follow Asr+15min (see [athkarEveningAfterAsr]).
   final int? eveningAthkarMinutes;
 
+  /// Default snooze for "اقرأ لاحقًا" from a notification (minutes, one
+  /// of [sirajAthkarSnoozeOptions], default 15). A notification action
+  /// cannot show a chooser, so it re-reminds after this long; inside the
+  /// island the user picks 10/15/30/60 every time.
+  final int athkarSnoozeMinutes;
+
   // ---- Player / overlay ----
   /// Audio source for the capsule player: 'app' | 'device'.
   final String playerSource;
@@ -161,6 +199,16 @@ class SirajConfig {
     this.quoteSource = SirajQuoteChoice.both,
     this.quoteEveryMins = 30,
     this.quoteShowSecs = 12,
+    this.capsuleSize = 'small',
+    this.capsuleShape = 'pill',
+    this.capsuleAnimation = 'fade',
+    this.gestureTap = 'prayer_times',
+    this.gestureDoubleTap = 'none',
+    this.gestureLongPress = 'siraj_tab',
+    this.gestureSwipeUp = 'prayer_times',
+    this.gestureSwipeDown = 'none',
+    this.gestureSwipeLeft = 'none',
+    this.gestureSwipeRight = 'none',
     this.capsuleWidthFrac = 0.92,
     this.capsuleHeight = 44.0,
     this.showPrayer = true,
@@ -180,6 +228,7 @@ class SirajConfig {
     this.remindAfterMins = 10,
     this.morningAthkarMinutes,
     this.eveningAthkarMinutes,
+    this.athkarSnoozeMinutes = 15,
     this.playerSource = 'app',
     this.deviceMusicEnabled = false,
     this.overlayEnabled = false,
@@ -202,6 +251,16 @@ class SirajConfig {
     SirajQuoteChoice? quoteSource,
     int? quoteEveryMins,
     int? quoteShowSecs,
+    String? capsuleSize,
+    String? capsuleShape,
+    String? capsuleAnimation,
+    String? gestureTap,
+    String? gestureDoubleTap,
+    String? gestureLongPress,
+    String? gestureSwipeUp,
+    String? gestureSwipeDown,
+    String? gestureSwipeLeft,
+    String? gestureSwipeRight,
     double? capsuleWidthFrac,
     double? capsuleHeight,
     bool? showPrayer,
@@ -221,6 +280,7 @@ class SirajConfig {
     int? remindAfterMins,
     int? morningAthkarMinutes,
     int? eveningAthkarMinutes,
+    int? athkarSnoozeMinutes,
     String? playerSource,
     bool? deviceMusicEnabled,
     bool? overlayEnabled,
@@ -241,6 +301,16 @@ class SirajConfig {
     quoteSource: quoteSource ?? this.quoteSource,
     quoteEveryMins: quoteEveryMins ?? this.quoteEveryMins,
     quoteShowSecs: quoteShowSecs ?? this.quoteShowSecs,
+    capsuleSize: capsuleSize ?? this.capsuleSize,
+    capsuleShape: capsuleShape ?? this.capsuleShape,
+    capsuleAnimation: capsuleAnimation ?? this.capsuleAnimation,
+    gestureTap: gestureTap ?? this.gestureTap,
+    gestureDoubleTap: gestureDoubleTap ?? this.gestureDoubleTap,
+    gestureLongPress: gestureLongPress ?? this.gestureLongPress,
+    gestureSwipeUp: gestureSwipeUp ?? this.gestureSwipeUp,
+    gestureSwipeDown: gestureSwipeDown ?? this.gestureSwipeDown,
+    gestureSwipeLeft: gestureSwipeLeft ?? this.gestureSwipeLeft,
+    gestureSwipeRight: gestureSwipeRight ?? this.gestureSwipeRight,
     capsuleWidthFrac:
         (capsuleWidthFrac ?? this.capsuleWidthFrac).clamp(0.0, 1.0),
     capsuleHeight: capsuleHeight ?? this.capsuleHeight,
@@ -265,6 +335,8 @@ class SirajConfig {
         morningAthkarMinutes ?? this.morningAthkarMinutes,
     eveningAthkarMinutes:
         eveningAthkarMinutes ?? this.eveningAthkarMinutes,
+    athkarSnoozeMinutes:
+        athkarSnoozeMinutes ?? this.athkarSnoozeMinutes,
     playerSource: playerSource ?? this.playerSource,
     deviceMusicEnabled: deviceMusicEnabled ?? this.deviceMusicEnabled,
     overlayEnabled: overlayEnabled ?? this.overlayEnabled,
@@ -564,6 +636,229 @@ String sirajClock(DateTime t) {
   final h12 = t.hour % 12 == 0 ? 12 : t.hour % 12;
   return sirajArabicDigits('$h12:${t.minute.toString().padLeft(2, '0')}') +
       (t.hour < 12 ? ' ص' : ' م');
+}
+
+// ---- Capsule size preset + overlay drag geometry ----
+//
+// Pure helpers, shared by the in-app capsule (`siraj_capsule.dart`) and
+// the overlay entrypoint (`siraj_overlay_entry.dart`), so both render the
+// same pill at the same size. The overlay-window geometry helpers are
+// also the contract for the native side: `SirajOverlayService.kt` mirrors
+// [sirajClampOverlayPosition] and [sirajOverlayDefaultPosition] in px
+// (Kotlin cannot be compiled on this machine, so the contract is tested
+// here in Dart).
+
+/// Width/height scale for a capsule size preset ('small' | 'normal' |
+/// 'large'). Small is the default — the user's old prayer-island app was
+/// a small capsule — and renders the pill compact. Unknown values fall
+/// back to small, like the default.
+double sirajCapsuleSizeScale(String size) => switch (size) {
+  'large' => 1.12,
+  'normal' => 1.0,
+  _ => 0.85,
+};
+
+/// Collapsed-pill size for a [SirajState] kind, with the size preset
+/// applied. Base widths per kind (idle 200, iqamah/adhan 236, athkar 340,
+/// quote/media 360) and the configured height (36–64, default 44; a long
+/// quote title uses 58) are the values the in-app capsule and the overlay
+/// used before the preset existed, so 'normal' reproduces the old sizes
+/// exactly. [maxWidth] caps the width: the in-app capsule passes its
+/// width-fraction cap, the overlay passes the window's usable width
+/// (360 dp inside the 380 dp window).
+({double width, double height}) sirajCapsulePillSize({
+  required SirajKind kind,
+  required SirajConfig config,
+  int titleLength = 0,
+  double maxWidth = double.infinity,
+}) {
+  final scale = sirajCapsuleSizeScale(config.capsuleSize);
+  final baseHeight = kind == SirajKind.quote && titleLength > 34
+      ? 58.0
+      : config.capsuleHeight.clamp(36.0, 64.0);
+  final baseWidth = switch (kind) {
+    SirajKind.idle => 200.0,
+    SirajKind.iqamah => 236.0,
+    SirajKind.adhanNow => 236.0,
+    SirajKind.athkarDue => 340.0,
+    SirajKind.quote => 360.0,
+    SirajKind.media => 360.0,
+  };
+  return (
+    width: math.min(baseWidth * scale, maxWidth),
+    height: math.min(math.max(baseHeight * scale, 36.0), 64.0),
+  );
+}
+
+/// Actions a capsule gesture can map to:
+/// - 'prayer_times': open today's prayer times (expand the panel/card).
+/// - 'siraj_tab': open the Siraj tab.
+/// - 'play_pause': toggle music playback.
+/// - 'dismiss': hide the current reminder (dismiss the card/panel).
+/// - 'none': do nothing.
+const List<String> sirajGestureActions = [
+  'prayer_times',
+  'siraj_tab',
+  'play_pause',
+  'dismiss',
+  'none',
+];
+
+/// Normalises a stored gesture action; unknown values fall back to
+/// [fallback] (the default for that gesture).
+String sirajNormalizeGestureAction(String? value, String fallback) =>
+    sirajGestureActions.contains(value) ? value! : fallback;
+
+/// Normalises a stored capsule shape; anything but 'circle' is the pill.
+String sirajNormalizeCapsuleShape(String? value) =>
+    value == 'circle' ? 'circle' : 'pill';
+
+/// Normalises a stored animation style; unknown values fall back to
+/// 'fade'.
+String sirajNormalizeCapsuleAnimation(String? value) => switch (value) {
+  'slide' || 'off' => value!,
+  _ => 'fade',
+};
+
+/// Diameter (dp) of the circle badge: 64 dp at 'normal', scaled by the
+/// size preset, clamped to 48–80 dp.
+double sirajCapsuleCircleDiameter(SirajConfig config) =>
+    (64 * sirajCapsuleSizeScale(config.capsuleSize)).clamp(48.0, 80.0);
+
+/// Height (dp) for an expanded panel/card that fits the screen: the
+/// preferred height, capped so the box ends 16 dp above the screen bottom
+/// (after the safe area). Never below 120 dp, so a short screen still
+/// shows a usable, scrollable box instead of a sliver.
+double sirajExpandedHeight({
+  required double preferred,
+  required double screenHeight,
+  required double top,
+  required double bottomPadding,
+}) {
+  final maxH = math.max(120.0, screenHeight - top - bottomPadding - 16);
+  return math.min(preferred, maxH);
+}
+
+/// Fraction of the interval between the previous and the next adhan that
+/// has elapsed (0..1) — the progress ring of the circle badge. 0 when no
+/// previous prayer is known (e.g. before the first adhan of the range).
+double sirajPrayerProgress({
+  required DateTime now,
+  required List<SirajDay> days,
+}) {
+  DateTime? prev;
+  DateTime? next;
+  for (final d in days) {
+    for (final p in d.prayers) {
+      if (!p.adhan.isAfter(now)) prev = p.adhan;
+      if (p.adhan.isAfter(now) && next == null) next = p.adhan;
+    }
+  }
+  if (prev == null || next == null) return 0;
+  final total = next.difference(prev).inSeconds;
+  if (total <= 0) return 0;
+  return (now.difference(prev).inSeconds / total).clamp(0.0, 1.0);
+}
+
+/// Clamps an overlay window position (dp) so the window stays fully on
+/// screen. A window wider/taller than the screen pins to (0, 0).
+({double x, double y}) sirajClampOverlayPosition({
+  required double x,
+  required double y,
+  required double windowWidth,
+  required double windowHeight,
+  required double screenWidth,
+  required double screenHeight,
+}) {
+  final maxX = math.max(0.0, screenWidth - windowWidth);
+  final maxY = math.max(0.0, screenHeight - windowHeight);
+  return (x: x.clamp(0.0, maxX), y: y.clamp(0.0, maxY));
+}
+
+/// Default overlay position (dp): top-anchored, centred horizontally,
+/// 8 dp below the status bar — the small island at the top of the screen,
+/// like the user's old app. The user then drags it anywhere; the dragged
+/// position is persisted and wins over this default on the next start.
+({double x, double y}) sirajOverlayDefaultPosition({
+  required double windowWidth,
+  required double windowHeight,
+  required double screenWidth,
+  required double screenHeight,
+  required double statusBarHeight,
+}) => sirajClampOverlayPosition(
+  x: (screenWidth - windowWidth) / 2,
+  y: statusBarHeight + 8,
+  windowWidth: windowWidth,
+  windowHeight: windowHeight,
+  screenWidth: screenWidth,
+  screenHeight: screenHeight,
+);
+
+// ---- Heads-up notifications vs the overlay ----
+//
+// PLATFORM LIMIT (honest, by design): a heads-up notification banner is
+// drawn by SystemUI *above* every app window, including a
+// `TYPE_APPLICATION_OVERLAY` window — no window type available to a
+// third-party app can draw over it. So when a banner (e.g. WhatsApp)
+// appears, the island underneath it is covered for a few seconds, and
+// the prayer countdown disappears from view.
+//
+// The fix is not to fight the z-order but to move: a
+// `NotificationListenerService` (`SirajNotificationListener.kt`) reports
+// posted/removed notifications to the overlay, and while a heads-up is
+// showing the island shifts DOWN below the banner area, so the countdown
+// stays visible (the capsule is NEVER hidden). When the banner is gone
+// the island moves back to the user's saved position. The decision logic
+// lives here, in pure Dart, so it is testable; the native side only
+// forwards the events and moves the window.
+
+/// The island's top edge (dp from the top of the screen) while a heads-up
+/// banner is showing. A typical banner occupies roughly the status bar +
+/// ~120 dp; 160 dp clears it with margin on most phones and ROMs. The
+/// island only moves when its top is above this line (i.e. it would
+/// actually be covered); an island already dragged lower stays put.
+const double sirajHeadsUpClearYDp = 160.0;
+
+/// How long after a heads-up posts the island moves back on its own.
+/// Heads-up banners auto-dismiss after ~5 s; the extra margin covers
+/// longer OEM banners. Dismissing the notification restores immediately,
+/// without waiting for this timer.
+const Duration sirajHeadsUpRestoreDelay = Duration(seconds: 8);
+
+/// Shift/restore state machine for the heads-up dodge. Pure logic: given
+/// the island's current top edge, [onHeadsUpShown] returns the y to move
+/// to (or null when no move is needed), and [restore] returns the saved y
+/// to move back to (or null when not shifted). The overlay entrypoint
+/// owns one instance and drives the window moves + the restore timer.
+class SirajOverlayShift {
+  double? _savedY;
+
+  /// True while the island is shifted down for a heads-up.
+  bool get isShifted => _savedY != null;
+
+  /// The pre-shift top edge, while shifted; null otherwise.
+  double? get savedY => _savedY;
+
+  /// A heads-up banner appeared. Returns the y to move the island to, or
+  /// null when it should stay: already shifted (the caller restarts the
+  /// restore timer instead), or already below the banner area.
+  double? onHeadsUpShown({
+    required double currentY,
+    double clearY = sirajHeadsUpClearYDp,
+  }) {
+    if (_savedY != null) return null;
+    if (currentY >= clearY) return null;
+    _savedY = currentY;
+    return clearY;
+  }
+
+  /// The banner is gone. Returns the y to move back to, or null when the
+  /// island was not shifted.
+  double? restore() {
+    final y = _savedY;
+    _savedY = null;
+    return y;
+  }
 }
 
 // ---- Android live capsule plan ----

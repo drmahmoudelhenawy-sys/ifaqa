@@ -70,6 +70,21 @@
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="prayer countdown overlay" />
         </service>
+        <!-- Siraj heads-up dodge: reports notification banners to the
+             overlay service so the island shifts down instead of being
+             covered (see lib/siraj/OVERLAY_NATIVE.md §3d). The user enables
+             it in Settings → Apps → Special app access → Notification
+             access. exported=true + the BIND_NOTIFICATION_LISTENER_SERVICE
+             permission let only the system bind to it. -->
+        <service
+            android:name=".SirajNotificationListener"
+            android:label="سِراج"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
         <receiver android:name="com.ryanheise.audioservice.MediaButtonReceiver"
             android:exported="true" tools:ignore="Instantiatable">
             <intent-filter>

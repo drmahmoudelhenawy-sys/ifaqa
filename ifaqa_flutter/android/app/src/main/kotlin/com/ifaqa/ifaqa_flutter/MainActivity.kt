@@ -1,5 +1,6 @@
 package com.ifaqa.ifaqa_flutter
 
+import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -29,6 +30,11 @@ import java.util.concurrent.atomic.AtomicBoolean
  *   timeout, so the Dart future never hangs).
  * - `stopOverlay` → removes the window and stops the service.
  * - `isShowing` → whether the window is currently attached.
+ * - `hasNotificationAccess` → whether the user enabled notification
+ *   access for the app (needed for the heads-up dodge).
+ * - `openNotificationAccessSettings` → true if already granted; else
+ *   opens the system notification-access screen and returns false (the
+ *   grant happens outside the app; Dart re-checks on resume).
  * Unknown methods → `result.notImplemented()`, so a Dart-side typo
  * surfaces as `MissingPluginException` instead of a hang.
  */
@@ -61,6 +67,21 @@ class MainActivity : AudioServiceActivity() {
                         result.success(null)
                     }
                     "isShowing" -> result.success(SirajOverlayService.isShowing)
+                    "hasNotificationAccess" ->
+                        result.success(hasNotificationAccess())
+                    "openNotificationAccessSettings" -> {
+                        if (hasNotificationAccess()) {
+                            result.success(true)
+                        } else {
+                            val intent = Intent(
+                                Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS,
+                            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            startActivity(intent)
+                            // The grant happens outside the app; it cannot
+                            // be awaited. Dart re-checks on resume.
+                            result.success(false)
+                        }
+                    }
                     else -> result.notImplemented()
                 }
             }
@@ -95,5 +116,22 @@ class MainActivity : AudioServiceActivity() {
     private fun stopOverlay() {
         SirajOverlayService.onWindowShown = null
         stopService(Intent(this, SirajOverlayService::class.java))
+    }
+
+    /**
+     * Whether the user enabled notification access for the app (the
+     * `SirajNotificationListener` in the system's enabled-listener list).
+     * Read from `Settings.Secure` directly — no extra dependency.
+     */
+    private fun hasNotificationAccess(): Boolean {
+        val enabled = Settings.Secure.getString(
+            contentResolver,
+            "enabled_notification_listeners",
+        ) ?: ""
+        val component = ComponentName(
+            this,
+            SirajNotificationListener::class.java,
+        ).flattenToString()
+        return enabled.contains(component)
     }
 }

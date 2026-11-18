@@ -3,6 +3,7 @@ import 'package:timezone/timezone.dart' as tz;
 import '../models/prayer_time_info.dart';
 import '../services/app_state.dart';
 import '../services/audio_service.dart';
+import 'siraj_island_views.dart';
 import 'siraj_reminders.dart';
 import 'siraj_state.dart';
 
@@ -11,14 +12,19 @@ import 'siraj_state.dart';
 /// Keys: siraj_enabled, siraj_in_app, siraj_live, siraj_theme, siraj_autohide,
 /// siraj_dnd, siraj_k_prayer, siraj_k_iqamah, siraj_k_athkar, siraj_k_media,
 /// siraj_k_quotes, siraj_quote_src; plus the per-day list `siraj_athkar`.
-/// New keys (all `siraj_` prefixed): siraj_capsule_width_frac,
-/// siraj_capsule_height, siraj_show_prayer, siraj_show_athkar,
+/// New keys (all `siraj_` prefixed): siraj_capsule_size,
+/// siraj_capsule_shape, siraj_capsule_animation, siraj_gesture_tap,
+/// siraj_gesture_double_tap, siraj_gesture_long_press,
+/// siraj_gesture_swipe_up, siraj_gesture_swipe_down,
+/// siraj_gesture_swipe_left, siraj_gesture_swipe_right,
+/// siraj_capsule_width_frac, siraj_capsule_height, siraj_show_prayer, siraj_show_athkar,
 /// siraj_show_quotes, siraj_show_media, siraj_show_player,
 /// siraj_autohide_idle_secs, siraj_countdown_format, siraj_capsule_align,
 /// siraj_capsule_top_offset, siraj_capsule_draggable, siraj_capsule_opacity,
 /// siraj_capsule_accent_hex, siraj_adhan_sound, siraj_remind_before_mins,
 /// siraj_remind_after_mins, siraj_morning_athkar_minutes,
-/// siraj_evening_athkar_minutes, siraj_player_source,
+/// siraj_evening_athkar_minutes, siraj_athkar_snooze_minutes,
+/// siraj_player_source,
 /// siraj_device_music_enabled, siraj_overlay_enabled,
 /// siraj_overlay_show_when_app_closed, siraj_wirds_json.
 ///
@@ -48,6 +54,16 @@ class SirajSettings {
   static const athkarDayList = 'siraj_athkar';
 
   // Capsule appearance / layout.
+  static const capsuleSizeKey = 'siraj_capsule_size';
+  static const capsuleShapeKey = 'siraj_capsule_shape';
+  static const capsuleAnimationKey = 'siraj_capsule_animation';
+  static const gestureTapKey = 'siraj_gesture_tap';
+  static const gestureDoubleTapKey = 'siraj_gesture_double_tap';
+  static const gestureLongPressKey = 'siraj_gesture_long_press';
+  static const gestureSwipeUpKey = 'siraj_gesture_swipe_up';
+  static const gestureSwipeDownKey = 'siraj_gesture_swipe_down';
+  static const gestureSwipeLeftKey = 'siraj_gesture_swipe_left';
+  static const gestureSwipeRightKey = 'siraj_gesture_swipe_right';
   static const capsuleWidthFracKey = 'siraj_capsule_width_frac';
   static const capsuleHeightKey = 'siraj_capsule_height';
   static const showPrayerKey = 'siraj_show_prayer';
@@ -69,6 +85,7 @@ class SirajSettings {
   static const remindAfterMinsKey = 'siraj_remind_after_mins';
   static const morningAthkarMinutesKey = 'siraj_morning_athkar_minutes';
   static const eveningAthkarMinutesKey = 'siraj_evening_athkar_minutes';
+  static const athkarSnoozeMinutesKey = 'siraj_athkar_snooze_minutes';
 
   // Player / overlay.
   static const playerSourceKey = 'siraj_player_source';
@@ -113,6 +130,44 @@ class SirajSettings {
       'hadith' => SirajQuoteChoice.hadith,
       _ => SirajQuoteChoice.both,
     },
+    capsuleSize: switch (_s.text(capsuleSizeKey)) {
+      // Small is the default (the old prayer-island app was a small
+      // capsule); unknown stored values fall back to small too.
+      'normal' || 'large' => _s.text(capsuleSizeKey)!,
+      _ => 'small',
+    },
+    capsuleShape: sirajNormalizeCapsuleShape(_s.text(capsuleShapeKey)),
+    capsuleAnimation: sirajNormalizeCapsuleAnimation(
+      _s.text(capsuleAnimationKey),
+    ),
+    gestureTap: sirajNormalizeGestureAction(
+      _s.text(gestureTapKey),
+      'prayer_times',
+    ),
+    gestureDoubleTap: sirajNormalizeGestureAction(
+      _s.text(gestureDoubleTapKey),
+      'none',
+    ),
+    gestureLongPress: sirajNormalizeGestureAction(
+      _s.text(gestureLongPressKey),
+      'siraj_tab',
+    ),
+    gestureSwipeUp: sirajNormalizeGestureAction(
+      _s.text(gestureSwipeUpKey),
+      'prayer_times',
+    ),
+    gestureSwipeDown: sirajNormalizeGestureAction(
+      _s.text(gestureSwipeDownKey),
+      'none',
+    ),
+    gestureSwipeLeft: sirajNormalizeGestureAction(
+      _s.text(gestureSwipeLeftKey),
+      'none',
+    ),
+    gestureSwipeRight: sirajNormalizeGestureAction(
+      _s.text(gestureSwipeRightKey),
+      'none',
+    ),
     capsuleWidthFrac:
         _double(capsuleWidthFracKey, 0.92).clamp(0.0, 1.0),
     capsuleHeight: _double(capsuleHeightKey, 44.0),
@@ -149,6 +204,9 @@ class SirajSettings {
             : _s.number(remindAfterMinsKey, fallback: 10),
     morningAthkarMinutes: _nullableMinutes(morningAthkarMinutesKey),
     eveningAthkarMinutes: _nullableMinutes(eveningAthkarMinutesKey),
+    athkarSnoozeMinutes: sirajNormalizeAthkarSnoozeMinutes(
+      _s.number(athkarSnoozeMinutesKey, fallback: sirajAthkarSnoozeDefault),
+    ),
     playerSource: switch (_s.text(playerSourceKey)) {
       'device' => 'device',
       _ => 'app',

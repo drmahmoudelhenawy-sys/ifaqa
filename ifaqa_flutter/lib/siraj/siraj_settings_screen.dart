@@ -28,11 +28,15 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
   final List<SirajWird> _wirds = SirajSettings.wirds();
   final Map<String, TextEditingController> _wirdNameControllers = {};
 
+  /// Whether the user enabled notification access (heads-up dodge).
+  bool _notifAccess = false;
+
   @override
   void initState() {
     super.initState();
     _state.addListener(_changed);
     WidgetsBinding.instance.addObserver(this);
+    unawaited(_refreshNotifAccess());
   }
 
   @override
@@ -55,7 +59,16 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
       // The overlay permission grant happens in system Settings; when the
       // user comes back, start the overlay if the toggle is on.
       unawaited(_syncOverlayWithSettings());
+      // Same for the notification-access grant (heads-up dodge).
+      unawaited(_refreshNotifAccess());
     }
+  }
+
+  /// Refreshes whether notification access is granted (heads-up dodge).
+  Future<void> _refreshNotifAccess() async {
+    if (!SirajOverlayService.supported) return;
+    final granted = await SirajOverlayService.instance.hasNotificationAccess();
+    if (mounted) setState(() => _notifAccess = granted);
   }
 
   /// Starts/stops the native overlay to match the saved toggle, and repairs
@@ -213,6 +226,33 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
             showCheckmark: false,
             onSelected: (_) => onPick(value),
           ),
+      ],
+    );
+  }
+
+  /// One gesture → action row for the gestures card: the label plus the
+  /// five action choices (see [sirajGestureActions]).
+  Widget _gestureRow({
+    required String label,
+    required String selected,
+    required String key,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _sectionLabel(label),
+        _choice<String>(
+          options: const [
+            ('prayer_times', 'مواقيت اليوم'),
+            ('siraj_tab', 'تبويب سِراج'),
+            ('play_pause', 'تشغيل/إيقاف'),
+            ('dismiss', 'إخفاء التنبيه'),
+            ('none', 'بدون'),
+          ],
+          selected: selected,
+          onPick: (v) => _state.setText(key, v),
+        ),
+        const SizedBox(height: 12),
       ],
     );
   }
@@ -804,6 +844,45 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
 
             // (a) Capsule appearance
             _card('مظهر الكبسولة', Icons.tune, [
+              _sectionLabel('الحجم'),
+              _choice<String>(
+                options: const [
+                  ('small', 'صغير'),
+                  ('normal', 'عادي'),
+                  ('large', 'كبير'),
+                ],
+                selected: config.capsuleSize,
+                onPick: (v) =>
+                    _state.setText(SirajSettings.capsuleSizeKey, v),
+              ),
+              const SizedBox(height: 12),
+              _sectionLabel('الشكل'),
+              _choice<String>(
+                options: const [
+                  ('pill', 'كبسولة'),
+                  ('circle', 'دائرة'),
+                ],
+                selected: config.capsuleShape,
+                onPick: (v) =>
+                    _state.setText(SirajSettings.capsuleShapeKey, v),
+              ),
+              const SizedBox(height: 12),
+              _note(
+                'الدائرة شارة صغيرة مستديرة — وقت الصلاة القادمة والعدّ التنازلي فقط — تناسب وضعها أعلى الشاشة حول فتحة الكاميرا الأمامية.',
+              ),
+              const SizedBox(height: 12),
+              _sectionLabel('الحركة'),
+              _choice<String>(
+                options: const [
+                  ('fade', 'تلاشي وتكبير'),
+                  ('slide', 'انزلاق'),
+                  ('off', 'بدون'),
+                ],
+                selected: config.capsuleAnimation,
+                onPick: (v) =>
+                    _state.setText(SirajSettings.capsuleAnimationKey, v),
+              ),
+              const SizedBox(height: 12),
               _sliderRow(
                 label: 'عرض الكبسولة',
                 value: config.capsuleWidthFrac,
@@ -1009,6 +1088,48 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
                 ),
             ]),
 
+            // (a2) Capsule gestures
+            _card('إيماءات الكبسولة', Icons.touch_app, [
+              _note(
+                'الضغطة تفتح مواقيت اليوم، والضغطة المطولة تفتح تبويب سِراج. السحب يعمل فقط والكبسولة مصغّرة؛ وأثناء التوسيع السحب لأعلى يغلقها. فوق التطبيقات الأخرى تعمل الضغطة والضغطة المطولة فقط (لفتح التطبيق)، لأن السحب هناك هو تحريك الجزيرة.',
+              ),
+              _gestureRow(
+                label: 'ضغطة',
+                selected: config.gestureTap,
+                key: SirajSettings.gestureTapKey,
+              ),
+              _gestureRow(
+                label: 'ضغطتان',
+                selected: config.gestureDoubleTap,
+                key: SirajSettings.gestureDoubleTapKey,
+              ),
+              _gestureRow(
+                label: 'ضغطة مطولة',
+                selected: config.gestureLongPress,
+                key: SirajSettings.gestureLongPressKey,
+              ),
+              _gestureRow(
+                label: 'سحب لأعلى',
+                selected: config.gestureSwipeUp,
+                key: SirajSettings.gestureSwipeUpKey,
+              ),
+              _gestureRow(
+                label: 'سحب لأسفل',
+                selected: config.gestureSwipeDown,
+                key: SirajSettings.gestureSwipeDownKey,
+              ),
+              _gestureRow(
+                label: 'سحب لليسار',
+                selected: config.gestureSwipeLeft,
+                key: SirajSettings.gestureSwipeLeftKey,
+              ),
+              _gestureRow(
+                label: 'سحب لليمين',
+                selected: config.gestureSwipeRight,
+                key: SirajSettings.gestureSwipeRightKey,
+              ),
+            ]),
+
             // (b) Prayer & adhan
             _card('الصلاة والأذان', Icons.mosque, [
               _sectionLabel('صوت الأذان'),
@@ -1060,6 +1181,23 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
                 defaultMinutes: eveningDefaultMins,
                 defaultNote: 'العصر + ١٥ دقيقة',
                 morning: false,
+              ),
+              _sectionLabel('مدة التأجيل من الإشعار'),
+              _choice<int>(
+                options: const [
+                  (10, '١٠ دقائق'),
+                  (15, '١٥ دقيقة'),
+                  (30, '٣٠ دقيقة'),
+                  (60, 'ساعة'),
+                ],
+                selected: config.athkarSnoozeMinutes,
+                onPick: (v) => _state.setNumber(
+                  SirajSettings.athkarSnoozeMinutesKey,
+                  v,
+                ),
+              ),
+              _note(
+                '«اقرأ لاحقًا» من الإشعار يعيد التذكير بعد هذه المدة؛ ومن الجزيرة تختار المدة (١٠/١٥/٣٠/٦٠ دقيقة) كل مرة.',
               ),
               _note(
                 'اضغط على الوقت لتغييره، واضغط «افتراضي» للعودة إلى الوقت المرتبط بالصلاة.',
@@ -1145,6 +1283,40 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
               _note(
                 'الظهور فوق التطبيقات يحتاج إذن «العرض فوق التطبيقات الأخرى» في إعدادات أندرويد، ويعمل فقط مع الطبقة الأصلية (native overlay) — بدونه لن تظهر الكبسولة خارج التطبيق.',
                 icon: Icons.warning_amber_rounded,
+              ),
+              _note(
+                'تنبيهات النظام (مثل واتساب) تظهر فوق أي تطبيق — لا يمكن رسم الكبسولة فوقها، فهي من النظام نفسه. عند تفعيل «الوصول للإشعارات» تنزل الجزيرة تلقائيًا تحت التنبيه أثناء ظهوره ثم ترجع لمكانها، والعدّ التنازلي لا يختفي أبدًا.',
+                icon: Icons.notifications_active,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      _notifAccess
+                          ? 'الوصول للإشعارات: مفعّل'
+                          : 'الوصول للإشعارات: غير مفعّل',
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.slate600,
+                      ),
+                    ),
+                  ),
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      if (!SirajOverlayService.supported) return;
+                      await SirajOverlayService.instance
+                          .openNotificationAccessSettings();
+                      // The grant happens in system Settings; the status
+                      // refreshes when the app resumes.
+                    },
+                    icon: const Icon(Icons.open_in_new, size: 18),
+                    label: const Text(
+                      'فتح إعدادات الوصول للإشعارات',
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                  ),
+                ],
               ),
             ]),
 

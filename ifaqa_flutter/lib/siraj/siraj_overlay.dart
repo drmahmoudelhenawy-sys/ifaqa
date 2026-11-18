@@ -113,4 +113,23 @@ class SirajOverlayService {
   /// side is absent or the overlay is not showing.
   Future<bool> get isShowing async =>
       await _invoke<bool>('isShowing') ?? false;
+
+  /// Whether the user enabled notification access for the app, which the
+  /// heads-up dodge needs: without it, a WhatsApp-style banner covers the
+  /// island for a few seconds (SystemUI draws banners above every app
+  /// window — no window type can draw over them). With it, the island
+  /// shifts down below the banner while it shows and moves back after.
+  /// `false` when the native side is absent or access is not granted.
+  Future<bool> hasNotificationAccess() async =>
+      await _invoke<bool>('hasNotificationAccess') ?? false;
+
+  /// Opens the system notification-access settings screen
+  /// (`Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS`) via the native
+  /// side. Returns `true` only if access is already granted (nothing to
+  /// open); otherwise it opens Settings and returns `false` — the caller
+  /// must re-check [hasNotificationAccess] when the app resumes, because
+  /// the grant happens outside the app. Returns `false` when the native
+  /// side is absent.
+  Future<bool> openNotificationAccessSettings() async =>
+      await _invoke<bool>('openNotificationAccessSettings') ?? false;
 }

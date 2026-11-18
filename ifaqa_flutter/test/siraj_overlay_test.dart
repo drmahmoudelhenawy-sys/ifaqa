@@ -36,17 +36,27 @@ void main() {
   });
 
   test('prayerTimesCairo wall clock differs from device-local by the Cairo offset', () {
-    // The device running this test is UTC; Cairo is UTC+2 in November.
     // The adhan package computes the correct instant either way — the
     // device-timezone bug is in the wall-clock fields (display, and the
     // minute re-anchoring in buildSirajDays), which is what Cairo mode
-    // fixes. So: same instant, wall clocks 2 hours apart.
+    // fixes. So: same instant, wall clocks apart by the Cairo offset
+    // minus the device-local offset — 2 hours when the device is UTC,
+    // 0 when the device is already Africa/Cairo (e.g. the user's PC).
     final date = DateTime(2026, 11, 18);
     final c = prayerTimesCairo(location, date);
     final local = prayerTimesOn(location, date);
     expect(c.fajr.millisecondsSinceEpoch, local.fajr.millisecondsSinceEpoch);
-    expect(c.fajr.hour - local.fajr.hour, 2);
-    expect(c.isha.hour - local.isha.hour, 2);
+    final gapMinutes =
+        tz.TZDateTime(cairo, 2026, 11, 18).timeZoneOffset.inMinutes -
+        DateTime(2026, 11, 18).timeZoneOffset.inMinutes;
+    final fajrGap =
+        (c.fajr.hour * 60 + c.fajr.minute) -
+        (local.fajr.hour * 60 + local.fajr.minute);
+    final ishaGap =
+        (c.isha.hour * 60 + c.isha.minute) -
+        (local.isha.hour * 60 + local.isha.minute);
+    expect(fajrGap, gapMinutes);
+    expect(ishaGap, gapMinutes);
   });
 
   test('buildSirajDays(cairo: true) counts down to Fajr in Cairo time', () {
@@ -75,5 +85,40 @@ void main() {
     expect(days.length, 4); // from -1 to +2
     final fajr = days[1].prayer('fajr');
     expect(fajr.adhan is tz.TZDateTime, isFalse);
+  });
+
+  test('Sohag prayer times on 2026-11-18 (saved location)', () {
+    // Sohag (26.5569, 31.6948) is the user's home city and the default
+    // location; the overlay computes its times in the Africa/Cairo
+    // timezone, like Cairo above, but for Sohag's coordinates. These
+    // match the user's old app (Fajr 4:47, Sunrise 6:14, Asr 14:41,
+    // Maghrib 17:02, Isha 18:20) except Dhuhr: the old app says 11:38,
+    // the Dart package rounds to 11:39 — the same nearest-minute
+    // rounding as the Cairo values above.
+    final t = prayerTimesCairo(AppLocation.sohag, DateTime(2026, 11, 18));
+    expect((t.fajr.hour, t.fajr.minute), (4, 47));
+    expect((t.sunrise.hour, t.sunrise.minute), (6, 14));
+    expect((t.dhuhr.hour, t.dhuhr.minute), (11, 39));
+    expect((t.asr.hour, t.asr.minute), (14, 41));
+    expect((t.maghrib.hour, t.maghrib.minute), (17, 2));
+    expect((t.isha.hour, t.isha.minute), (18, 20));
+  });
+
+  test('buildSirajDays(Sohag, cairo: true) counts down to Sohag Fajr', () {
+    final days = buildSirajDays(
+      AppLocation.sohag,
+      tz.TZDateTime(cairo, 2026, 11, 18, 4, 0),
+      cairo: true,
+    );
+    final now = tz.TZDateTime(cairo, 2026, 11, 18, 4, 0);
+    final s = computeSirajState(
+      now: now,
+      days: days,
+      config: const SirajConfig(alertQuotes: false),
+    );
+    expect(s.kind, SirajKind.idle);
+    expect(s.prayerId, 'fajr');
+    expect(s.target, tz.TZDateTime(cairo, 2026, 11, 18, 4, 47));
+    expect(s.target!.difference(now), const Duration(minutes: 47));
   });
 }

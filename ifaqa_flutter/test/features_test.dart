@@ -30,7 +30,15 @@ Clan _clan({int points = 0, List<String> unlocked = const [], Map<String, dynami
 
 void main() {
   setUpAll(() async {
-    SharedPreferences.setMockInitialValues({});
+    // The schedule boundaries below are computed from AppLocation.cairo
+    // explicitly, and ProphetSchedule.at reads AppState.location — so pin
+    // the location to Cairo here. (The app default is Sohag since
+    // 2026-11-18; without this the Friday-Maghrib boundary shifts by the
+    // Sohag–Cairo difference and the last expectation flips.)
+    SharedPreferences.setMockInitialValues({
+      'loc_lat': 30.0444,
+      'loc_lon': 31.2357,
+    });
     await AppState.init();
   });
 
