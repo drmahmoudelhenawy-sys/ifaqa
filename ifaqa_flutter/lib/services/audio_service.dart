@@ -137,6 +137,11 @@ class AudioService extends ChangeNotifier {
 
   Future<void> toggle() => player.playing ? player.pause() : player.play();
 
+  /// Pause only when currently playing (used by the sleep timer).
+  Future<void> pause() async {
+    if (player.playing) await player.pause();
+  }
+
   Future<void> next() async => _step(1);
   Future<void> previous() async => _step(-1);
 
@@ -164,6 +169,21 @@ class AudioService extends ChangeNotifier {
     _queue = const [];
     now = null;
     notifyListeners();
+  }
+
+  // ---- Siraj player card helpers (additive; existing behaviour unchanged) ----
+
+  /// Read-only view of the current playlist queue (empty when not in a
+  /// playlist). Used by the Siraj player card to show "up next".
+  List<PlaylistItem> get queue => List.unmodifiable(_queue);
+
+  /// Plays a user playlist by id. Returns false when it does not exist or
+  /// is empty (nothing is loaded or stopped in that case).
+  Future<bool> playPlaylistById(String id) async {
+    final pl = PlaylistsService.instance.byId(id);
+    if (pl == null || pl.items.isEmpty) return false;
+    await playPlaylist(pl);
+    return true;
   }
 
   // ---- Listening stats ----

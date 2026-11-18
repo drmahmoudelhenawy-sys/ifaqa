@@ -17,7 +17,7 @@ void main() {
   });
 
   setUp(() {
-    for (final f in ['fajr_alarm', 'notif_morning_athkar', 'notif_evening_athkar', 'notif_kahf_friday', 'notif_fasting_mon_thu', 'notif_fasting_lunar']) {
+    for (final f in ['fajr_alarm', 'notif_morning_athkar', 'notif_evening_athkar', 'notif_kahf_friday', 'notif_fasting_mon_thu', 'notif_fasting_lunar', 'siraj_enabled']) {
       state.setFlag(f, false);
     }
     state.setFlag('notif_wird', false);
@@ -78,6 +78,33 @@ void main() {
     expect(kahf.map((p) => p.time.weekday).toSet(), {DateTime.friday});
     expect(fasting.map((p) => p.time.weekday).toSet(), {DateTime.sunday, DateTime.wednesday});
     expect(fasting.every((p) => p.time.hour == 21), isTrue);
+  });
+
+  test('Siraj athkar reminders replace the legacy ones (no duplicates)', () {
+    state.setFlag('notif_morning_athkar', true);
+    state.setFlag('notif_evening_athkar', true);
+    state.setFlag('siraj_enabled', true);
+    final plans = planReminders(state, now);
+    final morning = plans
+        .where((p) => p.kind == ReminderKind.morningAthkar)
+        .toList();
+    final evening = plans
+        .where((p) => p.kind == ReminderKind.eveningAthkar)
+        .toList();
+    // All Athkar entries come from Siraj (1100+); no legacy 200/300 duplicates.
+    expect(morning, isNotEmpty);
+    expect(morning.every((p) => p.id >= 1100), isTrue);
+    expect(evening, isNotEmpty);
+    expect(evening.every((p) => p.id >= 1100), isTrue);
+    // With Siraj Athkar alerts off, the legacy entries return.
+    state.setFlag('siraj_k_athkar', false);
+    final legacy = planReminders(state, now);
+    final legacyMorning = legacy
+        .where((p) => p.kind == ReminderKind.morningAthkar)
+        .toList();
+    expect(legacyMorning.length, planDays);
+    expect(legacyMorning.every((p) => p.id >= 200 && p.id < 300), isTrue);
+    state.setFlag('siraj_k_athkar', true);
   });
 
   test('white-day reminders fall on the evening before Hijri 13, 14 and 15', () {

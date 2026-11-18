@@ -1,9 +1,11 @@
 import 'dart:convert';
 import '../models/prayer_time_info.dart';
+import '../siraj/siraj_reminders.dart';
+import '../siraj/siraj_state.dart';
 import 'app_state.dart';
 import 'islamic_calendar_service.dart';
 
-enum ReminderKind { fajrAlarm, morningAthkar, eveningAthkar, wird, kahf, fastMonThu, fastWhiteDays, khatma }
+enum ReminderKind { fajrAlarm, morningAthkar, eveningAthkar, wird, kahf, fastMonThu, fastWhiteDays, khatma, sirajPrayerBefore, sirajPrayerAfter }
 
 class PlannedReminder {
   final int id;
@@ -67,11 +69,25 @@ const List<int> fajrOffsets = [0, 10, 15, 20, 30, 45, 60];
 /// How far ahead one-off reminders are planned; the app re-plans on every launch.
 const int planDays = 7;
 
+/// Id range reserved for Siraj reminders scheduled by [planReminders]:
+/// 1100-1199. Existing ranges: 100-800 planned reminders, 900-908 snoozes,
+/// 1000-1099 the Siraj live capsule (owned by SirajLiveService, never
+/// cancelled by [ReminderService.reschedule]). At most 100 Siraj entries
+/// are scheduled (the 2-day horizon yields ~24 plus one per wird trigger).
+const int sirajReminderFirstId = 1100;
+const int sirajReminderLastId = 1199;
+
 /// Everything to schedule from [now], based on the user's saved settings.
 /// Pure so it can be tested without the notification plugin.
 List<PlannedReminder> planReminders(AppState state, DateTime now) {
   final plans = <PlannedReminder>[];
   final location = state.location;
+
+  // Siraj's Athkar reminders (same default times) replace the legacy ones
+  // when Siraj Athkar alerts are on, so the user is not notified twice.
+  final sirajAthkarOn =
+      state.flag('siraj_enabled', fallback: true) &&
+      state.flag('siraj_k_athkar', fallback: true);
 
   for (var d = 0; d < planDays; d++) {
     final day = DateTime(now.year, now.month, now.day + d);
@@ -92,7 +108,7 @@ List<PlannedReminder> planReminders(AppState state, DateTime now) {
         body: fajrBody(theme, fixed: fixed, offset: offset),
       ));
     }
-    if (state.flag('notif_morning_athkar')) {
+    if (state.flag('notif_morning_athkar') && !sirajAthkarOn) {
       plans.add(PlannedReminder(
         id: 200 + d,
         kind: ReminderKind.morningAthkar,
@@ -101,7 +117,7 @@ List<PlannedReminder> planReminders(AppState state, DateTime now) {
         body: 'ابدأ يومك بذكر الله، أذكار الصباح في انتظارك.',
       ));
     }
-    if (state.flag('notif_evening_athkar')) {
+    if (state.flag('notif_evening_athkar') && !sirajAthkarOn) {
       plans.add(PlannedReminder(
         id: 300 + d,
         kind: ReminderKind.eveningAthkar,
@@ -167,5 +183,146 @@ List<PlannedReminder> planReminders(AppState state, DateTime now) {
       }
     }
   }
+  // Siraj reminders (ids 1100-1199): appended, never replacing the above.
+  plans.addAll(_sirajReminders(state, now));
   return plans.where((p) => p.time.isAfter(now)).toList();
+}
+
+// ---- Siraj reminders (ids 1100-1199) ----
+//
+// The Siraj keys below mirror SirajSettings.*Key (siraj_settings.dart);
+// they are read here directly so this file stays free of the
+// AudioService import chain that siraj_settings.dart carries.
+
+/// Siraj prayer days for the 2-day reminder horizon, from the same
+/// prayer-time source as [planReminders] (iqamah minutes are per-prayer
+/// constants, so today's table applies to every day).
+List<SirajDay> _sirajDays(AppLocation location, DateTime now) {
+  final iqama = {
+    for (final p in buildPrayerTimes(location)) p.key.toLowerCase(): p.iqamaMins,
+  };
+  final days = <SirajDay>[];
+  for (var offset = 0; offset <= 2; offset++) {
+    final date = DateTime(now.year, now.month, now.day + offset);
+    final t = prayerTimesOn(location, date);
+    DateTime m(DateTime d) =>
+        DateTime(date.year, date.month, date.day, d.hour, d.minute);
+    final times = {
+      'fajr': t.fajr,
+      'dhuhr': t.dhuhr,
+      'asr': t.asr,
+      'maghrib': t.maghrib,
+      'isha': t.isha,
+    };
+    days.add(
+      SirajDay(
+        date: date,
+        sunrise: m(t.sunrise),
+        prayers: [
+          for (final id in prayerIds)
+            SirajPrayer(id, m(times[id]!), iqama[id] ?? 10),
+        ],
+      ),
+    );
+  }
+  return days;
+}
+
+SirajConfig _sirajConfig(AppState state) {
+  int? nullableMinutes(String key) {
+    final raw = state.text(key);
+    if (raw == null || raw.isEmpty) return null;
+    final value = int.tryParse(raw);
+    if (value == null || value < 0 || value >= 24 * 60) return null;
+    return value;
+  }
+
+  int nonNegative(String key, int fallback) {
+    final value = state.number(key, fallback: fallback);
+    return value < 0 ? 0 : value;
+  }
+
+  return SirajConfig(
+    enabled: state.flag('siraj_enabled', fallback: true),
+    alertPrayer: state.flag('siraj_k_prayer', fallback: true),
+    alertIqamah: state.flag('siraj_k_iqamah', fallback: true),
+    alertAthkar: state.flag('siraj_k_athkar', fallback: true),
+    remindBeforeMins: nonNegative('siraj_remind_before_mins', 10),
+    remindAfterMins: nonNegative('siraj_remind_after_mins', 10),
+    morningAthkarMinutes: nullableMinutes('siraj_morning_athkar_minutes'),
+    eveningAthkarMinutes: nullableMinutes('siraj_evening_athkar_minutes'),
+  );
+}
+
+SirajPrayer? _nextPrayerAfter(List<SirajPrayer> prayers, DateTime time) {
+  for (final p in prayers) {
+    if (p.adhan.isAfter(time)) return p;
+  }
+  return null;
+}
+
+/// Siraj reminders appended to [planReminders]: prayer-before /
+/// prayer-after, morning/evening Athkar at the configured times, and each
+/// enabled wird's triggers — all from [planSirajReminders]. Existing
+/// entries and ids are untouched; these only append in 1100-1199.
+///
+/// STANDING RULE: a reminder body never hides prayer time. Prayer entries
+/// already name their prayer; Athkar and fixed-time wird bodies name the
+/// next prayer too, the way the live capsule keeps counting down to it.
+List<PlannedReminder> _sirajReminders(AppState state, DateTime now) {
+  final config = _sirajConfig(state);
+  if (!config.enabled) return const [];
+  final days = _sirajDays(state.location, now);
+  final entries = planSirajReminders(
+    now: now,
+    days: days,
+    config: config,
+    wirds: decodeSirajWirdsJson(state.text('siraj_wirds_json') ?? ''),
+  );
+  final prayers = [for (final d in days) ...d.prayers]
+    ..sort((a, b) => a.adhan.compareTo(b.adhan));
+  final out = <PlannedReminder>[];
+  for (final e in entries) {
+    // Per-kind alert flags gate the Siraj entries, like the capsule does.
+    switch (e.kind) {
+      case 'prayer_before':
+      case 'prayer_after':
+        if (!config.alertPrayer) continue;
+      case 'athkar_morning':
+      case 'athkar_evening':
+        if (!config.alertAthkar) continue;
+      case 'wird':
+        break; // Wirds carry their own `enabled` flag.
+      default:
+        continue;
+    }
+    final kind = switch (e.kind) {
+      'prayer_before' => ReminderKind.sirajPrayerBefore,
+      'prayer_after' => ReminderKind.sirajPrayerAfter,
+      'athkar_morning' => ReminderKind.morningAthkar,
+      'athkar_evening' => ReminderKind.eveningAthkar,
+      _ => ReminderKind.wird,
+    };
+    var body = e.body;
+    if (e.kind == 'athkar_morning' ||
+        e.kind == 'athkar_evening' ||
+        (e.kind == 'wird' && !body.contains('صلاة'))) {
+      final next = _nextPrayerAfter(prayers, e.time);
+      if (next != null) {
+        body =
+            '$body · متبقٍ على أذان ${next.label} (${sirajClock(next.adhan)})';
+      }
+    }
+    out.add(
+      PlannedReminder(
+        id: sirajReminderFirstId + out.length,
+        kind: kind,
+        time: e.time,
+        title: e.title,
+        body: body,
+      ),
+    );
+    if (out.length >= sirajReminderLastId - sirajReminderFirstId + 1) break;
+  }
+  return out;
 }

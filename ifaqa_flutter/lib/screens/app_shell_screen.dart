@@ -17,6 +17,7 @@ import 'prayer_times_tab.dart';
 import 'profile_tab.dart';
 import 'quran_audio_hub_tab.dart';
 import 'quran_tab.dart';
+import 'siraj_tab.dart';
 import 'tools_tab.dart';
 
 class AppShellScreen extends StatefulWidget {
@@ -105,6 +106,8 @@ class _AppShellScreenState extends State<AppShellScreen> {
         return const QuranAudioHubTab();
       case NavPage.prayerTimes:
         return const PrayerTimesTab();
+      case NavPage.siraj:
+        return const SirajTab();
       case NavPage.challenges:
         return const ChallengesTab();
       case NavPage.tools:
@@ -155,7 +158,14 @@ class _AppShellScreenState extends State<AppShellScreen> {
               ),
             ),
             // Floats over the content (never pushes it down), under the status bar.
-            if (sirajActive) const Positioned.fill(child: SirajCapsule()),
+            // Long-press the capsule to open the Siraj tab.
+            if (sirajActive)
+              Positioned.fill(
+                child: SirajCapsule(
+                  onOpenSirajTab: () =>
+                      setState(() => currentPage = NavPage.siraj),
+                ),
+              ),
           ],
         ),
         bottomNavigationBar: SafeArea(
@@ -350,6 +360,7 @@ class _AppShellScreenState extends State<AppShellScreen> {
           _navBtn(Icons.menu_book, 'المصحف', NavPage.quran),
           _navBtn(Icons.headphones, 'استماع', NavPage.audio),
           _navBtn(Icons.access_time_filled, 'الصلاة', NavPage.prayerTimes),
+          _navBtn(Icons.nightlight_round, 'سِراج', NavPage.siraj),
           if (!isLite) _navBtn(Icons.bolt, 'التحديات', NavPage.challenges),
           _navBtn(Icons.grid_view, 'الأدوات', NavPage.tools),
         ],

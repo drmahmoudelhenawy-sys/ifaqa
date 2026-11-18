@@ -81,6 +81,71 @@ class SirajConfig {
   final int quoteEveryMins;
   final int quoteShowSecs;
 
+  // ---- Capsule appearance / layout ----
+  /// Fraction of the screen width the capsule occupies.
+  final double capsuleWidthFrac;
+  /// Capsule height in dp.
+  final double capsuleHeight;
+
+  /// STANDING RULE — prayer time is the most important thing and must
+  /// ALWAYS be visible (in-app capsule, home widget, lock-screen
+  /// notification). The capsule always shows the next prayer + countdown,
+  /// even if every other content kind is off. This flag is therefore
+  /// effectively always true: [SirajSettings.config] forces it to `true`
+  /// regardless of any stored value, and UI code must never hide the
+  /// prayer chip on the basis of this flag.
+  final bool showPrayer;
+  final bool showAthkar;
+  final bool showQuotes;
+  final bool showMedia;
+  final bool showPlayer;
+
+  /// Seconds of no interaction before auto-hide; 0 = off. Only applies
+  /// when [autoHide] is true.
+  final int autoHideIdleSecs;
+
+  /// Countdown format: 'min_sec' (HH:MM:SS / MM:SS, Arabic digits) or
+  /// 'min_only' (whole minutes + ' د').
+  final String countdownFormat;
+
+  /// Capsule horizontal alignment: 'left' | 'center' | 'right'.
+  final String capsuleAlign;
+  /// Vertical offset in dp from the capsule's default position.
+  final double capsuleTopOffset;
+  final bool capsuleDraggable;
+
+  /// Capsule opacity, clamped to 0.5..1.0.
+  final double capsuleOpacity;
+
+  /// Accent colour as a hex string (e.g. '#10B981'); null = theme colour.
+  final String? capsuleAccentHex;
+
+  // ---- Reminders / sound ----
+  /// Adhan sound id (see [alarmSounds] in reminder_plan.dart).
+  final String adhanSound;
+  /// Minutes before each adhan to remind.
+  final int remindBeforeMins;
+  /// Minutes after each adhan to remind.
+  final int remindAfterMins;
+
+  /// Minutes after midnight for the morning Athkar reminder when set;
+  /// null = follow Fajr+20min (see [athkarMorningAfterFajr]).
+  final int? morningAthkarMinutes;
+  /// Minutes after midnight for the evening Athkar reminder when set;
+  /// null = follow Asr+15min (see [athkarEveningAfterAsr]).
+  final int? eveningAthkarMinutes;
+
+  // ---- Player / overlay ----
+  /// Audio source for the capsule player: 'app' | 'device'.
+  final String playerSource;
+  final bool deviceMusicEnabled;
+  final bool overlayEnabled;
+  final bool overlayShowWhenAppClosed;
+
+  /// JSON list of [SirajWird]s (see siraj_reminders.dart for the format).
+  /// Empty string = no custom wirds.
+  final String wirdsJson;
+
   const SirajConfig({
     this.enabled = true,
     this.showInApp = true,
@@ -96,9 +161,38 @@ class SirajConfig {
     this.quoteSource = SirajQuoteChoice.both,
     this.quoteEveryMins = 30,
     this.quoteShowSecs = 12,
+    this.capsuleWidthFrac = 0.92,
+    this.capsuleHeight = 44.0,
+    this.showPrayer = true,
+    this.showAthkar = true,
+    this.showQuotes = true,
+    this.showMedia = true,
+    this.showPlayer = true,
+    this.autoHideIdleSecs = 0,
+    this.countdownFormat = 'min_sec',
+    this.capsuleAlign = 'center',
+    this.capsuleTopOffset = 0.0,
+    this.capsuleDraggable = true,
+    this.capsuleOpacity = 1.0,
+    this.capsuleAccentHex,
+    this.adhanSound = 'cairo',
+    this.remindBeforeMins = 10,
+    this.remindAfterMins = 10,
+    this.morningAthkarMinutes,
+    this.eveningAthkarMinutes,
+    this.playerSource = 'app',
+    this.deviceMusicEnabled = false,
+    this.overlayEnabled = false,
+    this.overlayShowWhenAppClosed = false,
+    this.wirdsJson = '',
   });
 
   SirajConfig copyWith({
+    bool? enabled,
+    bool? showInApp,
+    bool? liveNotification,
+    String? theme,
+    bool? autoHide,
     bool? dnd,
     bool? alertPrayer,
     bool? alertIqamah,
@@ -106,12 +200,38 @@ class SirajConfig {
     bool? alertMedia,
     bool? alertQuotes,
     SirajQuoteChoice? quoteSource,
+    int? quoteEveryMins,
+    int? quoteShowSecs,
+    double? capsuleWidthFrac,
+    double? capsuleHeight,
+    bool? showPrayer,
+    bool? showAthkar,
+    bool? showQuotes,
+    bool? showMedia,
+    bool? showPlayer,
+    int? autoHideIdleSecs,
+    String? countdownFormat,
+    String? capsuleAlign,
+    double? capsuleTopOffset,
+    bool? capsuleDraggable,
+    double? capsuleOpacity,
+    String? capsuleAccentHex,
+    String? adhanSound,
+    int? remindBeforeMins,
+    int? remindAfterMins,
+    int? morningAthkarMinutes,
+    int? eveningAthkarMinutes,
+    String? playerSource,
+    bool? deviceMusicEnabled,
+    bool? overlayEnabled,
+    bool? overlayShowWhenAppClosed,
+    String? wirdsJson,
   }) => SirajConfig(
-    enabled: enabled,
-    showInApp: showInApp,
-    liveNotification: liveNotification,
-    theme: theme,
-    autoHide: autoHide,
+    enabled: enabled ?? this.enabled,
+    showInApp: showInApp ?? this.showInApp,
+    liveNotification: liveNotification ?? this.liveNotification,
+    theme: theme ?? this.theme,
+    autoHide: autoHide ?? this.autoHide,
     dnd: dnd ?? this.dnd,
     alertPrayer: alertPrayer ?? this.alertPrayer,
     alertIqamah: alertIqamah ?? this.alertIqamah,
@@ -119,8 +239,38 @@ class SirajConfig {
     alertMedia: alertMedia ?? this.alertMedia,
     alertQuotes: alertQuotes ?? this.alertQuotes,
     quoteSource: quoteSource ?? this.quoteSource,
-    quoteEveryMins: quoteEveryMins,
-    quoteShowSecs: quoteShowSecs,
+    quoteEveryMins: quoteEveryMins ?? this.quoteEveryMins,
+    quoteShowSecs: quoteShowSecs ?? this.quoteShowSecs,
+    capsuleWidthFrac:
+        (capsuleWidthFrac ?? this.capsuleWidthFrac).clamp(0.0, 1.0),
+    capsuleHeight: capsuleHeight ?? this.capsuleHeight,
+    // See the STANDING RULE above: the prayer chip is never turned off.
+    showPrayer: showPrayer ?? this.showPrayer,
+    showAthkar: showAthkar ?? this.showAthkar,
+    showQuotes: showQuotes ?? this.showQuotes,
+    showMedia: showMedia ?? this.showMedia,
+    showPlayer: showPlayer ?? this.showPlayer,
+    autoHideIdleSecs: autoHideIdleSecs ?? this.autoHideIdleSecs,
+    countdownFormat: countdownFormat ?? this.countdownFormat,
+    capsuleAlign: capsuleAlign ?? this.capsuleAlign,
+    capsuleTopOffset: capsuleTopOffset ?? this.capsuleTopOffset,
+    capsuleDraggable: capsuleDraggable ?? this.capsuleDraggable,
+    capsuleOpacity:
+        (capsuleOpacity ?? this.capsuleOpacity).clamp(0.5, 1.0),
+    capsuleAccentHex: capsuleAccentHex ?? this.capsuleAccentHex,
+    adhanSound: adhanSound ?? this.adhanSound,
+    remindBeforeMins: remindBeforeMins ?? this.remindBeforeMins,
+    remindAfterMins: remindAfterMins ?? this.remindAfterMins,
+    morningAthkarMinutes:
+        morningAthkarMinutes ?? this.morningAthkarMinutes,
+    eveningAthkarMinutes:
+        eveningAthkarMinutes ?? this.eveningAthkarMinutes,
+    playerSource: playerSource ?? this.playerSource,
+    deviceMusicEnabled: deviceMusicEnabled ?? this.deviceMusicEnabled,
+    overlayEnabled: overlayEnabled ?? this.overlayEnabled,
+    overlayShowWhenAppClosed:
+        overlayShowWhenAppClosed ?? this.overlayShowWhenAppClosed,
+    wirdsJson: wirdsJson ?? this.wirdsJson,
   );
 }
 

@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <!-- Siraj overlay over other apps ("Display over other apps"). Native side not implemented yet — see lib/siraj/OVERLAY_NATIVE.md. -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
         android:label="إفاقة"
         android:name="${applicationName}"

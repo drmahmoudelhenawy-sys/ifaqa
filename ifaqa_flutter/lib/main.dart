@@ -59,6 +59,9 @@ class IfaqaApp extends StatelessWidget {
         );
       },
       home: _firstScreen(),
+      // Lets notification taps / widget taps open screens (e.g. the Siraj
+      // live notification's "أذكار" action) without a BuildContext.
+      navigatorKey: ReminderService.navigatorKey,
     );
   }
 }

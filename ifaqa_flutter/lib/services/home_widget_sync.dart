@@ -11,6 +11,7 @@ import 'audio_service.dart';
 import 'app_state.dart';
 import 'prophet_challenge_service.dart';
 import 'quran_progress_service.dart';
+import 'reminder_service.dart';
 
 /// Keeps the Android home screen widgets (android/.../HomeWidgets.kt) in step
 /// with the app, and collects salawat counted on the widget.
@@ -195,6 +196,13 @@ class HomeWidgetSync with WidgetsBindingObserver {
       HomeWidget.saveWidgetData<String>('athkar_due', due),
       HomeWidget.saveWidgetData<String>('athkar_text', zekr),
       HomeWidget.saveWidgetData<String>('athkar_count', 'اضغط لفتح الأذكار'),
+      // Which Athkar the widget opens: morning from Fajr until Asr,
+      // evening from Asr until the next Fajr (same windows as `due`).
+      // Read by AthkarWidget (HomeWidgets.kt) for its tap intent.
+      HomeWidget.saveWidgetData<String>(
+        'athkar_open_uri',
+        nowMin >= asr ? 'ifaqa://athkar/evening' : 'ifaqa://athkar/morning',
+      ),
       HomeWidget.saveWidgetData<int>('wird_done', doneCount),
       HomeWidget.saveWidgetData<int>('wird_total', tasks.length),
       HomeWidget.saveWidgetData<String>('wird_next', wirdNext),
@@ -236,9 +244,19 @@ class HomeWidgetSync with WidgetsBindingObserver {
     });
   }
 
-  /// The radio widget's button opens the app with ifaqa://radio/toggle.
+  /// Widget taps, routed by URI host (same pattern as the radio widget):
+  /// `ifaqa://athkar/morning|evening` opens that Athkar screen directly,
+  /// `ifaqa://radio/toggle` toggles playback.
   void _onClick(Uri? uri) {
-    if (uri == null || uri.host != 'radio') return;
+    if (uri == null) return;
+    if (uri.host == 'athkar') {
+      final which = uri.pathSegments.isNotEmpty
+          ? uri.pathSegments.first
+          : 'morning';
+      unawaited(ReminderService.openSirajAthkar(which));
+      return;
+    }
+    if (uri.host != 'radio') return;
     if (uri.path == '/toggle') AudioService.instance.toggle();
   }
 

@@ -107,6 +107,9 @@ class SirajLiveService with WidgetsBindingObserver {
         final details = NotificationDetails(
           android: liveDetails(e, color: color, until: end),
         );
+        // Payload for the "أذكار" action / body tap: which Athkar window
+        // applies to this entry (see [sirajAthkarForLiveEntry]).
+        final payload = sirajAthkarPayload(sirajAthkarForLiveEntry(e).name);
         final id = sirajLiveFirstId + i;
         if (i == 0) {
           await plugin.show(
@@ -114,6 +117,7 @@ class SirajLiveService with WidgetsBindingObserver {
             title: e.title,
             body: e.body,
             notificationDetails: details,
+            payload: payload,
           );
         } else {
           await plugin.zonedSchedule(
@@ -122,6 +126,7 @@ class SirajLiveService with WidgetsBindingObserver {
             body: e.body,
             scheduledDate: tz.TZDateTime.from(e.time, tz.local),
             notificationDetails: details,
+            payload: payload,
             androidScheduleMode: exact
                 ? AndroidScheduleMode.exactAllowWhileIdle
                 : AndroidScheduleMode.inexactAllowWhileIdle,
@@ -171,7 +176,32 @@ AndroidNotificationDetails liveDetails(
     visibility: NotificationVisibility.public,
     color: Color(color),
     colorized: true,
+    // "أذكار" opens the Athkar screen for the window that applies
+    // (see [sirajAthkarForLiveEntry]) without going through the home
+    // screen. The capsule itself stays: cancelNotification is false,
+    // and the chronometer keeps counting down to the next prayer/iqamah.
+    actions: <AndroidNotificationAction>[
+      AndroidNotificationAction(
+        sirajAthkarActionId,
+        'أذكار',
+        showsUserInterface: true,
+        cancelNotification: false,
+      ),
+    ],
     // Expires when the next link of the chain takes over.
     timeoutAfter: lifetime > 1000 ? lifetime : null,
   );
+}
+
+/// Which Athkar the live capsule's "أذكار" action opens for [e]: the
+/// entry's own type for Athkar reminder entries; otherwise the window
+/// that applies — morning while the next prayer is Fajr or Dhuhr,
+/// evening from Asr onwards — falling back to morning.
+@visibleForTesting
+SirajAthkar sirajAthkarForLiveEntry(SirajLiveEntry e) {
+  if (e.isAthkar && e.athkar != null) return e.athkar!;
+  return switch (e.prayerId) {
+    'asr' || 'maghrib' || 'isha' => SirajAthkar.evening,
+    _ => SirajAthkar.morning,
+  };
 }

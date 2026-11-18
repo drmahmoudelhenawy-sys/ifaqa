@@ -16,6 +16,7 @@ import '../services/audio_service.dart';
 import '../services/islamic_calendar_service.dart';
 import '../services/mushaf_service.dart';
 import '../theme/app_colors.dart';
+import 'siraj_reminders.dart';
 import 'siraj_settings.dart';
 import 'siraj_state.dart';
 
@@ -77,7 +78,10 @@ enum _Mode { none, panel, card }
 /// With [preview] it cycles demo states and never expands (settings page).
 class SirajCapsule extends StatefulWidget {
   final bool preview;
-  const SirajCapsule({super.key, this.preview = false});
+
+  /// Long-press the capsule to open the Siraj tab (AppShell passes this).
+  final VoidCallback? onOpenSirajTab;
+  const SirajCapsule({super.key, this.preview = false, this.onOpenSirajTab});
 
   @override
   State<SirajCapsule> createState() => _SirajCapsuleState();
@@ -120,6 +124,10 @@ class _SirajCapsuleState extends State<SirajCapsule>
   int _demo = 0;
   int _zekrCount = 0;
   String? _zekrKey;
+
+  /// In-progress drag offsets (applied visually until drag end persists them).
+  double _dragDx = 0;
+  double _dragDy = 0;
 
   SirajState _idleFallback() => const SirajState(
     kind: SirajKind.idle,
@@ -193,7 +201,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
       final alert =
           (next.kind == SirajKind.adhanNow ||
               next.kind == SirajKind.athkarDue) &&
-          !_dismissed.contains(next.key);
+          !_dismissed.contains(next.key) &&
+          _contentVisible(next.kind);
       if (alert && _mode == _Mode.none) {
         _card = next;
         _mode = _Mode.card;
@@ -209,11 +218,16 @@ class _SirajCapsuleState extends State<SirajCapsule>
           next.kind != SirajKind.media) {
         _collapse();
       }
+      // Auto-hide: collapse to the thin handle after the configured idle
+      // time (or 6s when the idle-seconds setting is 0 / unset).
+      final idleSecs = _config.autoHideIdleSecs > 0
+          ? _config.autoHideIdleSecs
+          : 6;
       _hidden =
           _config.autoHide &&
           _mode == _Mode.none &&
           next.kind == SirajKind.idle &&
-          now.difference(_lastActive).inSeconds >= 6;
+          now.difference(_lastActive).inSeconds >= idleSecs;
     } else {
       _hidden = false;
     }
@@ -284,6 +298,93 @@ class _SirajCapsuleState extends State<SirajCapsule>
     }
   }
 
+  /// Whether a pill kind is allowed to show (content toggles). The prayer
+  /// chip is never hidden — see the STANDING RULE in siraj_state.dart.
+  bool _contentVisible(SirajKind kind) {
+    switch (kind) {
+      case SirajKind.athkarDue:
+        return _config.showAthkar;
+      case SirajKind.quote:
+        return _config.showQuotes;
+      case SirajKind.media:
+        return _config.showMedia;
+      default:
+        return true;
+    }
+  }
+
+  /// A pill state with hidden kinds replaced by the idle prayer countdown,
+  /// so prayer time stays visible even when every other kind is off.
+  SirajState _effectivePillState(SirajState s) {
+    if (_contentVisible(s.kind)) return s;
+    final p = _nextPrayer;
+    return SirajState(
+      kind: SirajKind.idle,
+      title: p?.label ?? 'سِراج',
+      subtitle: 'بعد',
+      target: p?.adhan,
+      priority: SirajPriority.idle,
+      key: 'idle',
+      prayerId: p?.id,
+    );
+  }
+
+  /// Accent override from settings (hex like '#10B981'), or null for the
+  /// theme accent.
+  Color? _accentOverride() {
+    final hex = _config.capsuleAccentHex;
+    if (hex == null || hex.isEmpty) return null;
+    final clean = hex.replaceFirst('#', '');
+    final value = int.tryParse(clean, radix: 16);
+    if (value == null) return null;
+    return Color(clean.length == 6 ? 0xFF000000 | value : value);
+  }
+
+  SirajTheme _effectiveTheme(SirajTheme base) {
+    final accent = _accentOverride();
+    if (accent == null) return base;
+    return SirajTheme(
+      base.id,
+      base.name,
+      base.bgTop,
+      base.bgBottom,
+      accent,
+      base.liveColor,
+    );
+  }
+
+  /// Persist a finished drag: vertical movement becomes the top offset
+  /// (0–80), horizontal position picks the alignment (left/center/right).
+  void _finishDrag() {
+    final dx = _dragDx;
+    final dy = _dragDy;
+    if (dx == 0 && dy == 0) return;
+    final screenW = MediaQuery.sizeOf(context).width;
+    final w = _lastTarget?.width ?? 200;
+    final baseCx = switch (_config.capsuleAlign) {
+      'left' => w / 2,
+      'right' => screenW - w / 2,
+      _ => screenW / 2,
+    };
+    final cx = baseCx + dx;
+    final align = cx < screenW / 3
+        ? 'left'
+        : cx > screenW * 2 / 3
+        ? 'right'
+        : 'center';
+    final top = (_config.capsuleTopOffset + dy).clamp(0.0, 80.0);
+    setState(() {
+      _dragDx = 0;
+      _dragDy = 0;
+    });
+    final app = AppState.instance;
+    if (align != _config.capsuleAlign) {
+      app.setText(SirajSettings.capsuleAlignKey, align);
+    }
+    app.setText(SirajSettings.capsuleTopOffsetKey, top.toStringAsFixed(1));
+    _touch();
+  }
+
   // ---- Expansion ----
 
   void _touch() => _lastActive = DateTime.now();
@@ -340,7 +441,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
       return;
     }
     if (_mode != _Mode.none) return;
-    switch (_state.kind) {
+    switch (_effectivePillState(_state).kind) {
       case SirajKind.adhanNow:
       case SirajKind.athkarDue:
       case SirajKind.media:
@@ -352,8 +453,6 @@ class _SirajCapsuleState extends State<SirajCapsule>
 
   // ---- Size / spring ----
 
-  static const double _pillH = 38;
-
   Size _targetSize(double screenW) {
     final maxW = screenW - 24;
     if (_hidden) return const Size(56, 7);
@@ -361,7 +460,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
     double h;
     switch (_mode) {
       case _Mode.none:
-        h = _pillH;
+        // Configured capsule height (36–64), default 44.
+        h = _config.capsuleHeight.clamp(36.0, 64.0);
         switch (_state.kind) {
           case SirajKind.idle:
             w = 200;
@@ -380,6 +480,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
             // Room for the prayer chip + the track title + play button.
             w = 360;
         }
+        // Width fraction caps the pill width (default 0.92 ≈ full width).
+        w = math.min(w, screenW * _config.capsuleWidthFrac.clamp(0.5, 1.0));
       case _Mode.panel:
         w = 360;
         h = 340;
@@ -414,11 +516,21 @@ class _SirajCapsuleState extends State<SirajCapsule>
 
   @override
   Widget build(BuildContext context) {
-    final theme = sirajThemeById(_config.theme);
-    final top = widget.preview ? 0.0 : MediaQuery.paddingOf(context).top + 6;
+    final theme = _effectiveTheme(sirajThemeById(_config.theme));
+    final top = widget.preview
+        ? 0.0
+        : MediaQuery.paddingOf(context).top +
+              6 +
+              _config.capsuleTopOffset +
+              _dragDy;
     WidgetsBinding.instance.addPostFrameCallback((_) => _syncSize());
     final capsule = _capsule(theme);
     if (widget.preview) return Center(child: capsule);
+    final align = switch (_config.capsuleAlign) {
+      'left' => Alignment.topLeft,
+      'right' => Alignment.topRight,
+      _ => Alignment.topCenter,
+    };
     return Stack(
       children: [
         if (_mode != _Mode.none)
@@ -432,7 +544,13 @@ class _SirajCapsuleState extends State<SirajCapsule>
           top: top,
           left: 0,
           right: 0,
-          child: Center(child: capsule),
+          child: Align(
+            alignment: align,
+            child: Transform.translate(
+              offset: Offset(_dragDx, 0),
+              child: capsule,
+            ),
+          ),
         ),
       ],
     );
@@ -440,8 +558,20 @@ class _SirajCapsuleState extends State<SirajCapsule>
 
   Widget _capsule(SirajTheme theme) {
     final target = _lastTarget ?? const Size(196, 38);
+    // Dragging is only active while the capsule is collapsed: while
+    // expanded, the swipe-up-to-collapse gesture keeps working.
+    final canDrag =
+        !widget.preview && _config.capsuleDraggable && _mode == _Mode.none;
     return GestureDetector(
       onTap: _onTap,
+      onLongPress: widget.preview ? null : widget.onOpenSirajTab,
+      onPanUpdate: canDrag
+          ? (d) => setState(() {
+              _dragDx += d.delta.dx;
+              _dragDy += d.delta.dy;
+            })
+          : null,
+      onPanEnd: canDrag ? (_) => _finishDrag() : null,
       onVerticalDragEnd: (d) {
         if ((d.primaryVelocity ?? 0) < -150 && _mode != _Mode.none) _collapse();
       },
@@ -451,7 +581,9 @@ class _SirajCapsuleState extends State<SirajCapsule>
           final w = math.max(24.0, _w.value);
           final h = math.max(6.0, _h.value);
           final radius = math.min(h / 2, 30.0);
-          return Container(
+          return Opacity(
+            opacity: _config.capsuleOpacity.clamp(0.5, 1.0),
+            child: Container(
             width: w,
             height: h,
             decoration: BoxDecoration(
@@ -502,6 +634,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
                 ),
               ),
             ),
+          ),
           );
         },
       ),
@@ -511,7 +644,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
   Widget _content(SirajTheme theme) {
     switch (_mode) {
       case _Mode.none:
-        return _pill(theme, _state);
+        return _pill(theme, _effectivePillState(_state));
       case _Mode.panel:
         return _panel(theme);
       case _Mode.card:
@@ -557,7 +690,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
         Icon(Icons.mosque_rounded, size: 15, color: theme.accent),
         const SizedBox(width: 5),
         Text(
-          '${p.label} ${sirajCountdown(left)}',
+          '${p.label} ${sirajFormatCountdown(left, _config.countdownFormat)}',
           style: _t(12, color: theme.accent, weight: FontWeight.w900),
         ),
       ],
@@ -598,7 +731,10 @@ class _SirajCapsuleState extends State<SirajCapsule>
                     ),
                     if (left != null)
                       TextSpan(
-                        text: sirajCountdown(left),
+                        text: sirajFormatCountdown(
+                          left,
+                          _config.countdownFormat,
+                        ),
                         style: _t(
                           13,
                           color: iq ? AppColors.emerald400 : accent,
@@ -687,11 +823,12 @@ class _SirajCapsuleState extends State<SirajCapsule>
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            InkResponse(
-              radius: 18,
-              onTap: widget.preview
-                  ? null
-                  : () => AudioService.instance.toggle(),
+            if (_config.showPlayer)
+              InkResponse(
+                radius: 18,
+                onTap: widget.preview
+                    ? null
+                    : () => AudioService.instance.toggle(),
               child: Padding(
                 padding: const EdgeInsets.all(6),
                 child: Icon(
@@ -1091,7 +1228,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'إقامة ${sirajCountdown(p.iqamah.difference(now))}',
+                  'إقامة ${sirajFormatCountdown(p.iqamah.difference(now), _config.countdownFormat)}',
                   style: _t(11, color: AppColors.emerald400),
                 ),
               ),

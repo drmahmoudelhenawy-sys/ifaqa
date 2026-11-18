@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../data/surahs_data.dart';
 import '../models/reciter.dart';
+import '../services/app_state.dart';
 import '../services/audio_service.dart';
 import '../services/offline_store/offline_store.dart';
 import '../services/playlists_service.dart';
 import '../services/reciter_service.dart';
+import '../siraj/siraj_settings.dart';
 import '../theme/app_colors.dart';
 import '../widgets/playlists_view.dart';
 import '../widgets/reciter_photo.dart';
@@ -177,6 +179,7 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
         ),
         _buildListenSummary(),
         _buildPlaylistsEntry(),
+        const _DeviceMusicEntry(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
@@ -351,6 +354,73 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// Small device-music status row for the Siraj player source switch.
+/// Honest unavailable state: no on-device audio library is integrated yet
+/// (see lib/siraj/siraj_player.dart), so this only reports the selected
+/// source and never pretends to list device tracks.
+class _DeviceMusicEntry extends StatefulWidget {
+  const _DeviceMusicEntry();
+
+  @override
+  State<_DeviceMusicEntry> createState() => _DeviceMusicEntryState();
+}
+
+class _DeviceMusicEntryState extends State<_DeviceMusicEntry> {
+  @override
+  void initState() {
+    super.initState();
+    AppState.instance.addListener(_rebuild);
+  }
+
+  @override
+  void dispose() {
+    AppState.instance.removeListener(_rebuild);
+    super.dispose();
+  }
+
+  void _rebuild() {
+    if (mounted) setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isDevice = SirajSettings.config().playerSource == 'device';
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
+        decoration: BoxDecoration(color: AppColors.slate50, borderRadius: BorderRadius.circular(18), border: Border.all(color: AppColors.slate100)),
+        child: Row(children: [
+          const Icon(Icons.folder_open, color: AppColors.slate400, size: 20),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              isDevice
+                  ? 'مصدر التشغيل: موسيقى الجهاز (غير مدمجة بعد)'
+                  : 'مصدر التشغيل: صوتيات التطبيق',
+              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: AppColors.slate600),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              final s = AppState.instance;
+              final next = isDevice ? 'app' : 'device';
+              s.setText(SirajSettings.playerSourceKey, next);
+              s.setFlag(SirajSettings.deviceMusicEnabledKey, next == 'device');
+            },
+            borderRadius: BorderRadius.circular(999),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              decoration: BoxDecoration(color: isDevice ? AppColors.violet600 : AppColors.slate200, borderRadius: BorderRadius.circular(999)),
+              child: Text(isDevice ? 'التبديل للتطبيق' : 'التبديل للجهاز', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: isDevice ? Colors.white : AppColors.slate600)),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }

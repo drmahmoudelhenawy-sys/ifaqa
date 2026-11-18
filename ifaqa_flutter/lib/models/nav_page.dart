@@ -1,1 +1,1 @@
-enum NavPage { home, quran, audio, prayerTimes, challenges, tools, leaderboard, profile }
+enum NavPage { home, quran, audio, prayerTimes, siraj, challenges, tools, leaderboard, profile }

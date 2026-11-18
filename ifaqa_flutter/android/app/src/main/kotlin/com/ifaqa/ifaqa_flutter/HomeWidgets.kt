@@ -77,7 +77,9 @@ class SalawatWidget : HomeWidgetProvider() {
     }
 }
 
-/** A short zekr that rotates, plus a hint when morning or evening athkar are due. Tap opens the app. */
+/** A short zekr that rotates, plus a hint when morning or evening athkar are due.
+ * Tap opens that Athkar screen directly (ifaqa://athkar/morning|evening,
+ * written by home_widget_sync.dart as athkar_open_uri), like RadioWidget. */
 class AthkarWidget : HomeWidgetProvider() {
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray, widgetData: SharedPreferences) {
         for (id in appWidgetIds) {
@@ -85,7 +87,7 @@ class AthkarWidget : HomeWidgetProvider() {
                 setTextViewText(R.id.athkar_due, widgetData.getString("athkar_due", "أذكار"))
                 setTextViewText(R.id.athkar_text, widgetData.getString("athkar_text", "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"))
                 setTextViewText(R.id.athkar_count, widgetData.getString("athkar_count", ""))
-                setOnClickPendingIntent(R.id.widget_root, HomeWidgetLaunchIntent.getActivity(context, MainActivity::class.java))
+                setOnClickPendingIntent(R.id.widget_root, HomeWidgetLaunchIntent.getActivity(context, MainActivity::class.java, Uri.parse(widgetData.getString("athkar_open_uri", "ifaqa://athkar/morning"))))
             }
             appWidgetManager.updateAppWidget(id, views)
         }
