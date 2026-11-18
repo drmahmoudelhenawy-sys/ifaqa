@@ -1,0 +1,144 @@
+{
+  "id": "ev_faf6e5ee7183ca2fda3f2a21464f15477f5fbcee467a4f6951e5635d7ec7c546",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "j69",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lj69;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "w",
+        "reference": "Lj69;->w:Lki3;",
+        "type": "ki3"
+      },
+      {
+        "access": [
+          "public",
+          "volatile"
+        ],
+        "kind": "instance",
+        "name": "x",
+        "reference": "Lj69;->x:Ljava/lang/Object;",
+        "type": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "y",
+        "reference": "Lj69;->y:Ljava/lang/Object;",
+        "type": "java.lang.Object"
+      }
+    ],
+    "interfaces": [
+      "Lqo4;",
+      "Ljava/io/Serializable;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lj69;-><init>(Lki3;)V",
+        "registers": 2,
+        "signature": "public void <init>(ki3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 10,
+        "kind": "virtual",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Lj69;->a()Z",
+        "registers": 2,
+        "signature": "public final boolean a()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 34,
+        "kind": "virtual",
+        "name": "getValue",
+        "overload_index": 0,
+        "reference": "Lj69;->getValue()Ljava/lang/Object;",
+        "registers": 4,
+        "signature": "public final java.lang.Object getValue()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lj69;->toString()Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "j69",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "j69 (classes.dex) extends java.lang.Object: 3 fields, 4 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lj69;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,2300 @@
+{
+  "id": "ev_491981fd821bd23cbd10b961634230250467e4be4f32274100698e31ed994143",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.UserMushaf",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/UserMushaf;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_BLUE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_BLUE:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_DARK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_DARK:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_GREEN",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_GREEN:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_NORMAL",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_NORMAL:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_RED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_RED:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "COLOR_WHITE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->COLOR_WHITE:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->Companion:Lorg/goldenquran/freesoft/models/local/UserMushaf$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.UserMushaf$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "IS_DELETED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->IS_DELETED:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SELECTED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->SELECTED:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "mushafKey",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->mushafKey:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "mushafName",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->mushafName:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "profileColorId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->profileColorId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "userMushafName",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->userMushafName:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "arabic",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->arabic:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "autoDarkMode",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->autoDarkMode:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "autoHijri",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->autoHijri:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "autoScrollSpeed",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->autoScrollSpeed:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "colorAyatSubject",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->colorAyatSubject:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "continuesReading",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->continuesReading:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "enableVibrateOnAthkar",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->enableVibrateOnAthkar:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "fontSize",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->fontSize:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->id:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isDeleted",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->isDeleted:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "manualHijri",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->manualHijri:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "mushafKey$1",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->mushafKey$1:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "mushafName$1",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->mushafName$1:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "mushafType",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->mushafType:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "notificationKahf",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->notificationKahf:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "notificationPrayer",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->notificationPrayer:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "notificationQuiets",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->notificationQuiets:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "notificationReminder",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->notificationReminder:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "notificationTelawaReminder",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->notificationTelawaReminder:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "openPrayerAtStart",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->openPrayerAtStart:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "pageNumber",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->pageNumber:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "pageUpdatedAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->pageUpdatedAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "profileColor",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->profileColor:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "reader",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->reader:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "remoteId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->remoteId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "selected",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->selected:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "selectedAyaSaperator",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->selectedAyaSaperator:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "selectedPageNumberSaperator",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->selectedPageNumberSaperator:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "selectedSureSaperator",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->selectedSureSaperator:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "showHijriDate",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->showHijriDate:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "showNextPrayerTime",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->showNextPrayerTime:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "showText",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->showText:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "showTime",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->showTime:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "stayOnWhileReading",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->stayOnWhileReading:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "timeStamp",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->timeStamp:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "twoPagesLandscape",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->twoPagesLandscape:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "userMushafName$1",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->userMushafName$1:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "verticalScroll",
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->verticalScroll:Z",
+        "type": "boolean"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 79,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;-><init>()V",
+        "registers": 46,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 144,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;-><init>(JZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JIJIIIIZIZZZIIIZZZZZZZZZZZZZZZIZ)V",
+        "registers": 42,
+        "signature": "public void <init>(long, boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, int, long, int, int, int, int, boolean, int, boolean, boolean, boolean, int, int, int, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, int, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 456,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;-><init>(JZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JIJIIIIZIZZZIIIZZZZZZZZZZZZZZZIZIILu62;)V",
+        "registers": 84,
+        "signature": "public synthetic void <init>(long, boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, int, long, int, int, int, int, boolean, int, boolean, boolean, boolean, int, int, int, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, int, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 589,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->copy$default(Lorg/goldenquran/freesoft/models/local/UserMushaf;JZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JIJIIIIZIZZZIIIZZZZZZZZZZZZZZZIZIILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/UserMushaf;",
+        "registers": 64,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.UserMushaf copy$default(org.goldenquran.freesoft.models.local.UserMushaf, long, boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, int, long, int, int, int, int, boolean, int, boolean, boolean, boolean, int, int, int, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, int, boolean, int, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component10",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component10()I",
+        "registers": 1,
+        "signature": "public final int component10()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component11",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component11()I",
+        "registers": 1,
+        "signature": "public final int component11()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component12",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component12()I",
+        "registers": 1,
+        "signature": "public final int component12()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component13",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component13()I",
+        "registers": 1,
+        "signature": "public final int component13()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component14",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component14()Z",
+        "registers": 1,
+        "signature": "public final boolean component14()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component15",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component15()I",
+        "registers": 1,
+        "signature": "public final int component15()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component16",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component16()Z",
+        "registers": 1,
+        "signature": "public final boolean component16()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component17",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component17()Z",
+        "registers": 1,
+        "signature": "public final boolean component17()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component18",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component18()Z",
+        "registers": 1,
+        "signature": "public final boolean component18()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component19",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component19()I",
+        "registers": 1,
+        "signature": "public final int component19()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component2()Z",
+        "registers": 1,
+        "signature": "public final boolean component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component20",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component20()I",
+        "registers": 1,
+        "signature": "public final int component20()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component21",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component21()I",
+        "registers": 1,
+        "signature": "public final int component21()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component22",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component22()Z",
+        "registers": 1,
+        "signature": "public final boolean component22()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component23",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component23()Z",
+        "registers": 1,
+        "signature": "public final boolean component23()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component24",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component24()Z",
+        "registers": 1,
+        "signature": "public final boolean component24()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component25",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component25()Z",
+        "registers": 1,
+        "signature": "public final boolean component25()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component26",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component26()Z",
+        "registers": 1,
+        "signature": "public final boolean component26()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component27",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component27()Z",
+        "registers": 1,
+        "signature": "public final boolean component27()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component28",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component28()Z",
+        "registers": 1,
+        "signature": "public final boolean component28()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component29",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component29()Z",
+        "registers": 1,
+        "signature": "public final boolean component29()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component3()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component30",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component30()Z",
+        "registers": 1,
+        "signature": "public final boolean component30()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component31",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component31()Z",
+        "registers": 1,
+        "signature": "public final boolean component31()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component32",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component32()Z",
+        "registers": 1,
+        "signature": "public final boolean component32()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component33",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component33()Z",
+        "registers": 1,
+        "signature": "public final boolean component33()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component34",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component34()Z",
+        "registers": 1,
+        "signature": "public final boolean component34()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component35",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component35()Z",
+        "registers": 1,
+        "signature": "public final boolean component35()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component36",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component36()Z",
+        "registers": 1,
+        "signature": "public final boolean component36()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component37",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component37()I",
+        "registers": 1,
+        "signature": "public final int component37()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component38",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component38()Z",
+        "registers": 1,
+        "signature": "public final boolean component38()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component4()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component5()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component6()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component7()J",
+        "registers": 3,
+        "signature": "public final long component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component8()I",
+        "registers": 1,
+        "signature": "public final int component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->component9()J",
+        "registers": 3,
+        "signature": "public final long component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 94,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->copy(JZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JIJIIIIZIZZZIIIZZZZZZZZZZZZZZZIZ)Lorg/goldenquran/freesoft/models/local/UserMushaf;",
+        "registers": 84,
+        "signature": "public final org.goldenquran.freesoft.models.local.UserMushaf copy(long, boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, int, long, int, int, int, int, boolean, int, boolean, boolean, boolean, int, int, int, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, int, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 301,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getArabic",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getArabic()Z",
+        "registers": 1,
+        "signature": "public final boolean getArabic()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAutoDarkMode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getAutoDarkMode()Z",
+        "registers": 1,
+        "signature": "public final boolean getAutoDarkMode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAutoHijri",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getAutoHijri()Z",
+        "registers": 1,
+        "signature": "public final boolean getAutoHijri()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAutoScrollSpeed",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getAutoScrollSpeed()I",
+        "registers": 1,
+        "signature": "public final int getAutoScrollSpeed()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getColorAyatSubject",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getColorAyatSubject()Z",
+        "registers": 1,
+        "signature": "public final boolean getColorAyatSubject()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getContinuesReading",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getContinuesReading()Z",
+        "registers": 1,
+        "signature": "public final boolean getContinuesReading()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getEnableVibrateOnAthkar",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getEnableVibrateOnAthkar()Z",
+        "registers": 1,
+        "signature": "public final boolean getEnableVibrateOnAthkar()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getFontSize",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getFontSize()I",
+        "registers": 1,
+        "signature": "public final int getFontSize()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getId()J",
+        "registers": 3,
+        "signature": "public final long getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getManualHijri",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getManualHijri()I",
+        "registers": 1,
+        "signature": "public final int getManualHijri()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMushafKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getMushafKey()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getMushafKey()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMushafName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getMushafName()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getMushafName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMushafType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getMushafType()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getMushafType()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNotificationKahf",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getNotificationKahf()Z",
+        "registers": 1,
+        "signature": "public final boolean getNotificationKahf()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNotificationPrayer",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getNotificationPrayer()Z",
+        "registers": 1,
+        "signature": "public final boolean getNotificationPrayer()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNotificationQuiets",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getNotificationQuiets()Z",
+        "registers": 1,
+        "signature": "public final boolean getNotificationQuiets()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNotificationReminder",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getNotificationReminder()Z",
+        "registers": 1,
+        "signature": "public final boolean getNotificationReminder()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNotificationTelawaReminder",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getNotificationTelawaReminder()Z",
+        "registers": 1,
+        "signature": "public final boolean getNotificationTelawaReminder()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getOpenPrayerAtStart",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getOpenPrayerAtStart()Z",
+        "registers": 1,
+        "signature": "public final boolean getOpenPrayerAtStart()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getPageNumber()I",
+        "registers": 1,
+        "signature": "public final int getPageNumber()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageUpdatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getPageUpdatedAt()J",
+        "registers": 3,
+        "signature": "public final long getPageUpdatedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getProfileColor",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getProfileColor()I",
+        "registers": 1,
+        "signature": "public final int getProfileColor()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getReader",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getReader()I",
+        "registers": 1,
+        "signature": "public final int getReader()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getRemoteId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getRemoteId()I",
+        "registers": 1,
+        "signature": "public final int getRemoteId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSelected",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getSelected()Z",
+        "registers": 1,
+        "signature": "public final boolean getSelected()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSelectedAyaSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getSelectedAyaSaperator()I",
+        "registers": 1,
+        "signature": "public final int getSelectedAyaSaperator()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSelectedPageNumberSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getSelectedPageNumberSaperator()I",
+        "registers": 1,
+        "signature": "public final int getSelectedPageNumberSaperator()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSelectedSureSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getSelectedSureSaperator()I",
+        "registers": 1,
+        "signature": "public final int getSelectedSureSaperator()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getShowHijriDate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getShowHijriDate()Z",
+        "registers": 1,
+        "signature": "public final boolean getShowHijriDate()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getShowNextPrayerTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getShowNextPrayerTime()Z",
+        "registers": 1,
+        "signature": "public final boolean getShowNextPrayerTime()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getShowText",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getShowText()Z",
+        "registers": 1,
+        "signature": "public final boolean getShowText()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getShowTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getShowTime()Z",
+        "registers": 1,
+        "signature": "public final boolean getShowTime()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getStayOnWhileReading",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getStayOnWhileReading()Z",
+        "registers": 1,
+        "signature": "public final boolean getStayOnWhileReading()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTimeStamp",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getTimeStamp()J",
+        "registers": 3,
+        "signature": "public final long getTimeStamp()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTwoPagesLandscape",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getTwoPagesLandscape()Z",
+        "registers": 1,
+        "signature": "public final boolean getTwoPagesLandscape()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getUserMushafName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getUserMushafName()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getUserMushafName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getVerticalScroll",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->getVerticalScroll()Z",
+        "registers": 1,
+        "signature": "public final boolean getVerticalScroll()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 233,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "isDarkMode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->isDarkMode()Z",
+        "registers": 2,
+        "signature": "public final boolean isDarkMode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->isDeleted()Z",
+        "registers": 1,
+        "signature": "public final boolean isDeleted()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setArabic",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setArabic(Z)V",
+        "registers": 2,
+        "signature": "public final void setArabic(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAutoDarkMode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setAutoDarkMode(Z)V",
+        "registers": 2,
+        "signature": "public final void setAutoDarkMode(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAutoHijri",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setAutoHijri(Z)V",
+        "registers": 2,
+        "signature": "public final void setAutoHijri(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAutoScrollSpeed",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setAutoScrollSpeed(I)V",
+        "registers": 2,
+        "signature": "public final void setAutoScrollSpeed(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setColorAyatSubject",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setColorAyatSubject(Z)V",
+        "registers": 2,
+        "signature": "public final void setColorAyatSubject(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setContinuesReading",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setContinuesReading(Z)V",
+        "registers": 2,
+        "signature": "public final void setContinuesReading(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setDeleted(Z)V",
+        "registers": 2,
+        "signature": "public final void setDeleted(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setEnableVibrateOnAthkar",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setEnableVibrateOnAthkar(Z)V",
+        "registers": 2,
+        "signature": "public final void setEnableVibrateOnAthkar(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setFontSize",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setFontSize(I)V",
+        "registers": 2,
+        "signature": "public final void setFontSize(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setId(J)V",
+        "registers": 3,
+        "signature": "public final void setId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setManualHijri",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setManualHijri(I)V",
+        "registers": 2,
+        "signature": "public final void setManualHijri(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setMushafKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setMushafKey(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setMushafKey(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setMushafName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setMushafName(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setMushafName(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setMushafType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setMushafType(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setMushafType(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setNotificationKahf",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setNotificationKahf(Z)V",
+        "registers": 2,
+        "signature": "public final void setNotificationKahf(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setNotificationPrayer",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setNotificationPrayer(Z)V",
+        "registers": 2,
+        "signature": "public final void setNotificationPrayer(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setNotificationQuiets",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setNotificationQuiets(Z)V",
+        "registers": 2,
+        "signature": "public final void setNotificationQuiets(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setNotificationReminder",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setNotificationReminder(Z)V",
+        "registers": 2,
+        "signature": "public final void setNotificationReminder(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setNotificationTelawaReminder",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setNotificationTelawaReminder(Z)V",
+        "registers": 2,
+        "signature": "public final void setNotificationTelawaReminder(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setOpenPrayerAtStart",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setOpenPrayerAtStart(Z)V",
+        "registers": 2,
+        "signature": "public final void setOpenPrayerAtStart(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPageNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setPageNumber(I)V",
+        "registers": 2,
+        "signature": "public final void setPageNumber(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPageUpdatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setPageUpdatedAt(J)V",
+        "registers": 3,
+        "signature": "public final void setPageUpdatedAt(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setProfileColor",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setProfileColor(I)V",
+        "registers": 2,
+        "signature": "public final void setProfileColor(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setReader",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setReader(I)V",
+        "registers": 2,
+        "signature": "public final void setReader(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setRemoteId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setRemoteId(I)V",
+        "registers": 2,
+        "signature": "public final void setRemoteId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSelected",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setSelected(Z)V",
+        "registers": 2,
+        "signature": "public final void setSelected(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSelectedAyaSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setSelectedAyaSaperator(I)V",
+        "registers": 2,
+        "signature": "public final void setSelectedAyaSaperator(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSelectedPageNumberSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setSelectedPageNumberSaperator(I)V",
+        "registers": 2,
+        "signature": "public final void setSelectedPageNumberSaperator(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSelectedSureSaperator",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setSelectedSureSaperator(I)V",
+        "registers": 2,
+        "signature": "public final void setSelectedSureSaperator(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setShowHijriDate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setShowHijriDate(Z)V",
+        "registers": 2,
+        "signature": "public final void setShowHijriDate(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setShowNextPrayerTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setShowNextPrayerTime(Z)V",
+        "registers": 2,
+        "signature": "public final void setShowNextPrayerTime(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setShowText",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setShowText(Z)V",
+        "registers": 2,
+        "signature": "public final void setShowText(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setShowTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setShowTime(Z)V",
+        "registers": 2,
+        "signature": "public final void setShowTime(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setStayOnWhileReading",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setStayOnWhileReading(Z)V",
+        "registers": 2,
+        "signature": "public final void setStayOnWhileReading(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setTimeStamp",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setTimeStamp(J)V",
+        "registers": 3,
+        "signature": "public final void setTimeStamp(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setTwoPagesLandscape",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setTwoPagesLandscape(Z)V",
+        "registers": 2,
+        "signature": "public final void setTwoPagesLandscape(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setUserMushafName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setUserMushafName(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setUserMushafName(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setVerticalScroll",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->setVerticalScroll(Z)V",
+        "registers": 2,
+        "signature": "public final void setVerticalScroll(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 379,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/UserMushaf;->toString()Ljava/lang/String;",
+        "registers": 43,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.UserMushaf",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.UserMushaf (classes2.dex) extends java.lang.Object: 53 fields, 124 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/UserMushaf;"
+    }
+  ],
+  "links": []
+}

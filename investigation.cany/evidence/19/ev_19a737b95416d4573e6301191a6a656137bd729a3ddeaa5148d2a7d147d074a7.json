@@ -1,0 +1,149 @@
+{
+  "id": "ev_19a737b95416d4573e6301191a6a656137bd729a3ddeaa5148d2a7d147d074a7",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 0,
+      "list": "components",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 1,
+      "next_offset": 1,
+      "status": "page",
+      "total": 63
+    },
+    "from_evidence": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+    "from_tool": "android_components_list",
+    "shown": {
+      "field_names": [
+        "authorities",
+        "disabled_in_manifest",
+        "enabled_attribute",
+        "export_source",
+        "exported",
+        "exported_attribute",
+        "intent_filters",
+        "kind",
+        "name",
+        "permission",
+        "permission_from_application",
+        "permission_protection_level",
+        "reachable_from_outside",
+        "read_permission",
+        "who_can_reach",
+        "write_permission"
+      ],
+      "items": [
+        {
+          "authorities": null,
+          "disabled_in_manifest": false,
+          "enabled_attribute": null,
+          "export_source": "explicit",
+          "exported": true,
+          "exported_attribute": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.MAIN"
+              ],
+              "categories": [
+                "android.intent.category.LAUNCHER",
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=dua-community",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=masbaha",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=library",
+                "path=/"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "permission": null,
+          "permission_from_application": false,
+          "permission_protection_level": null,
+          "reachable_from_outside": true,
+          "read_permission": null,
+          "who_can_reach": "any_app",
+          "write_permission": null
+        }
+      ],
+      "list": "components",
+      "offset": 0,
+      "total": 63
+    }
+  },
+  "summary": "Part of android_components_list evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 63,
+    "next_offset": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf"
+  ]
+}

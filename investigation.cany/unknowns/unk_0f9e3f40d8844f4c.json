@@ -1,0 +1,16 @@
+{
+  "id": "unk_0f9e3f40d8844f4c",
+  "revision": 1,
+  "question": "Why does the app graph report asset_files=9,865 when the full archive index shows only 194 assets among 1,283 APK entries?",
+  "severity": "low",
+  "domain": "archive inventory",
+  "status": "open",
+  "probes": [
+    "Check the app-graph field's meaning or parser behavior; use the archive-index count for file totals unless the discrepancy is explained."
+  ],
+  "evidence_for": [
+    "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c",
+    "ev_498e1ebe6206a2c2a54559a20333acbf55ae863bf01b43742fedadebcc4a5068"
+  ],
+  "evidence_against": []
+}

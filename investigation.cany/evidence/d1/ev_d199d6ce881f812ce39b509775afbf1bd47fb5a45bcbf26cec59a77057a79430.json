@@ -1,0 +1,370 @@
+{
+  "id": "ev_d199d6ce881f812ce39b509775afbf1bd47fb5a45bcbf26cec59a77057a79430",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "mp",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lmp;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "W",
+        "reference": "Lmp;->W:Leq;",
+        "type": "eq"
+      }
+    ],
+    "interfaces": [
+      "Lrp;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "addContentView",
+        "overload_index": 0,
+        "reference": "Lmp;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V",
+        "registers": 5,
+        "signature": "public final void addContentView(android.view.View, android.view.ViewGroup$LayoutParams)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 477,
+        "kind": "virtual",
+        "name": "attachBaseContext",
+        "overload_index": 0,
+        "reference": "Lmp;->attachBaseContext(Landroid/content/Context;)V",
+        "registers": 11,
+        "signature": "public void attachBaseContext(android.content.Context)",
+        "try_blocks": 8
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 24,
+        "kind": "virtual",
+        "name": "closeOptionsMenu",
+        "overload_index": 0,
+        "reference": "Lmp;->closeOptionsMenu()V",
+        "registers": 3,
+        "signature": "public final void closeOptionsMenu()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 17,
+        "kind": "virtual",
+        "name": "dispatchKeyEvent",
+        "overload_index": 0,
+        "reference": "Lmp;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z",
+        "registers": 3,
+        "signature": "public boolean dispatchKeyEvent(android.view.KeyEvent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "findViewById",
+        "overload_index": 0,
+        "reference": "Lmp;->findViewById(I)Landroid/view/View;",
+        "registers": 2,
+        "signature": "public final android.view.View findViewById(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 32,
+        "kind": "virtual",
+        "name": "getMenuInflater",
+        "overload_index": 0,
+        "reference": "Lmp;->getMenuInflater()Landroid/view/MenuInflater;",
+        "registers": 3,
+        "signature": "public final android.view.MenuInflater getMenuInflater()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "invalidateOptionsMenu",
+        "overload_index": 0,
+        "reference": "Lmp;->invalidateOptionsMenu()V",
+        "registers": 2,
+        "signature": "public final void invalidateOptionsMenu()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 94,
+        "kind": "virtual",
+        "name": "onConfigurationChanged",
+        "overload_index": 0,
+        "reference": "Lmp;->onConfigurationChanged(Landroid/content/res/Configuration;)V",
+        "registers": 5,
+        "signature": "public void onConfigurationChanged(android.content.res.Configuration)",
+        "try_blocks": 5
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "onContentChanged",
+        "overload_index": 0,
+        "reference": "Lmp;->onContentChanged()V",
+        "registers": 1,
+        "signature": "public final void onContentChanged()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lmp;->onDestroy()V",
+        "registers": 1,
+        "signature": "public void onDestroy()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 110,
+        "kind": "virtual",
+        "name": "onMenuItemSelected",
+        "overload_index": 0,
+        "reference": "Lmp;->onMenuItemSelected(ILandroid/view/MenuItem;)Z",
+        "registers": 5,
+        "signature": "public final boolean onMenuItemSelected(int, android.view.MenuItem)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 13,
+        "kind": "virtual",
+        "name": "onPostCreate",
+        "overload_index": 0,
+        "reference": "Lmp;->onPostCreate(Landroid/os/Bundle;)V",
+        "registers": 2,
+        "signature": "public final void onPostCreate(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "onPostResume",
+        "overload_index": 0,
+        "reference": "Lmp;->onPostResume()V",
+        "registers": 2,
+        "signature": "public final void onPostResume()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 15,
+        "kind": "virtual",
+        "name": "onStart",
+        "overload_index": 0,
+        "reference": "Lmp;->onStart()V",
+        "registers": 3,
+        "signature": "public final void onStart()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 27,
+        "kind": "virtual",
+        "name": "onStop",
+        "overload_index": 0,
+        "reference": "Lmp;->onStop()V",
+        "registers": 2,
+        "signature": "public final void onStop()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "onTitleChanged",
+        "overload_index": 0,
+        "reference": "Lmp;->onTitleChanged(Ljava/lang/CharSequence;I)V",
+        "registers": 3,
+        "signature": "public final void onTitleChanged(java.lang.CharSequence, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 24,
+        "kind": "virtual",
+        "name": "openOptionsMenu",
+        "overload_index": 0,
+        "reference": "Lmp;->openOptionsMenu()V",
+        "registers": 3,
+        "signature": "public final void openOptionsMenu()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 15,
+        "kind": "virtual",
+        "name": "p",
+        "overload_index": 0,
+        "reference": "Lmp;->p()Lxp;",
+        "registers": 3,
+        "signature": "public final xp p()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 0,
+        "reference": "Lmp;->setContentView(I)V",
+        "registers": 2,
+        "signature": "public final void setContentView(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 1,
+        "reference": "Lmp;->setContentView(Landroid/view/View;)V",
+        "registers": 2,
+        "signature": "public void setContentView(android.view.View)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 2,
+        "reference": "Lmp;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V",
+        "registers": 3,
+        "signature": "public final void setContentView(android.view.View, android.view.ViewGroup$LayoutParams)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "setTheme",
+        "overload_index": 0,
+        "reference": "Lmp;->setTheme(I)V",
+        "registers": 2,
+        "signature": "public final void setTheme(int)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "mp",
+    "source_file": "SourceFile",
+    "superclass": "Lld3;"
+  },
+  "summary": "mp (classes.dex) extends ld3: 1 fields, 22 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lmp;"
+    }
+  ],
+  "links": []
+}

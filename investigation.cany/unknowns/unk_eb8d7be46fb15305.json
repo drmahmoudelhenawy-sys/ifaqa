@@ -1,0 +1,17 @@
+{
+  "id": "unk_eb8d7be46fb15305",
+  "revision": 2,
+  "question": "Does the one supplied base.apk omit required configuration or feature split APKs?",
+  "severity": "low",
+  "domain": "packaging and splits",
+  "status": "open",
+  "probes": [
+    "On a device with the installed app, use `adb shell pm path org.goldenquran.freesoft` and package-manager output to list installed APK paths/splits, then compare with the supplied base APK."
+  ],
+  "evidence_for": [
+    "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c",
+    "ev_92ef9591af3feabdf78de9b1b1146c5619d1222b7c552326c32999a5934e3ffe",
+    "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708"
+  ],
+  "evidence_against": []
+}

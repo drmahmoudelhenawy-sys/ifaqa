@@ -1,0 +1,164 @@
+{
+  "id": "ev_391dfd2a90e6006f0d95dbff5e7151df31a77cc3d9893f34115308a301952505",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "kind": "static",
+        "name": "w",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->w:Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;",
+        "type": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;-><init>()V",
+        "registers": 1,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 62,
+        "kind": "virtual",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->a()Z",
+        "registers": 4,
+        "signature": "public final boolean a()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "onBind",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;",
+        "registers": 2,
+        "signature": "public final android.os.IBinder onBind(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 15,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->onCreate()V",
+        "registers": 2,
+        "signature": "public final void onCreate()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 24,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->onDestroy()V",
+        "registers": 4,
+        "signature": "public final void onDestroy()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "onStartCommand",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->onStartCommand(Landroid/content/Intent;II)I",
+        "registers": 4,
+        "signature": "public final int onStartCommand(android.content.Intent, int, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 39,
+        "kind": "virtual",
+        "name": "onTaskRemoved",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;->onTaskRemoved(Landroid/content/Intent;)V",
+        "registers": 4,
+        "signature": "public final void onTaskRemoved(android.content.Intent)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/app/Service;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService (classes2.dex) extends android.app.Service: 1 fields, 7 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;"
+    }
+  ],
+  "links": []
+}

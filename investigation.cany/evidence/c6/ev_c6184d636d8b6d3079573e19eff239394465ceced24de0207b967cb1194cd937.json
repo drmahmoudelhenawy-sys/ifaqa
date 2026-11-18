@@ -1,0 +1,295 @@
+{
+  "id": "ev_c6184d636d8b6d3079573e19eff239394465ceced24de0207b967cb1194cd937",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_classes_find",
+  "params": {
+    "limit": 300,
+    "offset": 0,
+    "path": null,
+    "query": "Widget"
+  },
+  "result": {
+    "classes": [
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ActionBarContainer;",
+        "dex": "classes.dex",
+        "fields": 9,
+        "methods": 20,
+        "name": "androidx.appcompat.widget.ActionBarContainer",
+        "superclass": "android.widget.FrameLayout"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ActionBarContextView;",
+        "dex": "classes.dex",
+        "fields": 27,
+        "methods": 34,
+        "name": "androidx.appcompat.widget.ActionBarContextView",
+        "superclass": "android.view.ViewGroup"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ActionBarOverlayLayout;",
+        "dex": "classes.dex",
+        "fields": 34,
+        "methods": 50,
+        "name": "androidx.appcompat.widget.ActionBarOverlayLayout",
+        "superclass": "android.view.ViewGroup"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ActionMenuView;",
+        "dex": "classes.dex",
+        "fields": 11,
+        "methods": 29,
+        "name": "androidx.appcompat.widget.ActionMenuView",
+        "superclass": "ww4"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/AlertDialogLayout;",
+        "dex": "classes.dex",
+        "fields": 0,
+        "methods": 5,
+        "name": "androidx.appcompat.widget.AlertDialogLayout",
+        "superclass": "ww4"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ButtonBarLayout;",
+        "dex": "classes.dex",
+        "fields": 3,
+        "methods": 4,
+        "name": "androidx.appcompat.widget.ButtonBarLayout",
+        "superclass": "android.widget.LinearLayout"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ContentFrameLayout;",
+        "dex": "classes.dex",
+        "fields": 8,
+        "methods": 12,
+        "name": "androidx.appcompat.widget.ContentFrameLayout",
+        "superclass": "android.widget.FrameLayout"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/DialogTitle;",
+        "dex": "classes.dex",
+        "fields": 0,
+        "methods": 3,
+        "name": "androidx.appcompat.widget.DialogTitle",
+        "superclass": "mr"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/FitWindowsFrameLayout;",
+        "dex": "classes.dex",
+        "fields": 0,
+        "methods": 4,
+        "name": "androidx.appcompat.widget.FitWindowsFrameLayout",
+        "superclass": "android.widget.FrameLayout"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/FitWindowsLinearLayout;",
+        "dex": "classes.dex",
+        "fields": 0,
+        "methods": 4,
+        "name": "androidx.appcompat.widget.FitWindowsLinearLayout",
+        "superclass": "android.widget.LinearLayout"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/SearchView$SearchAutoComplete;",
+        "dex": "classes.dex",
+        "fields": 3,
+        "methods": 14,
+        "name": "androidx.appcompat.widget.SearchView$SearchAutoComplete",
+        "superclass": "np"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/Toolbar;",
+        "dex": "classes.dex",
+        "fields": 43,
+        "methods": 100,
+        "name": "androidx.appcompat.widget.Toolbar",
+        "superclass": "android.view.ViewGroup"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Landroidx/appcompat/widget/ViewStubCompat;",
+        "dex": "classes.dex",
+        "fields": 4,
+        "methods": 13,
+        "name": "androidx.appcompat.widget.ViewStubCompat",
+        "superclass": "android.view.View"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/core/widget/NestedScrollView;",
+        "dex": "classes.dex",
+        "fields": 31,
+        "methods": 85,
+        "name": "androidx.core.widget.NestedScrollView",
+        "superclass": "android.widget.FrameLayout"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Landroidx/core/widget/RemoteViewsCompatService;",
+        "dex": "classes.dex",
+        "fields": 1,
+        "methods": 2,
+        "name": "androidx.core.widget.RemoteViewsCompatService",
+        "superclass": "android.widget.RemoteViewsService"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/recyclerview/widget/GridLayoutManager;",
+        "dex": "classes.dex",
+        "fields": 8,
+        "methods": 38,
+        "name": "androidx.recyclerview.widget.GridLayoutManager",
+        "superclass": "androidx.recyclerview.widget.LinearLayoutManager"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/recyclerview/widget/LinearLayoutManager;",
+        "dex": "classes.dex",
+        "fields": 15,
+        "methods": 52,
+        "name": "androidx.recyclerview.widget.LinearLayoutManager",
+        "superclass": "ws7"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/recyclerview/widget/RecyclerView;",
+        "dex": "classes.dex",
+        "fields": 78,
+        "methods": 142,
+        "name": "androidx.recyclerview.widget.RecyclerView",
+        "superclass": "android.view.ViewGroup"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "descriptor": "Landroidx/recyclerview/widget/StaggeredGridLayoutManager;",
+        "dex": "classes.dex",
+        "fields": 22,
+        "methods": 63,
+        "name": "androidx.recyclerview.widget.StaggeredGridLayoutManager",
+        "superclass": "ws7"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/audio/VerseTickerWidget;",
+        "dex": "classes.dex",
+        "fields": 6,
+        "methods": 4,
+        "name": "org.goldenquran.freesoft.ui.audio.VerseTickerWidget",
+        "superclass": "android.appwidget.AppWidgetProvider"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerTimesWidget;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget",
+        "superclass": "android.appwidget.AppWidgetProvider"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerTimesWidget2;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget2",
+        "superclass": "android.appwidget.AppWidgetProvider"
+      }
+    ],
+    "classes_total": 15034,
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "matches": 22,
+    "query": "Widget"
+  },
+  "summary": "22 of 15034 classes match \"Widget\" in 2 DEX file(s); showing 22.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 22,
+    "total": 22
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

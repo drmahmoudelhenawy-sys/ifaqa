@@ -1,0 +1,534 @@
+{
+  "id": "ev_569e99f10e42cc38b8b734b0628e5f677167e12bcfdb4b9aabc1ee14bc7d9482",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "rn1",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lrn1;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "N0",
+        "reference": "Lrn1;->N0:Lyh2;",
+        "type": "yh2"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "O0",
+        "reference": "Lrn1;->O0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "P0",
+        "reference": "Lrn1;->P0:Lpe6;",
+        "type": "pe6"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Q0",
+        "reference": "Lrn1;->Q0:Lki3;",
+        "type": "ki3"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "R0",
+        "reference": "Lrn1;->R0:F",
+        "type": "float"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "S0",
+        "reference": "Lrn1;->S0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "T0",
+        "reference": "Lrn1;->T0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "U0",
+        "reference": "Lrn1;->U0:Lck;",
+        "type": "ck"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "V0",
+        "reference": "Lrn1;->V0:Lao8;",
+        "type": "ao8"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "W0",
+        "reference": "Lrn1;->W0:Z",
+        "type": "boolean"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 75,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lrn1;-><init>()V",
+        "registers": 8,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final",
+          "synthetic"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "j0",
+        "overload_index": 0,
+        "reference": "Lrn1;->j0(Lrn1;)V",
+        "registers": 1,
+        "signature": "public static final synthetic void j0(rn1)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 124,
+        "kind": "direct",
+        "name": "l0",
+        "overload_index": 0,
+        "reference": "Lrn1;->l0(Lrn1;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "registers": 8,
+        "signature": "public static void l0(rn1, java.lang.Integer, java.lang.Integer)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lrn1;->A0()V",
+        "registers": 1,
+        "signature": "public void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "F",
+        "overload_index": 0,
+        "reference": "Lrn1;->F(Landroid/view/LayoutInflater;)Landroid/view/View;",
+        "registers": 5,
+        "signature": "public final android.view.View F(android.view.LayoutInflater)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "G",
+        "overload_index": 0,
+        "reference": "Lrn1;->G()V",
+        "registers": 2,
+        "signature": "public void G()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 14,
+        "kind": "virtual",
+        "name": "H",
+        "overload_index": 0,
+        "reference": "Lrn1;->H()V",
+        "registers": 3,
+        "signature": "public void H()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 10,
+        "kind": "virtual",
+        "name": "Q",
+        "overload_index": 0,
+        "reference": "Lrn1;->Q(Landroid/view/View;)V",
+        "registers": 2,
+        "signature": "public final void Q(android.view.View)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "c0",
+        "overload_index": 0,
+        "reference": "Lrn1;->c0()V",
+        "registers": 1,
+        "signature": "public final void c0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "d0",
+        "overload_index": 0,
+        "reference": "Lrn1;->d0()V",
+        "registers": 1,
+        "signature": "public final void d0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 37,
+        "kind": "virtual",
+        "name": "f0",
+        "overload_index": 0,
+        "reference": "Lrn1;->f0(Landroid/os/Bundle;)Landroid/app/Dialog;",
+        "registers": 4,
+        "signature": "public final android.app.Dialog f0(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lrn1;->h0(ILfk3;)V",
+        "registers": 3,
+        "signature": "public void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 106,
+        "kind": "virtual",
+        "name": "i0",
+        "overload_index": 0,
+        "reference": "Lrn1;->i0(Lki3;Lrm1;Lfk3;I)V",
+        "registers": 17,
+        "signature": "public final void i0(ki3, rm1, fk3, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "k0",
+        "overload_index": 0,
+        "reference": "Lrn1;->k0()V",
+        "registers": 1,
+        "signature": "public void k0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "m0",
+        "overload_index": 0,
+        "reference": "Lrn1;->m0()Z",
+        "registers": 1,
+        "signature": "public boolean m0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "n0",
+        "overload_index": 0,
+        "reference": "Lrn1;->n0()Z",
+        "registers": 1,
+        "signature": "public boolean n0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lrn1;->o0()Z",
+        "registers": 1,
+        "signature": "public boolean o0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "p0",
+        "overload_index": 0,
+        "reference": "Lrn1;->p0()Z",
+        "registers": 1,
+        "signature": "public boolean p0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "q0",
+        "overload_index": 0,
+        "reference": "Lrn1;->q0()F",
+        "registers": 1,
+        "signature": "public float q0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 5,
+        "kind": "virtual",
+        "name": "r0",
+        "overload_index": 0,
+        "reference": "Lrn1;->r0()Z",
+        "registers": 1,
+        "signature": "public boolean r0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "s0",
+        "overload_index": 0,
+        "reference": "Lrn1;->s0()Lao8;",
+        "registers": 1,
+        "signature": "public ao8 s0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 5,
+        "kind": "virtual",
+        "name": "t0",
+        "overload_index": 0,
+        "reference": "Lrn1;->t0()Z",
+        "registers": 1,
+        "signature": "public boolean t0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "u0",
+        "overload_index": 0,
+        "reference": "Lrn1;->u0()Luh5;",
+        "registers": 1,
+        "signature": "public final uh5 u0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "v0",
+        "overload_index": 0,
+        "reference": "Lrn1;->v0()Z",
+        "registers": 1,
+        "signature": "public boolean v0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "w0",
+        "overload_index": 0,
+        "reference": "Lrn1;->w0(Lzi3;)V",
+        "registers": 5,
+        "signature": "public final void w0(zi3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "x0",
+        "overload_index": 0,
+        "reference": "Lrn1;->x0()V",
+        "registers": 1,
+        "signature": "public void x0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 22,
+        "kind": "virtual",
+        "name": "y0",
+        "overload_index": 0,
+        "reference": "Lrn1;->y0()V",
+        "registers": 2,
+        "signature": "public final void y0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "z0",
+        "overload_index": 0,
+        "reference": "Lrn1;->z0()V",
+        "registers": 2,
+        "signature": "public final void z0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "rn1",
+    "source_file": "SourceFile",
+    "superclass": "Lbe2;"
+  },
+  "summary": "rn1 (classes.dex) extends be2: 10 fields, 28 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lrn1;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "unk_85988a97c784b919",
+  "revision": 2,
+  "question": "What are the exact table names, columns, indexes, and relations inside the three bundled SQLite files, and how do they correspond to the Room model classes?",
+  "severity": "medium",
+  "domain": "database schema",
+  "status": "resolved",
+  "probes": [
+    "Use a schema-only SQLite reader against APK-internal assets without extracting or returning table rows; inspect generated Room metadata if a safe parser exposes it."
+  ],
+  "evidence_for": [
+    "ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f",
+    "ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276",
+    "ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2"
+  ],
+  "evidence_against": [],
+  "resolution": "The three bundled SQLite schemas were read with the read-only schema tool. All table/column definitions, primary keys, declared foreign keys, and indexes are in these evidence records; no table rows were requested."
+}

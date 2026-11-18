@@ -1,0 +1,3910 @@
+{
+  "id": "ev_d616148bbea0ca3c82ca511f02a2ef4fc9f76cd74aa278397e5bff99ebae2518",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "path"
+      ],
+      "kind": "rows",
+      "limit": 1500,
+      "list": "entries",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 1283,
+      "next_offset": null,
+      "status": "page",
+      "total": 1283
+    },
+    "from_evidence": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+    "from_tool": "core_archive_show",
+    "shown": {
+      "items": [
+        {
+          "path": "AndroidManifest.xml"
+        },
+        {
+          "path": "DebugProbesKt.bin"
+        },
+        {
+          "path": "META-INF/androidx/annotation/annotation/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/collection/collection/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/collection/collection-ktx/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/constraintlayout/constraintlayout-core/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/lifecycle/lifecycle-common/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/lifecycle/lifecycle-common-java8/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx/room/room-common/LICENSE.txt"
+        },
+        {
+          "path": "META-INF/androidx.activity_activity-compose.version"
+        },
+        {
+          "path": "META-INF/androidx.activity_activity-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.activity_activity.version"
+        },
+        {
+          "path": "META-INF/androidx.annotation_annotation-experimental.version"
+        },
+        {
+          "path": "META-INF/androidx.appcompat_appcompat-resources.version"
+        },
+        {
+          "path": "META-INF/androidx.appcompat_appcompat.version"
+        },
+        {
+          "path": "META-INF/androidx.appfunctions_appfunctions.version"
+        },
+        {
+          "path": "META-INF/androidx.appsearch_appsearch-platform-storage.version"
+        },
+        {
+          "path": "META-INF/androidx.appsearch_appsearch.version"
+        },
+        {
+          "path": "META-INF/androidx.arch.core_core-runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.autofill_autofill.version"
+        },
+        {
+          "path": "META-INF/androidx.biometric_biometric.version"
+        },
+        {
+          "path": "META-INF/androidx.cardview_cardview.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.animation_animation-core.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.animation_animation.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.foundation_foundation-layout.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.foundation_foundation.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.material3_material3-ripple.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.material3_material3.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.material_material-icons-core.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.material_material-icons-extended.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.material_material-ripple.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.runtime_runtime-annotation.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.runtime_runtime-retain.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.runtime_runtime-saveable.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.runtime_runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui-geometry.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui-graphics.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui-text.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui-unit.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui-util.version"
+        },
+        {
+          "path": "META-INF/androidx.compose.ui_ui.version"
+        },
+        {
+          "path": "META-INF/androidx.constraintlayout_constraintlayout.version"
+        },
+        {
+          "path": "META-INF/androidx.coordinatorlayout_coordinatorlayout.version"
+        },
+        {
+          "path": "META-INF/androidx.core_core-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.core_core-remoteviews.version"
+        },
+        {
+          "path": "META-INF/androidx.core_core-splashscreen.version"
+        },
+        {
+          "path": "META-INF/androidx.core_core-viewtree.version"
+        },
+        {
+          "path": "META-INF/androidx.core_core.version"
+        },
+        {
+          "path": "META-INF/androidx.credentials_credentials-play-services-auth.version"
+        },
+        {
+          "path": "META-INF/androidx.credentials_credentials.version"
+        },
+        {
+          "path": "META-INF/androidx.cursoradapter_cursoradapter.version"
+        },
+        {
+          "path": "META-INF/androidx.customview_customview-poolingcontainer.version"
+        },
+        {
+          "path": "META-INF/androidx.customview_customview.version"
+        },
+        {
+          "path": "META-INF/androidx.datastore_datastore-core.version"
+        },
+        {
+          "path": "META-INF/androidx.datastore_datastore-preferences-core.version"
+        },
+        {
+          "path": "META-INF/androidx.datastore_datastore-preferences.version"
+        },
+        {
+          "path": "META-INF/androidx.datastore_datastore.version"
+        },
+        {
+          "path": "META-INF/androidx.documentfile_documentfile.version"
+        },
+        {
+          "path": "META-INF/androidx.drawerlayout_drawerlayout.version"
+        },
+        {
+          "path": "META-INF/androidx.dynamicanimation_dynamicanimation.version"
+        },
+        {
+          "path": "META-INF/androidx.emoji2_emoji2-views-helper.version"
+        },
+        {
+          "path": "META-INF/androidx.emoji2_emoji2.version"
+        },
+        {
+          "path": "META-INF/androidx.exifinterface_exifinterface.version"
+        },
+        {
+          "path": "META-INF/androidx.fragment_fragment-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.fragment_fragment.version"
+        },
+        {
+          "path": "META-INF/androidx.graphics_graphics-path.version"
+        },
+        {
+          "path": "META-INF/androidx.graphics_graphics-shapes.version"
+        },
+        {
+          "path": "META-INF/androidx.interpolator_interpolator.version"
+        },
+        {
+          "path": "META-INF/androidx.legacy_legacy-support-core-utils.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-process.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime-compose.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-service.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version"
+        },
+        {
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel.version"
+        },
+        {
+          "path": "META-INF/androidx.loader_loader.version"
+        },
+        {
+          "path": "META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version"
+        },
+        {
+          "path": "META-INF/androidx.media_media.version"
+        },
+        {
+          "path": "META-INF/androidx.navigation_navigation-common.version"
+        },
+        {
+          "path": "META-INF/androidx.navigation_navigation-fragment-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.navigation_navigation-fragment.version"
+        },
+        {
+          "path": "META-INF/androidx.navigation_navigation-runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.navigationevent_navigationevent-compose.version"
+        },
+        {
+          "path": "META-INF/androidx.navigationevent_navigationevent.version"
+        },
+        {
+          "path": "META-INF/androidx.preference_preference-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.preference_preference.version"
+        },
+        {
+          "path": "META-INF/androidx.print_print.version"
+        },
+        {
+          "path": "META-INF/androidx.privacysandbox.ads_ads-adservices-java.version"
+        },
+        {
+          "path": "META-INF/androidx.privacysandbox.ads_ads-adservices.version"
+        },
+        {
+          "path": "META-INF/androidx.profileinstaller_profileinstaller.version"
+        },
+        {
+          "path": "META-INF/androidx.recyclerview_recyclerview.version"
+        },
+        {
+          "path": "META-INF/androidx.room_room-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.room_room-runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.savedstate_savedstate-compose.version"
+        },
+        {
+          "path": "META-INF/androidx.savedstate_savedstate-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.savedstate_savedstate.version"
+        },
+        {
+          "path": "META-INF/androidx.slidingpanelayout_slidingpanelayout.version"
+        },
+        {
+          "path": "META-INF/androidx.sqlite_sqlite-framework.version"
+        },
+        {
+          "path": "META-INF/androidx.sqlite_sqlite.version"
+        },
+        {
+          "path": "META-INF/androidx.startup_startup-runtime.version"
+        },
+        {
+          "path": "META-INF/androidx.tracing_tracing-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.tracing_tracing.version"
+        },
+        {
+          "path": "META-INF/androidx.transition_transition.version"
+        },
+        {
+          "path": "META-INF/androidx.vectordrawable_vectordrawable-animated.version"
+        },
+        {
+          "path": "META-INF/androidx.vectordrawable_vectordrawable.version"
+        },
+        {
+          "path": "META-INF/androidx.versionedparcelable_versionedparcelable.version"
+        },
+        {
+          "path": "META-INF/androidx.viewpager2_viewpager2.version"
+        },
+        {
+          "path": "META-INF/androidx.viewpager_viewpager.version"
+        },
+        {
+          "path": "META-INF/androidx.webkit_webkit.version"
+        },
+        {
+          "path": "META-INF/androidx.window_window-core.version"
+        },
+        {
+          "path": "META-INF/androidx.window_window.version"
+        },
+        {
+          "path": "META-INF/androidx.work_work-runtime-ktx.version"
+        },
+        {
+          "path": "META-INF/androidx.work_work-runtime.version"
+        },
+        {
+          "path": "META-INF/com/android/build/gradle/app-metadata.properties"
+        },
+        {
+          "path": "META-INF/com.google.android.material_material.version"
+        },
+        {
+          "path": "META-INF/kotlinx_coroutines_android.version"
+        },
+        {
+          "path": "META-INF/kotlinx_coroutines_core.version"
+        },
+        {
+          "path": "META-INF/kotlinx_coroutines_guava.version"
+        },
+        {
+          "path": "META-INF/kotlinx_coroutines_play_services.version"
+        },
+        {
+          "path": "META-INF/kotlinx_coroutines_reactive.version"
+        },
+        {
+          "path": "META-INF/services/mu1"
+        },
+        {
+          "path": "META-INF/services/nf"
+        },
+        {
+          "path": "META-INF/third_party_licenses/com.google.mlkit/genai-schema/third_party_licenses.json"
+        },
+        {
+          "path": "META-INF/third_party_licenses/com.google.mlkit/genai-schema/third_party_licenses.txt"
+        },
+        {
+          "path": "META-INF/version-control-info.textproto"
+        },
+        {
+          "path": "app-update-ktx.properties"
+        },
+        {
+          "path": "app-update.properties"
+        },
+        {
+          "path": "assets/PublicSuffixDatabase.list"
+        },
+        {
+          "path": "assets/app_functions.xml"
+        },
+        {
+          "path": "assets/app_functions_schema.xsd"
+        },
+        {
+          "path": "assets/app_functions_v2.xml"
+        },
+        {
+          "path": "assets/arbain/ar.json"
+        },
+        {
+          "path": "assets/arbain/de.json"
+        },
+        {
+          "path": "assets/arbain/en.json"
+        },
+        {
+          "path": "assets/arbain/fr.json"
+        },
+        {
+          "path": "assets/arbain/hi.json"
+        },
+        {
+          "path": "assets/arbain/id.json"
+        },
+        {
+          "path": "assets/arbain/languages.json"
+        },
+        {
+          "path": "assets/arbain/sq.json"
+        },
+        {
+          "path": "assets/arbain/tr.json"
+        },
+        {
+          "path": "assets/arbain/ur.json"
+        },
+        {
+          "path": "assets/athkar_duas.db"
+        },
+        {
+          "path": "assets/athkar_i18n/de.json"
+        },
+        {
+          "path": "assets/athkar_i18n/en.json"
+        },
+        {
+          "path": "assets/athkar_i18n/fr.json"
+        },
+        {
+          "path": "assets/athkar_i18n/hi.json"
+        },
+        {
+          "path": "assets/athkar_i18n/id.json"
+        },
+        {
+          "path": "assets/athkar_i18n/sq.json"
+        },
+        {
+          "path": "assets/athkar_i18n/tr.json"
+        },
+        {
+          "path": "assets/athkar_i18n/ur.json"
+        },
+        {
+          "path": "assets/dexopt/baseline.prof"
+        },
+        {
+          "path": "assets/dexopt/baseline.profm"
+        },
+        {
+          "path": "assets/duas_i18n/de.json"
+        },
+        {
+          "path": "assets/duas_i18n/en.json"
+        },
+        {
+          "path": "assets/duas_i18n/fr.json"
+        },
+        {
+          "path": "assets/duas_i18n/hi.json"
+        },
+        {
+          "path": "assets/duas_i18n/id.json"
+        },
+        {
+          "path": "assets/duas_i18n/sq.json"
+        },
+        {
+          "path": "assets/duas_i18n/tr.json"
+        },
+        {
+          "path": "assets/duas_i18n/ur.json"
+        },
+        {
+          "path": "assets/fahadv3.zip"
+        },
+        {
+          "path": "assets/family_duas.json"
+        },
+        {
+          "path": "assets/hajj_guide/ar.json"
+        },
+        {
+          "path": "assets/hajj_guide/de.json"
+        },
+        {
+          "path": "assets/hajj_guide/duas.json"
+        },
+        {
+          "path": "assets/hajj_guide/en.json"
+        },
+        {
+          "path": "assets/hajj_guide/fr.json"
+        },
+        {
+          "path": "assets/hajj_guide/hi.json"
+        },
+        {
+          "path": "assets/hajj_guide/id.json"
+        },
+        {
+          "path": "assets/hajj_guide/sq.json"
+        },
+        {
+          "path": "assets/hajj_guide/tr.json"
+        },
+        {
+          "path": "assets/hajj_guide/ur.json"
+        },
+        {
+          "path": "assets/licenses/Amiri-OFL.txt"
+        },
+        {
+          "path": "assets/licenses/IBMPlexSansArabic-OFL.txt"
+        },
+        {
+          "path": "assets/licenses/MarkaziText-OFL.txt"
+        },
+        {
+          "path": "assets/licenses/NotoNaskhArabic-OFL.txt"
+        },
+        {
+          "path": "assets/licenses/ScheherazadeNew-OFL.txt"
+        },
+        {
+          "path": "assets/licenses/Tajawal-OFL.txt"
+        },
+        {
+          "path": "assets/mutun/ajurrumiyyah.json"
+        },
+        {
+          "path": "assets/mutun/alfiyyah.json"
+        },
+        {
+          "path": "assets/mutun/arbain_nawawi.json"
+        },
+        {
+          "path": "assets/mutun/audio.json"
+        },
+        {
+          "path": "assets/mutun/bayquniyyah.json"
+        },
+        {
+          "path": "assets/mutun/bulugh_maram.json"
+        },
+        {
+          "path": "assets/mutun/ilbiri.json"
+        },
+        {
+          "path": "assets/mutun/index.json"
+        },
+        {
+          "path": "assets/mutun/jazariyyah.json"
+        },
+        {
+          "path": "assets/mutun/kashf_shubuhat.json"
+        },
+        {
+          "path": "assets/mutun/kitab_tawhid.json"
+        },
+        {
+          "path": "assets/mutun/nawaqid.json"
+        },
+        {
+          "path": "assets/mutun/nukhbah.json"
+        },
+        {
+          "path": "assets/mutun/qawaid_arba.json"
+        },
+        {
+          "path": "assets/mutun/rahbiyyah.json"
+        },
+        {
+          "path": "assets/mutun/shurut_salah.json"
+        },
+        {
+          "path": "assets/mutun/tahawiyyah.json"
+        },
+        {
+          "path": "assets/mutun/tuhfat_atfal.json"
+        },
+        {
+          "path": "assets/mutun/umdat_ahkam.json"
+        },
+        {
+          "path": "assets/mutun/unwan_hikam.json"
+        },
+        {
+          "path": "assets/mutun/usul_thalatha.json"
+        },
+        {
+          "path": "assets/mutun/waraqat.json"
+        },
+        {
+          "path": "assets/mutun/wasitiyyah.json"
+        },
+        {
+          "path": "assets/mutun/zad_mustaqni.json"
+        },
+        {
+          "path": "assets/quran_app.db"
+        },
+        {
+          "path": "assets/quran_app_functions.xml"
+        },
+        {
+          "path": "assets/quran_glyphs.db"
+        },
+        {
+          "path": "assets/segmentation_graph.binarypb"
+        },
+        {
+          "path": "assets/selfiesegmentation_mlkit-256x256-2021_01_19-v1215.f16.tflite"
+        },
+        {
+          "path": "assets/tajweed/001.tsv"
+        },
+        {
+          "path": "assets/tajweed/002.tsv"
+        },
+        {
+          "path": "assets/tajweed/003.tsv"
+        },
+        {
+          "path": "assets/tajweed/004.tsv"
+        },
+        {
+          "path": "assets/tajweed/005.tsv"
+        },
+        {
+          "path": "assets/tajweed/006.tsv"
+        },
+        {
+          "path": "assets/tajweed/007.tsv"
+        },
+        {
+          "path": "assets/tajweed/008.tsv"
+        },
+        {
+          "path": "assets/tajweed/009.tsv"
+        },
+        {
+          "path": "assets/tajweed/010.tsv"
+        },
+        {
+          "path": "assets/tajweed/011.tsv"
+        },
+        {
+          "path": "assets/tajweed/012.tsv"
+        },
+        {
+          "path": "assets/tajweed/013.tsv"
+        },
+        {
+          "path": "assets/tajweed/014.tsv"
+        },
+        {
+          "path": "assets/tajweed/015.tsv"
+        },
+        {
+          "path": "assets/tajweed/016.tsv"
+        },
+        {
+          "path": "assets/tajweed/017.tsv"
+        },
+        {
+          "path": "assets/tajweed/018.tsv"
+        },
+        {
+          "path": "assets/tajweed/019.tsv"
+        },
+        {
+          "path": "assets/tajweed/020.tsv"
+        },
+        {
+          "path": "assets/tajweed/021.tsv"
+        },
+        {
+          "path": "assets/tajweed/022.tsv"
+        },
+        {
+          "path": "assets/tajweed/023.tsv"
+        },
+        {
+          "path": "assets/tajweed/024.tsv"
+        },
+        {
+          "path": "assets/tajweed/025.tsv"
+        },
+        {
+          "path": "assets/tajweed/026.tsv"
+        },
+        {
+          "path": "assets/tajweed/027.tsv"
+        },
+        {
+          "path": "assets/tajweed/028.tsv"
+        },
+        {
+          "path": "assets/tajweed/029.tsv"
+        },
+        {
+          "path": "assets/tajweed/030.tsv"
+        },
+        {
+          "path": "assets/tajweed/031.tsv"
+        },
+        {
+          "path": "assets/tajweed/032.tsv"
+        },
+        {
+          "path": "assets/tajweed/033.tsv"
+        },
+        {
+          "path": "assets/tajweed/034.tsv"
+        },
+        {
+          "path": "assets/tajweed/035.tsv"
+        },
+        {
+          "path": "assets/tajweed/036.tsv"
+        },
+        {
+          "path": "assets/tajweed/037.tsv"
+        },
+        {
+          "path": "assets/tajweed/038.tsv"
+        },
+        {
+          "path": "assets/tajweed/039.tsv"
+        },
+        {
+          "path": "assets/tajweed/040.tsv"
+        },
+        {
+          "path": "assets/tajweed/041.tsv"
+        },
+        {
+          "path": "assets/tajweed/042.tsv"
+        },
+        {
+          "path": "assets/tajweed/043.tsv"
+        },
+        {
+          "path": "assets/tajweed/044.tsv"
+        },
+        {
+          "path": "assets/tajweed/045.tsv"
+        },
+        {
+          "path": "assets/tajweed/046.tsv"
+        },
+        {
+          "path": "assets/tajweed/047.tsv"
+        },
+        {
+          "path": "assets/tajweed/048.tsv"
+        },
+        {
+          "path": "assets/tajweed/049.tsv"
+        },
+        {
+          "path": "assets/tajweed/050.tsv"
+        },
+        {
+          "path": "assets/tajweed/051.tsv"
+        },
+        {
+          "path": "assets/tajweed/052.tsv"
+        },
+        {
+          "path": "assets/tajweed/053.tsv"
+        },
+        {
+          "path": "assets/tajweed/054.tsv"
+        },
+        {
+          "path": "assets/tajweed/055.tsv"
+        },
+        {
+          "path": "assets/tajweed/056.tsv"
+        },
+        {
+          "path": "assets/tajweed/057.tsv"
+        },
+        {
+          "path": "assets/tajweed/058.tsv"
+        },
+        {
+          "path": "assets/tajweed/059.tsv"
+        },
+        {
+          "path": "assets/tajweed/060.tsv"
+        },
+        {
+          "path": "assets/tajweed/061.tsv"
+        },
+        {
+          "path": "assets/tajweed/062.tsv"
+        },
+        {
+          "path": "assets/tajweed/063.tsv"
+        },
+        {
+          "path": "assets/tajweed/064.tsv"
+        },
+        {
+          "path": "assets/tajweed/065.tsv"
+        },
+        {
+          "path": "assets/tajweed/066.tsv"
+        },
+        {
+          "path": "assets/tajweed/067.tsv"
+        },
+        {
+          "path": "assets/tajweed/068.tsv"
+        },
+        {
+          "path": "assets/tajweed/069.tsv"
+        },
+        {
+          "path": "assets/tajweed/070.tsv"
+        },
+        {
+          "path": "assets/tajweed/071.tsv"
+        },
+        {
+          "path": "assets/tajweed/072.tsv"
+        },
+        {
+          "path": "assets/tajweed/073.tsv"
+        },
+        {
+          "path": "assets/tajweed/074.tsv"
+        },
+        {
+          "path": "assets/tajweed/075.tsv"
+        },
+        {
+          "path": "assets/tajweed/076.tsv"
+        },
+        {
+          "path": "assets/tajweed/077.tsv"
+        },
+        {
+          "path": "assets/tajweed/078.tsv"
+        },
+        {
+          "path": "assets/tajweed/079.tsv"
+        },
+        {
+          "path": "assets/tajweed/080.tsv"
+        },
+        {
+          "path": "assets/tajweed/081.tsv"
+        },
+        {
+          "path": "assets/tajweed/082.tsv"
+        },
+        {
+          "path": "assets/tajweed/083.tsv"
+        },
+        {
+          "path": "assets/tajweed/084.tsv"
+        },
+        {
+          "path": "assets/tajweed/085.tsv"
+        },
+        {
+          "path": "assets/tajweed/086.tsv"
+        },
+        {
+          "path": "assets/tajweed/087.tsv"
+        },
+        {
+          "path": "assets/tajweed/088.tsv"
+        },
+        {
+          "path": "assets/tajweed/089.tsv"
+        },
+        {
+          "path": "assets/tajweed/090.tsv"
+        },
+        {
+          "path": "assets/tajweed/091.tsv"
+        },
+        {
+          "path": "assets/tajweed/092.tsv"
+        },
+        {
+          "path": "assets/tajweed/093.tsv"
+        },
+        {
+          "path": "assets/tajweed/094.tsv"
+        },
+        {
+          "path": "assets/tajweed/095.tsv"
+        },
+        {
+          "path": "assets/tajweed/096.tsv"
+        },
+        {
+          "path": "assets/tajweed/097.tsv"
+        },
+        {
+          "path": "assets/tajweed/098.tsv"
+        },
+        {
+          "path": "assets/tajweed/099.tsv"
+        },
+        {
+          "path": "assets/tajweed/100.tsv"
+        },
+        {
+          "path": "assets/tajweed/101.tsv"
+        },
+        {
+          "path": "assets/tajweed/102.tsv"
+        },
+        {
+          "path": "assets/tajweed/103.tsv"
+        },
+        {
+          "path": "assets/tajweed/104.tsv"
+        },
+        {
+          "path": "assets/tajweed/105.tsv"
+        },
+        {
+          "path": "assets/tajweed/106.tsv"
+        },
+        {
+          "path": "assets/tajweed/107.tsv"
+        },
+        {
+          "path": "assets/tajweed/108.tsv"
+        },
+        {
+          "path": "assets/tajweed/109.tsv"
+        },
+        {
+          "path": "assets/tajweed/110.tsv"
+        },
+        {
+          "path": "assets/tajweed/111.tsv"
+        },
+        {
+          "path": "assets/tajweed/112.tsv"
+        },
+        {
+          "path": "assets/tajweed/113.tsv"
+        },
+        {
+          "path": "assets/tajweed/114.tsv"
+        },
+        {
+          "path": "billing-ktx.properties"
+        },
+        {
+          "path": "billing.properties"
+        },
+        {
+          "path": "classes.dex"
+        },
+        {
+          "path": "classes2.dex"
+        },
+        {
+          "path": "client_analytics.proto"
+        },
+        {
+          "path": "common.properties"
+        },
+        {
+          "path": "core-common.properties"
+        },
+        {
+          "path": "firebase-analytics.properties"
+        },
+        {
+          "path": "firebase-iid-interop.properties"
+        },
+        {
+          "path": "firebase-measurement-connector.properties"
+        },
+        {
+          "path": "genai-common.properties"
+        },
+        {
+          "path": "genai-prompt.properties"
+        },
+        {
+          "path": "genai-schema.properties"
+        },
+        {
+          "path": "googleid.properties"
+        },
+        {
+          "path": "image.properties"
+        },
+        {
+          "path": "kotlin/annotation/annotation.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/collections/collections.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/concurrent/atomics/atomics.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/coroutines/coroutines.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/internal/internal.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/kotlin.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/ranges/ranges.kotlin_builtins"
+        },
+        {
+          "path": "kotlin/reflect/reflect.kotlin_builtins"
+        },
+        {
+          "path": "mediapipe-internal.properties"
+        },
+        {
+          "path": "messaging_event.proto"
+        },
+        {
+          "path": "messaging_event_extension.proto"
+        },
+        {
+          "path": "play-services-ads-identifier.properties"
+        },
+        {
+          "path": "play-services-auth-api-phone.properties"
+        },
+        {
+          "path": "play-services-auth-base.properties"
+        },
+        {
+          "path": "play-services-auth-blockstore.properties"
+        },
+        {
+          "path": "play-services-auth.properties"
+        },
+        {
+          "path": "play-services-base.properties"
+        },
+        {
+          "path": "play-services-basement.properties"
+        },
+        {
+          "path": "play-services-cloud-messaging.properties"
+        },
+        {
+          "path": "play-services-fido.properties"
+        },
+        {
+          "path": "play-services-identity-credentials.properties"
+        },
+        {
+          "path": "play-services-location.properties"
+        },
+        {
+          "path": "play-services-maps.properties"
+        },
+        {
+          "path": "play-services-measurement-api.properties"
+        },
+        {
+          "path": "play-services-measurement-base.properties"
+        },
+        {
+          "path": "play-services-measurement-impl.properties"
+        },
+        {
+          "path": "play-services-measurement-sdk-api.properties"
+        },
+        {
+          "path": "play-services-measurement-sdk.properties"
+        },
+        {
+          "path": "play-services-measurement.properties"
+        },
+        {
+          "path": "play-services-stats.properties"
+        },
+        {
+          "path": "play-services-tasks.properties"
+        },
+        {
+          "path": "res/anim/abc_grow_fade_in_from_bottom.xml"
+        },
+        {
+          "path": "res/anim/abc_popup_enter.xml"
+        },
+        {
+          "path": "res/anim/abc_popup_exit.xml"
+        },
+        {
+          "path": "res/anim/abc_shrink_fade_out_from_bottom.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml"
+        },
+        {
+          "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
+        },
+        {
+          "path": "res/anim/fragment_fast_out_extra_slow_in.xml"
+        },
+        {
+          "path": "res/anim/m3_bottom_sheet_slide_in.xml"
+        },
+        {
+          "path": "res/anim/m3_bottom_sheet_slide_out.xml"
+        },
+        {
+          "path": "res/anim/m3_motion_fade_enter.xml"
+        },
+        {
+          "path": "res/anim/m3_motion_fade_exit.xml"
+        },
+        {
+          "path": "res/anim/m3_side_sheet_enter_from_right.xml"
+        },
+        {
+          "path": "res/anim/m3_side_sheet_exit_to_right.xml"
+        },
+        {
+          "path": "res/anim/mtrl_bottom_sheet_slide_in.xml"
+        },
+        {
+          "path": "res/anim/mtrl_bottom_sheet_slide_out.xml"
+        },
+        {
+          "path": "res/anim/mtrl_card_lowers_interpolator.xml"
+        },
+        {
+          "path": "res/animator/design_appbar_state_list_animator.xml"
+        },
+        {
+          "path": "res/animator/design_fab_hide_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/design_fab_show_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/fragment_close_enter.xml"
+        },
+        {
+          "path": "res/animator/fragment_close_exit.xml"
+        },
+        {
+          "path": "res/animator/fragment_fade_enter.xml"
+        },
+        {
+          "path": "res/animator/fragment_fade_exit.xml"
+        },
+        {
+          "path": "res/animator/fragment_open_enter.xml"
+        },
+        {
+          "path": "res/animator/fragment_open_exit.xml"
+        },
+        {
+          "path": "res/animator/m3_appbar_state_list_animator.xml"
+        },
+        {
+          "path": "res/animator/m3_btn_elevated_btn_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/m3_btn_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/m3_card_elevated_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/m3_card_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/m3_chip_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/m3_extended_fab_change_size_collapse_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/m3_extended_fab_change_size_expand_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/m3_extended_fab_hide_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/m3_extended_fab_show_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/m3_extended_fab_state_list_animator.xml"
+        },
+        {
+          "path": "res/animator/m3_fab_state_list_animator.xml"
+        },
+        {
+          "path": "res/animator/mtrl_btn_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/mtrl_card_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/mtrl_chip_state_list_anim.xml"
+        },
+        {
+          "path": "res/animator/mtrl_extended_fab_state_list_animator.xml"
+        },
+        {
+          "path": "res/animator/mtrl_fab_hide_motion_spec.xml"
+        },
+        {
+          "path": "res/animator/mtrl_fab_show_motion_spec.xml"
+        },
+        {
+          "path": "res/color/abc_background_cache_hint_selector_material_dark.xml"
+        },
+        {
+          "path": "res/color/abc_background_cache_hint_selector_material_light.xml"
+        },
+        {
+          "path": "res/color/abc_hint_foreground_material_dark.xml"
+        },
+        {
+          "path": "res/color/abc_hint_foreground_material_light.xml"
+        },
+        {
+          "path": "res/color/abc_primary_text_disable_only_material_dark.xml"
+        },
+        {
+          "path": "res/color/abc_primary_text_disable_only_material_light.xml"
+        },
+        {
+          "path": "res/color/abc_primary_text_material_dark.xml"
+        },
+        {
+          "path": "res/color/abc_primary_text_material_light.xml"
+        },
+        {
+          "path": "res/color/abc_search_url_text.xml"
+        },
+        {
+          "path": "res/color/abc_secondary_text_material_dark.xml"
+        },
+        {
+          "path": "res/color/abc_secondary_text_material_light.xml"
+        },
+        {
+          "path": "res/color/design_box_stroke_color.xml"
+        },
+        {
+          "path": "res/color/design_error.xml"
+        },
+        {
+          "path": "res/color/design_icon_tint.xml"
+        },
+        {
+          "path": "res/color/m3_assist_chip_icon_tint_color.xml"
+        },
+        {
+          "path": "res/color/m3_bottom_sheet_drag_handle_color.xml"
+        },
+        {
+          "path": "res/color/m3_button_background_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_button_foreground_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_button_outline_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_button_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_calendar_item_disabled_text.xml"
+        },
+        {
+          "path": "res/color/m3_calendar_item_stroke_color.xml"
+        },
+        {
+          "path": "res/color/m3_card_foreground_color.xml"
+        },
+        {
+          "path": "res/color/m3_card_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_card_stroke_color.xml"
+        },
+        {
+          "path": "res/color/m3_checkbox_button_icon_tint.xml"
+        },
+        {
+          "path": "res/color/m3_checkbox_button_tint.xml"
+        },
+        {
+          "path": "res/color/m3_chip_assist_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_chip_background_color.xml"
+        },
+        {
+          "path": "res/color/m3_chip_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_chip_stroke_color.xml"
+        },
+        {
+          "path": "res/color/m3_chip_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_control_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_dark_default_color_primary_text.xml"
+        },
+        {
+          "path": "res/color/m3_dark_default_color_secondary_text.xml"
+        },
+        {
+          "path": "res/color/m3_dark_highlighted_text.xml"
+        },
+        {
+          "path": "res/color/m3_dark_hint_foreground.xml"
+        },
+        {
+          "path": "res/color/m3_dark_primary_text_disable_only.xml"
+        },
+        {
+          "path": "res/color/m3_default_color_primary_text.xml"
+        },
+        {
+          "path": "res/color/m3_default_color_secondary_text.xml"
+        },
+        {
+          "path": "res/color/m3_efab_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_fab_efab_background_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_fab_efab_foreground_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_fab_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_filled_icon_button_container_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_highlighted_text.xml"
+        },
+        {
+          "path": "res/color/m3_hint_foreground.xml"
+        },
+        {
+          "path": "res/color/m3_icon_button_icon_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_list_item_background_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_list_item_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_bar_item_with_indicator_icon_tint.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_bar_item_with_indicator_label_tint.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_bar_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_item_background_color.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_item_icon_tint.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_item_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_item_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_rail_item_with_indicator_icon_tint.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_rail_item_with_indicator_label_tint.xml"
+        },
+        {
+          "path": "res/color/m3_navigation_rail_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_primary_text_disable_only.xml"
+        },
+        {
+          "path": "res/color/m3_radiobutton_button_tint.xml"
+        },
+        {
+          "path": "res/color/m3_radiobutton_ripple_tint.xml"
+        },
+        {
+          "path": "res/color/m3_segmented_list_item_background_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_selection_control_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_simple_item_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_slider_active_tick_marks_color.xml"
+        },
+        {
+          "path": "res/color/m3_slider_active_track_color.xml"
+        },
+        {
+          "path": "res/color/m3_slider_inactive_tick_marks_color.xml"
+        },
+        {
+          "path": "res/color/m3_slider_inactive_track_color.xml"
+        },
+        {
+          "path": "res/color/m3_slider_thumb_color.xml"
+        },
+        {
+          "path": "res/color/m3_standard_toolbar_button_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_standard_toolbar_icon_button_container_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_standard_toolbar_icon_button_icon_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_standard_toolbar_icon_button_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_switch_thumb_tint.xml"
+        },
+        {
+          "path": "res/color/m3_switch_track_tint.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_icon_color.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_icon_color_secondary.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_ripple_color_secondary.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_tabs_text_color_secondary.xml"
+        },
+        {
+          "path": "res/color/m3_text_button_background_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_text_button_foreground_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_text_button_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_textfield_filled_background_color.xml"
+        },
+        {
+          "path": "res/color/m3_textfield_indicator_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_textfield_input_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_textfield_label_color.xml"
+        },
+        {
+          "path": "res/color/m3_textfield_stroke_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_button_background_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_button_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_button_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_clock_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_display_background_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_display_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_display_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_secondary_text_button_ripple_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_secondary_text_button_text_color.xml"
+        },
+        {
+          "path": "res/color/m3_timepicker_time_input_stroke_color.xml"
+        },
+        {
+          "path": "res/color/m3_tonal_button_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_vibrant_toolbar_button_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_vibrant_toolbar_icon_button_container_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_vibrant_toolbar_icon_button_icon_color_selector.xml"
+        },
+        {
+          "path": "res/color/m3_vibrant_toolbar_icon_button_ripple_color_selector.xml"
+        },
+        {
+          "path": "res/color/material_divider_color.xml"
+        },
+        {
+          "path": "res/color/material_on_surface_disabled.xml"
+        },
+        {
+          "path": "res/color/material_on_surface_emphasis_high_type.xml"
+        },
+        {
+          "path": "res/color/material_on_surface_emphasis_medium.xml"
+        },
+        {
+          "path": "res/color/material_slider_active_tick_marks_color.xml"
+        },
+        {
+          "path": "res/color/material_slider_active_track_color.xml"
+        },
+        {
+          "path": "res/color/material_slider_halo_color.xml"
+        },
+        {
+          "path": "res/color/material_slider_inactive_tick_marks_color.xml"
+        },
+        {
+          "path": "res/color/material_slider_inactive_track_color.xml"
+        },
+        {
+          "path": "res/color/material_slider_thumb_color.xml"
+        },
+        {
+          "path": "res/color/material_timepicker_button_background.xml"
+        },
+        {
+          "path": "res/color/material_timepicker_button_stroke.xml"
+        },
+        {
+          "path": "res/color/material_timepicker_clock_text_color.xml"
+        },
+        {
+          "path": "res/color/material_timepicker_clockface.xml"
+        },
+        {
+          "path": "res/color/material_timepicker_modebutton_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_bg_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_stroke_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_text_btn_bg_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_text_btn_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_btn_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_calendar_item_stroke_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_calendar_selected_range.xml"
+        },
+        {
+          "path": "res/color/mtrl_card_view_foreground.xml"
+        },
+        {
+          "path": "res/color/mtrl_card_view_ripple.xml"
+        },
+        {
+          "path": "res/color/mtrl_chip_background_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_chip_close_icon_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_chip_surface_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_chip_text_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_choice_chip_background_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_choice_chip_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_choice_chip_text_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_error.xml"
+        },
+        {
+          "path": "res/color/mtrl_fab_bg_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_fab_icon_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_fab_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_filled_background_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_filled_icon_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_filled_stroke_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_indicator_text_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_navigation_bar_item_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_navigation_bar_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_navigation_item_background_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_navigation_item_icon_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_navigation_item_text_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_on_primary_text_btn_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_on_surface_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_outlined_icon_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_outlined_stroke_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_popupmenu_overlay_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_switch_thumb_icon_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_switch_thumb_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_switch_track_decoration_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_switch_track_tint.xml"
+        },
+        {
+          "path": "res/color/mtrl_tabs_icon_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_tabs_legacy_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/mtrl_tabs_ripple_color.xml"
+        },
+        {
+          "path": "res/color/mtrl_text_btn_text_color_selector.xml"
+        },
+        {
+          "path": "res/color/switch_thumb_material_dark.xml"
+        },
+        {
+          "path": "res/color/switch_thumb_material_light.xml"
+        },
+        {
+          "path": "res/color-night-v8/material_timepicker_button_stroke.xml"
+        },
+        {
+          "path": "res/color-night-v8/material_timepicker_clockface.xml"
+        },
+        {
+          "path": "res/color-night-v8/material_timepicker_modebutton_tint.xml"
+        },
+        {
+          "path": "res/color-v23/abc_color_highlight_material.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_btn_checkable.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_default.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_edittext.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_seek_thumb.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_spinner.xml"
+        },
+        {
+          "path": "res/color-v23/abc_tint_switch_track.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_dark_default_color_primary_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_dark_default_color_secondary_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_dark_highlighted_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_dark_hint_foreground.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_dark_primary_text_disable_only.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_default_color_primary_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_default_color_secondary_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_highlighted_text.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_hint_foreground.xml"
+        },
+        {
+          "path": "res/color-v31/m3_dynamic_primary_text_disable_only.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant12.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant17.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant22.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant24.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant4.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant6.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant87.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant92.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant94.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant96.xml"
+        },
+        {
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant98.xml"
+        },
+        {
+          "path": "res/drawable/$avd_hide_password__0.xml"
+        },
+        {
+          "path": "res/drawable/$avd_hide_password__1.xml"
+        },
+        {
+          "path": "res/drawable/$avd_hide_password__2.xml"
+        },
+        {
+          "path": "res/drawable/$avd_show_password__0.xml"
+        },
+        {
+          "path": "res/drawable/$avd_show_password__1.xml"
+        },
+        {
+          "path": "res/drawable/$avd_show_password__2.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__0.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__1.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__10.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__11.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__12.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__13.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__14.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__15.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__16.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__17.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__18.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__19.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__2.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__20.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__21.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__22.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__23.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__24.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__25.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__26.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__27.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__28.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__29.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__3.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__30.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__31.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__32.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__33.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__34.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__4.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__5.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__6.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__7.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__8.xml"
+        },
+        {
+          "path": "res/drawable/$ic_splash__9.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_hide_password__0.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_hide_password__1.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_hide_password__2.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_show_password__0.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_show_password__1.xml"
+        },
+        {
+          "path": "res/drawable/$m3_avd_show_password__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_indeterminate__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_checked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__2.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_checked_pressed__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_checked_unchecked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_checked_unchecked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_pressed_checked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_pressed_unchecked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_checked__0.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_checked__1.xml"
+        },
+        {
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_pressed__0.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_borderless_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_check_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_check_material_anim.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_default_mtrl_shape.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_radio_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_btn_radio_material_anim.xml"
+        },
+        {
+          "path": "res/drawable/abc_cab_background_internal_bg.xml"
+        },
+        {
+          "path": "res/drawable/abc_cab_background_top_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_ab_back_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_clear_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_go_search_api_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_overflow_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_search_api_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ic_voice_search_api_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_item_background_holo_dark.xml"
+        },
+        {
+          "path": "res/drawable/abc_item_background_holo_light.xml"
+        },
+        {
+          "path": "res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        },
+        {
+          "path": "res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        },
+        {
+          "path": "res/drawable/abc_list_selector_holo_dark.xml"
+        },
+        {
+          "path": "res/drawable/abc_list_selector_holo_light.xml"
+        },
+        {
+          "path": "res/drawable/abc_ratingbar_indicator_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ratingbar_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_ratingbar_small_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_seekbar_thumb_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_seekbar_tick_mark_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_seekbar_track_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_spinner_textfield_background_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_star_black_48dp.xml"
+        },
+        {
+          "path": "res/drawable/abc_star_half_black_48dp.xml"
+        },
+        {
+          "path": "res/drawable/abc_switch_thumb_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_tab_indicator_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_text_cursor_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_textfield_search_material.xml"
+        },
+        {
+          "path": "res/drawable/abc_vector_test.xml"
+        },
+        {
+          "path": "res/drawable/arrow_down.xml"
+        },
+        {
+          "path": "res/drawable/arrow_up.xml"
+        },
+        {
+          "path": "res/drawable/avd_hide_password.xml"
+        },
+        {
+          "path": "res/drawable/avd_show_password.xml"
+        },
+        {
+          "path": "res/drawable/bg_notification_action.xml"
+        },
+        {
+          "path": "res/drawable/bg_prayer_highlight_dark.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget1_divider.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget1_gradient.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget1_pill.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget2_date_card.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget2_gradient.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget_verse.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget_verse_button.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget_verse_cartouche.xml"
+        },
+        {
+          "path": "res/drawable/bg_widget_verse_frame.xml"
+        },
+        {
+          "path": "res/drawable/btn_checkbox_checked_mtrl.xml"
+        },
+        {
+          "path": "res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+        },
+        {
+          "path": "res/drawable/btn_checkbox_unchecked_mtrl.xml"
+        },
+        {
+          "path": "res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+        },
+        {
+          "path": "res/drawable/btn_radio_off_mtrl.xml"
+        },
+        {
+          "path": "res/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+        },
+        {
+          "path": "res/drawable/btn_radio_on_mtrl.xml"
+        },
+        {
+          "path": "res/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+        },
+        {
+          "path": "res/drawable/design_fab_background.xml"
+        },
+        {
+          "path": "res/drawable/design_ic_visibility.xml"
+        },
+        {
+          "path": "res/drawable/design_ic_visibility_off.xml"
+        },
+        {
+          "path": "res/drawable/design_password_eye.xml"
+        },
+        {
+          "path": "res/drawable/design_snackbar_background.xml"
+        },
+        {
+          "path": "res/drawable/exo_rounded_rectangle.xml"
+        },
+        {
+          "path": "res/drawable/ic_add_plus.xml"
+        },
+        {
+          "path": "res/drawable/ic_alarm.xml"
+        },
+        {
+          "path": "res/drawable/ic_alert_enable.xml"
+        },
+        {
+          "path": "res/drawable/ic_arrow_back_black_24.xml"
+        },
+        {
+          "path": "res/drawable/ic_arrow_forward.xml"
+        },
+        {
+          "path": "res/drawable/ic_arrow_left.xml"
+        },
+        {
+          "path": "res/drawable/ic_athkar.xml"
+        },
+        {
+          "path": "res/drawable/ic_back.xml"
+        },
+        {
+          "path": "res/drawable/ic_bar_chart.xml"
+        },
+        {
+          "path": "res/drawable/ic_bk_cyen.xml"
+        },
+        {
+          "path": "res/drawable/ic_bk_green.xml"
+        },
+        {
+          "path": "res/drawable/ic_bk_purple.xml"
+        },
+        {
+          "path": "res/drawable/ic_bk_red.xml"
+        },
+        {
+          "path": "res/drawable/ic_book.xml"
+        },
+        {
+          "path": "res/drawable/ic_bookmark_outline.xml"
+        },
+        {
+          "path": "res/drawable/ic_bookmark_page_selected.xml"
+        },
+        {
+          "path": "res/drawable/ic_bookmark_page_unselected.xml"
+        },
+        {
+          "path": "res/drawable/ic_calendar_month.xml"
+        },
+        {
+          "path": "res/drawable/ic_calendar_month_outline.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_answer.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_background.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_chat.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_decline.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_end.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_flip.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_mic_off.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_mic_on.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_person.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_quran.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_video_off.xml"
+        },
+        {
+          "path": "res/drawable/ic_call_video_on.xml"
+        },
+        {
+          "path": "res/drawable/ic_chart.xml"
+        },
+        {
+          "path": "res/drawable/ic_check.xml"
+        },
+        {
+          "path": "res/drawable/ic_check_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_checks.xml"
+        },
+        {
+          "path": "res/drawable/ic_chevron_down.xml"
+        },
+        {
+          "path": "res/drawable/ic_chevron_end.xml"
+        },
+        {
+          "path": "res/drawable/ic_chevron_forward.xml"
+        },
+        {
+          "path": "res/drawable/ic_chevron_ios.xml"
+        },
+        {
+          "path": "res/drawable/ic_chevron_left.xml"
+        },
+        {
+          "path": "res/drawable/ic_class_hand.xml"
+        },
+        {
+          "path": "res/drawable/ic_class_share.xml"
+        },
+        {
+          "path": "res/drawable/ic_clock.xml"
+        },
+        {
+          "path": "res/drawable/ic_clock_black_24dp.xml"
+        },
+        {
+          "path": "res/drawable/ic_close.xml"
+        },
+        {
+          "path": "res/drawable/ic_cloud.xml"
+        },
+        {
+          "path": "res/drawable/ic_coins.xml"
+        },
+        {
+          "path": "res/drawable/ic_compass.xml"
+        },
+        {
+          "path": "res/drawable/ic_copy.xml"
+        },
+        {
+          "path": "res/drawable/ic_default_cancel.xml"
+        },
+        {
+          "path": "res/drawable/ic_delete_outline.xml"
+        },
+        {
+          "path": "res/drawable/ic_dorar.xml"
+        },
+        {
+          "path": "res/drawable/ic_download.xml"
+        },
+        {
+          "path": "res/drawable/ic_dua_hands.xml"
+        },
+        {
+          "path": "res/drawable/ic_edit.xml"
+        },
+        {
+          "path": "res/drawable/ic_email_box.xml"
+        },
+        {
+          "path": "res/drawable/ic_explore.xml"
+        },
+        {
+          "path": "res/drawable/ic_eye.xml"
+        },
+        {
+          "path": "res/drawable/ic_eye_off.xml"
+        },
+        {
+          "path": "res/drawable/ic_fav_empty.xml"
+        },
+        {
+          "path": "res/drawable/ic_fav_fill.xml"
+        },
+        {
+          "path": "res/drawable/ic_flame.xml"
+        },
+        {
+          "path": "res/drawable/ic_fortress.xml"
+        },
+        {
+          "path": "res/drawable/ic_full_moon.xml"
+        },
+        {
+          "path": "res/drawable/ic_google.xml"
+        },
+        {
+          "path": "res/drawable/ic_gps.xml"
+        },
+        {
+          "path": "res/drawable/ic_hadith_check.xml"
+        },
+        {
+          "path": "res/drawable/ic_header_arrow.xml"
+        },
+        {
+          "path": "res/drawable/ic_heart.xml"
+        },
+        {
+          "path": "res/drawable/ic_home.xml"
+        },
+        {
+          "path": "res/drawable/ic_image_label.xml"
+        },
+        {
+          "path": "res/drawable/ic_index.xml"
+        },
+        {
+          "path": "res/drawable/ic_infinity.xml"
+        },
+        {
+          "path": "res/drawable/ic_info.xml"
+        },
+        {
+          "path": "res/drawable/ic_info_outline.xml"
+        },
+        {
+          "path": "res/drawable/ic_invited_people.xml"
+        },
+        {
+          "path": "res/drawable/ic_keyboard_black_24dp.xml"
+        },
+        {
+          "path": "res/drawable/ic_library.xml"
+        },
+        {
+          "path": "res/drawable/ic_list.xml"
+        },
+        {
+          "path": "res/drawable/ic_list_lines.xml"
+        },
+        {
+          "path": "res/drawable/ic_listen.xml"
+        },
+        {
+          "path": "res/drawable/ic_location.xml"
+        },
+        {
+          "path": "res/drawable/ic_lock.xml"
+        },
+        {
+          "path": "res/drawable/ic_logout.xml"
+        },
+        {
+          "path": "res/drawable/ic_m3_chip_checked_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_m3_chip_close.xml"
+        },
+        {
+          "path": "res/drawable/ic_map.xml"
+        },
+        {
+          "path": "res/drawable/ic_masbaha.xml"
+        },
+        {
+          "path": "res/drawable/ic_menu.xml"
+        },
+        {
+          "path": "res/drawable/ic_menu_bookmark.xml"
+        },
+        {
+          "path": "res/drawable/ic_menu_note.xml"
+        },
+        {
+          "path": "res/drawable/ic_menu_part.xml"
+        },
+        {
+          "path": "res/drawable/ic_messeges.xml"
+        },
+        {
+          "path": "res/drawable/ic_mic.xml"
+        },
+        {
+          "path": "res/drawable/ic_mosque.xml"
+        },
+        {
+          "path": "res/drawable/ic_mountain.xml"
+        },
+        {
+          "path": "res/drawable/ic_mtrl_checked_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_mtrl_chip_checked_black.xml"
+        },
+        {
+          "path": "res/drawable/ic_mtrl_chip_checked_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_mtrl_chip_close_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_next_to.xml"
+        },
+        {
+          "path": "res/drawable/ic_note.xml"
+        },
+        {
+          "path": "res/drawable/ic_notification.xml"
+        },
+        {
+          "path": "res/drawable/ic_notification_bell.xml"
+        },
+        {
+          "path": "res/drawable/ic_notifications_active.xml"
+        },
+        {
+          "path": "res/drawable/ic_pause.xml"
+        },
+        {
+          "path": "res/drawable/ic_pdf.xml"
+        },
+        {
+          "path": "res/drawable/ic_play.xml"
+        },
+        {
+          "path": "res/drawable/ic_playlist.xml"
+        },
+        {
+          "path": "res/drawable/ic_playlist_folder.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_asr.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_dhuhr.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_fajr.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_isha.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_last_third.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_maghrib.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_midnight.xml"
+        },
+        {
+          "path": "res/drawable/ic_prayer_c_sunrise.xml"
+        },
+        {
+          "path": "res/drawable/ic_print.xml"
+        },
+        {
+          "path": "res/drawable/ic_print_outline.xml"
+        },
+        {
+          "path": "res/drawable/ic_read.xml"
+        },
+        {
+          "path": "res/drawable/ic_read_mode.xml"
+        },
+        {
+          "path": "res/drawable/ic_read_more.xml"
+        },
+        {
+          "path": "res/drawable/ic_refresh.xml"
+        },
+        {
+          "path": "res/drawable/ic_repeat.xml"
+        },
+        {
+          "path": "res/drawable/ic_rotate.xml"
+        },
+        {
+          "path": "res/drawable/ic_ruku.xml"
+        },
+        {
+          "path": "res/drawable/ic_saprator_selected.xml"
+        },
+        {
+          "path": "res/drawable/ic_schedule.xml"
+        },
+        {
+          "path": "res/drawable/ic_search.xml"
+        },
+        {
+          "path": "res/drawable/ic_section_calc.xml"
+        },
+        {
+          "path": "res/drawable/ic_section_correction.xml"
+        },
+        {
+          "path": "res/drawable/ic_section_insight.xml"
+        },
+        {
+          "path": "res/drawable/ic_section_madhab.xml"
+        },
+        {
+          "path": "res/drawable/ic_section_sound.xml"
+        },
+        {
+          "path": "res/drawable/ic_settings.xml"
+        },
+        {
+          "path": "res/drawable/ic_share.xml"
+        },
+        {
+          "path": "res/drawable/ic_shield.xml"
+        },
+        {
+          "path": "res/drawable/ic_shortcut_athkar.xml"
+        },
+        {
+          "path": "res/drawable/ic_shortcut_masbaha.xml"
+        },
+        {
+          "path": "res/drawable/ic_shortcut_prayer.xml"
+        },
+        {
+          "path": "res/drawable/ic_shortcut_qibla.xml"
+        },
+        {
+          "path": "res/drawable/ic_shuffle.xml"
+        },
+        {
+          "path": "res/drawable/ic_skip_next.xml"
+        },
+        {
+          "path": "res/drawable/ic_skip_previous.xml"
+        },
+        {
+          "path": "res/drawable/ic_splash.xml"
+        },
+        {
+          "path": "res/drawable/ic_star.xml"
+        },
+        {
+          "path": "res/drawable/ic_star_circle.xml"
+        },
+        {
+          "path": "res/drawable/ic_stop.xml"
+        },
+        {
+          "path": "res/drawable/ic_swap.xml"
+        },
+        {
+          "path": "res/drawable/ic_tasmee.xml"
+        },
+        {
+          "path": "res/drawable/ic_tasmee_history.xml"
+        },
+        {
+          "path": "res/drawable/ic_text_label.xml"
+        },
+        {
+          "path": "res/drawable/ic_time.xml"
+        },
+        {
+          "path": "res/drawable/ic_tools.xml"
+        },
+        {
+          "path": "res/drawable/ic_translate.xml"
+        },
+        {
+          "path": "res/drawable/ic_trash.xml"
+        },
+        {
+          "path": "res/drawable/ic_trophy.xml"
+        },
+        {
+          "path": "res/drawable/ic_tune.xml"
+        },
+        {
+          "path": "res/drawable/ic_verse_bookmark.xml"
+        },
+        {
+          "path": "res/drawable/ic_verse_listen.xml"
+        },
+        {
+          "path": "res/drawable/ic_verse_note.xml"
+        },
+        {
+          "path": "res/drawable/ic_vibration.xml"
+        },
+        {
+          "path": "res/drawable/ic_video_label.xml"
+        },
+        {
+          "path": "res/drawable/ic_video_label_un.xml"
+        },
+        {
+          "path": "res/drawable/ic_voice_label.xml"
+        },
+        {
+          "path": "res/drawable/ic_volume_off.xml"
+        },
+        {
+          "path": "res/drawable/ic_volume_up.xml"
+        },
+        {
+          "path": "res/drawable/ic_warning.xml"
+        },
+        {
+          "path": "res/drawable/ic_widget_clock.xml"
+        },
+        {
+          "path": "res/drawable/ic_widget_timer.xml"
+        },
+        {
+          "path": "res/drawable/ic_zakat.xml"
+        },
+        {
+          "path": "res/drawable/m3_action_bar_item_background.xml"
+        },
+        {
+          "path": "res/drawable/m3_avd_hide_password.xml"
+        },
+        {
+          "path": "res/drawable/m3_avd_show_password.xml"
+        },
+        {
+          "path": "res/drawable/m3_bottom_sheet_drag_handle.xml"
+        },
+        {
+          "path": "res/drawable/m3_default_control_background.xml"
+        },
+        {
+          "path": "res/drawable/m3_ic_check_24px.xml"
+        },
+        {
+          "path": "res/drawable/m3_overflow_item_checkbox.xml"
+        },
+        {
+          "path": "res/drawable/m3_password_eye.xml"
+        },
+        {
+          "path": "res/drawable/m3_popupmenu_background_overlay.xml"
+        },
+        {
+          "path": "res/drawable/m3_selectable_item_background.xml"
+        },
+        {
+          "path": "res/drawable/m3_selectable_item_background_borderless.xml"
+        },
+        {
+          "path": "res/drawable/m3_tabs_line_indicator.xml"
+        },
+        {
+          "path": "res/drawable/m3_tabs_rounded_line_indicator.xml"
+        },
+        {
+          "path": "res/drawable/media3_icon_circular_play.png"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_checked_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_checkbox_button_unchecked_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_close_24px.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_dialog_background.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_ic_check_mark.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_ic_checkbox_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_ic_checkbox_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_ic_error.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_ic_indeterminate.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_popupmenu_background.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_checked_pressed.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_checked_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_pressed.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_pressed_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_unchecked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_unchecked_checked.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_track.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_switch_track_decoration.xml"
+        },
+        {
+          "path": "res/drawable/mtrl_tabs_default_indicator.xml"
+        },
+        {
+          "path": "res/drawable/splash_icon.xml"
+        },
+        {
+          "path": "res/drawable/subject_hint_image.xml"
+        },
+        {
+          "path": "res/drawable/tooltip_frame_dark.xml"
+        },
+        {
+          "path": "res/drawable/tooltip_frame_light.xml"
+        },
+        {
+          "path": "res/drawable/widget_verse_chevron_left.xml"
+        },
+        {
+          "path": "res/drawable/widget_verse_chevron_left_double.xml"
+        },
+        {
+          "path": "res/drawable/widget_verse_chevron_right.xml"
+        },
+        {
+          "path": "res/drawable/widget_verse_chevron_right_double.xml"
+        },
+        {
+          "path": "res/drawable/widget_verse_star.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_edit_mode_logo.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_audiotrack.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_check.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_chevron_left.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_chevron_right.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_forward.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_fullscreen_enter.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_fullscreen_exit.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_pause_circle_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_play_circle_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_rewind.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_settings.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_skip_next.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_skip_previous.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_speed.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_subtitle_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_ic_subtitle_on.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_fastforward.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_repeat_all.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_repeat_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_repeat_one.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_rewind.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_shuffle_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_shuffle_on.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/exo_icon_vr.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_album.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_artist.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_block.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_bookmark_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_bookmark_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_check_circle_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_check_circle_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_closed_captions.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_closed_captions_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_fast_forward.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_feed.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_flag_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_flag_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_heart_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_heart_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_minus.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_minus_circle_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_minus_circle_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_next.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_pause.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_play.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_0_5.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_0_8.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_1_0.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_1_2.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_1_5.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_1_8.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playback_speed_2_0.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playlist_add.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_playlist_remove.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_plus.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_plus_circle_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_plus_circle_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_previous.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_quality.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_queue_add.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_queue_next.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_queue_remove.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_radio.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_repeat_all.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_repeat_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_repeat_one.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_rewind.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_settings.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_share.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_shuffle_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_shuffle_on.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_shuffle_star.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_signal.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_back.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_back_10.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_back_15.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_back_30.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_back_5.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_forward.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_forward_10.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_forward_15.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_forward_30.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_skip_forward_5.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_star_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_star_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_stop.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_subtitles.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_subtitles_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_sync.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_thumb_down_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_thumb_down_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_thumb_up_filled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_thumb_up_unfilled.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_volume_down.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_volume_off.xml"
+        },
+        {
+          "path": "res/drawable-anydpi-v21/media3_icon_volume_up.xml"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/campass_calibration.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/desk_light.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/ic_brand_mark.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/ic_lib_hadith.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/ic_lib_quran.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/ic_lib_tafseer.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/ic_lib_translation.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_icon.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_1.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_2.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_3.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_4.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_5.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_6.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_7.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/khetma_program_8.png"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_2.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_2_large.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_3.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_3_large.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_4.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_4_large.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_6.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_6_large.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_7.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/print_cover_7_large.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/shelf_letter.webp"
+        },
+        {
+          "path": "res/drawable-nodpi-v4/subject_hint.png"
+        },
+        {
+          "path": "res/drawable-v21/abc_action_bar_item_background_material.xml"
+        },
+        {
+          "path": "res/drawable-v21/abc_btn_colored_material.xml"
+        },
+        {
+          "path": "res/drawable-v21/abc_dialog_material_background.xml"
+        },
+        {
+          "path": "res/drawable-v21/abc_edit_text_material.xml"
+        },
+        {
+          "path": "res/drawable-v21/abc_list_divider_material.xml"
+        },
+        {
+          "path": "res/drawable-v23/abc_control_background_material.xml"
+        },
+        {
+          "path": "res/drawable-v23/compat_splash_screen_no_icon_background.xml"
+        },
+        {
+          "path": "res/drawable-v23/m3_selection_control_ripple.xml"
+        },
+        {
+          "path": "res/drawable-v23/m3_tabs_background.xml"
+        },
+        {
+          "path": "res/drawable-v23/mtrl_popupmenu_background_overlay.xml"
+        },
+        {
+          "path": "res/drawable-watch-v20/abc_dialog_material_background.xml"
+        },
+        {
+          "path": "res/drawable-xxhdpi-v4/ic_book_kind_tafseer.png"
+        },
+        {
+          "path": "res/drawable-xxhdpi-v4/ic_book_kind_translation.png"
+        },
+        {
+          "path": "res/drawable-xxhdpi-v4/ic_verse_separator.png"
+        },
+        {
+          "path": "res/font/amiri_regular.ttf"
+        },
+        {
+          "path": "res/font/ayah_white.ttf"
+        },
+        {
+          "path": "res/font/helvetica.ttf"
+        },
+        {
+          "path": "res/font/helvetica_bold.ttf"
+        },
+        {
+          "path": "res/font/ibm_plex_sans_arabic_regular.ttf"
+        },
+        {
+          "path": "res/font/markazi_text_regular.ttf"
+        },
+        {
+          "path": "res/font/normal.xml"
+        },
+        {
+          "path": "res/font/noto_naskh_arabic_regular.ttf"
+        },
+        {
+          "path": "res/font/numbers.ttf"
+        },
+        {
+          "path": "res/font/quran_numbers.xml"
+        },
+        {
+          "path": "res/font/quran_title.xml"
+        },
+        {
+          "path": "res/font/quran_titles.ttf"
+        },
+        {
+          "path": "res/font/roboto_medium_numbers.ttf"
+        },
+        {
+          "path": "res/font/scheherazade_new_regular.ttf"
+        },
+        {
+          "path": "res/font/tajawal_regular.ttf"
+        },
+        {
+          "path": "res/font/uthmani_hafs_v12.otf"
+        },
+        {
+          "path": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml"
+        },
+        {
+          "path": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml"
+        },
+        {
+          "path": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml"
+        },
+        {
+          "path": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
+        },
+        {
+          "path": "res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
+        },
+        {
+          "path": "res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml"
+        },
+        {
+          "path": "res/interpolator/fast_out_slow_in.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_emphasized.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_emphasized_accelerate.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_emphasized_decelerate.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_linear.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_standard.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_standard_accelerate.xml"
+        },
+        {
+          "path": "res/interpolator/m3_sys_motion_easing_standard_decelerate.xml"
+        },
+        {
+          "path": "res/interpolator/mtrl_fast_out_linear_in.xml"
+        },
+        {
+          "path": "res/interpolator/mtrl_fast_out_slow_in.xml"
+        },
+        {
+          "path": "res/interpolator/mtrl_linear.xml"
+        },
+        {
+          "path": "res/interpolator/mtrl_linear_out_slow_in.xml"
+        },
+        {
+          "path": "res/layout/abc_action_bar_title_item.xml"
+        },
+        {
+          "path": "res/layout/abc_action_menu_item_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_action_menu_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_action_mode_bar.xml"
+        },
+        {
+          "path": "res/layout/abc_action_mode_close_item_material.xml"
+        },
+        {
+          "path": "res/layout/abc_alert_dialog_button_bar_material.xml"
+        },
+        {
+          "path": "res/layout/abc_alert_dialog_material.xml"
+        },
+        {
+          "path": "res/layout/abc_alert_dialog_title_material.xml"
+        },
+        {
+          "path": "res/layout/abc_cascading_menu_item_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_dialog_title_material.xml"
+        },
+        {
+          "path": "res/layout/abc_expanded_menu_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_list_menu_item_checkbox.xml"
+        },
+        {
+          "path": "res/layout/abc_list_menu_item_icon.xml"
+        },
+        {
+          "path": "res/layout/abc_list_menu_item_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_list_menu_item_radio.xml"
+        },
+        {
+          "path": "res/layout/abc_popup_menu_header_item_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_popup_menu_item_layout.xml"
+        },
+        {
+          "path": "res/layout/abc_screen_content_include.xml"
+        },
+        {
+          "path": "res/layout/abc_screen_simple.xml"
+        },
+        {
+          "path": "res/layout/abc_screen_simple_overlay_action_mode.xml"
+        },
+        {
+          "path": "res/layout/abc_search_dropdown_item_icons_2line.xml"
+        },
+        {
+          "path": "res/layout/abc_search_view.xml"
+        },
+        {
+          "path": "res/layout/abc_select_dialog_material.xml"
+        },
+        {
+          "path": "res/layout/design_layout_snackbar.xml"
+        },
+        {
+          "path": "res/layout/design_layout_snackbar_include.xml"
+        },
+        {
+          "path": "res/layout/exo_player_control_ffwd_button.xml"
+        },
+        {
+          "path": "res/layout/exo_player_control_rewind_button.xml"
+        },
+        {
+          "path": "res/layout/exo_player_control_view.xml"
+        },
+        {
+          "path": "res/layout/exo_player_view.xml"
+        },
+        {
+          "path": "res/layout/exo_styled_settings_list.xml"
+        },
+        {
+          "path": "res/layout/exo_styled_settings_list_item.xml"
+        },
+        {
+          "path": "res/layout/exo_styled_sub_settings_list_item.xml"
+        },
+        {
+          "path": "res/layout/invalid_list_item.xml"
+        },
+        {
+          "path": "res/layout/m3_alert_dialog.xml"
+        },
+        {
+          "path": "res/layout/m3_alert_dialog_actions.xml"
+        },
+        {
+          "path": "res/layout/m3_alert_dialog_title.xml"
+        },
+        {
+          "path": "res/layout/m3_auto_complete_simple_item.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_dialog.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_dialog_actions.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_dialog_title.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_select_dialog_item.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_select_dialog_multichoice.xml"
+        },
+        {
+          "path": "res/layout/mtrl_alert_select_dialog_singlechoice.xml"
+        },
+        {
+          "path": "res/layout/mtrl_auto_complete_simple_item.xml"
+        },
+        {
+          "path": "res/layout/mtrl_layout_snackbar.xml"
+        },
+        {
+          "path": "res/layout/mtrl_layout_snackbar_include.xml"
+        },
+        {
+          "path": "res/layout/notification_prayer_checkin.xml"
+        },
+        {
+          "path": "res/layout/notification_prayer_collapsed.xml"
+        },
+        {
+          "path": "res/layout/notification_prayer_expanded.xml"
+        },
+        {
+          "path": "res/layout/preference.xml"
+        },
+        {
+          "path": "res/layout/select_dialog_item_material.xml"
+        },
+        {
+          "path": "res/layout/select_dialog_multichoice_material.xml"
+        },
+        {
+          "path": "res/layout/select_dialog_singlechoice_material.xml"
+        },
+        {
+          "path": "res/layout/support_simple_spinner_dropdown_item.xml"
+        },
+        {
+          "path": "res/layout/widget_prayer_times_1.xml"
+        },
+        {
+          "path": "res/layout/widget_prayer_times_2.xml"
+        },
+        {
+          "path": "res/layout/widget_verse_item.xml"
+        },
+        {
+          "path": "res/layout/widget_verse_ticker.xml"
+        },
+        {
+          "path": "res/layout-sw600dp-v13/design_layout_snackbar.xml"
+        },
+        {
+          "path": "res/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+        },
+        {
+          "path": "res/layout-v26/abc_screen_toolbar.xml"
+        },
+        {
+          "path": "res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+        },
+        {
+          "path": "res/layout-watch-v20/abc_alert_dialog_title_material.xml"
+        },
+        {
+          "path": "res/mipmap-anydpi-v26/ic_launcher.xml"
+        },
+        {
+          "path": "res/mipmap-anydpi-v26/ic_launcher_round.xml"
+        },
+        {
+          "path": "res/mipmap-hdpi-v4/ic_launcher.webp"
+        },
+        {
+          "path": "res/mipmap-hdpi-v4/ic_launcher_foreground.webp"
+        },
+        {
+          "path": "res/mipmap-hdpi-v4/ic_launcher_monochrome.webp"
+        },
+        {
+          "path": "res/mipmap-hdpi-v4/ic_launcher_round.webp"
+        },
+        {
+          "path": "res/mipmap-mdpi-v4/ic_launcher.webp"
+        },
+        {
+          "path": "res/mipmap-mdpi-v4/ic_launcher_foreground.webp"
+        },
+        {
+          "path": "res/mipmap-mdpi-v4/ic_launcher_monochrome.webp"
+        },
+        {
+          "path": "res/mipmap-mdpi-v4/ic_launcher_round.webp"
+        },
+        {
+          "path": "res/mipmap-xhdpi-v4/ic_launcher.webp"
+        },
+        {
+          "path": "res/mipmap-xhdpi-v4/ic_launcher_foreground.webp"
+        },
+        {
+          "path": "res/mipmap-xhdpi-v4/ic_launcher_monochrome.webp"
+        },
+        {
+          "path": "res/mipmap-xhdpi-v4/ic_launcher_round.webp"
+        },
+        {
+          "path": "res/mipmap-xxhdpi-v4/ic_launcher.webp"
+        },
+        {
+          "path": "res/mipmap-xxhdpi-v4/ic_launcher_foreground.webp"
+        },
+        {
+          "path": "res/mipmap-xxhdpi-v4/ic_launcher_monochrome.webp"
+        },
+        {
+          "path": "res/mipmap-xxhdpi-v4/ic_launcher_round.webp"
+        },
+        {
+          "path": "res/mipmap-xxxhdpi-v4/ic_launcher.webp"
+        },
+        {
+          "path": "res/mipmap-xxxhdpi-v4/ic_launcher_foreground.webp"
+        },
+        {
+          "path": "res/mipmap-xxxhdpi-v4/ic_launcher_monochrome.webp"
+        },
+        {
+          "path": "res/mipmap-xxxhdpi-v4/ic_launcher_round.webp"
+        },
+        {
+          "path": "res/navigation/main_nav.xml"
+        },
+        {
+          "path": "res/raw/adan1.mp3"
+        },
+        {
+          "path": "res/raw/adan1_full.mp3"
+        },
+        {
+          "path": "res/raw/adan2.mp3"
+        },
+        {
+          "path": "res/raw/adan2_full.mp3"
+        },
+        {
+          "path": "res/raw/adan3.mp3"
+        },
+        {
+          "path": "res/raw/adan3_full.mp3"
+        },
+        {
+          "path": "res/raw/adan4.mp3"
+        },
+        {
+          "path": "res/raw/adan4_full.mp3"
+        },
+        {
+          "path": "res/raw/adan5.mp3"
+        },
+        {
+          "path": "res/raw/adan5_full.mp3"
+        },
+        {
+          "path": "res/raw/adan6.mp3"
+        },
+        {
+          "path": "res/raw/adan6_full.mp3"
+        },
+        {
+          "path": "res/raw/clicksound.wav"
+        },
+        {
+          "path": "res/xml/m3_button_group_child_size_change.xml"
+        },
+        {
+          "path": "res/xml/m3_list_item_shape_state_list.xml"
+        },
+        {
+          "path": "res/xml/m3_split_button_inner_corner_size_state_list.xml"
+        },
+        {
+          "path": "res/xml/m3expressive_button_shape_state_list.xml"
+        },
+        {
+          "path": "res/xml/paths.xml"
+        },
+        {
+          "path": "res/xml/splits0.xml"
+        },
+        {
+          "path": "res/xml/widget_provider.xml"
+        },
+        {
+          "path": "res/xml/widget_provider2.xml"
+        },
+        {
+          "path": "res/xml/widget_verse_ticker.xml"
+        },
+        {
+          "path": "res/xml-v31/widget_provider2.xml"
+        },
+        {
+          "path": "resources.arsc"
+        },
+        {
+          "path": "review-ktx.properties"
+        },
+        {
+          "path": "review.properties"
+        },
+        {
+          "path": "segmentation-selfie.properties"
+        },
+        {
+          "path": "vision-common.properties"
+        },
+        {
+          "path": "vision-interfaces.properties"
+        },
+        {
+          "path": "stamp-cert-sha256"
+        }
+      ],
+      "list": "entries",
+      "offset": 0,
+      "total": 1283
+    }
+  },
+  "summary": "Part of core_archive_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1283,
+    "total": 1283
+  },
+  "locations": [],
+  "links": [
+    "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708"
+  ]
+}

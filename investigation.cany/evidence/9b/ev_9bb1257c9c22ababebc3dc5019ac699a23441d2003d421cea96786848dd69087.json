@@ -1,0 +1,428 @@
+{
+  "id": "ev_9bb1257c9c22ababebc3dc5019ac699a23441d2003d421cea96786848dd69087",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.QuarterEntity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "arabicTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->arabicTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "englishTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->englishTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "hizbFraction",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->hizbFraction:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "hizbNumber",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->hizbNumber:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "partId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->partId:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "verses",
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->verses:Ljava/util/List;",
+        "type": "java.util.List"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 29,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V",
+        "registers": 7,
+        "signature": "public void <init>(int, int, int, java.lang.String, java.lang.String, java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 48,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/QuarterEntity;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/QuarterEntity;",
+        "registers": 9,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.QuarterEntity copy$default(org.goldenquran.freesoft.models.room.QuarterEntity, int, int, int, java.lang.String, java.lang.String, java.lang.Integer, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component4()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component5()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->component6()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->copy(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lorg/goldenquran/freesoft/models/room/QuarterEntity;",
+        "registers": 7,
+        "signature": "public final org.goldenquran.freesoft.models.room.QuarterEntity copy(int, int, int, java.lang.String, java.lang.String, java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 67,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->equals(Ljava/lang/Object;)Z",
+        "registers": 6,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getArabicTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getArabicTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getArabicTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getEnglishTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getEnglishTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getEnglishTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getHizbFraction",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getHizbFraction()I",
+        "registers": 1,
+        "signature": "public final int getHizbFraction()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getHizbNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getHizbNumber()I",
+        "registers": 1,
+        "signature": "public final int getHizbNumber()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "getName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getName()Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String getName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPartId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getPartId()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getPartId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getVerses",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->getVerses()Ljava/util/List;",
+        "registers": 1,
+        "signature": "public final java.util.List getVerses()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 45,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setVerses",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->setVerses(Ljava/util/List;)V",
+        "registers": 2,
+        "signature": "public final void setVerses(java.util.List)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 50,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;->toString()Ljava/lang/String;",
+        "registers": 9,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.QuarterEntity",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.QuarterEntity (classes2.dex) extends java.lang.Object: 8 fields, 21 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/QuarterEntity;"
+    }
+  ],
+  "links": []
+}

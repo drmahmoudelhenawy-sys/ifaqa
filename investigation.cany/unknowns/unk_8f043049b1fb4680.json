@@ -1,0 +1,19 @@
+{
+  "id": "unk_8f043049b1fb4680",
+  "revision": 2,
+  "question": "What are the actual screen layouts and navigation paths between MainActivity, Quran reading, search, dialogs, audio, settings, and feature screens?",
+  "severity": "medium",
+  "domain": "screens and navigation",
+  "status": "open",
+  "probes": [
+    "With approval for live inspection, launch the app, capture a UI hierarchy and screenshot at each step, then follow reading, search/Tafsir, dialogs, audio, settings, and declared feature routes. Compare observed screens with the navigation graph; do not treat a declared route as proof it appears."
+  ],
+  "evidence_for": [
+    "ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5",
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "ev_4ae641da7dd6cd754fc25a6340f4cdaaa983486da8bbe970b3ee0109351e6805",
+    "ev_35efcd8b1bbdc23c93b70d632a4935da3c51395b3632956950a258d1e3869692",
+    "ev_7864c117fa3ce6a7127a4008c937485511b994d5d1c265067b390137adf3ec58"
+  ],
+  "evidence_against": []
+}

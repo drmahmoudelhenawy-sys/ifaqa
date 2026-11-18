@@ -1,0 +1,759 @@
+{
+  "id": "ev_67d88b7ec349864828b2ecf3e75d0be8a7db17c52aca7e74c4173d9c290032db",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.Bookmark",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/Bookmark;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "CYEN_BOOKMARK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->CYEN_BOOKMARK:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->Companion:Lorg/goldenquran/freesoft/models/local/Bookmark$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.Bookmark$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "GREEN_BOOKMARK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->GREEN_BOOKMARK:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "PURPLE_BOOKMARK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->PURPLE_BOOKMARK:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "RED_BOOKMARK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->RED_BOOKMARK:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "ayahNo",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->ayahNo:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "ayahText",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->ayahText:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "bookMarkPage",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->bookMarkPage:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "bookmarkType",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->bookmarkType:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "createdAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->createdAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isDeleted",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->isDeleted:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isPage",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->isPage:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraNo",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->suraNo:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "userProfileId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->userProfileId:J",
+        "type": "long"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 20,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;-><init>()V",
+        "registers": 16,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 24,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;-><init>(IIIIIJJZLjava/lang/String;Z)V",
+        "registers": 13,
+        "signature": "public void <init>(int, int, int, int, int, long, long, boolean, java.lang.String, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 98,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;-><init>(IIIIIJJZLjava/lang/String;ZILu62;)V",
+        "registers": 26,
+        "signature": "public synthetic void <init>(int, int, int, int, int, long, long, boolean, java.lang.String, boolean, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 76,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->copy$default(Lorg/goldenquran/freesoft/models/local/Bookmark;IIIIIJJZLjava/lang/String;ZILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/Bookmark;",
+        "registers": 15,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.Bookmark copy$default(org.goldenquran.freesoft.models.local.Bookmark, int, int, int, int, int, long, long, boolean, java.lang.String, boolean, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component10",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component10()Z",
+        "registers": 1,
+        "signature": "public final boolean component10()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component4()I",
+        "registers": 1,
+        "signature": "public final int component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component5()I",
+        "registers": 1,
+        "signature": "public final int component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component6()J",
+        "registers": 3,
+        "signature": "public final long component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component7()J",
+        "registers": 3,
+        "signature": "public final long component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component8()Z",
+        "registers": 1,
+        "signature": "public final boolean component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->component9()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->copy(IIIIIJJZLjava/lang/String;Z)Lorg/goldenquran/freesoft/models/local/Bookmark;",
+        "registers": 13,
+        "signature": "public final org.goldenquran.freesoft.models.local.Bookmark copy(int, int, int, int, int, long, long, boolean, java.lang.String, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 91,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAyahNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getAyahNo()I",
+        "registers": 1,
+        "signature": "public final int getAyahNo()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAyahText",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getAyahText()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getAyahText()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getBookMarkPage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getBookMarkPage()I",
+        "registers": 1,
+        "signature": "public final int getBookMarkPage()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getBookmarkType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getBookmarkType()I",
+        "registers": 1,
+        "signature": "public final int getBookmarkType()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCreatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getCreatedAt()J",
+        "registers": 3,
+        "signature": "public final long getCreatedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getSuraNo()I",
+        "registers": 1,
+        "signature": "public final int getSuraNo()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getUserProfileId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->getUserProfileId()J",
+        "registers": 3,
+        "signature": "public final long getUserProfileId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 71,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->isDeleted()Z",
+        "registers": 1,
+        "signature": "public final boolean isDeleted()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isPage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->isPage()Z",
+        "registers": 1,
+        "signature": "public final boolean isPage()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAyahNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setAyahNo(I)V",
+        "registers": 2,
+        "signature": "public final void setAyahNo(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAyahText",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setAyahText(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setAyahText(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setBookMarkPage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setBookMarkPage(I)V",
+        "registers": 2,
+        "signature": "public final void setBookMarkPage(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setBookmarkType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setBookmarkType(I)V",
+        "registers": 2,
+        "signature": "public final void setBookmarkType(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCreatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setCreatedAt(J)V",
+        "registers": 3,
+        "signature": "public final void setCreatedAt(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setDeleted(Z)V",
+        "registers": 2,
+        "signature": "public final void setDeleted(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setId(I)V",
+        "registers": 2,
+        "signature": "public final void setId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setPage(Z)V",
+        "registers": 2,
+        "signature": "public final void setPage(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSuraNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setSuraNo(I)V",
+        "registers": 2,
+        "signature": "public final void setSuraNo(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setUserProfileId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->setUserProfileId(J)V",
+        "registers": 3,
+        "signature": "public final void setUserProfileId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 78,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Bookmark;->toString()Ljava/lang/String;",
+        "registers": 15,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.Bookmark",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.Bookmark (classes2.dex) extends java.lang.Object: 16 fields, 39 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/Bookmark;"
+    }
+  ],
+  "links": []
+}

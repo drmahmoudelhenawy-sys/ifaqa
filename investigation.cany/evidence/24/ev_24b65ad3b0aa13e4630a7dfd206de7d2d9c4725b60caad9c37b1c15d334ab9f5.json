@@ -1,0 +1,266 @@
+{
+  "id": "ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "kind",
+        "name",
+        "exported",
+        "permission",
+        "reachable_from_outside",
+        "intent_filters"
+      ],
+      "kind": "rows",
+      "limit": 100,
+      "list": "components",
+      "matching": {
+        "kind": "activity"
+      },
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 15,
+      "next_offset": null,
+      "status": "page",
+      "total": 15
+    },
+    "from_evidence": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+    "from_tool": "android_components_list",
+    "shown": {
+      "items": [
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.MAIN"
+              ],
+              "categories": [
+                "android.intent.category.LAUNCHER",
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=dua-community",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=masbaha",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=library",
+                "path=/"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "permission": null,
+          "reachable_from_outside": true
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+          "permission": null,
+          "reachable_from_outside": true
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.IncomingCallActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.classroom.ClassroomActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveRecordingPlayerActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.android.billingclient.api.ProxyBillingActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.gms.common.api.GoogleApiActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [],
+              "data": [
+                "scheme=content",
+                "host=media",
+                "pathPrefix=/internal/audio/media/",
+                "mimeType=audio/*"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "androidx.media3.session.BluetoothValidationActivity",
+          "permission": "android.permission.BLUETOOTH_PRIVILEGED",
+          "reachable_from_outside": true
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+          "permission": null,
+          "reachable_from_outside": false
+        }
+      ],
+      "list": "components",
+      "list_total": 63,
+      "offset": 0,
+      "total": 15
+    }
+  },
+  "summary": "Part of android_components_list evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 15,
+    "total": 15
+  },
+  "locations": [],
+  "links": [
+    "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf"
+  ]
+}

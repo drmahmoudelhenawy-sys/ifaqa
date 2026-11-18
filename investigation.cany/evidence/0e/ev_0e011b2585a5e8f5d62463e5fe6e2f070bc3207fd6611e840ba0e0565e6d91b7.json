@@ -1,0 +1,414 @@
+{
+  "id": "ev_0e011b2585a5e8f5d62463e5fe6e2f070bc3207fd6611e840ba0e0565e6d91b7",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->X0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->Y0:Loy8;",
+        "type": "oy8"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->Z0:Ltp7;",
+        "type": "tp7"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->a1:Lfm5;",
+        "type": "fm5"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->b1:Lfw;",
+        "type": "fw"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "c1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->c1:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "d1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->d1:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->e1:Ldd3;",
+        "type": "dd3"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 156,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;-><init>()V",
+        "registers": 18,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 80,
+        "kind": "direct",
+        "name": "L0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->L0(Lpn5;)Ljava/util/Set;",
+        "registers": 7,
+        "signature": "public static java.util.Set L0(pn5)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 72,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->A0()V",
+        "registers": 21,
+        "signature": "public final void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 778,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->B0(Ljava/lang/String;ILzi3;)Z",
+        "registers": 37,
+        "signature": "public final boolean B0(java.lang.String, int, zi3)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 129,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->C0()V",
+        "registers": 15,
+        "signature": "public final void C0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 41,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->D0(Len5;)V",
+        "registers": 21,
+        "signature": "public final void D0(en5)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "E0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->E0()V",
+        "registers": 20,
+        "signature": "public final void E0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "F0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->F0()V",
+        "registers": 20,
+        "signature": "public final void F0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "G0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->G0()V",
+        "registers": 20,
+        "signature": "public final void G0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 129,
+        "kind": "virtual",
+        "name": "H0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->H0()V",
+        "registers": 22,
+        "signature": "public final void H0()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "I0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->I0()V",
+        "registers": 1,
+        "signature": "public final void I0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 45,
+        "kind": "virtual",
+        "name": "J0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->J0(Z)V",
+        "registers": 5,
+        "signature": "public final void J0(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 185,
+        "kind": "virtual",
+        "name": "K0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->K0(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V",
+        "registers": 25,
+        "signature": "public final void K0(java.lang.String, kotlin.jvm.functions.Function1)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "L",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->L()V",
+        "registers": 4,
+        "signature": "public final void L()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 74,
+        "kind": "virtual",
+        "name": "M0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->M0(I)V",
+        "registers": 21,
+        "signature": "public final void M0(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "N0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->N0(Lkotlin/jvm/functions/Function1;)V",
+        "registers": 21,
+        "signature": "public final void N0(kotlin.jvm.functions.Function1)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2100,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->h0(ILfk3;)V",
+        "registers": 66,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 73,
+        "kind": "virtual",
+        "name": "k0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->k0()V",
+        "registers": 4,
+        "signature": "public final void k0()",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "n0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->n0()Z",
+        "registers": 1,
+        "signature": "public final boolean n0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;->o0()Z",
+        "registers": 1,
+        "signature": "public final boolean o0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaFragment (classes2.dex) extends rn1: 8 fields, 20 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/masbaha/MasbahaFragment;"
+    }
+  ],
+  "links": []
+}

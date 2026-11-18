@@ -1,0 +1,968 @@
+{
+  "id": "ev_4ae641da7dd6cd754fc25a6340f4cdaaa983486da8bbe970b3ee0109351e6805",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 30,
+    "locale": null,
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": null,
+    "with_strings": false,
+    "xml_files": [
+      "res/layout/notification_prayer_checkin.xml",
+      "res/layout/notification_prayer_collapsed.xml",
+      "res/layout/notification_prayer_expanded.xml",
+      "res/layout/widget_prayer_times_1.xml",
+      "res/layout/widget_prayer_times_2.xml",
+      "res/layout/widget_verse_item.xml",
+      "res/layout/widget_verse_ticker.xml",
+      "res/layout/preference.xml",
+      "res/layout/exo_player_control_view.xml"
+    ]
+  },
+  "result": {
+    "entries": [
+      {
+        "config": "default",
+        "id": "0x7f010002",
+        "key": "abc_grow_fade_in_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_grow_fade_in_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010003",
+        "key": "abc_popup_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010004",
+        "key": "abc_popup_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010005",
+        "key": "abc_shrink_fade_out_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000c",
+        "key": "btn_checkbox_to_checked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000d",
+        "key": "btn_checkbox_to_checked_box_outer_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000e",
+        "key": "btn_checkbox_to_checked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000f",
+        "key": "btn_checkbox_to_unchecked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010010",
+        "key": "btn_checkbox_to_unchecked_check_path_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010011",
+        "key": "btn_checkbox_to_unchecked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010012",
+        "key": "btn_radio_to_off_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010013",
+        "key": "btn_radio_to_off_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010014",
+        "key": "btn_radio_to_off_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010015",
+        "key": "btn_radio_to_on_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010016",
+        "key": "btn_radio_to_on_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010017",
+        "key": "btn_radio_to_on_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01001c",
+        "key": "fragment_fast_out_extra_slow_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/fragment_fast_out_extra_slow_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010021",
+        "key": "m3_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010022",
+        "key": "m3_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010023",
+        "key": "m3_motion_fade_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010024",
+        "key": "m3_motion_fade_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010026",
+        "key": "m3_side_sheet_enter_from_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_enter_from_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010028",
+        "key": "m3_side_sheet_exit_to_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_exit_to_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010029",
+        "key": "mtrl_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002a",
+        "key": "mtrl_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002b",
+        "key": "mtrl_card_lowers_interpolator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_card_lowers_interpolator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020002",
+        "key": "design_appbar_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_appbar_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020003",
+        "key": "design_fab_hide_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_hide_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020004",
+        "key": "design_fab_show_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_show_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020005",
+        "key": "fragment_close_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_close_enter.xml",
+        "value_type": "string"
+      }
+    ],
+    "entries_matching": 46569,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": [
+      {
+        "path": "res/layout/notification_prayer_checkin.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"48dp\">\n  <TextView android:ellipsize=\"3\" android:id=\"@0x7f0a010f\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:maxLines=\"2\" android:layout_weight=\"1\" style=\"@0x7f140282\">\n  </TextView>\n  <TextView android:textSize=\"13sp\" android:textStyle=\"0x1\" android:textColor=\"@0x0106000b\" android:id=\"@0x7f0a010e\" android:background=\"@0x7f0800a1\" android:paddingTop=\"7dp\" android:paddingBottom=\"7dp\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:paddingStart=\"14dp\" android:paddingEnd=\"14dp\" android:layout_marginStart=\"8dp\">\n  </TextView>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/notification_prayer_collapsed.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:paddingStart=\"4dp\" android:paddingEnd=\"4dp\">\n  <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c9\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentStart=\"true\">\n  </TextView>\n  <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0111\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginStart=\"6dp\" android:layout_toEndOf=\"@0x7f0a03c9\">\n  </Chronometer>\n  <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c8\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginEnd=\"4dp\" android:layout_toStartOf=\"@0x7f0a0110\">\n  </TextView>\n  <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0110\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentEnd=\"true\">\n  </Chronometer>\n</RelativeLayout>\n"
+      },
+      {
+        "path": "res/layout/notification_prayer_expanded.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"1\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:paddingStart=\"4dp\" android:paddingEnd=\"4dp\">\n  <RelativeLayout android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c9\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentStart=\"true\">\n    </TextView>\n    <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0111\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginStart=\"6dp\" android:layout_toEndOf=\"@0x7f0a03c9\">\n    </Chronometer>\n    <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c8\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginEnd=\"4dp\" android:layout_toStartOf=\"@0x7f0a0110\">\n    </TextView>\n    <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0110\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentEnd=\"true\">\n    </Chronometer>\n  </RelativeLayout>\n  <FrameLayout android:background=\"@0x7f060082\" android:layout_width=\"-1\" android:layout_height=\"1dp\" android:layout_marginTop=\"8dp\" android:layout_marginBottom=\"8dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:baselineAligned=\"false\">\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011c\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c4\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011d\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c6\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c7\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a0119\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03be\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03bf\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011a\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c0\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011e\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03ca\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03cb\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011b\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c2\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c3\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_1.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"1\" android:id=\"@0x7f0a03e5\" android:background=\"@0x7f0800a4\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layoutDirection=\"1\" android:paddingHorizontal=\"18dp\" android:paddingVertical=\"8dp\">\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"11sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ba\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n    </TextView>\n    <ImageView android:id=\"@0x7f0a01fb\" android:layout_width=\"11dp\" android:layout_height=\"11dp\" android:src=\"@0x7f0801ee\" android:importantForAccessibility=\"2\" android:layout_marginEnd=\"4dp\">\n    </ImageView>\n    <TextView android:textSize=\"11sp\" android:textColor=\"#55ffffff\" android:id=\"@0x7f0a03bd\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n  </LinearLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"26sp\" android:textColor=\"#ffd4a74a\" android:id=\"@0x7f0a03bb\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n    <FrameLayout android:layout_width=\"10dp\" android:layout_height=\"-1\">\n    </FrameLayout>\n    <TextView android:textSize=\"30sp\" android:textColor=\"#e8ffffff\" android:id=\"@0x7f0a03bc\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n    <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:background=\"@0x7f0800a5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:paddingHorizontal=\"12dp\" android:paddingVertical=\"4dp\">\n      <ImageView android:id=\"@0x7f0a01fc\" android:layout_width=\"11dp\" android:layout_height=\"11dp\" android:src=\"@0x7f0801ef\" android:importantForAccessibility=\"2\" android:layout_marginEnd=\"5dp\">\n      </ImageView>\n      <Chronometer android:textSize=\"10sp\" android:textColor=\"#66ffffff\" android:id=\"@0x7f0a03b9\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </Chronometer>\n    </LinearLayout>\n  </LinearLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"-1\" android:layout_height=\"1dp\">\n  </FrameLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layoutDirection=\"0\">\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ae\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b4\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03af\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b5\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ab\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b1\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ac\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b2\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03b0\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b6\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ad\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b3\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_2.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"0\" android:id=\"@0x7f0a03e6\" android:background=\"@0x7f0800a7\" android:padding=\"8dp\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layoutDirection=\"1\">\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\" android:paddingHorizontal=\"12dp\">\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039e\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a4\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a03a1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a7\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039d\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a3\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039c\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a2\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a03a0\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a6\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039f\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n  <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:background=\"@0x7f0800a6\" android:layout_width=\"150dp\" android:layout_height=\"-1\" android:paddingHorizontal=\"8dp\" android:paddingVertical=\"8dp\">\n    <TextView android:textSize=\"18sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a038d\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n    </FrameLayout>\n    <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a0394\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n    </TextView>\n    <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a0393\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-2\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n    </FrameLayout>\n    <TextView android:textSize=\"20sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a0399\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-1\" android:layout_height=\"2dp\">\n    </FrameLayout>\n    <Chronometer android:textSize=\"28sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a038c\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </Chronometer>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/widget_verse_item.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:textSize=\"22sp\" android:textColor=\"@0x7f060409\" android:gravity=\"0x11\" android:id=\"@0x7f0a03ee\" android:paddingTop=\"10dp\" android:paddingBottom=\"10dp\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:shadowColor=\"@0x7f060407\" android:shadowDy=\"1\" android:shadowRadius=\"4\" android:lineSpacingExtra=\"6dp\" android:fontFamily=\"@0x7f090011\" android:textDirection=\"4\">\n</TextView>\n"
+      },
+      {
+        "path": "res/layout/widget_verse_ticker.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:id=\"@0x7f0a03ed\" android:background=\"@0x7f0800a8\" android:layout_width=\"-1\" android:layout_height=\"-1\">\n  <ImageView android:layout_width=\"-1\" android:layout_height=\"-1\" android:src=\"@0x7f0800ab\" android:scaleType=\"1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x33\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x35\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x53\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x55\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <LinearLayout android:gravity=\"0x1\" android:layout_gravity=\"0x13\" android:orientation=\"1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginLeft=\"16dp\">\n    <ImageView android:id=\"@0x7f0a03ea\" android:background=\"@0x7f0800a9\" android:padding=\"6dp\" android:layout_width=\"28dp\" android:layout_height=\"28dp\" android:src=\"@0x7f0802de\" android:contentDescription=\"@0x7f130a18\">\n    </ImageView>\n    <ImageView android:id=\"@0x7f0a03e9\" android:background=\"@0x7f0800a9\" android:padding=\"8dp\" android:layout_width=\"34dp\" android:layout_height=\"34dp\" android:layout_marginTop=\"6dp\" android:src=\"@0x7f0802dd\" android:contentDescription=\"@0x7f130a17\">\n    </ImageView>\n  </LinearLayout>\n  <LinearLayout android:gravity=\"0x1\" android:layout_gravity=\"0x15\" android:orientation=\"1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginRight=\"16dp\">\n    <ImageView android:id=\"@0x7f0a03ec\" android:background=\"@0x7f0800a9\" android:padding=\"6dp\" android:layout_width=\"28dp\" android:layout_height=\"28dp\" android:src=\"@0x7f0802e0\" android:contentDescription=\"@0x7f130a1a\">\n    </ImageView>\n    <ImageView android:id=\"@0x7f0a03eb\" android:background=\"@0x7f0800a9\" android:padding=\"8dp\" android:layout_width=\"34dp\" android:layout_height=\"34dp\" android:layout_marginTop=\"6dp\" android:src=\"@0x7f0802df\" android:contentDescription=\"@0x7f130a19\">\n    </ImageView>\n  </LinearLayout>\n  <ListView android:id=\"@0x7f0a03e8\" android:scrollbars=\"0x0\" android:fadingEdgeLength=\"14dp\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layout_marginLeft=\"56dp\" android:layout_marginTop=\"24dp\" android:layout_marginRight=\"56dp\" android:layout_marginBottom=\"14dp\" android:divider=\"@null\" android:requiresFadingEdge=\"0x2000\">\n  </ListView>\n  <TextView android:textSize=\"22sp\" android:textColor=\"@0x7f060409\" android:gravity=\"0x11\" android:id=\"@0x7f0a03e7\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layout_marginLeft=\"56dp\" android:layout_marginTop=\"24dp\" android:layout_marginRight=\"56dp\" android:layout_marginBottom=\"14dp\" android:text=\"@0x7f130a1b\" android:shadowColor=\"@0x7f060407\" android:shadowDy=\"1\" android:shadowRadius=\"4\" android:fontFamily=\"@0x7f090011\" android:textDirection=\"4\">\n  </TextView>\n  <TextView android:textSize=\"12sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f060405\" android:gravity=\"0x11\" android:layout_gravity=\"0x31\" android:id=\"@0x7f0a03ef\" android:background=\"@0x7f0800aa\" android:paddingLeft=\"14dp\" android:paddingRight=\"14dp\" android:layout_width=\"-2\" android:layout_height=\"22dp\" android:text=\"@0x7f130a16\" android:maxLines=\"1\" android:includeFontPadding=\"false\" android:textDirection=\"4\">\n  </TextView>\n</FrameLayout>\n"
+      },
+      {
+        "path": "res/layout/preference.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\" android:gravity=\"0x10\" android:background=\"?0x0101030e\" android:paddingRight=\"?0x01010063\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"?0x0101004d\" android:paddingEnd=\"?0x01010063\">\n  <FrameLayout android:id=\"@0x7f0a01e7\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    <androidx.preference.internal.PreferenceImageView android:id=\"@0x01020006\" android:layout_width=\"-2\" android:layout_height=\"-2\" app:maxHeight=\"48dp\" app:maxWidth=\"48dp\">\n    </androidx.preference.internal.PreferenceImageView>\n  </FrameLayout>\n  <RelativeLayout android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_marginLeft=\"15dp\" android:layout_marginTop=\"6dp\" android:layout_marginRight=\"6dp\" android:layout_marginBottom=\"6dp\" android:layout_weight=\"1\" android:layout_marginStart=\"15dp\" android:layout_marginEnd=\"6dp\">\n    <TextView android:textAppearance=\"?0x01010040\" android:textColor=\"?0x01010036\" android:ellipsize=\"4\" android:id=\"@0x01020016\" android:fadingEdge=\"0x1000\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:singleLine=\"true\">\n    </TextView>\n    <TextView android:textAppearance=\"?0x01010042\" android:textColor=\"?0x01010038\" android:id=\"@0x01020010\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:maxLines=\"4\" android:layout_below=\"@0x01020016\" android:layout_alignLeft=\"@0x01020016\" android:layout_alignStart=\"@0x01020016\">\n    </TextView>\n  </RelativeLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"1\" android:id=\"@0x01020018\" android:layout_width=\"-2\" android:layout_height=\"-1\">\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/exo_player_control_view.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<merge xmlns:android=\"http://schemas.android.com/apk/res/android\">\n  <View android:id=\"@0x7f0a017a\" android:background=\"@0x7f060085\" android:layout_width=\"0dp\" android:layout_height=\"0dp\">\n  </View>\n  <FrameLayout android:layout_gravity=\"0x50\" android:id=\"@0x7f0a0173\" android:background=\"@0x7f060087\" android:layout_width=\"-1\" android:layout_height=\"@0x7f0700ab\" android:layout_marginTop=\"@0x7f0700ac\" android:layoutDirection=\"0\">\n    <LinearLayout android:layout_gravity=\"0x800013\" android:id=\"@0x7f0a019f\" android:paddingLeft=\"@0x7f0700ad\" android:paddingRight=\"@0x7f0700ad\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:importantForAccessibility=\"4\" android:layoutDirection=\"0\" android:paddingStart=\"@0x7f0700ad\" android:paddingEnd=\"@0x7f0700ad\">\n      <TextView android:id=\"@0x7f0a0190\" style=\"@0x7f140159\">\n      </TextView>\n      <TextView style=\"@0x7f14015a\">\n      </TextView>\n      <TextView android:id=\"@0x7f0a017b\" style=\"@0x7f140158\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:layout_gravity=\"0x800015\" android:id=\"@0x7f0a0172\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layoutDirection=\"0\">\n      <ImageButton android:id=\"@0x7f0a01a2\" style=\"@0x7f14014f\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a0199\" style=\"@0x7f14014e\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a0194\" style=\"@0x7f14014c\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a019c\" style=\"@0x7f140147\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a0197\" style=\"@0x7f14014d\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a0181\" style=\"@0x7f140148\">\n      </ImageButton>\n      <ImageButton android:id=\"@0x7f0a018a\" style=\"@0x7f14014a\">\n      </ImageButton>\n    </LinearLayout>\n    <HorizontalScrollView android:layout_gravity=\"0x800015\" android:id=\"@0x7f0a017e\" android:visibility=\"1\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      <LinearLayout android:id=\"@0x7f0a017d\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layoutDirection=\"0\">\n        <ImageButton android:id=\"@0x7f0a0189\" style=\"@0x7f140149\">\n        </ImageButton>\n      </LinearLayout>\n    </HorizontalScrollView>\n  </FrameLayout>\n  <View android:layout_gravity=\"0x50\" android:id=\"@0x7f0a0193\" android:layout_width=\"-1\" android:layout_height=\"@0x7f0700b3\" android:layout_marginBottom=\"@0x7f0700b4\">\n  </View>\n  <LinearLayout android:gravity=\"0x10\" android:layout_gravity=\"0x800055\" android:orientation=\"0\" android:id=\"@0x7f0a0186\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginBottom=\"@0x7f0700af\" android:layoutDirection=\"0\">\n    <ImageButton android:id=\"@0x7f0a0187\" style=\"@0x7f140148\">\n    </ImageButton>\n  </LinearLayout>\n  <LinearLayout android:gravity=\"0x11\" android:layout_gravity=\"0x11\" android:id=\"@0x7f0a0175\" android:background=\"@0x0106000d\" android:padding=\"@0x7f0700ae\" android:clipToPadding=\"false\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layoutDirection=\"0\">\n    <ImageButton android:id=\"@0x7f0a0191\" style=\"@0x7f140154\">\n    </ImageButton>\n    <include layout=\"@0x7f0d002f\">\n    </include>\n    <ImageButton android:id=\"@0x7f0a018e\" style=\"@0x7f140153\">\n    </ImageButton>\n    <include layout=\"@0x7f0d002e\">\n    </include>\n    <ImageButton android:id=\"@0x7f0a0188\" style=\"@0x7f140152\">\n    </ImageButton>\n  </LinearLayout>\n  <LinearLayout android:layout_gravity=\"0x800035\" android:id=\"@0x7f0a01a0\" android:background=\"@0x0106000d\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    <View android:id=\"@0x7f0a0185\" android:visibility=\"2\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </View>\n  </LinearLayout>\n</merge>\n"
+      }
+    ]
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 30 entries.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 30,
+    "total": 46569,
+    "next_offset": 30
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

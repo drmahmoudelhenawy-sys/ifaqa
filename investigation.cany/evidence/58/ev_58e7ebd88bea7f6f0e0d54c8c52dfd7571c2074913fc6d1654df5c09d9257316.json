@@ -1,0 +1,690 @@
+{
+  "id": "ev_58e7ebd88bea7f6f0e0d54c8c52dfd7571c2074913fc6d1654df5c09d9257316",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 1,
+    "locale": null,
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": null,
+    "with_strings": false,
+    "xml_files": [
+      "res/navigation/main_nav.xml",
+      "res/xml/m3_button_group_child_size_change.xml",
+      "res/xml/m3_list_item_shape_state_list.xml",
+      "res/xml/m3_split_button_inner_corner_size_state_list.xml",
+      "res/xml/m3expressive_button_shape_state_list.xml",
+      "res/xml/paths.xml",
+      "res/xml/splits0.xml",
+      "res/xml/widget_provider.xml",
+      "res/xml/widget_provider2.xml",
+      "res/xml/widget_verse_ticker.xml",
+      "res/xml-v31/widget_provider2.xml"
+    ]
+  },
+  "result": {
+    "entries": [
+      {
+        "config": "default",
+        "id": "0x7f010002",
+        "key": "abc_grow_fade_in_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_grow_fade_in_from_bottom.xml",
+        "value_type": "string"
+      }
+    ],
+    "entries_matching": 46569,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": [
+      {
+        "path": "res/navigation/main_nav.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<navigation xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\" android:id=\"@0x7f0a0220\" app:startDestination=\"@0x7f0a02dd\">\n  <action android:id=\"@0x7f0a01ca\" app:destination=\"@0x7f0a00ba\" app:popUpTo=\"@0x7f0a00ba\">\n    <argument android:name=\"reciterId\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n  </action>\n  <action android:id=\"@0x7f0a01c9\" app:destination=\"@0x7f0a00b8\">\n  </action>\n  <fragment android:label=\"AudioLibFragment\" android:name=\"org.goldenquran.freesoft.ui.audio.AudioLibFragment\" android:id=\"@0x7f0a00ba\">\n    <action android:id=\"@0x7f0a0049\" app:destination=\"@0x7f0a0010\" app:popUpToSaveState=\"true\" app:restoreState=\"true\">\n    </action>\n    <action android:id=\"@0x7f0a0048\" app:destination=\"@0x7f0a02ae\" app:popUpToSaveState=\"true\" app:restoreState=\"true\">\n    </action>\n    <argument android:name=\"search\" android:defaultValue=\"\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n    <action android:id=\"@0x7f0a0374\" app:destination=\"@0x7f0a0130\">\n    </action>\n  </fragment>\n  <action android:id=\"@0x7f0a01c8\" app:destination=\"@0x7f0a0284\" app:popUpToInclusive=\"true\" app:popUpToSaveState=\"false\">\n  </action>\n  <dialog android:label=\"NotificationsFragment\" android:name=\"org.goldenquran.freesoft.ui.notifications.NotificationsFragment\" android:id=\"@0x7f0a0284\">\n  </dialog>\n  <fragment android:label=\"FullViewFragment\" android:name=\"org.goldenquran.freesoft.ui.reading.FullViewFragment\" android:id=\"@0x7f0a02dd\">\n  </fragment>\n  <fragment android:label=\"BooksLibraryFragment\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.BooksLibraryFragment\" android:id=\"@0x7f0a00d1\">\n    <action android:id=\"@0x7f0a0052\" app:destination=\"@0x7f0a00d2\">\n    </action>\n    <action android:id=\"@0x7f0a0084\" app:destination=\"@0x7f0a0016\">\n    </action>\n    <action android:id=\"@0x7f0a0053\" app:destination=\"@0x7f0a00d2\">\n    </action>\n  </fragment>\n  <dialog android:label=\"ProfileListFragment\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.ProfileListFragment\" android:id=\"@0x7f0a000c\">\n    <action android:id=\"@0x7f0a0084\" app:destination=\"@0x7f0a0016\">\n    </action>\n    <action android:id=\"@0x7f0a0053\" app:destination=\"@0x7f0a00d2\">\n    </action>\n  </dialog>\n  <dialog android:label=\"DownloadAssetsFragment\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.DownloadAssetsFragment\" android:id=\"@0x7f0a0007\">\n    <argument android:name=\"pack\" android:defaultValue=\"fahadv1.zip\" app:argType=\"string\">\n    </argument>\n    <argument android:name=\"restart\" app:argType=\"boolean\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"FragmentSaveProfile\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.FragmentSaveProfile\" android:id=\"@0x7f0a0016\">\n    <argument android:name=\"profileId\" android:defaultValue=\"-1L\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"profileName\" android:defaultValue=\"\" app:argType=\"string\">\n    </argument>\n    <argument android:name=\"mushafKey\" android:defaultValue=\"\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"BooksListFragment\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.BooksListFragment\" android:id=\"@0x7f0a00d2\">\n    <argument android:name=\"type\" android:defaultValue=\"-1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"title\" android:defaultValue=\"\" app:argType=\"string\">\n    </argument>\n  </dialog>\n  <fragment android:label=\"MainToolsFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.MainToolsFragment\" android:id=\"@0x7f0a021f\">\n    <action android:id=\"@0x7f0a008f\" app:destination=\"@0x7f0a02bf\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a008d\" app:destination=\"@0x7f0a02b2\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0089\" app:destination=\"@0x7f0a0201\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0091\" app:destination=\"@0x7f0a033f\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0086\" app:destination=\"@0x7f0a01d4\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0092\" app:destination=\"@0x7f0a035c\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a008c\" app:destination=\"@0x7f0a0225\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0094\" app:destination=\"@0x7f0a03fa\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0090\" app:destination=\"@0x7f0a02e1\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a008b\" app:destination=\"@0x7f0a021a\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a008e\" app:destination=\"@0x7f0a02c7\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0088\" app:destination=\"@0x7f0a01f8\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0093\" app:destination=\"@0x7f0a03f3\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a0087\" app:destination=\"@0x7f0a01d8\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n    <action android:id=\"@0x7f0a008a\" app:destination=\"@0x7f0a020d\" app:popUpTo=\"@0x7f0a021f\">\n    </action>\n  </fragment>\n  <dialog android:label=\"AsmaUlHusnaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.asma.AsmaUlHusnaFragment\" android:id=\"@0x7f0a00b4\">\n  </dialog>\n  <dialog android:label=\"RamadanQadaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.qada.RamadanQadaFragment\" android:id=\"@0x7f0a02c7\">\n  </dialog>\n  <dialog android:label=\"IslamicEventsFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.events.IslamicEventsFragment\" android:id=\"@0x7f0a01f8\">\n  </dialog>\n  <dialog android:label=\"FamilyDuasFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.family.FamilyDuasFragment\" android:id=\"@0x7f0a01a6\">\n  </dialog>\n  <dialog android:label=\"WorshipTrackerFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.worship.WorshipTrackerFragment\" android:id=\"@0x7f0a03f3\">\n  </dialog>\n  <dialog android:label=\"HajjUmrahGuidesFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.hajjumrah.HajjUmrahGuidesFragment\" android:id=\"@0x7f0a01d8\">\n  </dialog>\n  <dialog android:label=\"LearningFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.learning.LearningFragment\" android:id=\"@0x7f0a020d\">\n  </dialog>\n  <dialog android:label=\"ZakatFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.zakat.ZakatFragment\" android:id=\"@0x7f0a03fa\">\n  </dialog>\n  <dialog android:label=\"ReferralFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.referral.ReferralFragment\" android:id=\"@0x7f0a02e1\">\n  </dialog>\n  <dialog android:label=\"DuaCommunityFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.duacommunity.DuaCommunityFragment\" android:id=\"@0x7f0a015c\">\n    <deepLink app:uri=\"goldenquran://dua-community\">\n    </deepLink>\n  </dialog>\n  <dialog android:label=\"LiveSessionFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.live.LiveSessionFragment\" android:id=\"@0x7f0a021a\">\n  </dialog>\n  <dialog android:label=\"MasbahaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.masbaha.MasbahaFragment\" android:id=\"@0x7f0a0225\">\n    <deepLink app:uri=\"goldenquran://masbaha\">\n    </deepLink>\n  </dialog>\n  <dialog android:label=\"HadithCheckFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.hadith.HadithCheckFragment\" android:id=\"@0x7f0a01d5\">\n  </dialog>\n  <dialog android:label=\"HadithEncyclopediaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.hadith.HadithEncyclopediaFragment\" android:id=\"@0x7f0a01d6\">\n    <argument android:name=\"category\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"lang\" android:defaultValue=\"@null\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"LibraryFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.library.LibraryFragment\" android:id=\"@0x7f0a0211\">\n    <deepLink app:uri=\"goldenquran://library\">\n    </deepLink>\n  </dialog>\n  <dialog android:label=\"LibraryBookFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.library.LibraryBookFragment\" android:id=\"@0x7f0a0212\">\n    <argument android:name=\"id\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"LibraryReaderFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.library.LibraryReaderFragment\" android:id=\"@0x7f0a0213\">\n    <argument android:name=\"id\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"page\" android:defaultValue=\"-1\" app:argType=\"integer\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"HadithEncyclopediaHadithFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.hadith.HadithEncyclopediaHadithFragment\" android:id=\"@0x7f0a01d7\">\n    <argument android:name=\"id\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"lang\" android:defaultValue=\"@null\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"DorarSearchFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.dorar.DorarSearchFragment\" android:id=\"@0x7f0a0150\">\n  </dialog>\n  <dialog android:label=\"StatsticsFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.statistics.StatsticsFragment\" android:id=\"@0x7f0a033f\">\n  </dialog>\n  <dialog android:label=\"HabitsFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.habits.HabitsFragment\" android:id=\"@0x7f0a01d4\">\n  </dialog>\n  <dialog android:label=\"mapFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.manualLocation.LocationMapFragment\" android:id=\"@0x7f0a0222\">\n  </dialog>\n  <dialog android:label=\"KhetmaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.khetma.KhetmaFragment\" android:id=\"@0x7f0a0201\">\n    <argument android:name=\"is_history\" android:defaultValue=\"false\" app:argType=\"boolean\">\n    </argument>\n    <action android:id=\"@0x7f0a0075\" app:destination=\"@0x7f0a009a\" app:popUpTo=\"@0x7f0a0201\">\n    </action>\n    <action android:id=\"@0x7f0a0076\" app:destination=\"@0x7f0a0202\" app:popUpTo=\"@0x7f0a0201\">\n    </action>\n    <action android:id=\"@0x7f0a0077\" app:destination=\"@0x7f0a0201\">\n    </action>\n  </dialog>\n  <dialog android:label=\"AddKhetmaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.khetma.AddKhetmaFragment\" android:id=\"@0x7f0a009a\">\n    <argument android:name=\"khetmaId\" android:defaultValue=\"0L\" app:argType=\"long\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"DetailsKhetmaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.khetma.KhetmaDetailsFragment\" android:id=\"@0x7f0a0202\">\n    <argument android:name=\"khetmaId\" app:argType=\"long\">\n    </argument>\n    <action android:id=\"@0x7f0a0074\" app:destination=\"@0x7f0a009a\">\n    </action>\n  </dialog>\n  <dialog android:label=\"QiblaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.qibla.QiblaFragment\" android:id=\"@0x7f0a02bf\">\n    <action android:id=\"@0x7f0a0081\" app:destination=\"@0x7f0a00fb\">\n    </action>\n  </dialog>\n  <dialog android:label=\"TasmeeFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.tasmee.TasmeeFragment\" android:id=\"@0x7f0a035c\">\n  </dialog>\n  <fragment android:label=\"prayer\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.PrayerFragment\" android:id=\"@0x7f0a02b2\">\n    <action android:id=\"@0x7f0a007f\" app:destination=\"@0x7f0a0113\" app:popUpTo=\"@0x7f0a02b2\">\n    </action>\n    <action android:id=\"@0x7f0a0080\" app:destination=\"@0x7f0a02b4\">\n    </action>\n    <action android:id=\"@0x7f0a007d\" app:destination=\"@0x7f0a02b3\">\n    </action>\n    <action android:id=\"@0x7f0a007e\" app:destination=\"@0x7f0a02bf\">\n    </action>\n  </fragment>\n  <dialog android:label=\"PrayerMonthFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.PrayerMonthFragment\" android:id=\"@0x7f0a02b3\">\n  </dialog>\n  <dialog android:label=\"PrayerSetupWizardFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.PrayerSetupWizardFragment\" android:id=\"@0x7f0a02b5\">\n    <action android:id=\"@0x7f0a0095\" app:destination=\"@0x7f0a0113\">\n    </action>\n    <action android:id=\"@0x7f0a0096\" app:destination=\"@0x7f0a0222\">\n    </action>\n  </dialog>\n  <dialog android:label=\"CitySearchFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.manualLocation.CitySearchFragment\" android:id=\"@0x7f0a0113\">\n  </dialog>\n  <dialog android:label=\"PrayerSettingsFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.prayer.PrayerSettingsFragment\" android:id=\"@0x7f0a02b4\">\n  </dialog>\n  <fragment android:label=\"AthkarFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.athkar.AthkarFragment\" android:id=\"@0x7f0a00b6\">\n    <action android:id=\"@0x7f0a0043\" app:destination=\"@0x7f0a00b7\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0042\" app:destination=\"@0x7f0a00b4\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0041\" app:destination=\"@0x7f0a00b0\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0045\" app:destination=\"@0x7f0a0134\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0044\" app:destination=\"@0x7f0a0133\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0047\" app:destination=\"@0x7f0a01a6\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n    <action android:id=\"@0x7f0a0046\" app:destination=\"@0x7f0a015c\" app:popUpTo=\"@0x7f0a00b6\">\n    </action>\n  </fragment>\n  <dialog android:label=\"CustomDuasFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.duas.CustomDuasFragment\" android:id=\"@0x7f0a0134\">\n    <action android:id=\"@0x7f0a0058\" app:destination=\"@0x7f0a00b7\" app:popUpTo=\"@0x7f0a0134\">\n    </action>\n  </dialog>\n  <dialog android:label=\"ArbainFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.arbain.ArbainFragment\" android:id=\"@0x7f0a00b0\">\n    <action android:id=\"@0x7f0a0040\" app:destination=\"@0x7f0a00af\">\n    </action>\n  </dialog>\n  <dialog android:label=\"ArbainHadithFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.arbain.ArbainHadithFragment\" android:id=\"@0x7f0a00af\">\n    <argument android:name=\"number\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"CustomAthkarFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.duas.CustomAthkarFragment\" android:id=\"@0x7f0a0133\">\n    <action android:id=\"@0x7f0a0057\" app:destination=\"@0x7f0a00b7\" app:popUpTo=\"@0x7f0a0133\">\n    </action>\n  </dialog>\n  <dialog android:label=\"AthkarContentFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.athkar.AthkarContentFragment\" android:id=\"@0x7f0a00b7\">\n    <argument android:name=\"categoryId\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"duaSectionId\" android:defaultValue=\"-1L\" app:argType=\"long\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"AudioFragment\" android:name=\"org.goldenquran.freesoft.ui.audio.AudioFragment\" android:id=\"@0x7f0a00b8\">\n    <argument android:name=\"fromAya\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"fromSura\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n  </dialog>\n  <action android:id=\"@0x7f0a0062\" app:destination=\"@0x7f0a00d1\" app:popUpTo=\"@0x7f0a02dd\">\n  </action>\n  <action android:id=\"@0x7f0a006c\" app:destination=\"@0x7f0a0003\">\n  </action>\n  <dialog android:label=\"PlayListFragment\" android:name=\"org.goldenquran.freesoft.ui.audio.PlayListFragment\" android:id=\"@0x7f0a02ae\">\n    <action android:id=\"@0x7f0a0374\" app:destination=\"@0x7f0a0130\">\n    </action>\n    <argument android:name=\"playListId\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"title\" app:argType=\"string\" app:nullable=\"false\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"PlaySuraList\" android:name=\"org.goldenquran.freesoft.ui.audio.ReciterSuraListFragment\" android:id=\"@0x7f0a0010\">\n    <argument android:name=\"reciterId\" android:defaultValue=\"-1L\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"image\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n    <argument android:name=\"playListId\" android:defaultValue=\"0L\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"isPlayList\" android:defaultValue=\"false\" app:argType=\"boolean\">\n    </argument>\n    <argument android:name=\"isFromDownload\" android:defaultValue=\"false\" app:argType=\"boolean\">\n    </argument>\n    <argument android:name=\"title\" app:argType=\"string\" app:nullable=\"false\">\n    </argument>\n    <argument android:name=\"isFav\" android:defaultValue=\"false\" app:argType=\"boolean\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"CreatePlayListsFragment\" android:name=\"org.goldenquran.freesoft.ui.audio.AddPlayListsFragment\" android:id=\"@0x7f0a0130\">\n    <argument android:name=\"playlist_id\" android:defaultValue=\"-1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"playlist_name\" android:defaultValue=\"\" app:argType=\"string\" app:nullable=\"true\">\n    </argument>\n    <action android:id=\"@0x7f0a0085\" app:destination=\"@0x7f0a009b\">\n    </action>\n  </dialog>\n  <dialog android:label=\"addPlayListSeclctor\" android:name=\"org.goldenquran.freesoft.ui.audio.AddPlayListsSelectorFragment\" android:id=\"@0x7f0a009b\">\n    <argument android:name=\"startSura\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"endSura\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"startAyah\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"endAyah\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"repeatRange\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"repeatVerse\" android:defaultValue=\"1\" app:argType=\"integer\">\n    </argument>\n    <argument android:name=\"reciterId\" android:defaultValue=\"0L\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"isEdit\" android:defaultValue=\"false\" app:argType=\"boolean\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"CalibrationFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.qibla.CalibrationFragment\" android:id=\"@0x7f0a00fb\">\n  </dialog>\n  <dialog android:label=\"ReadingBottomFragment\" android:name=\"org.goldenquran.freesoft.ui.bottom.ReadingBottomFragment\" android:id=\"@0x7f0a000f\">\n  </dialog>\n  <dialog android:label=\"ReadingAudioOptionsDialogFragment\" android:name=\"org.goldenquran.freesoft.ui.bottom.ReadingAudioOptionsDialogFragment\" android:id=\"@0x7f0a000d\">\n    <action android:id=\"@0x7f0a004a\" app:destination=\"@0x7f0a00b8\" app:popUpTo=\"@0x7f0a000f\" app:popUpToInclusive=\"true\">\n    </action>\n  </dialog>\n  <dialog android:label=\"ReadingBookmarkOptionsDialogFragment\" android:name=\"org.goldenquran.freesoft.ui.bottom.ReadingBookmarkOptionsDialogFragment\" android:id=\"@0x7f0a000e\">\n  </dialog>\n  <dialog android:label=\"BottomKhetmaFragment\" android:name=\"org.goldenquran.freesoft.ui.tools.khetma.BottomKhetmaFragment\" android:id=\"@0x7f0a0005\">\n    <argument android:name=\"khetma_id\" android:defaultValue=\"-1L\" app:argType=\"long\">\n    </argument>\n    <argument android:name=\"come_from_main\" app:argType=\"boolean\" app:defaultValue=\"false\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"BooksFragment\" android:name=\"org.goldenquran.freesoft.ui.bottom.books.BooksFragment\" android:id=\"@0x7f0a0003\">\n  </dialog>\n  <action android:id=\"@0x7f0a005c\" app:destination=\"@0x7f0a000f\" app:popUpToInclusive=\"true\">\n  </action>\n  <action android:id=\"@0x7f0a005a\" app:destination=\"@0x7f0a0222\" app:popUpToInclusive=\"true\">\n  </action>\n  <action android:id=\"@0x7f0a005b\" app:destination=\"@0x7f0a000b\">\n  </action>\n  <action android:id=\"@0x7f0a005d\" app:destination=\"@0x7f0a0313\">\n  </action>\n  <dialog android:label=\"NoteFragment\" android:name=\"org.goldenquran.freesoft.ui.quranmenu.notes.NoteDialogFragment\" android:id=\"@0x7f0a000b\">\n  </dialog>\n  <dialog android:label=\"fragment_share\" android:name=\"org.goldenquran.freesoft.ui.share.ShareFragment\" android:id=\"@0x7f0a0313\">\n  </dialog>\n  <dialog android:label=\"fragment_submit_suggestion\" android:name=\"org.goldenquran.freesoft.ui.settings.FragmentSendSuggestion\" android:id=\"@0x7f0a01bf\">\n  </dialog>\n  <dialog android:label=\"BooksSelectorFragment\" android:name=\"org.goldenquran.freesoft.ui.booksLibrary.BooksSelectorFragment\" android:id=\"@0x7f0a0004\">\n  </dialog>\n  <dialog android:label=\"BookViewerPagerFragment\" android:name=\"org.goldenquran.freesoft.ui.bottom.books.BookViewerPagerFragment\" android:id=\"@0x7f0a00ce\">\n    <argument android:name=\"playlist_id\" android:defaultValue=\"-1\" app:argType=\"integer\">\n    </argument>\n  </dialog>\n  <dialog android:label=\"fragment_submit_suggestion\" android:name=\"org.goldenquran.freesoft.ui.sync.SyncProfilesFragment\" android:id=\"@0x7f0a034a\">\n  </dialog>\n  <dialog android:label=\"SettingFragment\" android:name=\"org.goldenquran.freesoft.ui.settings.SettingsFragment\" android:id=\"@0x7f0a0312\">\n    <action android:id=\"@0x7f0a0082\" app:destination=\"@0x7f0a0343\">\n    </action>\n  </dialog>\n  <dialog android:label=\"SubjectFragment\" android:name=\"org.goldenquran.freesoft.ui.settings.SubjectFragment\" android:id=\"@0x7f0a0343\">\n  </dialog>\n  <dialog android:label=\"MainMenuFragment\" android:name=\"org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment\" android:id=\"@0x7f0a021e\">\n    <argument android:name=\"position\" android:defaultValue=\"0\" app:argType=\"integer\">\n    </argument>\n    <action android:id=\"@0x7f0a0054\" app:destination=\"@0x7f0a000c\">\n    </action>\n  </dialog>\n  <dialog android:label=\"BooksFileManager\" android:name=\"org.goldenquran.freesoft.ui.fileManager.BooksFileManager\" android:id=\"@0x7f0a00d0\">\n  </dialog>\n  <dialog android:label=\"AudioFileManager\" android:name=\"org.goldenquran.freesoft.ui.fileManager.AudioFileManager\" android:id=\"@0x7f0a00b9\">\n  </dialog>\n  <action android:id=\"@0x7f0a0060\" app:destination=\"@0x7f0a01bf\">\n  </action>\n  <action android:id=\"@0x7f0a0061\" app:destination=\"@0x7f0a034a\">\n  </action>\n  <action android:id=\"@0x7f0a0068\" app:destination=\"@0x7f0a00b9\">\n  </action>\n  <action android:id=\"@0x7f0a006b\" app:destination=\"@0x7f0a00d0\">\n  </action>\n  <action android:id=\"@0x7f0a0064\" app:destination=\"@0x7f0a021e\">\n  </action>\n  <action android:id=\"@0x7f0a0065\" app:destination=\"@0x7f0a0312\">\n  </action>\n  <action android:id=\"@0x7f0a005e\" app:destination=\"@0x7f0a00ce\">\n  </action>\n  <action android:id=\"@0x7f0a006d\" app:destination=\"@0x7f0a0005\">\n  </action>\n  <action android:id=\"@0x7f0a006f\" app:destination=\"@0x7f0a0202\">\n  </action>\n  <action android:id=\"@0x7f0a0072\" app:destination=\"@0x7f0a0016\">\n  </action>\n  <action android:id=\"@0x7f0a0063\" app:destination=\"@0x7f0a0004\">\n  </action>\n  <action android:id=\"@0x7f0a005f\" app:destination=\"@0x7f0a0113\" app:popUpTo=\"@0x7f0a02b2\">\n  </action>\n  <action android:id=\"@0x7f0a0067\" app:destination=\"@0x7f0a00b7\" app:popUpTo=\"@0x7f0a00b6\">\n  </action>\n  <action android:id=\"@0x7f0a0071\" app:destination=\"@0x7f0a02b2\">\n  </action>\n  <action android:id=\"@0x7f0a0070\" app:destination=\"@0x7f0a02b5\">\n  </action>\n  <action android:id=\"@0x7f0a0066\" app:destination=\"@0x7f0a0007\">\n  </action>\n  <action android:id=\"@0x7f0a0069\" app:destination=\"@0x7f0a000d\">\n  </action>\n  <action android:id=\"@0x7f0a006a\" app:destination=\"@0x7f0a000e\">\n  </action>\n  <dialog android:label=\"HowToUseFragment\" android:name=\"org.goldenquran.freesoft.ui.help.HowToUseFragment\" android:id=\"@0x7f0a01e4\">\n  </dialog>\n  <action android:id=\"@0x7f0a006e\" app:destination=\"@0x7f0a01e4\">\n  </action>\n</navigation>\n"
+      },
+      {
+        "path": "res/xml/m3_button_group_child_size_change.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_pressed=\"true\" app:widthChange=\"15%\">\n  </item>\n  <item app:widthChange=\"0%\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3_list_item_shape_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_checkable=\"true\" android:state_checked=\"true\" app:shapeAppearance=\"?0x7f04037b\">\n  </item>\n  <item android:state_pressed=\"true\" app:shapeAppearance=\"?0x7f040381\">\n  </item>\n  <item android:state_focused=\"true\" app:shapeAppearance=\"?0x7f04037d\">\n  </item>\n  <item android:state_hovered=\"true\" app:shapeAppearance=\"?0x7f04037e\">\n  </item>\n  <item android:state_single=\"true\" app:shapeAppearance=\"?0x7f040382\">\n  </item>\n  <item android:state_first=\"true\" app:shapeAppearance=\"?0x7f04037c\">\n  </item>\n  <item android:state_last=\"true\" app:shapeAppearance=\"?0x7f04037f\">\n  </item>\n  <item android:state_middle=\"true\" app:shapeAppearance=\"?0x7f040380\">\n  </item>\n  <item app:shapeAppearance=\"?0x7f040380\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3_split_button_inner_corner_size_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_checkable=\"true\" android:state_pressed=\"true\" app:cornerSize=\"12dp\">\n  </item>\n  <item android:state_checked=\"true\" app:cornerSize=\"50%\">\n  </item>\n  <item app:cornerSize=\"4dp\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3expressive_button_shape_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_pressed=\"true\" app:shapeAppearance=\"?0x7f040174\">\n  </item>\n  <item android:state_checkable=\"true\" android:state_checked=\"true\" app:shapeAppearance=\"?0x7f040172\">\n  </item>\n  <item app:shapeAppearance=\"?0x7f040173\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/paths.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<paths>\n  <external-path name=\"external\" path=\".\">\n  </external-path>\n  <external-files-path name=\"external_files\" path=\".\">\n  </external-files-path>\n  <cache-path name=\"cache\" path=\".\">\n  </cache-path>\n  <external-cache-path name=\"external_cache\" path=\".\">\n  </external-cache-path>\n  <files-path name=\"files\" path=\".\">\n  </files-path>\n  <files-path name=\"filesprovider\" path=\".\">\n  </files-path>\n  <cache-path name=\"filesprovider\" path=\".\">\n  </cache-path>\n  <external-media-path name=\"filesprovider\" path=\".\">\n  </external-media-path>\n  <files-path name=\"shared_images\" path=\".\">\n  </files-path>\n  <files-path name=\"shared_audio\" path=\".\">\n  </files-path>\n  <files-path name=\"internal_files\" path=\".\">\n  </files-path>\n  <files-path name=\"shared_images\" path=\".\">\n  </files-path>\n</paths>\n"
+      },
+      {
+        "path": "res/xml/splits0.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<splits>\n  <module name=\"\">\n    <language>\n      <entry key=\"af\" split=\"\">\n      </entry>\n      <entry key=\"am\" split=\"\">\n      </entry>\n      <entry key=\"ar\" split=\"\">\n      </entry>\n      <entry key=\"as\" split=\"\">\n      </entry>\n      <entry key=\"az\" split=\"\">\n      </entry>\n      <entry key=\"be\" split=\"\">\n      </entry>\n      <entry key=\"bg\" split=\"\">\n      </entry>\n      <entry key=\"bn\" split=\"\">\n      </entry>\n      <entry key=\"bs\" split=\"\">\n      </entry>\n      <entry key=\"ca\" split=\"\">\n      </entry>\n      <entry key=\"cs\" split=\"\">\n      </entry>\n      <entry key=\"da\" split=\"\">\n      </entry>\n      <entry key=\"de\" split=\"\">\n      </entry>\n      <entry key=\"el\" split=\"\">\n      </entry>\n      <entry key=\"en\" split=\"\">\n      </entry>\n      <entry key=\"es\" split=\"\">\n      </entry>\n      <entry key=\"et\" split=\"\">\n      </entry>\n      <entry key=\"eu\" split=\"\">\n      </entry>\n      <entry key=\"fa\" split=\"\">\n      </entry>\n      <entry key=\"fi\" split=\"\">\n      </entry>\n      <entry key=\"fr\" split=\"\">\n      </entry>\n      <entry key=\"gl\" split=\"\">\n      </entry>\n      <entry key=\"gu\" split=\"\">\n      </entry>\n      <entry key=\"hi\" split=\"\">\n      </entry>\n      <entry key=\"hr\" split=\"\">\n      </entry>\n      <entry key=\"hu\" split=\"\">\n      </entry>\n      <entry key=\"hy\" split=\"\">\n      </entry>\n      <entry key=\"in\" split=\"\">\n      </entry>\n      <entry key=\"is\" split=\"\">\n      </entry>\n      <entry key=\"it\" split=\"\">\n      </entry>\n      <entry key=\"iw\" split=\"\">\n      </entry>\n      <entry key=\"ja\" split=\"\">\n      </entry>\n      <entry key=\"ka\" split=\"\">\n      </entry>\n      <entry key=\"kk\" split=\"\">\n      </entry>\n      <entry key=\"km\" split=\"\">\n      </entry>\n      <entry key=\"kn\" split=\"\">\n      </entry>\n      <entry key=\"ko\" split=\"\">\n      </entry>\n      <entry key=\"ky\" split=\"\">\n      </entry>\n      <entry key=\"lo\" split=\"\">\n      </entry>\n      <entry key=\"lt\" split=\"\">\n      </entry>\n      <entry key=\"lv\" split=\"\">\n      </entry>\n      <entry key=\"mk\" split=\"\">\n      </entry>\n      <entry key=\"ml\" split=\"\">\n      </entry>\n      <entry key=\"mn\" split=\"\">\n      </entry>\n      <entry key=\"mr\" split=\"\">\n      </entry>\n      <entry key=\"ms\" split=\"\">\n      </entry>\n      <entry key=\"my\" split=\"\">\n      </entry>\n      <entry key=\"nb\" split=\"\">\n      </entry>\n      <entry key=\"ne\" split=\"\">\n      </entry>\n      <entry key=\"nl\" split=\"\">\n      </entry>\n      <entry key=\"or\" split=\"\">\n      </entry>\n      <entry key=\"pa\" split=\"\">\n      </entry>\n      <entry key=\"pl\" split=\"\">\n      </entry>\n      <entry key=\"pt\" split=\"\">\n      </entry>\n      <entry key=\"ro\" split=\"\">\n      </entry>\n      <entry key=\"ru\" split=\"\">\n      </entry>\n      <entry key=\"si\" split=\"\">\n      </entry>\n      <entry key=\"sk\" split=\"\">\n      </entry>\n      <entry key=\"sl\" split=\"\">\n      </entry>\n      <entry key=\"sq\" split=\"\">\n      </entry>\n      <entry key=\"sr\" split=\"\">\n      </entry>\n      <entry key=\"sv\" split=\"\">\n      </entry>\n      <entry key=\"sw\" split=\"\">\n      </entry>\n      <entry key=\"ta\" split=\"\">\n      </entry>\n      <entry key=\"te\" split=\"\">\n      </entry>\n      <entry key=\"th\" split=\"\">\n      </entry>\n      <entry key=\"tl\" split=\"\">\n      </entry>\n      <entry key=\"tr\" split=\"\">\n      </entry>\n      <entry key=\"uk\" split=\"\">\n      </entry>\n      <entry key=\"ur\" split=\"\">\n      </entry>\n      <entry key=\"uz\" split=\"\">\n      </entry>\n      <entry key=\"vi\" split=\"\">\n      </entry>\n      <entry key=\"zh\" split=\"\">\n      </entry>\n      <entry key=\"zu\" split=\"\">\n      </entry>\n    </language>\n  </module>\n</splits>\n"
+      },
+      {
+        "path": "res/xml/widget_provider.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:minWidth=\"300dp\" android:minHeight=\"70dp\" android:updatePeriodMillis=\"900000\" android:initialLayout=\"@0x7f0d00a4\" android:resizeMode=\"0x3\" android:widgetCategory=\"0x1\" android:targetCellWidth=\"4\" android:targetCellHeight=\"1\">\n</appwidget-provider>\n"
+      },
+      {
+        "path": "res/xml/widget_provider2.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:minWidth=\"250dp\" android:minHeight=\"110dp\" android:updatePeriodMillis=\"900000\" android:initialLayout=\"@0x7f0d00a5\" android:resizeMode=\"0x3\" android:widgetCategory=\"0x1\" android:targetCellWidth=\"4\" android:targetCellHeight=\"2\">\n</appwidget-provider>\n"
+      },
+      {
+        "path": "res/xml/widget_verse_ticker.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:description=\"@0x7f130a15\" android:minWidth=\"180dp\" android:minHeight=\"110dp\" android:updatePeriodMillis=\"0\" android:initialLayout=\"@0x7f0d00a7\" android:resizeMode=\"0x3\" android:minResizeWidth=\"110dp\" android:minResizeHeight=\"70dp\" android:widgetCategory=\"0x1\" android:previewLayout=\"@0x7f0d00a7\" android:targetCellWidth=\"4\" android:targetCellHeight=\"2\">\n</appwidget-provider>\n"
+      },
+      {
+        "path": "res/xml-v31/widget_provider2.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:minWidth=\"250dp\" android:minHeight=\"110dp\" android:updatePeriodMillis=\"900000\" android:initialLayout=\"@0x7f0d00a5\" android:resizeMode=\"0x3\" android:widgetCategory=\"0x1\" android:targetCellWidth=\"4\" android:targetCellHeight=\"2\">\n</appwidget-provider>\n"
+      }
+    ]
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 1 entry.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 46569,
+    "next_offset": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

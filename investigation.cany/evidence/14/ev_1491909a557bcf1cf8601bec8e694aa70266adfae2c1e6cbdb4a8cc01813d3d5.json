@@ -1,0 +1,173 @@
+{
+  "id": "ev_1491909a557bcf1cf8601bec8e694aa70266adfae2c1e6cbdb4a8cc01813d3d5",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "em0",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lem0;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X",
+        "reference": "Lem0;->X:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y",
+        "reference": "Lem0;->Y:Lku6;",
+        "type": "ku6"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 55,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lem0;-><init>()V",
+        "registers": 5,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 40,
+        "kind": "virtual",
+        "name": "attachBaseContext",
+        "overload_index": 0,
+        "reference": "Lem0;->attachBaseContext(Landroid/content/Context;)V",
+        "registers": 5,
+        "signature": "public final void attachBaseContext(android.content.Context)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 34,
+        "kind": "virtual",
+        "name": "onConfigurationChanged",
+        "overload_index": 0,
+        "reference": "Lem0;->onConfigurationChanged(Landroid/content/res/Configuration;)V",
+        "registers": 5,
+        "signature": "public final void onConfigurationChanged(android.content.res.Configuration)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 112,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lem0;->onCreate(Landroid/os/Bundle;)V",
+        "registers": 8,
+        "signature": "public void onCreate(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "q",
+        "overload_index": 0,
+        "reference": "Lem0;->q(ILfk3;)V",
+        "registers": null,
+        "signature": "public abstract void q(int, fk3)",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 98,
+        "kind": "virtual",
+        "name": "r",
+        "overload_index": 0,
+        "reference": "Lem0;->r(Z)V",
+        "registers": 7,
+        "signature": "public final void r(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "s",
+        "overload_index": 0,
+        "reference": "Lem0;->s()Luh5;",
+        "registers": 1,
+        "signature": "public final uh5 s()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "em0",
+    "source_file": "SourceFile",
+    "superclass": "Lmp;"
+  },
+  "summary": "em0 (classes.dex) extends mp: 2 fields, 7 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lem0;"
+    }
+  ],
+  "links": []
+}

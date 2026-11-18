@@ -1,0 +1,1018 @@
+{
+  "id": "ev_bfb102ffeba3ec807d12d8a6a187897fac4ec3f9de49de5bb08cbff8313593a0",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.SuraPlayerItem",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->Companion:Lorg/goldenquran/freesoft/models/local/SuraPlayerItem$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.SuraPlayerItem$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "DOWNLOADED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->DOWNLOADED:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "DOWNLOADING",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->DOWNLOADING:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "NOT_DOWNLOADED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->NOT_DOWNLOADED:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "PLAYLIST_ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->PLAYLIST_ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "RECITER_ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->RECITER_ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SURA_NAME",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->SURA_NAME:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SURA_NUMBER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->SURA_NUMBER:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TELAWA",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->TELAWA:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "currentAya",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->currentAya:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "currentStatus",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->currentStatus:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "downloadProgress",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->downloadProgress:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "downloadStatus",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->downloadStatus:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "fromAya",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->fromAya:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "orderIndex",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->orderIndex:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "playListId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->playListId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraName",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->suraName:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraNumber",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->suraNumber:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraSize",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->suraSize:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "telawaId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->telawaId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "toAya",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->toAya:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "version",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->version:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 24,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;-><init>()V",
+        "registers": 18,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 35,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;-><init>(IIIIIIIILjava/lang/String;IIIII)V",
+        "registers": 15,
+        "signature": "public void <init>(int, int, int, int, int, int, int, int, java.lang.String, int, int, int, int, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 150,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;-><init>(IIIIIIIILjava/lang/String;IIIIIILu62;)V",
+        "registers": 32,
+        "signature": "public synthetic void <init>(int, int, int, int, int, int, int, int, java.lang.String, int, int, int, int, int, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 162,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->copy$default(Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;IIIIIIIILjava/lang/String;IIIIIILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;",
+        "registers": 31,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.SuraPlayerItem copy$default(org.goldenquran.freesoft.models.local.SuraPlayerItem, int, int, int, int, int, int, int, int, java.lang.String, int, int, int, int, int, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component10",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component10()I",
+        "registers": 1,
+        "signature": "public final int component10()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component11",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component11()I",
+        "registers": 1,
+        "signature": "public final int component11()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component12",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component12()I",
+        "registers": 1,
+        "signature": "public final int component12()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component13",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component13()I",
+        "registers": 1,
+        "signature": "public final int component13()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component14",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component14()I",
+        "registers": 1,
+        "signature": "public final int component14()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component4()I",
+        "registers": 1,
+        "signature": "public final int component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component5()I",
+        "registers": 1,
+        "signature": "public final int component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component6()I",
+        "registers": 1,
+        "signature": "public final int component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component7()I",
+        "registers": 1,
+        "signature": "public final int component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component8()I",
+        "registers": 1,
+        "signature": "public final int component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->component9()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->copy(IIIIIIIILjava/lang/String;IIIII)Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;",
+        "registers": 15,
+        "signature": "public final org.goldenquran.freesoft.models.local.SuraPlayerItem copy(int, int, int, int, int, int, int, int, java.lang.String, int, int, int, int, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 115,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->equals(Ljava/lang/Object;)Z",
+        "registers": 6,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCurrentAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getCurrentAya()I",
+        "registers": 1,
+        "signature": "public final int getCurrentAya()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCurrentStatus",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getCurrentStatus()I",
+        "registers": 1,
+        "signature": "public final int getCurrentStatus()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDownloadProgress",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getDownloadProgress()I",
+        "registers": 1,
+        "signature": "public final int getDownloadProgress()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDownloadStatus",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getDownloadStatus()I",
+        "registers": 1,
+        "signature": "public final int getDownloadStatus()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getFromAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getFromAya()I",
+        "registers": 1,
+        "signature": "public final int getFromAya()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getOrderIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getOrderIndex()I",
+        "registers": 1,
+        "signature": "public final int getOrderIndex()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPlayListId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getPlayListId()I",
+        "registers": 1,
+        "signature": "public final int getPlayListId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getSuraName()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getSuraName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getSuraNumber()I",
+        "registers": 1,
+        "signature": "public final int getSuraNumber()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraSize",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getSuraSize()I",
+        "registers": 1,
+        "signature": "public final int getSuraSize()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTelawaId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getTelawaId()I",
+        "registers": 1,
+        "signature": "public final int getTelawaId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getToAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getToAya()I",
+        "registers": 1,
+        "signature": "public final int getToAya()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getVersion",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->getVersion()I",
+        "registers": 1,
+        "signature": "public final int getVersion()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 89,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCurrentAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setCurrentAya(I)V",
+        "registers": 2,
+        "signature": "public final void setCurrentAya(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCurrentStatus",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setCurrentStatus(I)V",
+        "registers": 2,
+        "signature": "public final void setCurrentStatus(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDownloadProgress",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setDownloadProgress(I)V",
+        "registers": 2,
+        "signature": "public final void setDownloadProgress(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDownloadStatus",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setDownloadStatus(I)V",
+        "registers": 2,
+        "signature": "public final void setDownloadStatus(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setFromAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setFromAya(I)V",
+        "registers": 2,
+        "signature": "public final void setFromAya(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setId(I)V",
+        "registers": 2,
+        "signature": "public final void setId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setOrderIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setOrderIndex(I)V",
+        "registers": 2,
+        "signature": "public final void setOrderIndex(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPlayListId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setPlayListId(I)V",
+        "registers": 2,
+        "signature": "public final void setPlayListId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setSuraName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setSuraName(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setSuraName(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSuraNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setSuraNumber(I)V",
+        "registers": 2,
+        "signature": "public final void setSuraNumber(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSuraSize",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setSuraSize(I)V",
+        "registers": 2,
+        "signature": "public final void setSuraSize(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setTelawaId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setTelawaId(I)V",
+        "registers": 2,
+        "signature": "public final void setTelawaId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setToAya",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setToAya(I)V",
+        "registers": 2,
+        "signature": "public final void setToAya(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setVersion",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->setVersion(I)V",
+        "registers": 2,
+        "signature": "public final void setVersion(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 88,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;->toString()Ljava/lang/String;",
+        "registers": 17,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.SuraPlayerItem",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.SuraPlayerItem (classes2.dex) extends java.lang.Object: 25 fields, 51 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/SuraPlayerItem;"
+    }
+  ],
+  "links": []
+}

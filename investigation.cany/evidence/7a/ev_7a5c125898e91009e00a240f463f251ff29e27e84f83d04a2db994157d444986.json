@@ -1,0 +1,375 @@
+{
+  "id": "ev_7a5c125898e91009e00a240f463f251ff29e27e84f83d04a2db994157d444986",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.activity.MainActivity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/activity/MainActivity;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final",
+          "synthetic"
+        ],
+        "kind": "static",
+        "name": "r0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->r0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Z",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->Z:Lorg/goldenquran/freesoft/models/local/UserMushaf;",
+        "type": "org.goldenquran.freesoft.models.local.UserMushaf"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->a0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->b0:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "c0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->c0:Lmd6;",
+        "type": "md6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "d0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->d0:Lyu5;",
+        "type": "yu5"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->e0:Lay8;",
+        "type": "ay8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "f0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->f0:Lcs5;",
+        "type": "cs5"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "g0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->g0:Lis5;",
+        "type": "is5"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "h0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->h0:Lsa0;",
+        "type": "sa0"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "i0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->i0:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "j0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->j0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "k0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->k0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "l0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->l0:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "m0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->m0:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "n0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->n0:Lorg/goldenquran/freesoft/models/local/Khetma;",
+        "type": "org.goldenquran.freesoft.models.local.Khetma"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "o0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->o0:Lorg/goldenquran/freesoft/models/KhetmaWird;",
+        "type": "org.goldenquran.freesoft.models.KhetmaWird"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "p0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->p0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "q0",
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->q0:Ljava/util/LinkedHashSet;",
+        "type": "java.util.LinkedHashSet"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 109,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;-><init>()V",
+        "registers": 36,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 166,
+        "kind": "virtual",
+        "name": "dispatchKeyEvent",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z",
+        "registers": 10,
+        "signature": "public final boolean dispatchKeyEvent(android.view.KeyEvent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->onCreate(Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public final void onCreate(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 59,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->onDestroy()V",
+        "registers": 4,
+        "signature": "public final void onDestroy()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "onNewIntent",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->onNewIntent(Landroid/content/Intent;)V",
+        "registers": 2,
+        "signature": "public final void onNewIntent(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 48,
+        "kind": "virtual",
+        "name": "onResume",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->onResume()V",
+        "registers": 5,
+        "signature": "public final void onResume()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "onWindowFocusChanged",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->onWindowFocusChanged(Z)V",
+        "registers": 2,
+        "signature": "public final void onWindowFocusChanged(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 65,
+        "kind": "virtual",
+        "name": "q",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->q(ILfk3;)V",
+        "registers": 7,
+        "signature": "public final void q(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "t",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->t()Lorg/goldenquran/freesoft/models/MainActivityUiState;",
+        "registers": 1,
+        "signature": "public final org.goldenquran.freesoft.models.MainActivityUiState t()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "u",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/MainActivity;->u(Lkotlin/jvm/functions/Function1;)V",
+        "registers": 3,
+        "signature": "public final void u(kotlin.jvm.functions.Function1)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.activity.MainActivity",
+    "source_file": "SourceFile",
+    "superclass": "Lem0;"
+  },
+  "summary": "org.goldenquran.freesoft.activity.MainActivity (classes.dex) extends em0: 19 fields, 10 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/activity/MainActivity;"
+    }
+  ],
+  "links": []
+}

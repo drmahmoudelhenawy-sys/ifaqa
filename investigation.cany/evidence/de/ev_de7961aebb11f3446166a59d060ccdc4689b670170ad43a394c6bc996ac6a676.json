@@ -1,0 +1,176 @@
+{
+  "id": "ev_de7961aebb11f3446166a59d060ccdc4689b670170ad43a394c6bc996ac6a676",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase_Impl",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final",
+          "synthetic"
+        ],
+        "kind": "static",
+        "name": "p",
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->p:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "o",
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->o:Lj69;",
+        "type": "j69"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 18,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->e(Ljava/util/LinkedHashMap;)Ljava/util/List;",
+        "registers": 2,
+        "signature": "public final java.util.List e(java.util.LinkedHashMap)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 40,
+        "kind": "virtual",
+        "name": "f",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->f()Lkc4;",
+        "registers": 14,
+        "signature": "public final kc4 f()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "g",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->g()Ltp6;",
+        "registers": 2,
+        "signature": "public final tp6 g()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "m",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->m()Ljava/util/Set;",
+        "registers": 1,
+        "signature": "public final java.util.Set m()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 17,
+        "kind": "virtual",
+        "name": "o",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->o()Ljava/util/LinkedHashMap;",
+        "registers": 3,
+        "signature": "public final java.util.LinkedHashMap o()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "y",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;->y()Lx76;",
+        "registers": 1,
+        "signature": "public final x76 y()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase_Impl",
+    "source_file": "SourceFile",
+    "superclass": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+  },
+  "summary": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase_Impl (classes2.dex) extends org.goldenquran.freesoft.datastore.db.MushafRoomDatabase: 2 fields, 7 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;"
+    }
+  ],
+  "links": []
+}

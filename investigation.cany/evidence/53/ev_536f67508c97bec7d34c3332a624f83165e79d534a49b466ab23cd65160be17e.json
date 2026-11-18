@@ -1,0 +1,443 @@
+{
+  "id": "ev_536f67508c97bec7d34c3332a624f83165e79d534a49b466ab23cd65160be17e",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.audio.NewAudioService",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final",
+          "synthetic"
+        ],
+        "kind": "static",
+        "name": "W",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->W:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "G",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->G:Lgv5;",
+        "type": "gv5"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "H",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->H:Ldt1;",
+        "type": "dt1"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "I",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->I:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "J",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->J:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "K",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->K:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "L",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->L:Ltg8;",
+        "type": "tg8"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "M",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->M:Lpk0;",
+        "type": "pk0"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "N",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->N:Ljava/util/Map;",
+        "type": "java.util.Map"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "O",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->O:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "volatile"
+        ],
+        "kind": "instance",
+        "name": "P",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->P:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Q",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->Q:Lxuc;",
+        "type": "xuc"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "R",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->R:Lag6;",
+        "type": "ag6"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "S",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->S:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "T",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->T:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "U",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->U:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "V",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->V:Z",
+        "type": "boolean"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 84,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;-><init>()V",
+        "registers": 5,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 11,
+        "kind": "direct",
+        "name": "o",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->o()Ljx7;",
+        "registers": 1,
+        "signature": "public static jx7 o()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 6,
+        "kind": "direct",
+        "name": "t",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->t(Ljx7;)V",
+        "registers": 2,
+        "signature": "public static void t(jx7)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "h",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->h(Lev5;)Lgv5;",
+        "registers": 2,
+        "signature": "public final gv5 h(ev5)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 19,
+        "kind": "virtual",
+        "name": "n",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->n()Landroidx/media3/exoplayer/ExoPlayer;",
+        "registers": 3,
+        "signature": "public final androidx.media3.exoplayer.ExoPlayer n()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 519,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->onCreate()V",
+        "registers": 21,
+        "signature": "public final void onCreate()",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 119,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->onDestroy()V",
+        "registers": 6,
+        "signature": "public final void onDestroy()",
+        "try_blocks": 6
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 99,
+        "kind": "virtual",
+        "name": "onStartCommand",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->onStartCommand(Landroid/content/Intent;II)I",
+        "registers": 8,
+        "signature": "public final int onStartCommand(android.content.Intent, int, int)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 41,
+        "kind": "virtual",
+        "name": "onTaskRemoved",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->onTaskRemoved(Landroid/content/Intent;)V",
+        "registers": 4,
+        "signature": "public final void onTaskRemoved(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 44,
+        "kind": "virtual",
+        "name": "p",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->p()V",
+        "registers": 4,
+        "signature": "public final void p()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 267,
+        "kind": "virtual",
+        "name": "q",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->q()Z",
+        "registers": 13,
+        "signature": "public final boolean q()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 121,
+        "kind": "virtual",
+        "name": "r",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->r()V",
+        "registers": 5,
+        "signature": "public final void r()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 109,
+        "kind": "virtual",
+        "name": "s",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->s(Lu07;)V",
+        "registers": 8,
+        "signature": "public final void s(u07)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 252,
+        "kind": "virtual",
+        "name": "u",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->u(Z)V",
+        "registers": 19,
+        "signature": "public final void u(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 97,
+        "kind": "virtual",
+        "name": "v",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->v()V",
+        "registers": 6,
+        "signature": "public final void v()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 505,
+        "kind": "virtual",
+        "name": "w",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;->w()V",
+        "registers": 16,
+        "signature": "public final void w()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.audio.NewAudioService",
+    "source_file": "SourceFile",
+    "superclass": "Landroidx/media3/session/MediaSessionService;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.audio.NewAudioService (classes.dex) extends androidx.media3.session.MediaSessionService: 17 fields, 16 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/audio/NewAudioService;"
+    }
+  ],
+  "links": []
+}

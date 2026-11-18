@@ -1,0 +1,475 @@
+{
+  "id": "ev_260365652c3ff69675eae948d1b3c42ff20fb9a0ff7fe283d7bcc2045fb05d4d",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "be2",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public"
+    ],
+    "annotations": [],
+    "descriptor": "Lbe2;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "A0",
+        "reference": "Lbe2;->A0:Lyd2;",
+        "type": "yd2"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "B0",
+        "reference": "Lbe2;->B0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "C0",
+        "reference": "Lbe2;->C0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "D0",
+        "reference": "Lbe2;->D0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "E0",
+        "reference": "Lbe2;->E0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "F0",
+        "reference": "Lbe2;->F0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "G0",
+        "reference": "Lbe2;->G0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "H0",
+        "reference": "Lbe2;->H0:Lzd2;",
+        "type": "zd2"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "I0",
+        "reference": "Lbe2;->I0:Landroid/app/Dialog;",
+        "type": "android.app.Dialog"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "J0",
+        "reference": "Lbe2;->J0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "K0",
+        "reference": "Lbe2;->K0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "L0",
+        "reference": "Lbe2;->L0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "M0",
+        "reference": "Lbe2;->M0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "x0",
+        "reference": "Lbe2;->x0:Landroid/os/Handler;",
+        "type": "android.os.Handler"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "y0",
+        "reference": "Lbe2;->y0:Lg5;",
+        "type": "g5"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "z0",
+        "reference": "Lbe2;->z0:Lxd2;",
+        "type": "xd2"
+      }
+    ],
+    "interfaces": [
+      "Landroid/content/DialogInterface$OnCancelListener;",
+      "Landroid/content/DialogInterface$OnDismissListener;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 48,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lbe2;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "B",
+        "overload_index": 0,
+        "reference": "Lbe2;->B()V",
+        "registers": 2,
+        "signature": "public final void B()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "D",
+        "overload_index": 0,
+        "reference": "Lbe2;->D(Landroid/content/Context;)V",
+        "registers": 3,
+        "signature": "public final void D(android.content.Context)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 67,
+        "kind": "virtual",
+        "name": "E",
+        "overload_index": 0,
+        "reference": "Lbe2;->E(Landroid/os/Bundle;)V",
+        "registers": 5,
+        "signature": "public void E(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 33,
+        "kind": "virtual",
+        "name": "H",
+        "overload_index": 0,
+        "reference": "Lbe2;->H()V",
+        "registers": 3,
+        "signature": "public void H()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 21,
+        "kind": "virtual",
+        "name": "I",
+        "overload_index": 0,
+        "reference": "Lbe2;->I()V",
+        "registers": 3,
+        "signature": "public final void I()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 198,
+        "kind": "virtual",
+        "name": "J",
+        "overload_index": 0,
+        "reference": "Lbe2;->J(Landroid/os/Bundle;)Landroid/view/LayoutInflater;",
+        "registers": 9,
+        "signature": "public final android.view.LayoutInflater J(android.os.Bundle)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 66,
+        "kind": "virtual",
+        "name": "N",
+        "overload_index": 0,
+        "reference": "Lbe2;->N(Landroid/os/Bundle;)V",
+        "registers": 5,
+        "signature": "public void N(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 45,
+        "kind": "virtual",
+        "name": "O",
+        "overload_index": 0,
+        "reference": "Lbe2;->O()V",
+        "registers": 3,
+        "signature": "public void O()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "P",
+        "overload_index": 0,
+        "reference": "Lbe2;->P()V",
+        "registers": 2,
+        "signature": "public void P()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "R",
+        "overload_index": 0,
+        "reference": "Lbe2;->R(Landroid/os/Bundle;)V",
+        "registers": 3,
+        "signature": "public final void R(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 27,
+        "kind": "virtual",
+        "name": "S",
+        "overload_index": 0,
+        "reference": "Lbe2;->S(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public final void S(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 5,
+        "kind": "virtual",
+        "name": "c0",
+        "overload_index": 0,
+        "reference": "Lbe2;->c0()V",
+        "registers": 2,
+        "signature": "public void c0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "d0",
+        "overload_index": 0,
+        "reference": "Lbe2;->d0()V",
+        "registers": 3,
+        "signature": "public void d0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 195,
+        "kind": "virtual",
+        "name": "e0",
+        "overload_index": 0,
+        "reference": "Lbe2;->e0(ZZZ)V",
+        "registers": 9,
+        "signature": "public final void e0(boolean, boolean, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "f0",
+        "overload_index": 0,
+        "reference": "Lbe2;->f0(Landroid/os/Bundle;)Landroid/app/Dialog;",
+        "registers": 3,
+        "signature": "public android.app.Dialog f0(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "g0",
+        "overload_index": 0,
+        "reference": "Lbe2;->g0(Lee3;Ljava/lang/String;)V",
+        "registers": 6,
+        "signature": "public void g0(ee3, java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "k",
+        "overload_index": 0,
+        "reference": "Lbe2;->k()Lfbb;",
+        "registers": 3,
+        "signature": "public final fbb k()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "onCancel",
+        "overload_index": 0,
+        "reference": "Lbe2;->onCancel(Landroid/content/DialogInterface;)V",
+        "registers": 2,
+        "signature": "public void onCancel(android.content.DialogInterface)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onDismiss",
+        "overload_index": 0,
+        "reference": "Lbe2;->onDismiss(Landroid/content/DialogInterface;)V",
+        "registers": 3,
+        "signature": "public void onDismiss(android.content.DialogInterface)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "be2",
+    "source_file": "SourceFile",
+    "superclass": "Lid3;"
+  },
+  "summary": "be2 (classes.dex) extends id3: 16 fields, 20 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lbe2;"
+    }
+  ],
+  "links": []
+}

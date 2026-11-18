@@ -1,0 +1,382 @@
+{
+  "id": "ev_7b95177c7ec0b99ec1febe3c990ff41799b127e5777a967b8fc58ea04af2b2d4",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.PrayerCheckin",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "checkedAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->checkedAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "dayKey",
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->dayKey:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "prayerId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->prayerId:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;-><init>()V",
+        "registers": 9,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;-><init>(IIIJ)V",
+        "registers": 6,
+        "signature": "public void <init>(int, int, int, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 26,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;-><init>(IIIJILu62;)V",
+        "registers": 9,
+        "signature": "public synthetic void <init>(int, int, int, long, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 34,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->copy$default(Lorg/goldenquran/freesoft/models/local/PrayerCheckin;IIIJILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/PrayerCheckin;",
+        "registers": 8,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.PrayerCheckin copy$default(org.goldenquran.freesoft.models.local.PrayerCheckin, int, int, int, long, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->component4()J",
+        "registers": 3,
+        "signature": "public final long component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->copy(IIIJ)Lorg/goldenquran/freesoft/models/local/PrayerCheckin;",
+        "registers": 6,
+        "signature": "public final org.goldenquran.freesoft.models.local.PrayerCheckin copy(int, int, int, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 43,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->equals(Ljava/lang/Object;)Z",
+        "registers": 7,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCheckedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->getCheckedAt()J",
+        "registers": 3,
+        "signature": "public final long getCheckedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDayKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->getDayKey()I",
+        "registers": 1,
+        "signature": "public final int getDayKey()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPrayerId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->getPrayerId()I",
+        "registers": 1,
+        "signature": "public final int getPrayerId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 29,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCheckedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->setCheckedAt(J)V",
+        "registers": 3,
+        "signature": "public final void setCheckedAt(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDayKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->setDayKey(I)V",
+        "registers": 2,
+        "signature": "public final void setDayKey(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->setId(I)V",
+        "registers": 2,
+        "signature": "public final void setId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPrayerId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->setPrayerId(I)V",
+        "registers": 2,
+        "signature": "public final void setPrayerId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 39,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;->toString()Ljava/lang/String;",
+        "registers": 8,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.PrayerCheckin",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.PrayerCheckin (classes2.dex) extends java.lang.Object: 5 fields, 20 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;"
+    }
+  ],
+  "links": []
+}

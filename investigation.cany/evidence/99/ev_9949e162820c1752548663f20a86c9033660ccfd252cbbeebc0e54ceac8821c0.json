@@ -1,0 +1,270 @@
+{
+  "id": "ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "kind",
+        "name",
+        "exported",
+        "permission",
+        "reachable_from_outside",
+        "intent_filters"
+      ],
+      "kind": "rows",
+      "limit": 100,
+      "list": "components",
+      "matching": {
+        "kind": "service"
+      },
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 21,
+      "next_offset": null,
+      "status": "page",
+      "total": 21
+    },
+    "from_evidence": "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+    "from_tool": "android_components_list",
+    "shown": {
+      "items": [
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.app.appfunctions.AppFunctionService"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService",
+          "permission": "android.permission.BIND_APP_FUNCTION_SERVICE",
+          "reachable_from_outside": true
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "androidx.media3.session.MediaSessionService"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.audio.NewAudioService",
+          "permission": "android.permission.BIND_MEDIA_SESSION_SERVICE",
+          "reachable_from_outside": true
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.work.impl.foreground.SystemForegroundService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.habits.PrayerMotionService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "com.google.firebase.MESSAGING_EVENT"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.LiveMessagingService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": true,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+          "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION",
+          "reachable_from_outside": true
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "com.google.firebase.MESSAGING_EVENT"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "com.google.firebase.messaging.FirebaseMessagingService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.firebase.components.ComponentDiscoveryService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.measurement.AppMeasurementService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+          "permission": "android.permission.BIND_JOB_SERVICE",
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.firebase.sessions.SessionLifecycleService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": true,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.work.impl.background.systemjob.SystemJobService",
+          "permission": "android.permission.BIND_JOB_SERVICE",
+          "reachable_from_outside": true
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.core.widget.RemoteViewsCompatService",
+          "permission": "android.permission.BIND_REMOTEVIEWS",
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.room.MultiInstanceInvalidationService",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+          "permission": null,
+          "reachable_from_outside": false
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+          "permission": "android.permission.BIND_JOB_SERVICE",
+          "reachable_from_outside": false
+        }
+      ],
+      "list": "components",
+      "list_total": 63,
+      "offset": 0,
+      "total": 21
+    }
+  },
+  "summary": "Part of android_components_list evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 21,
+    "total": 21
+  },
+  "locations": [],
+  "links": [
+    "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf"
+  ]
+}

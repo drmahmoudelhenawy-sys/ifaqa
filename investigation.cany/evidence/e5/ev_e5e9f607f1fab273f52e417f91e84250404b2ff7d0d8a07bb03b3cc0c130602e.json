@@ -1,0 +1,263 @@
+{
+  "id": "ev_e5e9f607f1fab273f52e417f91e84250404b2ff7d0d8a07bb03b3cc0c130602e",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.UnitStartRow",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "arabicTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->arabicTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "englishTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->englishTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "unit",
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->unit:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 16,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;-><init>(ILjava/lang/String;Ljava/lang/String;)V",
+        "registers": 4,
+        "signature": "public void <init>(int, java.lang.String, java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 23,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->copy$default(Lorg/goldenquran/freesoft/models/room/UnitStartRow;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/UnitStartRow;",
+        "registers": 6,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.UnitStartRow copy$default(org.goldenquran.freesoft.models.room.UnitStartRow, int, java.lang.String, java.lang.String, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->component2()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->component3()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->copy(ILjava/lang/String;Ljava/lang/String;)Lorg/goldenquran/freesoft/models/room/UnitStartRow;",
+        "registers": 4,
+        "signature": "public final org.goldenquran.freesoft.models.room.UnitStartRow copy(int, java.lang.String, java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->equals(Ljava/lang/Object;)Z",
+        "registers": 6,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getArabicTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->getArabicTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getArabicTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getEnglishTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->getEnglishTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getEnglishTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getUnit",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->getUnit()I",
+        "registers": 1,
+        "signature": "public final int getUnit()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;->toString()Ljava/lang/String;",
+        "registers": 6,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.UnitStartRow",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.UnitStartRow (classes2.dex) extends java.lang.Object: 4 fields, 12 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/UnitStartRow;"
+    }
+  ],
+  "links": []
+}

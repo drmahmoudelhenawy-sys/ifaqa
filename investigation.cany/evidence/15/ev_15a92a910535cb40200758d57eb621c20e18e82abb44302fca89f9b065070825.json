@@ -1,0 +1,769 @@
+{
+  "id": "ev_15a92a910535cb40200758d57eb621c20e18e82abb44302fca89f9b065070825",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": false,
+      "fields": [
+        "name",
+        "superclass",
+        "dex"
+      ],
+      "kind": "rows",
+      "limit": 141,
+      "list": "classes",
+      "offset": 400
+    },
+    "source": {
+      "evidence_id": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 141,
+      "next_offset": null,
+      "status": "page",
+      "total": 541
+    },
+    "from_evidence": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "from_tool": "android_classes_find",
+    "shown": {
+      "items": [
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.MasbahaSubmitRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.Meta",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.MosqueSubmitData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.MosqueSubmitRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.PrayOffsetData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.PrayOffsetRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.PushedMessage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.ReferralClaimData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.ReferralClaimRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.ReferralMeData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.ReferralMeRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.SimilarGroupResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.SimilarVerseResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.TasmeeLeaderboardData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.TasmeeLeaderboardEntry",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.TasmeeLocalizedName",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.TasmeeSubmitData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.TasmeeSubmitRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.AddPlayListsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.AddPlayListsSelectorFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.AudioFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.AudioLibFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.NewAudioService",
+          "superclass": "androidx.media3.session.MediaSessionService"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.PlayListFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService",
+          "superclass": "du"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.ReciterSuraListFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.audio.VerseTickerWidget",
+          "superclass": "android.appwidget.AppWidgetProvider"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.BooksDownloader",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.BooksLibraryFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.BooksListFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.BooksSelectorFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.DownloadAssetsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.FragmentSaveProfile",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.booksLibrary.ProfileListFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.bottom.ReadingAudioOptionsDialogFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.bottom.ReadingBookmarkOptionsDialogFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.bottom.ReadingBottomFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.bottom.books.BookViewerPagerFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.bottom.books.BooksFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.fileManager.AudioFileManager",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.fileManager.BooksFileManager",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.help.HowToUseFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.notifications.ExternalLinkBridge",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.notifications.NotificationsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.quranmenu.notes.NoteDialogFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.reading.FullViewFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.settings.FragmentSendSuggestion",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.settings.SettingsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.settings.SubjectFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.share.ShareFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.share.ShareVideoWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.sync.SyncProfilesFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.MainToolsFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.arbain.ArbainFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.arbain.ArbainHadithFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.asma.AsmaUlHusnaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.athkar.AthkarContentFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.athkar.AthkarFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.athkar.AthkarReminder",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.athkar.AthkarReminderReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.dorar.DorarSearchFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.duacommunity.DuaCommunityFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.duas.CustomAthkarFragment",
+          "superclass": "b02"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.duas.CustomDua",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.duas.CustomDuasFragment",
+          "superclass": "b02"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.events.IslamicEventReminderReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.events.IslamicEventsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.family.FamilyDuasFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.habits.HabitsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.hadith.HadithCheckFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.hadith.HadithEncyclopediaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.hadith.HadithEncyclopediaHadithFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.hajjumrah.HajjUmrahGuidesFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.AddKhetmaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.BottomKhetmaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.KhetmaDetailsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.KhetmaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.KhetmaReminderReciver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.KhetmaReminderRefreshWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.learning.LearningFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.library.LibraryBookFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.library.LibraryFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.library.LibraryReaderFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveRecordingPlayerActivity",
+          "superclass": "dm1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveSessionFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveSessionReminder$Armed",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveSessionReminderReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.a",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallActivity",
+          "superclass": "dm1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallService",
+          "superclass": "android.app.Service"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.classroom.ClassroomActivity",
+          "superclass": "dm1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.classroom.ClassroomArgs",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.DeclineCallReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.IncomingCallActivity",
+          "superclass": "dm1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.LiveMessagingService",
+          "superclass": "com.google.firebase.messaging.FirebaseMessagingService"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.DhikrCategory",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.DhikrItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaDay",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaGamification",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaReminderReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaSettings",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.mosque.MosqueEntry",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.mosque.MosqueResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.mosque.PendingMosque",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.mosque.a",
+          "superclass": "q49"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerFragment",
+          "superclass": "hn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerMonthFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+          "superclass": "android.app.Service"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerSettingsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerSetupWizardFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget",
+          "superclass": "android.appwidget.AppWidgetProvider"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget2",
+          "superclass": "android.appwidget.AppWidgetProvider"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.manualLocation.CitySearchFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.manualLocation.LocationMapFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.FridayReminderReciver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmActivity",
+          "superclass": "dm1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmRefreshWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+          "superclass": "android.app.Service"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.SalahReminderReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.qada.RamadanQadaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.qibla.CalibrationFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.qibla.QiblaFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.referral.ReferralFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.statistics.StatsticsFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.tasmee.TasmeeFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.worship.WorshipNightlyReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.worship.WorshipTrackerFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.zakat.FxRatesResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.zakat.MetalSpotResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.ui.tools.zakat.ZakatFragment",
+          "superclass": "rn1"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.AudioRefreshWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.AudioUpdateWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.MasbahaScoreUploadWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.ReferralClaimWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.SyncPullWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.SyncPushAllWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.workers.TasmeeScoreUploadWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        }
+      ],
+      "list": "classes",
+      "offset": 400,
+      "total": 541
+    }
+  },
+  "summary": "Part of android_classes_find evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 141,
+    "total": 541
+  },
+  "locations": [],
+  "links": [
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+  ]
+}

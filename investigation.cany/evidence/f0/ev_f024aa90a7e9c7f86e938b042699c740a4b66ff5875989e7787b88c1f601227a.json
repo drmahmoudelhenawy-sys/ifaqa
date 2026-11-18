@@ -1,0 +1,440 @@
+{
+  "id": "ev_f024aa90a7e9c7f86e938b042699c740a4b66ff5875989e7787b88c1f601227a",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_users_find",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.datastore.db.QuranDatabase",
+    "limit": 200,
+    "method_name": null,
+    "offset": 0,
+    "path": null
+  },
+  "result": {
+    "callers": 17,
+    "class": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+    "defined_in": "classes2.dex",
+    "method_name": null,
+    "references": [
+      {
+        "caller": "Lh50;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0009",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lh50;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00af",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->A()Ljs0;"
+      },
+      {
+        "caller": "Lh50;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00be",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->z()Les0;"
+      },
+      {
+        "caller": "Lh50;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00cd",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->B()Liu0;"
+      },
+      {
+        "caller": "Lh50;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0137",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->y()Lk40;"
+      },
+      {
+        "caller": "Lie8;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "000a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lie8;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0048",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->L()Lz99;"
+      },
+      {
+        "caller": "Lie8;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "006c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->z()Les0;"
+      },
+      {
+        "caller": "Lie8;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0083",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->K()Lgz8;"
+      },
+      {
+        "caller": "Lie8;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00c6",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->J()Lbp8;"
+      },
+      {
+        "caller": "Ljj9;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0062",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Ljj9;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0068",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->M()Lq3a;"
+      },
+      {
+        "caller": "Lkc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "002f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Lkc;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0086",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Lke7;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0014",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lke7;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01f8",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->I()Lsq7;"
+      },
+      {
+        "caller": "Lke7;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03fb",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->M()Lq3a;"
+      },
+      {
+        "caller": "Lx5;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0004",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lx5;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0040",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->E()Llh4;"
+      },
+      {
+        "caller": "Lx5;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->C()Les3;"
+      },
+      {
+        "caller": "Lyc2;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0003",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lyc2;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "002a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->D()Ldt3;"
+      },
+      {
+        "caller": "Lyc2;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00d9",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->C()Les3;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "00eb",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00f7",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->H()La77;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "012c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0138",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->I()Lsq7;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "013d",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0149",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->G()Le27;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "01a4",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lbf6;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01b0",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->F()Lzh6;"
+      },
+      {
+        "caller": "Ledd;->C(Landroid/content/Context;)Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0015",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->m:Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Ledd;->C(Landroid/content/Context;)Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->m:Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Ledd;->C(Landroid/content/Context;)Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "dex": "classes2.dex",
+        "instruction": "const-class",
+        "kind": "type",
+        "offset": "0025",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Ledd;->C(Landroid/content/Context;)Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0050",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Ledd;->C(Landroid/content/Context;)Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "dex": "classes2.dex",
+        "instruction": "sput-object",
+        "kind": "field",
+        "offset": "0052",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->m:Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+      },
+      {
+        "caller": "Lo30;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "02a7",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lo30;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02ad",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->N()Laga;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;-><clinit>()V",
+        "dex": "classes2.dex",
+        "instruction": "sput-object",
+        "kind": "field",
+        "offset": "0007",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase_Impl;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct",
+        "kind": "method",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;-><init>()V"
+      },
+      {
+        "caller": "Lou3;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "011f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lou3;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0125",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->E()Llh4;"
+      },
+      {
+        "caller": "Ltia;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0052",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Ltia;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "005c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->C()Les3;"
+      },
+      {
+        "caller": "Lw7;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0410",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lzr0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0052",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;"
+      },
+      {
+        "caller": "Lzr0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "005e",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->G()Le27;"
+      },
+      {
+        "caller": "Lzr0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0062",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->I()Lsq7;"
+      }
+    ],
+    "references_total": 48
+  },
+  "summary": "48 reference(s) to org.goldenquran.freesoft.datastore.db.QuranDatabase from 17 method(s) across 2 DEX file(s); defined in classes2.dex.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "static_references_only",
+      "message": "Only direct bytecode references are found; reflection, JNI, string-built class names and code loaded at run time are not."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 48,
+    "total": 48
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+    }
+  ],
+  "links": []
+}

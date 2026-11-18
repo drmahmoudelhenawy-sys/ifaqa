@@ -1,0 +1,307 @@
+{
+  "id": "ev_805357b49b3ccdb963b530692ae4f6508033258dbf7f6173a0967a8db9c21fdb",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->X0:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Y0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Z0:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->a1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->b1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "c1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->c1:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "d1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->d1:Las4;",
+        "type": "as4"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->e1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "f1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->f1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "g1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->g1:Lorg/goldenquran/freesoft/models/SuraAyahPage;",
+        "type": "org.goldenquran.freesoft.models.SuraAyahPage"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "h1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "i1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->i1:Las4;",
+        "type": "as4"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "j1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->j1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "k1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->k1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "l1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->l1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "m1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "n1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->n1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "o1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->o1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "p1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->p1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "q1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->q1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "r1",
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;",
+        "type": "ku6"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 144,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "registers": 6,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 94,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->A0()V",
+        "registers": 7,
+        "signature": "public final void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 848,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "registers": 57,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment (classes2.dex) extends rn1: 21 fields, 3 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+    }
+  ],
+  "links": []
+}

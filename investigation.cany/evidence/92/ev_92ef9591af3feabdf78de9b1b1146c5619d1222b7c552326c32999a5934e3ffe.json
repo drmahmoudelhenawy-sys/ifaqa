@@ -1,0 +1,968 @@
+{
+  "id": "ev_92ef9591af3feabdf78de9b1b1146c5619d1222b7c552326c32999a5934e3ffe",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 30,
+    "locale": null,
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": null,
+    "with_strings": false,
+    "xml_files": [
+      "res/xml/m3_button_group_child_size_change.xml",
+      "res/xml/m3_list_item_shape_state_list.xml",
+      "res/xml/m3_split_button_inner_corner_size_state_list.xml",
+      "res/xml/m3expressive_button_shape_state_list.xml",
+      "res/xml/paths.xml",
+      "res/xml/splits0.xml",
+      "res/xml/widget_provider.xml",
+      "res/xml/widget_provider2.xml",
+      "res/xml/widget_verse_ticker.xml"
+    ]
+  },
+  "result": {
+    "entries": [
+      {
+        "config": "default",
+        "id": "0x7f010002",
+        "key": "abc_grow_fade_in_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_grow_fade_in_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010003",
+        "key": "abc_popup_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010004",
+        "key": "abc_popup_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010005",
+        "key": "abc_shrink_fade_out_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000c",
+        "key": "btn_checkbox_to_checked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000d",
+        "key": "btn_checkbox_to_checked_box_outer_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000e",
+        "key": "btn_checkbox_to_checked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000f",
+        "key": "btn_checkbox_to_unchecked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010010",
+        "key": "btn_checkbox_to_unchecked_check_path_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010011",
+        "key": "btn_checkbox_to_unchecked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010012",
+        "key": "btn_radio_to_off_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010013",
+        "key": "btn_radio_to_off_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010014",
+        "key": "btn_radio_to_off_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010015",
+        "key": "btn_radio_to_on_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010016",
+        "key": "btn_radio_to_on_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010017",
+        "key": "btn_radio_to_on_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01001c",
+        "key": "fragment_fast_out_extra_slow_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/fragment_fast_out_extra_slow_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010021",
+        "key": "m3_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010022",
+        "key": "m3_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010023",
+        "key": "m3_motion_fade_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010024",
+        "key": "m3_motion_fade_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010026",
+        "key": "m3_side_sheet_enter_from_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_enter_from_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010028",
+        "key": "m3_side_sheet_exit_to_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_exit_to_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010029",
+        "key": "mtrl_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002a",
+        "key": "mtrl_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002b",
+        "key": "mtrl_card_lowers_interpolator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_card_lowers_interpolator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020002",
+        "key": "design_appbar_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_appbar_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020003",
+        "key": "design_fab_hide_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_hide_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020004",
+        "key": "design_fab_show_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_show_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020005",
+        "key": "fragment_close_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_close_enter.xml",
+        "value_type": "string"
+      }
+    ],
+    "entries_matching": 46569,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": [
+      {
+        "path": "res/xml/m3_button_group_child_size_change.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_pressed=\"true\" app:widthChange=\"15%\">\n  </item>\n  <item app:widthChange=\"0%\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3_list_item_shape_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_checkable=\"true\" android:state_checked=\"true\" app:shapeAppearance=\"?0x7f04037b\">\n  </item>\n  <item android:state_pressed=\"true\" app:shapeAppearance=\"?0x7f040381\">\n  </item>\n  <item android:state_focused=\"true\" app:shapeAppearance=\"?0x7f04037d\">\n  </item>\n  <item android:state_hovered=\"true\" app:shapeAppearance=\"?0x7f04037e\">\n  </item>\n  <item android:state_single=\"true\" app:shapeAppearance=\"?0x7f040382\">\n  </item>\n  <item android:state_first=\"true\" app:shapeAppearance=\"?0x7f04037c\">\n  </item>\n  <item android:state_last=\"true\" app:shapeAppearance=\"?0x7f04037f\">\n  </item>\n  <item android:state_middle=\"true\" app:shapeAppearance=\"?0x7f040380\">\n  </item>\n  <item app:shapeAppearance=\"?0x7f040380\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3_split_button_inner_corner_size_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_checkable=\"true\" android:state_pressed=\"true\" app:cornerSize=\"12dp\">\n  </item>\n  <item android:state_checked=\"true\" app:cornerSize=\"50%\">\n  </item>\n  <item app:cornerSize=\"4dp\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/m3expressive_button_shape_state_list.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<selector xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\">\n  <item android:state_pressed=\"true\" app:shapeAppearance=\"?0x7f040174\">\n  </item>\n  <item android:state_checkable=\"true\" android:state_checked=\"true\" app:shapeAppearance=\"?0x7f040172\">\n  </item>\n  <item app:shapeAppearance=\"?0x7f040173\">\n  </item>\n</selector>\n"
+      },
+      {
+        "path": "res/xml/paths.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<paths>\n  <external-path name=\"external\" path=\".\">\n  </external-path>\n  <external-files-path name=\"external_files\" path=\".\">\n  </external-files-path>\n  <cache-path name=\"cache\" path=\".\">\n  </cache-path>\n  <external-cache-path name=\"external_cache\" path=\".\">\n  </external-cache-path>\n  <files-path name=\"files\" path=\".\">\n  </files-path>\n  <files-path name=\"filesprovider\" path=\".\">\n  </files-path>\n  <cache-path name=\"filesprovider\" path=\".\">\n  </cache-path>\n  <external-media-path name=\"filesprovider\" path=\".\">\n  </external-media-path>\n  <files-path name=\"shared_images\" path=\".\">\n  </files-path>\n  <files-path name=\"shared_audio\" path=\".\">\n  </files-path>\n  <files-path name=\"internal_files\" path=\".\">\n  </files-path>\n  <files-path name=\"shared_images\" path=\".\">\n  </files-path>\n</paths>\n"
+      },
+      {
+        "path": "res/xml/splits0.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<splits>\n  <module name=\"\">\n    <language>\n      <entry key=\"af\" split=\"\">\n      </entry>\n      <entry key=\"am\" split=\"\">\n      </entry>\n      <entry key=\"ar\" split=\"\">\n      </entry>\n      <entry key=\"as\" split=\"\">\n      </entry>\n      <entry key=\"az\" split=\"\">\n      </entry>\n      <entry key=\"be\" split=\"\">\n      </entry>\n      <entry key=\"bg\" split=\"\">\n      </entry>\n      <entry key=\"bn\" split=\"\">\n      </entry>\n      <entry key=\"bs\" split=\"\">\n      </entry>\n      <entry key=\"ca\" split=\"\">\n      </entry>\n      <entry key=\"cs\" split=\"\">\n      </entry>\n      <entry key=\"da\" split=\"\">\n      </entry>\n      <entry key=\"de\" split=\"\">\n      </entry>\n      <entry key=\"el\" split=\"\">\n      </entry>\n      <entry key=\"en\" split=\"\">\n      </entry>\n      <entry key=\"es\" split=\"\">\n      </entry>\n      <entry key=\"et\" split=\"\">\n      </entry>\n      <entry key=\"eu\" split=\"\">\n      </entry>\n      <entry key=\"fa\" split=\"\">\n      </entry>\n      <entry key=\"fi\" split=\"\">\n      </entry>\n      <entry key=\"fr\" split=\"\">\n      </entry>\n      <entry key=\"gl\" split=\"\">\n      </entry>\n      <entry key=\"gu\" split=\"\">\n      </entry>\n      <entry key=\"hi\" split=\"\">\n      </entry>\n      <entry key=\"hr\" split=\"\">\n      </entry>\n      <entry key=\"hu\" split=\"\">\n      </entry>\n      <entry key=\"hy\" split=\"\">\n      </entry>\n      <entry key=\"in\" split=\"\">\n      </entry>\n      <entry key=\"is\" split=\"\">\n      </entry>\n      <entry key=\"it\" split=\"\">\n      </entry>\n      <entry key=\"iw\" split=\"\">\n      </entry>\n      <entry key=\"ja\" split=\"\">\n      </entry>\n      <entry key=\"ka\" split=\"\">\n      </entry>\n      <entry key=\"kk\" split=\"\">\n      </entry>\n      <entry key=\"km\" split=\"\">\n      </entry>\n      <entry key=\"kn\" split=\"\">\n      </entry>\n      <entry key=\"ko\" split=\"\">\n      </entry>\n      <entry key=\"ky\" split=\"\">\n      </entry>\n      <entry key=\"lo\" split=\"\">\n      </entry>\n      <entry key=\"lt\" split=\"\">\n      </entry>\n      <entry key=\"lv\" split=\"\">\n      </entry>\n      <entry key=\"mk\" split=\"\">\n      </entry>\n      <entry key=\"ml\" split=\"\">\n      </entry>\n      <entry key=\"mn\" split=\"\">\n      </entry>\n      <entry key=\"mr\" split=\"\">\n      </entry>\n      <entry key=\"ms\" split=\"\">\n      </entry>\n      <entry key=\"my\" split=\"\">\n      </entry>\n      <entry key=\"nb\" split=\"\">\n      </entry>\n      <entry key=\"ne\" split=\"\">\n      </entry>\n      <entry key=\"nl\" split=\"\">\n      </entry>\n      <entry key=\"or\" split=\"\">\n      </entry>\n      <entry key=\"pa\" split=\"\">\n      </entry>\n      <entry key=\"pl\" split=\"\">\n      </entry>\n      <entry key=\"pt\" split=\"\">\n      </entry>\n      <entry key=\"ro\" split=\"\">\n      </entry>\n      <entry key=\"ru\" split=\"\">\n      </entry>\n      <entry key=\"si\" split=\"\">\n      </entry>\n      <entry key=\"sk\" split=\"\">\n      </entry>\n      <entry key=\"sl\" split=\"\">\n      </entry>\n      <entry key=\"sq\" split=\"\">\n      </entry>\n      <entry key=\"sr\" split=\"\">\n      </entry>\n      <entry key=\"sv\" split=\"\">\n      </entry>\n      <entry key=\"sw\" split=\"\">\n      </entry>\n      <entry key=\"ta\" split=\"\">\n      </entry>\n      <entry key=\"te\" split=\"\">\n      </entry>\n      <entry key=\"th\" split=\"\">\n      </entry>\n      <entry key=\"tl\" split=\"\">\n      </entry>\n      <entry key=\"tr\" split=\"\">\n      </entry>\n      <entry key=\"uk\" split=\"\">\n      </entry>\n      <entry key=\"ur\" split=\"\">\n      </entry>\n      <entry key=\"uz\" split=\"\">\n      </entry>\n      <entry key=\"vi\" split=\"\">\n      </entry>\n      <entry key=\"zh\" split=\"\">\n      </entry>\n      <entry key=\"zu\" split=\"\">\n      </entry>\n    </language>\n  </module>\n</splits>\n"
+      },
+      {
+        "path": "res/xml/widget_provider.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:minWidth=\"300dp\" android:minHeight=\"70dp\" android:updatePeriodMillis=\"900000\" android:initialLayout=\"@0x7f0d00a4\" android:resizeMode=\"0x3\" android:widgetCategory=\"0x1\" android:targetCellWidth=\"4\" android:targetCellHeight=\"1\">\n</appwidget-provider>\n"
+      },
+      {
+        "path": "res/xml/widget_provider2.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:minWidth=\"250dp\" android:minHeight=\"110dp\" android:updatePeriodMillis=\"900000\" android:initialLayout=\"@0x7f0d00a5\" android:resizeMode=\"0x3\" android:widgetCategory=\"0x1\" android:targetCellWidth=\"4\" android:targetCellHeight=\"2\">\n</appwidget-provider>\n"
+      },
+      {
+        "path": "res/xml/widget_verse_ticker.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<appwidget-provider xmlns:android=\"http://schemas.android.com/apk/res/android\" android:description=\"@0x7f130a15\" android:minWidth=\"180dp\" android:minHeight=\"110dp\" android:updatePeriodMillis=\"0\" android:initialLayout=\"@0x7f0d00a7\" android:resizeMode=\"0x3\" android:minResizeWidth=\"110dp\" android:minResizeHeight=\"70dp\" android:widgetCategory=\"0x1\" android:previewLayout=\"@0x7f0d00a7\" android:targetCellWidth=\"4\" android:targetCellHeight=\"2\">\n</appwidget-provider>\n"
+      }
+    ]
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 30 entries.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 30,
+    "total": 46569,
+    "next_offset": 30
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

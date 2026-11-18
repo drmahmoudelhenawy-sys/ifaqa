@@ -1,0 +1,344 @@
+{
+  "id": "ev_d98e00581bef96d3db871ebafbcb70e17c17835eb6cefddaf11b1144b131f1e6",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "L",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->L:Loy8;",
+        "type": "oy8"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "M",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->M:Ltp7;",
+        "type": "tp7"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "A",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->A:Landroid/os/PowerManager$WakeLock;",
+        "type": "android.os.PowerManager$WakeLock"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "B",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->B:Lxf2;",
+        "type": "xf2"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "C",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->C:Landroid/os/Handler;",
+        "type": "android.os.Handler"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "D",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->D:Lnx2;",
+        "type": "nx2"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "E",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->E:Landroid/os/HandlerThread;",
+        "type": "android.os.HandlerThread"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "F",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->F:Landroid/os/Handler;",
+        "type": "android.os.Handler"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "G",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->G:Ljava/lang/Object;",
+        "type": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "volatile"
+        ],
+        "kind": "instance",
+        "name": "H",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->H:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "I",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->I:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "J",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->J:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "K",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->K:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "w",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->w:Landroid/media/MediaPlayer;",
+        "type": "android.media.MediaPlayer"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "x",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->x:Landroid/media/AudioManager;",
+        "type": "android.media.AudioManager"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "y",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->y:Landroid/media/AudioFocusRequest;",
+        "type": "android.media.AudioFocusRequest"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "z",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->z:Ln67;",
+        "type": "n67"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 15,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;-><clinit>()V",
+        "registers": 1,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 50,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;-><init>()V",
+        "registers": 4,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 126,
+        "kind": "virtual",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->a()V",
+        "registers": 9,
+        "signature": "public final void a()",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "b",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->b()V",
+        "registers": 2,
+        "signature": "public final void b()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 62,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->c(I)V",
+        "registers": 5,
+        "signature": "public final void c(int)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "onBind",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;",
+        "registers": 2,
+        "signature": "public final android.os.IBinder onBind(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->onCreate()V",
+        "registers": 3,
+        "signature": "public final void onCreate()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->onDestroy()V",
+        "registers": 4,
+        "signature": "public final void onDestroy()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 652,
+        "kind": "virtual",
+        "name": "onStartCommand",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;->onStartCommand(Landroid/content/Intent;II)I",
+        "registers": 22,
+        "signature": "public final int onStartCommand(android.content.Intent, int, int)",
+        "try_blocks": 3
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/app/Service;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService (classes2.dex) extends android.app.Service: 17 fields, 9 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;"
+    }
+  ],
+  "links": []
+}

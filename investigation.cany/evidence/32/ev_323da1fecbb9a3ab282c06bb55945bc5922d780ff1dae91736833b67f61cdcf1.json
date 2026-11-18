@@ -1,0 +1,1062 @@
+{
+  "id": "ev_323da1fecbb9a3ab282c06bb55945bc5922d780ff1dae91736833b67f61cdcf1",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "name",
+        "superclass"
+      ],
+      "kind": "rows",
+      "limit": 600,
+      "list": "classes",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_94a7be023d3e063fea4813a620c75e12a900fb580435bd3f107ad9269e46988d",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 250,
+      "next_offset": null,
+      "status": "page",
+      "total": 250
+    },
+    "from_evidence": "ev_94a7be023d3e063fea4813a620c75e12a900fb580435bd3f107ad9269e46988d",
+    "from_tool": "android_classes_find",
+    "shown": {
+      "items": [
+        {
+          "name": "org.goldenquran.freesoft.App",
+          "superclass": "android.app.Application"
+        },
+        {
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "superclass": "em0"
+        },
+        {
+          "name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+          "superclass": "android.app.Activity"
+        },
+        {
+          "name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase",
+          "superclass": "v18"
+        },
+        {
+          "name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase_Impl",
+          "superclass": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase"
+        },
+        {
+          "name": "org.goldenquran.freesoft.datastore.db.QuranDatabase",
+          "superclass": "v18"
+        },
+        {
+          "name": "org.goldenquran.freesoft.datastore.db.QuranDatabase_Impl",
+          "superclass": "org.goldenquran.freesoft.datastore.db.QuranDatabase"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.AthkarNudgeWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.HabitPlannerWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.PrayerCheckinReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.PrayerFollowupWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.PrayerMotionService",
+          "superclass": "android.app.Service"
+        },
+        {
+          "name": "org.goldenquran.freesoft.habits.ReadingNudgeWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.AppDataSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.AthkarCompletionSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.AudioRangeUnit",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.AuthResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BackupData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookDownloadUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookHeader",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookHeader$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookMarkObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookMarks",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BookmarkBackup",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BooksLibraryUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.BottomUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.CustomDhikrSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.CustomDuaSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.DimPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.FooterNavItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.FooterUiItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header$Playlist",
+          "superclass": "org.goldenquran.freesoft.models.Header"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header$PresetPlaylist",
+          "superclass": "org.goldenquran.freesoft.models.Header"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header$Reciter",
+          "superclass": "org.goldenquran.freesoft.models.Header"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header$ShowMore",
+          "superclass": "org.goldenquran.freesoft.models.Header"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Header$Text",
+          "superclass": "org.goldenquran.freesoft.models.Header"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.HeaderItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaDayInfo",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaDayInfo$Status",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaProgramItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaWird",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.KhetmaWirdItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.MainActivityUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.MainMenuNavItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Mushaf",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Mushaf$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.MushafProperties",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.MushafPropertiesKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.NoteBackup",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.NoteObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Notes",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent$Error",
+          "superclass": "org.goldenquran.freesoft.models.PackEvent"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent$Installed",
+          "superclass": "org.goldenquran.freesoft.models.PackEvent"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent$Progress",
+          "superclass": "org.goldenquran.freesoft.models.PackEvent"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent$RequiresUserConfirmation",
+          "superclass": "org.goldenquran.freesoft.models.PackEvent"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PackEvent$WaitingForWifi",
+          "superclass": "org.goldenquran.freesoft.models.PackEvent"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PageAdapterSetup",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PageObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PendingHighlight",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PlayListItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PlayListItem$Creator",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PlaylistSummary",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PlaylistSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PlaylistTrackUi",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PrayerAdjustmentUi",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PrayerCheckinSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PrayerReminder",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.PrayerRowUi",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ProfileCreatedResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ProfileResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Progress",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.Quadruple",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.RangeUnitStart",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ReadingSessionSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ReciterParcelable",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ReciterParcelable$Creator",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ReciterSuraUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ReciterTrackProgressPayload",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SettingOption",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SettingValue",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SettingValue$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SimpleStat",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.StartupPrayerUiState",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SuraAyah",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SuraAyahPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SuraAyahTiming",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.SuraItemSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.TelawaSync",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.TextTag",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.UserInfo",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VerseObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VerseRange",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VerseShape",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VerseSpan",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VerseText",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.VersionResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.WordContent",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.YearWeekMonth",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.Ayah",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.AyahListItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.AyahSuraPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.ChapterHead",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.DownloadedObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.DownloadedObjectKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.Mark",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.PageData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.PartStart",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.PartsListItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.ayalisting.SureListItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Additions",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Additions$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.AthkarCompletion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Book",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Book$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.BookContent",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.BookContent$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Bookmark",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Bookmark$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.CategoryHadith",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.CategoryHadith$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ContentTranslationEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ContentTranslationEntity$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.DuaItemEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.DuaSectionEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.FamilyDuaEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.HadithItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Khetma",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Mawdoo3",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Mawdoo3$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Mo3jm",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Mo3jm$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Notes",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Notes$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.NotificationObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.NotificationObject$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.NozoolReasons",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.PlayerList",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.PlayerList$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.PrayerCheckin",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ReadingSession",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Reciter",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Reciter$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ReciterTracks",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ReciterTracks$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ReciterTracksParcelable",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ReciterTracksParcelable$Creator",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.RelatedThiker",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SearchObject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SearchObject$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SimilarGroup",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SimilarVerse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Statistics",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Statistics$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SuraPlayerItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SuraPlayerItem$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.SurahTiming",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.TasmeeSession",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.TasmeeSession$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Telawa",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Telawa$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.Thiker",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.UserMushaf",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.UserMushaf$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.UserMushafKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.WordContentEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.WordTextEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.WordsMeaning",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ZekrHadith",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.ZekrHadith$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.forty",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.local.recitation",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.prayer.PrayLocation",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.prayer.Prayer",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.prayer.Prayer$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.AyahTouchRegion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.TextBackground",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.TextPageContent",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.TextTagRange",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.TextVerseMarker",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.reading.TextVerseRange",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.ChapterEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.ChapterHeaderEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.PageData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.PageEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.PageHeaderChapterEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.PageHeaderEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.PartEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.QuarterEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.UnitStartRow",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.VerseEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.VerseHighlightEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.VerseLocation",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.room.VerseMarkerEntity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.CuratedSurahSuggestion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.RecentSearch",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchBookSuggestion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchCategory",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchCategory$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchResultItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchResultSection",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.search.SearchSectionType",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "name": "org.goldenquran.freesoft.models.settings.ThemeColorOption",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.AiKeywords",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.AthkarVersionsResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.AudioResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.AudioResult",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.BaseResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.BookRepsonseNew",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.CityResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.CountryInfo",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaAmeenData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaAuthor",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaDeleteData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaFeedData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaFeedRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaItemResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaPostData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaPostIdRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaPostModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaPostRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaReportData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaReportRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaSectionResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaShareData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuaStats",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.DuasResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuaRelationResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuaResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuasResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencArabic",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencCategories",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencCategory",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencHadith",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencLanguage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencModelsKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadeethencPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithAuthenticity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithBookItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithCheckData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithDecision",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithResult",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.HadithSubTab",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "name": "org.goldenquran.freesoft.network.models.LibraryBook",
+          "superclass": "java.lang.Object"
+        }
+      ],
+      "list": "classes",
+      "offset": 0,
+      "total": 250
+    }
+  },
+  "summary": "Part of android_classes_find evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 250,
+    "total": 250
+  },
+  "locations": [],
+  "links": [
+    "ev_94a7be023d3e063fea4813a620c75e12a900fb580435bd3f107ad9269e46988d"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "ev_b0d3fbe1214ab3d9d342603e5b3f0b2f3b27b5ba079fcbec865c87b86401bac3",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 12,
+      "list": "classes",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 12,
+      "next_offset": 12,
+      "status": "page",
+      "total": 541
+    },
+    "from_evidence": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "from_tool": "android_classes_find",
+    "shown": {
+      "field_names": [
+        "access",
+        "descriptor",
+        "dex",
+        "fields",
+        "methods",
+        "name",
+        "superclass"
+      ],
+      "items": [
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/App;",
+          "dex": "classes.dex",
+          "fields": 2,
+          "methods": 6,
+          "name": "org.goldenquran.freesoft.App",
+          "superclass": "android.app.Application"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/activity/MainActivity;",
+          "dex": "classes.dex",
+          "fields": 19,
+          "methods": 10,
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "superclass": "em0"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/activity/VoicePlayActivity;",
+          "dex": "classes.dex",
+          "fields": 0,
+          "methods": 2,
+          "name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+          "superclass": "android.app.Activity"
+        },
+        {
+          "access": [
+            "public",
+            "abstract"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+          "dex": "classes2.dex",
+          "fields": 3,
+          "methods": 3,
+          "name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase",
+          "superclass": "v18"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;",
+          "dex": "classes2.dex",
+          "fields": 2,
+          "methods": 7,
+          "name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase_Impl",
+          "superclass": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase"
+        },
+        {
+          "access": [
+            "public",
+            "abstract"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+          "dex": "classes2.dex",
+          "fields": 2,
+          "methods": 18,
+          "name": "org.goldenquran.freesoft.datastore.db.QuranDatabase",
+          "superclass": "v18"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase_Impl;",
+          "dex": "classes2.dex",
+          "fields": 16,
+          "methods": 22,
+          "name": "org.goldenquran.freesoft.datastore.db.QuranDatabase_Impl",
+          "superclass": "org.goldenquran.freesoft.datastore.db.QuranDatabase"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/habits/AthkarNudgeWorker;",
+          "dex": "classes2.dex",
+          "fields": 0,
+          "methods": 2,
+          "name": "org.goldenquran.freesoft.habits.AthkarNudgeWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/habits/HabitPlannerWorker;",
+          "dex": "classes2.dex",
+          "fields": 0,
+          "methods": 2,
+          "name": "org.goldenquran.freesoft.habits.HabitPlannerWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerCheckinReceiver;",
+          "dex": "classes2.dex",
+          "fields": 0,
+          "methods": 2,
+          "name": "org.goldenquran.freesoft.habits.PrayerCheckinReceiver",
+          "superclass": "android.content.BroadcastReceiver"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerFollowupWorker;",
+          "dex": "classes2.dex",
+          "fields": 0,
+          "methods": 2,
+          "name": "org.goldenquran.freesoft.habits.PrayerFollowupWorker",
+          "superclass": "androidx.work.CoroutineWorker"
+        },
+        {
+          "access": [
+            "public",
+            "final"
+          ],
+          "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerMotionService;",
+          "dex": "classes2.dex",
+          "fields": 8,
+          "methods": 4,
+          "name": "org.goldenquran.freesoft.habits.PrayerMotionService",
+          "superclass": "android.app.Service"
+        }
+      ],
+      "list": "classes",
+      "offset": 0,
+      "total": 541
+    }
+  },
+  "summary": "Part of android_classes_find evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 12,
+    "total": 541,
+    "next_offset": 12
+  },
+  "locations": [],
+  "links": [
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+  ]
+}

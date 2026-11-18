@@ -1,0 +1,1657 @@
+{
+  "id": "ev_1cf9c110953e438f181cdee9d651e62eb5cd727793b8f3ff1b9d838d8b152173",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_users_find",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.VerseEntity",
+    "limit": 200,
+    "method_name": null,
+    "offset": 0,
+    "path": null
+  },
+  "result": {
+    "callers": 109,
+    "class": "Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+    "defined_in": "classes2.dex",
+    "method_name": null,
+    "references": [
+      {
+        "caller": "Lb8;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0075",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lb8;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "007a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getTranslation()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lb8;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0082",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lb8;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "008d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lgwc;->b(Ljava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/List;)V",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "000e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lgwc;->b(Ljava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/List;)V",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0010",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0032",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0034",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0047",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapterUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0053",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getSearchText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0057",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0063",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getFontId()I"
+      },
+      {
+        "caller": "Lj52;->e(Lorg/goldenquran/freesoft/models/room/VerseEntity;)I",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0003",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Lj52;->e(Lorg/goldenquran/freesoft/models/room/VerseEntity;)I",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "000e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Ljyc;->b(Lorg/goldenquran/freesoft/models/room/VerseEntity;Ljava/lang/String;Lbp9;Lbp9;JJZZLfk3;I)V",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00f4",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getTranslation()Ljava/lang/String;"
+      },
+      {
+        "caller": "Ljyc;->b(Lorg/goldenquran/freesoft/models/room/VerseEntity;Ljava/lang/String;Lbp9;Lbp9;JJZZLfk3;I)V",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00f8",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Ljyc;->b(Lorg/goldenquran/freesoft/models/room/VerseEntity;Ljava/lang/String;Lbp9;Lbp9;JJZZLfk3;I)V",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "010f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Log5;->compare(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "01df",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Log5;->compare(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01e1",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Log5;->compare(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "01e9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Log5;->compare(Ljava/lang/Object;Ljava/lang/Object;)I",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01eb",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lpl8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0042",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lpl8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0044",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lpl8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0055",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "005c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0068",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getFontId()I"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "008c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0094",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "009c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lw69;->a(Landroid/content/Context;Ljava/lang/String;ILht1;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00b3",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lx58;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0015",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lx58;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lyh1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "004a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lyh1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lyh1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0058",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lb5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "04ae",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lb5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "04b9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lb5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0657",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lb5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0692",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "003d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0051",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "005a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0069",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0089",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lbab;->b(Ljava/util/List;ZIILjava/lang/String;Lkotlin/jvm/functions/Function1;Lki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00c6",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lbab;->b(Ljava/util/List;ZIILjava/lang/String;Lkotlin/jvm/functions/Function1;Lki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual/range",
+        "kind": "method",
+        "offset": "00c8",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getSearchText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lbab;->b(Ljava/util/List;ZIILjava/lang/String;Lkotlin/jvm/functions/Function1;Lki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "01ab",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lbab;->b(Ljava/util/List;ZIILjava/lang/String;Lkotlin/jvm/functions/Function1;Lki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual/range",
+        "kind": "method",
+        "offset": "01ad",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lbab;->c(ZZLorg/goldenquran/freesoft/models/room/VerseEntity;ZLki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00de",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lbab;->c(ZZLorg/goldenquran/freesoft/models/room/VerseEntity;ZLki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00ee",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lbab;->c(ZZLorg/goldenquran/freesoft/models/room/VerseEntity;ZLki3;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00f8",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Ld86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0129",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPartId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ld86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0136",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "009d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00ac",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0121",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "012f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0188",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0194",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0198",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01e1",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "01fd",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "020b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0278",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "027c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02a1",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02ac",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02c7",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0009",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0029",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setChapter(Lorg/goldenquran/freesoft/models/room/ChapterEntity;)V"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "002c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPartId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setPart(Lorg/goldenquran/freesoft/models/room/PartEntity;)V"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "004e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getQuarterId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "006d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setQuarter(Lorg/goldenquran/freesoft/models/room/QuarterEntity;)V"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0070",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getMarkerId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0086",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setMarker(Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;)V"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0089",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Ldwc;->a(Lorg/goldenquran/freesoft/models/room/VerseEntity;Lx76;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/Map;Ljava/util/Map;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00a0",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setHighlights(Ljava/util/List;)V"
+      },
+      {
+        "caller": "Le86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0026",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0203",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0205",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "new-instance",
+        "kind": "type",
+        "offset": "020b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "020d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0220",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPart()Lorg/goldenquran/freesoft/models/room/PartEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct/range",
+        "kind": "method",
+        "offset": "0248",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "024b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setTranslation(Ljava/lang/String;)V"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0253",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0266",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Le9;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "027e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setTranslation(Ljava/lang/String;)V"
+      },
+      {
+        "caller": "Lfh3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0089",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lfh3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "008d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getFontId()I"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00a0",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00b1",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00ba",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00be",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00c2",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00c6",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00d9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lga8;->g(Lh6a;Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00e8",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getFontId()I"
+      },
+      {
+        "caller": "Lh27;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0288",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lh27;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0293",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getMarker()Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;"
+      },
+      {
+        "caller": "Lhh;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "03d7",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lhh;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03e9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lhh;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03ed",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Lhh;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03ff",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lhk0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00c4",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lhk0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00d3",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lhk0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00d9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lhk0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00e6",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lhk0;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00f2",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lht0;->h(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0053",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lht0;->h(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "005b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getTranslation()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lht0;->h(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0067",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lht0;->h(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget",
+        "kind": "field",
+        "offset": "007a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->$stable:I"
+      },
+      {
+        "caller": "Lhz;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0313",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Li65;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "new-instance",
+        "kind": "type",
+        "offset": "03df",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Li65;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct/range",
+        "kind": "method",
+        "offset": "03e3",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V"
+      },
+      {
+        "caller": "Li65;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "new-instance",
+        "kind": "type",
+        "offset": "0518",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Li65;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct/range",
+        "kind": "method",
+        "offset": "051c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V"
+      },
+      {
+        "caller": "Lik0;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0043",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lik0;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0047",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Ljc0;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "031f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Ljc0;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0343",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUnicode()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lkn2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "06c5",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lkn2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "06c9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getUthmanicText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Lkn2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "06d3",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getText()Ljava/lang/String;"
+      },
+      {
+        "caller": "Ll77;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0068",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Ll77;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "006a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00e1",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00e3",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0101",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0103",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getMarkerId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "01dc",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual/range",
+        "kind": "method",
+        "offset": "01de",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual/range",
+        "kind": "method",
+        "offset": "01ef",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "024a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "024c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "025a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getMarkerId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "02f2",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02f4",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0302",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "030a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "03ea",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "03f6",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03fa",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPartId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "04b0",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "04b4",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Lmp7;->d(Landroid/text/Spanned;Ljava/util/List;I)Lorg/goldenquran/freesoft/models/reading/TextVerseRange;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "009e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Ln90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02e9",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPageId()Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0169",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "016b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getHighlights()Ljava/util/List;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0205",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "026f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0278",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getId()I"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0281",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0341",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0343",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getColor()I"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0349",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getHighlights()Ljava/util/List;"
+      },
+      {
+        "caller": "Lobb;->c(ILorg/goldenquran/freesoft/models/room/PageData;Landroid/graphics/Bitmap;Ljava/util/List;Lorg/goldenquran/freesoft/models/PageAdapterSetup;ZLorg/goldenquran/freesoft/ui/reading/FullViewFragment;Lr78;ZZLc46;Lfk3;I)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "03ea",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getColor()I"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "005a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "new-instance",
+        "kind": "type",
+        "offset": "005e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0060",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0073",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getPart()Lorg/goldenquran/freesoft/models/room/PartEntity;"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct/range",
+        "kind": "method",
+        "offset": "009c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "009f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setTranslation(Ljava/lang/String;)V"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00a7",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getChapter()Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00ba",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->getNumberInChapter()I"
+      },
+      {
+        "caller": "Lol8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00d2",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->setTranslation(Ljava/lang/String;)V"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput",
+        "kind": "field",
+        "offset": "0009",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->id:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput",
+        "kind": "field",
+        "offset": "000b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->numberInChapter:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "000d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->uthmanicText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "000f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->text:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0011",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->cleanText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0013",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->searchText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0015",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->unicode:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0017",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->numberInChapterUnicode:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput",
+        "kind": "field",
+        "offset": "0019",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->fontId:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput",
+        "kind": "field",
+        "offset": "001b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->color:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "001d",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->chapterId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "001f",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->partId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0021",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->quarterId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0023",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->pageId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0025",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->markerId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "002c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->highlights:Ljava/util/List;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget",
+        "kind": "field",
+        "offset": "0008",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->id:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget",
+        "kind": "field",
+        "offset": "0011",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->numberInChapter:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->uthmanicText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0023",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->text:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "002c",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->cleanText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0035",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->searchText:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "003e",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->unicode:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0047",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->numberInChapterUnicode:Ljava/lang/String;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget",
+        "kind": "field",
+        "offset": "0050",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->fontId:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget",
+        "kind": "field",
+        "offset": "0059",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->color:I"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0062",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->chapterId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "006b",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->partId:Ljava/lang/Integer;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseEntity;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseEntity;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0074",
+        "target": "Lorg/goldenquran/freesoft/models/room/VerseEntity;->quarterId:Ljava/lang/Integer;"
+      }
+    ],
+    "references_total": 412
+  },
+  "summary": "412 reference(s) to org.goldenquran.freesoft.models.room.VerseEntity from 109 method(s) across 2 DEX file(s); defined in classes2.dex.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "static_references_only",
+      "message": "Only direct bytecode references are found; reflection, JNI, string-built class names and code loaded at run time are not."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 200,
+    "total": 412,
+    "next_offset": 200
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/VerseEntity;"
+    }
+  ],
+  "links": []
+}

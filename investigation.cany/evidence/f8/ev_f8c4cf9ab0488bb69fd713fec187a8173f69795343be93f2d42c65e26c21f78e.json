@@ -1,0 +1,132 @@
+{
+  "id": "ev_f8c4cf9ab0488bb69fd713fec187a8173f69795343be93f2d42c65e26c21f78e",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.duas.CustomDuasFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;->a1:Lvz1;",
+        "type": "vz1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;->b1:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;-><init>()V",
+        "registers": 2,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;->B0()Lc02;",
+        "registers": 1,
+        "signature": "public final c02 B0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;->C0()I",
+        "registers": 1,
+        "signature": "public final int C0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;->D0()Le02;",
+        "registers": 1,
+        "signature": "public final e02 D0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.duas.CustomDuasFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lb02;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.duas.CustomDuasFragment (classes2.dex) extends b02: 2 fields, 4 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/duas/CustomDuasFragment;"
+    }
+  ],
+  "links": []
+}

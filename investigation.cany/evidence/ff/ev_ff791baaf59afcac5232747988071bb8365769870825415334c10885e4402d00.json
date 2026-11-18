@@ -1,0 +1,821 @@
+{
+  "id": "ev_ff791baaf59afcac5232747988071bb8365769870825415334c10885e4402d00",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "dm1",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Ldm1;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "A",
+        "reference": "Ldm1;->A:Li9a;",
+        "type": "i9a"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "B",
+        "reference": "Ldm1;->B:Lzl1;",
+        "type": "zl1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "C",
+        "reference": "Ldm1;->C:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "D",
+        "reference": "Ldm1;->D:Ljava/util/concurrent/atomic/AtomicInteger;",
+        "type": "java.util.concurrent.atomic.AtomicInteger"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "E",
+        "reference": "Ldm1;->E:Lbm1;",
+        "type": "bm1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "F",
+        "reference": "Ldm1;->F:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "G",
+        "reference": "Ldm1;->G:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "H",
+        "reference": "Ldm1;->H:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "I",
+        "reference": "Ldm1;->I:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "J",
+        "reference": "Ldm1;->J:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "K",
+        "reference": "Ldm1;->K:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "L",
+        "reference": "Ldm1;->L:Ljava/util/concurrent/CopyOnWriteArrayList;",
+        "type": "java.util.concurrent.CopyOnWriteArrayList"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "M",
+        "reference": "Ldm1;->M:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "N",
+        "reference": "Ldm1;->N:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "O",
+        "reference": "Ldm1;->O:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "P",
+        "reference": "Ldm1;->P:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Q",
+        "reference": "Ldm1;->Q:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "x",
+        "reference": "Ldm1;->x:Lws1;",
+        "type": "ws1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "y",
+        "reference": "Ldm1;->y:Lxf2;",
+        "type": "xf2"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "z",
+        "reference": "Ldm1;->z:Lpe6;",
+        "type": "pe6"
+      }
+    ],
+    "interfaces": [
+      "Lj9a;",
+      "Lkx3;",
+      "Lr58;",
+      "Lvm6;",
+      "Lzd6;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 232,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Ldm1;-><init>()V",
+        "registers": 7,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "code_units": 15,
+        "kind": "direct",
+        "name": "f",
+        "overload_index": 0,
+        "reference": "Ldm1;->f(Lum6;Ldm1;Luv4;Lgv4;)V",
+        "registers": 4,
+        "signature": "public static final void f(um6, dm1, uv4, gv4)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "code_units": 34,
+        "kind": "direct",
+        "name": "l",
+        "overload_index": 0,
+        "reference": "Ldm1;->l(Ldm1;)V",
+        "registers": 3,
+        "signature": "public static final void l(dm1)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Ldm1;->a()Ltg8;",
+        "registers": 1,
+        "signature": "public final tg8 a()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "addContentView",
+        "overload_index": 0,
+        "reference": "Ldm1;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V",
+        "registers": 5,
+        "signature": "public void addContentView(android.view.View, android.view.ViewGroup$LayoutParams)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "b",
+        "overload_index": 0,
+        "reference": "Ldm1;->b()Lum6;",
+        "registers": 1,
+        "signature": "public final um6 b()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "d",
+        "overload_index": 0,
+        "reference": "Ldm1;->d()Lg9a;",
+        "registers": 1,
+        "signature": "public final g9a d()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Ldm1;->e()Lc96;",
+        "registers": 5,
+        "signature": "public final c96 e()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 44,
+        "kind": "virtual",
+        "name": "g",
+        "overload_index": 0,
+        "reference": "Ldm1;->g()Li9a;",
+        "registers": 2,
+        "signature": "public final i9a g()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 22,
+        "kind": "virtual",
+        "name": "h",
+        "overload_index": 0,
+        "reference": "Ldm1;->h(Lzm6;)V",
+        "registers": 3,
+        "signature": "public final void h(zm6)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "i",
+        "overload_index": 0,
+        "reference": "Ldm1;->i()Lhc6;",
+        "registers": 1,
+        "signature": "public final hc6 i()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "j",
+        "overload_index": 0,
+        "reference": "Ldm1;->j()Lxv4;",
+        "registers": 1,
+        "signature": "public final xv4 j()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 103,
+        "kind": "virtual",
+        "name": "k",
+        "overload_index": 0,
+        "reference": "Ldm1;->k()V",
+        "registers": 3,
+        "signature": "public final void k()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 30,
+        "kind": "virtual",
+        "name": "m",
+        "overload_index": 0,
+        "reference": "Ldm1;->m(Lp5;Lszb;)Lv5;",
+        "registers": 6,
+        "signature": "public final v5 m(p5, szb)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "onActivityResult",
+        "overload_index": 0,
+        "reference": "Ldm1;->onActivityResult(IILandroid/content/Intent;)V",
+        "registers": 5,
+        "signature": "public void onActivityResult(int, int, android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "onBackPressed",
+        "overload_index": 0,
+        "reference": "Ldm1;->onBackPressed()V",
+        "registers": 1,
+        "signature": "public final void onBackPressed()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 32,
+        "kind": "virtual",
+        "name": "onConfigurationChanged",
+        "overload_index": 0,
+        "reference": "Ldm1;->onConfigurationChanged(Landroid/content/res/Configuration;)V",
+        "registers": 3,
+        "signature": "public void onConfigurationChanged(android.content.res.Configuration)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 51,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Ldm1;->onCreate(Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public void onCreate(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 41,
+        "kind": "virtual",
+        "name": "onCreatePanelMenu",
+        "overload_index": 0,
+        "reference": "Ldm1;->onCreatePanelMenu(ILandroid/view/Menu;)Z",
+        "registers": 3,
+        "signature": "public final boolean onCreatePanelMenu(int, android.view.Menu)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 46,
+        "kind": "virtual",
+        "name": "onMenuItemSelected",
+        "overload_index": 0,
+        "reference": "Ldm1;->onMenuItemSelected(ILandroid/view/MenuItem;)Z",
+        "registers": 4,
+        "signature": "public boolean onMenuItemSelected(int, android.view.MenuItem)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onMultiWindowModeChanged",
+        "overload_index": 0,
+        "reference": "Ldm1;->onMultiWindowModeChanged(Z)V",
+        "registers": 4,
+        "signature": "public final void onMultiWindowModeChanged(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 47,
+        "kind": "virtual",
+        "name": "onMultiWindowModeChanged",
+        "overload_index": 1,
+        "reference": "Ldm1;->onMultiWindowModeChanged(ZLandroid/content/res/Configuration;)V",
+        "registers": 4,
+        "signature": "public final void onMultiWindowModeChanged(boolean, android.content.res.Configuration)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 32,
+        "kind": "virtual",
+        "name": "onNewIntent",
+        "overload_index": 0,
+        "reference": "Ldm1;->onNewIntent(Landroid/content/Intent;)V",
+        "registers": 3,
+        "signature": "public void onNewIntent(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 35,
+        "kind": "virtual",
+        "name": "onPanelClosed",
+        "overload_index": 0,
+        "reference": "Ldm1;->onPanelClosed(ILandroid/view/Menu;)V",
+        "registers": 5,
+        "signature": "public void onPanelClosed(int, android.view.Menu)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onPictureInPictureModeChanged",
+        "overload_index": 0,
+        "reference": "Ldm1;->onPictureInPictureModeChanged(Z)V",
+        "registers": 4,
+        "signature": "public final void onPictureInPictureModeChanged(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 47,
+        "kind": "virtual",
+        "name": "onPictureInPictureModeChanged",
+        "overload_index": 1,
+        "reference": "Ldm1;->onPictureInPictureModeChanged(ZLandroid/content/res/Configuration;)V",
+        "registers": 4,
+        "signature": "public void onPictureInPictureModeChanged(boolean, android.content.res.Configuration)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onPictureInPictureUiStateChanged",
+        "overload_index": 0,
+        "reference": "Ldm1;->onPictureInPictureUiStateChanged(Landroid/app/PictureInPictureUiState;)V",
+        "registers": 3,
+        "signature": "public final void onPictureInPictureUiStateChanged(android.app.PictureInPictureUiState)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "onPreparePanel",
+        "overload_index": 0,
+        "reference": "Ldm1;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z",
+        "registers": 4,
+        "signature": "public final boolean onPreparePanel(int, android.view.View, android.view.Menu)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onRequestPermissionsResult",
+        "overload_index": 0,
+        "reference": "Ldm1;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V",
+        "registers": 7,
+        "signature": "public void onRequestPermissionsResult(int, java.lang.String[], int[])",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 26,
+        "kind": "virtual",
+        "name": "onRetainNonConfigurationInstance",
+        "overload_index": 0,
+        "reference": "Ldm1;->onRetainNonConfigurationInstance()Ljava/lang/Object;",
+        "registers": 2,
+        "signature": "public final java.lang.Object onRetainNonConfigurationInstance()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 21,
+        "kind": "virtual",
+        "name": "onSaveInstanceState",
+        "overload_index": 0,
+        "reference": "Ldm1;->onSaveInstanceState(Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public void onSaveInstanceState(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 33,
+        "kind": "virtual",
+        "name": "onTrimMemory",
+        "overload_index": 0,
+        "reference": "Ldm1;->onTrimMemory(I)V",
+        "registers": 4,
+        "signature": "public final void onTrimMemory(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 29,
+        "kind": "virtual",
+        "name": "onUserLeaveHint",
+        "overload_index": 0,
+        "reference": "Ldm1;->onUserLeaveHint()V",
+        "registers": 2,
+        "signature": "public void onUserLeaveHint()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 68,
+        "kind": "virtual",
+        "name": "reportFullyDrawn",
+        "overload_index": 0,
+        "reference": "Ldm1;->reportFullyDrawn()V",
+        "registers": 6,
+        "signature": "public final void reportFullyDrawn()",
+        "try_blocks": 4
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 0,
+        "reference": "Ldm1;->setContentView(I)V",
+        "registers": 4,
+        "signature": "public void setContentView(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 1,
+        "reference": "Ldm1;->setContentView(Landroid/view/View;)V",
+        "registers": 4,
+        "signature": "public void setContentView(android.view.View)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 23,
+        "kind": "virtual",
+        "name": "setContentView",
+        "overload_index": 2,
+        "reference": "Ldm1;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V",
+        "registers": 5,
+        "signature": "public void setContentView(android.view.View, android.view.ViewGroup$LayoutParams)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "startActivityForResult",
+        "overload_index": 0,
+        "reference": "Ldm1;->startActivityForResult(Landroid/content/Intent;I)V",
+        "registers": 3,
+        "signature": "public final void startActivityForResult(android.content.Intent, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "startActivityForResult",
+        "overload_index": 1,
+        "reference": "Ldm1;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public final void startActivityForResult(android.content.Intent, int, android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "startIntentSenderForResult",
+        "overload_index": 0,
+        "reference": "Ldm1;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V",
+        "registers": 7,
+        "signature": "public final void startIntentSenderForResult(android.content.IntentSender, int, android.content.Intent, int, int, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "startIntentSenderForResult",
+        "overload_index": 1,
+        "reference": "Ldm1;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V",
+        "registers": 8,
+        "signature": "public final void startIntentSenderForResult(android.content.IntentSender, int, android.content.Intent, int, int, int, android.os.Bundle)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "dm1",
+    "source_file": "SourceFile",
+    "superclass": "Lcm1;"
+  },
+  "summary": "dm1 (classes.dex) extends cm1: 20 fields, 41 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Ldm1;"
+    }
+  ],
+  "links": []
+}

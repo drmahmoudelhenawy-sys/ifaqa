@@ -1,0 +1,193 @@
+{
+  "id": "ev_10b1f848f3fa28997f3dd4ee9275b57a8047c50ac2b13ae0a7eec4b7db5413c1",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.workers.SyncPushAllWorker",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "g",
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->g:Lrq3;",
+        "type": "rq3"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 8,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;-><clinit>()V",
+        "registers": 1,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 10,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
+        "registers": 3,
+        "signature": "public void <init>(android.content.Context, androidx.work.WorkerParameters)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 140,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->c(Lht1;)Ljava/lang/Object;",
+        "registers": 7,
+        "signature": "public final java.lang.Object c(ht1)",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 239,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->e(Lht1;)Ljava/lang/Object;",
+        "registers": 10,
+        "signature": "public final java.lang.Object e(ht1)",
+        "try_blocks": 5
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 247,
+        "kind": "virtual",
+        "name": "f",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->f(Ljava/util/List;Lht1;)Ljava/lang/Object;",
+        "registers": 16,
+        "signature": "public final java.lang.Object f(java.util.List, ht1)",
+        "try_blocks": 8
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 156,
+        "kind": "virtual",
+        "name": "g",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->g(Ljava/util/List;Lht1;)Ljava/lang/Object;",
+        "registers": 11,
+        "signature": "public final java.lang.Object g(java.util.List, ht1)",
+        "try_blocks": 4
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 244,
+        "kind": "virtual",
+        "name": "h",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->h(Ljava/util/List;Lht1;)Ljava/lang/Object;",
+        "registers": 16,
+        "signature": "public final java.lang.Object h(java.util.List, ht1)",
+        "try_blocks": 8
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 147,
+        "kind": "virtual",
+        "name": "i",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->i(Lht1;)Ljava/lang/Object;",
+        "registers": 11,
+        "signature": "public final java.lang.Object i(ht1)",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 333,
+        "kind": "virtual",
+        "name": "j",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;->j(Lht1;)Ljava/lang/Object;",
+        "registers": 16,
+        "signature": "public final java.lang.Object j(ht1)",
+        "try_blocks": 6
+      }
+    ],
+    "name": "org.goldenquran.freesoft.workers.SyncPushAllWorker",
+    "source_file": "SourceFile",
+    "superclass": "Landroidx/work/CoroutineWorker;"
+  },
+  "summary": "org.goldenquran.freesoft.workers.SyncPushAllWorker (classes2.dex) extends androidx.work.CoroutineWorker: 1 fields, 9 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/workers/SyncPushAllWorker;"
+    }
+  ],
+  "links": []
+}

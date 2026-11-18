@@ -1,0 +1,83 @@
+{
+  "id": "ev_80b98b19d72107b948e8d27f8a9b97d6b059e80826412677da8cef367a4f8c1c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.habits.AthkarNudgeWorker",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/habits/AthkarNudgeWorker;",
+    "dex": "classes2.dex",
+    "fields": [],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 10,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/habits/AthkarNudgeWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
+        "registers": 3,
+        "signature": "public void <init>(android.content.Context, androidx.work.WorkerParameters)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 135,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/habits/AthkarNudgeWorker;->c(Lht1;)Ljava/lang/Object;",
+        "registers": 8,
+        "signature": "public final java.lang.Object c(ht1)",
+        "try_blocks": 3
+      }
+    ],
+    "name": "org.goldenquran.freesoft.habits.AthkarNudgeWorker",
+    "source_file": "SourceFile",
+    "superclass": "Landroidx/work/CoroutineWorker;"
+  },
+  "summary": "org.goldenquran.freesoft.habits.AthkarNudgeWorker (classes2.dex) extends androidx.work.CoroutineWorker: 0 fields, 2 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/habits/AthkarNudgeWorker;"
+    }
+  ],
+  "links": []
+}

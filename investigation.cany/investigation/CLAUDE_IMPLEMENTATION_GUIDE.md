@@ -1,0 +1,33 @@
+# Claude Implementation Guide
+
+## Purpose and limit
+
+This is a planning note for a future original app based on the investigation. It contains no source code and does not start app development. All recommended structure below is an inference from static evidence, not a recovered build plan.
+
+## Evidence-backed starting points
+
+- The target is a native Android package with two DEX files and Kotlin markers; Kotlin use is inferred, not proven from source. (Evidence: `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`, `ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c`, `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`.)
+- The app namespace has 541 classes grouped into network, models, UI, workers, habits, datastore, activities, and application packages. These are useful boundaries for planning, not a proven module graph. (Evidence: `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`.)
+- AndroidX Media3/ExoPlayer, WorkManager, Firebase Messaging, Google ML Kit, and Play Billing appear in the manifest/component evidence. Their exact feature links and dependency versions remain unknown. (Evidence: `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`, `ev_9925014e76a9d8f343e69e6a9f7a5fff65dbc154f32020f68420dda08617630f`.)
+- Three bundled database names and data models suggest a data layer, but exact schemas are unknown. Do not design storage by pretending the current schema is known. (Evidence: `ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708`, `ev_97394cff8bbfe06329439c2496576fca3732a967b2fafa88d59cceb6f2e0e36c`, `ev_da0f10e0c54356306c1de1e68d24503382352e033afd096e2d5b810e3cc4cc11`, `ev_4abac963d58f8fa70214549776d798933d1de95a8bba41fe5369c8f1262b9db3`, `ev_81bdafc400a10a130f43cac89b48072c15095673e0ebfc2e10fbf740e659d02b`, `ev_988da5bf451618fdb79677f2aaa5b047f1d310da713471b1fce45c062e4afa00`.)
+
+## Suggested planning order
+
+1. Confirm the intended feature set from runtime walkthroughs or product requirements. Static names alone do not prove features are active.
+2. Decide the original data sources and rights for Quran, translations, audio, and books before choosing storage.
+3. Keep Quran reading/search, audio, prayer/reminders, athkar/duas, plans/practice, and library as separate feature areas at first.
+4. Define each screen and navigation flow from observed product behavior rather than APK class names alone.
+5. Choose local storage only after recording the actual user data that must work offline and sync.
+6. Add audio, alarms, notifications, sensors, or recognition only when requirements and device behavior are confirmed.
+
+## Requirements to clarify before coding
+
+- Arabic locale values, right-to-left layout, and exact interface wording.
+- Quran page/glyph rendering, search behavior, Tafsir/translation selection, and bookmark/note actions.
+- Audio queue rules, download behavior, and background controls.
+- Prayer calculation source, location consent, alarm behavior, and widget content.
+- Khetma, Tasmee, athkar completion, history, and statistics rules.
+- Accounts, sync, live calls, community moderation, and server APIs.
+- Privacy, notification permissions, offline mode, and supported Android versions.
+
+These unknowns are already tracked in the investigation; see `EVIDENCE_AND_COVERAGE.md`. No UI flow, schema, or runtime behavior should be treated as verified until evidence supports it.

@@ -1,0 +1,542 @@
+{
+  "id": "ev_81bdafc400a10a130f43cac89b48072c15095673e0ebfc2e10fbf740e659d02b",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.ChapterEntity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "arabicTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->arabicTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "englishTitle",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->englishTitle:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "headerPageId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->headerPageId:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "keywords",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->keywords:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "makkiyah",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->makkiyah:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "number",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->number:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "searchText",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->searchText:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "topic",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->topic:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "unicode",
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->unicode:Ljava/lang/String;",
+        "type": "java.lang.String"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 28,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+        "registers": 10,
+        "signature": "public void <init>(int, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 69,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/ChapterEntity;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/ChapterEntity;",
+        "registers": 12,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.ChapterEntity copy$default(org.goldenquran.freesoft.models.room.ChapterEntity, int, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component4()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component5()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component6()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component7()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component8()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->component9()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->copy(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/goldenquran/freesoft/models/room/ChapterEntity;",
+        "registers": 10,
+        "signature": "public final org.goldenquran.freesoft.models.room.ChapterEntity copy(int, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 100,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->equals(Ljava/lang/Object;)Z",
+        "registers": 6,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getArabicTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getArabicTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getArabicTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getEnglishTitle",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getEnglishTitle()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getEnglishTitle()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getHeaderPageId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getHeaderPageId()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getHeaderPageId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getKeywords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getKeywords()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getKeywords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMakkiyah",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getMakkiyah()I",
+        "registers": 1,
+        "signature": "public final int getMakkiyah()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "getName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getName()Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String getName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getNumber()I",
+        "registers": 1,
+        "signature": "public final int getNumber()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSearchText",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getSearchText()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getSearchText()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTopic",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getTopic()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getTopic()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getUnicode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->getUnicode()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getUnicode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 59,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setHeaderPageId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->setHeaderPageId(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setHeaderPageId(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 56,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;->toString()Ljava/lang/String;",
+        "registers": 12,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.ChapterEntity",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.ChapterEntity (classes2.dex) extends java.lang.Object: 11 fields, 27 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/ChapterEntity;"
+    }
+  ],
+  "links": []
+}

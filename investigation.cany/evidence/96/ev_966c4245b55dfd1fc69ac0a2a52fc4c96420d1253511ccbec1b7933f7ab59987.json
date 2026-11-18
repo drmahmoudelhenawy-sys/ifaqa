@@ -1,0 +1,2565 @@
+{
+  "id": "ev_966c4245b55dfd1fc69ac0a2a52fc4c96420d1253511ccbec1b7933f7ab59987",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "path",
+        "size",
+        "kind",
+        "role"
+      ],
+      "kind": "rows",
+      "limit": 500,
+      "list": "entries",
+      "offset": 500
+    },
+    "source": {
+      "evidence_id": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 500,
+      "next_offset": 1000,
+      "status": "page",
+      "total": 1283
+    },
+    "from_evidence": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+    "from_tool": "core_archive_show",
+    "shown": {
+      "items": [
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_standard_toolbar_icon_button_ripple_color_selector.xml",
+          "size": 1336
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_switch_thumb_tint.xml",
+          "size": 588
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_switch_track_tint.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_icon_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_icon_color_secondary.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_ripple_color.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_ripple_color_secondary.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_text_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tabs_text_color_secondary.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_text_button_background_color_selector.xml",
+          "size": 508
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_text_button_foreground_color_selector.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_text_button_ripple_color_selector.xml",
+          "size": 1936
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_textfield_filled_background_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_textfield_indicator_text_color.xml",
+          "size": 872
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_textfield_input_text_color.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_textfield_label_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_textfield_stroke_color.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_button_background_color.xml",
+          "size": 528
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_button_ripple_color.xml",
+          "size": 1536
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_button_text_color.xml",
+          "size": 768
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_clock_text_color.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_display_background_color.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_display_ripple_color.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_display_text_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_secondary_text_button_ripple_color.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_secondary_text_button_text_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_timepicker_time_input_stroke_color.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_tonal_button_ripple_color_selector.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_vibrant_toolbar_button_text_color_selector.xml",
+          "size": 1460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_vibrant_toolbar_icon_button_container_color_selector.xml",
+          "size": 632
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_vibrant_toolbar_icon_button_icon_color_selector.xml",
+          "size": 1460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_vibrant_toolbar_icon_button_ripple_color_selector.xml",
+          "size": 1336
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_divider_color.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_on_surface_disabled.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_on_surface_emphasis_high_type.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_on_surface_emphasis_medium.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_active_tick_marks_color.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_active_track_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_halo_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_inactive_tick_marks_color.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_inactive_track_color.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_slider_thumb_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_timepicker_button_background.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_timepicker_button_stroke.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_timepicker_clock_text_color.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_timepicker_clockface.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/material_timepicker_modebutton_tint.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_bg_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_ripple_color.xml",
+          "size": 948
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_stroke_color_selector.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_text_btn_bg_color_selector.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_text_btn_ripple_color.xml",
+          "size": 948
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_btn_text_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_calendar_item_stroke_color.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_calendar_selected_range.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_card_view_foreground.xml",
+          "size": 788
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_card_view_ripple.xml",
+          "size": 768
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_chip_background_color.xml",
+          "size": 848
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_chip_close_icon_tint.xml",
+          "size": 1092
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_chip_surface_color.xml",
+          "size": 340
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_chip_text_color.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_choice_chip_background_color.xml",
+          "size": 848
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_choice_chip_ripple_color.xml",
+          "size": 948
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_choice_chip_text_color.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_error.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_fab_bg_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_fab_icon_text_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_fab_ripple_color.xml",
+          "size": 948
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_filled_background_color.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_filled_icon_tint.xml",
+          "size": 644
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_filled_stroke_color.xml",
+          "size": 788
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_indicator_text_color.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_navigation_bar_item_tint.xml",
+          "size": 520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_navigation_bar_ripple_color.xml",
+          "size": 1672
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_navigation_item_background_color.xml",
+          "size": 644
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_navigation_item_icon_tint.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_navigation_item_text_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_on_primary_text_btn_text_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_on_surface_ripple_color.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_outlined_icon_tint.xml",
+          "size": 644
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_outlined_stroke_color.xml",
+          "size": 788
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_popupmenu_overlay_color.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_switch_thumb_icon_tint.xml",
+          "size": 1236
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_switch_thumb_tint.xml",
+          "size": 1028
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_switch_track_decoration_tint.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_switch_track_tint.xml",
+          "size": 1236
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_tabs_icon_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_tabs_legacy_text_color_selector.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_tabs_ripple_color.xml",
+          "size": 1672
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/mtrl_text_btn_text_color_selector.xml",
+          "size": 888
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/switch_thumb_material_dark.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/switch_thumb_material_light.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-night-v8/material_timepicker_button_stroke.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-night-v8/material_timepicker_clockface.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-night-v8/material_timepicker_modebutton_tint.xml",
+          "size": 340
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_color_highlight_material.xml",
+          "size": 544
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_btn_checkable.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_default.xml",
+          "size": 1120
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_edittext.xml",
+          "size": 668
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_seek_thumb.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_spinner.xml",
+          "size": 668
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v23/abc_tint_switch_track.xml",
+          "size": 664
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_dark_default_color_primary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_dark_default_color_secondary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_dark_highlighted_text.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_dark_hint_foreground.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_dark_primary_text_disable_only.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_default_color_primary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_default_color_secondary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_highlighted_text.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_hint_foreground.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_dynamic_primary_text_disable_only.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant12.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant17.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant22.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant24.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant4.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant6.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant87.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant92.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant94.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant96.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color-v31/m3_ref_palette_dynamic_neutral_variant98.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_hide_password__0.xml",
+          "size": 1176
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_hide_password__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_hide_password__2.xml",
+          "size": 556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_show_password__0.xml",
+          "size": 1136
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_show_password__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$avd_show_password__2.xml",
+          "size": 556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__0.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__1.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__10.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__11.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__12.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__13.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__14.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__15.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__16.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__17.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__18.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__19.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__2.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__20.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__21.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__22.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__23.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__24.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__25.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__26.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__27.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__28.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__29.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__3.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__30.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__31.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__32.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__33.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__34.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__4.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__5.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__6.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__7.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__8.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$ic_splash__9.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_hide_password__0.xml",
+          "size": 1176
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_hide_password__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_hide_password__2.xml",
+          "size": 556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_show_password__0.xml",
+          "size": 1136
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_show_password__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$m3_avd_show_password__2.xml",
+          "size": 556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_checked_unchecked__2.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_indeterminate__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__2.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_checked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_indeterminate_unchecked__2.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_checked__2.xml",
+          "size": 596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_icon_unchecked_indeterminate__2.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_checkbox_button_unchecked_checked__2.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_checked_pressed__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_checked_unchecked__0.xml",
+          "size": 548
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_checked_unchecked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_pressed_checked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_pressed_unchecked__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_checked__0.xml",
+          "size": 548
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_checked__1.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/$mtrl_switch_thumb_unchecked_pressed__0.xml",
+          "size": 592
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_borderless_material.xml",
+          "size": 588
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_check_material.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_check_material_anim.xml",
+          "size": 816
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_default_mtrl_shape.xml",
+          "size": 932
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_radio_material.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_btn_radio_material_anim.xml",
+          "size": 816
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_cab_background_internal_bg.xml",
+          "size": 372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_cab_background_top_material.xml",
+          "size": 336
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_ab_back_material.xml",
+          "size": 692
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+          "size": 1000
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_clear_material.xml",
+          "size": 684
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_go_search_api_material.xml",
+          "size": 640
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+          "size": 1096
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_overflow_material.xml",
+          "size": 792
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+          "size": 920
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+          "size": 980
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_search_api_material.xml",
+          "size": 812
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ic_voice_search_api_material.xml",
+          "size": 828
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_item_background_holo_dark.xml",
+          "size": 1012
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_item_background_holo_light.xml",
+          "size": 1012
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_list_selector_background_transition_holo_dark.xml",
+          "size": 424
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_list_selector_background_transition_holo_light.xml",
+          "size": 424
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_list_selector_holo_dark.xml",
+          "size": 1064
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_list_selector_holo_light.xml",
+          "size": 1064
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ratingbar_indicator_material.xml",
+          "size": 124
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ratingbar_material.xml",
+          "size": 124
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_ratingbar_small_material.xml",
+          "size": 124
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_seekbar_thumb_material.xml",
+          "size": 1100
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_seekbar_tick_mark_material.xml",
+          "size": 516
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_seekbar_track_material.xml",
+          "size": 1408
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_spinner_textfield_background_material.xml",
+          "size": 1160
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_star_black_48dp.xml",
+          "size": 640
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_star_half_black_48dp.xml",
+          "size": 600
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_switch_thumb_material.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_tab_indicator_material.xml",
+          "size": 468
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_text_cursor_material.xml",
+          "size": 516
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_textfield_search_material.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/abc_vector_test.xml",
+          "size": 612
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/arrow_down.xml",
+          "size": 608
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/arrow_up.xml",
+          "size": 596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/avd_hide_password.xml",
+          "size": 660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/avd_show_password.xml",
+          "size": 660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_notification_action.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_prayer_highlight_dark.xml",
+          "size": 700
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget1_divider.xml",
+          "size": 372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget1_gradient.xml",
+          "size": 788
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget1_pill.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget2_date_card.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget2_gradient.xml",
+          "size": 644
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget_verse.xml",
+          "size": 1080
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget_verse_button.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget_verse_cartouche.xml",
+          "size": 612
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/bg_widget_verse_frame.xml",
+          "size": 1212
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_checkbox_checked_mtrl.xml",
+          "size": 2688
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+          "size": 688
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_checkbox_unchecked_mtrl.xml",
+          "size": 2660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+          "size": 688
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_radio_off_mtrl.xml",
+          "size": 1728
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+          "size": 680
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_radio_on_mtrl.xml",
+          "size": 1656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+          "size": 680
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/design_fab_background.xml",
+          "size": 372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/design_ic_visibility.xml",
+          "size": 540
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/design_ic_visibility_off.xml",
+          "size": 1144
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/design_password_eye.xml",
+          "size": 816
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/design_snackbar_background.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/exo_rounded_rectangle.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_add_plus.xml",
+          "size": 936
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_alarm.xml",
+          "size": 832
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_alert_enable.xml",
+          "size": 992
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_arrow_back_black_24.xml",
+          "size": 652
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_arrow_forward.xml",
+          "size": 1056
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_arrow_left.xml",
+          "size": 1060
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_athkar.xml",
+          "size": 2188
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_back.xml",
+          "size": 1060
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bar_chart.xml",
+          "size": 1016
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bk_cyen.xml",
+          "size": 1076
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bk_green.xml",
+          "size": 1076
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bk_purple.xml",
+          "size": 1076
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bk_red.xml",
+          "size": 1076
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_book.xml",
+          "size": 2524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bookmark_outline.xml",
+          "size": 1536
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bookmark_page_selected.xml",
+          "size": 1176
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_bookmark_page_unselected.xml",
+          "size": 1332
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_calendar_month.xml",
+          "size": 696
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_calendar_month_outline.xml",
+          "size": 1596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_answer.xml",
+          "size": 1356
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_background.xml",
+          "size": 2484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_chat.xml",
+          "size": 736
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_decline.xml",
+          "size": 1528
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_end.xml",
+          "size": 1100
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_flip.xml",
+          "size": 1168
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_mic_off.xml",
+          "size": 1016
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_mic_on.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_person.xml",
+          "size": 708
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_quran.xml",
+          "size": 1596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_video_off.xml",
+          "size": 764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_call_video_on.xml",
+          "size": 704
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chart.xml",
+          "size": 828
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_check.xml",
+          "size": 976
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_check_circle.xml",
+          "size": 672
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_checks.xml",
+          "size": 976
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chevron_down.xml",
+          "size": 976
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chevron_end.xml",
+          "size": 1024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chevron_forward.xml",
+          "size": 1024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chevron_ios.xml",
+          "size": 908
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_chevron_left.xml",
+          "size": 980
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_class_hand.xml",
+          "size": 916
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_class_share.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_clock.xml",
+          "size": 1532
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_clock_black_24dp.xml",
+          "size": 752
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_close.xml",
+          "size": 1204
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_cloud.xml",
+          "size": 1764
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_coins.xml",
+          "size": 1452
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_compass.xml",
+          "size": 1020
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_copy.xml",
+          "size": 1888
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_default_cancel.xml",
+          "size": 648
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_delete_outline.xml",
+          "size": 1168
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_dorar.xml",
+          "size": 1428
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_download.xml",
+          "size": 1116
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_dua_hands.xml",
+          "size": 1420
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_edit.xml",
+          "size": 844
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_email_box.xml",
+          "size": 700
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_explore.xml",
+          "size": 1200
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_eye.xml",
+          "size": 784
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_eye_off.xml",
+          "size": 1144
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_fav_empty.xml",
+          "size": 1148
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_fav_fill.xml",
+          "size": 1148
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_flame.xml",
+          "size": 892
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_fortress.xml",
+          "size": 1424
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_full_moon.xml",
+          "size": 584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_google.xml",
+          "size": 1440
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_gps.xml",
+          "size": 908
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_hadith_check.xml",
+          "size": 1248
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_header_arrow.xml",
+          "size": 704
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_heart.xml",
+          "size": 728
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_home.xml",
+          "size": 584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_image_label.xml",
+          "size": 1552
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_index.xml",
+          "size": 1584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_infinity.xml",
+          "size": 1208
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_info.xml",
+          "size": 688
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_info_outline.xml",
+          "size": 1184
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_invited_people.xml",
+          "size": 1208
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_keyboard_black_24dp.xml",
+          "size": 852
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_library.xml",
+          "size": 2188
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_list.xml",
+          "size": 1336
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_list_lines.xml",
+          "size": 1200
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_listen.xml",
+          "size": 1460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_location.xml",
+          "size": 1024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_lock.xml",
+          "size": 800
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_logout.xml",
+          "size": 1208
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_m3_chip_checked_circle.xml",
+          "size": 900
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_m3_chip_close.xml",
+          "size": 648
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_map.xml",
+          "size": 780
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_masbaha.xml",
+          "size": 2416
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_menu.xml",
+          "size": 1384
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_menu_bookmark.xml",
+          "size": 752
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_menu_note.xml",
+          "size": 1460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_menu_part.xml",
+          "size": 1836
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_messeges.xml",
+          "size": 1008
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mic.xml",
+          "size": 1148
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mosque.xml",
+          "size": 1104
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mountain.xml",
+          "size": 1036
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mtrl_checked_circle.xml",
+          "size": 672
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mtrl_chip_checked_black.xml",
+          "size": 600
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mtrl_chip_checked_circle.xml",
+          "size": 940
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_mtrl_chip_close_circle.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_next_to.xml",
+          "size": 1024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_note.xml",
+          "size": 1256
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_notification.xml",
+          "size": 1368
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_notification_bell.xml",
+          "size": 1092
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_notifications_active.xml",
+          "size": 912
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_pause.xml",
+          "size": 956
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_pdf.xml",
+          "size": 956
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_play.xml",
+          "size": 892
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_playlist.xml",
+          "size": 2380
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_playlist_folder.xml",
+          "size": 1216
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_asr.xml",
+          "size": 1168
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_dhuhr.xml",
+          "size": 3560
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_fajr.xml",
+          "size": 1660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_isha.xml",
+          "size": 912
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_last_third.xml",
+          "size": 1280
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_maghrib.xml",
+          "size": 2024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_midnight.xml",
+          "size": 912
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_prayer_c_sunrise.xml",
+          "size": 2024
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_print.xml",
+          "size": 728
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_print_outline.xml",
+          "size": 1200
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_read.xml",
+          "size": 37320
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_read_mode.xml",
+          "size": 1444
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_read_more.xml",
+          "size": 1172
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_refresh.xml",
+          "size": 864
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_repeat.xml",
+          "size": 656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_rotate.xml",
+          "size": 1868
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_ruku.xml",
+          "size": 1520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_saprator_selected.xml",
+          "size": 2380
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_schedule.xml",
+          "size": 1104
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_search.xml",
+          "size": 1080
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_section_calc.xml",
+          "size": 596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_section_correction.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_section_insight.xml",
+          "size": 820
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_section_madhab.xml",
+          "size": 1368
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_section_sound.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_settings.xml",
+          "size": 1976
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_share.xml",
+          "size": 976
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shield.xml",
+          "size": 928
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shortcut_athkar.xml",
+          "size": 2188
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shortcut_masbaha.xml",
+          "size": 2416
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shortcut_prayer.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shortcut_qibla.xml",
+          "size": 1020
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_shuffle.xml",
+          "size": 1960
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_skip_next.xml",
+          "size": 584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_skip_previous.xml",
+          "size": 584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_splash.xml",
+          "size": 35300
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_star.xml",
+          "size": 640
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_star_circle.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_stop.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_swap.xml",
+          "size": 1028
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_tasmee.xml",
+          "size": 1536
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_tasmee_history.xml",
+          "size": 940
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_text_label.xml",
+          "size": 2356
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_time.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_tools.xml",
+          "size": 1936
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_translate.xml",
+          "size": 876
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_trash.xml",
+          "size": 1036
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_trophy.xml",
+          "size": 848
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_tune.xml",
+          "size": 696
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_verse_bookmark.xml",
+          "size": 1188
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_verse_listen.xml",
+          "size": 1104
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_verse_note.xml",
+          "size": 1972
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_vibration.xml",
+          "size": 812
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_video_label.xml",
+          "size": 1640
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_video_label_un.xml",
+          "size": 1640
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_voice_label.xml",
+          "size": 1484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_volume_off.xml",
+          "size": 980
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_volume_up.xml",
+          "size": 800
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_warning.xml",
+          "size": 1020
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_widget_clock.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_widget_timer.xml",
+          "size": 1304
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/ic_zakat.xml",
+          "size": 1052
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_action_bar_item_background.xml",
+          "size": 304
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_avd_hide_password.xml",
+          "size": 660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_avd_show_password.xml",
+          "size": 660
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_bottom_sheet_drag_handle.xml",
+          "size": 628
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_default_control_background.xml",
+          "size": 304
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_ic_check_24px.xml",
+          "size": 604
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_overflow_item_checkbox.xml",
+          "size": 548
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_password_eye.xml",
+          "size": 816
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_popupmenu_background_overlay.xml",
+          "size": 740
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_selectable_item_background.xml",
+          "size": 460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_selectable_item_background_borderless.xml",
+          "size": 264
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_tabs_line_indicator.xml",
+          "size": 480
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/m3_tabs_rounded_line_indicator.xml",
+          "size": 956
+        },
+        {
+          "kind": "png",
+          "path": "res/drawable/media3_icon_circular_play.png",
+          "size": 2683
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button.xml",
+          "size": 1332
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_checked_unchecked.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon.xml",
+          "size": 1572
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_checkbox_button_unchecked_checked.xml",
+          "size": 724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_close_24px.xml",
+          "size": 684
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_dialog_background.xml",
+          "size": 716
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_ic_check_mark.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_ic_checkbox_checked.xml",
+          "size": 904
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_ic_checkbox_unchecked.xml",
+          "size": 612
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_ic_error.xml",
+          "size": 644
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_ic_indeterminate.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_popupmenu_background.xml",
+          "size": 740
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb.xml",
+          "size": 2004
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_checked.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_checked_pressed.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_checked_unchecked.xml",
+          "size": 784
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_pressed.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_pressed_checked.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_pressed_unchecked.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_unchecked.xml",
+          "size": 744
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_unchecked_checked.xml",
+          "size": 784
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_thumb_unchecked_pressed.xml",
+          "size": 524
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_track.xml",
+          "size": 588
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_switch_track_decoration.xml",
+          "size": 636
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/mtrl_tabs_default_indicator.xml",
+          "size": 628
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/splash_icon.xml",
+          "size": 792
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/subject_hint_image.xml",
+          "size": 2664
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/tooltip_frame_dark.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/tooltip_frame_light.xml",
+          "size": 484
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/widget_verse_chevron_left.xml",
+          "size": 736
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/widget_verse_chevron_left_double.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/widget_verse_chevron_right.xml",
+          "size": 736
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/widget_verse_chevron_right_double.xml",
+          "size": 756
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable/widget_verse_star.xml",
+          "size": 1248
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_edit_mode_logo.xml",
+          "size": 4112
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_audiotrack.xml",
+          "size": 1120
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_check.xml",
+          "size": 700
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_chevron_left.xml",
+          "size": 596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_chevron_right.xml",
+          "size": 596
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_forward.xml",
+          "size": 880
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/drawable-anydpi-v21/exo_ic_fullscreen_enter.xml",
+          "size": 644
+        }
+      ],
+      "list": "entries",
+      "offset": 500,
+      "total": 1283
+    }
+  },
+  "summary": "Part of core_archive_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 500,
+    "total": 1283,
+    "next_offset": 1000
+  },
+  "locations": [],
+  "links": [
+    "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708"
+  ]
+}

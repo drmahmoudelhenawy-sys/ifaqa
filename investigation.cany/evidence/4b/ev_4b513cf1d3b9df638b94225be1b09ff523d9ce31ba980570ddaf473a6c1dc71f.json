@@ -1,0 +1,54 @@
+{
+  "id": "ev_4b513cf1d3b9df638b94225be1b09ff523d9ce31ba980570ddaf473a6c1dc71f",
+  "subject": {
+    "kind": "text",
+    "sha256": "3b1867bcf2e9c0e3d0224544b7bcb14857df5a8db21a9bd5c44c437776667728",
+    "name": "MASTER_INDEX.md"
+  },
+  "operation": "core_text_read",
+  "params": {
+    "limit": 5,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+  },
+  "result": {
+    "cut_lines": [],
+    "encoding": "utf8",
+    "file_size": 3141,
+    "lines": 5,
+    "more": true,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md",
+    "replaced_sequences": 0,
+    "text": "# Golden Quran Investigation — Master Index\n\n## Status\n\nThis is a static review of the supplied base APK. It uses the existing Craft Anything investigation and its 123 evidence records. Static evidence does not prove runtime behavior. (Evidence: `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`, `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`.)\n",
+    "total_lines": 42
+  },
+  "summary": "MASTER_INDEX.md: lines 1–5 of 42 (UTF-8).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "text_as_stored",
+      "message": "The file is read as text as it is stored: nothing is run, rendered or formatted, and text a program builds or downloads while it runs isn't here."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 5,
+    "total": 42,
+    "next_offset": 5
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+    }
+  ],
+  "links": []
+}

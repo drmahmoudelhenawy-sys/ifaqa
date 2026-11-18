@@ -1,0 +1,184 @@
+{
+  "id": "ev_dc007e60fb148e83aab8ea500e510935a2225e7a806dd8aa06de5ae174e77a62",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "b02",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lb02;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lb02;->X0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lb02;->Y0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lb02;->Z0:Lku6;",
+        "type": "ku6"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 22,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lb02;-><init>()V",
+        "registers": 2,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lb02;->A0()V",
+        "registers": 5,
+        "signature": "public final void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lb02;->B0()Lc02;",
+        "registers": null,
+        "signature": "public abstract c02 B0()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lb02;->C0()I",
+        "registers": null,
+        "signature": "public abstract int C0()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lb02;->D0()Le02;",
+        "registers": null,
+        "signature": "public abstract e02 D0()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 236,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lb02;->h0(ILfk3;)V",
+        "registers": 14,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lb02;->o0()Z",
+        "registers": 1,
+        "signature": "public final boolean o0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "b02",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "b02 (classes2.dex) extends rn1: 3 fields, 7 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lb02;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,79 @@
+{
+  "id": "ev_aa9a60c7cf2ce75dcfc7cdd4115be0636cded8b8d590584fb9578fa0ddf8d9a6",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 1,
+      "list": "entries"
+    },
+    "source": {
+      "evidence_id": "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 1,
+      "next_offset": 1,
+      "status": "page",
+      "total": 535
+    },
+    "from_evidence": "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54",
+    "from_tool": "android_resources_read",
+    "shown": {
+      "field_names": [
+        "config",
+        "id",
+        "key",
+        "locale",
+        "package",
+        "type",
+        "value",
+        "value_type"
+      ],
+      "items": [
+        {
+          "config": "default",
+          "id": "0x7f080000",
+          "key": "$avd_hide_password__0",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "drawable",
+          "value": "res/drawable/$avd_hide_password__0.xml",
+          "value_type": "string"
+        }
+      ],
+      "list": "entries",
+      "offset": 0,
+      "total": 535
+    }
+  },
+  "summary": "Part of android_resources_read evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 535,
+    "next_offset": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54"
+  ]
+}

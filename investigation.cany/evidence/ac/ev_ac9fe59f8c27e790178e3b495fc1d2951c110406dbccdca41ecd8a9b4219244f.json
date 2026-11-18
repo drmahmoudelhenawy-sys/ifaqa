@@ -1,0 +1,119 @@
+{
+  "id": "ev_ac9fe59f8c27e790178e3b495fc1d2951c110406dbccdca41ecd8a9b4219244f",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 5,
+      "list": "entries"
+    },
+    "source": {
+      "evidence_id": "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 5,
+      "next_offset": 5,
+      "status": "page",
+      "total": 500
+    },
+    "from_evidence": "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274",
+    "from_tool": "android_resources_read",
+    "shown": {
+      "field_names": [
+        "config",
+        "id",
+        "key",
+        "locale",
+        "package",
+        "type",
+        "value",
+        "value_type"
+      ],
+      "items": [
+        {
+          "config": "default",
+          "id": "0x7f130000",
+          "key": "ACCURICY_HEADER",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "string",
+          "value": "Improve Accuracy",
+          "value_type": "string"
+        },
+        {
+          "config": "default",
+          "id": "0x7f130001",
+          "key": "ATHKAR_HINT_TITLE",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "string",
+          "value": "Reference",
+          "value_type": "string"
+        },
+        {
+          "config": "default",
+          "id": "0x7f130002",
+          "key": "AYAH_ACTION_REMOVE_BOOKMARK",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "string",
+          "value": "Remove Bookmark",
+          "value_type": "string"
+        },
+        {
+          "config": "default",
+          "id": "0x7f130003",
+          "key": "AYAH_MARK_BOOKMARKS_FEW",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "string",
+          "value": "%1$d Bookmarks",
+          "value_type": "string"
+        },
+        {
+          "config": "default",
+          "id": "0x7f130004",
+          "key": "AYAH_MARK_BOOKMARKS_ONE",
+          "locale": "",
+          "package": "org.goldenquran.freesoft",
+          "type": "string",
+          "value": "1 Bookmark",
+          "value_type": "string"
+        }
+      ],
+      "list": "entries",
+      "offset": 0,
+      "total": 500
+    }
+  },
+  "summary": "Part of android_resources_read evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 5,
+    "total": 500,
+    "next_offset": 5
+  },
+  "locations": [],
+  "links": [
+    "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274"
+  ]
+}

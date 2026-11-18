@@ -1,0 +1,862 @@
+{
+  "id": "ev_3813fe3b4d09b4a8152d71561278fd9bc4b8c993eb02447f2d4649890f8f94cc",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.TasmeeSession",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->Companion:Lorg/goldenquran/freesoft/models/local/TasmeeSession$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.TasmeeSession$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SILENT",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->SILENT:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "chapterId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->chapterId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "chapterName",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->chapterName:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "correctWords",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->correctWords:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "createdAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->createdAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "difficulty",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->difficulty:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "durationSeconds",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->durationSeconds:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "extraWords",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->extraWords:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "fromAyah",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->fromAyah:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "hintsUsed",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->hintsUsed:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->id:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "missedWords",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->missedWords:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "score",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->score:F",
+        "type": "float"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "tashkeelErrors",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->tashkeelErrors:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "tashkeelMode",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->tashkeelMode:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "toAyah",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->toAyah:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "totalWords",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->totalWords:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "wrongWords",
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->wrongWords:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 9,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 47,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;-><init>(JIIILjava/lang/String;IIIIIIIIIFJJ)V",
+        "registers": 21,
+        "signature": "public void <init>(long, int, int, int, java.lang.String, int, int, int, int, int, int, int, int, int, float, long, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 62,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;-><init>(JIIILjava/lang/String;IIIIIIIIIFJJILu62;)V",
+        "registers": 46,
+        "signature": "public synthetic void <init>(long, int, int, int, java.lang.String, int, int, int, int, int, int, int, int, int, float, long, long, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 212,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->copy$default(Lorg/goldenquran/freesoft/models/local/TasmeeSession;JIIILjava/lang/String;IIIIIIIIIFJJILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/TasmeeSession;",
+        "registers": 42,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.TasmeeSession copy$default(org.goldenquran.freesoft.models.local.TasmeeSession, long, int, int, int, java.lang.String, int, int, int, int, int, int, int, int, int, float, long, long, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component10",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component10()I",
+        "registers": 1,
+        "signature": "public final int component10()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component11",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component11()I",
+        "registers": 1,
+        "signature": "public final int component11()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component12",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component12()I",
+        "registers": 1,
+        "signature": "public final int component12()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component13",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component13()I",
+        "registers": 1,
+        "signature": "public final int component13()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component14",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component14()I",
+        "registers": 1,
+        "signature": "public final int component14()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component15",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component15()F",
+        "registers": 1,
+        "signature": "public final float component15()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component16",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component16()J",
+        "registers": 3,
+        "signature": "public final long component16()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component17",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component17()J",
+        "registers": 3,
+        "signature": "public final long component17()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component4()I",
+        "registers": 1,
+        "signature": "public final int component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component5()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component6()I",
+        "registers": 1,
+        "signature": "public final int component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component7()I",
+        "registers": 1,
+        "signature": "public final int component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component8()I",
+        "registers": 1,
+        "signature": "public final int component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->component9()I",
+        "registers": 1,
+        "signature": "public final int component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 43,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->copy(JIIILjava/lang/String;IIIIIIIIIFJJ)Lorg/goldenquran/freesoft/models/local/TasmeeSession;",
+        "registers": 42,
+        "signature": "public final org.goldenquran.freesoft.models.local.TasmeeSession copy(long, int, int, int, java.lang.String, int, int, int, int, int, int, int, int, int, float, long, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 146,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getChapterId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getChapterId()I",
+        "registers": 1,
+        "signature": "public final int getChapterId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getChapterName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getChapterName()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getChapterName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCorrectWords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getCorrectWords()I",
+        "registers": 1,
+        "signature": "public final int getCorrectWords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCreatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getCreatedAt()J",
+        "registers": 3,
+        "signature": "public final long getCreatedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDifficulty",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getDifficulty()I",
+        "registers": 1,
+        "signature": "public final int getDifficulty()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDurationSeconds",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getDurationSeconds()J",
+        "registers": 3,
+        "signature": "public final long getDurationSeconds()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getExtraWords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getExtraWords()I",
+        "registers": 1,
+        "signature": "public final int getExtraWords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getFromAyah",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getFromAyah()I",
+        "registers": 1,
+        "signature": "public final int getFromAyah()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getHintsUsed",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getHintsUsed()I",
+        "registers": 1,
+        "signature": "public final int getHintsUsed()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getId()J",
+        "registers": 3,
+        "signature": "public final long getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMissedWords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getMissedWords()I",
+        "registers": 1,
+        "signature": "public final int getMissedWords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getScore",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getScore()F",
+        "registers": 1,
+        "signature": "public final float getScore()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTashkeelErrors",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getTashkeelErrors()I",
+        "registers": 1,
+        "signature": "public final int getTashkeelErrors()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTashkeelMode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getTashkeelMode()I",
+        "registers": 1,
+        "signature": "public final int getTashkeelMode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getToAyah",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getToAyah()I",
+        "registers": 1,
+        "signature": "public final int getToAyah()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTotalWords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getTotalWords()I",
+        "registers": 1,
+        "signature": "public final int getTotalWords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getWrongWords",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->getWrongWords()I",
+        "registers": 1,
+        "signature": "public final int getWrongWords()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 107,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "isSilent",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->isSilent()Z",
+        "registers": 2,
+        "signature": "public final boolean isSilent()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 140,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;->toString()Ljava/lang/String;",
+        "registers": 24,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.TasmeeSession",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.TasmeeSession (classes2.dex) extends java.lang.Object: 20 fields, 43 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/TasmeeSession;"
+    }
+  ],
+  "links": []
+}
