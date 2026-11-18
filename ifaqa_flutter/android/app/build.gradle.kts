@@ -14,7 +14,9 @@ val keystoreProperties = Properties().apply {
 
 android {
     namespace = "com.ifaqa.ifaqa_flutter"
-    compileSdk = flutter.compileSdkVersion
+    // permission_handler_android 14.1.1 requires compileSdk 37 (AGP 9.1.0 only
+    // "recommends" 36, but builds with 37). Do not revert to flutter.compileSdkVersion (36).
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
