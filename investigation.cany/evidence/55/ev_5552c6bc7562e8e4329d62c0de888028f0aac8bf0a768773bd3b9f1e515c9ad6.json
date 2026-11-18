@@ -1,0 +1,1029 @@
+{
+  "id": "ev_5552c6bc7562e8e4329d62c0de888028f0aac8bf0a768773bd3b9f1e515c9ad6",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.Reciter",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/Reciter;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "AR_NAME",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->AR_NAME:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->Companion:Lorg/goldenquran/freesoft/models/local/Reciter$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.Reciter$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "EN_NAME",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->EN_NAME:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "FAV",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->FAV:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "IS_REMOVED",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->IS_REMOVED:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "RECITER_SORT_NUMBER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->RECITER_SORT_NUMBER:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SORT",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->SORT:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "SURA_NUMBER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->SURA_NUMBER:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TRACK_RECITER_ID",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->TRACK_RECITER_ID:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->TYPE:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "arabic_name",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->arabic_name:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "categoryObj",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->categoryObj:Ljava/util/Map;",
+        "type": "java.util.Map"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "category_arabic_name",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->category_arabic_name:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "category_english_name",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->category_english_name:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "content",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->content:Ljava/util/List;",
+        "type": "java.util.List"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "english_name",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->english_name:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->id:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "image",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->image:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isFav",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->isFav:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isRemoved",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->isRemoved:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "local_version",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->local_version:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "sort_number",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->sort_number:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "type",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->type:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "version",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->version:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 22,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;-><init>()V",
+        "registers": 17,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 38,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZ)V",
+        "registers": 14,
+        "signature": "public void <init>(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer, java.lang.Integer, boolean, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 133,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZILu62;)V",
+        "registers": 30,
+        "signature": "public synthetic void <init>(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer, java.lang.Integer, boolean, boolean, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 139,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->copy$default(Lorg/goldenquran/freesoft/models/local/Reciter;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/Reciter;",
+        "registers": 29,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.Reciter copy$default(org.goldenquran.freesoft.models.local.Reciter, long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer, java.lang.Integer, boolean, boolean, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component10",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component10()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component10()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component11",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component11()Z",
+        "registers": 1,
+        "signature": "public final boolean component11()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component12",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component12()Z",
+        "registers": 1,
+        "signature": "public final boolean component12()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component2()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component3()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component4()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component5()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component6()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component7()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component8()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component9",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->component9()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component9()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->copy(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZ)Lorg/goldenquran/freesoft/models/local/Reciter;",
+        "registers": 14,
+        "signature": "public final org.goldenquran.freesoft.models.local.Reciter copy(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Integer, java.lang.Integer, java.lang.Integer, boolean, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 135,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getArabic_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getArabic_name()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getArabic_name()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "getCatName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getCatName()Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String getCatName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCategoryObj",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getCategoryObj()Ljava/util/Map;",
+        "registers": 1,
+        "signature": "public final java.util.Map getCategoryObj()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCategory_arabic_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getCategory_arabic_name()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getCategory_arabic_name()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCategory_english_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getCategory_english_name()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getCategory_english_name()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getContent",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getContent()Ljava/util/List;",
+        "registers": 1,
+        "signature": "public final java.util.List getContent()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getEnglish_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getEnglish_name()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getEnglish_name()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getId()J",
+        "registers": 3,
+        "signature": "public final long getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getImage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getImage()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getImage()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getLocal_version",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getLocal_version()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getLocal_version()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "getName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getName()Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String getName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSort_number",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getSort_number()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getSort_number()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getType()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getType()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getVersion",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->getVersion()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getVersion()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 131,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isFav",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->isFav()Z",
+        "registers": 1,
+        "signature": "public final boolean isFav()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isRemoved",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->isRemoved()Z",
+        "registers": 1,
+        "signature": "public final boolean isRemoved()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setArabic_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setArabic_name(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setArabic_name(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCategoryObj",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setCategoryObj(Ljava/util/Map;)V",
+        "registers": 2,
+        "signature": "public final void setCategoryObj(java.util.Map)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCategory_arabic_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setCategory_arabic_name(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setCategory_arabic_name(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCategory_english_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setCategory_english_name(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setCategory_english_name(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setContent",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setContent(Ljava/util/List;)V",
+        "registers": 2,
+        "signature": "public final void setContent(java.util.List)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setEnglish_name",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setEnglish_name(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setEnglish_name(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setFav",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setFav(Z)V",
+        "registers": 2,
+        "signature": "public final void setFav(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setId(J)V",
+        "registers": 3,
+        "signature": "public final void setId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setImage",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setImage(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setImage(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setLocal_version",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setLocal_version(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setLocal_version(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setRemoved",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setRemoved(Z)V",
+        "registers": 2,
+        "signature": "public final void setRemoved(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSort_number",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setSort_number(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setSort_number(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setType(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setType(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setVersion",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->setVersion(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setVersion(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 95,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Reciter;->toString()Ljava/lang/String;",
+        "registers": 15,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.Reciter",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.Reciter (classes2.dex) extends java.lang.Object: 26 fields, 51 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/Reciter;"
+    }
+  ],
+  "links": []
+}

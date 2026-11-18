@@ -1,0 +1,1236 @@
+{
+  "id": "ev_5a96d266b280db1ef54308ca0e1e61379123f974427cda89b212e1e81b112a11",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 100,
+    "locale": "ar",
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": "array",
+    "with_strings": false,
+    "xml_files": []
+  },
+  "result": {
+    "entries": [
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "أسرع بـ 0.25 مرة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "أسرع بـ 0.5 مرات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "أسرع بـ 0.75 مرة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "عادية",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "أسرع بـ 1.25 مرة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "أسرع بـ 1.5 مرة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "أسرع بمرتين",
+            "value_type": "string"
+          }
+        ],
+        "config": "ar",
+        "id": "0x7f030004",
+        "key": "exo_controls_playback_speeds",
+        "locale": "ar",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "الفاتحة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "البقرة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "آل عمران",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "النساء",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "المائده",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "الأنعام",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "الأعراف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000008",
+            "value": "الأنفال",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000009",
+            "value": "التوبه",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000a",
+            "value": "يونس",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000b",
+            "value": "هود",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000c",
+            "value": "يوسف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000d",
+            "value": "الرعد",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000e",
+            "value": "إبراهيم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000f",
+            "value": "الحجر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000010",
+            "value": "النحل",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000011",
+            "value": "الإسراء",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000012",
+            "value": "الكهف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000013",
+            "value": "مريم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000014",
+            "value": "طه",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000015",
+            "value": "الأنبياء",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000016",
+            "value": "الحج",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000017",
+            "value": "المؤمنون",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000018",
+            "value": "النور",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000019",
+            "value": "الفرقان",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001a",
+            "value": "الشعراء",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001b",
+            "value": "النمل",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001c",
+            "value": "القصص",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001d",
+            "value": "العنكبوت",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001e",
+            "value": "الروم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001f",
+            "value": "لقمان",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000020",
+            "value": "السجده",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000021",
+            "value": "الأحزاب",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000022",
+            "value": "سبأ",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000023",
+            "value": "فاطر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000024",
+            "value": "يس",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000025",
+            "value": "الصافات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000026",
+            "value": "ص",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000027",
+            "value": "الزمر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000028",
+            "value": "غافر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000029",
+            "value": "فصلت",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002a",
+            "value": "الشورى",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002b",
+            "value": "الزخرف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002c",
+            "value": "الدخان",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002d",
+            "value": "الجاثية",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002e",
+            "value": "الأحقاف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002f",
+            "value": "محمد",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000030",
+            "value": "الفتح",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000031",
+            "value": "الحجرات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000032",
+            "value": "ق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000033",
+            "value": "الذاريات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000034",
+            "value": "الطور",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000035",
+            "value": "النجم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000036",
+            "value": "القمر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000037",
+            "value": "الرحمن",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000038",
+            "value": "الواقعة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000039",
+            "value": "الحديد",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003a",
+            "value": "المجادلة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003b",
+            "value": "الحشر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003c",
+            "value": "الممتحنة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003d",
+            "value": "الصف",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003e",
+            "value": "الجمعة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003f",
+            "value": "المنافقون",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000040",
+            "value": "التغابن",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000041",
+            "value": "الطلاق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000042",
+            "value": "التحريم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000043",
+            "value": "الملك",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000044",
+            "value": "القلم",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000045",
+            "value": "الحاقة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000046",
+            "value": "المعارج",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000047",
+            "value": "نوح",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000048",
+            "value": "الجن",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000049",
+            "value": "المزمل",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004a",
+            "value": "المدثر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004b",
+            "value": "القيامة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004c",
+            "value": "الإنسان",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004d",
+            "value": "المرسلات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004e",
+            "value": "النبأ",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004f",
+            "value": "النازعات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000050",
+            "value": "عبس",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000051",
+            "value": "التكوير",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000052",
+            "value": "الإنفطار",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000053",
+            "value": "المطففين",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000054",
+            "value": "الإنشقاق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000055",
+            "value": "البروج",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000056",
+            "value": "الطارق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000057",
+            "value": "الأعلى",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000058",
+            "value": "الغاشية",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000059",
+            "value": "الفجر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005a",
+            "value": "البلد",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005b",
+            "value": "الشمس",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005c",
+            "value": "الليل",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005d",
+            "value": "الضحى",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005e",
+            "value": "الشرح",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005f",
+            "value": "التين",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000060",
+            "value": "العلق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000061",
+            "value": "القدر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000062",
+            "value": "البينة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000063",
+            "value": "الزلزلة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000064",
+            "value": "العاديات",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000065",
+            "value": "القارعة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000066",
+            "value": "التكاثر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000067",
+            "value": "العصر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000068",
+            "value": "الهمزة",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000069",
+            "value": "الفيل",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006a",
+            "value": "قريش",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006b",
+            "value": "الماعون",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006c",
+            "value": "الكوثر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006d",
+            "value": "الكافرون",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006e",
+            "value": "النصر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006f",
+            "value": "المسد",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000070",
+            "value": "الإخلاص",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000071",
+            "value": "الفلق",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000072",
+            "value": "الناس",
+            "value_type": "string"
+          }
+        ],
+        "config": "ar",
+        "id": "0x7f030005",
+        "key": "fahrasSuras",
+        "locale": "ar",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      }
+    ],
+    "entries_matching": 2,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": []
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 2 entries.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 2,
+    "total": 2
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,382 @@
+{
+  "id": "ev_f138cd73199c9cc4bb6ad2dcfae17d0ba8077255a109d0b8fb29818a8b896e5e",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.AthkarCompletion",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "categoryId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->categoryId:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "completedAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->completedAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "dayKey",
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->dayKey:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->id:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 14,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;-><init>()V",
+        "registers": 10,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;-><init>(IJIJ)V",
+        "registers": 7,
+        "signature": "public void <init>(int, long, int, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 27,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;-><init>(IJIJILu62;)V",
+        "registers": 12,
+        "signature": "public synthetic void <init>(int, long, int, long, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 34,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->copy$default(Lorg/goldenquran/freesoft/models/local/AthkarCompletion;IJIJILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/AthkarCompletion;",
+        "registers": 9,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.AthkarCompletion copy$default(org.goldenquran.freesoft.models.local.AthkarCompletion, int, long, int, long, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->component2()J",
+        "registers": 3,
+        "signature": "public final long component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->component4()J",
+        "registers": 3,
+        "signature": "public final long component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->copy(IJIJ)Lorg/goldenquran/freesoft/models/local/AthkarCompletion;",
+        "registers": 7,
+        "signature": "public final org.goldenquran.freesoft.models.local.AthkarCompletion copy(int, long, int, long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 45,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCategoryId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->getCategoryId()J",
+        "registers": 3,
+        "signature": "public final long getCategoryId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCompletedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->getCompletedAt()J",
+        "registers": 3,
+        "signature": "public final long getCompletedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDayKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->getDayKey()I",
+        "registers": 1,
+        "signature": "public final int getDayKey()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 29,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCategoryId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->setCategoryId(J)V",
+        "registers": 3,
+        "signature": "public final void setCategoryId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCompletedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->setCompletedAt(J)V",
+        "registers": 3,
+        "signature": "public final void setCompletedAt(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDayKey",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->setDayKey(I)V",
+        "registers": 2,
+        "signature": "public final void setDayKey(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->setId(I)V",
+        "registers": 2,
+        "signature": "public final void setId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 46,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;->toString()Ljava/lang/String;",
+        "registers": 8,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.AthkarCompletion",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.AthkarCompletion (classes2.dex) extends java.lang.Object: 5 fields, 20 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/AthkarCompletion;"
+    }
+  ],
+  "links": []
+}

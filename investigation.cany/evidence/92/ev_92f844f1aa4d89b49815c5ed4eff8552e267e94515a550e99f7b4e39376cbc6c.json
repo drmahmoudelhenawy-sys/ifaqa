@@ -1,0 +1,312 @@
+{
+  "id": "ev_92f844f1aa4d89b49815c5ed4eff8552e267e94515a550e99f7b4e39376cbc6c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.settings.SettingsFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->X0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->Y0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->Z0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->a1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->b1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "c1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->c1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "d1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->d1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->e1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "f1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->f1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "g1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->g1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "h1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->h1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "i1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->i1:Ldd3;",
+        "type": "dd3"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "j1",
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->j1:Ldd3;",
+        "type": "dd3"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 116,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;-><init>()V",
+        "registers": 5,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 191,
+        "kind": "direct",
+        "name": "E0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->E0(Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;I)V",
+        "registers": 55,
+        "signature": "public static void E0(org.goldenquran.freesoft.ui.settings.SettingsFragment, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 209,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->A0()V",
+        "registers": 6,
+        "signature": "public final void A0()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->B0()Lorg/goldenquran/freesoft/models/local/UserMushaf;",
+        "registers": 1,
+        "signature": "public final org.goldenquran.freesoft.models.local.UserMushaf B0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 98,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->C0(I)V",
+        "registers": 6,
+        "signature": "public final void C0(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 10,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->D0(Z)V",
+        "registers": 2,
+        "signature": "public final void D0(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 1038,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->h0(ILfk3;)V",
+        "registers": 50,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 14,
+        "kind": "virtual",
+        "name": "k0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->k0()V",
+        "registers": 3,
+        "signature": "public final void k0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;->o0()Z",
+        "registers": 1,
+        "signature": "public final boolean o0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.settings.SettingsFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.settings.SettingsFragment (classes2.dex) extends rn1: 13 fields, 9 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/settings/SettingsFragment;"
+    }
+  ],
+  "links": []
+}

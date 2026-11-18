@@ -1,0 +1,630 @@
+{
+  "id": "ev_c8e9d89ef736dc0f44bb1dcf18ee8fd4c9f509440ea266101bebadc2dfea00f6",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_archive_extract",
+  "params": {
+    "max_bytes": 170000000,
+    "max_files": 1300,
+    "path": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+  },
+  "result": {
+    "bytes_written": 169999992,
+    "contradictions": [],
+    "files_written": 1138,
+    "output_directory": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676",
+    "skipped": [
+      {
+        "path": "classes2.dex",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/drawable-nodpi-v4/print_cover_7.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/drawable-nodpi-v4/print_cover_7_large.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/drawable-nodpi-v4/shelf_letter.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/drawable-nodpi-v4/subject_hint.png",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/amiri_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/ayah_white.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/helvetica.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/helvetica_bold.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/ibm_plex_sans_arabic_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/markazi_text_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/noto_naskh_arabic_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/numbers.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/quran_titles.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/roboto_medium_numbers.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/scheherazade_new_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/tajawal_regular.ttf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/font/uthmani_hafs_v12.otf",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/fast_out_slow_in.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_emphasized.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_emphasized_accelerate.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_emphasized_decelerate.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_linear.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_standard.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_standard_accelerate.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/m3_sys_motion_easing_standard_decelerate.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/mtrl_fast_out_linear_in.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/mtrl_fast_out_slow_in.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/mtrl_linear.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/interpolator/mtrl_linear_out_slow_in.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_action_bar_title_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_action_menu_item_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_action_menu_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_action_mode_bar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_action_mode_close_item_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_alert_dialog_button_bar_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_alert_dialog_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_alert_dialog_title_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_cascading_menu_item_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_dialog_title_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_expanded_menu_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_list_menu_item_checkbox.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_list_menu_item_icon.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_list_menu_item_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_list_menu_item_radio.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_popup_menu_header_item_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_popup_menu_item_layout.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_screen_content_include.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_screen_simple.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_screen_simple_overlay_action_mode.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_search_dropdown_item_icons_2line.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_search_view.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/abc_select_dialog_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/design_layout_snackbar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/design_layout_snackbar_include.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_player_control_ffwd_button.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_player_control_rewind_button.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_player_control_view.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_player_view.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_styled_settings_list.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_styled_settings_list_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/exo_styled_sub_settings_list_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/invalid_list_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/m3_alert_dialog.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/m3_alert_dialog_actions.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/m3_alert_dialog_title.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/m3_auto_complete_simple_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_dialog.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_dialog_actions.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_dialog_title.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_select_dialog_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_select_dialog_multichoice.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_alert_select_dialog_singlechoice.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_auto_complete_simple_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_layout_snackbar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/mtrl_layout_snackbar_include.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/notification_prayer_checkin.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/notification_prayer_collapsed.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/notification_prayer_expanded.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/preference.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/select_dialog_item_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/select_dialog_multichoice_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/select_dialog_singlechoice_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/support_simple_spinner_dropdown_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_1.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_2.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/widget_verse_item.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout/widget_verse_ticker.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout-v26/abc_screen_toolbar.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-anydpi-v26/ic_launcher.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-hdpi-v4/ic_launcher.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-hdpi-v4/ic_launcher_foreground.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-hdpi-v4/ic_launcher_monochrome.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-hdpi-v4/ic_launcher_round.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-mdpi-v4/ic_launcher.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-mdpi-v4/ic_launcher_foreground.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-mdpi-v4/ic_launcher_monochrome.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-mdpi-v4/ic_launcher_round.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xhdpi-v4/ic_launcher.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xhdpi-v4/ic_launcher_foreground.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xhdpi-v4/ic_launcher_monochrome.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xhdpi-v4/ic_launcher_round.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxhdpi-v4/ic_launcher.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxhdpi-v4/ic_launcher_foreground.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxhdpi-v4/ic_launcher_monochrome.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxhdpi-v4/ic_launcher_round.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxxhdpi-v4/ic_launcher.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxxhdpi-v4/ic_launcher_foreground.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxxhdpi-v4/ic_launcher_monochrome.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/mipmap-xxxhdpi-v4/ic_launcher_round.webp",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/navigation/main_nav.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan1.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan1_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan2.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan2_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan3.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan3_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan4.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan4_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan5.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan5_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan6.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/adan6_full.mp3",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/raw/clicksound.wav",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/m3_button_group_child_size_change.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/m3_list_item_shape_state_list.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/m3_split_button_inner_corner_size_state_list.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/m3expressive_button_shape_state_list.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/paths.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/splits0.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/widget_provider.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/widget_provider2.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml/widget_verse_ticker.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "res/xml-v31/widget_provider2.xml",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "resources.arsc",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "review.properties",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "segmentation-selfie.properties",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "vision-common.properties",
+        "reason": "file count or size limit reached"
+      },
+      {
+        "path": "vision-interfaces.properties",
+        "reason": "file count or size limit reached"
+      }
+    ]
+  },
+  "summary": "Extracted 1138 files (169999992 bytes) from base.apk into C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676; skipped 145.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "nested_not_extracted",
+      "message": "Archives inside the archive are written as files, not unpacked; run core_archive_extract on them."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 1138,
+    "total": 1283
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676",
+      "label": "output folder"
+    }
+  ],
+  "links": []
+}

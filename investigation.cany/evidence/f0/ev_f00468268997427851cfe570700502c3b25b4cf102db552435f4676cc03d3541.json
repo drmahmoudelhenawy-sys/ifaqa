@@ -1,0 +1,68 @@
+{
+  "id": "ev_f00468268997427851cfe570700502c3b25b4cf102db552435f4676cc03d3541",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "name",
+        "required"
+      ],
+      "kind": "rows",
+      "limit": 20,
+      "list": "uses_libraries",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 6,
+      "next_offset": null,
+      "status": "page",
+      "total": 6
+    },
+    "from_evidence": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+    "from_tool": "android_package_show",
+    "shown": {
+      "items": [
+        "com.google.android.maps",
+        "org.apache.http.legacy",
+        "android.ext.adservices",
+        "com.android.extensions.appfunctions",
+        "androidx.window.extensions",
+        "androidx.window.sidecar"
+      ],
+      "list": "uses_libraries",
+      "offset": 0,
+      "total": 6
+    }
+  },
+  "summary": "Part of android_package_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 6,
+    "total": 6
+  },
+  "locations": [],
+  "links": [
+    "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23"
+  ]
+}

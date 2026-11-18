@@ -1,0 +1,160 @@
+{
+  "id": "ev_40adf3fa648f5d08a3c18b2390f5aa3ab7b26041e0edfd306bfa22737a691a37",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.App",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/App;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "kind": "static",
+        "name": "x",
+        "reference": "Lorg/goldenquran/freesoft/App;->x:Lorg/goldenquran/freesoft/App;",
+        "type": "org.goldenquran.freesoft.App"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "w",
+        "reference": "Lorg/goldenquran/freesoft/App;->w:Ldt1;",
+        "type": "dt1"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 22,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;->a()Lln;",
+        "registers": 1,
+        "signature": "public static ln a()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "attachBaseContext",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;->attachBaseContext(Landroid/content/Context;)V",
+        "registers": 2,
+        "signature": "public final void attachBaseContext(android.content.Context)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 357,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;->onCreate()V",
+        "registers": 13,
+        "signature": "public final void onCreate()",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "onLowMemory",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;->onLowMemory()V",
+        "registers": 1,
+        "signature": "public final void onLowMemory()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 36,
+        "kind": "virtual",
+        "name": "onTrimMemory",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/App;->onTrimMemory(I)V",
+        "registers": 3,
+        "signature": "public final void onTrimMemory(int)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.App",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/app/Application;"
+  },
+  "summary": "org.goldenquran.freesoft.App (classes.dex) extends android.app.Application: 2 fields, 6 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/App;"
+    }
+  ],
+  "links": []
+}

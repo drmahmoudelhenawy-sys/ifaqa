@@ -1,0 +1,263 @@
+{
+  "id": "ev_df86860011a338d329f07c80cd9de087f87b2f189ceff6d7cf6920a71231246b",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.VerseLocation",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/VerseLocation;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "chapterId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->chapterId:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "numberInChapter",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->numberInChapter:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "pageId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->pageId:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 10,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;-><init>(Ljava/lang/Integer;ILjava/lang/Integer;)V",
+        "registers": 4,
+        "signature": "public void <init>(java.lang.Integer, int, java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 23,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseLocation;Ljava/lang/Integer;ILjava/lang/Integer;ILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseLocation;",
+        "registers": 6,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.VerseLocation copy$default(org.goldenquran.freesoft.models.room.VerseLocation, java.lang.Integer, int, java.lang.Integer, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->component1()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->component3()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->copy(Ljava/lang/Integer;ILjava/lang/Integer;)Lorg/goldenquran/freesoft/models/room/VerseLocation;",
+        "registers": 4,
+        "signature": "public final org.goldenquran.freesoft.models.room.VerseLocation copy(java.lang.Integer, int, java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->equals(Ljava/lang/Object;)Z",
+        "registers": 6,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getChapterId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->getChapterId()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getChapterId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNumberInChapter",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->getNumberInChapter()I",
+        "registers": 1,
+        "signature": "public final int getNumberInChapter()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->getPageId()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getPageId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 31,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseLocation;->toString()Ljava/lang/String;",
+        "registers": 5,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.VerseLocation",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.VerseLocation (classes2.dex) extends java.lang.Object: 4 fields, 12 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/VerseLocation;"
+    }
+  ],
+  "links": []
+}

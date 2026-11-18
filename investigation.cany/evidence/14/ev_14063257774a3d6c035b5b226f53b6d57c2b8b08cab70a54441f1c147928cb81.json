@@ -1,0 +1,384 @@
+{
+  "id": "ev_14063257774a3d6c035b5b226f53b6d57c2b8b08cab70a54441f1c147928cb81",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_classes_find",
+  "params": {
+    "limit": 300,
+    "offset": 0,
+    "path": null,
+    "query": "Prayer"
+  },
+  "result": {
+    "classes": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerCheckinReceiver;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.habits.PrayerCheckinReceiver",
+        "superclass": "android.content.BroadcastReceiver"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerFollowupWorker;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.habits.PrayerFollowupWorker",
+        "superclass": "androidx.work.CoroutineWorker"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/habits/PrayerMotionService;",
+        "dex": "classes2.dex",
+        "fields": 8,
+        "methods": 4,
+        "name": "org.goldenquran.freesoft.habits.PrayerMotionService",
+        "superclass": "android.app.Service"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/PrayerAdjustmentUi;",
+        "dex": "classes2.dex",
+        "fields": 6,
+        "methods": 16,
+        "name": "org.goldenquran.freesoft.models.PrayerAdjustmentUi",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/PrayerCheckinSync;",
+        "dex": "classes2.dex",
+        "fields": 4,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.PrayerCheckinSync",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/PrayerReminder;",
+        "dex": "classes2.dex",
+        "fields": 3,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.PrayerReminder",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/PrayerRowUi;",
+        "dex": "classes2.dex",
+        "fields": 7,
+        "methods": 18,
+        "name": "org.goldenquran.freesoft.models.PrayerRowUi",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/StartupPrayerUiState;",
+        "dex": "classes.dex",
+        "fields": 4,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.StartupPrayerUiState",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/local/PrayerCheckin;",
+        "dex": "classes2.dex",
+        "fields": 5,
+        "methods": 20,
+        "name": "org.goldenquran.freesoft.models.local.PrayerCheckin",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/prayer/PrayLocation;",
+        "dex": "classes2.dex",
+        "fields": 3,
+        "methods": 10,
+        "name": "org.goldenquran.freesoft.models.prayer.PrayLocation",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/prayer/Prayer;",
+        "dex": "classes2.dex",
+        "fields": 20,
+        "methods": 24,
+        "name": "org.goldenquran.freesoft.models.prayer.Prayer",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/prayer/Prayer$Companion;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.models.prayer.Prayer$Companion",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerFragment;",
+        "dex": "classes2.dex",
+        "fields": 11,
+        "methods": 10,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerFragment",
+        "superclass": "hn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerMonthFragment;",
+        "dex": "classes2.dex",
+        "fields": 9,
+        "methods": 8,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerMonthFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationReceiver;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationReceiver",
+        "superclass": "android.content.BroadcastReceiver"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerNotificationService;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 7,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+        "superclass": "android.app.Service"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerSettingsFragment;",
+        "dex": "classes2.dex",
+        "fields": 21,
+        "methods": 9,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerSettingsFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerSetupWizardFragment;",
+        "dex": "classes2.dex",
+        "fields": 7,
+        "methods": 8,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerSetupWizardFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerTimesWidget;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget",
+        "superclass": "android.appwidget.AppWidgetProvider"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/PrayerTimesWidget2;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget2",
+        "superclass": "android.appwidget.AppWidgetProvider"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/manualLocation/CitySearchFragment;",
+        "dex": "classes2.dex",
+        "fields": 7,
+        "methods": 7,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.manualLocation.CitySearchFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/manualLocation/LocationMapFragment;",
+        "dex": "classes2.dex",
+        "fields": 7,
+        "methods": 7,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.manualLocation.LocationMapFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/FridayReminderReciver;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.FridayReminderReciver",
+        "superclass": "android.content.BroadcastReceiver"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmActivity;",
+        "dex": "classes.dex",
+        "fields": 2,
+        "methods": 3,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmActivity",
+        "superclass": "dm1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 4,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver",
+        "superclass": "android.content.BroadcastReceiver"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmRefreshWorker;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmRefreshWorker",
+        "superclass": "androidx.work.CoroutineWorker"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmService;",
+        "dex": "classes2.dex",
+        "fields": 17,
+        "methods": 9,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+        "superclass": "android.app.Service"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/SalahReminderReceiver;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.SalahReminderReceiver",
+        "superclass": "android.content.BroadcastReceiver"
+      }
+    ],
+    "classes_total": 15034,
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "matches": 28,
+    "query": "Prayer"
+  },
+  "summary": "28 of 15034 classes match \"Prayer\" in 2 DEX file(s); showing 28.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 28,
+    "total": 28
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

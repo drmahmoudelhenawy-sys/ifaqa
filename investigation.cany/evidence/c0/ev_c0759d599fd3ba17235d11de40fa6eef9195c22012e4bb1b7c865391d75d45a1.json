@@ -1,0 +1,76 @@
+{
+  "id": "ev_c0759d599fd3ba17235d11de40fa6eef9195c22012e4bb1b7c865391d75d45a1",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 1,
+      "list": "entries"
+    },
+    "source": {
+      "evidence_id": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 1,
+      "next_offset": 1,
+      "status": "page",
+      "total": 1283
+    },
+    "from_evidence": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+    "from_tool": "core_archive_show",
+    "shown": {
+      "field_names": [
+        "depth",
+        "kind",
+        "note",
+        "path",
+        "role",
+        "sha256",
+        "size"
+      ],
+      "items": [
+        {
+          "depth": 0,
+          "kind": "android-binary-xml",
+          "path": "AndroidManifest.xml",
+          "role": "android-manifest",
+          "sha256": "3f77d3900e24063136d88554e47983e3d375dc11b4ea0d584a04810d8479f6d9",
+          "size": 50208
+        }
+      ],
+      "list": "entries",
+      "offset": 0,
+      "total": 1283
+    }
+  },
+  "summary": "Part of core_archive_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 1283,
+    "next_offset": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "ev_88892342ef5a5bae5fbfaea7d50cd8957276cf6bb4ac467934aa0f1c448a8ace",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "y",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;->y:Ldt1;",
+        "type": "dt1"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;-><init>()V",
+        "registers": 1,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 26,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;->onCreate()V",
+        "registers": 3,
+        "signature": "public final void onCreate()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "onDestroy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;->onDestroy()V",
+        "registers": 3,
+        "signature": "public final void onDestroy()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 47,
+        "kind": "virtual",
+        "name": "onExecuteFunction",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;->onExecuteFunction(Lov2;Lot;Landroid/os/CancellationSignal;Ljava/util/function/Consumer;)V",
+        "registers": 14,
+        "signature": "public final void onExecuteFunction(ov2, ot, android.os.CancellationSignal, java.util.function.Consumer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "resolveInventory",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;->resolveInventory()Lkt;",
+        "registers": 1,
+        "signature": "public final kt resolveInventory()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService",
+    "source_file": "SourceFile",
+    "superclass": "Ldu;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService (classes.dex) extends du: 1 fields, 5 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/audio/QuranAppFunctionService;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,60 @@
+{
+  "id": "ev_77480ac65b68dab598f55c5530873f3143c82a7f4abb942d939b09336caead18",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "kind": "rows",
+      "limit": 20,
+      "list": "entries",
+      "matching": {
+        "locale": "ar"
+      }
+    },
+    "source": {
+      "evidence_id": "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 0,
+      "next_offset": null,
+      "status": "empty",
+      "total": 0
+    },
+    "from_evidence": "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54",
+    "from_tool": "android_resources_read",
+    "shown": {
+      "items": [],
+      "list": "entries",
+      "list_total": 535,
+      "offset": 0,
+      "total": 0
+    }
+  },
+  "summary": "Part of android_resources_read evidence (empty).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 0,
+    "total": 0
+  },
+  "locations": [],
+  "links": [
+    "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54"
+  ]
+}

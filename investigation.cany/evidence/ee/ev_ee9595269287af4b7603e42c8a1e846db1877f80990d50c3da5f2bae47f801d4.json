@@ -1,0 +1,80 @@
+{
+  "id": "ev_ee9595269287af4b7603e42c8a1e846db1877f80990d50c3da5f2bae47f801d4",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "kind": "summary"
+    },
+    "source": {
+      "evidence_id": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 1,
+      "next_offset": null,
+      "status": "all-in-view",
+      "total": 1
+    },
+    "from_evidence": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+    "from_tool": "core_archive_show",
+    "shown": {
+      "carries_target_content": false,
+      "confidence": "observed",
+      "coverage": {
+        "examined": 1283,
+        "status": "partial",
+        "total": 1283
+      },
+      "evidence_id": "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+      "limitations": [
+        {
+          "code": "nested_not_opened",
+          "message": "1 nested archive(s) were not opened (depth or size limit; each entry's note says which); raise max_depth to open deeper ones."
+        },
+        {
+          "code": "no_disk_images",
+          "message": "Disk images (DMG), installers (PKG/MSI) and compressed tarballs are listed as single files, not opened."
+        }
+      ],
+      "lists": {
+        "containers": 1,
+        "contradictions": 0,
+        "entries": 1283
+      },
+      "operation": "core_archive_show",
+      "subject": {
+        "kind": "apk",
+        "name": "base.apk",
+        "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32"
+      },
+      "summary": "base.apk (apk) holds 1283 files in 1283 entries; 0 nested container(s)."
+    }
+  },
+  "summary": "Part of core_archive_show evidence (all-in-view).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708"
+  ]
+}

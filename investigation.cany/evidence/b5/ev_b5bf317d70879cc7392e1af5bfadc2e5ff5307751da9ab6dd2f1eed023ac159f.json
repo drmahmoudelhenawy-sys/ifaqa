@@ -1,0 +1,1280 @@
+{
+  "id": "ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f",
+  "subject": {
+    "kind": "sqlite",
+    "sha256": "6cd96e7432ed2e3daed334a5adca85c055c34ffb153e9025791b628a4d6030e8",
+    "name": "quran_app.db"
+  },
+  "operation": "db_sqlite_show",
+  "params": {
+    "limit": 100,
+    "offset": 0,
+    "path": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\quran_app.db",
+    "table": null
+  },
+  "result": {
+    "file_size": 34537472,
+    "header": {
+      "application_id": 0,
+      "db_size_pages": 1054,
+      "default_cache_size": 0,
+      "file_change_counter": 57,
+      "freelist_pages": 0,
+      "freelist_trunk": 0,
+      "incremental_vacuum": 0,
+      "largest_root_page": 44,
+      "page_size": 32768,
+      "read_version": 1,
+      "reserved_space": 0,
+      "schema_cookie": 67,
+      "schema_format": 4,
+      "sqlite_version": "3.54.0",
+      "sqlite_version_number": 3054000,
+      "text_encoding": "utf-8",
+      "user_version": 2,
+      "version_valid_for": 57,
+      "wal_mode": false,
+      "write_version": 1
+    },
+    "integrity_notes": [],
+    "other_objects": [
+      {
+        "name": "sqlite_autoindex_books_1",
+        "rootpage": 12,
+        "sql": "",
+        "tbl_name": "books",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_word_content_1",
+        "rootpage": 28,
+        "sql": "",
+        "tbl_name": "word_content",
+        "type": "index"
+      },
+      {
+        "name": "index_notes_ayahNo",
+        "rootpage": 30,
+        "sql": "CREATE INDEX `index_notes_ayahNo` ON `notes` (`ayahNo`)",
+        "tbl_name": "notes",
+        "type": "index"
+      },
+      {
+        "name": "index_notes_suraNo",
+        "rootpage": 31,
+        "sql": "CREATE INDEX `index_notes_suraNo` ON `notes` (`suraNo`)",
+        "tbl_name": "notes",
+        "type": "index"
+      },
+      {
+        "name": "index_zekr_hadith_categoryId",
+        "rootpage": 32,
+        "sql": "CREATE INDEX `index_zekr_hadith_categoryId` ON `zekr_hadith` (`categoryId`)",
+        "tbl_name": "zekr_hadith",
+        "type": "index"
+      },
+      {
+        "name": "index_wird_khetmaId",
+        "rootpage": 33,
+        "sql": "CREATE INDEX `index_wird_khetmaId` ON `wird` (`khetmaId`)",
+        "tbl_name": "wird",
+        "type": "index"
+      },
+      {
+        "name": "index_reciter_tracks_surah_number",
+        "rootpage": 34,
+        "sql": "CREATE INDEX `index_reciter_tracks_surah_number` ON `reciter_tracks` (`surah_number`)",
+        "tbl_name": "reciter_tracks",
+        "type": "index"
+      },
+      {
+        "name": "index_reciter_tracks_reciter_id",
+        "rootpage": 35,
+        "sql": "CREATE INDEX `index_reciter_tracks_reciter_id` ON `reciter_tracks` (`reciter_id`)",
+        "tbl_name": "reciter_tracks",
+        "type": "index"
+      },
+      {
+        "name": "index_surah_timing_reciter_id",
+        "rootpage": 36,
+        "sql": "CREATE INDEX `index_surah_timing_reciter_id` ON `surah_timing` (`reciter_id`)",
+        "tbl_name": "surah_timing",
+        "type": "index"
+      },
+      {
+        "name": "index_surah_timing_surah_number",
+        "rootpage": 37,
+        "sql": "CREATE INDEX `index_surah_timing_surah_number` ON `surah_timing` (`surah_number`)",
+        "tbl_name": "surah_timing",
+        "type": "index"
+      },
+      {
+        "name": "index_telawa_playListId",
+        "rootpage": 38,
+        "sql": "CREATE INDEX `index_telawa_playListId` ON `telawa` (`playListId`)",
+        "tbl_name": "telawa",
+        "type": "index"
+      },
+      {
+        "name": "index_sura_player_item_playListId",
+        "rootpage": 39,
+        "sql": "CREATE INDEX `index_sura_player_item_playListId` ON `sura_player_item` (`playListId`)",
+        "tbl_name": "sura_player_item",
+        "type": "index"
+      },
+      {
+        "name": "index_sura_player_item_telawaId",
+        "rootpage": 40,
+        "sql": "CREATE INDEX `index_sura_player_item_telawaId` ON `sura_player_item` (`telawaId`)",
+        "tbl_name": "sura_player_item",
+        "type": "index"
+      },
+      {
+        "name": "index_similar_groups_surahNumber_ayahFrom",
+        "rootpage": 41,
+        "sql": "CREATE INDEX index_similar_groups_surahNumber_ayahFrom\n        ON similar_groups (surahNumber, ayahFrom)",
+        "tbl_name": "similar_groups",
+        "type": "index"
+      },
+      {
+        "name": "index_similar_verses_groupId",
+        "rootpage": 42,
+        "sql": "CREATE INDEX index_similar_verses_groupId\n        ON similar_verses (groupId)",
+        "tbl_name": "similar_verses",
+        "type": "index"
+      },
+      {
+        "name": "index_book_content_bookKey",
+        "rootpage": 43,
+        "sql": "CREATE INDEX `index_book_content_bookKey` ON book_content (`bookKey`)",
+        "tbl_name": "book_content",
+        "type": "index"
+      },
+      {
+        "name": "index_book_content_bookKey_surah_number_ayah_from_ayah_to",
+        "rootpage": 44,
+        "sql": "CREATE INDEX `index_book_content_bookKey_surah_number_ayah_from_ayah_to`\n            ON book_content (`bookKey`, `surah_number`, `ayah_from`, `ayah_to`)",
+        "tbl_name": "book_content",
+        "type": "index"
+      }
+    ],
+    "page_count": 1054,
+    "rows": null,
+    "schema_truncated": false,
+    "tables": [
+      {
+        "columns": [
+          {
+            "name": "locale",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "android_metadata",
+        "rootpage": 3,
+        "row_count": 1,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE android_metadata (locale TEXT)"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "suraNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "bookMarkPage",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "bookmarkType",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "createdAt",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "userProfileId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isPage",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahText",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "isDeleted",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "bookmarks",
+        "rootpage": 4,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `bookmarks` (`id` INTEGER NOT NULL, `ayahNo` INTEGER NOT NULL, `suraNo` INTEGER NOT NULL, `bookMarkPage` INTEGER NOT NULL, `bookmarkType` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `userProfileId` INTEGER NOT NULL, `isPage` INTEGER NOT NULL, `ayahText` TEXT, `isDeleted` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "suraNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "note",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "userProfileId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "createdAt",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "pageNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isDeleted",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "notes",
+        "rootpage": 5,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `notes` (`id` INTEGER NOT NULL, `ayahNo` INTEGER NOT NULL, `suraNo` INTEGER NOT NULL, `note` TEXT NOT NULL, `userProfileId` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `pageNumber` INTEGER NOT NULL, `isDeleted` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "remoteAdjustment",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "userAdjustment",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isNotifyMe",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "prayers",
+        "rootpage": 6,
+        "row_count": 5,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `prayers` (`id` INTEGER NOT NULL, `remoteAdjustment` INTEGER NOT NULL, `userAdjustment` INTEGER NOT NULL, `isNotifyMe` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "key",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "type",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "text",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "notificationText",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "time",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "url",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "notifications",
+        "rootpage": 7,
+        "row_count": 20,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `notifications` (`key` INTEGER NOT NULL, `type` TEXT, `text` TEXT, `notificationText` TEXT, `time` TEXT, `url` TEXT, PRIMARY KEY(`key`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "day",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "week",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "month",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "year",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "time",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "totalPages",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "statistics",
+        "rootpage": 8,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `statistics` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `day` INTEGER NOT NULL, `week` INTEGER NOT NULL, `month` INTEGER NOT NULL, `year` INTEGER NOT NULL, `time` INTEGER NOT NULL, `totalPages` INTEGER NOT NULL)"
+      },
+      {
+        "columns": [
+          {
+            "name": "name",
+            "type_name": ""
+          },
+          {
+            "name": "seq",
+            "type_name": ""
+          }
+        ],
+        "name": "sqlite_sequence",
+        "rootpage": 9,
+        "row_count": 2,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "selected",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "userMushafName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "mushafName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "mushafKey",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "mushafType",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "timeStamp",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "pageNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reader",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "selectedAyaSaperator",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "selectedSureSaperator",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "selectedPageNumberSaperator",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "continuesReading",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "remoteId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isDeleted",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "verticalScroll",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "arabic",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "profileColor",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "fontSize",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "manualHijri",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "showTime",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "colorAyatSubject",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "stayOnWhileReading",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "autoHijri",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "autoDarkMode",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "showNextPrayerTime",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "showHijriDate",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "notificationQuiets",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "notificationReminder",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "notificationKahf",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "notificationPrayer",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "notificationTelawaReminder",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "enableVibrateOnAthkar",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "showText",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "user_mushaf",
+        "rootpage": 10,
+        "row_count": 1,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `user_mushaf` (`id` INTEGER NOT NULL, `selected` INTEGER NOT NULL, `userMushafName` TEXT NOT NULL, `mushafName` TEXT NOT NULL, `mushafKey` TEXT NOT NULL, `mushafType` TEXT NOT NULL, `timeStamp` INTEGER NOT NULL, `pageNumber` INTEGER NOT NULL, `reader` INTEGER NOT NULL, `selectedAyaSaperator` INTEGER NOT NULL, `selectedSureSaperator` INTEGER NOT NULL, `selectedPageNumberSaperator` INTEGER NOT NULL, `continuesReading` INTEGER NOT NULL, `remoteId` INTEGER NOT NULL, `isDeleted` INTEGER NOT NULL, `verticalScroll` INTEGER NOT NULL, `arabic` INTEGER NOT NULL, `profileColor` INTEGER NOT NULL, `fontSize` INTEGER NOT NULL, `manualHijri` INTEGER NOT NULL, `showTime` INTEGER NOT NULL, `colorAyatSubject` INTEGER NOT NULL, `stayOnWhileReading` INTEGER NOT NULL, `autoHijri` INTEGER NOT NULL, `autoDarkMode` INTEGER NOT NULL, `showNextPrayerTime` INTEGER NOT NULL, `showHijriDate` INTEGER NOT NULL, `notificationQuiets` INTEGER NOT NULL, `notificationReminder` INTEGER NOT NULL, `notificationKahf` INTEGER NOT NULL, `notificationPrayer` INTEGER NOT NULL, `notificationTelawaReminder` INTEGER NOT NULL, `enableVibrateOnAthkar` INTEGER NOT NULL, `showText` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "apiId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "arName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "enName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "downloadStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isVisible",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "order",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "type",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "hash",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "remoteVersion",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "localVersion",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "author",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "date_of_death",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "books",
+        "rootpage": 11,
+        "row_count": 189,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `books` (`id` TEXT NOT NULL, `apiId` INTEGER NOT NULL, `arName` TEXT NOT NULL, `enName` TEXT NOT NULL, `downloadStatus` INTEGER NOT NULL, `isVisible` INTEGER NOT NULL, `order` INTEGER NOT NULL, `type` INTEGER NOT NULL, `hash` TEXT, `remoteVersion` INTEGER NOT NULL, `localVersion` INTEGER NOT NULL, `author` TEXT, `date_of_death` TEXT, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "display_name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "fav",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "sort",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "category_hadith",
+        "rootpage": 13,
+        "row_count": 138,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `category_hadith` (`id` INTEGER NOT NULL, `display_name` TEXT, `name` TEXT, `fav` INTEGER NOT NULL, `sort` INTEGER, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "categoryId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "content",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "reference",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "counter",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "zekr_hadith",
+        "rootpage": 14,
+        "row_count": 458,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `zekr_hadith` (`id` INTEGER NOT NULL, `categoryId` INTEGER NOT NULL, `content` TEXT, `reference` TEXT, `counter` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`categoryId`) REFERENCES `category_hadith`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "fromPart",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "duration",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reminderTimeHour",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reminderTimeMin",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reminderTime",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isFinished",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "startDate",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "endData",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "enabled",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "khetma",
+        "rootpage": 15,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `khetma` (`id` INTEGER NOT NULL, `name` TEXT, `fromPart` INTEGER NOT NULL, `duration` INTEGER NOT NULL, `reminderTimeHour` INTEGER NOT NULL, `reminderTimeMin` INTEGER NOT NULL, `reminderTime` INTEGER NOT NULL, `isFinished` INTEGER NOT NULL, `startDate` INTEGER NOT NULL, `endData` INTEGER NOT NULL, `enabled` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "khetmaId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "startSora",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "startVerse",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "endSora",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "endVerse",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "startPage",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "endPage",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentPage",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isActive",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "time",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "order",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "wird",
+        "rootpage": 16,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `wird` (`id` INTEGER NOT NULL, `khetmaId` INTEGER NOT NULL, `startSora` INTEGER NOT NULL, `startVerse` INTEGER NOT NULL, `endSora` INTEGER NOT NULL, `endVerse` INTEGER NOT NULL, `startPage` INTEGER NOT NULL, `endPage` INTEGER NOT NULL, `currentPage` INTEGER NOT NULL, `isActive` INTEGER NOT NULL, `time` INTEGER NOT NULL, `order` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`khetmaId`) REFERENCES `khetma`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "arabic_name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "english_name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "category_arabic_name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "category_english_name",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "image",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "type",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "version",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "local_version",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "sort_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isFav",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isRemoved",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "reciters",
+        "rootpage": 17,
+        "row_count": 228,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `reciters` (`id` INTEGER NOT NULL, `arabic_name` TEXT NOT NULL, `english_name` TEXT NOT NULL, `category_arabic_name` TEXT, `category_english_name` TEXT, `image` TEXT, `type` TEXT, `version` INTEGER, `local_version` INTEGER, `sort_number` INTEGER, `isFav` INTEGER NOT NULL, `isRemoved` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "url",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "version",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "local_version",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "hash",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "surah_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reciter_id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "downloadStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "suraName",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "reciter_tracks",
+        "rootpage": 18,
+        "row_count": 114,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `reciter_tracks` (`id` INTEGER NOT NULL, `url` TEXT, `version` INTEGER, `local_version` INTEGER, `hash` TEXT, `surah_number` INTEGER NOT NULL, `reciter_id` INTEGER NOT NULL, `downloadStatus` INTEGER NOT NULL, `suraName` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`reciter_id`) REFERENCES `reciters`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayah_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "surah_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reciter_id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "page_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "time",
+            "type_name": "REAL"
+          }
+        ],
+        "name": "surah_timing",
+        "rootpage": 19,
+        "row_count": 6236,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `surah_timing` (`id` INTEGER NOT NULL, `ayah_number` INTEGER NOT NULL, `surah_number` INTEGER NOT NULL, `reciter_id` INTEGER NOT NULL, `page_number` INTEGER NOT NULL, `time` REAL NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`reciter_id`) REFERENCES `reciter_tracks`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isTemp",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "playListName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "createdAt",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "shuffled",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentTelawaListPosition",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentSuraInTelawaListPosition",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "lastAyahPlayed",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "lastPlayedSuraNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "lastReciterPlayer",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "playerListReciterId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "isReciterPlayerList",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "downloadingStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "groupDownloadId",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "player_list",
+        "rootpage": 20,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `player_list` (`id` INTEGER NOT NULL, `isTemp` INTEGER NOT NULL, `playListName` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `shuffled` INTEGER NOT NULL, `currentStatus` INTEGER NOT NULL, `currentTelawaListPosition` INTEGER NOT NULL, `currentSuraInTelawaListPosition` INTEGER NOT NULL, `lastAyahPlayed` INTEGER NOT NULL, `lastPlayedSuraNumber` INTEGER NOT NULL, `lastReciterPlayer` INTEGER NOT NULL, `playerListReciterId` INTEGER NOT NULL, `isReciterPlayerList` INTEGER NOT NULL, `downloadingStatus` INTEGER NOT NULL, `groupDownloadId` INTEGER NOT NULL, PRIMARY KEY(`id`))"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "playListId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reciterId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "reciterName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "reciterImage",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "repeatPart",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "repeatAya",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "telawa",
+        "rootpage": 21,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `telawa` (`id` INTEGER NOT NULL, `playListId` INTEGER NOT NULL, `reciterId` INTEGER NOT NULL, `reciterName` TEXT NOT NULL, `reciterImage` TEXT NOT NULL, `repeatPart` INTEGER NOT NULL, `repeatAya` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`playListId`) REFERENCES `player_list`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "playListId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "telawaId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "fromAya",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "toAya",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "currentAya",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "suraNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "suraName",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "suraSize",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "downloadProgress",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "downloadStatus",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "version",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "sura_player_item",
+        "rootpage": 22,
+        "row_count": 0,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE `sura_player_item` (`id` INTEGER NOT NULL, `playListId` INTEGER NOT NULL, `telawaId` INTEGER NOT NULL, `currentStatus` INTEGER NOT NULL, `fromAya` INTEGER NOT NULL, `toAya` INTEGER NOT NULL, `currentAya` INTEGER NOT NULL, `suraNumber` INTEGER NOT NULL, `suraName` TEXT NOT NULL, `suraSize` INTEGER NOT NULL, `downloadProgress` INTEGER NOT NULL, `downloadStatus` INTEGER NOT NULL, `version` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`playListId`) REFERENCES `player_list`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`telawaId`) REFERENCES `telawa`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "identity_hash",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "room_master_table",
+        "rootpage": 23,
+        "row_count": 1,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "surahNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahFrom",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahTo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "content",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "pageNumber",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "similar_groups",
+        "rootpage": 24,
+        "row_count": 1343,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE similar_groups (\n        id INTEGER PRIMARY KEY NOT NULL,\n        surahNumber INTEGER NOT NULL,\n        ayahFrom INTEGER NOT NULL,\n        ayahTo INTEGER NOT NULL,\n        content TEXT NOT NULL,\n        pageNumber INTEGER\n    )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "groupId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "surahNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahNumber",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "content",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "pageNumber",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "similar_verses",
+        "rootpage": 25,
+        "row_count": 2641,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE similar_verses (\n        id INTEGER PRIMARY KEY NOT NULL,\n        groupId INTEGER NOT NULL,\n        surahNumber INTEGER NOT NULL,\n        ayahNumber INTEGER NOT NULL,\n        content TEXT NOT NULL,\n        pageNumber INTEGER\n    )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "text",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "word_text",
+        "rootpage": 26,
+        "row_count": 47822,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE word_text (id INTEGER NOT NULL PRIMARY KEY, text TEXT NOT NULL)"
+      },
+      {
+        "columns": [
+          {
+            "name": "surahNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayahNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "wordNo",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "word",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "meaningId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "irabId",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "sarfId",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "word_content",
+        "rootpage": 27,
+        "row_count": 77432,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE \"word_content\" (\n            surahNo INTEGER NOT NULL,\n            ayahNo INTEGER NOT NULL,\n            wordNo INTEGER NOT NULL,\n            word TEXT,\n            meaningId INTEGER NOT NULL,\n            irabId INTEGER NOT NULL,\n            sarfId INTEGER NOT NULL,\n            PRIMARY KEY (surahNo, ayahNo, wordNo)\n        )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "bookKey",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "surah_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "content",
+            "type_name": "BLOB"
+          },
+          {
+            "name": "ayah_from",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayah_to",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "color_index",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "book_id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "text_alignment",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "book_content",
+        "rootpage": 29,
+        "row_count": 32857,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE \"book_content\" (\n            `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n            `bookKey` TEXT NOT NULL,\n            `surah_number` INTEGER,\n            `content` BLOB,\n            `ayah_from` INTEGER,\n            `ayah_to` INTEGER,\n            `color_index` INTEGER,\n            `book_id` INTEGER,\n            `text_alignment` TEXT)"
+      }
+    ],
+    "wal_sidecar_present": false
+  },
+  "summary": "SQLite 3.54.0 database: page size 32768, 1054 pages, utf-8 encoding, 25 table(s), 17 other object(s).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "row_counts_derived",
+      "message": "Row counts are computed by walking each table's b-tree, not read from a stored value; they count only rows present in this file."
+    },
+    {
+      "code": "no_decryption",
+      "message": "Encrypted databases (for example SQLCipher) have no readable header and cannot be opened; only unencrypted SQLite files are supported."
+    },
+    {
+      "code": "freelist_not_read",
+      "message": "Deleted rows may linger on freelist or unused pages; those pages are not read, so deleted content is not recovered."
+    },
+    {
+      "code": "blobs_not_dumped",
+      "message": "BLOB values are reported as a byte length and a SHA-256 prefix, never dumped; overflow payloads are bounded."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 25,
+    "total": 25
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\quran_app.db"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,424 @@
+{
+  "revision": 63,
+  "brief": {
+    "question": "Continue Golden Quran documentation research: inspect available Arabic Android string resources, bundled database schemas, and layout XML mappings, then identify limits of static APK analysis and prioritize live Android checks.",
+    "purpose": "Document how Golden Quran is structured so people can understand and rebuild its behavior.",
+    "targets": [
+      "Golden Quran Android APK and bundled resources/databases already open in this investigation"
+    ],
+    "constraints": [
+      "Static analysis and documentation only; do not run the app or change a device.",
+      "Do not access or modify E:\\MyApps\\ifaqa.",
+      "Inspect schema metadata only; do not export Quran datasets, copyrighted content, or private records.",
+      "Do not create or modify any application.",
+      "Cite evidence IDs; separate observations, inferences, and unknowns."
+    ],
+    "done_when": "Provide evidence-backed inventories for Arabic labels, database schemas, and UI resource mapping, plus exact static-analysis gaps and a prioritized ADB inspection plan; update investigation memory and handoff."
+  },
+  "plan": [
+    {
+      "title": "Resume saved investigation state and identify available targets",
+      "status": "done",
+      "why": "Confirmed the supplied APK and carried forward prior static findings."
+    },
+    {
+      "title": "Inventory Android Arabic string resources",
+      "status": "done",
+      "why": "Paged all 3,166 Arabic strings, plus plural and array resources; grouped exact examples by feature."
+    },
+    {
+      "title": "Inspect bundled database schemas only",
+      "status": "done",
+      "why": "Captured schema metadata for all three databases; did not request table rows."
+    },
+    {
+      "title": "Map layouts to app components and features",
+      "status": "done",
+      "why": "Decoded all 63 layout files, navigation XML, resource IDs, and widget providers."
+    },
+    {
+      "title": "Record static-analysis gaps and ADB priorities",
+      "status": "done",
+      "why": "Recorded remaining runtime unknowns and a prioritized live inspection plan; did not run the app."
+    },
+    {
+      "title": "Write findings and investigation handoff",
+      "status": "done",
+      "why": "Recorded Arabic, database, UI-resource, and static-analysis findings; corrected the old database note."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "hyp_1",
+      "claim": "The loaded base APK bundles a Flutter runtime.",
+      "prediction": "A static Flutter scan should find lib/<abi>/libapp.so or libflutter.so entries.",
+      "status": "refuted",
+      "supporting": [],
+      "contradicting": [
+        "ev_c73d0e1d68d4c09dbcc56ceacdcec13230a73a168e5b612d1909d84612f39e41"
+      ],
+      "notes": [
+        "The scan covered the base APK and found no Flutter libapp.so/libflutter.so. This does not rule out code delivered in a split or downloaded later."
+      ]
+    },
+    {
+      "id": "hyp_2",
+      "claim": "The app's own Android code is primarily written in or generated from Kotlin.",
+      "prediction": "The APK should contain Kotlin runtime markers and app-owned Kotlin-shaped classes such as data models, coroutine workers, or generated Room code.",
+      "status": "supported",
+      "supporting": [
+        "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c",
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+      ],
+      "contradicting": [],
+      "notes": [
+        "The archive graph identifies Kotlin builtins; app-owned classes include generated Room database types and CoroutineWorker implementations. This supports Kotlin use but does not recover the original source or build configuration."
+      ]
+    },
+    {
+      "id": "hyp_3",
+      "claim": "The three bundled databases likely serve separate Quran text, Quran glyph/layout, and athkar/dua data roles.",
+      "prediction": "Names and app models should align: Quran databases with chapter/page/verse models, and athkar_duas.db with athkar/dua feature names.",
+      "status": "supported",
+      "supporting": [
+        "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+        "ev_97394cff8bbfe06329439c2496576fca3732a967b2fafa88d59cceb6f2e0e36c",
+        "ev_4abac963d58f8fa70214549776d798933d1de95a8bba41fe5369c8f1262b9db3",
+        "ev_81bdafc400a10a130f43cac89b48072c15095673e0ebfc2e10fbf740e659d02b",
+        "ev_988da5bf451618fdb79677f2aaa5b047f1d310da713471b1fce45c062e4afa00",
+        "ev_236c4b735b67ad61fabdd332fed811f05e5b25a94ef80b8c296bd5459d3a611a",
+        "ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f",
+        "ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276",
+        "ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2"
+      ],
+      "contradicting": [],
+      "notes": [
+        "Supported only as a name/model-based inference; the three actual SQLite schemas were not read, so database purpose mapping is not verified.",
+        "Schema names and columns match the predicted division: Quran/reader/audio/book data in quran_app.db, word layout data in quran_glyphs.db, and sections/athkar plus Quran references in athkar_duas.db.",
+        "Schemas are now directly observed. quran_app.db includes Quran word/book/reader data, quran_glyphs.db stores word positioning/rendering fields, and athkar_duas.db stores athkar sections and references. Purpose mapping is supported by table names/columns but remains an inference; no table rows were read."
+      ]
+    },
+    {
+      "id": "hyp_4",
+      "claim": "The supplied base APK contains a populated Arabic-language string table.",
+      "prediction": "A locale-specific resource read should identify `ar` entries with resource IDs and Arabic values, and paging should reach the reported total.",
+      "status": "supported",
+      "supporting": [
+        "ev_8947dd0205e714a05ee28f5f7c1ecf2bd0faef0898ca52369f8933652f60e0db",
+        "ev_1ae740b16fd37087da337d5c94ba14fc72df26840082ca4d3709e7b4abd1fe8b",
+        "ev_62634933bd6b18536f16bcf32991c2c0824fc490960ec171bc550bd1fc0e9e5e",
+        "ev_b7b46ba0b84c97444befe578343dbb38e361e05475ffe0fe4b53eadb979bc999",
+        "ev_597193e8be9be14e4b6442ab5cdb1234c29b9ce7541c609d775e36143d9cc67f",
+        "ev_4ce7d953336c169a68005f8532ec56774377e5176b792daf26efe768c7abe4ee",
+        "ev_ad62a4275d733be70711e31941cbd0e656bf41b0e533bd88aad64e1f0aeb4df5",
+        "ev_658a4e3fa5c7c1c0ad99e8f451c71244c6ab2a5a14497d69e11789fbfdc9f3cb"
+      ],
+      "contradicting": [],
+      "notes": [
+        "The Arabic resource parser found locale `ar` and all seven result pages covered 3,166 entries; it explicitly reported that `ar-rEG` was not found."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "fnd_1",
+      "statement": "Observed: The APK package is org.goldenquran.freesoft, version 21.4, with Android SDK range 32–37, two DEX files, 36 declared permissions, and 63 manifest components. Its v2/v3 APK signatures were cryptographically verified, but the signing certificate was not checked for trust or revocation.",
+      "evidence_ids": [
+        "ev_564b93c1384675c08086e01eb11b75a962e055008a3db55bb5d2a10e00ee0ec8",
+        "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_2",
+      "statement": "Observed: The manifest declares 15 activities, 21 services, 23 receivers, and 4 providers; 14 components are exported/reachable from outside, and 6 of those have no component permission. MainActivity is the launcher and handles goldenquran links for dua-community, masbaha, and library; VoicePlayActivity accepts media search requests.",
+      "evidence_ids": [
+        "ev_564b93c1384675c08086e01eb11b75a962e055008a3db55bb5d2a10e00ee0ec8",
+        "ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_3",
+      "statement": "Inferred: This is a native Android app whose app code uses Kotlin. The APK contains DEX bytecode and Kotlin runtime markers, has no native ABI libraries, and the Flutter scan found no Flutter libraries in this base APK; this does not rule out a separate split or downloaded code.",
+      "evidence_ids": [
+        "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+        "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c",
+        "ev_c73d0e1d68d4c09dbcc56ceacdcec13230a73a168e5b612d1909d84612f39e41"
+      ],
+      "confidence": "inferred"
+    },
+    {
+      "id": "fnd_4",
+      "statement": "Observed: The manifest includes AndroidX Media3, WorkManager, Firebase Messaging, Google ML Kit, and Google Play Billing components, plus 36 permissions. Those permissions cover network access, alarms, location, audio/camera, notifications, Bluetooth, billing, and biometric access; declarations alone do not prove that a feature was used.",
+      "evidence_ids": [
+        "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+        "ev_9925014e76a9d8f343e69e6a9f7a5fff65dbc154f32020f68420dda08617630f",
+        "ev_f00468268997427851cfe570700502c3b25b4cf102db552435f4676cc03d3541"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_5",
+      "statement": "Observed: The resource table contains 46,569 entries across its configurations; the default string table has 3,215 entries. Visible strings name Quran copies, Dua Community, athkar, and An-Nawawi's Forty Hadith, as well as bookmark and reading actions.",
+      "evidence_ids": [
+        "ev_9780a1af4779a4fd9d946b04ec61267d171a3f4ed44967f1828f8f46ed78e571",
+        "ev_236c4b735b67ad61fabdd332fed811f05e5b25a94ef80b8c296bd5459d3a611a",
+        "ev_52665cb06387548df9301d8dc1121d8d28d6154536a14930df9be23bad5b85fe"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_6",
+      "statement": "Inferred from the 541 app-package class names: the feature areas include Quran reading and audio, prayer and reminders, athkar/custom duas, masbaha, Khetma reading plans, books/library, live sessions and calls, hadith, Islamic events, qibla, zakat, tasmee, worship tracking, statistics, and related tools. These names show code areas, not proof that every feature is enabled or works.",
+      "evidence_ids": [
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+        "ev_05c1f6c2ab3547ccce70c095559a6ad9ec9054f4f4217b7b273a5981faa12128"
+      ],
+      "confidence": "inferred"
+    },
+    {
+      "id": "fnd_7",
+      "statement": "Observed: The complete base.apk inventory has 1,283 entries, including 194 assets and 904 res files. The archive has 63 layout XML files (58 unqualified plus five configuration-qualified), nine res/xml files, no res/menu entries, 510 drawable-path files, and three bundled SQLite files: quran_app.db, quran_glyphs.db, and athkar_duas.db. The resource table separately has 535 drawable entries; the earlier 370 drawable count is not reproduced by the full archive scan. The graph’s asset_files=9,865 still conflicts with the archive’s 194 assets.",
+      "evidence_ids": [
+        "ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708",
+        "ev_84305f3349eb9ca08aa801416a4e6f8ffed63159ad159edfb602ad87346da97a",
+        "ev_966c4245b55dfd1fc69ac0a2a52fc4c96420d1253511ccbec1b7933f7ab59987",
+        "ev_ad3c8e16e648bab99f50b31fecdf9f0d97e58b7ed6594dd6a69f33293de1c461",
+        "ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54",
+        "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_8",
+      "statement": "Derived: The APK contains all 541 classes in the app namespace across two DEX files. Their top-level package counts are 213 network, 192 models, 116 UI, 7 workers, 6 habits, 4 datastore, 2 activity classes, and 1 application class. These are code groupings; feature purpose needs name, reference, and resource cross-checks.",
+      "evidence_ids": [
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+        "ev_c0e3f0f3db1b352fce3329ebb60b1beb7ffc3d13285179bef70faa9bac60aacd",
+        "ev_aad9d988fdf2c21b2b1d3c51cd2c12fa0ddbeb0c21c56a462895ad6453f32465",
+        "ev_15a92a910535cb40200758d57eb621c20e18e82abb44302fca89f9b065070825"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_9",
+      "statement": "Derived: The manifest has 15 activity entries. Seven belong to the app namespace (two externally reachable entry points and five internal activities); the other eight are library activities. MainActivity handles the launcher and three goldenquran deep-link hosts, while VoicePlayActivity accepts MEDIA_PLAY_FROM_SEARCH.",
+      "evidence_ids": [
+        "ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf",
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_10",
+      "statement": "Observed: All 3,215 default-locale string entries were paged. Their names and values include Quran reading and copies, verse search and bookmarks, audio reciters and downloads, Tafsir/translation, athkar and duas, Khetma, prayer times, qibla, masbaha, Tasmee, hadith, library, sync, offline states, and live sessions. These strings indicate named user-facing areas but do not prove a screen or code path is active.",
+      "evidence_ids": [
+        "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274",
+        "ev_65c3b2089d5998b75b20f115d94412b2f641834090f4cc03f867c6b1cbbc762d",
+        "ev_61673d9c6428891a4d336fb7206fb0ad39da0fb678bf1c43fa858539dfd026ef",
+        "ev_b97caf2a9f49d85f6ce467f57f483d268d10b9b3fe7d137bfb270099830bf805",
+        "ev_32944f8a6a36bf3f3eb20651131c7365b09f929052a59d57731ec287712a12f8",
+        "ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83",
+        "ev_db6aff248d905d610f5e67810ae753c054ff2130db7ff4538e40b132d1a7ee1b"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_11",
+      "statement": "Derived: The three bundled SQLite schemas are now documented in findings fnd_19–fnd_21. The app class inventory and schema names suggest links between reader models and the Quran databases, but exact Room entity-to-table mappings are not established by the schema metadata alone.",
+      "evidence_ids": [
+        "ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f",
+        "ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276",
+        "ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2",
+        "ev_97394cff8bbfe06329439c2496576fca3732a967b2fafa88d59cceb6f2e0e36c",
+        "ev_988da5bf451618fdb79677f2aaa5b047f1d310da713471b1fce45c062e4afa00"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_12",
+      "statement": "Derived: Audio uses an app-owned AndroidX Media3 MediaSessionService that exposes an ExoPlayer, and MainActivity has a static reference to that service. AudioFragment, reciter/track/playlist models, download strings, and audio refresh/update workers point to a player, library, and local-download subsystem. The exact playback and download sequence is not established by signatures alone.",
+      "evidence_ids": [
+        "ev_536f67508c97bec7d34c3332a624f83165e79d534a49b466ab23cd65160be17e",
+        "ev_f822c9bd459082139b5dd08aadbddb2d832cd29642d7a23d909e777a8d646306",
+        "ev_e893c2122df0068c37143caf3405b556855171709cd70014179df7c1ba90fcfa",
+        "ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0",
+        "ev_00df656201863ae3774492f0d23d6cbbeda861dc4a5a39a2c351f51f78d46076",
+        "ev_bfb102ffeba3ec807d12d8a6a187897fac4ec3f9de49de5bb08cbff8313593a0",
+        "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274",
+        "ev_65c3b2089d5998b75b20f115d94412b2f641834090f4cc03f867c6b1cbbc762d",
+        "ev_61673d9c6428891a4d336fb7206fb0ad39da0fb678bf1c43fa858539dfd026ef",
+        "ev_b97caf2a9f49d85f6ce467f57f483d268d10b9b3fe7d137bfb270099830bf805",
+        "ev_32944f8a6a36bf3f3eb20651131c7365b09f929052a59d57731ec287712a12f8",
+        "ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83",
+        "ev_db6aff248d905d610f5e67810ae753c054ff2130db7ff4538e40b132d1a7ee1b"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_13",
+      "statement": "Observed: The manifest declares app services and receivers for audio, prayer alarms, reminders, live calls, messaging, and three widgets. App-owned CoroutineWorker classes include audio refresh/update and sync jobs, plus prayer-alarm and other feature reminder jobs. The prayer alarm service contains MediaPlayer, AudioManager, WakeLock, Handler, and HandlerThread fields; widget provider XML specifies 15-minute updates for the two prayer widgets. These declarations describe available background building blocks, not whether jobs were scheduled on a device.",
+      "evidence_ids": [
+        "ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0",
+        "ev_9110bed55a2cfa96177f886cfce173b8f0de9b97c9897ff4221e58cba3a8c002",
+        "ev_391dfd2a90e6006f0d95dbff5e7151df31a77cc3d9893f34115308a301952505",
+        "ev_d98e00581bef96d3db871ebafbcb70e17c17835eb6cefddaf11b1144b131f1e6",
+        "ev_67d05f730f699fcb51e734a5f60fbe3c785f1cb301f11904e40afc48ec2c96bb",
+        "ev_2e97d4b9df5dbfd63432f9379d76e16a480beac7ac615002c0b9febf1a6e27cd",
+        "ev_10b1f848f3fa28997f3dd4ee9275b57a8047c50ac2b13ae0a7eec4b7db5413c1",
+        "ev_21fa2807dc0b248148037806d6ea6f15c7f0f3654447f8a306499eb236d4a376",
+        "ev_29d50bdab145fdc49594017f31026c7ac8b93fbb769b6306a613f707685b1883",
+        "ev_4ae641da7dd6cd754fc25a6340f4cdaaa983486da8bbe970b3ee0109351e6805",
+        "ev_92ef9591af3feabdf78de9b1b1146c5619d1222b7c552326c32999a5934e3ffe"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_14",
+      "statement": "Derived: Candidate screens include Quran index/reader, audio library/player, bookmarks and notes, settings, books and downloads, prayer setup/times/alarm, athkar/duas, Khetma, masbaha, Tasmee, hadith, live sessions/calls, qibla, and other tools. The manifest proves only the two public activity entry points and deep links; Fragment names and static references do not establish actual navigation paths or screen layouts.",
+      "evidence_ids": [
+        "ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5",
+        "ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0",
+        "ev_9110bed55a2cfa96177f886cfce173b8f0de9b97c9897ff4221e58cba3a8c002",
+        "ev_974da19fc80b12ed3ebd7b317608dbe0b03aae27b634634b24a481428aebe93c",
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+        "ev_c0e3f0f3db1b352fce3329ebb60b1beb7ffc3d13285179bef70faa9bac60aacd",
+        "ev_aad9d988fdf2c21b2b1d3c51cd2c12fa0ddbeb0c21c56a462895ad6453f32465",
+        "ev_15a92a910535cb40200758d57eb621c20e18e82abb44302fca89f9b065070825",
+        "ev_05d7556f558927d8a5957742b59f1b8949fee579bd9ae1323bb756b5cbd1a835",
+        "ev_35efcd8b1bbdc23c93b70d632a4935da3c51395b3632956950a258d1e3869692",
+        "ev_7864c117fa3ce6a7127a4008c937485511b994d5d1c265067b390137adf3ec58"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_15",
+      "statement": "Observed: Search-related models distinguish ayah, glossary, note, page, subject, surah, Tafsir, and translation result types; SearchObject also carries glyph text/hit data and optional page, ayah, surah, reciter, and book identifiers. Strings name Quran index, audio-library, hadith, and book search. The matching algorithm and ranking are not visible from these data shapes.",
+      "evidence_ids": [
+        "ev_80abce67c3995730a6e7f50f3c604b87bf3b3680ce136b2df26a15c3d151949c",
+        "ev_4ccbcdca4f775a5da9139ee11d4bbf84a67fc4f8ab9a559494f488c1947a4d0f",
+        "ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274",
+        "ev_61673d9c6428891a4d336fb7206fb0ad39da0fb678bf1c43fa858539dfd026ef",
+        "ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_16",
+      "statement": "Derived: App data models cover reader preferences and page position, bookmarks and notes, reading sessions, Tasmee scores, Khetma progress, reciter/download state, prayer check-ins, athkar completion, and statistics. This identifies state the app may persist or sync, but these classes alone do not show the storage location or save timing.",
+      "evidence_ids": [
+        "ev_491981fd821bd23cbd10b961634230250467e4be4f32274100698e31ed994143",
+        "ev_67d88b7ec349864828b2ecf3e75d0be8a7db17c52aca7e74c4173d9c290032db",
+        "ev_8d2a686d6ed6573637d44d58f919bda34568efd98748d57a274fccc8182f0eca",
+        "ev_3ac55afecc178890337f7a9cf6e6b8d38f01b56a287db9a62e0587aadb128c7e",
+        "ev_3813fe3b4d09b4a8152d71561278fd9bc4b8c993eb02447f2d4649890f8f94cc",
+        "ev_2192a005abb265111e3eb899a09ad94cd2780c8a707400201289acfa6486cf6f",
+        "ev_00df656201863ae3774492f0d23d6cbbeda861dc4a5a39a2c351f51f78d46076",
+        "ev_5552c6bc7562e8e4329d62c0de888028f0aac8bf0a768773bd3b9f1e515c9ad6",
+        "ev_7b95177c7ec0b99ec1febe3c990ff41799b127e5777a967b8fc58ea04af2b2d4",
+        "ev_f138cd73199c9cc4bb6ad2dcfae17d0ba8077255a109d0b8fb29818a8b896e5e",
+        "ev_9291c81216a31a8e58df7ca71a13409a3c8f0c163e7e70ff6f21c6c8a36208c4"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_17",
+      "statement": "Inferred: Tasmee is a Quran recitation practice feature that records a chapter and verse range, duration, correct/missed/wrong words, hints, and a score. Strings describe a one-time recognition-model download for offline use; the class names include a score-upload worker. This supports an offline-ready design, but does not prove recognition or upload works at runtime.",
+      "evidence_ids": [
+        "ev_8d8a994d7236b381f49b17d4dc5fcb5877e99aaa726a4641ea9bbcd99e3e5d37",
+        "ev_3813fe3b4d09b4a8152d71561278fd9bc4b8c993eb02447f2d4649890f8f94cc",
+        "ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83",
+        "ev_32944f8a6a36bf3f3eb20651131c7365b09f929052a59d57731ec287712a12f8",
+        "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+      ],
+      "confidence": "derived"
+    },
+    {
+      "id": "fnd_18",
+      "statement": "Observed: The base APK contains an Arabic (`ar`) string locale with 3,166 string entries, fully paged in seven read-only resource records; the parser reports no separate `ar-rEG` locale. The paged records expose resource IDs, keys, exact Arabic values, and configuration. See the seven page evidence IDs for the complete structured inventory.",
+      "evidence_ids": [
+        "ev_8947dd0205e714a05ee28f5f7c1ecf2bd0faef0898ca52369f8933652f60e0db",
+        "ev_1ae740b16fd37087da337d5c94ba14fc72df26840082ca4d3709e7b4abd1fe8b",
+        "ev_62634933bd6b18536f16bcf32991c2c0824fc490960ec171bc550bd1fc0e9e5e",
+        "ev_b7b46ba0b84c97444befe578343dbb38e361e05475ffe0fe4b53eadb979bc999",
+        "ev_597193e8be9be14e4b6442ab5cdb1234c29b9ce7541c609d775e36143d9cc67f",
+        "ev_4ce7d953336c169a68005f8532ec56774377e5176b792daf26efe768c7abe4ee",
+        "ev_ad62a4275d733be70711e31941cbd0e656bf41b0e533bd88aad64e1f0aeb4df5",
+        "ev_658a4e3fa5c7c1c0ad99e8f451c71244c6ab2a5a14497d69e11789fbfdc9f3cb"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_19",
+      "statement": "Observed: `quran_app.db` is a complete schema-only SQLite read with 25 tables and 17 indexes (including SQLite autoindexes), SQLite 3.54.0, UTF-8, page size 32,768 bytes, and user_version 2. The schema includes bookmarks, notes, mushaf/settings state, prayers, notifications, statistics, hadith, Khetma, audio/playlist, word, similar-verse, and book-content tables; its foreign keys connect hadith categories, Khetma sections, reciters/tracks/timing, and playlists. No table rows were requested.",
+      "evidence_ids": [
+        "ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_20",
+      "statement": "Observed: `quran_glyphs.db` has one table, `words`, with columns `surah`, `ayah`, `word_position`, `code_v2`, `line_number`, `page_number`, `char_type`, `text`, and `clean`; its composite primary key is `(surah, ayah, word_position)`, with an index on `(surah, ayah)`. The schema-only read returned no row page.",
+      "evidence_ids": [
+        "ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_21",
+      "statement": "Observed: `athkar_duas.db` has `section`, `athkar`, and `athkar_ayah_ref` tables. The schema declares `athkar.section_id → section.id` and `athkar_ayah_ref.athkar_id → athkar.id`; there are eight indexes, including lookup indexes on section/position and athkar_id. The schema-only read returned no row page.",
+      "evidence_ids": [
+        "ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_22",
+      "statement": "Observed: The Arabic resource table also has 19 plural resources and two string arrays (`exo_controls_playback_speeds` and `fahrasSuras`). The arrays are recorded by identifier; their complete values are not reproduced here.",
+      "evidence_ids": [
+        "ev_354ec0ddb57573bad66d4c902562fde126b719be70e51af3efed93d90175db22",
+        "ev_5a96d266b280db1ef54308ca0e1e61379123f974427cda89b212e1e81b112a11"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_23",
+      "statement": "Observed: The APK contains 63 layout XML files, 11 navigation XML files declaring 70 destinations and 77 action links, and 1,020 resource ID mappings. The start destination ID maps to `reading` and `FullViewFragment`. App-specific layouts are prayer notifications and widgets; reader, settings, dialog, list, and media-player layouts otherwise appear among shared AndroidX/Material/Media3 resources. Navigation XML directly names feature fragments and dialogs, while linking each generic layout to a particular screen is not established by layout XML alone.",
+      "evidence_ids": [
+        "ev_28568f358c5aa829c4bd6982d9d0079b09d00ac183e9f943f9ba64e9da54cb95",
+        "ev_c5c87b146f6bc4655d17d5246522dbf8faab6ec0c4ac944475c87b44ad5b68ee",
+        "ev_a21590dc5ec80833ea6329842c9183539af1e48dc2acb52b1aef963a4e59b6af",
+        "ev_59ade983a333b425941e3adc4b2f9d21b45b3400c2a1d7f4a7ad1024ac6601d8",
+        "ev_58e7ebd88bea7f6f0e0d54c8c52dfd7571c2074913fc6d1654df5c09d9257316",
+        "ev_af52881d025715bb95d35f1977f38d7e2452d0bf8454240bbf5785157e59b01d",
+        "ev_59d8eb23a0be148012637a345807995b4675d0357d5086badeb035da9ed4a16a",
+        "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+        "ev_bbf57d26af62eac89179a35c6c64eedaf4d638e4f562a1fbddbcdc9719dc95a9",
+        "ev_c6184d636d8b6d3079573e19eff239394465ceced24de0207b967cb1194cd937",
+        "ev_5586ec4ddeab0034cee581defdf90233c1781e731d520773fe543f55a3d939e3",
+        "ev_14063257774a3d6c035b5b226f53b6d57c2b8b08cab70a54441f1c147928cb81"
+      ],
+      "confidence": "observed"
+    },
+    {
+      "id": "fnd_24",
+      "statement": "Inferred: Static APK evidence can show declared routes, components, layouts, resources, and stored schema, but it cannot confirm which screens render in normal use, whether controls work, how settings persist, whether audio and downloads succeed, or how behavior changes by device or network. Those gaps require an approved live Android walkthrough.",
+      "evidence_ids": [
+        "ev_58e7ebd88bea7f6f0e0d54c8c52dfd7571c2074913fc6d1654df5c09d9257316",
+        "ev_28568f358c5aa829c4bd6982d9d0079b09d00ac183e9f943f9ba64e9da54cb95",
+        "ev_c5c87b146f6bc4655d17d5246522dbf8faab6ec0c4ac944475c87b44ad5b68ee",
+        "ev_a21590dc5ec80833ea6329842c9183539af1e48dc2acb52b1aef963a4e59b6af",
+        "ev_59ade983a333b425941e3adc4b2f9d21b45b3400c2a1d7f4a7ad1024ac6601d8",
+        "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+        "ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0",
+        "ev_9110bed55a2cfa96177f886cfce173b8f0de9b97c9897ff4221e58cba3a8c002",
+        "ev_491981fd821bd23cbd10b961634230250467e4be4f32274100698e31ed994143",
+        "ev_236c4b735b67ad61fabdd332fed811f05e5b25a94ef80b8c296bd5459d3a611a"
+      ],
+      "confidence": "inferred"
+    }
+  ],
+  "handoff": "Phase 3 static analysis is complete. The current report is delivered in the conversation; no Markdown or application files were created. Do not claim prior export files exist: the earlier handoff's saved-report list was stale and has been replaced. Full Arabic `ar` strings (3,166 entries) are in seven evidence pages: ev_1ae740b16fd37087da337d5c94ba14fc72df26840082ca4d3709e7b4abd1fe8b, ev_62634933bd6b18536f16bcf32991c2c0824fc490960ec171bc550bd1fc0e9e5e, ev_b7b46ba0b84c97444befe578343dbb38e361e05475ffe0fe4b53eadb979bc999, ev_597193e8be9be14e4b6442ab5cdb1234c29b9ce7541c609d775e36143d9cc67f, ev_4ce7d953336c169a68005f8532ec56774377e5176b792daf26efe768c7abe4ee, ev_ad62a4275d733be70711e31941cbd0e656bf41b0e533bd88aad64e1f0aeb4df5, ev_658a4e3fa5c7c1c0ad99e8f451c71244c6ab2a5a14497d69e11789fbfdc9f3cb. Arabic plurals/arrays: ev_354ec0ddb57573bad66d4c902562fde126b719be70e51af3efed93d90175db22 and ev_5a96d266b280db1ef54308ca0e1e61379123f974427cda89b212e1e81b112a11. Database schema evidence: quran_app ev_b5bf317d70879cc7392e1af5bfadc2e5ff5307751da9ab6dd2f1eed023ac159f; glyphs ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276; athkar/dua ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2. These are schema-only reads; no rows were requested. UI evidence: all 63 layouts are in ev_28568f358c5aa829c4bd6982d9d0079b09d00ac183e9f943f9ba64e9da54cb95, ev_c5c87b146f6bc4655d17d5246522dbf8faab6ec0c4ac944475c87b44ad5b68ee, ev_a21590dc5ec80833ea6329842c9183539af1e48dc2acb52b1aef963a4e59b6af, ev_59ade983a333b425941e3adc4b2f9d21b45b3400c2a1d7f4a7ad1024ac6601d8; navigation graph ev_58e7ebd88bea7f6f0e0d54c8c52dfd7571c2074913fc6d1654df5c09d9257316; ID map ev_af52881d025715bb95d35f1977f38d7e2452d0bf8454240bbf5785157e59b01d. Findings fnd_18–fnd_24 cover Arabic, schemas, layout/navigation, and static limits; fnd_11 was corrected. Plan is complete. Remaining live questions are actual rendered screens/routes, feature success, online/offline behavior, settings persistence, and installed split APKs; asset count mismatch is a separate low-priority static issue. If continuing, first get approval before any live Android operation, then prioritize package/split inventory, launch/navigation/screens, reader/search/settings, audio online/offline, prayer/widgets, Tasmee/microphone, and rotation/device variants. Never inspect database rows or private user data.",
+  "updated": "2026-11-17T07:28:34Z"
+}

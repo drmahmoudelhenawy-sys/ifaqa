@@ -1,0 +1,617 @@
+{
+  "id": "ev_9291c81216a31a8e58df7ca71a13409a3c8f0c163e7e70ff6f21c6c8a36208c4",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.Statistics",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/Statistics;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->Companion:Lorg/goldenquran/freesoft/models/local/Statistics$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.Statistics$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "DAY",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->DAY:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "MONTH",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->MONTH:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "PAGE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->PAGE:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "WEEK",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->WEEK:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "YEAR",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->YEAR:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "day",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->day:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->id:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "month",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->month:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "time",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->time:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "totalPages",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->totalPages:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "week",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->week:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "year",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->year:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 17,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;-><init>()V",
+        "registers": 13,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 18,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;-><init>(JIIIIJI)V",
+        "registers": 10,
+        "signature": "public void <init>(long, int, int, int, int, long, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 42,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;-><init>(JIIIIJIILu62;)V",
+        "registers": 15,
+        "signature": "public synthetic void <init>(long, int, int, int, int, long, int, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 65,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->copy$default(Lorg/goldenquran/freesoft/models/local/Statistics;JIIIIJIILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/Statistics;",
+        "registers": 22,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.Statistics copy$default(org.goldenquran.freesoft.models.local.Statistics, long, int, int, int, int, long, int, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component4()I",
+        "registers": 1,
+        "signature": "public final int component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component5()I",
+        "registers": 1,
+        "signature": "public final int component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component6()J",
+        "registers": 3,
+        "signature": "public final long component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->component7()I",
+        "registers": 1,
+        "signature": "public final int component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->copy(JIIIIJI)Lorg/goldenquran/freesoft/models/local/Statistics;",
+        "registers": 10,
+        "signature": "public final org.goldenquran.freesoft.models.local.Statistics copy(long, int, int, int, int, long, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 66,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getDay",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getDay()I",
+        "registers": 1,
+        "signature": "public final int getDay()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getId()J",
+        "registers": 3,
+        "signature": "public final long getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getMonth",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getMonth()I",
+        "registers": 1,
+        "signature": "public final int getMonth()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getTime()J",
+        "registers": 3,
+        "signature": "public final long getTime()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getTotalPages",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getTotalPages()I",
+        "registers": 1,
+        "signature": "public final int getTotalPages()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getWeek",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getWeek()I",
+        "registers": 1,
+        "signature": "public final int getWeek()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getYear",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->getYear()I",
+        "registers": 1,
+        "signature": "public final int getYear()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 47,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDay",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setDay(I)V",
+        "registers": 2,
+        "signature": "public final void setDay(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setId(J)V",
+        "registers": 3,
+        "signature": "public final void setId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setMonth",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setMonth(I)V",
+        "registers": 2,
+        "signature": "public final void setMonth(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setTime",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setTime(J)V",
+        "registers": 3,
+        "signature": "public final void setTime(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setTotalPages",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setTotalPages(I)V",
+        "registers": 2,
+        "signature": "public final void setTotalPages(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setWeek",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setWeek(I)V",
+        "registers": 2,
+        "signature": "public final void setWeek(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setYear",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->setYear(I)V",
+        "registers": 2,
+        "signature": "public final void setYear(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 63,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Statistics;->toString()Ljava/lang/String;",
+        "registers": 11,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.Statistics",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.Statistics (classes2.dex) extends java.lang.Object: 14 fields, 30 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/Statistics;"
+    }
+  ],
+  "links": []
+}

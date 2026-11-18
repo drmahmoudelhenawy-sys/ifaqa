@@ -1,0 +1,399 @@
+{
+  "id": "ev_47c1bca52fa655927d5184c02534881fae791c40fe51e99755e521f35b6bca43",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.reading.FullViewFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "A0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->A0:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "B0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->B0:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "C0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->C0:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "D0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->D0:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "E0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->E0:Ldx8;",
+        "type": "dx8"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "F0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->F0:Lorg/goldenquran/freesoft/models/SuraAyahPage;",
+        "type": "org.goldenquran.freesoft.models.SuraAyahPage"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "G0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->G0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "H0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->H0:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "I0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->I0:Ld81;",
+        "type": "d81"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->y0:Lto7;",
+        "type": "to7"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->z0:Lj69;",
+        "type": "j69"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 72,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 73,
+        "kind": "virtual",
+        "name": "H",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->H()V",
+        "registers": 3,
+        "signature": "public final void H()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 248,
+        "kind": "virtual",
+        "name": "L",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->L()V",
+        "registers": 19,
+        "signature": "public final void L()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 46,
+        "kind": "virtual",
+        "name": "M",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->M()V",
+        "registers": 3,
+        "signature": "public final void M()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 277,
+        "kind": "virtual",
+        "name": "c0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->c0(ILfk3;)V",
+        "registers": 12,
+        "signature": "public final void c0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 155,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->h0()V",
+        "registers": 9,
+        "signature": "public final void h0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 131,
+        "kind": "virtual",
+        "name": "i0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->i0()V",
+        "registers": 6,
+        "signature": "public final void i0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 39,
+        "kind": "virtual",
+        "name": "j0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->j0()V",
+        "registers": 5,
+        "signature": "public final void j0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 102,
+        "kind": "virtual",
+        "name": "k0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->k0(Lorg/goldenquran/freesoft/models/SuraAyahPage;)V",
+        "registers": 6,
+        "signature": "public final void k0(org.goldenquran.freesoft.models.SuraAyahPage)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "l0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->l0()Lao7;",
+        "registers": 1,
+        "signature": "public final ao7 l0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 117,
+        "kind": "virtual",
+        "name": "m0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->m0(Lorg/goldenquran/freesoft/models/SuraAyahPage;)V",
+        "registers": 8,
+        "signature": "public final void m0(org.goldenquran.freesoft.models.SuraAyahPage)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 32,
+        "kind": "virtual",
+        "name": "n0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->n0()V",
+        "registers": 3,
+        "signature": "public final void n0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 66,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->o0(J)V",
+        "registers": 5,
+        "signature": "public final void o0(long)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 74,
+        "kind": "virtual",
+        "name": "p0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->p0(ILzn7;)V",
+        "registers": 5,
+        "signature": "public final void p0(int, zn7)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 373,
+        "kind": "virtual",
+        "name": "q0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->q0(I)V",
+        "registers": 20,
+        "signature": "public final void q0(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "r0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->r0()V",
+        "registers": 2,
+        "signature": "public final void r0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "s0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;->s0()V",
+        "registers": 7,
+        "signature": "public final void s0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.reading.FullViewFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lhn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.reading.FullViewFragment (classes2.dex) extends hn1: 11 fields, 17 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;"
+    }
+  ],
+  "links": []
+}

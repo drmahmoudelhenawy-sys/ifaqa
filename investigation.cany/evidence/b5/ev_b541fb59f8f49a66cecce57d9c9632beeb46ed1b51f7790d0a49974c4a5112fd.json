@@ -1,0 +1,54 @@
+{
+  "id": "ev_b541fb59f8f49a66cecce57d9c9632beeb46ed1b51f7790d0a49974c4a5112fd",
+  "subject": {
+    "kind": "text",
+    "sha256": "a5cc918824dbf80c215073a5146425947eb33c27892e1ee131ab10142d06fce3",
+    "name": "MASTER_INDEX.md"
+  },
+  "operation": "core_text_read",
+  "params": {
+    "limit": 3,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+  },
+  "result": {
+    "cut_lines": [],
+    "encoding": "utf8",
+    "file_size": 6654,
+    "lines": 3,
+    "more": true,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md",
+    "replaced_sequences": 0,
+    "text": "# Golden Quran Investigation — Master Index\n\n## Status\n",
+    "total_lines": 67
+  },
+  "summary": "MASTER_INDEX.md: lines 1–3 of 67 (UTF-8).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "text_as_stored",
+      "message": "The file is read as text as it is stored: nothing is run, rendered or formatted, and text a program builds or downloads while it runs isn't here."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 3,
+    "total": 67,
+    "next_offset": 3
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+    }
+  ],
+  "links": []
+}

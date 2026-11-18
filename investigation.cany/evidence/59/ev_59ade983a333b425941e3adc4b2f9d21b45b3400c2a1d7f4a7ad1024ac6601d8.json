@@ -1,0 +1,714 @@
+{
+  "id": "ev_59ade983a333b425941e3adc4b2f9d21b45b3400c2a1d7f4a7ad1024ac6601d8",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 1,
+    "locale": null,
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": null,
+    "with_strings": false,
+    "xml_files": [
+      "res/layout/notification_prayer_expanded.xml",
+      "res/layout/preference.xml",
+      "res/layout/select_dialog_item_material.xml",
+      "res/layout/select_dialog_multichoice_material.xml",
+      "res/layout/select_dialog_singlechoice_material.xml",
+      "res/layout/support_simple_spinner_dropdown_item.xml",
+      "res/layout/widget_prayer_times_1.xml",
+      "res/layout/widget_prayer_times_2.xml",
+      "res/layout/widget_verse_item.xml",
+      "res/layout/widget_verse_ticker.xml",
+      "res/layout-sw600dp-v13/design_layout_snackbar.xml",
+      "res/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+      "res/layout-v26/abc_screen_toolbar.xml",
+      "res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+      "res/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    ]
+  },
+  "result": {
+    "entries": [
+      {
+        "config": "default",
+        "id": "0x7f010002",
+        "key": "abc_grow_fade_in_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_grow_fade_in_from_bottom.xml",
+        "value_type": "string"
+      }
+    ],
+    "entries_matching": 46569,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": [
+      {
+        "path": "res/layout/notification_prayer_expanded.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"1\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:paddingStart=\"4dp\" android:paddingEnd=\"4dp\">\n  <RelativeLayout android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c9\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentStart=\"true\">\n    </TextView>\n    <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0111\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginStart=\"6dp\" android:layout_toEndOf=\"@0x7f0a03c9\">\n    </Chronometer>\n    <TextView android:textSize=\"12sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c8\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_marginEnd=\"4dp\" android:layout_toStartOf=\"@0x7f0a0110\">\n    </TextView>\n    <Chronometer android:textSize=\"12sp\" android:textColor=\"@0x7f060038\" android:id=\"@0x7f0a0110\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_centerVertical=\"true\" android:fontFamily=\"sans-serif-medium\" android:layout_alignParentEnd=\"true\">\n    </Chronometer>\n  </RelativeLayout>\n  <FrameLayout android:background=\"@0x7f060082\" android:layout_width=\"-1\" android:layout_height=\"1dp\" android:layout_marginTop=\"8dp\" android:layout_marginBottom=\"8dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:baselineAligned=\"false\">\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011c\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c4\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011d\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c6\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c7\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a0119\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03be\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03bf\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011a\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c0\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011e\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03ca\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03cb\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a011b\" android:paddingTop=\"4dp\" android:paddingBottom=\"4dp\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"11sp\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c2\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n      <TextView android:textSize=\"11sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f0603fb\" android:id=\"@0x7f0a03c3\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginTop=\"2dp\" android:fontFamily=\"sans-serif-medium\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/preference.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\" android:gravity=\"0x10\" android:background=\"?0x0101030e\" android:paddingRight=\"?0x01010063\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"?0x0101004d\" android:paddingEnd=\"?0x01010063\">\n  <FrameLayout android:id=\"@0x7f0a01e7\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    <androidx.preference.internal.PreferenceImageView android:id=\"@0x01020006\" android:layout_width=\"-2\" android:layout_height=\"-2\" app:maxHeight=\"48dp\" app:maxWidth=\"48dp\">\n    </androidx.preference.internal.PreferenceImageView>\n  </FrameLayout>\n  <RelativeLayout android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_marginLeft=\"15dp\" android:layout_marginTop=\"6dp\" android:layout_marginRight=\"6dp\" android:layout_marginBottom=\"6dp\" android:layout_weight=\"1\" android:layout_marginStart=\"15dp\" android:layout_marginEnd=\"6dp\">\n    <TextView android:textAppearance=\"?0x01010040\" android:textColor=\"?0x01010036\" android:ellipsize=\"4\" android:id=\"@0x01020016\" android:fadingEdge=\"0x1000\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:singleLine=\"true\">\n    </TextView>\n    <TextView android:textAppearance=\"?0x01010042\" android:textColor=\"?0x01010038\" android:id=\"@0x01020010\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:maxLines=\"4\" android:layout_below=\"@0x01020016\" android:layout_alignLeft=\"@0x01020016\" android:layout_alignStart=\"@0x01020016\">\n    </TextView>\n  </RelativeLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"1\" android:id=\"@0x01020018\" android:layout_width=\"-2\" android:layout_height=\"-1\">\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/select_dialog_item_material.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:textAppearance=\"?0x7f04061e\" android:textColor=\"?0x7f040632\" android:ellipsize=\"4\" android:gravity=\"0x10\" android:id=\"@0x01020014\" android:paddingLeft=\"?0x7f04038a\" android:paddingRight=\"?0x7f04038b\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"?0x7f040388\">\n</TextView>\n"
+      },
+      {
+        "path": "res/layout/select_dialog_multichoice_material.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<CheckedTextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:textAppearance=\"?0x01010041\" android:textColor=\"?0x7f040632\" android:ellipsize=\"4\" android:gravity=\"0x10\" android:id=\"@0x01020014\" android:paddingLeft=\"@0x7f07003a\" android:paddingRight=\"?0x7f0401c7\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"?0x7f040388\" android:drawableLeft=\"?0x0101021a\" android:drawablePadding=\"20dp\" android:drawableStart=\"?0x0101021a\" android:paddingStart=\"@0x7f07003a\" android:paddingEnd=\"?0x7f0401c7\">\n</CheckedTextView>\n"
+      },
+      {
+        "path": "res/layout/select_dialog_singlechoice_material.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<CheckedTextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:textAppearance=\"?0x01010041\" android:textColor=\"?0x7f040632\" android:ellipsize=\"4\" android:gravity=\"0x10\" android:id=\"@0x01020014\" android:paddingLeft=\"@0x7f07003a\" android:paddingRight=\"?0x7f0401c7\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:minHeight=\"?0x7f040388\" android:drawableLeft=\"?0x01010219\" android:drawablePadding=\"20dp\" android:drawableStart=\"?0x01010219\" android:paddingStart=\"@0x7f07003a\" android:paddingEnd=\"?0x7f0401c7\">\n</CheckedTextView>\n"
+      },
+      {
+        "path": "res/layout/support_simple_spinner_dropdown_item.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:ellipsize=\"4\" android:id=\"@0x01020014\" android:layout_width=\"-1\" android:layout_height=\"?0x7f0401ec\" android:singleLine=\"true\" style=\"?0x7f040582\">\n</TextView>\n"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_1.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"1\" android:id=\"@0x7f0a03e5\" android:background=\"@0x7f0800a4\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layoutDirection=\"1\" android:paddingHorizontal=\"18dp\" android:paddingVertical=\"8dp\">\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"11sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ba\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n    </TextView>\n    <ImageView android:id=\"@0x7f0a01fb\" android:layout_width=\"11dp\" android:layout_height=\"11dp\" android:src=\"@0x7f0801ee\" android:importantForAccessibility=\"2\" android:layout_marginEnd=\"4dp\">\n    </ImageView>\n    <TextView android:textSize=\"11sp\" android:textColor=\"#55ffffff\" android:id=\"@0x7f0a03bd\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n  </LinearLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\">\n    <TextView android:textSize=\"26sp\" android:textColor=\"#ffd4a74a\" android:id=\"@0x7f0a03bb\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n    <FrameLayout android:layout_width=\"10dp\" android:layout_height=\"-1\">\n    </FrameLayout>\n    <TextView android:textSize=\"30sp\" android:textColor=\"#e8ffffff\" android:id=\"@0x7f0a03bc\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n    </TextView>\n    <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:background=\"@0x7f0800a5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:paddingHorizontal=\"12dp\" android:paddingVertical=\"4dp\">\n      <ImageView android:id=\"@0x7f0a01fc\" android:layout_width=\"11dp\" android:layout_height=\"11dp\" android:src=\"@0x7f0801ef\" android:importantForAccessibility=\"2\" android:layout_marginEnd=\"5dp\">\n      </ImageView>\n      <Chronometer android:textSize=\"10sp\" android:textColor=\"#66ffffff\" android:id=\"@0x7f0a03b9\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </Chronometer>\n    </LinearLayout>\n  </LinearLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"-1\" android:layout_height=\"1dp\">\n  </FrameLayout>\n  <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n  </FrameLayout>\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layoutDirection=\"0\">\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ae\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b4\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03af\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b5\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ab\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b1\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ac\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b2\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03b0\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b6\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n    <FrameLayout android:background=\"@0x7f0800a3\" android:layout_width=\"1dp\" android:layout_height=\"18dp\">\n    </FrameLayout>\n    <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-2\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"8sp\" android:textColor=\"#77ffffff\" android:id=\"@0x7f0a03ad\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n      <TextView android:textSize=\"10sp\" android:textColor=\"#aaffffff\" android:id=\"@0x7f0a03b3\" android:layout_width=\"-2\" android:layout_height=\"-2\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/widget_prayer_times_2.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:orientation=\"0\" android:id=\"@0x7f0a03e6\" android:background=\"@0x7f0800a7\" android:padding=\"8dp\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layoutDirection=\"1\">\n  <LinearLayout android:gravity=\"0x10\" android:orientation=\"1\" android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\" android:paddingHorizontal=\"12dp\">\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039e\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a4\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a03a1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a7\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039d\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a3\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039c\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a2\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a03a0\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a6\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n    <LinearLayout android:gravity=\"0x10\" android:orientation=\"0\" android:layout_width=\"-1\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n      <TextView android:textSize=\"16sp\" android:textColor=\"#ddffffff\" android:id=\"@0x7f0a039f\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n      <FrameLayout android:layout_width=\"0dp\" android:layout_height=\"-1\" android:layout_weight=\"1\">\n      </FrameLayout>\n      <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a03a5\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n      </TextView>\n    </LinearLayout>\n  </LinearLayout>\n  <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:background=\"@0x7f0800a6\" android:layout_width=\"150dp\" android:layout_height=\"-1\" android:paddingHorizontal=\"8dp\" android:paddingVertical=\"8dp\">\n    <TextView android:textSize=\"18sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a038d\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-1\" android:layout_height=\"4dp\">\n    </FrameLayout>\n    <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a0394\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n    </TextView>\n    <TextView android:textSize=\"14sp\" android:textColor=\"#bbffffff\" android:id=\"@0x7f0a0393\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090003\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-2\" android:layout_height=\"0dp\" android:layout_weight=\"1\">\n    </FrameLayout>\n    <TextView android:textSize=\"20sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a0399\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </TextView>\n    <FrameLayout android:layout_width=\"-1\" android:layout_height=\"2dp\">\n    </FrameLayout>\n    <Chronometer android:textSize=\"28sp\" android:textColor=\"#ffffffff\" android:id=\"@0x7f0a038c\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:fontFamily=\"@0x7f090004\">\n    </Chronometer>\n  </LinearLayout>\n</LinearLayout>\n"
+      },
+      {
+        "path": "res/layout/widget_verse_item.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TextView xmlns:android=\"http://schemas.android.com/apk/res/android\" android:textSize=\"22sp\" android:textColor=\"@0x7f060409\" android:gravity=\"0x11\" android:id=\"@0x7f0a03ee\" android:paddingTop=\"10dp\" android:paddingBottom=\"10dp\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:shadowColor=\"@0x7f060407\" android:shadowDy=\"1\" android:shadowRadius=\"4\" android:lineSpacingExtra=\"6dp\" android:fontFamily=\"@0x7f090011\" android:textDirection=\"4\">\n</TextView>\n"
+      },
+      {
+        "path": "res/layout/widget_verse_ticker.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:id=\"@0x7f0a03ed\" android:background=\"@0x7f0800a8\" android:layout_width=\"-1\" android:layout_height=\"-1\">\n  <ImageView android:layout_width=\"-1\" android:layout_height=\"-1\" android:src=\"@0x7f0800ab\" android:scaleType=\"1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x33\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x35\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x53\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <ImageView android:layout_gravity=\"0x55\" android:layout_width=\"18dp\" android:layout_height=\"18dp\" android:src=\"@0x7f0802e1\" android:importantForAccessibility=\"2\">\n  </ImageView>\n  <LinearLayout android:gravity=\"0x1\" android:layout_gravity=\"0x13\" android:orientation=\"1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginLeft=\"16dp\">\n    <ImageView android:id=\"@0x7f0a03ea\" android:background=\"@0x7f0800a9\" android:padding=\"6dp\" android:layout_width=\"28dp\" android:layout_height=\"28dp\" android:src=\"@0x7f0802de\" android:contentDescription=\"@0x7f130a18\">\n    </ImageView>\n    <ImageView android:id=\"@0x7f0a03e9\" android:background=\"@0x7f0800a9\" android:padding=\"8dp\" android:layout_width=\"34dp\" android:layout_height=\"34dp\" android:layout_marginTop=\"6dp\" android:src=\"@0x7f0802dd\" android:contentDescription=\"@0x7f130a17\">\n    </ImageView>\n  </LinearLayout>\n  <LinearLayout android:gravity=\"0x1\" android:layout_gravity=\"0x15\" android:orientation=\"1\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_marginRight=\"16dp\">\n    <ImageView android:id=\"@0x7f0a03ec\" android:background=\"@0x7f0800a9\" android:padding=\"6dp\" android:layout_width=\"28dp\" android:layout_height=\"28dp\" android:src=\"@0x7f0802e0\" android:contentDescription=\"@0x7f130a1a\">\n    </ImageView>\n    <ImageView android:id=\"@0x7f0a03eb\" android:background=\"@0x7f0800a9\" android:padding=\"8dp\" android:layout_width=\"34dp\" android:layout_height=\"34dp\" android:layout_marginTop=\"6dp\" android:src=\"@0x7f0802df\" android:contentDescription=\"@0x7f130a19\">\n    </ImageView>\n  </LinearLayout>\n  <ListView android:id=\"@0x7f0a03e8\" android:scrollbars=\"0x0\" android:fadingEdgeLength=\"14dp\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layout_marginLeft=\"56dp\" android:layout_marginTop=\"24dp\" android:layout_marginRight=\"56dp\" android:layout_marginBottom=\"14dp\" android:divider=\"@null\" android:requiresFadingEdge=\"0x2000\">\n  </ListView>\n  <TextView android:textSize=\"22sp\" android:textColor=\"@0x7f060409\" android:gravity=\"0x11\" android:id=\"@0x7f0a03e7\" android:layout_width=\"-1\" android:layout_height=\"-1\" android:layout_marginLeft=\"56dp\" android:layout_marginTop=\"24dp\" android:layout_marginRight=\"56dp\" android:layout_marginBottom=\"14dp\" android:text=\"@0x7f130a1b\" android:shadowColor=\"@0x7f060407\" android:shadowDy=\"1\" android:shadowRadius=\"4\" android:fontFamily=\"@0x7f090011\" android:textDirection=\"4\">\n  </TextView>\n  <TextView android:textSize=\"12sp\" android:textStyle=\"0x1\" android:textColor=\"@0x7f060405\" android:gravity=\"0x11\" android:layout_gravity=\"0x31\" android:id=\"@0x7f0a03ef\" android:background=\"@0x7f0800aa\" android:paddingLeft=\"14dp\" android:paddingRight=\"14dp\" android:layout_width=\"-2\" android:layout_height=\"22dp\" android:text=\"@0x7f130a16\" android:maxLines=\"1\" android:includeFontPadding=\"false\" android:textDirection=\"4\">\n  </TextView>\n</FrameLayout>\n"
+      },
+      {
+        "path": "res/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<view xmlns:android=\"http://schemas.android.com/apk/res/android\" android:theme=\"@0x7f1403ab\" android:layout_gravity=\"0x51\" android:layout_width=\"-2\" android:layout_height=\"-2\" class=\"com.google.android.material.snackbar.Snackbar$SnackbarLayout\" style=\"@0x7f14049c\">\n</view>\n"
+      },
+      {
+        "path": "res/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<view xmlns:android=\"http://schemas.android.com/apk/res/android\" android:layout_gravity=\"0x51\" android:layout_width=\"-2\" android:layout_height=\"-2\" class=\"com.google.android.material.snackbar.Snackbar$SnackbarLayout\" style=\"?0x7f04057e\">\n</view>\n"
+      },
+      {
+        "path": "res/layout-v26/abc_screen_toolbar.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.appcompat.widget.ActionBarOverlayLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:app=\"http://schemas.android.com/apk/res-auto\" android:id=\"@0x7f0a013d\" android:fitsSystemWindows=\"true\" android:layout_width=\"-1\" android:layout_height=\"-1\">\n  <include layout=\"@0x7f0d0014\">\n  </include>\n  <androidx.appcompat.widget.ActionBarContainer android:gravity=\"0x30\" android:id=\"@0x7f0a004d\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layout_alignParentTop=\"true\" android:touchscreenBlocksFocus=\"true\" android:keyboardNavigationCluster=\"true\" style=\"?0x7f040008\">\n    <androidx.appcompat.widget.Toolbar android:id=\"@0x7f0a004b\" android:layout_width=\"-1\" android:layout_height=\"-2\" app:navigationContentDescription=\"@0x7f130a8f\" style=\"?0x7f04067d\">\n    </androidx.appcompat.widget.Toolbar>\n    <androidx.appcompat.widget.ActionBarContextView android:theme=\"?0x7f040020\" android:id=\"@0x7f0a0056\" android:visibility=\"2\" android:layout_width=\"-1\" android:layout_height=\"-2\" style=\"?0x7f04001f\">\n    </androidx.appcompat.widget.ActionBarContextView>\n  </androidx.appcompat.widget.ActionBarContainer>\n</androidx.appcompat.widget.ActionBarOverlayLayout>\n"
+      },
+      {
+        "path": "res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.appcompat.widget.ButtonBarLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:gravity=\"0x50\" android:orientation=\"0\" android:id=\"@0x7f0a00f9\" android:paddingLeft=\"12dp\" android:paddingTop=\"4dp\" android:paddingRight=\"12dp\" android:paddingBottom=\"4dp\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layoutDirection=\"3\">\n  <Button android:id=\"@0x0102001b\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_weight=\"1\" style=\"?0x7f0400a4\">\n  </Button>\n  <Button android:id=\"@0x0102001a\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_weight=\"1\" style=\"?0x7f0400a3\">\n  </Button>\n  <Button android:id=\"@0x01020019\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:layout_weight=\"1\" style=\"?0x7f0400a5\">\n  </Button>\n</androidx.appcompat.widget.ButtonBarLayout>\n"
+      },
+      {
+        "path": "res/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "warnings": [],
+        "xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\" android:gravity=\"0x31\" android:orientation=\"1\" android:id=\"@0x7f0a0379\" android:layout_width=\"-1\" android:layout_height=\"-2\">\n  <LinearLayout android:gravity=\"0x1\" android:orientation=\"1\" android:id=\"@0x7f0a0372\" android:layout_width=\"-1\" android:layout_height=\"-2\" android:layout_marginTop=\"24dp\">\n    <ImageView android:layout_gravity=\"0x1\" android:id=\"@0x01020006\" android:layout_width=\"-2\" android:layout_height=\"-2\" android:adjustViewBounds=\"true\" android:maxWidth=\"24dp\" android:maxHeight=\"24dp\">\n    </ImageView>\n    <androidx.appcompat.widget.DialogTitle android:gravity=\"0x11\" android:id=\"@0x7f0a00a0\" android:layout_width=\"-1\" android:layout_height=\"-2\" style=\"?0x0101005b\">\n    </androidx.appcompat.widget.DialogTitle>\n  </LinearLayout>\n  <android.widget.Space android:id=\"@0x7f0a0371\" android:visibility=\"2\" android:layout_width=\"-1\" android:layout_height=\"@0x7f070026\">\n  </android.widget.Space>\n</LinearLayout>\n"
+      }
+    ]
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 1 entry.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 46569,
+    "next_offset": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

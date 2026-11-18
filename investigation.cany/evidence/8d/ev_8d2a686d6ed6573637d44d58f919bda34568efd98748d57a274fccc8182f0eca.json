@@ -1,0 +1,624 @@
+{
+  "id": "ev_8d2a686d6ed6573637d44d58f919bda34568efd98748d57a274fccc8182f0eca",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.Notes",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/Notes;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "AYA_NUMBER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->AYA_NUMBER:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->Companion:Lorg/goldenquran/freesoft/models/local/Notes$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.Notes$Companion"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "ayahNo",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->ayahNo:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "createdAt",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->createdAt:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->id:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "isDeleted",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->isDeleted:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "note",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->note:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "pageNumber",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->pageNumber:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraNo",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->suraNo:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "userProfileId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->userProfileId:J",
+        "type": "long"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 18,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;-><init>()V",
+        "registers": 14,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 23,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;-><init>(IIILjava/lang/String;JJIZ)V",
+        "registers": 11,
+        "signature": "public void <init>(int, int, int, java.lang.String, long, long, int, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 74,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 2,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;-><init>(IIILjava/lang/String;JJIZILu62;)V",
+        "registers": 22,
+        "signature": "public synthetic void <init>(int, int, int, java.lang.String, long, long, int, boolean, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 62,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->copy$default(Lorg/goldenquran/freesoft/models/local/Notes;IIILjava/lang/String;JJIZILjava/lang/Object;)Lorg/goldenquran/freesoft/models/local/Notes;",
+        "registers": 13,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.local.Notes copy$default(org.goldenquran.freesoft.models.local.Notes, int, int, int, java.lang.String, long, long, int, boolean, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component1()I",
+        "registers": 1,
+        "signature": "public final int component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component4()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component5()J",
+        "registers": 3,
+        "signature": "public final long component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component6",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component6()J",
+        "registers": 3,
+        "signature": "public final long component6()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component7",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component7()I",
+        "registers": 1,
+        "signature": "public final int component7()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component8",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->component8()Z",
+        "registers": 1,
+        "signature": "public final boolean component8()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->copy(IIILjava/lang/String;JJIZ)Lorg/goldenquran/freesoft/models/local/Notes;",
+        "registers": 11,
+        "signature": "public final org.goldenquran.freesoft.models.local.Notes copy(int, int, int, java.lang.String, long, long, int, boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 77,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAyahNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getAyahNo()I",
+        "registers": 1,
+        "signature": "public final int getAyahNo()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCreatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getCreatedAt()J",
+        "registers": 3,
+        "signature": "public final long getCreatedAt()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getId()I",
+        "registers": 1,
+        "signature": "public final int getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNote",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getNote()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getNote()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getPageNumber()I",
+        "registers": 1,
+        "signature": "public final int getPageNumber()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getSuraNo()I",
+        "registers": 1,
+        "signature": "public final int getSuraNo()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getUserProfileId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->getUserProfileId()J",
+        "registers": 3,
+        "signature": "public final long getUserProfileId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->hashCode()I",
+        "registers": 5,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "isDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->isDeleted()Z",
+        "registers": 1,
+        "signature": "public final boolean isDeleted()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAyahNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setAyahNo(I)V",
+        "registers": 2,
+        "signature": "public final void setAyahNo(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setCreatedAt",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setCreatedAt(J)V",
+        "registers": 3,
+        "signature": "public final void setCreatedAt(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setDeleted",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setDeleted(Z)V",
+        "registers": 2,
+        "signature": "public final void setDeleted(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setId(I)V",
+        "registers": 2,
+        "signature": "public final void setId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setNote",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setNote(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setNote(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPageNumber",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setPageNumber(I)V",
+        "registers": 2,
+        "signature": "public final void setPageNumber(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSuraNo",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setSuraNo(I)V",
+        "registers": 2,
+        "signature": "public final void setSuraNo(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setUserProfileId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->setUserProfileId(J)V",
+        "registers": 3,
+        "signature": "public final void setUserProfileId(long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 64,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/Notes;->toString()Ljava/lang/String;",
+        "registers": 13,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.Notes",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.Notes (classes2.dex) extends java.lang.Object: 11 fields, 33 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/Notes;"
+    }
+  ],
+  "links": []
+}

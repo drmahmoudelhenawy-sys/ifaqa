@@ -1,0 +1,2562 @@
+{
+  "id": "ev_87d4779befefc421f9a0e70123f00881578a37e15b4bd792d14d2f78dd03e92f",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "kind": "rows",
+      "limit": 500,
+      "list": "items",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_498e1ebe6206a2c2a54559a20333acbf55ae863bf01b43742fedadebcc4a5068",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 500,
+      "next_offset": 500,
+      "status": "page",
+      "total": 1283
+    },
+    "from_evidence": "ev_498e1ebe6206a2c2a54559a20333acbf55ae863bf01b43742fedadebcc4a5068",
+    "from_tool": "core_evidence_browse",
+    "shown": {
+      "items": [
+        {
+          "kind": "android-binary-xml",
+          "path": "AndroidManifest.xml",
+          "role": "android-manifest",
+          "size": 50208
+        },
+        {
+          "kind": "java-class",
+          "path": "DebugProbesKt.bin",
+          "size": 1728
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/annotation/annotation/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/collection/collection/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/collection/collection-ktx/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/constraintlayout/constraintlayout-core/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/lifecycle/lifecycle-common/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/lifecycle/lifecycle-common-java8/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx/room/room-common/LICENSE.txt",
+          "size": 10175
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.activity_activity-compose.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.activity_activity-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.activity_activity.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.annotation_annotation-experimental.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.appcompat_appcompat-resources.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.appcompat_appcompat.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.appfunctions_appfunctions.version",
+          "size": 13
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.appsearch_appsearch-platform-storage.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.appsearch_appsearch.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.arch.core_core-runtime.version",
+          "size": 67
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.autofill_autofill.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.biometric_biometric.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.cardview_cardview.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.animation_animation-core.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.animation_animation.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.foundation_foundation-layout.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.foundation_foundation.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.material3_material3-ripple.version",
+          "size": 13
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.material3_material3.version",
+          "size": 13
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.material_material-icons-core.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.material_material-icons-extended.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.material_material-ripple.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.runtime_runtime-annotation.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.runtime_runtime-retain.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.runtime_runtime-saveable.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.runtime_runtime.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui-geometry.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui-graphics.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui-text.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui-unit.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui-util.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.compose.ui_ui.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.constraintlayout_constraintlayout.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.coordinatorlayout_coordinatorlayout.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.core_core-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.core_core-remoteviews.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.core_core-splashscreen.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.core_core-viewtree.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.core_core.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.credentials_credentials-play-services-auth.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.credentials_credentials.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.cursoradapter_cursoradapter.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.customview_customview-poolingcontainer.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.customview_customview.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.datastore_datastore-core.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.datastore_datastore-preferences-core.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.datastore_datastore-preferences.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.datastore_datastore.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.documentfile_documentfile.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.drawerlayout_drawerlayout.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.dynamicanimation_dynamicanimation.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.emoji2_emoji2-views-helper.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.emoji2_emoji2.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.exifinterface_exifinterface.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.fragment_fragment-ktx.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.fragment_fragment.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.graphics_graphics-path.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.graphics_graphics-shapes.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.interpolator_interpolator.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.legacy_legacy-support-core-utils.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-livedata.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-process.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime-compose.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-runtime.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-service.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.loader_loader.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.media_media.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigation_navigation-common.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigation_navigation-fragment-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigation_navigation-fragment.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigation_navigation-runtime.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigationevent_navigationevent-compose.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.navigationevent_navigationevent.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.preference_preference-ktx.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.preference_preference.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.print_print.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.privacysandbox.ads_ads-adservices-java.version",
+          "size": 13
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.privacysandbox.ads_ads-adservices.version",
+          "size": 13
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.profileinstaller_profileinstaller.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.recyclerview_recyclerview.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.room_room-ktx.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.room_room-runtime.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.savedstate_savedstate-compose.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.savedstate_savedstate-ktx.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.savedstate_savedstate.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.slidingpanelayout_slidingpanelayout.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.sqlite_sqlite-framework.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.sqlite_sqlite.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.startup_startup-runtime.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.tracing_tracing-ktx.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.tracing_tracing.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.transition_transition.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.vectordrawable_vectordrawable-animated.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.vectordrawable_vectordrawable.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.versionedparcelable_versionedparcelable.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.viewpager2_viewpager2.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.viewpager_viewpager.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.webkit_webkit.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.window_window-core.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.window_window.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.work_work-runtime-ktx.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/androidx.work_work-runtime.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/com/android/build/gradle/app-metadata.properties",
+          "size": 56
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/com.google.android.material_material.version",
+          "size": 7
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/kotlinx_coroutines_android.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/kotlinx_coroutines_core.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/kotlinx_coroutines_guava.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/kotlinx_coroutines_play_services.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/kotlinx_coroutines_reactive.version",
+          "size": 6
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/services/mu1",
+          "size": 3
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/services/nf",
+          "size": 3
+        },
+        {
+          "kind": "json",
+          "path": "META-INF/third_party_licenses/com.google.mlkit/genai-schema/third_party_licenses.json",
+          "size": 162
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/third_party_licenses/com.google.mlkit/genai-schema/third_party_licenses.txt",
+          "size": 48439
+        },
+        {
+          "kind": "text",
+          "path": "META-INF/version-control-info.textproto",
+          "size": 42
+        },
+        {
+          "kind": "text",
+          "path": "app-update-ktx.properties",
+          "size": 64
+        },
+        {
+          "kind": "text",
+          "path": "app-update.properties",
+          "size": 56
+        },
+        {
+          "kind": "text",
+          "path": "assets/PublicSuffixDatabase.list",
+          "size": 132737
+        },
+        {
+          "kind": "xml",
+          "path": "assets/app_functions.xml",
+          "size": 72
+        },
+        {
+          "kind": "text",
+          "path": "assets/app_functions_schema.xsd",
+          "size": 7227
+        },
+        {
+          "kind": "xml",
+          "path": "assets/app_functions_v2.xml",
+          "size": 72
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/ar.json",
+          "size": 204655
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/de.json",
+          "size": 169734
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/en.json",
+          "size": 140728
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/fr.json",
+          "size": 156610
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/hi.json",
+          "size": 345370
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/id.json",
+          "size": 147856
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/languages.json",
+          "size": 2826
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/sq.json",
+          "size": 151644
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/tr.json",
+          "size": 148425
+        },
+        {
+          "kind": "json",
+          "path": "assets/arbain/ur.json",
+          "size": 224134
+        },
+        {
+          "kind": "sqlite",
+          "path": "assets/athkar_duas.db",
+          "size": 380928
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/de.json",
+          "size": 131304
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/en.json",
+          "size": 117496
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/fr.json",
+          "size": 127020
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/hi.json",
+          "size": 278853
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/id.json",
+          "size": 133480
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/sq.json",
+          "size": 124078
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/tr.json",
+          "size": 112703
+        },
+        {
+          "kind": "json",
+          "path": "assets/athkar_i18n/ur.json",
+          "size": 187622
+        },
+        {
+          "kind": "binary",
+          "path": "assets/dexopt/baseline.prof",
+          "size": 17698
+        },
+        {
+          "kind": "binary",
+          "path": "assets/dexopt/baseline.profm",
+          "size": 2203
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/de.json",
+          "size": 201014
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/en.json",
+          "size": 175593
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/fr.json",
+          "size": 193988
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/hi.json",
+          "size": 376768
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/id.json",
+          "size": 188844
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/sq.json",
+          "size": 183505
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/tr.json",
+          "size": 165610
+        },
+        {
+          "kind": "json",
+          "path": "assets/duas_i18n/ur.json",
+          "size": 255460
+        },
+        {
+          "kind": "zip",
+          "path": "assets/fahadv3.zip",
+          "size": 103277741
+        },
+        {
+          "kind": "json",
+          "path": "assets/family_duas.json",
+          "size": 91822
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/ar.json",
+          "size": 46315
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/de.json",
+          "size": 49436
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/duas.json",
+          "size": 6280
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/en.json",
+          "size": 43973
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/fr.json",
+          "size": 49372
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/hi.json",
+          "size": 84701
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/id.json",
+          "size": 48421
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/sq.json",
+          "size": 46953
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/tr.json",
+          "size": 45252
+        },
+        {
+          "kind": "json",
+          "path": "assets/hajj_guide/ur.json",
+          "size": 61751
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/Amiri-OFL.txt",
+          "size": 4389
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/IBMPlexSansArabic-OFL.txt",
+          "size": 4363
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/MarkaziText-OFL.txt",
+          "size": 4392
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/NotoNaskhArabic-OFL.txt",
+          "size": 4382
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/ScheherazadeNew-OFL.txt",
+          "size": 4401
+        },
+        {
+          "kind": "text",
+          "path": "assets/licenses/Tajawal-OFL.txt",
+          "size": 4371
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/ajurrumiyyah.json",
+          "size": 34494
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/alfiyyah.json",
+          "size": 170869
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/arbain_nawawi.json",
+          "size": 51693
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/audio.json",
+          "size": 32343
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/bayquniyyah.json",
+          "size": 5662
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/bulugh_maram.json",
+          "size": 850302
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/ilbiri.json",
+          "size": 18350
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/index.json",
+          "size": 3361
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/jazariyyah.json",
+          "size": 18663
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/kashf_shubuhat.json",
+          "size": 88877
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/kitab_tawhid.json",
+          "size": 160410
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/nawaqid.json",
+          "size": 5610
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/nukhbah.json",
+          "size": 23190
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/qawaid_arba.json",
+          "size": 12450
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/rahbiyyah.json",
+          "size": 29305
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/shurut_salah.json",
+          "size": 28460
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/tahawiyyah.json",
+          "size": 37278
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/tuhfat_atfal.json",
+          "size": 10711
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/umdat_ahkam.json",
+          "size": 333507
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/unwan_hikam.json",
+          "size": 10727
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/usul_thalatha.json",
+          "size": 37693
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/waraqat.json",
+          "size": 30761
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/wasitiyyah.json",
+          "size": 83045
+        },
+        {
+          "kind": "json",
+          "path": "assets/mutun/zad_mustaqni.json",
+          "size": 399458
+        },
+        {
+          "kind": "sqlite",
+          "path": "assets/quran_app.db",
+          "size": 34537472
+        },
+        {
+          "kind": "xml",
+          "path": "assets/quran_app_functions.xml",
+          "size": 1587
+        },
+        {
+          "kind": "sqlite",
+          "path": "assets/quran_glyphs.db",
+          "size": 6569984
+        },
+        {
+          "kind": "binary",
+          "path": "assets/segmentation_graph.binarypb",
+          "size": 394
+        },
+        {
+          "kind": "binary",
+          "path": "assets/selfiesegmentation_mlkit-256x256-2021_01_19-v1215.f16.tflite",
+          "size": 249024
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/001.tsv",
+          "size": 1203
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/002.tsv",
+          "size": 209351
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/003.tsv",
+          "size": 118740
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/004.tsv",
+          "size": 126217
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/005.tsv",
+          "size": 98260
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/006.tsv",
+          "size": 99462
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/007.tsv",
+          "size": 112876
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/008.tsv",
+          "size": 43030
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/009.tsv",
+          "size": 87852
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/010.tsv",
+          "size": 60089
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/011.tsv",
+          "size": 62075
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/012.tsv",
+          "size": 56588
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/013.tsv",
+          "size": 28932
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/014.tsv",
+          "size": 28346
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/015.tsv",
+          "size": 22299
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/016.tsv",
+          "size": 61041
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/017.tsv",
+          "size": 48132
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/018.tsv",
+          "size": 47875
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/019.tsv",
+          "size": 28720
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/020.tsv",
+          "size": 38994
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/021.tsv",
+          "size": 40287
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/022.tsv",
+          "size": 43466
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/023.tsv",
+          "size": 34978
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/024.tsv",
+          "size": 45886
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/025.tsv",
+          "size": 27231
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/026.tsv",
+          "size": 42702
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/027.tsv",
+          "size": 37162
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/028.tsv",
+          "size": 45371
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/029.tsv",
+          "size": 34095
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/030.tsv",
+          "size": 28323
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/031.tsv",
+          "size": 17406
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/032.tsv",
+          "size": 12278
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/033.tsv",
+          "size": 43150
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/034.tsv",
+          "size": 28313
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/035.tsv",
+          "size": 25904
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/036.tsv",
+          "size": 24071
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/037.tsv",
+          "size": 30198
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/038.tsv",
+          "size": 24747
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/039.tsv",
+          "size": 38185
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/040.tsv",
+          "size": 40440
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/041.tsv",
+          "size": 26883
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/042.tsv",
+          "size": 28204
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/043.tsv",
+          "size": 28523
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/044.tsv",
+          "size": 12088
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/045.tsv",
+          "size": 16616
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/046.tsv",
+          "size": 20904
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/047.tsv",
+          "size": 19055
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/048.tsv",
+          "size": 18093
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/049.tsv",
+          "size": 12634
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/050.tsv",
+          "size": 12184
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/051.tsv",
+          "size": 12063
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/052.tsv",
+          "size": 10690
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/053.tsv",
+          "size": 10736
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/054.tsv",
+          "size": 11391
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/055.tsv",
+          "size": 12243
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/056.tsv",
+          "size": 13890
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/057.tsv",
+          "size": 20126
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/058.tsv",
+          "size": 16380
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/059.tsv",
+          "size": 15889
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/060.tsv",
+          "size": 12492
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/061.tsv",
+          "size": 7390
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/062.tsv",
+          "size": 6271
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/063.tsv",
+          "size": 6155
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/064.tsv",
+          "size": 8688
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/065.tsv",
+          "size": 9750
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/066.tsv",
+          "size": 8612
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/067.tsv",
+          "size": 10721
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/068.tsv",
+          "size": 10001
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/069.tsv",
+          "size": 8125
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/070.tsv",
+          "size": 7416
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/071.tsv",
+          "size": 7074
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/072.tsv",
+          "size": 8286
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/073.tsv",
+          "size": 6192
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/074.tsv",
+          "size": 7650
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/075.tsv",
+          "size": 4809
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/076.tsv",
+          "size": 7705
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/077.tsv",
+          "size": 6517
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/078.tsv",
+          "size": 5346
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/079.tsv",
+          "size": 5699
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/080.tsv",
+          "size": 4100
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/081.tsv",
+          "size": 3159
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/082.tsv",
+          "size": 2508
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/083.tsv",
+          "size": 5797
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/084.tsv",
+          "size": 3207
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/085.tsv",
+          "size": 3988
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/086.tsv",
+          "size": 2218
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/087.tsv",
+          "size": 2048
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/088.tsv",
+          "size": 2379
+        },
+        {
+          "kind": "binary",
+          "path": "assets/tajweed/089.tsv",
+          "size": 4362
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/090.tsv",
+          "size": 2650
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/091.tsv",
+          "size": 1713
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/092.tsv",
+          "size": 2073
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/093.tsv",
+          "size": 1062
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/094.tsv",
+          "size": 647
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/095.tsv",
+          "size": 1325
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/096.tsv",
+          "size": 2228
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/097.tsv",
+          "size": 938
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/098.tsv",
+          "size": 3212
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/099.tsv",
+          "size": 1003
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/100.tsv",
+          "size": 1362
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/101.tsv",
+          "size": 1122
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/102.tsv",
+          "size": 880
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/103.tsv",
+          "size": 570
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/104.tsv",
+          "size": 917
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/105.tsv",
+          "size": 722
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/106.tsv",
+          "size": 711
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/107.tsv",
+          "size": 844
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/108.tsv",
+          "size": 328
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/109.tsv",
+          "size": 828
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/110.tsv",
+          "size": 538
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/111.tsv",
+          "size": 671
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/112.tsv",
+          "size": 445
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/113.tsv",
+          "size": 575
+        },
+        {
+          "kind": "text",
+          "path": "assets/tajweed/114.tsv",
+          "size": 774
+        },
+        {
+          "kind": "text",
+          "path": "billing-ktx.properties",
+          "size": 58
+        },
+        {
+          "kind": "text",
+          "path": "billing.properties",
+          "size": 50
+        },
+        {
+          "kind": "dex",
+          "path": "classes.dex",
+          "role": "android-code",
+          "size": 10601764
+        },
+        {
+          "kind": "dex",
+          "path": "classes2.dex",
+          "role": "android-code",
+          "size": 5329396
+        },
+        {
+          "kind": "text",
+          "path": "client_analytics.proto",
+          "size": 2982
+        },
+        {
+          "kind": "text",
+          "path": "common.properties",
+          "size": 52
+        },
+        {
+          "kind": "text",
+          "path": "core-common.properties",
+          "size": 58
+        },
+        {
+          "kind": "text",
+          "path": "firebase-analytics.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "firebase-iid-interop.properties",
+          "size": 78
+        },
+        {
+          "kind": "text",
+          "path": "firebase-measurement-connector.properties",
+          "size": 98
+        },
+        {
+          "kind": "text",
+          "path": "genai-common.properties",
+          "size": 72
+        },
+        {
+          "kind": "text",
+          "path": "genai-prompt.properties",
+          "size": 72
+        },
+        {
+          "kind": "text",
+          "path": "genai-schema.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "googleid.properties",
+          "size": 52
+        },
+        {
+          "kind": "text",
+          "path": "image.properties",
+          "size": 58
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/annotation/annotation.kotlin_builtins",
+          "size": 1022
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/collections/collections.kotlin_builtins",
+          "size": 8625
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/concurrent/atomics/atomics.kotlin_builtins",
+          "size": 2882
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/coroutines/coroutines.kotlin_builtins",
+          "size": 139
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/internal/internal.kotlin_builtins",
+          "size": 596
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/kotlin.kotlin_builtins",
+          "size": 31531
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/ranges/ranges.kotlin_builtins",
+          "size": 4353
+        },
+        {
+          "kind": "binary",
+          "path": "kotlin/reflect/reflect.kotlin_builtins",
+          "size": 4859
+        },
+        {
+          "kind": "text",
+          "path": "mediapipe-internal.properties",
+          "size": 88
+        },
+        {
+          "kind": "text",
+          "path": "messaging_event.proto",
+          "size": 2381
+        },
+        {
+          "kind": "text",
+          "path": "messaging_event_extension.proto",
+          "size": 883
+        },
+        {
+          "kind": "text",
+          "path": "play-services-ads-identifier.properties",
+          "size": 94
+        },
+        {
+          "kind": "text",
+          "path": "play-services-auth-api-phone.properties",
+          "size": 94
+        },
+        {
+          "kind": "text",
+          "path": "play-services-auth-base.properties",
+          "size": 86
+        },
+        {
+          "kind": "text",
+          "path": "play-services-auth-blockstore.properties",
+          "size": 96
+        },
+        {
+          "kind": "text",
+          "path": "play-services-auth.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "play-services-base.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "play-services-basement.properties",
+          "size": 82
+        },
+        {
+          "kind": "text",
+          "path": "play-services-cloud-messaging.properties",
+          "size": 96
+        },
+        {
+          "kind": "text",
+          "path": "play-services-fido.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "play-services-identity-credentials.properties",
+          "size": 122
+        },
+        {
+          "kind": "text",
+          "path": "play-services-location.properties",
+          "size": 82
+        },
+        {
+          "kind": "text",
+          "path": "play-services-maps.properties",
+          "size": 74
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement-api.properties",
+          "size": 96
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement-base.properties",
+          "size": 98
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement-impl.properties",
+          "size": 98
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement-sdk-api.properties",
+          "size": 104
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement-sdk.properties",
+          "size": 96
+        },
+        {
+          "kind": "text",
+          "path": "play-services-measurement.properties",
+          "size": 88
+        },
+        {
+          "kind": "text",
+          "path": "play-services-stats.properties",
+          "size": 76
+        },
+        {
+          "kind": "text",
+          "path": "play-services-tasks.properties",
+          "size": 76
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/abc_grow_fade_in_from_bottom.xml",
+          "size": 852
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/abc_popup_enter.xml",
+          "size": 508
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/abc_popup_exit.xml",
+          "size": 508
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+          "size": 852
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+          "size": 2124
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+          "size": 2780
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+          "size": 1196
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+          "size": 2360
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+          "size": 2520
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+          "size": 1196
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+          "size": 1656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+          "size": 1656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+          "size": 1028
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+          "size": 1656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+          "size": 1656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+          "size": 1028
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/fragment_fast_out_extra_slow_in.xml",
+          "size": 364
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_bottom_sheet_slide_in.xml",
+          "size": 616
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_bottom_sheet_slide_out.xml",
+          "size": 656
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_motion_fade_enter.xml",
+          "size": 812
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_motion_fade_exit.xml",
+          "size": 508
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_side_sheet_enter_from_right.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/m3_side_sheet_exit_to_right.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/mtrl_bottom_sheet_slide_in.xml",
+          "size": 616
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/mtrl_bottom_sheet_slide_out.xml",
+          "size": 616
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/anim/mtrl_card_lowers_interpolator.xml",
+          "size": 400
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/design_appbar_state_list_animator.xml",
+          "size": 1216
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/design_fab_hide_motion_spec.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/design_fab_show_motion_spec.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_close_enter.xml",
+          "size": 1128
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_close_exit.xml",
+          "size": 1128
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_fade_enter.xml",
+          "size": 452
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_fade_exit.xml",
+          "size": 452
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_open_enter.xml",
+          "size": 1128
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/fragment_open_exit.xml",
+          "size": 1128
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_appbar_state_list_animator.xml",
+          "size": 1216
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_btn_elevated_btn_state_list_anim.xml",
+          "size": 1796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_btn_state_list_anim.xml",
+          "size": 1796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_card_elevated_state_list_anim.xml",
+          "size": 1632
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_card_state_list_anim.xml",
+          "size": 1584
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_chip_state_list_anim.xml",
+          "size": 1180
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_extended_fab_change_size_collapse_motion_spec.xml",
+          "size": 1116
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_extended_fab_change_size_expand_motion_spec.xml",
+          "size": 1116
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_extended_fab_hide_motion_spec.xml",
+          "size": 820
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_extended_fab_show_motion_spec.xml",
+          "size": 820
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_extended_fab_state_list_animator.xml",
+          "size": 2724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/m3_fab_state_list_animator.xml",
+          "size": 2724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_btn_state_list_anim.xml",
+          "size": 2664
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_btn_unelevated_state_list_anim.xml",
+          "size": 120
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_card_state_list_anim.xml",
+          "size": 1208
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_chip_state_list_anim.xml",
+          "size": 1072
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_extended_fab_state_list_animator.xml",
+          "size": 2724
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_fab_hide_motion_spec.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/animator/mtrl_fab_show_motion_spec.xml",
+          "size": 796
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_background_cache_hint_selector_material_dark.xml",
+          "size": 468
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_background_cache_hint_selector_material_light.xml",
+          "size": 468
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_hint_foreground_material_dark.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_hint_foreground_material_light.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_primary_text_disable_only_material_dark.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_primary_text_disable_only_material_light.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_primary_text_material_dark.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_primary_text_material_light.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_search_url_text.xml",
+          "size": 588
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_secondary_text_material_dark.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/abc_secondary_text_material_light.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/design_box_stroke_color.xml",
+          "size": 712
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/design_error.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/design_icon_tint.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_assist_chip_icon_tint_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_bottom_sheet_drag_handle_color.xml",
+          "size": 340
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_button_background_color_selector.xml",
+          "size": 768
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_button_foreground_color_selector.xml",
+          "size": 768
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_button_outline_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_button_ripple_color_selector.xml",
+          "size": 1936
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_calendar_item_disabled_text.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_calendar_item_stroke_color.xml",
+          "size": 712
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_card_foreground_color.xml",
+          "size": 768
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_card_ripple_color.xml",
+          "size": 1556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_card_stroke_color.xml",
+          "size": 1224
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_checkbox_button_icon_tint.xml",
+          "size": 964
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_checkbox_button_tint.xml",
+          "size": 1000
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_chip_assist_text_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_chip_background_color.xml",
+          "size": 712
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_chip_ripple_color.xml",
+          "size": 1556
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_chip_stroke_color.xml",
+          "size": 872
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_chip_text_color.xml",
+          "size": 624
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_control_ripple_color_selector.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_dark_default_color_primary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_dark_default_color_secondary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_dark_highlighted_text.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_dark_hint_foreground.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_dark_primary_text_disable_only.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_default_color_primary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_default_color_secondary_text.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_efab_ripple_color_selector.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_fab_efab_background_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_fab_efab_foreground_color_selector.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_fab_ripple_color_selector.xml",
+          "size": 808
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_filled_icon_button_container_color_selector.xml",
+          "size": 668
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_highlighted_text.xml",
+          "size": 376
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_hint_foreground.xml",
+          "size": 564
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_icon_button_icon_color_selector.xml",
+          "size": 668
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_list_item_background_color_selector.xml",
+          "size": 736
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_list_item_ripple_color_selector.xml",
+          "size": 1536
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_bar_item_with_indicator_icon_tint.xml",
+          "size": 1196
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_bar_item_with_indicator_label_tint.xml",
+          "size": 1196
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_bar_ripple_color_selector.xml",
+          "size": 1232
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_item_background_color.xml",
+          "size": 588
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_item_icon_tint.xml",
+          "size": 1356
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_item_ripple_color.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_item_text_color.xml",
+          "size": 1356
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_rail_item_with_indicator_icon_tint.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_rail_item_with_indicator_label_tint.xml",
+          "size": 464
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_navigation_rail_ripple_color_selector.xml",
+          "size": 1232
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_primary_text_disable_only.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_radiobutton_button_tint.xml",
+          "size": 1576
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_radiobutton_ripple_tint.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_segmented_list_item_background_color_selector.xml",
+          "size": 736
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_selection_control_ripple_color_selector.xml",
+          "size": 1372
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_simple_item_ripple_color.xml",
+          "size": 748
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_slider_active_tick_marks_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_slider_active_track_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_slider_inactive_tick_marks_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_slider_inactive_track_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_slider_thumb_color.xml",
+          "size": 500
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_standard_toolbar_button_text_color_selector.xml",
+          "size": 1460
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_standard_toolbar_icon_button_container_color_selector.xml",
+          "size": 632
+        },
+        {
+          "kind": "android-binary-xml",
+          "path": "res/color/m3_standard_toolbar_icon_button_icon_color_selector.xml",
+          "size": 1460
+        }
+      ],
+      "list": "items",
+      "offset": 0,
+      "total": 1283
+    }
+  },
+  "summary": "Part of core_evidence_browse evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 500,
+    "total": 1283,
+    "next_offset": 500
+  },
+  "locations": [],
+  "links": [
+    "ev_498e1ebe6206a2c2a54559a20333acbf55ae863bf01b43742fedadebcc4a5068"
+  ]
+}

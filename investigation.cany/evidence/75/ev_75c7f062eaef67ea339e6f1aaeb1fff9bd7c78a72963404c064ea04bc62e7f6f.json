@@ -1,0 +1,150 @@
+{
+  "id": "ev_75c7f062eaef67ea339e6f1aaeb1fff9bd7c78a72963404c064ea04bc62e7f6f",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "cm1",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lcm1;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "w",
+        "reference": "Lcm1;->w:Lxv4;",
+        "type": "xv4"
+      }
+    ],
+    "interfaces": [
+      "Luv4;",
+      "Lig4;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lcm1;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lcm1;->c(Landroid/view/KeyEvent;)Z",
+        "registers": 2,
+        "signature": "public final boolean c(android.view.KeyEvent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 27,
+        "kind": "virtual",
+        "name": "dispatchKeyEvent",
+        "overload_index": 0,
+        "reference": "Lcm1;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z",
+        "registers": 4,
+        "signature": "public boolean dispatchKeyEvent(android.view.KeyEvent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 27,
+        "kind": "virtual",
+        "name": "dispatchKeyShortcutEvent",
+        "overload_index": 0,
+        "reference": "Lcm1;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z",
+        "registers": 3,
+        "signature": "public final boolean dispatchKeyShortcutEvent(android.view.KeyEvent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lcm1;->onCreate(Landroid/os/Bundle;)V",
+        "registers": 2,
+        "signature": "public void onCreate(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 14,
+        "kind": "virtual",
+        "name": "onSaveInstanceState",
+        "overload_index": 0,
+        "reference": "Lcm1;->onSaveInstanceState(Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public void onSaveInstanceState(android.os.Bundle)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "cm1",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/app/Activity;"
+  },
+  "summary": "cm1 (classes.dex) extends android.app.Activity: 1 fields, 6 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lcm1;"
+    }
+  ],
+  "links": []
+}

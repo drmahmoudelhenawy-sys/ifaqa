@@ -1,0 +1,330 @@
+{
+  "id": "ev_97394cff8bbfe06329439c2496576fca3732a967b2fafa88d59cceb6f2e0e36c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.datastore.db.QuranDatabase",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "l",
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->l:Ledd;",
+        "type": "edd"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "volatile"
+        ],
+        "kind": "static",
+        "name": "m",
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->m:Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;",
+        "type": "org.goldenquran.freesoft.datastore.db.QuranDatabase"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 10,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;-><init>()V",
+        "registers": 1,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "A",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->A()Ljs0;",
+        "registers": null,
+        "signature": "public abstract js0 A()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "B",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->B()Liu0;",
+        "registers": null,
+        "signature": "public abstract iu0 B()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "C",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->C()Les3;",
+        "registers": null,
+        "signature": "public abstract es3 C()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "D",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->D()Ldt3;",
+        "registers": null,
+        "signature": "public abstract dt3 D()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "E",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->E()Llh4;",
+        "registers": null,
+        "signature": "public abstract lh4 E()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "F",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->F()Lzh6;",
+        "registers": null,
+        "signature": "public abstract zh6 F()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "G",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->G()Le27;",
+        "registers": null,
+        "signature": "public abstract e27 G()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "H",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->H()La77;",
+        "registers": null,
+        "signature": "public abstract a77 H()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "I",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->I()Lsq7;",
+        "registers": null,
+        "signature": "public abstract sq7 I()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "J",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->J()Lbp8;",
+        "registers": null,
+        "signature": "public abstract bp8 J()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "K",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->K()Lgz8;",
+        "registers": null,
+        "signature": "public abstract gz8 K()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "L",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->L()Lz99;",
+        "registers": null,
+        "signature": "public abstract z99 L()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "M",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->M()Lq3a;",
+        "registers": null,
+        "signature": "public abstract q3a M()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "N",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->N()Laga;",
+        "registers": null,
+        "signature": "public abstract aga N()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "y",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->y()Lk40;",
+        "registers": null,
+        "signature": "public abstract k40 y()",
+        "try_blocks": null
+      },
+      {
+        "access": [
+          "public",
+          "abstract"
+        ],
+        "code_units": null,
+        "kind": "virtual",
+        "name": "z",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;->z()Les0;",
+        "registers": null,
+        "signature": "public abstract es0 z()",
+        "try_blocks": null
+      }
+    ],
+    "name": "org.goldenquran.freesoft.datastore.db.QuranDatabase",
+    "source_file": "SourceFile",
+    "superclass": "Lv18;"
+  },
+  "summary": "org.goldenquran.freesoft.datastore.db.QuranDatabase (classes2.dex) extends v18: 2 fields, 18 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/datastore/db/QuranDatabase;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "ev_c73d0e1d68d4c09dbcc56ceacdcec13230a73a168e5b612d1909d84612f39e41",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_flutter_identify",
+  "params": {
+    "path": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+  },
+  "result": {
+    "abis": [],
+    "candidates_truncated": false,
+    "dart_versions": [],
+    "flutter_detected": false,
+    "preferred_abi": null,
+    "skipped": [],
+    "snapshot_hash": null,
+    "snapshot_hash_candidates": [],
+    "toolchains": []
+  },
+  "summary": "No Flutter libraries (lib/<abi>/libapp.so or libflutter.so) in base.apk.",
+  "confidence": "inferred",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "no_version_table",
+      "message": "Dart and Flutter versions are reported only when a binary states them; snapshot hashes are not mapped to SDK versions."
+    },
+    {
+      "code": "absence_not_proof",
+      "message": "Not finding a library or string here does not prove the app lacks it (it may be downloaded, split or obfuscated)."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 0,
+    "total": 0
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

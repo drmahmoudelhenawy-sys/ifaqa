@@ -1,0 +1,1065 @@
+{
+  "id": "ev_aad9d988fdf2c21b2b1d3c51cd2c12fa0ddbeb0c21c56a462895ad6453f32465",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": false,
+      "fields": [
+        "name",
+        "superclass",
+        "dex"
+      ],
+      "kind": "rows",
+      "limit": 200,
+      "list": "classes",
+      "offset": 200
+    },
+    "source": {
+      "evidence_id": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 200,
+      "next_offset": 400,
+      "status": "page",
+      "total": 541
+    },
+    "from_evidence": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "from_tool": "android_classes_find",
+    "shown": {
+      "items": [
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.models.search.SearchCategory$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.models.search.SearchResultItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.models.search.SearchResultSection",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.models.search.SearchSectionType",
+          "superclass": "java.lang.Enum"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.models.settings.ThemeColorOption",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.AiKeywords",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.AthkarVersionsResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.AudioResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.AudioResult",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.BaseResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.BookRepsonseNew",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.CityResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.CountryInfo",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaActivityRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaAmeenData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaAuthor",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaDeleteData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaFeedData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaFeedRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaItemResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaPostData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaPostIdRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaPostModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaPostRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaReportData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaReportRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaSectionResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaShareData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuaStats",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.DuasResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuaRelationResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuaResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.FamilyDuasResponse",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencArabic",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencCategories",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencCategory",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencHadith",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencLanguage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencModelsKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadeethencPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithAuthenticity",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithBookItem",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithCheckData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithDecision",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithResult",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.HadithSubTab",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryBook",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryBookFile",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryBooksPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryCategory",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryCategoryRef",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryChapter",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryModelsKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LibraryPage",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveBookingRequestData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveBookingRequestModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCallJoin",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCallJoin$Companion",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCallJoin$DefaultImpls",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCallRecordingModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveClassPolicy",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveClassmateModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseAnnouncement",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseAnnouncementModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseCancelRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseCancelledData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseDetailData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseDetailRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseEnrollmentModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseEnrollmentsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseModelsKt",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCourseSlotModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCoursesData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCoursesRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditEntryModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditPack",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditsRedeemData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditsRedeemRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveCreditsRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveFilterOption",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveIceServer",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantPollBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantRequestBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantRequestModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantTeachersData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantTier",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInstantUnavailableData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveInsufficientCreditsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveLanguageOption",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveLessonQuote",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveNotificationModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveNotificationsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LivePayoutMethod",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LivePayoutModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LivePriceCell",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LivePriceCellBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LivePriceRow",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRatingBar",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcDeviceRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcEventRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcPollRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcRecordingsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcRegisteredData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcSentData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcSignalConfig",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcSignalModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcSignalRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcSignalsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveRtcStoredData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionCancelRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionCancelledData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionConfirmRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionJoinData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionJoinRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionRateRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionRatedData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionRequestBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSessionsMineRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveSlotDay",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveStatusData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherAcceptBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherAvailabilityBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherAvailabilityData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherBookBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCitiesBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCitiesData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseActionBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseActionData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseDeletedData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseSaveBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCourseSavedData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCoursesBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherCoursesData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherDeskData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherDeviceBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherEarnings",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherEarningsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherEnrollmentModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherEnrollmentsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherFollowData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherFollowRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherJoinBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherJoinData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherMeBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherMeData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherPhotoData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherPricingBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherProfileData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherProfileLimits",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherProfileModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherProfileOptions",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherProfileSaveBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherRejectBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReportBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReportData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherRequestsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReview",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReviewModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReviewsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherReviewsRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherScheduleAddBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherScheduleBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherScheduleData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherScheduleDeleteBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherScheduleWindow",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSelfModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSessionActionBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSessionData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSessionModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSlotsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSlotsRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStatsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStatsModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStatsMoney",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStatsMonth",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStatsTotals",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStudentModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherStudentsData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherSubject",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherTimeOffBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherTimeOffData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeacherTimeOffModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeachersData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveTeachersRequest",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveUnavailableData",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveUnavailableSlot",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveWaitingStudentModel",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveWithdrawBody",
+          "superclass": "java.lang.Object"
+        },
+        {
+          "dex": "classes2.dex",
+          "name": "org.goldenquran.freesoft.network.models.LiveWithdrawalModel",
+          "superclass": "java.lang.Object"
+        }
+      ],
+      "list": "classes",
+      "offset": 200,
+      "total": 541
+    }
+  },
+  "summary": "Part of android_classes_find evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 200,
+    "total": 541,
+    "next_offset": 400
+  },
+  "locations": [],
+  "links": [
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+  ]
+}

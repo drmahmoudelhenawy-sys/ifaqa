@@ -1,0 +1,394 @@
+{
+  "id": "ev_e893c2122df0068c37143caf3405b556855171709cd70014179df7c1ba90fcfa",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.audio.AudioFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->X0:Lpc6;",
+        "type": "pc6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Y0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Z0:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;",
+        "type": "wc0"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;",
+        "type": "vb0"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "c1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "d1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;",
+        "type": "hu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "f1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "g1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;",
+        "type": "gu6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "h1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "i1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->i1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "j1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->j1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "k1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->k1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "l1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "m1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->m1:Lku6;",
+        "type": "ku6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "n1",
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->n1:Loc;",
+        "type": "oc"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 700,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "registers": 21,
+        "signature": "public void <init>()",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 132,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "registers": 10,
+        "signature": "public final void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 73,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->B0(Lht1;)Ljava/lang/Object;",
+        "registers": 6,
+        "signature": "public final java.lang.Object B0(ht1)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;",
+        "registers": 1,
+        "signature": "public final r90 C0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;",
+        "registers": 1,
+        "signature": "public final org.goldenquran.freesoft.models.ReciterParcelable D0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 10,
+        "kind": "virtual",
+        "name": "E0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V",
+        "registers": 2,
+        "signature": "public final void E0(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 93,
+        "kind": "virtual",
+        "name": "F0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->F0()V",
+        "registers": 9,
+        "signature": "public final void F0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 61,
+        "kind": "virtual",
+        "name": "G0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->G0(Lorg/goldenquran/freesoft/models/local/Reciter;)V",
+        "registers": 7,
+        "signature": "public final void G0(org.goldenquran.freesoft.models.local.Reciter)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 52,
+        "kind": "virtual",
+        "name": "H0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->H0(I)V",
+        "registers": 5,
+        "signature": "public final void H0(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 89,
+        "kind": "virtual",
+        "name": "I0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->I0()V",
+        "registers": 9,
+        "signature": "public final void I0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 817,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "registers": 44,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 77,
+        "kind": "virtual",
+        "name": "x0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->x0()V",
+        "registers": 5,
+        "signature": "public final void x0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.audio.AudioFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.audio.AudioFragment (classes2.dex) extends rn1: 17 fields, 12 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,616 @@
+{
+  "id": "ev_e5274109430c0698e7454178200a5bf5a5021aa001d104282eb1448396d85ae3",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_users_find",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.datastore.db.MushafRoomDatabase",
+    "limit": 200,
+    "method_name": null,
+    "offset": 0,
+    "path": null
+  },
+  "result": {
+    "callers": 32,
+    "class": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+    "defined_in": "classes2.dex",
+    "method_name": null,
+    "references": [
+      {
+        "caller": "Lgwc;->a(Ljava/lang/String;)Ljava/lang/String;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "007b",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lgwc;->a(Ljava/lang/String;)Ljava/lang/String;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "007d",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->n:Lj69;"
+      },
+      {
+        "caller": "Lhc4;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "02c2",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lhc4;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0442",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Licd;->n(ILjava/lang/Integer;Ljava/lang/String;I)Ljava/util/ArrayList;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0008",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Licd;->z(Ljava/lang/String;)Ljava/util/HashMap;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lpl8;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0028",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lt6c;->C(Ljava/io/File;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0051",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lt6c;->n(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0057",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lt6c;->n(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "const-class",
+        "kind": "type",
+        "offset": "0078",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+      },
+      {
+        "caller": "Lt6c;->n(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "008b",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+      },
+      {
+        "caller": "Lt6c;->r(Landroid/database/sqlite/SQLiteDatabase;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0006",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->n:Lj69;"
+      },
+      {
+        "caller": "Lt6c;->t(Landroid/content/Context;Ljava/lang/String;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0001",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->m:Ljava/util/concurrent/ConcurrentHashMap;"
+      },
+      {
+        "caller": "Lt6c;->t(Landroid/content/Context;Ljava/lang/String;)V",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0007",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+      },
+      {
+        "caller": "Lt6c;->t(Landroid/content/Context;Ljava/lang/String;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0039",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lt6c;->u(Landroid/content/Context;Ljava/lang/String;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0007",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->m:Ljava/util/concurrent/ConcurrentHashMap;"
+      },
+      {
+        "caller": "Lt6c;->u(Landroid/content/Context;Ljava/lang/String;)V",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "008f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lt6c;->z(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0018",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->m:Ljava/util/concurrent/ConcurrentHashMap;"
+      },
+      {
+        "caller": "Lt6c;->z(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "001e",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+      },
+      {
+        "caller": "Lt6c;->z(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0027",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+      },
+      {
+        "caller": "Lt6c;->z(Lorg/goldenquran/freesoft/App;Ljava/lang/String;)Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "002b",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ltg8;->N(I)Ljava/util/List;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0029",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ltg8;->X(I)Ljava/util/List;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0015",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lw64;->g(Lt6c;Ljava/lang/String;)Lx76;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0008",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->y()Lx76;"
+      },
+      {
+        "caller": "Lwu4;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "004a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lyh1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "008e",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lyh1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "009a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->y()Lx76;"
+      },
+      {
+        "caller": "Lb5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "061f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "000f",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lb86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0077",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ld86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ld86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "00f4",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0014",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0020",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->y()Lx76;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0075",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0155",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ldh2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "01b9",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Le86;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0003",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lhz;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "027d",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lhz;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "02fd",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lkn2;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0064",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lmd1;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0025",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ln90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "02d7",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ln9b;->c(Landroid/content/Context;)Ltz2;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ln9b;->c(Landroid/content/Context;)Ltz2;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0022",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;-><clinit>()V",
+        "dex": "classes2.dex",
+        "instruction": "sput-object",
+        "kind": "field",
+        "offset": "0005",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;-><clinit>()V",
+        "dex": "classes2.dex",
+        "instruction": "sput-object",
+        "kind": "field",
+        "offset": "000c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->m:Ljava/util/concurrent/ConcurrentHashMap;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;-><clinit>()V",
+        "dex": "classes2.dex",
+        "instruction": "sput-object",
+        "kind": "field",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->n:Lj69;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase_Impl;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-direct",
+        "kind": "method",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;-><init>()V"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0036",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "00ab",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "00c3",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "00de",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00ea",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->y()Lx76;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "010a",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "016c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0195",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Los3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0203",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "001c",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0051",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0053",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->n:Lj69;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "03e2",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0417",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lps3;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0419",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->n:Lj69;"
+      },
+      {
+        "caller": "Lu7;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0552",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lu7;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "05e2",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Lu7;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0685",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ly76;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0011",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ly76;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0024",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      },
+      {
+        "caller": "Ly76;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "sget-object",
+        "kind": "field",
+        "offset": "0044",
+        "target": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;->l:Lt6c;"
+      }
+    ],
+    "references_total": 70
+  },
+  "summary": "70 reference(s) to org.goldenquran.freesoft.datastore.db.MushafRoomDatabase from 32 method(s) across 2 DEX file(s); defined in classes2.dex.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "static_references_only",
+      "message": "Only direct bytecode references are found; reflection, JNI, string-built class names and code loaded at run time are not."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 70,
+    "total": 70
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/datastore/db/MushafRoomDatabase;"
+    }
+  ],
+  "links": []
+}

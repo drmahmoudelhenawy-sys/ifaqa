@@ -1,0 +1,729 @@
+{
+  "id": "ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "fields": [
+        "kind",
+        "name",
+        "exported",
+        "permission",
+        "intent_filters"
+      ],
+      "kind": "rows",
+      "limit": 100,
+      "list": "components",
+      "offset": 0
+    },
+    "source": {
+      "evidence_id": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 63,
+      "next_offset": null,
+      "status": "page",
+      "total": 63
+    },
+    "from_evidence": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+    "from_tool": "android_package_show",
+    "shown": {
+      "items": [
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.MAIN"
+              ],
+              "categories": [
+                "android.intent.category.LAUNCHER",
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=dua-community",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=masbaha",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=library",
+                "path=/"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.app.appfunctions.AppFunctionService"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.audio.QuranAppFunctionService",
+          "permission": "android.permission.BIND_APP_FUNCTION_SERVICE"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.habits.PrayerCheckinReceiver",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.appwidget.action.APPWIDGET_UPDATE"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.appwidget.action.APPWIDGET_UPDATE"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerTimesWidget2",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.appwidget.action.APPWIDGET_UPDATE"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.audio.VerseTickerWidget",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "androidx.media3.session.MediaSessionService"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.audio.NewAudioService",
+          "permission": "android.permission.BIND_MEDIA_SESSION_SERVICE"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.work.impl.foreground.SystemForegroundService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.habits.PrayerMotionService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "com.google.firebase.MESSAGING_EVENT"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.LiveMessagingService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.IncomingCallActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.live.teacher.push.DeclineCallReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.call.LiveCallActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.classroom.ClassroomActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveRecordingPlayerActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "provider",
+          "name": "androidx.core.content.FileProvider",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED",
+                "android.intent.action.BOOT_COMPLETED",
+                "android.intent.action.MY_PACKAGE_REPLACED",
+                "android.intent.action.QUICKBOOT_POWERON"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.SalahReminderReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.athkar.AthkarReminderReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.masbaha.MasbahaReminderReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.worship.WorshipNightlyReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.events.IslamicEventReminderReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.live.LiveSessionReminderReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "org.goldenquran.freesoft.UPDATE_PRAYER_NOTIFICATION",
+                "org.goldenquran.freesoft.RECYCLE_PRAYER_PROCESS"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.PrayerNotificationReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "org.goldenquran.freesoft.action.DISPALY_NOTIFICATION",
+                "android.intent.action.SET_ALARM"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.FridayReminderReciver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "org.goldenquran.freesoft.action.DISPALY_NOTIFICATION",
+                "android.intent.action.SET_ALARM"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "org.goldenquran.freesoft.ui.tools.khetma.KhetmaReminderReciver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "provider",
+          "name": "androidx.startup.InitializationProvider",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+          "permission": "com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "com.google.android.c2dm.intent.RECEIVE"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+          "permission": "com.google.android.c2dm.permission.SEND"
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "com.google.firebase.MESSAGING_EVENT"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "service",
+          "name": "com.google.firebase.messaging.FirebaseMessagingService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.firebase.components.ComponentDiscoveryService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.android.billingclient.api.ProxyBillingActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "provider",
+          "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.measurement.AppMeasurementService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+          "permission": "android.permission.BIND_JOB_SERVICE"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.gms.common.api.GoogleApiActivity",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.firebase.sessions.SessionLifecycleService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "provider",
+          "name": "com.google.firebase.provider.FirebaseInitProvider",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [],
+              "data": [
+                "scheme=content",
+                "host=media",
+                "pathPrefix=/internal/audio/media/",
+                "mimeType=audio/*"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "androidx.media3.session.BluetoothValidationActivity",
+          "permission": "android.permission.BLUETOOTH_PRIVILEGED"
+        },
+        {
+          "exported": true,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.work.impl.background.systemjob.SystemJobService",
+          "permission": "android.permission.BIND_JOB_SERVICE"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.BOOT_COMPLETED"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+          "permission": "android.permission.DUMP"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.core.widget.RemoteViewsCompatService",
+          "permission": "android.permission.BIND_REMOTEVIEWS"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "androidx.appfunctions.internal.AppFunctionCallerVerificationReceiver",
+          "permission": null
+        },
+        {
+          "exported": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "androidx.profileinstaller.action.INSTALL_PROFILE"
+              ],
+              "categories": [],
+              "data": []
+            },
+            {
+              "actions": [
+                "androidx.profileinstaller.action.SKIP_FILE"
+              ],
+              "categories": [],
+              "data": []
+            },
+            {
+              "actions": [
+                "androidx.profileinstaller.action.SAVE_PROFILE"
+              ],
+              "categories": [],
+              "data": []
+            },
+            {
+              "actions": [
+                "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+              ],
+              "categories": [],
+              "data": []
+            }
+          ],
+          "kind": "receiver",
+          "name": "androidx.profileinstaller.ProfileInstallReceiver",
+          "permission": "android.permission.DUMP"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "androidx.room.MultiInstanceInvalidationService",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "service",
+          "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+          "permission": "android.permission.BIND_JOB_SERVICE"
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "receiver",
+          "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+          "permission": null
+        },
+        {
+          "exported": false,
+          "intent_filters": [],
+          "kind": "activity",
+          "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+          "permission": null
+        }
+      ],
+      "list": "components",
+      "offset": 0,
+      "total": 63
+    }
+  },
+  "summary": "Part of android_package_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 63,
+    "total": 63
+  },
+  "locations": [],
+  "links": [
+    "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "ev_afec5e9a2a2720cff1f5b94047791111a241c2c55eccd68a409786c1285e500f",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final",
+          "synthetic"
+        ],
+        "kind": "static",
+        "name": "a",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;->a:I",
+        "type": "int"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;-><init>()V",
+        "registers": 1,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static"
+        ],
+        "code_units": 40,
+        "kind": "direct",
+        "name": "b",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;->b(JLjava/lang/String;)V",
+        "registers": 7,
+        "signature": "public static void b(long, java.lang.String)",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 328,
+        "kind": "virtual",
+        "name": "a",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;->a(Landroid/content/Context;Landroid/content/Intent;Lht1;)Ljava/lang/Object;",
+        "registers": 23,
+        "signature": "public final java.lang.Object a(android.content.Context, android.content.Intent, ht1)",
+        "try_blocks": 2
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 25,
+        "kind": "virtual",
+        "name": "onReceive",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V",
+        "registers": 9,
+        "signature": "public final void onReceive(android.content.Context, android.content.Intent)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/content/BroadcastReceiver;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.prayer.prayerReminder.PrayerAlarmReceiver (classes2.dex) extends android.content.BroadcastReceiver: 1 fields, 4 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/prayer/prayerReminder/PrayerAlarmReceiver;"
+    }
+  ],
+  "links": []
+}

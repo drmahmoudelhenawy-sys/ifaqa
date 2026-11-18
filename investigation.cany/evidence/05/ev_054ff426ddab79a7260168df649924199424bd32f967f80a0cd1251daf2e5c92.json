@@ -1,0 +1,70 @@
+{
+  "id": "ev_054ff426ddab79a7260168df649924199424bd32f967f80a0cd1251daf2e5c92",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "kind": "summary"
+    },
+    "source": {
+      "evidence_id": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 1,
+      "next_offset": null,
+      "status": "all-in-view",
+      "total": 1
+    },
+    "from_evidence": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "from_tool": "android_classes_find",
+    "shown": {
+      "carries_target_content": false,
+      "confidence": "observed",
+      "coverage": {
+        "examined": 541,
+        "status": "complete",
+        "total": 541
+      },
+      "evidence_id": "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+      "limitations": [],
+      "lists": {
+        "classes": 541,
+        "dex_files": 2
+      },
+      "operation": "android_classes_find",
+      "subject": {
+        "kind": "apk",
+        "name": "base.apk",
+        "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32"
+      },
+      "summary": "541 of 15034 classes match \"org.goldenquran.freesoft\" in 2 DEX file(s); showing 541."
+    }
+  },
+  "summary": "Part of android_classes_find evidence (all-in-view).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16"
+  ]
+}

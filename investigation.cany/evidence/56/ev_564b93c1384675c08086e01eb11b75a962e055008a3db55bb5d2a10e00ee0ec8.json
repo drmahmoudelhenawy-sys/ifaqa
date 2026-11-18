@@ -1,0 +1,81 @@
+{
+  "id": "ev_564b93c1384675c08086e01eb11b75a962e055008a3db55bb5d2a10e00ee0ec8",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "kind": "summary"
+    },
+    "source": {
+      "evidence_id": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": true,
+      "examined": 1,
+      "next_offset": null,
+      "status": "all-in-view",
+      "total": 1
+    },
+    "from_evidence": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+    "from_tool": "android_package_show",
+    "shown": {
+      "carries_target_content": false,
+      "confidence": "observed",
+      "coverage": {
+        "status": "complete"
+      },
+      "evidence_id": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+      "limitations": [
+        {
+          "code": "verification_scope",
+          "message": "Signatures ARE verified cryptographically here (v2/v3 signature over the signed data plus a recomputed APK content digest; v1 PKCS#7 over the .SF plus MANIFEST.MF per-file digests). NOT checked: certificate revocation, v3 key-rotation lineage/proof-of-rotation, rollback protection, source-stamp, and whether the signing certificate is one you trust (the certificate SHA-256 fingerprint is reported so you can compare it yourself)."
+        }
+      ],
+      "lists": {
+        "components": 63,
+        "declared_permissions": 1,
+        "dex": 2,
+        "schemes": 2,
+        "signers": 2,
+        "uses_features": 5,
+        "uses_libraries": 6,
+        "uses_permissions": 36,
+        "v1": 0,
+        "warnings": 0
+      },
+      "operation": "android_package_show",
+      "subject": {
+        "kind": "apk",
+        "name": "base.apk",
+        "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32"
+      },
+      "summary": "org.goldenquran.freesoft (base.apk, version 21.4, SDK 32–37): 36 permissions, 63 components (14 exported), 2 DEX file(s), native code for no ABI; signed with scheme v2, v3 (cryptographically VERIFIED)."
+    }
+  },
+  "summary": "Part of android_package_show evidence (all-in-view).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23"
+  ]
+}

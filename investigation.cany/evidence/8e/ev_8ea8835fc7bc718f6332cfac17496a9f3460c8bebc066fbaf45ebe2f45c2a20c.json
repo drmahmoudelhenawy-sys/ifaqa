@@ -1,0 +1,228 @@
+{
+  "id": "ev_8ea8835fc7bc718f6332cfac17496a9f3460c8bebc066fbaf45ebe2f45c2a20c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "hn1",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lhn1;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "x0",
+        "reference": "Lhn1;->x0:Lj69;",
+        "type": "j69"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 18,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lhn1;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 52,
+        "kind": "virtual",
+        "name": "E",
+        "overload_index": 0,
+        "reference": "Lhn1;->E(Landroid/os/Bundle;)V",
+        "registers": 3,
+        "signature": "public void E(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 37,
+        "kind": "virtual",
+        "name": "F",
+        "overload_index": 0,
+        "reference": "Lhn1;->F(Landroid/view/LayoutInflater;)Landroid/view/View;",
+        "registers": 5,
+        "signature": "public final android.view.View F(android.view.LayoutInflater)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "G",
+        "overload_index": 0,
+        "reference": "Lhn1;->G()V",
+        "registers": 2,
+        "signature": "public final void G()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 62,
+        "kind": "virtual",
+        "name": "Q",
+        "overload_index": 0,
+        "reference": "Lhn1;->Q(Landroid/view/View;)V",
+        "registers": 5,
+        "signature": "public final void Q(android.view.View)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "c0",
+        "overload_index": 0,
+        "reference": "Lhn1;->c0(ILfk3;)V",
+        "registers": 3,
+        "signature": "public void c0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "d0",
+        "overload_index": 0,
+        "reference": "Lhn1;->d0()Z",
+        "registers": 1,
+        "signature": "public boolean d0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "e0",
+        "overload_index": 0,
+        "reference": "Lhn1;->e0()V",
+        "registers": 1,
+        "signature": "public void e0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "f0",
+        "overload_index": 0,
+        "reference": "Lhn1;->f0()Luh5;",
+        "registers": 1,
+        "signature": "public final uh5 f0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "g0",
+        "overload_index": 0,
+        "reference": "Lhn1;->g0(Lzi3;)V",
+        "registers": 5,
+        "signature": "public final void g0(zi3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lhn1;->h0()V",
+        "registers": 1,
+        "signature": "public void h0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "i0",
+        "overload_index": 0,
+        "reference": "Lhn1;->i0()V",
+        "registers": 1,
+        "signature": "public void i0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "hn1",
+    "source_file": "SourceFile",
+    "superclass": "Lid3;"
+  },
+  "summary": "hn1 (classes.dex) extends id3: 1 fields, 12 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lhn1;"
+    }
+  ],
+  "links": []
+}

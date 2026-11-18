@@ -1,0 +1,263 @@
+{
+  "id": "ev_4363e35872162d38b56e2a5b58d71d6dc6c4d7672b78d4ba7b404221049e43d2",
+  "subject": {
+    "kind": "sqlite",
+    "sha256": "a06e87b5d72caf83c72ed202f6b00af41bd3eabb0f89d120748f29b41be145e1",
+    "name": "athkar_duas.db"
+  },
+  "operation": "db_sqlite_show",
+  "params": {
+    "limit": 100,
+    "offset": 0,
+    "path": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\athkar_duas.db",
+    "table": null
+  },
+  "result": {
+    "file_size": 380928,
+    "header": {
+      "application_id": 0,
+      "db_size_pages": 93,
+      "default_cache_size": 0,
+      "file_change_counter": 52,
+      "freelist_pages": 0,
+      "freelist_trunk": 0,
+      "incremental_vacuum": 0,
+      "largest_root_page": 0,
+      "page_size": 4096,
+      "read_version": 1,
+      "reserved_space": 0,
+      "schema_cookie": 11,
+      "schema_format": 4,
+      "sqlite_version": "3.47.0",
+      "sqlite_version_number": 3047000,
+      "text_encoding": "utf-8",
+      "user_version": 0,
+      "version_valid_for": 52,
+      "wal_mode": false,
+      "write_version": 1
+    },
+    "integrity_notes": [],
+    "other_objects": [
+      {
+        "name": "sqlite_autoindex_section_1",
+        "rootpage": 3,
+        "sql": "",
+        "tbl_name": "section",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_section_2",
+        "rootpage": 4,
+        "sql": "",
+        "tbl_name": "section",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_section_3",
+        "rootpage": 5,
+        "sql": "",
+        "tbl_name": "section",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_section_4",
+        "rootpage": 6,
+        "sql": "",
+        "tbl_name": "section",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_athkar_1",
+        "rootpage": 8,
+        "sql": "",
+        "tbl_name": "athkar",
+        "type": "index"
+      },
+      {
+        "name": "idx_athkar_section",
+        "rootpage": 9,
+        "sql": "CREATE INDEX idx_athkar_section ON athkar(section_id, position)",
+        "tbl_name": "athkar",
+        "type": "index"
+      },
+      {
+        "name": "sqlite_autoindex_athkar_ayah_ref_1",
+        "rootpage": 92,
+        "sql": "",
+        "tbl_name": "athkar_ayah_ref",
+        "type": "index"
+      },
+      {
+        "name": "idx_athkar_ayah_ref_athkar",
+        "rootpage": 93,
+        "sql": "CREATE INDEX idx_athkar_ayah_ref_athkar on athkar_ayah_ref(athkar_id)",
+        "tbl_name": "athkar_ayah_ref",
+        "type": "index"
+      }
+    ],
+    "page_count": 93,
+    "rows": null,
+    "schema_truncated": false,
+    "tables": [
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "slug",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "name_ar",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "name_en",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "position",
+            "type_name": "INTEGER"
+          }
+        ],
+        "name": "section",
+        "rootpage": 2,
+        "row_count": 20,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE section (\n        id       INTEGER PRIMARY KEY,\n        slug     TEXT NOT NULL UNIQUE,\n        name_ar  TEXT NOT NULL UNIQUE,\n        name_en  TEXT NOT NULL UNIQUE,\n        position INTEGER NOT NULL UNIQUE\n    )"
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "section_id",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "position",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "title",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "content_text",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "repeat_count",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "audio",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "athkar",
+        "rootpage": 7,
+        "row_count": 489,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE athkar (\n        id           INTEGER PRIMARY KEY,\n        section_id   INTEGER NOT NULL REFERENCES section(id) ON DELETE CASCADE,\n        position     INTEGER NOT NULL,\n        title        TEXT NOT NULL,\n        content_text TEXT NOT NULL,\n        repeat_count INTEGER NOT NULL DEFAULT 1 CHECK (repeat_count >= 1),\n        audio        TEXT,\n        UNIQUE (section_id, position)\n    )"
+      },
+      {
+        "columns": [
+          {
+            "name": "athkar_id",
+            "type_name": "integer"
+          },
+          {
+            "name": "surah_id",
+            "type_name": "integer"
+          },
+          {
+            "name": "ayah_from",
+            "type_name": "integer"
+          },
+          {
+            "name": "ayah_to",
+            "type_name": "integer"
+          },
+          {
+            "name": "ayah_id_from",
+            "type_name": "integer"
+          },
+          {
+            "name": "ayah_id_to",
+            "type_name": "integer"
+          },
+          {
+            "name": "page",
+            "type_name": "integer"
+          },
+          {
+            "name": "ayah_count",
+            "type_name": "integer"
+          },
+          {
+            "name": "matched_chars",
+            "type_name": "integer"
+          },
+          {
+            "name": "is_primary",
+            "type_name": "integer"
+          },
+          {
+            "name": "confidence",
+            "type_name": "text"
+          }
+        ],
+        "name": "athkar_ayah_ref",
+        "rootpage": 91,
+        "row_count": 91,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE athkar_ayah_ref (\n  athkar_id    integer not null references athkar(id) on delete cascade,\n  surah_id     integer not null,\n  ayah_from    integer not null,\n  ayah_to      integer not null,\n  ayah_id_from integer not null,\n  ayah_id_to   integer not null,\n  page         integer not null,\n  ayah_count   integer not null,\n  matched_chars integer not null,\n  is_primary   integer not null,\n  confidence   text    not null,\n  primary key (athkar_id, ayah_id_from))"
+      }
+    ],
+    "wal_sidecar_present": false
+  },
+  "summary": "SQLite 3.47.0 database: page size 4096, 93 pages, utf-8 encoding, 3 table(s), 8 other object(s).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "row_counts_derived",
+      "message": "Row counts are computed by walking each table's b-tree, not read from a stored value; they count only rows present in this file."
+    },
+    {
+      "code": "no_decryption",
+      "message": "Encrypted databases (for example SQLCipher) have no readable header and cannot be opened; only unencrypted SQLite files are supported."
+    },
+    {
+      "code": "freelist_not_read",
+      "message": "Deleted rows may linger on freelist or unused pages; those pages are not read, so deleted content is not recovered."
+    },
+    {
+      "code": "blobs_not_dumped",
+      "message": "BLOB values are reported as a byte length and a SHA-256 prefix, never dumped; overflow payloads are bounded."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 3,
+    "total": 3
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\athkar_duas.db"
+    }
+  ],
+  "links": []
+}

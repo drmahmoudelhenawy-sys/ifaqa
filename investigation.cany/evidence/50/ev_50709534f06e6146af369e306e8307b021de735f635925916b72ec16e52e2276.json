@@ -1,0 +1,147 @@
+{
+  "id": "ev_50709534f06e6146af369e306e8307b021de735f635925916b72ec16e52e2276",
+  "subject": {
+    "kind": "sqlite",
+    "sha256": "13386ca21e94bcc33d4500b42e126c1290bf676c561961e9274f445faf2b7d16",
+    "name": "quran_glyphs.db"
+  },
+  "operation": "db_sqlite_show",
+  "params": {
+    "limit": 100,
+    "offset": 0,
+    "path": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\quran_glyphs.db",
+    "table": null
+  },
+  "result": {
+    "file_size": 6569984,
+    "header": {
+      "application_id": 0,
+      "db_size_pages": 1604,
+      "default_cache_size": 0,
+      "file_change_counter": 126,
+      "freelist_pages": 0,
+      "freelist_trunk": 0,
+      "incremental_vacuum": 0,
+      "largest_root_page": 0,
+      "page_size": 4096,
+      "read_version": 1,
+      "reserved_space": 0,
+      "schema_cookie": 8,
+      "schema_format": 4,
+      "sqlite_version": "3.47.0",
+      "sqlite_version_number": 3047000,
+      "text_encoding": "utf-8",
+      "user_version": 0,
+      "version_valid_for": 126,
+      "wal_mode": false,
+      "write_version": 1
+    },
+    "integrity_notes": [],
+    "other_objects": [
+      {
+        "name": "sqlite_autoindex_words_1",
+        "rootpage": 3,
+        "sql": "",
+        "tbl_name": "words",
+        "type": "index"
+      },
+      {
+        "name": "idx_surah_ayah",
+        "rootpage": 4,
+        "sql": "CREATE INDEX idx_surah_ayah ON words(surah, ayah)",
+        "tbl_name": "words",
+        "type": "index"
+      }
+    ],
+    "page_count": 1604,
+    "rows": null,
+    "schema_truncated": false,
+    "tables": [
+      {
+        "columns": [
+          {
+            "name": "surah",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "ayah",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "word_position",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "code_v2",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "line_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "page_number",
+            "type_name": "INTEGER"
+          },
+          {
+            "name": "char_type",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "text",
+            "type_name": "TEXT"
+          },
+          {
+            "name": "clean",
+            "type_name": "TEXT"
+          }
+        ],
+        "name": "words",
+        "rootpage": 2,
+        "row_count": 83665,
+        "row_count_bounded": false,
+        "sql": "CREATE TABLE words (\n            surah INTEGER NOT NULL,\n            ayah INTEGER NOT NULL,\n            word_position INTEGER NOT NULL,\n            code_v2 TEXT NOT NULL,\n            line_number INTEGER NOT NULL,\n            page_number INTEGER NOT NULL,\n            char_type TEXT NOT NULL DEFAULT 'word', text TEXT NOT NULL DEFAULT '', clean TEXT NOT NULL DEFAULT '',\n            PRIMARY KEY (surah, ayah, word_position)\n        )"
+      }
+    ],
+    "wal_sidecar_present": false
+  },
+  "summary": "SQLite 3.47.0 database: page size 4096, 1604 pages, utf-8 encoding, 1 table(s), 2 other object(s).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "row_counts_derived",
+      "message": "Row counts are computed by walking each table's b-tree, not read from a stored value; they count only rows present in this file."
+    },
+    {
+      "code": "no_decryption",
+      "message": "Encrypted databases (for example SQLCipher) have no readable header and cannot be opened; only unencrypted SQLite files are supported."
+    },
+    {
+      "code": "freelist_not_read",
+      "message": "Deleted rows may linger on freelist or unused pages; those pages are not read, so deleted content is not recovered."
+    },
+    {
+      "code": "blobs_not_dumped",
+      "message": "BLOB values are reported as a byte length and a SHA-256 prefix, never dumped; overflow payloads are bounded."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:\\Users\\drmah\\AppData\\Local\\Temp\\craft-anything-extract-99f9dcbd53abb676\\assets\\quran_glyphs.db"
+    }
+  ],
+  "links": []
+}

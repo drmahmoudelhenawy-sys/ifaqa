@@ -1,0 +1,53 @@
+{
+  "id": "ev_22c736eaeeb09f912fe222643d2c154a5e1e933fd8c89765fcf1c83372deabaf",
+  "subject": {
+    "kind": "text",
+    "sha256": "61240eb8382cbef8151ecaec9209b94e72cd39f4409e8a56494848d4d9744473",
+    "name": "NAVIGATION_ANALYSIS.md"
+  },
+  "operation": "core_text_read",
+  "params": {
+    "limit": 2000,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\NAVIGATION_ANALYSIS.md"
+  },
+  "result": {
+    "cut_lines": [],
+    "encoding": "utf8",
+    "file_size": 3024,
+    "lines": 33,
+    "more": false,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\NAVIGATION_ANALYSIS.md",
+    "replaced_sequences": 0,
+    "text": "# Navigation Analysis\n\n## Directly observed entry points\n\n```mermaid\nflowchart TD\n  A[Android launcher] --> M[MainActivity]\n  D1[goldenquran host: dua-community] --> M\n  D2[goldenquran host: masbaha] --> M\n  D3[goldenquran host: library] --> M\n  S[MEDIA_PLAY_FROM_SEARCH intent] --> V[VoicePlayActivity]\n```\n\nThe manifest marks MainActivity as the launcher and lists the three deep-link hosts. VoicePlayActivity handles media-search requests. The diagram does not show which exact screen each host opens. (Evidence: `ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf`, `ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5`.)\n\n## Candidate screens; route not known\n\nThe saved static evidence suggests Quran index/reader, search, audio library/player, bookmarks/notes, prayer time/alarm, athkar/duas, qibla, Khetma, Tasmee, hadith, books/library, live sessions, settings, and statistics areas. These candidates are based on class names and default strings. No edge between them is established. (Evidence: `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`, `ev_05c1f6c2ab3547ccce70c095559a6ad9ec9054f4f4217b7b273a5981faa12128`, `ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274`, `ev_65c3b2089d5998b75b20f115d94412b2f641834090f4cc03f867c6b1cbbc762d`, `ev_61673d9c6428891a4d336fb7206fb0ad39da0fb678bf1c43fa858539dfd026ef`, `ev_b97caf2a9f49d85f6ce467f57f483d268d10b9b3fe7d137bfb270099830bf805`, `ev_32944f8a6a36bf3f3eb20651131c7365b09f929052a59d57731ec287712a12f8`, `ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83`, `ev_db6aff248d905d610f5e67810ae753c054ff2130db7ff4538e40b132d1a7ee1b`, `ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5`.)\n\n| Candidate area | Why it is listed | Route confidence |\n|---|---|---|\n| Quran reader and index | Quran strings and content models | Candidate only |\n| Search | SearchObject/result types and search labels | Candidate only |\n| Audio library/player | Media3 service, AudioFragment and audio models | Candidate only |\n| Prayer, alarms, widgets | Manifest services, receivers, widget providers | Components observed; screen path unknown |\n| Athkar/duas, masbaha, Khetma, Tasmee | Named strings and feature models | Candidate only |\n| Hadith and library | Hadith/book strings and LibraryReaderFragment | Candidate only |\n| Live sessions/calls | Strings and manifest components | Candidate only |\n| Settings/statistics | Local model names | Candidate only |\n\n## Unknown navigation details\n\nThe actual home screen, tabs, menus, transitions, back behavior, dialog routes, and deep-link destinations are not established. The archive has no `res/menu` files, but that absence alone does not prove there is no menu built in code. Screen and navigation paths remain open under `unk_8f043049b1fb4680`. (Evidence: `ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708`, `ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5`; unknown `unk_8f043049b1fb4680`.)\n",
+    "total_lines": 33
+  },
+  "summary": "NAVIGATION_ANALYSIS.md: lines 1–33 of 33 (UTF-8).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "text_as_stored",
+      "message": "The file is read as text as it is stored: nothing is run, rendered or formatted, and text a program builds or downloads while it runs isn't here."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 33,
+    "total": 33
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\NAVIGATION_ANALYSIS.md"
+    }
+  ],
+  "links": []
+}

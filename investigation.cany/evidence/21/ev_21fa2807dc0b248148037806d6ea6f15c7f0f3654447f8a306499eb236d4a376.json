@@ -1,0 +1,133 @@
+{
+  "id": "ev_21fa2807dc0b248148037806d6ea6f15c7f0f3654447f8a306499eb236d4a376",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.workers.AudioRefreshWorker",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "h",
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;->h:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "g",
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;->g:Landroid/content/Context;",
+        "type": "android.content.Context"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 14,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 12,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
+        "registers": 3,
+        "signature": "public void <init>(android.content.Context, androidx.work.WorkerParameters)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 71,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;->c(Lht1;)Ljava/lang/Object;",
+        "registers": 6,
+        "signature": "public final java.lang.Object c(ht1)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 279,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;->e(Lorg/goldenquran/freesoft/models/local/ReciterTracks;)V",
+        "registers": 11,
+        "signature": "public final void e(org.goldenquran.freesoft.models.local.ReciterTracks)",
+        "try_blocks": 14
+      }
+    ],
+    "name": "org.goldenquran.freesoft.workers.AudioRefreshWorker",
+    "source_file": "SourceFile",
+    "superclass": "Landroidx/work/CoroutineWorker;"
+  },
+  "summary": "org.goldenquran.freesoft.workers.AudioRefreshWorker (classes2.dex) extends androidx.work.CoroutineWorker: 2 fields, 4 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/workers/AudioRefreshWorker;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,72 @@
+{
+  "id": "ev_091336ed69a25a3e13b7d022de3e0f707c99a17b2e9af4c01eebe0bbce0027e8",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_classes_find",
+  "params": {
+    "limit": 300,
+    "offset": 0,
+    "path": null,
+    "query": "MainActivity"
+  },
+  "result": {
+    "classes": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/activity/MainActivity;",
+        "dex": "classes.dex",
+        "fields": 19,
+        "methods": 10,
+        "name": "org.goldenquran.freesoft.activity.MainActivity",
+        "superclass": "em0"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/MainActivityUiState;",
+        "dex": "classes.dex",
+        "fields": 32,
+        "methods": 71,
+        "name": "org.goldenquran.freesoft.models.MainActivityUiState",
+        "superclass": "java.lang.Object"
+      }
+    ],
+    "classes_total": 15034,
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "matches": 2,
+    "query": "MainActivity"
+  },
+  "summary": "2 of 15034 classes match \"MainActivity\" in 2 DEX file(s); showing 2.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 2,
+    "total": 2
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

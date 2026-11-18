@@ -1,0 +1,1342 @@
+{
+  "id": "ev_06c8b994d1f27b52cda8fc87c09527c28dec03f31337c6576914dcfde45105bd",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "id3",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "abstract"
+    ],
+    "annotations": [],
+    "descriptor": "Lid3;",
+    "dex": "classes.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "w0",
+        "reference": "Lid3;->w0:Ljava/lang/Object;",
+        "type": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "A",
+        "reference": "Lid3;->A:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "B",
+        "reference": "Lid3;->B:Landroid/os/Bundle;",
+        "type": "android.os.Bundle"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "C",
+        "reference": "Lid3;->C:Lid3;",
+        "type": "id3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "D",
+        "reference": "Lid3;->D:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "E",
+        "reference": "Lid3;->E:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "F",
+        "reference": "Lid3;->F:Ljava/lang/Boolean;",
+        "type": "java.lang.Boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "G",
+        "reference": "Lid3;->G:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "H",
+        "reference": "Lid3;->H:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "I",
+        "reference": "Lid3;->I:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "J",
+        "reference": "Lid3;->J:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "K",
+        "reference": "Lid3;->K:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "L",
+        "reference": "Lid3;->L:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "M",
+        "reference": "Lid3;->M:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "N",
+        "reference": "Lid3;->N:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "O",
+        "reference": "Lid3;->O:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "P",
+        "reference": "Lid3;->P:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Q",
+        "reference": "Lid3;->Q:Lee3;",
+        "type": "ee3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "R",
+        "reference": "Lid3;->R:Lkd3;",
+        "type": "kd3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "S",
+        "reference": "Lid3;->S:Lee3;",
+        "type": "ee3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "T",
+        "reference": "Lid3;->T:Lid3;",
+        "type": "id3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "U",
+        "reference": "Lid3;->U:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "V",
+        "reference": "Lid3;->V:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "W",
+        "reference": "Lid3;->W:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "X",
+        "reference": "Lid3;->X:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Y",
+        "reference": "Lid3;->Y:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Z",
+        "reference": "Lid3;->Z:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "a0",
+        "reference": "Lid3;->a0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "b0",
+        "reference": "Lid3;->b0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "c0",
+        "reference": "Lid3;->c0:Landroid/view/ViewGroup;",
+        "type": "android.view.ViewGroup"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "d0",
+        "reference": "Lid3;->d0:Landroid/view/View;",
+        "type": "android.view.View"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "e0",
+        "reference": "Lid3;->e0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "f0",
+        "reference": "Lid3;->f0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "g0",
+        "reference": "Lid3;->g0:Lgd3;",
+        "type": "gd3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "h0",
+        "reference": "Lid3;->h0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "i0",
+        "reference": "Lid3;->i0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "j0",
+        "reference": "Lid3;->j0:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "k0",
+        "reference": "Lid3;->k0:Lhv4;",
+        "type": "hv4"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "l0",
+        "reference": "Lid3;->l0:Lxv4;",
+        "type": "xv4"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "m0",
+        "reference": "Lid3;->m0:Lws1;",
+        "type": "ws1"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "n0",
+        "reference": "Lid3;->n0:Lkf3;",
+        "type": "kf3"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "o0",
+        "reference": "Lid3;->o0:Ln96;",
+        "type": "n96"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "p0",
+        "reference": "Lid3;->p0:Lt58;",
+        "type": "t58"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "q0",
+        "reference": "Lid3;->q0:Lpe6;",
+        "type": "pe6"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "r0",
+        "reference": "Lid3;->r0:Lxuc;",
+        "type": "xuc"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "s0",
+        "reference": "Lid3;->s0:Ljava/util/concurrent/atomic/AtomicInteger;",
+        "type": "java.util.concurrent.atomic.AtomicInteger"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "t0",
+        "reference": "Lid3;->t0:Ljava/util/ArrayList;",
+        "type": "java.util.ArrayList"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "u0",
+        "reference": "Lid3;->u0:Led3;",
+        "type": "ed3"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "v0",
+        "reference": "Lid3;->v0:Led3;",
+        "type": "ed3"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "w",
+        "reference": "Lid3;->w:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "x",
+        "reference": "Lid3;->x:Landroid/os/Bundle;",
+        "type": "android.os.Bundle"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "y",
+        "reference": "Lid3;->y:Landroid/util/SparseArray;",
+        "type": "android.util.SparseArray"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "z",
+        "reference": "Lid3;->z:Landroid/os/Bundle;",
+        "type": "android.os.Bundle"
+      }
+    ],
+    "interfaces": [
+      "Landroid/content/ComponentCallbacks;",
+      "Landroid/view/View$OnCreateContextMenuListener;",
+      "Luv4;",
+      "Lj9a;",
+      "Lkx3;",
+      "Lr58;"
+    ],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 8,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lid3;-><clinit>()V",
+        "registers": 1,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 99,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lid3;-><init>()V",
+        "registers": 4,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "A",
+        "overload_index": 0,
+        "reference": "Lid3;->A()Z",
+        "registers": 1,
+        "signature": "public final boolean A()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "B",
+        "overload_index": 0,
+        "reference": "Lid3;->B()V",
+        "registers": 2,
+        "signature": "public void B()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 51,
+        "kind": "virtual",
+        "name": "C",
+        "overload_index": 0,
+        "reference": "Lid3;->C(IILandroid/content/Intent;)V",
+        "registers": 6,
+        "signature": "public void C(int, int, android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "D",
+        "overload_index": 0,
+        "reference": "Lid3;->D(Landroid/content/Context;)V",
+        "registers": 3,
+        "signature": "public void D(android.content.Context)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "E",
+        "overload_index": 0,
+        "reference": "Lid3;->E(Landroid/os/Bundle;)V",
+        "registers": 5,
+        "signature": "public void E(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "F",
+        "overload_index": 0,
+        "reference": "Lid3;->F(Landroid/view/LayoutInflater;)Landroid/view/View;",
+        "registers": 2,
+        "signature": "public android.view.View F(android.view.LayoutInflater)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "G",
+        "overload_index": 0,
+        "reference": "Lid3;->G()V",
+        "registers": 2,
+        "signature": "public void G()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "H",
+        "overload_index": 0,
+        "reference": "Lid3;->H()V",
+        "registers": 2,
+        "signature": "public void H()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "I",
+        "overload_index": 0,
+        "reference": "Lid3;->I()V",
+        "registers": 2,
+        "signature": "public void I()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 29,
+        "kind": "virtual",
+        "name": "J",
+        "overload_index": 0,
+        "reference": "Lid3;->J(Landroid/os/Bundle;)Landroid/view/LayoutInflater;",
+        "registers": 3,
+        "signature": "public android.view.LayoutInflater J(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "K",
+        "overload_index": 0,
+        "reference": "Lid3;->K(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/os/Bundle;)V",
+        "registers": 4,
+        "signature": "public void K(android.content.Context, android.util.AttributeSet, android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "L",
+        "overload_index": 0,
+        "reference": "Lid3;->L()V",
+        "registers": 2,
+        "signature": "public void L()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "M",
+        "overload_index": 0,
+        "reference": "Lid3;->M()V",
+        "registers": 2,
+        "signature": "public void M()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "N",
+        "overload_index": 0,
+        "reference": "Lid3;->N(Landroid/os/Bundle;)V",
+        "registers": 2,
+        "signature": "public void N(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "O",
+        "overload_index": 0,
+        "reference": "Lid3;->O()V",
+        "registers": 2,
+        "signature": "public void O()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "P",
+        "overload_index": 0,
+        "reference": "Lid3;->P()V",
+        "registers": 2,
+        "signature": "public void P()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 1,
+        "kind": "virtual",
+        "name": "Q",
+        "overload_index": 0,
+        "reference": "Lid3;->Q(Landroid/view/View;)V",
+        "registers": 2,
+        "signature": "public void Q(android.view.View)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "R",
+        "overload_index": 0,
+        "reference": "Lid3;->R(Landroid/os/Bundle;)V",
+        "registers": 2,
+        "signature": "public void R(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 144,
+        "kind": "virtual",
+        "name": "S",
+        "overload_index": 0,
+        "reference": "Lid3;->S(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V",
+        "registers": 8,
+        "signature": "public void S(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 33,
+        "kind": "virtual",
+        "name": "T",
+        "overload_index": 0,
+        "reference": "Lid3;->T()V",
+        "registers": 4,
+        "signature": "public final void T()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 56,
+        "kind": "virtual",
+        "name": "U",
+        "overload_index": 0,
+        "reference": "Lid3;->U(Lp5;Lszb;)Lv5;",
+        "registers": 9,
+        "signature": "public final v5 U(p5, szb)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "V",
+        "overload_index": 0,
+        "reference": "Lid3;->V()Lld3;",
+        "registers": 3,
+        "signature": "public final ld3 V()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "W",
+        "overload_index": 0,
+        "reference": "Lid3;->W()Landroid/content/Context;",
+        "registers": 3,
+        "signature": "public final android.content.Context W()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "X",
+        "overload_index": 0,
+        "reference": "Lid3;->X()Landroid/view/View;",
+        "registers": 3,
+        "signature": "public final android.view.View X()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 38,
+        "kind": "virtual",
+        "name": "Y",
+        "overload_index": 0,
+        "reference": "Lid3;->Y(IIII)V",
+        "registers": 6,
+        "signature": "public final void Y(int, int, int, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 24,
+        "kind": "virtual",
+        "name": "Z",
+        "overload_index": 0,
+        "reference": "Lid3;->Z(Landroid/os/Bundle;)V",
+        "registers": 3,
+        "signature": "public final void Z(android.os.Bundle)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 13,
+        "kind": "virtual",
+        "name": "a0",
+        "overload_index": 0,
+        "reference": "Lid3;->a0(Ljava/lang/String;)Z",
+        "registers": 2,
+        "signature": "public final boolean a0(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 26,
+        "kind": "virtual",
+        "name": "b0",
+        "overload_index": 0,
+        "reference": "Lid3;->b0(Landroid/content/Intent;)V",
+        "registers": 3,
+        "signature": "public final void b0(android.content.Intent)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 93,
+        "kind": "virtual",
+        "name": "d",
+        "overload_index": 0,
+        "reference": "Lid3;->d()Lg9a;",
+        "registers": 4,
+        "signature": "public final g9a d()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 103,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Lid3;->e()Lc96;",
+        "registers": 5,
+        "signature": "public final c96 e()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lid3;->equals(Ljava/lang/Object;)Z",
+        "registers": 2,
+        "signature": "public final boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 51,
+        "kind": "virtual",
+        "name": "g",
+        "overload_index": 0,
+        "reference": "Lid3;->g()Li9a;",
+        "registers": 4,
+        "signature": "public final i9a g()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 5,
+        "kind": "virtual",
+        "name": "h",
+        "overload_index": 0,
+        "reference": "Lid3;->h()Landroid/app/Activity;",
+        "registers": 1,
+        "signature": "public android.app.Activity h()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 7,
+        "kind": "virtual",
+        "name": "i",
+        "overload_index": 0,
+        "reference": "Lid3;->i()Lhc6;",
+        "registers": 1,
+        "signature": "public final hc6 i()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "j",
+        "overload_index": 0,
+        "reference": "Lid3;->j()Lxv4;",
+        "registers": 1,
+        "signature": "public final xv4 j()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "k",
+        "overload_index": 0,
+        "reference": "Lid3;->k()Lfbb;",
+        "registers": 2,
+        "signature": "public fbb k()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 570,
+        "kind": "virtual",
+        "name": "l",
+        "overload_index": 0,
+        "reference": "Lid3;->l(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V",
+        "registers": 8,
+        "signature": "public void l(java.lang.String, java.io.FileDescriptor, java.io.PrintWriter, java.lang.String[])",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 31,
+        "kind": "virtual",
+        "name": "m",
+        "overload_index": 0,
+        "reference": "Lid3;->m()Lgd3;",
+        "registers": 4,
+        "signature": "public final gd3 m()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 11,
+        "kind": "virtual",
+        "name": "n",
+        "overload_index": 0,
+        "reference": "Lid3;->n()Lld3;",
+        "registers": 1,
+        "signature": "public final ld3 n()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 20,
+        "kind": "virtual",
+        "name": "o",
+        "overload_index": 0,
+        "reference": "Lid3;->o()Lee3;",
+        "registers": 3,
+        "signature": "public final ee3 o()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "onConfigurationChanged",
+        "overload_index": 0,
+        "reference": "Lid3;->onConfigurationChanged(Landroid/content/res/Configuration;)V",
+        "registers": 2,
+        "signature": "public final void onConfigurationChanged(android.content.res.Configuration)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 8,
+        "kind": "virtual",
+        "name": "onCreateContextMenu",
+        "overload_index": 0,
+        "reference": "Lid3;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V",
+        "registers": 4,
+        "signature": "public final void onCreateContextMenu(android.view.ContextMenu, android.view.View, android.view.ContextMenu$ContextMenuInfo)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 4,
+        "kind": "virtual",
+        "name": "onLowMemory",
+        "overload_index": 0,
+        "reference": "Lid3;->onLowMemory()V",
+        "registers": 2,
+        "signature": "public final void onLowMemory()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "p",
+        "overload_index": 0,
+        "reference": "Lid3;->p()Landroid/content/Context;",
+        "registers": 1,
+        "signature": "public final android.content.Context p()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 31,
+        "kind": "virtual",
+        "name": "q",
+        "overload_index": 0,
+        "reference": "Lid3;->q()I",
+        "registers": 3,
+        "signature": "public final int q()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "r",
+        "overload_index": 0,
+        "reference": "Lid3;->r()Lee3;",
+        "registers": 3,
+        "signature": "public final ee3 r()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "s",
+        "overload_index": 0,
+        "reference": "Lid3;->s()Landroid/content/res/Resources;",
+        "registers": 1,
+        "signature": "public final android.content.res.Resources s()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 70,
+        "kind": "virtual",
+        "name": "startActivityForResult",
+        "overload_index": 0,
+        "reference": "Lid3;->startActivityForResult(Landroid/content/Intent;I)V",
+        "registers": 6,
+        "signature": "public final void startActivityForResult(android.content.Intent, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "t",
+        "overload_index": 0,
+        "reference": "Lid3;->t(I)Ljava/lang/String;",
+        "registers": 2,
+        "signature": "public final java.lang.String t(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 86,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lid3;->toString()Ljava/lang/String;",
+        "registers": 3,
+        "signature": "public final java.lang.String toString()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final",
+          "varargs"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "u",
+        "overload_index": 0,
+        "reference": "Lid3;->u(I[Ljava/lang/Object;)Ljava/lang/String;",
+        "registers": 3,
+        "signature": "public final varargs java.lang.String u(int, java.lang.Object[])",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 18,
+        "kind": "virtual",
+        "name": "v",
+        "overload_index": 0,
+        "reference": "Lid3;->v()Lkf3;",
+        "registers": 3,
+        "signature": "public final kf3 v()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 71,
+        "kind": "virtual",
+        "name": "w",
+        "overload_index": 0,
+        "reference": "Lid3;->w()V",
+        "registers": 4,
+        "signature": "public final void w()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 53,
+        "kind": "virtual",
+        "name": "x",
+        "overload_index": 0,
+        "reference": "Lid3;->x()V",
+        "registers": 4,
+        "signature": "public final void x()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 12,
+        "kind": "virtual",
+        "name": "y",
+        "overload_index": 0,
+        "reference": "Lid3;->y()Z",
+        "registers": 2,
+        "signature": "public final boolean y()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 28,
+        "kind": "virtual",
+        "name": "z",
+        "overload_index": 0,
+        "reference": "Lid3;->z()Z",
+        "registers": 3,
+        "signature": "public final boolean z()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "id3",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "id3 (classes.dex) extends java.lang.Object: 53 fields, 58 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lid3;"
+    }
+  ],
+  "links": []
+}

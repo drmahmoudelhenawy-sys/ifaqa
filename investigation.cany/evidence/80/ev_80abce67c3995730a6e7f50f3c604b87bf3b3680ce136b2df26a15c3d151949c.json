@@ -1,0 +1,651 @@
+{
+  "id": "ev_80abce67c3995730a6e7f50f3c604b87bf3b3680ce136b2df26a15c3d151949c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.local.SearchObject",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [
+      "Ldalvik/annotation/MemberClasses; (system)"
+    ],
+    "descriptor": "Lorg/goldenquran/freesoft/models/local/SearchObject;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "Companion",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->Companion:Lorg/goldenquran/freesoft/models/local/SearchObject$Companion;",
+        "type": "org.goldenquran.freesoft.models.local.SearchObject$Companion"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "HEADER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->HEADER:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_AYAH",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_AYAH:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_MO3JAM",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_MO3JAM:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_NOTE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_NOTE:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_PAGE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_PAGE:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_SUBJECT",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_SUBJECT:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_SURA",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_SURA:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_TAFSEER",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_TAFSEER:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "TYPE_TRANSLTE",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->TYPE_TRANSLTE:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "ayahIndex",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->ayahIndex:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "bookId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->bookId:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "fontId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->fontId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "glyphHits",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->glyphHits:Ljava/util/Set;",
+        "type": "java.util.Set"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "glyphs",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->glyphs:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "header",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->header:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "name",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->name:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "pageIndex",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->pageIndex:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "recitrtId",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->recitrtId:Ljava/lang/Long;",
+        "type": "java.lang.Long"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "suraIndex",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->suraIndex:Ljava/lang/Integer;",
+        "type": "java.lang.Integer"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "type",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->type:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private"
+        ],
+        "kind": "instance",
+        "name": "value",
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->value:Ljava/lang/String;",
+        "type": "java.lang.String"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "static",
+          "constructor"
+        ],
+        "code_units": 13,
+        "kind": "direct",
+        "name": "<clinit>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;-><clinit>()V",
+        "registers": 2,
+        "signature": "static void <clinit>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 36,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;-><init>()V",
+        "registers": 3,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getAyahIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getAyahIndex()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getAyahIndex()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getBookId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getBookId()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getBookId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getFontId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getFontId()I",
+        "registers": 1,
+        "signature": "public final int getFontId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getGlyphHits",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getGlyphHits()Ljava/util/Set;",
+        "registers": 1,
+        "signature": "public final java.util.Set getGlyphHits()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getGlyphs",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getGlyphs()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getGlyphs()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getHeader",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getHeader()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getHeader()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getName()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getName()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getPageIndex()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getPageIndex()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getRecitrtId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getRecitrtId()Ljava/lang/Long;",
+        "registers": 1,
+        "signature": "public final java.lang.Long getRecitrtId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getSuraIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getSuraIndex()Ljava/lang/Integer;",
+        "registers": 1,
+        "signature": "public final java.lang.Integer getSuraIndex()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getType()I",
+        "registers": 1,
+        "signature": "public final int getType()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getValue",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->getValue()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getValue()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setAyahIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setAyahIndex(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setAyahIndex(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setBookId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setBookId(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setBookId(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setFontId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setFontId(I)V",
+        "registers": 2,
+        "signature": "public final void setFontId(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "setGlyphHits",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setGlyphHits(Ljava/util/Set;)V",
+        "registers": 2,
+        "signature": "public final void setGlyphHits(java.util.Set)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setGlyphs",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setGlyphs(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setGlyphs(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setHeader",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setHeader(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setHeader(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setName",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setName(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setName(java.lang.String)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setPageIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setPageIndex(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setPageIndex(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setRecitrtId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setRecitrtId(Ljava/lang/Long;)V",
+        "registers": 2,
+        "signature": "public final void setRecitrtId(java.lang.Long)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setSuraIndex",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setSuraIndex(Ljava/lang/Integer;)V",
+        "registers": 2,
+        "signature": "public final void setSuraIndex(java.lang.Integer)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setType",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setType(I)V",
+        "registers": 2,
+        "signature": "public final void setType(int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "setValue",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/local/SearchObject;->setValue(Ljava/lang/String;)V",
+        "registers": 2,
+        "signature": "public final void setValue(java.lang.String)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.local.SearchObject",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.local.SearchObject (classes2.dex) extends java.lang.Object: 23 fields, 26 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/local/SearchObject;"
+    }
+  ],
+  "links": []
+}

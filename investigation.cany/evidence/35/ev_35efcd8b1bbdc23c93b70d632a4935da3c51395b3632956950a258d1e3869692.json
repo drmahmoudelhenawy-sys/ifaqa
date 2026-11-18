@@ -1,0 +1,736 @@
+{
+  "id": "ev_35efcd8b1bbdc23c93b70d632a4935da3c51395b3632956950a258d1e3869692",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_users_find",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment",
+    "limit": 200,
+    "method_name": null,
+    "offset": 0,
+    "path": null
+  },
+  "result": {
+    "callers": 17,
+    "class": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;",
+    "defined_in": "classes2.dex",
+    "method_name": null,
+    "references": [
+      {
+        "caller": "Lza5;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "003e",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lgw3;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "010f",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lgw3;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0120",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V"
+      },
+      {
+        "caller": "Lkg5;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0078",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->p1:Lku6;"
+      },
+      {
+        "caller": "Lkg5;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "008a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->q1:Lku6;"
+      },
+      {
+        "caller": "Lkg5;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00f8",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lkg5;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "010d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->X0:Lhu6;"
+      },
+      {
+        "caller": "Lkg5;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "011e",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->a1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0015",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "001d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->o1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0032",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0043",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "004b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0060",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Llg5;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "006c",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->g1:Lorg/goldenquran/freesoft/models/SuraAyahPage;"
+      },
+      {
+        "caller": "Lmv;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0016",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lmv;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0117",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0011",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0013",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "004d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->g1:Lorg/goldenquran/freesoft/models/SuraAyahPage;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "00cc",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->g1:Lorg/goldenquran/freesoft/models/SuraAyahPage;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0116",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "013a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->j1:Lku6;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0186",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lng5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01db",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "000b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->X0:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0013",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "001d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Z0:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0023",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->a1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "002b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->b1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0033",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "003b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->d1:Las4;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0043",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0049",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "004f",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0056",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->i1:Las4;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "005c",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->j1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0062",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0068",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "006e",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0074",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->n1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "007a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->o1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0080",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->p1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0087",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->q1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "008d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0025",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->X0:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0028",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0031",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Z0:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0037",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->X0:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "003d",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->a1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0046",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0052",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "005c",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->b1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0066",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00b6",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00de",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->j1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00e8",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00f4",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0100",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01b6",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->n1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01c0",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->o1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01cc",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->p1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01d8",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->q1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "01e2",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->r1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "const-class",
+        "kind": "type",
+        "offset": "02d0",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "031a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->d1:Las4;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "031c",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->i1:Las4;"
+      },
+      {
+        "caller": "Lpg5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "003b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lpg5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "004a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->Z0:Lhu6;"
+      },
+      {
+        "caller": "Lpg5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "007f",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lpg5;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00c0",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->i1:Las4;"
+      },
+      {
+        "caller": "Ltv;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "003a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Ltv;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "023b",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Ltv;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "02d5",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Ltv;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "02da",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->b1:Lku6;"
+      },
+      {
+        "caller": "Ltv;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "02df",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->d1:Las4;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0002",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0004",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->q1:Lku6;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0017",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0046",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->p1:Lku6;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0069",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->n1:Lku6;"
+      },
+      {
+        "caller": "Lw7;->B(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0076",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;->n1:Lku6;"
+      },
+      {
+        "caller": "Lw7;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "005a",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lxy;->C(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0006",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      },
+      {
+        "caller": "Lxy;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0094",
+        "target": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+      }
+    ],
+    "references_total": 85
+  },
+  "summary": "85 reference(s) to org.goldenquran.freesoft.ui.quranmenu.MainMenuFragment from 17 method(s) across 2 DEX file(s); defined in classes2.dex.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "static_references_only",
+      "message": "Only direct bytecode references are found; reflection, JNI, string-built class names and code loaded at run time are not."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 85,
+    "total": 85
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/quranmenu/MainMenuFragment;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,354 @@
+{
+  "id": "ev_4505e193ac8a3c59596690bd32944bcd00d2a00d04bbe021c8c4138f187e6538",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.VerseMarkerEntity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "centerX",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->centerX:F",
+        "type": "float"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "centerY",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->centerY:F",
+        "type": "float"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "id",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->id:J",
+        "type": "long"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "line",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->line:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "numberCodePoint",
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->numberCodePoint:Ljava/lang/String;",
+        "type": "java.lang.String"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 17,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;-><init>(JLjava/lang/String;IFF)V",
+        "registers": 7,
+        "signature": "public void <init>(long, java.lang.String, int, float, float)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "synthetic",
+          "constructor"
+        ],
+        "code_units": 16,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 1,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;-><init>(JLjava/lang/String;IFFILu62;)V",
+        "registers": 16,
+        "signature": "public synthetic void <init>(long, java.lang.String, int, float, float, int, u62)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 41,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;JLjava/lang/String;IFFILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;",
+        "registers": 16,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.VerseMarkerEntity copy$default(org.goldenquran.freesoft.models.room.VerseMarkerEntity, long, java.lang.String, int, float, float, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->component2()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component3",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->component3()I",
+        "registers": 1,
+        "signature": "public final int component3()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component4",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->component4()F",
+        "registers": 1,
+        "signature": "public final float component4()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component5",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->component5()F",
+        "registers": 1,
+        "signature": "public final float component5()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->copy(JLjava/lang/String;IFF)Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;",
+        "registers": 7,
+        "signature": "public final org.goldenquran.freesoft.models.room.VerseMarkerEntity copy(long, java.lang.String, int, float, float)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 62,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCenterX",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->getCenterX()F",
+        "registers": 1,
+        "signature": "public final float getCenterX()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getCenterY",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->getCenterY()F",
+        "registers": 1,
+        "signature": "public final float getCenterY()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->getId()J",
+        "registers": 3,
+        "signature": "public final long getId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getLine",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->getLine()I",
+        "registers": 1,
+        "signature": "public final int getLine()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getNumberCodePoint",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->getNumberCodePoint()Ljava/lang/String;",
+        "registers": 1,
+        "signature": "public final java.lang.String getNumberCodePoint()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 35,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->hashCode()I",
+        "registers": 4,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 52,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;->toString()Ljava/lang/String;",
+        "registers": 8,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.VerseMarkerEntity",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.VerseMarkerEntity (classes2.dex) extends java.lang.Object: 6 fields, 17 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/VerseMarkerEntity;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,225 @@
+{
+  "id": "ev_eccfcac274fd58aa5272161cb8aeedb69aea8a8673a574f51802aefe7beb7a74",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.models.room.PageHeaderChapterEntity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "static",
+          "final"
+        ],
+        "kind": "static",
+        "name": "$stable",
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->$stable:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "chapterId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->chapterId:I",
+        "type": "int"
+      },
+      {
+        "access": [
+          "private",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "pageHeaderId",
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->pageHeaderId:J",
+        "type": "long"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 8,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;-><init>(JI)V",
+        "registers": 4,
+        "signature": "public void <init>(long, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "static",
+          "synthetic"
+        ],
+        "code_units": 17,
+        "kind": "direct",
+        "name": "copy$default",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->copy$default(Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;JIILjava/lang/Object;)Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;",
+        "registers": 6,
+        "signature": "public static synthetic org.goldenquran.freesoft.models.room.PageHeaderChapterEntity copy$default(org.goldenquran.freesoft.models.room.PageHeaderChapterEntity, long, int, int, java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component1",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->component1()J",
+        "registers": 3,
+        "signature": "public final long component1()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "component2",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->component2()I",
+        "registers": 1,
+        "signature": "public final int component2()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 6,
+        "kind": "virtual",
+        "name": "copy",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->copy(JI)Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;",
+        "registers": 4,
+        "signature": "public final org.goldenquran.freesoft.models.room.PageHeaderChapterEntity copy(long, int)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 29,
+        "kind": "virtual",
+        "name": "equals",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->equals(Ljava/lang/Object;)Z",
+        "registers": 9,
+        "signature": "public boolean equals(java.lang.Object)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getChapterId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->getChapterId()I",
+        "registers": 1,
+        "signature": "public final int getChapterId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "getPageHeaderId",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->getPageHeaderId()J",
+        "registers": 3,
+        "signature": "public final long getPageHeaderId()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 16,
+        "kind": "virtual",
+        "name": "hashCode",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->hashCode()I",
+        "registers": 3,
+        "signature": "public int hashCode()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "code_units": 22,
+        "kind": "virtual",
+        "name": "toString",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;->toString()Ljava/lang/String;",
+        "registers": 5,
+        "signature": "public java.lang.String toString()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.models.room.PageHeaderChapterEntity",
+    "source_file": "SourceFile",
+    "superclass": "Ljava/lang/Object;"
+  },
+  "summary": "org.goldenquran.freesoft.models.room.PageHeaderChapterEntity (classes2.dex) extends java.lang.Object: 3 fields, 10 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/models/room/PageHeaderChapterEntity;"
+    }
+  ],
+  "links": []
+}

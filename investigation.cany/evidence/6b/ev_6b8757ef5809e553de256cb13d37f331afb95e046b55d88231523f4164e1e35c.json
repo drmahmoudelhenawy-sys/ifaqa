@@ -1,0 +1,112 @@
+{
+  "id": "ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_app_graph_build",
+  "params": {
+    "content_id": "inv_71f39537d164ce7d3b418e7fa2bf7af0da644f98bff57530ec1b6d6448df1f6e"
+  },
+  "result": {
+    "code": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "graph": {
+      "edges": [
+        {
+          "from": "app:base.apk",
+          "kind": "contains",
+          "to": "manifest:AndroidManifest.xml"
+        },
+        {
+          "from": "app:base.apk",
+          "kind": "contains",
+          "to": "dex:classes.dex"
+        },
+        {
+          "from": "app:base.apk",
+          "kind": "contains",
+          "to": "dex:classes2.dex"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "app:base.apk",
+          "kind": "application",
+          "label": "base.apk"
+        },
+        {
+          "id": "manifest:AndroidManifest.xml",
+          "kind": "manifest",
+          "label": "AndroidManifest.xml"
+        },
+        {
+          "id": "dex:classes.dex",
+          "kind": "code",
+          "label": "classes.dex"
+        },
+        {
+          "id": "dex:classes2.dex",
+          "kind": "code",
+          "label": "classes2.dex"
+        }
+      ]
+    },
+    "limitations": [
+      "AndroidManifest.xml is binary XML; components, permissions and the package name are not decoded by this projection."
+    ],
+    "manifests": [
+      "AndroidManifest.xml"
+    ],
+    "native_libraries": {},
+    "next_steps": [],
+    "platform": "android",
+    "recognised": true,
+    "resources": {
+      "arsc": true,
+      "asset_files": 9865,
+      "res_files": 904
+    },
+    "runtimes": [
+      {
+        "confidence": "inferred",
+        "evidence": [
+          "kotlin/annotation/annotation.kotlin_builtins",
+          "kotlin/collections/collections.kotlin_builtins",
+          "kotlin/concurrent/atomics/atomics.kotlin_builtins",
+          "kotlin/coroutines/coroutines.kotlin_builtins",
+          "kotlin/internal/internal.kotlin_builtins",
+          "kotlin/kotlin.kotlin_builtins",
+          "kotlin/ranges/ranges.kotlin_builtins",
+          "kotlin/reflect/reflect.kotlin_builtins"
+        ],
+        "runtime": "kotlin"
+      }
+    ],
+    "signing": [],
+    "split_apks": []
+  },
+  "summary": "base.apk looks like a Android app (hints: kotlin).",
+  "confidence": "inferred",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "projection",
+      "message": "AndroidManifest.xml is binary XML; components, permissions and the package name are not decoded by this projection."
+    }
+  ],
+  "coverage": {
+    "status": "unknown"
+  },
+  "locations": [],
+  "links": []
+}

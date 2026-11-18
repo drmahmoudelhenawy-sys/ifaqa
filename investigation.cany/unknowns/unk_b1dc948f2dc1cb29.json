@@ -1,0 +1,17 @@
+{
+  "id": "unk_b1dc948f2dc1cb29",
+  "revision": 2,
+  "question": "Which statically named feature areas are actually shown and functional in normal use, and does the app fetch additional code or content after launch?",
+  "severity": "low",
+  "domain": "runtime behavior",
+  "status": "open",
+  "probes": [
+    "With approval, exercise each high-priority feature on an Android device and record visible results and logcat errors; repeat audio and model-download paths once online and once offline. Compare package paths before and after installation to spot delivered splits."
+  ],
+  "evidence_for": [
+    "ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16",
+    "ev_05c1f6c2ab3547ccce70c095559a6ad9ec9054f4f4217b7b273a5981faa12128",
+    "ev_236c4b735b67ad61fabdd332fed811f05e5b25a94ef80b8c296bd5459d3a611a"
+  ],
+  "evidence_against": []
+}

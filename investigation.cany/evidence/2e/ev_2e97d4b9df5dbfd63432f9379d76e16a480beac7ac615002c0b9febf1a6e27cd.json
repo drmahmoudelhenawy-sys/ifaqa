@@ -1,0 +1,158 @@
+{
+  "id": "ev_2e97d4b9df5dbfd63432f9379d76e16a480beac7ac615002c0b9febf1a6e27cd",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.workers.SyncPullWorker",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "g",
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->g:Ljava/lang/String;",
+        "type": "java.lang.String"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "h",
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->h:Z",
+        "type": "boolean"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 10,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
+        "registers": 3,
+        "signature": "public void <init>(android.content.Context, androidx.work.WorkerParameters)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 416,
+        "kind": "virtual",
+        "name": "c",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->c(Lht1;)Ljava/lang/Object;",
+        "registers": 22,
+        "signature": "public final java.lang.Object c(ht1)",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 134,
+        "kind": "virtual",
+        "name": "e",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->e(Lht1;)Ljava/lang/Object;",
+        "registers": 6,
+        "signature": "public final java.lang.Object e(ht1)",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 395,
+        "kind": "virtual",
+        "name": "f",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->f(Lorg/goldenquran/freesoft/models/ProfileResponse;Ljava/util/List;Lht1;)Ljava/lang/Object;",
+        "registers": 25,
+        "signature": "public final java.lang.Object f(org.goldenquran.freesoft.models.ProfileResponse, java.util.List, ht1)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 255,
+        "kind": "virtual",
+        "name": "g",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->g(Lht1;)Ljava/lang/Object;",
+        "registers": 14,
+        "signature": "public final java.lang.Object g(ht1)",
+        "try_blocks": 3
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 160,
+        "kind": "virtual",
+        "name": "h",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;->h(Lht1;)Ljava/lang/Object;",
+        "registers": 12,
+        "signature": "public final java.lang.Object h(ht1)",
+        "try_blocks": 3
+      }
+    ],
+    "name": "org.goldenquran.freesoft.workers.SyncPullWorker",
+    "source_file": "SourceFile",
+    "superclass": "Landroidx/work/CoroutineWorker;"
+  },
+  "summary": "org.goldenquran.freesoft.workers.SyncPullWorker (classes2.dex) extends androidx.work.CoroutineWorker: 2 fields, 6 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/workers/SyncPullWorker;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,2492 @@
+{
+  "id": "ev_9780a1af4779a4fd9d946b04ec61267d171a3f4ed44967f1828f8f46ed78e571",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_resources_read",
+  "params": {
+    "limit": 60,
+    "locale": null,
+    "offset": 0,
+    "only_locales": [],
+    "path": null,
+    "type_name": null,
+    "with_strings": false,
+    "xml_files": []
+  },
+  "result": {
+    "entries": [
+      {
+        "config": "default",
+        "id": "0x7f010002",
+        "key": "abc_grow_fade_in_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_grow_fade_in_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010003",
+        "key": "abc_popup_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010004",
+        "key": "abc_popup_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_popup_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010005",
+        "key": "abc_shrink_fade_out_from_bottom",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000c",
+        "key": "btn_checkbox_to_checked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000d",
+        "key": "btn_checkbox_to_checked_box_outer_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000e",
+        "key": "btn_checkbox_to_checked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01000f",
+        "key": "btn_checkbox_to_unchecked_box_inner_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010010",
+        "key": "btn_checkbox_to_unchecked_check_path_merged_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010011",
+        "key": "btn_checkbox_to_unchecked_icon_null_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010012",
+        "key": "btn_radio_to_off_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010013",
+        "key": "btn_radio_to_off_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010014",
+        "key": "btn_radio_to_off_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010015",
+        "key": "btn_radio_to_on_mtrl_dot_group_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010016",
+        "key": "btn_radio_to_on_mtrl_ring_outer_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010017",
+        "key": "btn_radio_to_on_mtrl_ring_outer_path_animation",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01001c",
+        "key": "fragment_fast_out_extra_slow_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/fragment_fast_out_extra_slow_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010021",
+        "key": "m3_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010022",
+        "key": "m3_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010023",
+        "key": "m3_motion_fade_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010024",
+        "key": "m3_motion_fade_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_motion_fade_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010026",
+        "key": "m3_side_sheet_enter_from_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_enter_from_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010028",
+        "key": "m3_side_sheet_exit_to_right",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/m3_side_sheet_exit_to_right.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f010029",
+        "key": "mtrl_bottom_sheet_slide_in",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_in.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002a",
+        "key": "mtrl_bottom_sheet_slide_out",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_bottom_sheet_slide_out.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f01002b",
+        "key": "mtrl_card_lowers_interpolator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "anim",
+        "value": "res/anim/mtrl_card_lowers_interpolator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020002",
+        "key": "design_appbar_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_appbar_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020003",
+        "key": "design_fab_hide_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_hide_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020004",
+        "key": "design_fab_show_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/design_fab_show_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020005",
+        "key": "fragment_close_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_close_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020006",
+        "key": "fragment_close_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_close_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020007",
+        "key": "fragment_fade_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_fade_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020008",
+        "key": "fragment_fade_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_fade_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020009",
+        "key": "fragment_open_enter",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_open_enter.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000a",
+        "key": "fragment_open_exit",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/fragment_open_exit.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000b",
+        "key": "m3_appbar_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_appbar_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000c",
+        "key": "m3_btn_elevated_btn_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_btn_elevated_btn_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000d",
+        "key": "m3_btn_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_btn_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000e",
+        "key": "m3_card_elevated_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_card_elevated_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02000f",
+        "key": "m3_card_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_card_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020010",
+        "key": "m3_chip_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_chip_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020012",
+        "key": "m3_extended_fab_change_size_collapse_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_extended_fab_change_size_collapse_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020013",
+        "key": "m3_extended_fab_change_size_expand_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_extended_fab_change_size_expand_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020014",
+        "key": "m3_extended_fab_hide_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_extended_fab_hide_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020015",
+        "key": "m3_extended_fab_show_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_extended_fab_show_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020016",
+        "key": "m3_extended_fab_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_extended_fab_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020017",
+        "key": "m3_fab_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/m3_fab_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02001b",
+        "key": "mtrl_btn_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_btn_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02001c",
+        "key": "mtrl_btn_unelevated_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_btn_unelevated_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02001d",
+        "key": "mtrl_card_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_card_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f02001e",
+        "key": "mtrl_chip_state_list_anim",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_chip_state_list_anim.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020023",
+        "key": "mtrl_extended_fab_state_list_animator",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_extended_fab_state_list_animator.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020024",
+        "key": "mtrl_fab_hide_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_fab_hide_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "config": "default",
+        "id": "0x7f020025",
+        "key": "mtrl_fab_show_motion_spec",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "animator",
+        "value": "res/animator/mtrl_fab_show_motion_spec.xml",
+        "value_type": "string"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "0.25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "0.5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "0.75x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "Normal",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "1.25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "1.5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "2x",
+            "value_type": "string"
+          }
+        ],
+        "config": "default",
+        "id": "0x7f030004",
+        "key": "exo_controls_playback_speeds",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "Al-Fatihah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "Al-Baqarah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "Al `Imran",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "An-Nisa'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "Al-Ma'idah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "Al-'An`am",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "Al-'A`raf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000008",
+            "value": "Al-'Anfal",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000009",
+            "value": "Tawbah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000a",
+            "value": "Yunus",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000b",
+            "value": "Hud",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000c",
+            "value": "Yusuf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000d",
+            "value": "Ar-Ra`d",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000e",
+            "value": "'Ibrahim",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000f",
+            "value": "Al-Hijr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000010",
+            "value": "An-Nahl",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000011",
+            "value": "Al-'Isra'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000012",
+            "value": "Al-Kahf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000013",
+            "value": "Maryam",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000014",
+            "value": "Taha",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000015",
+            "value": "Al-'Anbya'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000016",
+            "value": "Al-Haj",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000017",
+            "value": "Al-Mu'minun",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000018",
+            "value": "An-Nur",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000019",
+            "value": "Al-Furqan",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001a",
+            "value": "Ash-Shu`ara'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001b",
+            "value": "An-Naml",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001c",
+            "value": "Al-Qasas",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001d",
+            "value": "Al-`Ankabut",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001e",
+            "value": "Ar-Rum",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001f",
+            "value": "Luqman",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000020",
+            "value": "As-Sajdah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000021",
+            "value": "Al-'Ahzab",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000022",
+            "value": "Saba'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000023",
+            "value": "Fatir",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000024",
+            "value": "Ya-Sin",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000025",
+            "value": "As-Saffat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000026",
+            "value": "Sad",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000027",
+            "value": "Az-Zumar",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000028",
+            "value": "Ghafir",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000029",
+            "value": "Fussilat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002a",
+            "value": "Ash-Shuraa",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002b",
+            "value": "Az-Zukhruf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002c",
+            "value": "Ad-Dukhan",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002d",
+            "value": "Al-Jathiyah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002e",
+            "value": "Al-'Ahqaf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002f",
+            "value": "Muhammad",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000030",
+            "value": "Al-Fath",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000031",
+            "value": "Al-Hujurat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000032",
+            "value": "Qaf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000033",
+            "value": "Adh-Dhariyat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000034",
+            "value": "At-Tur",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000035",
+            "value": "An-Najm",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000036",
+            "value": "Al-Qamar",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000037",
+            "value": "Ar-Rahman",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000038",
+            "value": "Al-Waqi`ah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000039",
+            "value": "Al-Hadid",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003a",
+            "value": "Al-Mujadila",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003b",
+            "value": "Al-Hashr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003c",
+            "value": "Al-Mumtahanah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003d",
+            "value": "As-Saf",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003e",
+            "value": "Al-Jumu`ah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003f",
+            "value": "Al-Munafiqun",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000040",
+            "value": "At-Taghabun",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000041",
+            "value": "At-Talaq",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000042",
+            "value": "At-Tahrim",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000043",
+            "value": "Al-Mulk",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000044",
+            "value": "Al-Qalam",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000045",
+            "value": "Al-Haqqah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000046",
+            "value": "Al-Ma`arij",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000047",
+            "value": "Nuh",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000048",
+            "value": "Al-Jinn",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000049",
+            "value": "Al-Muzzammil",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004a",
+            "value": "Al-Muddaththir",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004b",
+            "value": "Al-Qiyamah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004c",
+            "value": "Al-'Insan",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004d",
+            "value": "Al-Mursalat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004e",
+            "value": "An-Naba'",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004f",
+            "value": "An-Nazi`at",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000050",
+            "value": "`Abasa",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000051",
+            "value": "At-Takwir",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000052",
+            "value": "Al-'Infitar",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000053",
+            "value": "Al-Mutaffifin",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000054",
+            "value": "Al-'Inshiqaq",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000055",
+            "value": "Al-Buruj",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000056",
+            "value": "At-Tariq",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000057",
+            "value": "Al-'A`la",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000058",
+            "value": "Al-Ghashiyah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000059",
+            "value": "Al-Fajr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005a",
+            "value": "Al-Balad",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005b",
+            "value": "Ash-Shams",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005c",
+            "value": "Al-Layl",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005d",
+            "value": "Ad-Duhaa",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005e",
+            "value": "Ash-Sharh",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005f",
+            "value": "At-Tin",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000060",
+            "value": "Al-`Alaq",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000061",
+            "value": "Al-Qadr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000062",
+            "value": "Al-Bayyinah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000063",
+            "value": "Az-Zalzalah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000064",
+            "value": "Al-`Adiyat",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000065",
+            "value": "Al-Qari`ah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000066",
+            "value": "At-Takathur",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000067",
+            "value": "Al-`Asr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000068",
+            "value": "Al-Humazah",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000069",
+            "value": "Al-Fil",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006a",
+            "value": "Quraysh",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006b",
+            "value": "Al-Ma`un",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006c",
+            "value": "Al-Kawthar",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006d",
+            "value": "Al-Kafirun",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006e",
+            "value": "An-Nasr",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006f",
+            "value": "Al-Masad",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000070",
+            "value": "Al-'Ikhlas",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000071",
+            "value": "Al-Falaq",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000072",
+            "value": "An-Nas",
+            "value_type": "string"
+          }
+        ],
+        "config": "default",
+        "id": "0x7f030005",
+        "key": "fahrasSuras",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "7",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "286",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "200",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "176",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "120",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "165",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "206",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000008",
+            "value": "75",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000009",
+            "value": "129",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000a",
+            "value": "109",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000b",
+            "value": "123",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000c",
+            "value": "111",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000d",
+            "value": "43",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000e",
+            "value": "52",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100000f",
+            "value": "99",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000010",
+            "value": "128",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000011",
+            "value": "111",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000012",
+            "value": "110",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000013",
+            "value": "98",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000014",
+            "value": "135",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000015",
+            "value": "112",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000016",
+            "value": "78",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000017",
+            "value": "118",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000018",
+            "value": "64",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000019",
+            "value": "77",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001a",
+            "value": "227",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001b",
+            "value": "93",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001c",
+            "value": "88",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001d",
+            "value": "69",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001e",
+            "value": "60",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100001f",
+            "value": "34",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000020",
+            "value": "30",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000021",
+            "value": "73",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000022",
+            "value": "54",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000023",
+            "value": "45",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000024",
+            "value": "83",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000025",
+            "value": "182",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000026",
+            "value": "88",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000027",
+            "value": "75",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000028",
+            "value": "85",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000029",
+            "value": "54",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002a",
+            "value": "53",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002b",
+            "value": "89",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002c",
+            "value": "59",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002d",
+            "value": "37",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002e",
+            "value": "35",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100002f",
+            "value": "38",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000030",
+            "value": "29",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000031",
+            "value": "18",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000032",
+            "value": "45",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000033",
+            "value": "60",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000034",
+            "value": "49",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000035",
+            "value": "62",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000036",
+            "value": "55",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000037",
+            "value": "78",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000038",
+            "value": "96",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000039",
+            "value": "29",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003a",
+            "value": "22",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003b",
+            "value": "24",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003c",
+            "value": "13",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003d",
+            "value": "14",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003e",
+            "value": "11",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100003f",
+            "value": "11",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000040",
+            "value": "18",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000041",
+            "value": "12",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000042",
+            "value": "12",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000043",
+            "value": "30",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000044",
+            "value": "52",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000045",
+            "value": "52",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000046",
+            "value": "44",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000047",
+            "value": "28",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000048",
+            "value": "28",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000049",
+            "value": "20",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004a",
+            "value": "56",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004b",
+            "value": "40",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004c",
+            "value": "31",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004d",
+            "value": "50",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004e",
+            "value": "40",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100004f",
+            "value": "46",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000050",
+            "value": "42",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000051",
+            "value": "37",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000052",
+            "value": "19",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000053",
+            "value": "36",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000054",
+            "value": "25",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000055",
+            "value": "22",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000056",
+            "value": "17",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000057",
+            "value": "19",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000058",
+            "value": "26",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000059",
+            "value": "30",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005a",
+            "value": "20",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005b",
+            "value": "15",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005c",
+            "value": "21",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005d",
+            "value": "11",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005e",
+            "value": "8",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100005f",
+            "value": "8",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000060",
+            "value": "19",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000061",
+            "value": "5",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000062",
+            "value": "8",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000063",
+            "value": "8",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000064",
+            "value": "11",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000065",
+            "value": "11",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000066",
+            "value": "8",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000067",
+            "value": "3",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000068",
+            "value": "9",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000069",
+            "value": "5",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006a",
+            "value": "4",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006b",
+            "value": "7",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006c",
+            "value": "3",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006d",
+            "value": "6",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006e",
+            "value": "3",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x0100006f",
+            "value": "5",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000070",
+            "value": "4",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000071",
+            "value": "5",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000072",
+            "value": "6",
+            "value_type": "string"
+          }
+        ],
+        "config": "default",
+        "id": "0x7f030007",
+        "key": "sura_sizes",
+        "locale": "",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "0,25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "0,5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "0,75x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "Normal",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "1,25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "1,5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "2x",
+            "value_type": "string"
+          }
+        ],
+        "config": "ca",
+        "id": "0x7f030004",
+        "key": "exo_controls_playback_speeds",
+        "locale": "ca",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "0,25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "0,5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "0,75x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "Normal",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "1,25x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "1,5x",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "2x",
+            "value_type": "string"
+          }
+        ],
+        "config": "da",
+        "id": "0x7f030004",
+        "key": "exo_controls_playback_speeds",
+        "locale": "da",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      },
+      {
+        "bag": [
+          {
+            "name": "@0x01000001",
+            "value": "۰٫۲۵ برابر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000002",
+            "value": "۰٫۵ برابر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000003",
+            "value": "۰٫۷۵ برابر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000004",
+            "value": "عادی",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000005",
+            "value": "۱٫۲۵ برابر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000006",
+            "value": "۱٫۵ برابر",
+            "value_type": "string"
+          },
+          {
+            "name": "@0x01000007",
+            "value": "۲ برابر",
+            "value_type": "string"
+          }
+        ],
+        "config": "fa",
+        "id": "0x7f030004",
+        "key": "exo_controls_playback_speeds",
+        "locale": "fa",
+        "package": "org.goldenquran.freesoft",
+        "type": "array"
+      }
+    ],
+    "entries_matching": 46569,
+    "entries_total": 46569,
+    "global_strings": 37006,
+    "locales": [
+      "default",
+      "af",
+      "am",
+      "ar",
+      "as",
+      "az",
+      "b+sr+Latn",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-rAU",
+      "en-rCA",
+      "en-rGB",
+      "en-rIN",
+      "en-rXC",
+      "es",
+      "es-r419",
+      "es-rUS",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "fr-rCA",
+      "gl",
+      "gu",
+      "hi",
+      "hr",
+      "hu",
+      "hy",
+      "in",
+      "is",
+      "it",
+      "iw",
+      "ja",
+      "ka",
+      "kk",
+      "km",
+      "kn",
+      "ko",
+      "ky",
+      "lo",
+      "lt",
+      "lv",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "or",
+      "pa",
+      "pl",
+      "pt",
+      "pt-rBR",
+      "pt-rPT",
+      "ro",
+      "ru",
+      "si",
+      "sk",
+      "sl",
+      "sq",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uk",
+      "ur",
+      "uz",
+      "vi",
+      "zh-rCN",
+      "zh-rHK",
+      "zh-rTW",
+      "zu"
+    ],
+    "locales_not_found": [],
+    "packages": [
+      {
+        "id": 127,
+        "keys": 8169,
+        "libraries": [],
+        "name": "org.goldenquran.freesoft",
+        "types": [
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 44,
+            "id": 1,
+            "name": "anim"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 38,
+            "id": 2,
+            "name": "animator"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 8,
+            "id": 3,
+            "name": "array"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1769,
+            "id": 4,
+            "name": "attr"
+          },
+          {
+            "configs": [
+              "default",
+              "port"
+            ],
+            "entry_count": 12,
+            "id": 5,
+            "name": "bool"
+          },
+          {
+            "configs": [
+              "default",
+              "night",
+              "v31",
+              "v34",
+              "v35"
+            ],
+            "entry_count": 1034,
+            "id": 6,
+            "name": "color"
+          },
+          {
+            "configs": [
+              "default",
+              "h480dp",
+              "h720dp",
+              "sw600dp",
+              "watch",
+              "large",
+              "xlarge",
+              "v28",
+              "v31",
+              "v33",
+              "v34",
+              "w360dp-port",
+              "w400dp-port",
+              "land",
+              "h360dp-land",
+              "h480dp-land"
+            ],
+            "entry_count": 1169,
+            "id": 7,
+            "name": "dimen"
+          },
+          {
+            "configs": [
+              "default",
+              "watch",
+              "xxhdpi",
+              "anydpi",
+              "nodpi"
+            ],
+            "entry_count": 738,
+            "id": 8,
+            "name": "drawable"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 9,
+            "name": "font"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1020,
+            "id": 10,
+            "name": "id"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "v30",
+              "land"
+            ],
+            "entry_count": 79,
+            "id": 11,
+            "name": "integer"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 18,
+            "id": 12,
+            "name": "interpolator"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch"
+            ],
+            "entry_count": 168,
+            "id": 13,
+            "name": "layout"
+          },
+          {
+            "configs": [
+              "mdpi",
+              "hdpi",
+              "xhdpi",
+              "xxhdpi",
+              "xxxhdpi",
+              "anydpi"
+            ],
+            "entry_count": 4,
+            "id": 15,
+            "name": "mipmap"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 1,
+            "id": 16,
+            "name": "navigation"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "fr-rCA",
+              "en-rGB",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 20,
+            "id": 17,
+            "name": "plurals"
+          },
+          {
+            "configs": [
+              "default"
+            ],
+            "entry_count": 13,
+            "id": 18,
+            "name": "raw"
+          },
+          {
+            "configs": [
+              "default",
+              "ca",
+              "da",
+              "fa",
+              "ja",
+              "ka",
+              "pa",
+              "ta",
+              "nb",
+              "be",
+              "de",
+              "ne",
+              "te",
+              "af",
+              "bg",
+              "th",
+              "fi",
+              "hi",
+              "si",
+              "vi",
+              "kk",
+              "mk",
+              "sk",
+              "uk",
+              "el",
+              "gl",
+              "ml",
+              "nl",
+              "pl",
+              "sl",
+              "tl",
+              "am",
+              "km",
+              "bn",
+              "in",
+              "kn",
+              "mn",
+              "ko",
+              "lo",
+              "ro",
+              "sq",
+              "ar",
+              "fr",
+              "hr",
+              "mr",
+              "or",
+              "sr",
+              "b+sr+Latn",
+              "tr",
+              "ur",
+              "as",
+              "bs",
+              "cs",
+              "es",
+              "is",
+              "ms",
+              "et",
+              "it",
+              "lt",
+              "pt",
+              "eu",
+              "gu",
+              "hu",
+              "ru",
+              "zu",
+              "lv",
+              "sv",
+              "iw",
+              "sw",
+              "hy",
+              "ky",
+              "my",
+              "az",
+              "uz",
+              "es-r419",
+              "en-rCA",
+              "fr-rCA",
+              "en-rGB",
+              "en-rXC",
+              "zh-rHK",
+              "zh-rCN",
+              "en-rIN",
+              "pt-rBR",
+              "es-rUS",
+              "pt-rPT",
+              "en-rAU",
+              "zh-rTW"
+            ],
+            "entry_count": 3443,
+            "id": 19,
+            "name": "string"
+          },
+          {
+            "configs": [
+              "default",
+              "sw600dp",
+              "watch",
+              "night",
+              "v27",
+              "v28",
+              "v29",
+              "v30",
+              "v31",
+              "v33",
+              "night-v33",
+              "land"
+            ],
+            "entry_count": 1606,
+            "id": 20,
+            "name": "style"
+          },
+          {
+            "configs": [
+              "default",
+              "v31"
+            ],
+            "entry_count": 11,
+            "id": 22,
+            "name": "xml"
+          }
+        ]
+      }
+    ],
+    "strings": null,
+    "xml": []
+  },
+  "summary": "1 package(s), 46569 resource values in 87 locale(s) (default, af, am, ar, as, az, b+sr+Latn, be, bg, bn, bs, ca); showing 60 entries.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "references_unresolved",
+      "message": "Values that point at other resources are shown as @0x… ids; look them up in this table's entries."
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "examined": 60,
+    "total": 46569,
+    "next_offset": 60
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

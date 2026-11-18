@@ -1,0 +1,204 @@
+{
+  "id": "ev_bbf57d26af62eac89179a35c6c64eedaf4d638e4f562a1fbddbcdc9719dc95a9",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_classes_find",
+  "params": {
+    "limit": 300,
+    "offset": 0,
+    "path": null,
+    "query": "Reading"
+  },
+  "result": {
+    "classes": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/habits/ReadingNudgeWorker;",
+        "dex": "classes2.dex",
+        "fields": 0,
+        "methods": 2,
+        "name": "org.goldenquran.freesoft.habits.ReadingNudgeWorker",
+        "superclass": "androidx.work.CoroutineWorker"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/ReadingSessionSync;",
+        "dex": "classes2.dex",
+        "fields": 4,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.ReadingSessionSync",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/local/ReadingSession;",
+        "dex": "classes2.dex",
+        "fields": 5,
+        "methods": 20,
+        "name": "org.goldenquran.freesoft.models.local.ReadingSession",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/AyahTouchRegion;",
+        "dex": "classes2.dex",
+        "fields": 5,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.reading.AyahTouchRegion",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/TextBackground;",
+        "dex": "classes2.dex",
+        "fields": 4,
+        "methods": 12,
+        "name": "org.goldenquran.freesoft.models.reading.TextBackground",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/TextPageContent;",
+        "dex": "classes2.dex",
+        "fields": 6,
+        "methods": 17,
+        "name": "org.goldenquran.freesoft.models.reading.TextPageContent",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/TextTagRange;",
+        "dex": "classes2.dex",
+        "fields": 5,
+        "methods": 14,
+        "name": "org.goldenquran.freesoft.models.reading.TextTagRange",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/TextVerseMarker;",
+        "dex": "classes2.dex",
+        "fields": 4,
+        "methods": 12,
+        "name": "org.goldenquran.freesoft.models.reading.TextVerseMarker",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/models/reading/TextVerseRange;",
+        "dex": "classes2.dex",
+        "fields": 6,
+        "methods": 16,
+        "name": "org.goldenquran.freesoft.models.reading.TextVerseRange",
+        "superclass": "java.lang.Object"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/bottom/ReadingAudioOptionsDialogFragment;",
+        "dex": "classes2.dex",
+        "fields": 1,
+        "methods": 5,
+        "name": "org.goldenquran.freesoft.ui.bottom.ReadingAudioOptionsDialogFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/bottom/ReadingBookmarkOptionsDialogFragment;",
+        "dex": "classes2.dex",
+        "fields": 2,
+        "methods": 3,
+        "name": "org.goldenquran.freesoft.ui.bottom.ReadingBookmarkOptionsDialogFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/bottom/ReadingBottomFragment;",
+        "dex": "classes2.dex",
+        "fields": 17,
+        "methods": 11,
+        "name": "org.goldenquran.freesoft.ui.bottom.ReadingBottomFragment",
+        "superclass": "rn1"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "descriptor": "Lorg/goldenquran/freesoft/ui/reading/FullViewFragment;",
+        "dex": "classes2.dex",
+        "fields": 11,
+        "methods": 17,
+        "name": "org.goldenquran.freesoft.ui.reading.FullViewFragment",
+        "superclass": "hn1"
+      }
+    ],
+    "classes_total": 15034,
+    "dex_files": [
+      "classes.dex",
+      "classes2.dex"
+    ],
+    "matches": 13,
+    "query": "Reading"
+  },
+  "summary": "13 of 15034 classes match \"Reading\" in 2 DEX file(s); showing 13.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 13,
+    "total": 13
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    }
+  ],
+  "links": []
+}

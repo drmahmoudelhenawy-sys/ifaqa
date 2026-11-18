@@ -1,0 +1,18 @@
+{
+  "id": "unk_dc29dad3bbf55350",
+  "revision": 2,
+  "question": "Which settings and reading-state fields are stored in each local database, preference store, or sync service?",
+  "severity": "medium",
+  "domain": "settings persistence",
+  "status": "open",
+  "probes": [
+    "With approval, change display and reader settings in the UI, close and relaunch, and rotate the device; note which choices persist and whether layouts change. Do not read user database rows or private records."
+  ],
+  "evidence_for": [
+    "ev_92f844f1aa4d89b49815c5ed4eff8552e267e94515a550e99f7b4e39376cbc6c",
+    "ev_491981fd821bd23cbd10b961634230250467e4be4f32274100698e31ed994143",
+    "ev_10b1f848f3fa28997f3dd4ee9275b57a8047c50ac2b13ae0a7eec4b7db5413c1",
+    "ev_2e97d4b9df5dbfd63432f9379d76e16a480beac7ac615002c0b9febf1a6e27cd"
+  ],
+  "evidence_against": []
+}

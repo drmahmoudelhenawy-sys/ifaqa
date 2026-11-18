@@ -1,0 +1,132 @@
+{
+  "id": "ev_8b02d869709d2d76e099527c445e48fb81f43e3cc3d6f5c26442f82d84724b5e",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.library.LibraryReaderFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;->X0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;->Y0:Lyh2;",
+        "type": "yh2"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 63,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;-><init>()V",
+        "registers": 9,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 159,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;->h0(ILfk3;)V",
+        "registers": 20,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "n0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;->n0()Z",
+        "registers": 1,
+        "signature": "public final boolean n0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;->o0()Z",
+        "registers": 1,
+        "signature": "public final boolean o0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.library.LibraryReaderFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.library.LibraryReaderFragment (classes2.dex) extends rn1: 2 fields, 4 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/library/LibraryReaderFragment;"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "ev_0973bc90bcea05d3d4f07640962f90cdc6fe53435f087bdd5a66035be7558d41",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "core_evidence_browse",
+  "params": {
+    "show": {
+      "field_names": true,
+      "kind": "rows",
+      "limit": 1,
+      "list": "components"
+    },
+    "source": {
+      "evidence_id": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+      "kind": "saved"
+    }
+  },
+  "result": {
+    "coverage": {
+      "at_end": false,
+      "examined": 1,
+      "next_offset": 1,
+      "status": "page",
+      "total": 63
+    },
+    "from_evidence": "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23",
+    "from_tool": "android_package_show",
+    "shown": {
+      "field_names": [
+        "authorities",
+        "enabled",
+        "exported",
+        "exported_attribute",
+        "intent_filters",
+        "kind",
+        "name",
+        "permission",
+        "read_permission",
+        "write_permission"
+      ],
+      "items": [
+        {
+          "authorities": null,
+          "enabled": null,
+          "exported": true,
+          "exported_attribute": true,
+          "intent_filters": [
+            {
+              "actions": [
+                "android.intent.action.MAIN"
+              ],
+              "categories": [
+                "android.intent.category.LAUNCHER",
+                "android.intent.category.DEFAULT"
+              ],
+              "data": []
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=dua-community",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=masbaha",
+                "path=/"
+              ]
+            },
+            {
+              "actions": [
+                "android.intent.action.VIEW"
+              ],
+              "categories": [
+                "android.intent.category.DEFAULT",
+                "android.intent.category.BROWSABLE"
+              ],
+              "data": [
+                "scheme=goldenquran",
+                "host=library",
+                "path=/"
+              ]
+            }
+          ],
+          "kind": "activity",
+          "name": "org.goldenquran.freesoft.activity.MainActivity",
+          "permission": null,
+          "read_permission": null,
+          "write_permission": null
+        }
+      ],
+      "list": "components",
+      "offset": 0,
+      "total": 63
+    }
+  },
+  "summary": "Part of android_package_show evidence (page).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "partial",
+    "examined": 1,
+    "total": 63,
+    "next_offset": 1
+  },
+  "locations": [],
+  "links": [
+    "ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23"
+  ]
+}

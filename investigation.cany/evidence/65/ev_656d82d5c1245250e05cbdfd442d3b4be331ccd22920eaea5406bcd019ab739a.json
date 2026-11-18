@@ -1,0 +1,83 @@
+{
+  "id": "ev_656d82d5c1245250e05cbdfd442d3b4be331ccd22920eaea5406bcd019ab739a",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/activity/VoicePlayActivity;",
+    "dex": "classes.dex",
+    "fields": [],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 4,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/VoicePlayActivity;-><init>()V",
+        "registers": 1,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 99,
+        "kind": "virtual",
+        "name": "onCreate",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/activity/VoicePlayActivity;->onCreate(Landroid/os/Bundle;)V",
+        "registers": 8,
+        "signature": "public final void onCreate(android.os.Bundle)",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.activity.VoicePlayActivity",
+    "source_file": "SourceFile",
+    "superclass": "Landroid/app/Activity;"
+  },
+  "summary": "org.goldenquran.freesoft.activity.VoicePlayActivity (classes.dex) extends android.app.Activity: 0 fields, 2 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/activity/VoicePlayActivity;"
+    }
+  ],
+  "links": []
+}

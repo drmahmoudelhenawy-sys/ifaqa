@@ -1,0 +1,53 @@
+{
+  "id": "ev_25064fcd72963f319a4c90d66ccedf15bcb4a407b96e753c809d65a93b2acbad",
+  "subject": {
+    "kind": "text",
+    "sha256": "a5cc918824dbf80c215073a5146425947eb33c27892e1ee131ab10142d06fce3",
+    "name": "MASTER_INDEX.md"
+  },
+  "operation": "core_text_read",
+  "params": {
+    "limit": 2000,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+  },
+  "result": {
+    "cut_lines": [],
+    "encoding": "utf8",
+    "file_size": 6654,
+    "lines": 67,
+    "more": false,
+    "offset": 0,
+    "path": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md",
+    "replaced_sequences": 0,
+    "text": "# Golden Quran Investigation — Master Index\n\n## Status\n\nThis is a static review of the supplied base APK. The saved investigation contains 123 evidence records and 17 findings. No target runtime behavior was directly observed in this export. (Evidence: `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`, `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`.)\n\n## Target\n\n- APK: `base.apk`\n- Package: `org.goldenquran.freesoft`\n- Version: `21.4`\n- Target ID: `t_89de96aaf1e7`\n- Target SHA-256: `89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32`\n\nPackage details are directly recorded in `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`.\n\n## How to read this report\n\n- **Observed** means the saved APK records directly show it.\n- **Derived** means it follows from more than one observed record.\n- **Inferred** means a class name, string, or model suggests it, but the feature was not seen running.\n- **Unknown** means the saved evidence does not answer it.\n- Static review does not prove that a feature ran on a device.\n\n## Documents in this export\n\n1. `MASTER_INDEX.md` — this index and evidence guide.\n2. `COMPLETE_FEATURE_INVENTORY.md` — each named feature, evidence, status, behavior, dependencies, and unknowns.\n3. `SCREEN_CATALOG.md` — confirmed Android entry activities and candidate feature screens.\n4. `ANDROID_ARCHITECTURE.md` — package, code groups, Android components, and libraries.\n5. `DATABASE_SCHEMA_REPORT.md` — bundled database names and what remains unknown about their schemas.\n6. `NAVIGATION_ANALYSIS.md` — observed public entry points and unconfirmed screen paths.\n7. `UI_RESOURCE_MAP.md` — strings, layouts, XML, drawables, and Arabic-label coverage.\n8. `CLAUDE_IMPLEMENTATION_GUIDE.md` — evidence-backed planning notes for an original implementation; no app was built.\n9. `EVIDENCE_AND_COVERAGE.md` — evidence scope, gaps, and open questions.\n10. `features.json` — structured feature inventory.\n11. `screens.json` — structured screen catalog.\n12. `modules.json` — structured code-module catalog.\n\n## Main findings\n\n- The APK has two DEX files and 541 classes in the app package. App class groups include network (213), models (192), UI (116), workers (7), habits (6), datastore (4), activities (2), and the application class (1). The language assessment is inferred from Kotlin markers and class patterns. (Evidence: `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`, `ev_6b8757ef5809e553de256cb13d37f331afb95e046b55d88231523f4164e1e35c`.)\n- The manifest has 63 components: 15 activities, 21 services, 23 receivers, and 4 providers. Fourteen are reachable from outside the app; six of those have no component permission. (Evidence: `ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf`, `ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf`.)\n- The full APK archive index lists 1,283 entries, 194 assets, 904 resource files, 63 layout XML files, nine `res/xml` files, and no `res/menu` files. Three database files are named `quran_app.db`, `quran_glyphs.db`, and `athkar_duas.db`. (Evidence: `ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708`, `ev_84305f3349eb9ca08aa801416a4e6f8ffed63159ad159edfb602ad87346da97a`, `ev_966c4245b55dfd1fc69ac0a2a52fc4c96420d1253511ccbec1b7933f7ab59987`.)\n- The default string table has 3,215 entries. Its labels name Quran reading, search, audio, bookmarks, Tafsir/translation, athkar, Khetma, prayer, qibla, masbaha, Tasmee, hadith, library, sync, offline states, and live sessions. Names do not prove that a feature is active. (Evidence: `ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274`, `ev_65c3b2089d5998b75b20f115d94412b2f641834090f4cc03f867c6b1cbbc762d`, `ev_61673d9c6428891a4d336fb7206fb0ad39da0fb678bf1c43fa858539dfd026ef`, `ev_b97caf2a9f49d85f6ce467f57f483d268d10b9b3fe7d137bfb270099830bf805`, `ev_32944f8a6a36bf3f3eb20651131c7365b09f929052a59d57731ec287712a12f8`, `ev_5759bc1ed62ad5ea63e8dc5ecc327a048c3dfc94bd86ab592c25389371e3bb83`, `ev_db6aff248d905d610f5e67810ae753c054ff2130db7ff4538e40b132d1a7ee1b`.)\n- MainActivity is the launcher and accepts the `dua-community`, `masbaha`, and `library` deep-link hosts. VoicePlayActivity accepts media-search requests. These entries do not show the screen reached after opening a link. (Evidence: `ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf`, `ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf`.)\n- Exact SQLite table names, columns, indexes, and row counts are not known from the saved evidence. The databases were named and counted in the archive, but their contents were not opened. (Evidence: `ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708`; open question `unk_85988a97c784b919`.)\n\n## Key open questions\n\n1. What tables and columns are inside the three bundled databases? (`unk_85988a97c784b919`)\n2. What are the actual screens and navigation paths? (`unk_8f043049b1fb4680`)\n3. Which named features work in normal use, and does the app download more content or code? (`unk_b1dc948f2dc1cb29`)\n4. Where are settings and reading state stored? (`unk_dc29dad3bbf55350`)\n5. Is the supplied base APK missing split packages? (`unk_eb8d7be46fb15305`)\n6. Why does the graph report 9,865 assets while the archive index shows 194? (`unk_0f9e3f40d8844f4c`)\n\n## Arabic labels\n\nThe saved string pages used here are the default-locale pages. The resource table reports 87 locales, but the cited default-locale pages do not provide Arabic translations. This export does not back-translate or guess Arabic labels. (Evidence: `ev_68e06b198c904e77a5ba7ca123f5bad0926a019a2273044dcfcbc0b3617e5274`, `ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54`.)\n\n## Evidence index\n\n- APK/package/manifest: `ev_55cb1857387ddb7ebec559676ad1724de0f8dd23f12885df156be909cd84ec23`, `ev_26731ad05568d33e2d46d39425c3f6e21343e27d1ff95f7a0a5fb3bba7874ebf`, `ev_39750d92941a3a038f6c33eebb7f83ff2cabe3b7e295d68bce50c6589675a9cf`.\n- Classes and features: `ev_e1da8b1964770471afaf2078706f7ab6c5392c4e03696fa13416257d25f9ac16`, `ev_05c1f6c2ab3547ccce70c095559a6ad9ec9054f4f4217b7b273a5981faa12128`.\n- Archive and resources: `ev_a515a1161c2ab139e888b0749cb24fb0bceef12319a40a2c2fecf7e0ac5e5708`, `ev_3bc35bc101d739e5853efa813f0d6c4a250685918a8cd4ec19e03029503c4b54`.\n- Activity screens and services: `ev_24b65ad3b0aa13e4630a7dfd206de7d2d9c4725b60caad9c37b1c15d334ab9f5`, `ev_9949e162820c1752548663f20a86c9033660ccfd252cbbeebc0e54ceac8821c0`, `ev_9110bed55a2cfa96177f886cfce173b8f0de9b97c9897ff4221e58cba3a8c002`.\n",
+    "total_lines": 67
+  },
+  "summary": "MASTER_INDEX.md: lines 1–67 of 67 (UTF-8).",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "text_as_stored",
+      "message": "The file is read as text as it is stored: nothing is run, rendered or formatted, and text a program builds or downloads while it runs isn't here."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 67,
+    "total": 67
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\MyApps\\ifaqa\\investigation.cany\\investigation\\MASTER_INDEX.md"
+    }
+  ],
+  "links": []
+}

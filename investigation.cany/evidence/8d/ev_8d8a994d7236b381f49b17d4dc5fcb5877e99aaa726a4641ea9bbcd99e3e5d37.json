@@ -1,0 +1,395 @@
+{
+  "id": "ev_8d8a994d7236b381f49b17d4dc5fcb5877e99aaa726a4641ea9bbcd99e3e5d37",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_show",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.tools.tasmee.TasmeeFragment",
+    "path": null
+  },
+  "result": {
+    "access": [
+      "public",
+      "final"
+    ],
+    "annotations": [],
+    "descriptor": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;",
+    "dex": "classes2.dex",
+    "fields": [
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "X0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->X0:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "Y0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->Y0:Lyh2;",
+        "type": "yh2"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "Z0",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->Z0:Lae9;",
+        "type": "ae9"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "a1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->a1:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "b1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->b1:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "c1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->c1:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public"
+        ],
+        "kind": "instance",
+        "name": "d1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->d1:Z",
+        "type": "boolean"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "e1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->e1:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "f1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->f1:Lfw;",
+        "type": "fw"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "g1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->g1:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "h1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->h1:Lj69;",
+        "type": "j69"
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "kind": "instance",
+        "name": "i1",
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->i1:Lj69;",
+        "type": "j69"
+      }
+    ],
+    "interfaces": [],
+    "methods": [
+      {
+        "access": [
+          "public",
+          "constructor"
+        ],
+        "code_units": 146,
+        "kind": "direct",
+        "name": "<init>",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;-><init>()V",
+        "registers": 9,
+        "signature": "public void <init>()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 137,
+        "kind": "virtual",
+        "name": "A0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->A0()V",
+        "registers": 5,
+        "signature": "public final void A0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 332,
+        "kind": "virtual",
+        "name": "B0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->B0()V",
+        "registers": 9,
+        "signature": "public final void B0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 57,
+        "kind": "virtual",
+        "name": "C0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->C0()Lae9;",
+        "registers": 9,
+        "signature": "public final ae9 C0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 49,
+        "kind": "virtual",
+        "name": "D0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->D0()V",
+        "registers": 8,
+        "signature": "public final void D0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "E0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->E0()Lee9;",
+        "registers": 1,
+        "signature": "public final ee9 E0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 9,
+        "kind": "virtual",
+        "name": "F0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->F0()Lne9;",
+        "registers": 1,
+        "signature": "public final ne9 F0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 24,
+        "kind": "virtual",
+        "name": "G0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->G0()Z",
+        "registers": 2,
+        "signature": "public final boolean G0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 42,
+        "kind": "virtual",
+        "name": "H0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->H0()V",
+        "registers": 4,
+        "signature": "public final void H0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 86,
+        "kind": "virtual",
+        "name": "I0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->I0(Z)V",
+        "registers": 8,
+        "signature": "public final void I0(boolean)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 84,
+        "kind": "virtual",
+        "name": "M",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->M()V",
+        "registers": 6,
+        "signature": "public final void M()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 67,
+        "kind": "virtual",
+        "name": "P",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->P()V",
+        "registers": 8,
+        "signature": "public final void P()",
+        "try_blocks": 1
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 89,
+        "kind": "virtual",
+        "name": "h0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->h0(ILfk3;)V",
+        "registers": 7,
+        "signature": "public final void h0(int, fk3)",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 28,
+        "kind": "virtual",
+        "name": "k0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->k0()V",
+        "registers": 2,
+        "signature": "public final void k0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 2,
+        "kind": "virtual",
+        "name": "n0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->n0()Z",
+        "registers": 1,
+        "signature": "public final boolean n0()",
+        "try_blocks": 0
+      },
+      {
+        "access": [
+          "public",
+          "final"
+        ],
+        "code_units": 3,
+        "kind": "virtual",
+        "name": "o0",
+        "overload_index": 0,
+        "reference": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;->o0()Z",
+        "registers": 1,
+        "signature": "public final boolean o0()",
+        "try_blocks": 0
+      }
+    ],
+    "name": "org.goldenquran.freesoft.ui.tools.tasmee.TasmeeFragment",
+    "source_file": "SourceFile",
+    "superclass": "Lrn1;"
+  },
+  "summary": "org.goldenquran.freesoft.ui.tools.tasmee.TasmeeFragment (classes2.dex) extends rn1: 12 fields, 16 methods, from SourceFile.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [],
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/tools/tasmee/TasmeeFragment;"
+    }
+  ],
+  "links": []
+}

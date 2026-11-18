@@ -1,0 +1,1160 @@
+{
+  "id": "ev_7864c117fa3ce6a7127a4008c937485511b994d5d1c265067b390137adf3ec58",
+  "subject": {
+    "kind": "apk",
+    "sha256": "89de96aaf1e71fe7d07e602bc6fc25606f23ae90d7946b4990fa0c438bc70f32",
+    "name": "base.apk"
+  },
+  "operation": "android_class_users_find",
+  "params": {
+    "class_name": "org.goldenquran.freesoft.ui.audio.AudioFragment",
+    "limit": 200,
+    "method_name": null,
+    "offset": 0,
+    "path": null
+  },
+  "result": {
+    "callers": 29,
+    "class": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;",
+    "defined_in": "classes2.dex",
+    "method_name": null,
+    "references": [
+      {
+        "caller": "Lt7;->a()Ljava/lang/Object;",
+        "dex": "classes.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "012c",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lg0;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "022d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lg0;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "023e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "000e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0012",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->I0()V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0016",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "001a",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->I0()V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "001e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0022",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->F0()V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0026",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "002a",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->F0()V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "002e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0039",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->H0(I)V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "003d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0041",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->H0(I)V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0045",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0047",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0049",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0059",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "008f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00b3",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00bd",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00c7",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00d3",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "010c",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0128",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0137",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lh90;->a()Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "013f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Li90;->c(Ljava/lang/String;Landroid/os/Bundle;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "001f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Li90;->c(Ljava/lang/String;Landroid/os/Bundle;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "002b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Li90;->c(Ljava/lang/String;Landroid/os/Bundle;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0079",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0013",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "003d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0054",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "006b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0079",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0086",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0094",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "009b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00ab",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00ba",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00c1",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lj90;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00cb",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lk90;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0032",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "059f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "05b4",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "05c6",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "05dc",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "05f9",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "066f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "067d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "068b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lk90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0696",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;"
+      },
+      {
+        "caller": "Ll90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "000b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->B0(Lht1;)Ljava/lang/Object;"
+      },
+      {
+        "caller": "Lo90;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0020",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lo90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0205",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lo90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "02f5",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->G0(Lorg/goldenquran/freesoft/models/local/Reciter;)V"
+      },
+      {
+        "caller": "Lo90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "02f8",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0017",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->X0:Lpc6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "001e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0026",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Z0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0106",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0163",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0165",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0177",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0179",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0186",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0188",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0198",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "019a",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "01a8",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0200",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "020e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0216",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->i1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "021e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->j1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0243",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "0249",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "024f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0255",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;-><init>()V",
+        "dex": "classes2.dex",
+        "instruction": "iput-object",
+        "kind": "field",
+        "offset": "02b9",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->n1:Loc;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "000a",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "000f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0017",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "001d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0023",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0029",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0045",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->a1:Lwc0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->A0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0070",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->i1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->B0(Lht1;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0031",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->C0()Lr90;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->X0:Lpc6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->F0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->G0(Lorg/goldenquran/freesoft/models/local/Reciter;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0011",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Y0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->G0(Lorg/goldenquran/freesoft/models/local/Reciter;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0037",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Z0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->H0(I)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "000f",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->I0()V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0000",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->I0()V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "001b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->H0(I)V"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0028",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->b1:Lvb0;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0038",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "005b",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->Z0:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0064",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->D0()Lorg/goldenquran/freesoft/models/ReciterParcelable;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0090",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->d1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0096",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00a2",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00ae",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00b4",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00ba",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00c6",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->i1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00d2",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->j1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00dc",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->k1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "00e8",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->m1:Lku6;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "const-class",
+        "kind": "type",
+        "offset": "01bf",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "const-class",
+        "kind": "type",
+        "offset": "020c",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "026a",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->n1:Loc;"
+      },
+      {
+        "caller": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->h0(ILfk3;)V",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "02a9",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->l1:Lku6;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "0030",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->B0(Lht1;)Ljava/lang/Object;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0067",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "006d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->e1:Lku6;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "007e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->f1:Lku6;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "008e",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->c1:Lhu6;"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00a4",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00b6",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V"
+      },
+      {
+        "caller": "Lp90;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "00c4",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->E0(Z)V"
+      },
+      {
+        "caller": "Lu;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "00c7",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lu;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "04bd",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lu;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "invoke-virtual",
+        "kind": "method",
+        "offset": "04bf",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->G0(Lorg/goldenquran/freesoft/models/local/Reciter;)V"
+      },
+      {
+        "caller": "Lv6;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "012d",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lv6;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "06be",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lv;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0406",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lv;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0408",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->i1:Lku6;"
+      },
+      {
+        "caller": "Lv;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0431",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lv;->invoke(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "0443",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->g1:Lgu6;"
+      },
+      {
+        "caller": "Lw;->n(Lft1;Ljava/lang/Object;)Lft1;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0125",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lw;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "0708",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lw;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "check-cast",
+        "kind": "type",
+        "offset": "071c",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+      },
+      {
+        "caller": "Lw;->r(Ljava/lang/Object;)Ljava/lang/Object;",
+        "dex": "classes2.dex",
+        "instruction": "iget-object",
+        "kind": "field",
+        "offset": "07ae",
+        "target": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;->j1:Lku6;"
+      }
+    ],
+    "references_total": 138
+  },
+  "summary": "138 reference(s) to org.goldenquran.freesoft.ui.audio.AudioFragment from 29 method(s) across 2 DEX file(s); defined in classes2.dex.",
+  "confidence": "observed",
+  "authority": "original-files",
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "limitations": [
+    {
+      "code": "static_references_only",
+      "message": "Only direct bytecode references are found; reflection, JNI, string-built class names and code loaded at run time are not."
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "examined": 138,
+    "total": 138
+  },
+  "locations": [
+    {
+      "kind": "path",
+      "value": "E:\\GoldenQuran_Analysis\\APK\\base.apk"
+    },
+    {
+      "kind": "class",
+      "value": "Lorg/goldenquran/freesoft/ui/audio/AudioFragment;"
+    }
+  ],
+  "links": []
+}
