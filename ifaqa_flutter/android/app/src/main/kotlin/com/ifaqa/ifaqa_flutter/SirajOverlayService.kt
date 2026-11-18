@@ -21,7 +21,7 @@ import io.flutter.embedding.android.FlutterSurfaceView
 import io.flutter.embedding.android.FlutterView
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
-import io.flutter.embedding.engine.FlutterInjector
+import io.flutter.FlutterInjector
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin
