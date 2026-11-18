@@ -1,30 +1,114 @@
 # Siraj overlay — native Android implementation guide
 
-Status: **not implemented**. The Flutter side exists
-(`lib/siraj/siraj_overlay.dart`, `SirajOverlayService`, channel
-`'siraj_overlay'`) and degrades gracefully — every call returns `false` /
-no-ops until this native side lands. This document is the complete spec for
-building it. Nothing here is done yet: no Kotlin file, no service, no
-overlay window.
+Status: **implemented** (2026-11-18). The native side landed:
+`android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajOverlayService.kt`
+(foreground service + overlay window + second FlutterEngine),
+`MainActivity.kt` (the `'siraj_overlay'` channel), the manifest entries
+(§1), and the Dart entrypoint `lib/siraj/siraj_overlay_entry.dart`
+(`sirajOverlayMain`). The Flutter side (`lib/siraj/siraj_overlay.dart`,
+`SirajOverlayService`) now talks to the real native side. **Not verified
+on a real device yet** — see "Still to verify on a real device" below.
+`flutter analyze` is clean and the Siraj tests pass (see §6).
+
+## What was implemented vs what still needs a real device
+
+Implemented (code-complete, statically verified only):
+- Foreground service of type `specialUse`, `startForeground` before the
+  window is added, silent ongoing notification (id 1100) on the existing
+  `siraj_live` channel, window removal in `onDestroy`/stop (try/catch).
+- `TYPE_APPLICATION_OVERLAY` window (API 26 guard, no `TYPE_PHONE` /
+  `TYPE_SYSTEM_ALERT`), flags `FLAG_NOT_FOCUSABLE | FLAG_NOT_TOUCH_MODAL`
+  (no `FLAG_NOT_TOUCHABLE`).
+- MethodChannel `siraj_overlay`: `hasPermission`, `requestPermission`,
+  `startOverlay`, `stopOverlay`, `isShowing`, `notImplemented()` for
+  unknown methods.
+- Second FlutterEngine cached as `siraj_overlay_engine`, running the
+  `sirajOverlayMain` entrypoint; the overlay UI always shows the next
+  prayer + live countdown (Africa/Cairo, never device timezone),
+  recomputed from SharedPreferences via `AppState` + the pure functions
+  in `siraj_state.dart`, ticking with its own `Timer`.
+- Tap the capsule opens the app (MethodChannel `openApp` → MainActivity
+  with `FLAG_ACTIVITY_NEW_TASK`); the service notification has a
+  "إيقاف" stop action and opens the app on tap.
+
+Deliberate deviations from the spec below (each found while implementing,
+verified against the Flutter embedding / AOSP sources — see the notes in
+§2, §3a, §3b):
+- The window is an **explicit 380x76 dp**, not `WRAP_CONTENT`: a
+  `FlutterView` is a `FrameLayout` whose render surface is added with
+  `MATCH_PARENT` params, so under `WRAP_CONTENT` it measures to the full
+  screen — the window would then swallow every touch on the device. A
+  capsule-sized window keeps the touchable area to the capsule.
+- Gravity is `TOP | CENTER_HORIZONTAL` (not `TOP | START`): the window is
+  fixed-width, so centring it centres the capsule; the Dart side still
+  honours `capsuleAlign` inside the window.
+- `startOverlay` replies **asynchronously**: the service adds the window
+  in `onStartCommand`, so `MainActivity` holds the channel `result` until
+  the service reports back (3s timeout backstop), instead of the spec's
+  synchronous sketch.
+- Only `SharedPreferencesPlugin` is registered on the overlay engine
+  (the spec did not mention plugin registration): a hand-created engine
+  has no plugins, so without it every `SharedPreferences` call in the
+  overlay isolate would throw `MissingPluginException`.
+- The overlay UI is a **compact capsule** built in
+  `siraj_overlay_entry.dart`, not the full `SirajCapsule` widget: the
+  full capsule is navigation/audio-heavy (panels, cards, Athkar screens,
+  `AudioService`) and does not belong in a second isolate. Theme colours
+  mirror `sirajThemes`.
+- The service creates the `siraj_live` notification channel if it does
+  not exist yet (the user may never have enabled the live notification).
+
+Still to verify on a real device (not done — no device in this wave):
+- Permission flow (§6 items 1–2): deny → `startOverlay()` false, no
+  crash; grant → capsule appears over another app.
+- Home / other app / swipe-from-recents: overlay stays, countdown keeps
+  ticking (foreground service hold).
+- Tap the capsule opens the app; the notification's "إيقاف" action stops
+  the overlay; toggle off stops it with no lingering notification.
+- Window sizing / touch behaviour: the 380x76 dp window must show the
+  whole capsule (including its shadow) and must not block touches
+  outside it.
+- `specialUse` foreground-service behaviour on API < 34 (the manifest
+  bit is unknown to those versions; expected to be ignored, unproven).
+- The second engine's memory cost (~one extra Flutter engine).
+
+Known gaps / follow-ups (not implemented in this wave):
+- **The settings toggle is wired (done 2026-11-18, coordinator wave).**
+  `SirajSettingsScreen` calls `SirajOverlayService.startOverlay()` /
+  `stopOverlay()` from the overlay toggle's `onChanged`, opens the
+  system permission screen via `requestPermission()` when the permission
+  is missing, and re-checks `hasPermission()` on resume to start the
+  overlay once granted (or revert the toggle with a notice if denied).
+  `main.dart` restores the overlay on app launch when `overlayEnabled`
+  and `overlayShowWhenAppClosed` are both on and the permission is
+  granted.
+- No boot auto-restart (§4), Play-policy caveat for `specialUse` /
+  `SYSTEM_ALERT_WINDOW` (§3c), OEM battery restrictions (§4), no
+  drag-to-move / persisted position (§3a — the window is fixed at
+  y=200 dp for now).
+- The main app's in-app capsule and live notification still compute
+  prayer times in the device timezone; only the overlay is Cairo-pinned
+  (`buildSirajDays(cairo: true)`). The user is in Egypt, so they agree
+  in practice.
 
 ## 0. Verified facts about this app (checked 2026-11-18)
 
 - Kotlin sources live in `android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/`
-  (verified: contains `MainActivity.kt` and `HomeWidgets.kt`).
-- `MainActivity.kt` is currently one line:
-  `class MainActivity : AudioServiceActivity()` — no
-  `configureFlutterEngine` override yet. The channel must be registered by
-  adding that override (see §2).
+  (contains `MainActivity.kt`, `HomeWidgets.kt` and now
+  `SirajOverlayService.kt`).
+- `MainActivity.kt` now registers the `siraj_overlay` channel in a
+  `configureFlutterEngine` override (added 2026-11-18).
 - Manifest package/namespace: `com.ifaqa.ifaqa_flutter`, `applicationId`
   `com.ifaqa.app` (`android/app/build.gradle.kts`).
 - Flutter 3.50.0: `compileSdk 36`, `minSdk 24`, `targetSdk 36`
   (`flutter.targetSdkVersion` / `flutter.minSdkVersion` in
   `android/app/build.gradle.kts`).
-- Manifest already has `FOREGROUND_SERVICE`,
+- Manifest has `FOREGROUND_SERVICE`,
   `FOREGROUND_SERVICE_MEDIA_PLAYBACK`, `POST_NOTIFICATIONS`,
-  `RECEIVE_BOOT_COMPLETED`, `SCHEDULE_EXACT_ALARM`, `WAKE_LOCK`. It does
-  NOT have `SYSTEM_ALERT_WINDOW` yet — that line was added as part of the
-  Flutter-side wave (see §1). No `flutter_overlay_window` or any overlay
+  `RECEIVE_BOOT_COMPLETED`, `SCHEDULE_EXACT_ALARM`, `WAKE_LOCK`,
+  `SYSTEM_ALERT_WINDOW` (added as part of the Flutter-side wave) and now
+  `FOREGROUND_SERVICE_SPECIAL_USE` plus the `SirajOverlayService`
+  declaration (§1). No `flutter_overlay_window` or any overlay
   package is in `pubspec.yaml` / `pubspec.lock`; do not add one — this is a
   hand-rolled `MethodChannel` + `WindowManager` implementation.
 - There is **no** `MethodChannel` anywhere else in `lib/` — this is the
@@ -39,7 +123,7 @@ overlay window.
   foreground service of type `mediaPlayback` and cannot be reused for the
   overlay.
 
-## 1. AndroidManifest entries
+## 1. AndroidManifest entries — done 2026-11-18
 
 File: `android/app/src/main/AndroidManifest.xml`. Exact lines:
 
@@ -54,16 +138,15 @@ Already present, do not duplicate:
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 ```
 
-Needed **when the service in §3 is added** (not present yet — do not add
-until then, it is a permission line for a service that does not exist):
+Added 2026-11-18 with the service in §3 (not present before):
 
 ```xml
 <!-- Required on API 34+ to run a foreground service of type "specialUse". -->
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 ```
 
-And the service declaration itself (inside `<application>`, added with
-§3, not before):
+And the service declaration itself (inside `<application>`, added
+2026-11-18 with §3):
 
 ```xml
 <!-- Siraj overlay keep-alive. specialUse is the only fitting type for a
@@ -79,13 +162,16 @@ And the service declaration itself (inside `<application>`, added with
 </service>
 ```
 
-## 2. MethodChannel handler — registration and method contract
+## 2. MethodChannel handler — registration and method contract — done 2026-11-18
 
-New file (does not exist yet):
-`android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajOverlayService.kt`
-holds the service; the channel is registered in the existing
-`android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/MainActivity.kt` by
-adding a `configureFlutterEngine` override (the file has none today):
+Implemented in `MainActivity.kt` (the file previously had no
+`configureFlutterEngine` override) and `SirajOverlayService.kt` (the
+service). One deviation from the sketch below: `startOverlay` replies
+**asynchronously** — the service adds the window in `onStartCommand`,
+so `MainActivity` holds the channel `result` until
+`SirajOverlayService.onWindowShown` fires (3s timeout backstop, so the
+Dart future never hangs). The contract is unchanged: it replies `true`
+only after the window is actually added.
 
 ```kotlin
 override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
@@ -177,6 +263,20 @@ draggable). Remove the view in `onDestroy()` and in `stopOverlay()` with
 `windowManager.removeView(...)` wrapped in try/catch (removing an
 unattached view throws `IllegalArgumentException`).
 
+**Deviation (2026-11-18): the window is an explicit 380x76 dp, not
+`WRAP_CONTENT`, and gravity is `TOP | CENTER_HORIZONTAL`, not
+`TOP | START`.** Verified against the Flutter embedding sources
+(`FlutterView.java`, `FlutterSurfaceView.java`) and AOSP
+(`SurfaceView.java`): a `FlutterView` is a `FrameLayout` whose render
+surface is added with `MATCH_PARENT` params, and a `SurfaceView` under
+an `AT_MOST` measure spec reports the full spec size — so a
+`WRAP_CONTENT` window measures to the full screen. The window would
+then swallow every touch on the device (there is no "outside" for
+`FLAG_NOT_TOUCH_MODAL` to pass through), defeating the flags above. A
+capsule-sized window keeps the touchable area to the capsule; the Dart
+UI centres the capsule in the 380x76 box and honours `capsuleAlign`
+inside it. This needs confirming on a real device (§6).
+
 ### 3b. What renders inside the window — cached FlutterEngine (recommended)
 
 Use a second Flutter engine rendering a dedicated Dart entrypoint, not a
@@ -185,7 +285,7 @@ duplicate the prayer-time logic and the capsule theming in Kotlin; the
 pure prayer logic already lives in `lib/siraj/siraj_state.dart` and the
 capsule widget in `lib/siraj/siraj_capsule.dart`.
 
-- New Dart file (does not exist yet):
+- New Dart file (added 2026-11-18):
   `lib/siraj/siraj_overlay_entry.dart`, with:
   ```dart
   @pragma('vm:entry-point')
@@ -195,6 +295,18 @@ capsule widget in `lib/siraj/siraj_capsule.dart`.
   ```
   This entrypoint must be kept by tree-shaking (`@pragma('vm:entry-point')`
   is mandatory — without it the Dart compiler strips it).
+  **Implemented as a compact capsule, not the full `SirajCapsule`
+  widget:** the full capsule is navigation/audio-heavy (panels, cards,
+  Athkar screens, `AudioService`) and does not belong in a second
+  isolate. The overlay entry builds its own small pill with the same
+  theme colours (mirrored from `sirajThemes`), the same pill sizes, and
+  the same "prayer chip always visible" rule. It shows no media state
+  (the overlay isolate cannot see the main isolate's audio) and ignores
+  `autoHide` and `capsuleWidthFrac` (the window cannot resize).
+  Cairo-pinned times are provided by `prayerTimesCairo` in
+  `lib/models/prayer_time_info.dart` and `buildSirajDays(..., cairo:
+  true)` in `siraj_settings.dart` (the main app still uses
+  device-local times); covered by `test/siraj_overlay_test.dart`.
 - The service creates the engine once and caches it:
   ```kotlin
   val engine = FlutterEngine(applicationContext)
@@ -213,14 +325,26 @@ capsule widget in `lib/siraj/siraj_capsule.dart`.
   version in Flutter 3.50 — `FlutterEngine` + `FlutterEngineCache` +
   `FlutterView.attachToFlutterEngine` is the stable shape; verify against
   the embedding at implementation time.)
+  **As implemented:** the view is
+  `FlutterView(applicationContext, FlutterSurfaceView(applicationContext,
+  true))` — the transparent surface, so only the capsule shows (verified
+  against `FlutterView.java` / `FlutterSurfaceView.java`). **Only
+  `SharedPreferencesPlugin` is registered on the overlay engine**
+  (`engine.plugins.add(SharedPreferencesPlugin())`): a hand-created
+  engine has no plugins, so without it every `SharedPreferences` call in
+  the overlay isolate would throw `MissingPluginException`. Nothing else
+  is registered — the overlay needs no Firebase, audio or notifications.
+  The engine is destroyed and removed from the cache in `onDestroy` /
+  `stopOverlay`.
 - **STANDING RULE:** the overlay UI must always show the next prayer and
   its countdown, even if every other content kind is off — the same rule
   as the in-app capsule (`SirajSettings.config()` forces `showPrayer` to
   `true`). The overlay entrypoint is a separate isolate: it cannot read
   the main isolate's in-memory state. It must recompute from
   `SharedPreferences` (via the existing `AppState` persistence) and the
-  pure functions in `siraj_state.dart` (`buildSirajDays`,
-  `planSirajLive` / `computeSirajState`), ticking with its own `Timer`.
+  pure functions (`buildSirajDays` in `siraj_settings.dart`,
+  `planSirajLive` / `computeSirajState` in `siraj_state.dart`), ticking
+  with its own `Timer`.
   Prayer times are computed in `Africa/Cairo` (see the timezone fix in
   `MEMORY.md` — never use the device timezone for prayer times).
 - Cost: a second engine costs roughly one extra Flutter engine of memory
@@ -232,6 +356,13 @@ capsule widget in `lib/siraj/siraj_capsule.dart`.
   that fires a `PendingIntent` for `MainActivity` (or a
   `MethodChannel` message to the overlay engine that launches the app via
   `startActivity` with `FLAG_ACTIVITY_NEW_TASK`).
+  **As implemented (the MethodChannel route):** the Dart side sends
+  `openApp` on the `siraj_overlay` channel registered on the overlay
+  engine, and the service starts `MainActivity` with
+  `FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_SINGLE_TOP`. (An
+  `OnClickListener` on the `FlutterView` was not used: the view forwards
+  touches to the Flutter gesture system, so a native click listener is
+  unreliable.)
 
 ### 3c. Keep-alive — foreground service of type `specialUse`
 
@@ -242,14 +373,22 @@ adding the window, and in `onDestroy` it removes the window and calls
 posted on an existing channel — reuse the Siraj live channel
 (`siraj_live`, created by `flutter_local_notifications`; id `1000+` is
 the live capsule, so use a distinct id, e.g. `1100`) with a silent,
-ongoing notification ("سِراج يعرض فوق التطبيقات"). `specialUse` is the
-only fitting foreground-service type for a prayer overlay; note the
+ongoing notification ("سِراج يعرض فوق التطبيقات"). **As implemented:**
+the service creates the `siraj_live` channel itself (IMPORTANCE_LOW, no
+sound/vibration) if it does not exist yet, so the foreground service
+works even when the user never enabled the live notification; if the
+channel already exists the call is a no-op. The notification also has
+an "إيقاف" action that stops the service, and tapping it opens the app.
+`specialUse` is the only fitting foreground-service type for a prayer overlay; note the
 Play-policy caveat: Google Play restricts `specialUse` and
 `SYSTEM_ALERT_WINDOW` — the Play listing needs a declaration / review
 justification, and the overlay must be genuinely user-initiated (it is:
 it only starts from the Siraj settings toggle). Do not use
 `mediaPlayback` (that type belongs to the audio service) or `dataSync`
-to dodge the review.
+to dodge the review. **Note:** the foreground-service type is passed
+explicitly (`FOREGROUND_SERVICE_TYPE_SPECIAL_USE`) on API 34+ and the
+two-argument `startForeground` is used below that; behaviour of the
+`specialUse` manifest bit on API < 34 is unproven on a real device.
 
 ## 4. What happens when the app is swiped from recents
 
@@ -304,6 +443,9 @@ to dodge the review.
 
 ## 6. Definition of done / manual test checklist
 
+Implemented 2026-11-18; items 1–6 still need a real device (none was
+available in this wave). Item 7 is done.
+
 1. Fresh install → Siraj settings overlay toggle on → system permission
    screen opens → deny → `startOverlay()` returns `false`, no crash, no
    window.
@@ -317,4 +459,12 @@ to dodge the review.
 6. Reboot → overlay is gone (expected, §4); live notification chain
    rebuilds as today.
 7. `flutter analyze` clean; existing Siraj tests still pass — the overlay
-   changes no existing behaviour.
+   changes no existing behaviour. **Done 2026-11-18:** `flutter analyze
+   --no-pub` clean, `flutter test --no-pub` passes (including the new
+   `test/siraj_overlay_test.dart` for the Cairo-pinned times). The Kotlin
+   side could not be compiled on this machine (no Android SDK here);
+   the coordinator's APK attempt is the first Kotlin compile check.
+
+The settings toggle is wired (see "Known gaps" at the top): the toggle
+starts/stops the overlay and the resume handler covers the permission
+grant flow.

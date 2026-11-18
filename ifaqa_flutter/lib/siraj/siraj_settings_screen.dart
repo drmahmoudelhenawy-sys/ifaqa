@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../services/app_state.dart';
@@ -7,6 +9,7 @@ import '../theme/app_colors.dart';
 import '../widgets/toggle_item.dart';
 import 'siraj_capsule.dart';
 import 'siraj_live_service.dart';
+import 'siraj_overlay.dart';
 import 'siraj_reminders.dart';
 import 'siraj_settings.dart';
 import 'siraj_state.dart';
@@ -18,7 +21,8 @@ class SirajSettingsScreen extends StatefulWidget {
   State<SirajSettingsScreen> createState() => _SirajSettingsScreenState();
 }
 
-class _SirajSettingsScreenState extends State<SirajSettingsScreen> {
+class _SirajSettingsScreenState extends State<SirajSettingsScreen>
+    with WidgetsBindingObserver {
   final AppState _state = AppState.instance;
 
   final List<SirajWird> _wirds = SirajSettings.wirds();
@@ -28,10 +32,12 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen> {
   void initState() {
     super.initState();
     _state.addListener(_changed);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _state.removeListener(_changed);
     for (final c in _wirdNameControllers.values) {
       c.dispose();
@@ -41,6 +47,71 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen> {
 
   void _changed() {
     if (mounted) setState(() {});
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // The overlay permission grant happens in system Settings; when the
+      // user comes back, start the overlay if the toggle is on.
+      unawaited(_syncOverlayWithSettings());
+    }
+  }
+
+  /// Starts/stops the native overlay to match the saved toggle, and repairs
+  /// the toggle when the permission is gone (e.g. revoked in Settings).
+  Future<void> _syncOverlayWithSettings() async {
+    if (!SirajOverlayService.supported) return;
+    final svc = SirajOverlayService.instance;
+    final enabled =
+        _state.flag(SirajSettings.overlayEnabledKey, fallback: false);
+    if (!enabled) {
+      if (await svc.isShowing) await svc.stopOverlay();
+      return;
+    }
+    if (!await svc.hasPermission()) {
+      _state.setFlag(SirajSettings.overlayEnabledKey, false);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'إذن «العرض فوق التطبيقات الأخرى» غير مفعّل — فعّله من إعدادات أندرويد.',
+            ),
+          ),
+        );
+      }
+      return;
+    }
+    if (!await svc.isShowing) await svc.startOverlay();
+  }
+
+  /// Called after the overlay toggle is flipped (the flag is already saved
+  /// by [_flag] at this point).
+  Future<void> _onOverlayToggleChanged(bool on) async {
+    if (!SirajOverlayService.supported) return;
+    final svc = SirajOverlayService.instance;
+    if (!on) {
+      await svc.stopOverlay();
+      return;
+    }
+    if (!await svc.hasPermission()) {
+      // Opens system Settings; the grant happens outside the app and the
+      // resume handler above starts the overlay once it is granted. The
+      // toggle stays on in the meantime.
+      await svc.requestPermission();
+      return;
+    }
+    final started = await svc.startOverlay();
+    if (!started && mounted) {
+      _state.setFlag(SirajSettings.overlayEnabledKey, false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'تعذّر إظهار سِراج فوق التطبيقات — تأكد من الإذن وحاول مجددًا.',
+          ),
+        ),
+      );
+    }
   }
 
   TextEditingController _nameController(SirajWird w) =>
@@ -1063,6 +1134,7 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen> {
                 Icons.picture_in_picture,
                 SirajSettings.overlayEnabledKey,
                 fallback: false,
+                onChanged: _onOverlayToggleChanged,
               ),
               _flag(
                 'إظهاره أيضًا عند إغلاق التطبيق',

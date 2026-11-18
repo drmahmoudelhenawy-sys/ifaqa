@@ -5,6 +5,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import '../data/surahs_data.dart';
 import '../models/reciter.dart';
+import '../siraj/device_music.dart';
 import 'app_state.dart';
 import 'clan_service.dart';
 import 'offline_store/offline_store.dart';
@@ -34,6 +35,13 @@ class AudioService extends ChangeNotifier {
     // Keeps the mini player in step when a playlist moves to its next track
     // (also from the lock screen / notification buttons).
     player.currentIndexStream.listen((i) {
+      if (inDeviceMusic) {
+        if (i == null || i >= _deviceQueue.length) return;
+        final song = _deviceQueue[i];
+        now = NowPlaying(title: song.title, subtitle: song.artist);
+        notifyListeners();
+        return;
+      }
       if (!inPlaylist || i == null || i >= _queue.length) return;
       final it = _queue[i];
       now = _nowFor(it.reciter, it.surah);
@@ -52,6 +60,12 @@ class AudioService extends ChangeNotifier {
   String? playlistId;
   List<PlaylistItem> _queue = const [];
   bool get inPlaylist => playlistId != null;
+  // On-device music queue (see playDeviceSongs). Kept separate from _queue:
+  // device tracks are files, not reciter/surah items, and must never be
+  // mixed into a Quran playlist. Empty whenever app audio is playing.
+  List<DeviceSong> _deviceQueue = const [];
+  bool get inDeviceMusic => _deviceQueue.isNotEmpty;
+  List<DeviceSong> get deviceQueue => List.unmodifiable(_deviceQueue);
   DateTime _lastNotify = DateTime.fromMillisecondsSinceEpoch(0);
   int _unsentClanSeconds = 0;
 
@@ -81,6 +95,7 @@ class AudioService extends ChangeNotifier {
   Future<void> playSurah(Reciter reciter, int surah) async {
     playlistId = null;
     _queue = const [];
+    _deviceQueue = const [];
     now = _nowFor(reciter, surah);
     notifyListeners();
     _remember(reciter, surah);
@@ -94,6 +109,7 @@ class AudioService extends ChangeNotifier {
     final idx = startIndex.clamp(0, items.length - 1);
     playlistId = pl.id;
     _queue = items;
+    _deviceQueue = const [];
     now = _nowFor(items[idx].reciter, items[idx].surah);
     notifyListeners();
     try {
@@ -120,6 +136,7 @@ class AudioService extends ChangeNotifier {
   Future<void> playLive(String title, String subtitle, String url) async {
     playlistId = null;
     _queue = const [];
+    _deviceQueue = const [];
     now = NowPlaying(title: title, subtitle: subtitle, isLive: true);
     notifyListeners();
     await _load(AudioSource.uri(Uri.parse(url), tag: MediaItem(id: url, title: title, artist: subtitle)));
@@ -146,6 +163,14 @@ class AudioService extends ChangeNotifier {
   Future<void> previous() async => _step(-1);
 
   Future<void> _step(int delta) async {
+    if (inDeviceMusic) {
+      if (delta > 0) {
+        await player.seekToNext();
+      } else {
+        await player.seekToPrevious();
+      }
+      return;
+    }
     if (inPlaylist) {
       if (delta > 0) {
         await player.seekToNext();
@@ -167,8 +192,39 @@ class AudioService extends ChangeNotifier {
     await player.stop();
     playlistId = null;
     _queue = const [];
+    _deviceQueue = const [];
     now = null;
     notifyListeners();
+  }
+
+  /// Plays on-device audio files through this same shared player, so
+  /// device music survives tab switches and never overlaps app audio:
+  /// loading it replaces whatever was playing, exactly like a playlist.
+  /// Next/previous and the lock-screen controls follow this queue until
+  /// app audio is played again (which clears it).
+  Future<void> playDeviceSongs(List<DeviceSong> songs, {int startIndex = 0}) async {
+    if (songs.isEmpty) return;
+    final items = [...songs];
+    final idx = startIndex.clamp(0, items.length - 1);
+    playlistId = null;
+    _queue = const [];
+    _deviceQueue = items;
+    now = NowPlaying(title: items[idx].title, subtitle: items[idx].artist);
+    notifyListeners();
+    try {
+      final sources = [
+        for (final s in items)
+          AudioSource.uri(
+            Uri.file(s.filePath),
+            tag: MediaItem(id: 'device_${s.id}', title: s.title, artist: s.artist, album: 'موسيقى الجهاز'),
+          ),
+      ];
+      await player.setAudioSource(ConcatenatingAudioSource(children: sources), initialIndex: idx);
+      unawaited(player.play());
+    } catch (e) {
+      debugPrint('device music load failed: $e');
+      notifyListeners();
+    }
   }
 
   // ---- Siraj player card helpers (additive; existing behaviour unchanged) ----

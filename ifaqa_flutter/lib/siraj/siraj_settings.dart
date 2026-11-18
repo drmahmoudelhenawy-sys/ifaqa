@@ -1,3 +1,5 @@
+import 'package:timezone/timezone.dart' as tz;
+
 import '../models/prayer_time_info.dart';
 import '../services/app_state.dart';
 import '../services/audio_service.dart';
@@ -233,11 +235,20 @@ class SirajSettings {
 }
 
 /// Prayer days from [from] days before today to [to] days after, for [location].
+///
+/// When [cairo] is true, prayer times are computed in Africa/Cairo (never
+/// the device timezone) and the returned [SirajPrayer] times are
+/// [tz.TZDateTime]s in Africa/Cairo — for the overlay isolate (see
+/// `siraj_overlay_entry.dart`), which must not depend on the device
+/// timezone. Requires `tzdata.initializeTimeZones()` to have run first.
+/// The default (`false`) keeps the existing device-local behaviour used by
+/// the in-app capsule, the live notification and the tests.
 List<SirajDay> buildSirajDays(
   AppLocation location,
   DateTime now, {
   int from = -1,
   int to = 2,
+  bool cairo = false,
 }) {
   final iqama = {
     for (final p in buildPrayerTimes(location))
@@ -247,21 +258,49 @@ List<SirajDay> buildSirajDays(
   final days = <SirajDay>[];
   for (var offset = from; offset <= to; offset++) {
     final date = DateTime(today.year, today.month, today.day + offset);
-    final t = prayerTimesOn(location, date);
-    // Whole minutes, like every other prayer time shown in the app.
-    DateTime m(DateTime d) =>
-        DateTime(date.year, date.month, date.day, d.hour, d.minute);
-    final times = {
-      'fajr': t.fajr,
-      'dhuhr': t.dhuhr,
-      'asr': t.asr,
-      'maghrib': t.maghrib,
-      'isha': t.isha,
-    };
+    // Prayer times for this day: Cairo instants when [cairo], device-local
+    // otherwise. Only the six times differ; the iqamah offsets above are
+    // the same either way.
+    final Map<String, DateTime> times;
+    late final DateTime sunrise;
+    if (cairo) {
+      final ct = prayerTimesCairo(location, date);
+      times = {
+        'fajr': ct.fajr,
+        'dhuhr': ct.dhuhr,
+        'asr': ct.asr,
+        'maghrib': ct.maghrib,
+        'isha': ct.isha,
+      };
+      sunrise = ct.sunrise;
+    } else {
+      final t = prayerTimesOn(location, date);
+      times = {
+        'fajr': t.fajr,
+        'dhuhr': t.dhuhr,
+        'asr': t.asr,
+        'maghrib': t.maghrib,
+        'isha': t.isha,
+      };
+      sunrise = t.sunrise;
+    }
+    // Whole minutes, like every other prayer time shown in the app. In
+    // Cairo mode the result is a TZDateTime in Africa/Cairo, so its
+    // wall-clock fields stay Cairo times on any device timezone.
+    DateTime m(DateTime d) => cairo
+        ? tz.TZDateTime(
+            cairoLocation,
+            date.year,
+            date.month,
+            date.day,
+            d.hour,
+            d.minute,
+          )
+        : DateTime(date.year, date.month, date.day, d.hour, d.minute);
     days.add(
       SirajDay(
         date: date,
-        sunrise: m(t.sunrise),
+        sunrise: m(sunrise),
         prayers: [
           for (final id in prayerIds)
             SirajPrayer(id, m(times[id]!), iqama[id] ?? 10),

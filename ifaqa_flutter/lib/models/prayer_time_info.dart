@@ -1,6 +1,52 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
+import 'package:timezone/timezone.dart' as tz;
+
 import '../services/app_state.dart';
+
+/// The location whose wall clock the prayer times follow, regardless of
+/// the device timezone. The app is built for Egypt; any surface that must
+/// not depend on the device timezone (the overlay isolate) uses Cairo.
+tz.Location get cairoLocation => tz.getLocation('Africa/Cairo');
+
+/// Prayer times for [location] on [date] as true instants in Africa/Cairo,
+/// regardless of the device timezone.
+///
+/// [PrayerTimes] on its own returns device-local times (`.toLocal()`), so
+/// this uses [PrayerTimes.utc] — pure UTC instants computed from the Cairo
+/// calendar [date] — and re-expresses each instant in Africa/Cairo. The
+/// returned times' wall-clock fields are the Cairo prayer times and their
+/// instants are the true moments of the prayers, so comparing them with
+/// `DateTime.now()` (any device timezone) gives the correct countdown.
+///
+/// Requires `tzdata.initializeTimeZones()` to have run first (the main
+/// isolate does it in `ReminderService.init`; the overlay isolate does it
+/// in `sirajOverlayMain`).
+({
+  DateTime fajr,
+  DateTime sunrise,
+  DateTime dhuhr,
+  DateTime asr,
+  DateTime maghrib,
+  DateTime isha,
+})
+prayerTimesCairo(AppLocation location, DateTime date) {
+  final cairo = cairoLocation;
+  final t = PrayerTimes.utc(
+    Coordinates(location.latitude, location.longitude),
+    DateComponents.from(date),
+    CalculationMethod.egyptian.getParameters(),
+  );
+  DateTime inCairo(DateTime utc) => tz.TZDateTime.from(utc, cairo);
+  return (
+    fajr: inCairo(t.fajr),
+    sunrise: inCairo(t.sunrise),
+    dhuhr: inCairo(t.dhuhr),
+    asr: inCairo(t.asr),
+    maghrib: inCairo(t.maghrib),
+    isha: inCairo(t.isha),
+  );
+}
 
 class PrayerTimeInfo {
   final String key;

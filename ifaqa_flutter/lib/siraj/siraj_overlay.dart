@@ -3,12 +3,17 @@ import 'package:flutter/services.dart';
 
 /// Flutter side of the Siraj "overlay over other apps" feature.
 ///
-/// STATUS — READ THIS FIRST: the Flutter side is ready, the native Android
-/// side is NOT implemented. There is no Kotlin handler for the
-/// `'siraj_overlay'` channel yet, so every method below degrades gracefully
-/// (returns `false` / no-op) instead of crashing. An overlay window over
-/// other apps CANNOT work until the native side is built — see
-/// `OVERLAY_NATIVE.md` in this directory for the exact implementation guide.
+/// STATUS — the native Android side IS implemented (2026-11-18):
+/// `android/app/src/main/kotlin/com/ifaqa/ifaqa_flutter/SirajOverlayService.kt`
+/// (foreground service of type `specialUse` + `WindowManager` overlay
+/// window with a second FlutterEngine running `sirajOverlayMain`) and the
+/// `'siraj_overlay'` channel registered in `MainActivity.kt`; the manifest
+/// declares `FOREGROUND_SERVICE_SPECIAL_USE` and the service (see
+/// `OVERLAY_NATIVE.md` for the spec, the known deviations, and what still
+/// needs a real device). Every method below still degrades gracefully
+/// (returns `false` / no-op) when the native side is absent — e.g. on
+/// web / iOS / desktop, or on an install built before the Kotlin side
+/// landed.
 ///
 /// What this service is for: a small floating Siraj capsule (next prayer +
 /// countdown — prayer time is the most important thing and must ALWAYS be
@@ -27,8 +32,8 @@ import 'package:flutter/services.dart';
 /// different: a `WindowManager` view is owned by the app process, so it
 /// dies with the process. When the app is swiped from recents, Android
 /// kills the Dart isolate; the overlay survives only while a foreground
-/// service holds the process alive. That foreground service is part of the
-/// native work in `OVERLAY_NATIVE.md` — it does not exist yet either. The
+/// service holds the process alive. That foreground service is
+/// `SirajOverlayService` (Kotlin) — see `OVERLAY_NATIVE.md`. The
 /// `just_audio_background` audio service already in the manifest is a
 /// foreground service of type `mediaPlayback` and cannot be reused as the
 /// overlay's keep-alive.

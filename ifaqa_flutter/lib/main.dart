@@ -11,6 +11,8 @@ import 'services/home_widget_sync.dart';
 import 'services/cloud_service.dart';
 import 'services/reminder_service.dart';
 import 'siraj/siraj_live_service.dart';
+import 'siraj/siraj_overlay.dart';
+import 'siraj/siraj_settings.dart';
 import 'theme/app_theme.dart';
 
 Future<void> main() async {
@@ -28,7 +30,24 @@ Future<void> main() async {
   unawaited(CloudService.instance.init());
   unawaited(ReminderService.instance.init().then((_) => SirajLiveService.instance.init()));
   unawaited(HomeWidgetSync.instance.init());
+  // Restore the Siraj overlay if the user left it enabled (it only comes
+  // back on the next app launch after a reboot / force-stop; see
+  // lib/siraj/OVERLAY_NATIVE.md §4).
+  unawaited(_restoreSirajOverlay());
   runApp(const IfaqaApp());
+}
+
+/// Restarts the Siraj overlay after an app launch when the user left it
+/// enabled (and allowed it to show when the app is closed) and the overlay
+/// permission is granted. No-op on non-Android platforms or when the native
+/// side is absent.
+Future<void> _restoreSirajOverlay() async {
+  if (!SirajOverlayService.supported) return;
+  final config = SirajSettings.config();
+  if (!config.overlayEnabled || !config.overlayShowWhenAppClosed) return;
+  final svc = SirajOverlayService.instance;
+  if (!await svc.hasPermission()) return;
+  await svc.startOverlay();
 }
 
 /// Returning users who turned the intro off skip straight to the app.

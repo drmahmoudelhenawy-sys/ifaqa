@@ -11,8 +11,14 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
-    <!-- Siraj overlay over other apps ("Display over other apps"). Native side not implemented yet — see lib/siraj/OVERLAY_NATIVE.md. -->
+    <!-- Required on API 34+ to run a foreground service of type "specialUse" (Siraj overlay). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- Siraj overlay over other apps ("Display over other apps"). Native side implemented — see lib/siraj/OVERLAY_NATIVE.md. -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Siraj device music (on_audio_query): read audio files on the device. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <application
         android:label="إفاقة"
         android:name="${applicationName}"
@@ -52,6 +58,17 @@
             <intent-filter>
                 <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>
+        </service>
+        <!-- Siraj overlay keep-alive. specialUse is the only fitting type for a
+             prayer-countdown overlay; see lib/siraj/OVERLAY_NATIVE.md §3 for the Play-policy caveat. -->
+        <service
+            android:name=".SirajOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <!-- Required on API 34+ for foregroundServiceType="specialUse". -->
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="prayer countdown overlay" />
         </service>
         <receiver android:name="com.ryanheise.audioservice.MediaButtonReceiver"
             android:exported="true" tools:ignore="Instantiatable">

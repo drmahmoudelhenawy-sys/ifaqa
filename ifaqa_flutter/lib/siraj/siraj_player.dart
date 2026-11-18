@@ -6,43 +6,17 @@ import '../services/app_state.dart';
 import '../services/audio_service.dart';
 import '../services/playlists_service.dart';
 import '../theme/app_colors.dart';
+import 'device_music.dart';
 import 'siraj_settings.dart';
 
-// ===========================================================================
-// DEVICE MUSIC — NOT YET INTEGRATED (honest unavailable state, see below).
-//
-// The 'device' source is selectable in this card, but it does NOT list or
-// play any on-device tracks today: no device-audio query package is in
-// pubspec.yaml / pubspec.lock or the pub cache, and AndroidManifest.xml has
-// no media-read permission. Nothing here fakes device playback.
-//
-// EXACT INTEGRATION STEPS (for a later wave — do NOT claim this works
-// until all four are done and tested on a real device):
-//   1. pubspec.yaml: add `on_audio_query: ^2.9.0` (or current) AND
-//      `permission_handler: ^11.0.0` (or current) under dependencies, then
-//      run `flutter pub get`.
-//   2. android/app/src/main/AndroidManifest.xml, inside <manifest>:
-//        <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-//        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-//            android:maxSdkVersion="32" />
-//      (READ_MEDIA_AUDIO is Android 13+; READ_EXTERNAL_STORAGE covers older.)
-//   3. At runtime, before querying, request the permission with
-//      permission_handler (Permission.audio on Android 13+, Permission.storage
-//      below it) and handle a denial gracefully — never query without it.
-//   4. Query with OnAudioQuery().querySongs() (filter out items with no
-//      file / duration 0), build a just_audio ConcatenatingAudioSource from
-//      the returned file URIs, and play it through AudioService's player —
-//      do NOT start a second player, so playback still survives tab switches
-//      and never overlaps app audio. Wire the results into this card behind
-//      the 'device' source and replace [deviceMusicAvailable] with a real
-//      check (package present + permission granted).
-// ===========================================================================
-
-/// Whether on-device music can actually be listed/played right now.
-///
-/// False until the integration above lands. Kept as a single constant so
-/// the day it becomes true there is exactly one place to flip.
-const bool deviceMusicAvailable = false;
+/// Device music is integrated: the `on_audio_query` package is a real
+/// dependency and [DeviceMusicService] queries the device's audio files
+/// (playable ones only) and plays them through [AudioService]'s single
+/// shared player. Availability at runtime is "permission granted" —
+/// [DeviceMusicService.ensurePermission] requests READ_MEDIA_AUDIO on
+/// Android 13+ and READ_EXTERNAL_STORAGE below it, and the card below
+/// never queries without it. Requires those permissions in
+/// AndroidManifest.xml (see [DeviceMusicService]).
 
 /// Small player card for the Siraj tab / Siraj settings.
 ///
@@ -65,8 +39,14 @@ class SirajPlayerCard extends StatefulWidget {
 
 class _SirajPlayerCardState extends State<SirajPlayerCard> {
   final AudioService _audio = AudioService.instance;
+  final DeviceMusicService _deviceMusic = DeviceMusicService();
   Timer? _sleepTimer;
   int _sleepMinutes = 0;
+  // On-device tracks for the 'device' source (empty until loaded).
+  List<DeviceSong> _deviceSongs = const [];
+  bool _deviceLoading = false;
+  DeviceMusicPermissionState? _devicePermission;
+  String? _deviceError;
 
   @override
   void initState() {
@@ -74,6 +54,7 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
     _audio.addListener(_rebuild);
     PlaylistsService.instance.addListener(_rebuild);
     AppState.instance.addListener(_rebuild);
+    if (SirajSettings.config().playerSource == 'device') _loadDeviceSongs();
   }
 
   @override
@@ -94,6 +75,52 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
     s.setText(SirajSettings.playerSourceKey, source);
     // deviceMusicEnabled mirrors "the device source is the active one".
     s.setFlag(SirajSettings.deviceMusicEnabledKey, source == 'device');
+    if (source == 'device') _loadDeviceSongs();
+  }
+
+  /// Loads the device track list: asks for the media permission first and
+  /// only queries when it is granted. Denials and errors stay in the card
+  /// as a notice with a retry / open-settings action — never a crash, and
+  /// app-audio playback is untouched.
+  Future<void> _loadDeviceSongs() async {
+    if (_deviceLoading) return;
+    setState(() {
+      _deviceLoading = true;
+      _deviceError = null;
+    });
+    try {
+      final permission = await _deviceMusic.ensurePermission();
+      if (!mounted) return;
+      setState(() => _devicePermission = permission);
+      if (permission != DeviceMusicPermissionState.granted) {
+        setState(() {
+          _deviceLoading = false;
+          _deviceSongs = const [];
+        });
+        return;
+      }
+      final songs = await _deviceMusic.querySongs();
+      if (!mounted) return;
+      setState(() {
+        _deviceSongs = songs;
+        _deviceLoading = false;
+      });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _deviceLoading = false;
+        _deviceError = '$e';
+      });
+    }
+  }
+
+  Future<void> _playDeviceSong(int index) async {
+    await _audio.playDeviceSongs(_deviceSongs, startIndex: index);
+  }
+
+  String _formatDuration(int ms) {
+    final totalSecs = ms ~/ 1000;
+    return '${totalSecs ~/ 60}:${(totalSecs % 60).toString().padLeft(2, '0')}';
   }
 
   /// Sleep timer: pauses playback after [minutes] (0 = off). Small and safe:
@@ -159,8 +186,6 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
               ],
             ),
             const SizedBox(height: 12),
-            if (isDevice && !deviceMusicAvailable) _deviceUnavailableNotice(),
-            if (isDevice && !deviceMusicAvailable) const SizedBox(height: 12),
             // ---- Now playing (or the neutral empty state) ----
             if (now == null)
               Container(
@@ -241,8 +266,12 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
               ),
             ],
             const SizedBox(height: 12),
-            // ---- Playlist picker: user playlists + audio-hub resume ----
-            ExpansionTile(
+            // ---- Device source: on-device track list. App source: the
+            // playlist picker below, exactly as before. ----
+            if (isDevice) _deviceSection(),
+            if (!isDevice)
+              // ---- Playlist picker: user playlists + audio-hub resume ----
+              ExpansionTile(
               tilePadding: EdgeInsets.zero,
               childrenPadding: EdgeInsets.zero,
               leading: const Icon(Icons.queue_music, color: AppColors.violet600, size: 20),
@@ -301,7 +330,113 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
     );
   }
 
-  Widget _deviceUnavailableNotice() {
+  /// Device-source section: loading state, permission notice (denied /
+  /// permanently denied / error), empty state, or the track list.
+  /// Tap a track to play it through [AudioService]'s shared player.
+  Widget _deviceSection() {
+    if (_deviceLoading) {
+      return const Padding(
+        padding: EdgeInsets.symmetric(vertical: 12),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.violet600)),
+            SizedBox(width: 10),
+            Text(
+              'جارٍ تحميل موسيقى الجهاز…',
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.slate500),
+            ),
+          ],
+        ),
+      );
+    }
+    if (_deviceError != null) {
+      return _deviceNotice(
+        icon: Icons.error_outline,
+        text: 'تعذّر تحميل موسيقى الجهاز. تحقّق من الإذن ثم أعد المحاولة.',
+        actions: [
+          TextButton(onPressed: _loadDeviceSongs, child: const Text('إعادة المحاولة')),
+        ],
+      );
+    }
+    if (_devicePermission != null && _devicePermission != DeviceMusicPermissionState.granted) {
+      final permanent = _devicePermission == DeviceMusicPermissionState.permanentlyDenied;
+      return _deviceNotice(
+        icon: Icons.folder_off_outlined,
+        text: permanent
+            ? 'لعرض موسيقى الجهاز يحتاج التطبيق إلى إذن الوصول إلى ملفات الصوت، وقد تم رفضه نهائيًا. فعّله من إعدادات التطبيق ثم عُد هنا.'
+            : 'لعرض موسيقى الجهاز يحتاج التطبيق إلى إذن الوصول إلى ملفات الصوت على جهازك. اسمح بالإذن ثم أعد المحاولة.',
+        actions: [
+          if (permanent)
+            TextButton(onPressed: () => _deviceMusic.openSettings(), child: const Text('فتح الإعدادات')),
+          TextButton(onPressed: _loadDeviceSongs, child: const Text('إعادة المحاولة')),
+        ],
+      );
+    }
+    if (_deviceSongs.isEmpty) {
+      return const Padding(
+        padding: EdgeInsets.symmetric(vertical: 8),
+        child: Text(
+          'لا توجد ملفات صوتية على جهازك.',
+          style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.slate400),
+        ),
+      );
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.folder_open, color: AppColors.violet600, size: 18),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'ملفات الصوت (${_deviceSongs.length})',
+                style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13, color: AppColors.slate800),
+              ),
+            ),
+            InkWell(
+              onTap: _loadDeviceSongs,
+              borderRadius: BorderRadius.circular(999),
+              child: const Padding(
+                padding: EdgeInsets.all(4),
+                child: Icon(Icons.refresh, color: AppColors.slate400, size: 18),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 4),
+        for (var i = 0; i < _deviceSongs.length; i++)
+          ListTile(
+            dense: true,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 4),
+            leading: Icon(
+              _audio.inDeviceMusic && _audio.player.currentIndex == i ? Icons.equalizer : Icons.music_note,
+              color: AppColors.violet600,
+              size: 20,
+            ),
+            title: Text(
+              _deviceSongs[i].title,
+              style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: AppColors.slate700),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            subtitle: Text(
+              _deviceSongs[i].artist.isEmpty ? _formatDuration(_deviceSongs[i].durationMs) : '${_deviceSongs[i].artist} · ${_formatDuration(_deviceSongs[i].durationMs)}',
+              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.slate400),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            trailing: _audio.inDeviceMusic && _audio.player.currentIndex == i && _audio.playing
+                ? const Icon(Icons.graphic_eq, color: AppColors.violet600, size: 18)
+                : null,
+            onTap: () => _playDeviceSong(i),
+          ),
+      ],
+    );
+  }
+
+  Widget _deviceNotice({required IconData icon, required String text, List<Widget> actions = const []}) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -309,17 +444,27 @@ class _SirajPlayerCardState extends State<SirajPlayerCard> {
         borderRadius: BorderRadius.circular(14),
         border: Border.all(color: AppColors.amber300),
       ),
-      child: const Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Icon(Icons.info_outline, color: AppColors.amber700, size: 20),
-          SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              'موسيقى الجهاز غير مدمجة بعد: تشغيل ملفات الصوت على جهازك يحتاج إلى مكتبة الصوتيات (حزمة on_audio_query + إذن READ_MEDIA_AUDIO) وهي غير مثبّتة حاليًا. يبقى تشغيل صوتيات التطبيق متاحًا.',
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.amber800, height: 1.5),
-            ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(icon, color: AppColors.amber700, size: 20),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  text,
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.amber800, height: 1.5),
+                ),
+              ),
+            ],
           ),
+          if (actions.isNotEmpty)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: actions,
+            ),
         ],
       ),
     );

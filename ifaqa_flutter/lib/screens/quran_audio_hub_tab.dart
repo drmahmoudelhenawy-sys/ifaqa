@@ -359,9 +359,9 @@ class _QuranAudioHubTabState extends State<QuranAudioHubTab> {
 }
 
 /// Small device-music status row for the Siraj player source switch.
-/// Honest unavailable state: no on-device audio library is integrated yet
-/// (see lib/siraj/siraj_player.dart), so this only reports the selected
-/// source and never pretends to list device tracks.
+/// Device music is integrated (see lib/siraj/device_music.dart): this only
+/// reports the selected source; the track list itself lives in the Siraj
+/// player card.
 class _DeviceMusicEntry extends StatefulWidget {
   const _DeviceMusicEntry();
 
@@ -400,7 +400,7 @@ class _DeviceMusicEntryState extends State<_DeviceMusicEntry> {
           Expanded(
             child: Text(
               isDevice
-                  ? 'مصدر التشغيل: موسيقى الجهاز (غير مدمجة بعد)'
+                  ? 'مصدر التشغيل: موسيقى الجهاز'
                   : 'مصدر التشغيل: صوتيات التطبيق',
               style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 12, color: AppColors.slate600),
             ),
