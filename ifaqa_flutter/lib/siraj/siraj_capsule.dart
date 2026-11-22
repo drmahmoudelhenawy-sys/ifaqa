@@ -128,6 +128,14 @@ class _SirajCapsuleState extends State<SirajCapsule>
   bool _hidden = false;
   bool _pinned = false;
   bool _ready = false;
+
+  /// Session-local countdown-format flip from the 'toggle_time' gesture
+  /// (the time press). Never rewrites the stored setting.
+  bool _timeFormatToggled = false;
+
+  String get _effectiveCountdownFormat => _timeFormatToggled
+      ? (_config.countdownFormat == 'min_sec' ? 'min_only' : 'min_sec')
+      : _config.countdownFormat;
   int _demo = 0;
   double _dragDx = 0;
   double _dragDy = 0;
@@ -508,6 +516,8 @@ class _SirajCapsuleState extends State<SirajCapsule>
         unawaited(AudioService.instance.toggle());
       case 'dismiss':
         _dismissCurrent();
+      case 'toggle_time':
+        setState(() => _timeFormatToggled = !_timeFormatToggled);
       case 'none':
         break;
       case 'prayer_times':
@@ -879,7 +889,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
               ),
               if (left != null)
                 Text(
-                  sirajFormatCountdown(left, _config.countdownFormat),
+                  sirajFormatCountdown(left, _effectiveCountdownFormat),
                   style: _t(11.5, weight: FontWeight.w900),
                 ),
             ],
@@ -917,7 +927,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
         Icon(Icons.mosque_rounded, size: 15, color: theme.accent),
         const SizedBox(width: 5),
         Text(
-          '${p.label} ${sirajFormatCountdown(left, _config.countdownFormat)}',
+          '${p.label} ${sirajFormatCountdown(left, _effectiveCountdownFormat)}',
           style: _t(12, color: theme.accent, weight: FontWeight.w900),
         ),
       ],
@@ -960,7 +970,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
                       TextSpan(
                         text: sirajFormatCountdown(
                           left,
-                          _config.countdownFormat,
+                          _effectiveCountdownFormat,
                         ),
                         style: _t(
                           13,
@@ -1469,7 +1479,7 @@ class _SirajCapsuleState extends State<SirajCapsule>
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'إقامة ${sirajFormatCountdown(p.iqamah.difference(now), _config.countdownFormat)}',
+                  'إقامة ${sirajFormatCountdown(p.iqamah.difference(now), _effectiveCountdownFormat)}',
                   style: _t(11, color: AppColors.emerald400),
                 ),
               ),
