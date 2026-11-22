@@ -194,6 +194,41 @@ class _OverlayHomeState extends State<_OverlayHome> {
   double _screenH = 0;
   bool _positionReady = false;
 
+  // ---- Capsule position inside the window (dp) ----
+  //
+  // The old native app's CameraPlacement principle: clamp the VISIBLE
+  // capsule to the screen, not the fixed 380x76 window. The window stays
+  // clamped by the service; when its clamp saturates at a screen edge,
+  // the capsule keeps tracking the finger by moving INSIDE the window —
+  // [_capInsetX] / [_capInsetY] are its offset from the window's centre.
+  // Without this, the capsule stops a half-window short of every edge
+  // and upward drags hit a dead zone (the bug class the native v9 fixed
+  // in CameraPlacement.kt). Persisted on drag end so a capsule left at
+  // an edge reopens at the edge.
+  double _capInsetX = 0;
+  double _capInsetY = 0;
+
+  // ---- Gestures ----
+  //
+  // Session-local countdown-format flip from the 'toggle_time' gesture
+  // (the time press; mirrors the old native app's 'toggle'). The stored
+  // setting is never rewritten.
+  bool _timeFormatToggled = false;
+  // Session-local dismissed reminder keys (counterpart of the in-app
+  // capsule's _dismissed set); a dismissed state falls back to the idle
+  // prayer countdown until its key changes.
+  final Set<String> _dismissed = {};
+  // Drag accumulation for swipe detection (same 700 px/s fling rule as
+  // the in-app capsule) plus the drag-start position for swipe snap-back.
+  double _dragDx = 0;
+  double _dragDy = 0;
+  double _dragStartWinX = 0;
+  double _dragStartWinY = 0;
+  double _dragStartInsetX = 0;
+  double _dragStartInsetY = 0;
+  double _preExpandInsetX = 0;
+  double _preExpandInsetY = 0;
+
   // ---- Heads-up dodge ----
   final _shift = SirajOverlayShift();
   Timer? _shiftRestoreTimer;
@@ -209,6 +244,30 @@ class _OverlayHomeState extends State<_OverlayHome> {
   double _preExpandX = 0;
   double _preExpandY = 0;
   double _winH = 76;
+  // Actual granted Flutter-view height. Collapsed, this tracks the pill
+  // (never below 76): a capsule taller than 76 (medium/large sizes,
+  // square shapes) would otherwise be clipped top/bottom by the window.
+  double _viewH = 76;
+
+  /// Collapsed window height that fits the current pill whole.
+  double _collapsedViewH() {
+    final h = _pillSize(_state).height;
+    return h > 76 ? h : 76;
+  }
+
+  /// Resizes the collapsed window when the pill's height changes (size
+  /// or shape setting, or a state kind with a different height), then
+  /// re-syncs the position Kotlin may have clamped to fit the new size.
+  void _syncCollapsedViewH() {
+    if (_expandedView != null) return;
+    final want = _collapsedViewH();
+    if ((want - _viewH).abs() <= 0.5) return;
+    _viewH = want;
+    unawaited(() async {
+      await _setOverlaySize(380, _viewH);
+      await _syncPosition();
+    }());
+  }
 
   @override
   void initState() {
@@ -216,16 +275,20 @@ class _OverlayHomeState extends State<_OverlayHome> {
     _ready = widget.prefsReady;
     if (_ready) {
       // Same singleton AppState uses; reload() below refreshes its cache.
-      SharedPreferences.getInstance().then(
-        (p) => _prefs = p,
-        onError: (_) {},
-      );
+      SharedPreferences.getInstance().then((p) {
+        _prefs = p;
+        try {
+          _capInsetX = p.getDouble('siraj_cap_inset_x') ?? 0;
+          _capInsetY = p.getDouble('siraj_cap_inset_y') ?? 0;
+        } catch (_) {}
+      }, onError: (_) {});
     }
     // Native → Dart calls: the notification listener forwards heads-up
     // shown/hidden through the service (see SirajOverlayService.kt).
     _channel.setMethodCallHandler(_onNativeCall);
     unawaited(_syncPosition());
     _recompute();
+    _syncCollapsedViewH();
     _tick = Timer.periodic(const Duration(seconds: 1), (_) => _recompute());
     // Settings / location can change in the main isolate while the overlay
     // is up; refresh the prefs cache so the overlay follows them.
@@ -325,28 +388,135 @@ class _OverlayHomeState extends State<_OverlayHome> {
 
   // ---- Drag ----
 
+  /// Collapsed-window width (dp), fixed by the native service.
+  static const double _windowWidthDp = 380;
+
   void _onDragStart(DragStartDetails _) {
     // Re-sync: the window may have moved since the last track (rotation,
     // a heads-up dodge) — drags must start from the true position.
     unawaited(_syncPosition());
+    _dragDx = 0;
+    _dragDy = 0;
+    _dragStartWinX = _winX;
+    _dragStartWinY = _winY;
+    _dragStartInsetX = _capInsetX;
+    _dragStartInsetY = _capInsetY;
   }
 
   void _onDragUpdate(DragUpdateDetails d) {
     if (!_positionReady) return;
-    final next = sirajClampOverlayPosition(
-      x: _winX + d.delta.dx,
-      y: _winY + d.delta.dy,
-      windowWidth: 380,
-      windowHeight: _winH,
+    _dragDx += d.delta.dx;
+    _dragDy += d.delta.dy;
+    if (_expandedView != null) {
+      // Expanded panel: the content fills the window, so the whole
+      // window is what stays on screen (no in-window capsule offset).
+      final next = sirajClampOverlayPosition(
+        x: _winX + d.delta.dx,
+        y: _winY + d.delta.dy,
+        windowWidth: _windowWidthDp,
+        windowHeight: _viewH,
+        screenWidth: _screenW,
+        screenHeight: _screenH,
+      );
+      _winX = next.x;
+      _winY = next.y;
+      _moveOverlayTo(_winX, _winY);
+      return;
+    }
+    final size = _pillSize(_state);
+    // CameraPlacement principle (see the field comment): the capsule's
+    // desired top-left follows the finger and is clamped to the SCREEN;
+    // the window is centred on the capsule and clamped as before; the
+    // remainder becomes the capsule's in-window offset, so the capsule
+    // reaches the screen edges instead of stopping a half-window short.
+    final next = sirajDragOverlayPlacement(
+      winX: _winX,
+      winY: _winY,
+      insetX: _capInsetX,
+      insetY: _capInsetY,
+      dx: d.delta.dx,
+      dy: d.delta.dy,
+      capsuleWidth: size.width,
+      capsuleHeight: size.height,
+      windowWidth: _windowWidthDp,
+      windowHeight: _viewH,
       screenWidth: _screenW,
       screenHeight: _screenH,
     );
-    _winX = next.x;
-    _winY = next.y;
+    _winX = next.winX;
+    _winY = next.winY;
+    _capInsetX = next.insetX;
+    _capInsetY = next.insetY;
+    setState(() {});
     _moveOverlayTo(_winX, _winY);
   }
 
-  void _onDragEnd(DragEndDetails _) => _saveOverlayPosition();
+  void _onDragEnd(DragEndDetails d) {
+    // A fast fling is a swipe, not a drag: run the mapped action instead
+    // of persisting the flung position (same rule as the in-app
+    // capsule). Collapsed only — expanded-panel drags always persist.
+    if (_expandedView == null && _handleSwipeEnd(d)) return;
+    _saveOverlayPosition();
+    _saveCapsuleInset();
+  }
+
+  /// A fast fling at the end of a drag is a swipe: runs the mapped swipe
+  /// action (dominant axis, 700 px/s threshold, like the in-app capsule)
+  /// and snaps the island back to where the drag started. Returns true
+  /// when the gesture was consumed as a swipe. A swipe mapped to an
+  /// action this isolate cannot run counts as a drag end.
+  bool _handleSwipeEnd(DragEndDetails d) {
+    final v = d.velocity.pixelsPerSecond;
+    if (v.distance < 700) return false;
+    final action = _dragDx.abs() > _dragDy.abs()
+        ? (_dragDx > 0 ? _config.gestureSwipeRight : _config.gestureSwipeLeft)
+        : (_dragDy > 0 ? _config.gestureSwipeDown : _config.gestureSwipeUp);
+    if (action == 'none') return false;
+    _winX = _dragStartWinX;
+    _winY = _dragStartWinY;
+    _capInsetX = _dragStartInsetX;
+    _capInsetY = _dragStartInsetY;
+    _moveOverlayTo(_winX, _winY);
+    setState(() {});
+    _runOverlayGesture(action);
+    return true;
+  }
+
+  /// Runs a mapped gesture action from the overlay isolate. 'dismiss'
+  /// hides the current reminder state until its key changes;
+  /// 'toggle_time' flips the countdown format for this session (the time
+  /// press); open actions ('prayer_times' / 'siraj_tab') leave the
+  /// pending-tab flag and launch the app; app-only actions (e.g.
+  /// 'play_pause', whose AudioService lives in the main isolate) open
+  /// the app so the action can run there; 'none' does nothing.
+  void _runOverlayGesture(String action) {
+    switch (action) {
+      case 'dismiss':
+        _dismissed.add(_state.key);
+        _recompute();
+      case 'toggle_time':
+        setState(() => _timeFormatToggled = !_timeFormatToggled);
+      case 'none':
+        break;
+      default:
+        unawaited(_openAppForGesture(action));
+    }
+  }
+
+  /// Persists the capsule's in-window offset alongside the window
+  /// position, so a capsule left at a screen edge reopens at the edge.
+  void _saveCapsuleInset() {
+    try {
+      _prefs?.setDouble('siraj_cap_inset_x', _capInsetX);
+      _prefs?.setDouble('siraj_cap_inset_y', _capInsetY);
+    } catch (_) {}
+  }
+
+  /// The countdown format actually shown: the user's setting, flipped
+  /// when the time-press toggle was used. Session-local.
+  String get _effectiveCountdownFormat => _timeFormatToggled
+      ? (_config.countdownFormat == 'min_sec' ? 'min_only' : 'min_sec')
+      : _config.countdownFormat;
 
   // ---- Heads-up dodge ----
 
@@ -428,6 +598,8 @@ class _OverlayHomeState extends State<_OverlayHome> {
     if (!wasExpanded) {
       _preExpandX = _winX;
       _preExpandY = _winY;
+      _preExpandInsetX = _capInsetX;
+      _preExpandInsetY = _capInsetY;
     }
     _expandedView = view;
     if (athkar != null) _expandedAthkar = athkar;
@@ -435,7 +607,8 @@ class _OverlayHomeState extends State<_OverlayHome> {
     if (mounted) setState(() {});
     if (!wasExpanded) {
       _winH = _expandedHeightDp();
-      await _setOverlaySize(380, _winH);
+      _viewH = _winH;
+      await _setOverlaySize(380, _viewH);
       // Kotlin may have moved y up to fit the tall window; re-sync so
       // the next drag / collapse starts from the true position.
       await _syncPosition();
@@ -449,10 +622,13 @@ class _OverlayHomeState extends State<_OverlayHome> {
     _expandedView = null;
     _expandedSnooze = false;
     if (mounted) setState(() {});
-    await _setOverlaySize(380, 76);
     _winH = 76;
+    _viewH = _collapsedViewH();
+    await _setOverlaySize(380, _viewH);
     _winX = _preExpandX;
     _winY = _preExpandY;
+    _capInsetX = _preExpandInsetX;
+    _capInsetY = _preExpandInsetY;
     _moveOverlayTo(_winX, _winY);
   }
 
@@ -525,7 +701,13 @@ class _OverlayHomeState extends State<_OverlayHome> {
       config: _config,
       signals: _signals(now),
     );
-    _state = _effectivePillState(top);
+    // A dismissed reminder stays hidden (idle countdown) until its
+    // state key changes — the overlay's counterpart of the in-app
+    // capsule's dismissal set.
+    _state = _dismissed.contains(top.key)
+        ? _idleState()
+        : _effectivePillState(top);
+    _syncCollapsedViewH();
     if (mounted) setState(() {});
     _consumePendingView();
   }
@@ -566,10 +748,9 @@ class _OverlayHomeState extends State<_OverlayHome> {
     }
   }
 
-  /// A pill state with hidden kinds replaced by the idle prayer countdown,
-  /// so prayer time stays visible even when every other kind is off.
-  SirajState _effectivePillState(SirajState s) {
-    if (_contentVisible(s.kind)) return s;
+  /// The idle prayer-countdown pill state, used when a kind is hidden
+  /// by the content toggles or dismissed by the user.
+  SirajState _idleState() {
     final p = _nextPrayer;
     return SirajState(
       kind: SirajKind.idle,
@@ -580,6 +761,13 @@ class _OverlayHomeState extends State<_OverlayHome> {
       key: 'idle',
       prayerId: p?.id,
     );
+  }
+
+  /// A pill state with hidden kinds replaced by the idle prayer countdown,
+  /// so prayer time stays visible even when every other kind is off.
+  SirajState _effectivePillState(SirajState s) {
+    if (_contentVisible(s.kind)) return s;
+    return _idleState();
   }
 
   /// Pill size, shared with the in-app capsule ([sirajCapsulePillSize]):
@@ -635,8 +823,8 @@ class _OverlayHomeState extends State<_OverlayHome> {
   }
 
   /// Tap: an Athkar pill reads the Athkar in the island itself (the
-  /// expanded reader) instead of opening the app; every other kind opens
-  /// the app per the mapped gesture (unless mapped to 'none').
+  /// expanded reader) instead of opening the app; every other kind runs
+  /// the mapped gesture action (unless mapped to 'none').
   void _onCapsuleTap() {
     if (_config.gestureTap == 'none') return;
     if (_state.kind == SirajKind.athkarDue && _config.showAthkar) {
@@ -648,17 +836,14 @@ class _OverlayHomeState extends State<_OverlayHome> {
       );
       return;
     }
-    unawaited(_openAppForGesture(_config.gestureTap));
+    _runOverlayGesture(_config.gestureTap);
   }
 
-  /// Long-press: opens the app only for the open actions; the other
-  /// actions do nothing from the overlay isolate.
+  /// Long-press: runs the mapped gesture action (default: open the Siraj
+  /// tab). App-only actions open the app so they can run there.
   void _onCapsuleLongPress() {
-    if (_config.gestureLongPress != 'siraj_tab' &&
-        _config.gestureLongPress != 'prayer_times') {
-      return;
-    }
-    unawaited(_openAppForGesture(_config.gestureLongPress));
+    if (_config.gestureLongPress == 'none') return;
+    _runOverlayGesture(_config.gestureLongPress);
   }
 
   /// Entrance wrapper: fade + scale (or slide down) once on mount, by the
@@ -714,7 +899,7 @@ class _OverlayHomeState extends State<_OverlayHome> {
         Icon(Icons.mosque_rounded, size: 15, color: theme.accent),
         const SizedBox(width: 5),
         Text(
-          '${p.label} ${sirajFormatCountdown(left, _config.countdownFormat)}',
+          '${p.label} ${sirajFormatCountdown(left, _effectiveCountdownFormat)}',
           style: _t(12, color: theme.accent, weight: FontWeight.w900),
         ),
       ],
@@ -760,7 +945,7 @@ class _OverlayHomeState extends State<_OverlayHome> {
                       TextSpan(
                         text: sirajFormatCountdown(
                           left,
-                          _config.countdownFormat,
+                          _effectiveCountdownFormat,
                         ),
                         style: _t(
                           13,
@@ -875,7 +1060,7 @@ class _OverlayHomeState extends State<_OverlayHome> {
           ),
           if (left != null)
             Text(
-              sirajFormatCountdown(left, _config.countdownFormat),
+              sirajFormatCountdown(left, _effectiveCountdownFormat),
               style: _t(11.5, weight: FontWeight.w900),
             ),
         ],
@@ -1075,18 +1260,34 @@ class _OverlayHomeState extends State<_OverlayHome> {
     final size = _pillSize(_state);
     final radius = size.height / 2;
     // The window is free-positioned by drag (no left/center/right
-    // preset); the pill is centred inside its 380x76 box. In circle mode
-    // the radius is half the diameter, so the badge is a true circle.
+    // preset); the pill sits inside its 380x76 box at its tracked
+    // in-window offset (_capInsetX/_capInsetY) — centred by default,
+    // shifted toward an edge when a drag pushed it there (see the field
+    // comment). The offset is clamped to the CURRENT pill size: a stored
+    // offset from a smaller pill must never clip a larger one. In circle
+    // mode the radius is half the diameter, so the badge is a true
+    // circle.
+    final maxInsetX =
+        ((_windowWidthDp - size.width) / 2).clamp(0.0, _windowWidthDp);
+    final maxInsetY = ((_viewH - size.height) / 2).clamp(0.0, _viewH);
     return Container(
       color: Colors.transparent,
-      alignment: Alignment.center,
-      child: GestureDetector(
-        // Configurable gestures: tap / long-press open the app, and the
-        // mapped action picks which tab it opens on (see
-        // _openAppForGesture). Double-tap and swipes are not available
-        // here: the pan is the drag, and music/dismiss cannot run from
-        // this isolate.
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Positioned(
+            left: (_windowWidthDp - size.width) / 2 +
+                _capInsetX.clamp(-maxInsetX, maxInsetX),
+            top: (_viewH - size.height) / 2 +
+                _capInsetY.clamp(-maxInsetY, maxInsetY),
+            child: GestureDetector(
+        // Configurable gestures: tap / double-tap / long-press run the
+        // mapped actions (see _runOverlayGesture); a fast fling at the
+        // end of a drag is a swipe (see _handleSwipeEnd). Adding
+        // double-tap delays single-tap by the double-tap timeout — the
+        // same tradeoff the old native app made with its singleTapRun.
         onTap: _onCapsuleTap,
+        onDoubleTap: () => _runOverlayGesture(_config.gestureDoubleTap),
         onLongPress: _onCapsuleLongPress,
         // Free drag: the capsule follows the finger anywhere on the
         // screen. Only when dragging is enabled in settings; a tap
@@ -1137,6 +1338,9 @@ class _OverlayHomeState extends State<_OverlayHome> {
             ),
           ),
         ),
+            ),
+          ),
+        ],
       ),
     );
   }
