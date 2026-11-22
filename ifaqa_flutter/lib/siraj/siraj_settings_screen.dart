@@ -247,6 +247,7 @@ class _SirajSettingsScreenState extends State<SirajSettingsScreen>
             ('siraj_tab', 'تبويب سِراج'),
             ('play_pause', 'تشغيل/إيقاف'),
             ('dismiss', 'إخفاء التنبيه'),
+            ('toggle_time', 'تبديل صيغة العداد'),
             ('none', 'بدون'),
           ],
           selected: selected,
