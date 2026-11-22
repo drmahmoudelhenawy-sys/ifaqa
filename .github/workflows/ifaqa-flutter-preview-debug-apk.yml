@@ -1,0 +1,67 @@
+# PROPOSAL ONLY — requires the repo owner's approval before being pushed.
+# Debug-only Flutter preview APK build for the Ifaqa repo (public repository).
+# - Debug build installs as a SEPARATE preview app (package
+#   com.ifaqa.app.preview, label "إفاقة معاينة"): no signature conflict with
+#   the installed app, no data loss, no uninstall. Preview app data is
+#   separate — settings do not carry over.
+# - No signing secrets, no key.properties: the module falls back to the debug
+#   signing config when key.properties is absent.
+# - No release, no store upload, no deployment of any kind.
+# - Least privilege: the job token only reads repository contents.
+# - Toolchain pinned to the versions the analysis/tests were verified with
+#   (Flutter 3.50.1 stable + Temurin JDK 17 + AGP 9.1.1, Kotlin 2.4.0).
+# - Cost: standard GitHub-hosted runners are free for public repositories
+#   (verified 2026-11-22, source:
+#   https://docs.github.com/en/billing/concepts/product-billing/github-actions)
+
+name: ifaqa-flutter-preview-debug-apk
+
+on:
+  workflow_dispatch:            # manual run from the Actions tab
+  push:
+    branches: [main]
+    paths: ['ifaqa_flutter/**', '.github/workflows/ifaqa-flutter-preview-debug-apk.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview-debug-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.50.1'
+          channel: stable
+
+      - name: Get dependencies
+        working-directory: ifaqa_flutter
+        run: flutter pub get
+
+      # Fails on real analyzer errors; only tolerates the 74 pre-existing
+      # info-level deprecations that exist in the unmodified repo.
+      - name: Analyze (fails on errors)
+        working-directory: ifaqa_flutter
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Tests
+        working-directory: ifaqa_flutter
+        run: flutter test
+
+      - name: Build preview debug APK
+        working-directory: ifaqa_flutter
+        run: flutter build apk --debug
+
+      - name: Upload preview debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ifaqa-flutter-preview-debug-apk
+          path: ifaqa_flutter/build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 14
