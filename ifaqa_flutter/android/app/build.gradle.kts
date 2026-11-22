@@ -27,8 +27,10 @@ android {
     }
 
     defaultConfig {
-        // Same ID as the existing Capacitor app, so installs update instead of duplicating.
+        // Same ID as the existing Capacitor app, so release installs update
+        // instead of duplicating. Debug builds get .preview (see buildTypes).
         applicationId = "com.ifaqa.app"
+        manifestPlaceholders["appLabel"] = "إفاقة"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -53,6 +55,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Preview installs sit NEXT TO the installed app: own package and
+            // label, no signature conflict, no data loss, no uninstall needed.
+            // The preview has its own app data — settings do not carry over.
+            applicationIdSuffix = ".preview"
+            manifestPlaceholders["appLabel"] = "إفاقة معاينة"
+        }
         release {
             // Falls back to debug keys so `flutter run --release` works without key.properties.
             signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
