@@ -687,3 +687,40 @@ available in this wave). Item 7 is done.
 The settings toggle is wired (see "Known gaps" at the top): the toggle
 starts/stops the overlay and the resume handler covers the permission
 grant flow.
+
+## 2026-11-22 — edge drag, gestures, time press (source-level, pending build)
+
+Fixed three gaps found by comparing this port against the native v9 app:
+
+- **Edge-reach drag:** the capsule was centred in the fixed 380x76 window
+  and the WHOLE window was clamped to the screen, so the capsule stopped
+  a half-window short of every edge and upward drags hit a dead zone —
+  the same bug class the native v9 fixed in `CameraPlacement.kt`. The
+  drag now uses [sirajDragOverlayPlacement] in `siraj_state.dart`: the
+  VISIBLE capsule is clamped to the screen, the window is centred on it
+  and clamped as before, and the remainder is the capsule's in-window
+  offset (`_capInsetX/_capInsetY`, persisted in prefs on drag end). The
+  collapsed pill renders with a Stack/Positioned at that offset instead
+  of `Alignment.center`. Tested in `test/siraj_overlay_drag_test.dart`
+  (top-edge, both side edges, mixed drags, drag-back recentering).
+- **Gestures:** the overlay isolate only honoured tap and long-press.
+  It now runs the configured double-tap and swipe actions too — a fast
+  fling at drag end (700 px/s, dominant axis, same rule as the in-app
+  capsule) is a swipe and snaps the island back. 'dismiss' hides the
+  current reminder state (session-local set, like the in-app capsule);
+  'prayer_times'/'siraj_tab' open the app with the pending-tab flag;
+  app-only actions (e.g. 'play_pause', whose AudioService lives in the
+  main isolate) open the app so the action can run there. Adding
+  double-tap delays single-tap by the double-tap timeout (same tradeoff
+  as the native app's singleTapRun).
+- **Time press:** new gesture action 'toggle_time' (in the settings
+  pickers too) flips the countdown format for the session in both the
+  in-app capsule and the overlay — the old native app's 'toggle'
+  gesture. Never rewrites the stored setting.
+
+Not done: Kotlin unchanged (window stays fully clamped there — the Dart
+side now positions the capsule inside it instead). No stopWithTask /
+onTaskRemoved changes: the defaults already match the native app, no
+demonstrated defect. Still needs a real build + device pass: drag feel,
+arena timing (tap delay), swipe fling feel, heads-up interplay with a
+capsule parked at the top edge.
