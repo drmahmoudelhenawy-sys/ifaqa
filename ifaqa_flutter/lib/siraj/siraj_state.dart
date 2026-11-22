@@ -695,12 +695,15 @@ double sirajCapsuleSizeScale(String size) => switch (size) {
 /// - 'siraj_tab': open the Siraj tab.
 /// - 'play_pause': toggle music playback.
 /// - 'dismiss': hide the current reminder (dismiss the card/panel).
+/// - 'toggle_time': flip the countdown format for this session (the
+///   "time press"; mirrors the old native app's 'toggle' gesture).
 /// - 'none': do nothing.
 const List<String> sirajGestureActions = [
   'prayer_times',
   'siraj_tab',
   'play_pause',
   'dismiss',
+  'toggle_time',
   'none',
 ];
 
@@ -773,6 +776,50 @@ double sirajPrayerProgress({
   final maxX = math.max(0.0, screenWidth - windowWidth);
   final maxY = math.max(0.0, screenHeight - windowHeight);
   return (x: x.clamp(0.0, maxX), y: y.clamp(0.0, maxY));
+}
+
+/// One drag step for the overlay capsule, following the old native
+/// app's CameraPlacement principle: the VISIBLE capsule is clamped to
+/// the screen; the fixed window is centred on the capsule and clamped to
+/// the screen as before; the remainder is the capsule's offset inside
+/// the window (`insetX`/`insetY`), so the capsule reaches the screen
+/// edges instead of stopping a half-window short (the dead-zone bug
+/// class the native v9 fixed in CameraPlacement.kt). Pass the current
+/// window position and insets plus the drag delta; feed the returned
+/// values back on the next step.
+({double winX, double winY, double insetX, double insetY})
+sirajDragOverlayPlacement({
+  required double winX,
+  required double winY,
+  required double insetX,
+  required double insetY,
+  required double dx,
+  required double dy,
+  required double capsuleWidth,
+  required double capsuleHeight,
+  required double windowWidth,
+  required double windowHeight,
+  required double screenWidth,
+  required double screenHeight,
+}) {
+  final capX = (winX + (windowWidth - capsuleWidth) / 2 + insetX + dx)
+      .clamp(0.0, math.max(0.0, screenWidth - capsuleWidth));
+  final capY = (winY + (windowHeight - capsuleHeight) / 2 + insetY + dy)
+      .clamp(0.0, math.max(0.0, screenHeight - capsuleHeight));
+  final win = sirajClampOverlayPosition(
+    x: capX - (windowWidth - capsuleWidth) / 2,
+    y: capY - (windowHeight - capsuleHeight) / 2,
+    windowWidth: windowWidth,
+    windowHeight: windowHeight,
+    screenWidth: screenWidth,
+    screenHeight: screenHeight,
+  );
+  return (
+    winX: win.x,
+    winY: win.y,
+    insetX: capX - (win.x + (windowWidth - capsuleWidth) / 2),
+    insetY: capY - (win.y + (windowHeight - capsuleHeight) / 2),
+  );
 }
 
 /// Default overlay position (dp): top-anchored, centred horizontally,
